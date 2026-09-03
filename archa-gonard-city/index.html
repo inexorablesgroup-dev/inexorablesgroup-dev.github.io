@@ -1,13 +1,3 @@
-<!-- TEMPLATE:services-professional
-REPLACE-EVERYTHING LIST — customization agents must rewrite:
-[BIZ-NAME] customized for Archa Infrastructure and Developers Pvt Ltd (Gonard City), Gonda
-[COPY] all headlines/body copy to fit the real business & its real facts
-[PHONE] wa.me + tel links set to 919628566429 / 916307823630
-[ADDRESS/HOURS/MAP] contact section
-[STATS] counters — real numbers only, else qualitative
-[FAQ] rewrite for the business
-[TITLE/META] title, description, demo-notice business name
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -359,7 +349,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         .approach-card-inner h3 { font-size: 1.25rem; margin-bottom: 12px; }
         .approach-card-inner p { color: var(--ink-dim); font-size: 0.95rem; }
 
-        /* ---------- Automation mock: free consultation booking ---------- */
+        /* ---------- Site-visit booking ---------- */
         .consult { padding: 130px 24px; background: var(--bg-deep); }
         .consult::before {
             content: ''; position: absolute; inset: 0;
@@ -710,6 +700,15 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             .back-to-top { bottom: 82px; right: 20px; }
         }
     </style>
+
+    <!-- Without JS the accordion cannot open, so every answer is shown expanded. -->
+    <noscript>
+        <style>
+            .faq-answer { max-height: none; }
+            .faq-question { cursor: default; }
+            .faq-question::after { display: none; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -778,7 +777,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     <h2>Land You Can <span class="gradient-text">Build On.</span></h2>
                     <p>Buying land in Gonda usually means unclear papers, uncertain boundaries and a road that never arrives. <strong>Archa Infrastructure and Developers Pvt Ltd built Gonard City to remove all three.</strong></p>
                     <p>Spread across 45,915 sq m at Rajapur / Mathura Chaubey on Lucknow Road, Gonard City is a planned, gated township registered with UP RERA under UPRERAPRJ53857 — residential plots from about 1,200 to 2,500 sq ft, and commercial plots from about 3,500 to 4,000 sq ft.</p>
-                    <p>Registered infrastructure, laid-out roads, and a plan you can see before you pay.</p>
+                    <p>Registered paperwork, laid-out roads, and a layout plan you can see before you pay.</p>
                 </div>
                 <div class="reveal">
                     <div class="photo-frame story-photo">
@@ -835,14 +834,14 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="11" cy="11" r="7" stroke="#a5b4fc" stroke-width="1.6"/><path d="M16.5 16.5L22 22" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#a5b4fc" stroke-width="1.4" stroke-linecap="round"/></svg>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3s7 7.6 7 12a7 7 0 11-14 0c0-4.4 7-12 7-12z" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.8 15.4a3.2 3.2 0 003.2 3.2" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/></svg>
                     </div>
                     <h3>Water &amp; Sewage</h3>
                     <p>24/7 water supply and an in-township sewage treatment plant — planned in, not added later.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="20" height="15" rx="3" stroke="#a5b4fc" stroke-width="1.6"/><path d="M3 11h20" stroke="#a855f7" stroke-width="1.6"/><path d="M8 3v5M18 3v5" stroke="#a5b4fc" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3l8 3v6.2c0 4.9-3.3 8.6-8 9.8-4.7-1.2-8-4.9-8-9.8V6l8-3z" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 8v9" stroke="#a855f7" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2.6 2.6"/></svg>
                     </div>
                     <h3>Roads, Lighting &amp; Security</h3>
                     <p>Lit internal roads and a gated boundary with security — a colony that feels finished from day one.</p>
@@ -856,7 +855,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#a5b4fc" stroke-width="1.6"/><path d="M13 7v6l4 3" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 22V11l8-6 8 6v11" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 22v-6h6v6" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 22h20" stroke="#a5b4fc" stroke-width="1.6" stroke-linecap="round"/></svg>
                     </div>
                     <h3>Community Hall &amp; Gym</h3>
                     <p>Shared amenities for functions and daily fitness — inside the township, not across town.</p>
@@ -865,8 +864,8 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <!-- STATS BAND -->
+    <section class="stats" aria-label="Project facts at a glance">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat reveal">
@@ -916,7 +915,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </div>
     </section>
 
-    <!-- SIGNATURE: HOW WE WORK -->
+    <!-- HOW BOOKING WORKS -->
     <section class="approach" id="approach">
         <div class="container">
             <span class="eyebrow reveal">How Booking Works</span>
@@ -948,7 +947,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: FREE CONSULTATION BOOKING -->
+    <!-- SITE-VISIT BOOKING -->
     <section class="consult" id="consult">
         <div class="container">
             <span class="eyebrow reveal">Get Started</span>
@@ -1026,7 +1025,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                 </div>
                 <div class="visit-card reveal">
                     <div class="visit-icon" aria-hidden="true">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#a5b4fc" stroke-width="1.6"/><path d="M11 6.5V11l3.5 2.5" stroke="#a855f7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 19V5.4A1.4 1.4 0 015.4 4h8.2A1.4 1.4 0 0115 5.4V19" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 10h2.6A1.4 1.4 0 0119 11.4V19" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M2.5 19h17" stroke="#a5b4fc" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 8h4M7.5 11.5h4M7.5 15h4" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round"/></svg>
                     </div>
                     <h3>Registered Office</h3>
                     <p>753/A, First Floor<br>Near Raghukul Vidyapeeth, Khadra Shah Mazar<br>Gonda, Uttar Pradesh 271001</p>
@@ -1238,7 +1237,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             });
         }
 
-        /* ---------------- Consultation mock form ---------------- */
+        /* ---------------- Site-visit booking form ---------------- */
         var consultForm = document.getElementById('consult-form');
         var consultShell = document.getElementById('consult-shell');
         var successDetail = document.getElementById('consult-success-detail');

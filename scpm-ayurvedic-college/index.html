@@ -243,7 +243,7 @@ section { position: relative; z-index: 1; }
 .hero::before {
     content: '';
     position: absolute; inset: -3%;
-    background-image: url("https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-image: url("https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&cs=tinysrgb&w=1600");
     background-size: cover; background-position: center 45%; background-repeat: no-repeat;
     filter: saturate(1.05) contrast(1.02);
     transform: scale(1.02);
@@ -910,6 +910,11 @@ section { position: relative; z-index: 1; }
     .enquiry-shell { padding: 36px 24px; }
 }
 @media (max-width: 480px) {
+    /* Long institution name must not overflow the fixed 68px nav bar */
+    .nav-crest { width: 30px; height: 34px; }
+    .nav-logo { gap: 9px; }
+    .nav-logo-name { font-size: 0.74rem; line-height: 1.2; }
+    .nav-logo-name small { font-size: 0.52rem; letter-spacing: 0.16em; }
     .hero { padding: 110px 20px 70px; }
     .hero-ctas .btn { width: 100%; }
     .visit-actions .btn { width: 100%; }
@@ -1055,10 +1060,10 @@ section { position: relative; z-index: 1; }
             <p class="story-close">The district&rsquo;s own ayurvedic college &mdash; and its <span class="gradient-text">ayurvedic hospital.</span></p>
 
             <figure class="photo-frame story-figure">
-                <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                     alt="Students studying together at a college library" loading="lazy" decoding="async"
+                <img src="https://images.pexels.com/photos/6129444/pexels-photo-6129444.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="A physician going through a case file with a patient in a consulting room" loading="lazy" decoding="async"
                      onerror="this.style.display='none'">
-                <figcaption class="photo-caption">Reading hours &middot; college library</figcaption>
+                <figcaption class="photo-caption">Case discussion &middot; the attached hospital</figcaption>
             </figure>
         </div>
     </section>
@@ -1129,8 +1134,8 @@ section { position: relative; z-index: 1; }
                             <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
                         </svg>
                     </div>
-                    <h3>Yoga &amp; Panchakarma Therapy</h3>
-                    <p>A yoga and physical therapy centre where Swasthavritta stops being theory. Daily practice, supervised, for students and patients alike.</p>
+                    <h3>Swasthavritta &amp; Yoga</h3>
+                    <p>Preventive medicine taught the way it is meant to be &mdash; daily practice on the ground, not a chapter read once before an examination.</p>
                 </article>
                 <article class="offer-card">
                     <div class="offer-icon" aria-hidden="true">
@@ -1181,8 +1186,8 @@ section { position: relative; z-index: 1; }
 
             <div class="day-layout">
             <figure class="photo-frame day-figure">
-                <img src="https://images.pexels.com/photos/6208728/pexels-photo-6208728.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                     alt="Students working together in a college laboratory" loading="lazy" decoding="async"
+                <img src="https://images.pexels.com/photos/8851456/pexels-photo-8851456.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Students in white coats working at benches in a college laboratory" loading="lazy" decoding="async"
                      onerror="this.style.display='none'">
                 <figcaption class="photo-caption">Laboratory hours &middot; on campus</figcaption>
             </figure>
@@ -1236,26 +1241,27 @@ section { position: relative; z-index: 1; }
         <div class="container">
             <span class="section-eyebrow">Around the Campus</span>
             <h2 class="section-headline">Where the five and a half <span class="gradient-text">years happen.</span></h2>
-            <p class="section-sub">Lecture halls, laboratories, the library and the day the degree is finally handed over.</p>
+            <p class="section-sub">Hospital wards, laboratories, the OPD bench &mdash; and the day the degree is finally handed over.</p>
             <div class="gallery-grid">
                 <figure class="photo-frame">
-                    <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="College building and grounds" loading="lazy" decoding="async"
+                    <img src="https://images.pexels.com/photos/37036967/pexels-photo-37036967.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A bright hospital corridor lined with windows" loading="lazy" decoding="async"
                          onerror="this.style.display='none'">
                 </figure>
                 <figure class="photo-frame">
-                    <img src="https://images.pexels.com/photos/8471946/pexels-photo-8471946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Students using a microscope during a practical class" loading="lazy" decoding="async"
+                    <img src="https://images.pexels.com/photos/8531359/pexels-photo-8531359.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A student in a lab coat working with test tubes in a practical class" loading="lazy" decoding="async"
                          onerror="this.style.display='none'">
                 </figure>
                 <figure class="photo-frame">
-                    <img src="https://images.pexels.com/photos/10638209/pexels-photo-10638209.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Reading in a bright library" loading="lazy" decoding="async"
+                    <img src="https://images.pexels.com/photos/7578797/pexels-photo-7578797.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A doctor explaining a report to a patient across a consulting desk" loading="lazy" decoding="async"
+                         style="object-position: center 30%;"
                          onerror="this.style.display='none'">
                 </figure>
                 <figure class="photo-frame">
                     <img src="https://images.pexels.com/photos/13019686/pexels-photo-13019686.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Graduates in caps and gowns on convocation day" loading="lazy" decoding="async"
+                         alt="Two graduates outdoors on convocation day" loading="lazy" decoding="async"
                          onerror="this.style.display='none'">
                 </figure>
             </div>
@@ -1380,7 +1386,7 @@ section { position: relative; z-index: 1; }
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Can the public use the hospital?</button>
                     <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>Yes. The attached 100-bed ayurvedic hospital runs OPD and IPD services for the public, with a pharmacy, diagnostics, panchakarma and yoga therapy, and a 24-hour ambulance. Call the numbers above for current OPD timings and departments.</p>
+                        <p>Yes. The attached 100-bed ayurvedic hospital runs OPD and IPD services for the public, with a pharmacy, diagnostics and a 24-hour ambulance. Call the numbers above for current OPD timings, departments and the therapies available.</p>
                     </div>
                 </div>
             </div>

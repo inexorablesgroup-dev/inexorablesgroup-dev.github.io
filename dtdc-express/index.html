@@ -351,7 +351,7 @@
         .approach-card-inner h3 { font-size: 1.25rem; margin-bottom: 12px; }
         .approach-card-inner p { color: var(--ink-dim); font-size: 0.95rem; }
 
-        /* ---------- Automation mock: free consultation booking ---------- */
+        /* ---------- Automation mock: free pickup request ---------- */
         .consult { padding: 130px 24px; background: var(--bg-deep); }
         .consult::before {
             content: ''; position: absolute; inset: 0;
@@ -644,6 +644,12 @@
             .hero-photo img { animation: none !important; transform: none !important; }
         }
 
+        /* ---------- No-JS fallback: FAQ answers stay readable ---------- */
+        @media (scripting: none) {
+            .faq-answer { max-height: none; }
+            .faq-question::after { content: ''; }
+        }
+
         /* ---------- Responsive ---------- */
         @media (max-width: 1000px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -794,7 +800,7 @@
                     </ul>
                 </div>
                 <div class="photo-frame reveal" style="grid-column: 1 / -1; margin-top: 8px;">
-                    <img src="https://images.pexels.com/photos/18067562/pexels-photo-18067562.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Local business owners handling shipment paperwork together" loading="lazy" onerror="this.style.display='none'">
+                    <img src="https://images.pexels.com/photos/18067562/pexels-photo-18067562.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Two colleagues working together over a laptop" loading="lazy" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
@@ -853,15 +859,15 @@
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <!-- STATS BAND -->
     <section class="stats" aria-label="Why Gonda books with us">
         <div class="band-photo" aria-hidden="true">
-            <img src="https://images.pexels.com/photos/8463151/pexels-photo-8463151.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
+            <img src="https://images.pexels.com/photos/28304971/pexels-photo-28304971.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
         </div>
         <div class="container">
             <div class="stats-grid">
                 <div class="stat reveal">
-                    <span class="stat-value">Since <span data-countup="2008">2008</span></span>
+                    <span class="stat-value">Since 2008</span>
                     <span class="stat-label">Booking Gonda's Parcels.</span>
                 </div>
                 <div class="stat reveal">
@@ -921,7 +927,7 @@
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: FREE CONSULTATION BOOKING -->
+    <!-- AUTOMATION MOCK: FREE PICKUP REQUEST -->
     <section class="consult" id="consult">
         <div class="container">
             <span class="eyebrow reveal">Book a Pickup</span>
@@ -1267,11 +1273,10 @@
                 });
                 if (firstInvalid) { firstInvalid.focus(); return; }
 
-                if (successDetail && name && time) {
+                if (successDetail && name && time && address) {
                     successDetail.textContent = 'Thank you, ' + name.value.trim().split(' ')[0] +
-                        '. We’ll confirm a ' + time.value.toLowerCase() +
-                        ' pickup from ' + address.value.trim() + ' for your ' +
-                        service.value.toLowerCase() + ' on WhatsApp shortly.';
+                        '. We’ll confirm your pickup — ' + time.value.toLowerCase() +
+                        ' — from ' + address.value.trim() + ' on WhatsApp shortly.';
                 }
                 consultShell.classList.add('done');
             });

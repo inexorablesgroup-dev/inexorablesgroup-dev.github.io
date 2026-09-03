@@ -18,7 +18,7 @@
 
 <style>
 /* ============================================================
-   MARGBANDHU FILLING STATION — Automotive vertical template
+   MARGBANDHU FILLING STATION (HINDUSTAN PETROLEUM) — Gonda
    Carbon #0a0c10 · Signal red #e63946 · Steel blue #4a90d9 · Silver text
    Display: Space Grotesk · Body: Inter
    ============================================================ */*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -657,7 +657,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
     .spec-row-body p { color: var(--muted); font-size: 0.9rem; }
     .spec-row-check { width: 26px; height: 26px; color: var(--red); flex: 0 0 auto; }
 
-/* ============ AUTOMATION MOCK — BOOK A SLOT ============ */.booking { background: var(--bg); }
+/* ============ FUEL / FLEET ENQUIRY ============ */.booking { background: var(--bg); }
 .booking::before {
     content: '';
     position: absolute; inset: 0;
@@ -990,7 +990,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
     <!-- NAVIGATION -->
     <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#" class="nav-logo" aria-label="Margbandhu Filling Station (Hindustan Petroleum) — home">
+            <a href="#top" class="nav-logo" aria-label="Margbandhu Filling Station (Hindustan Petroleum) — home">
                 <svg class="nav-logo-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
                     <rect width="64" height="64" rx="14" fill="#0e1116" stroke="rgba(255,255,255,0.1)"/>
                     <path d="M10 40h26l6-8H16l4-6h26l8 6-10 14H14z" fill="#e63946"/>
@@ -1091,7 +1091,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         <div class="container">
             <span class="section-kicker" data-reveal>On the Forecourt</span>
             <h2 class="section-headline" data-reveal>Everything a Tank Needs.</h2>
-            <p class="section-sub" data-reveal>Company fuel and the things that go with it — pulled up, filled, and back on the road without a wait.</p>
+            <p class="section-sub" data-reveal>Company fuel and everything that goes with it — pull in, fill up, and be back on the road without a wait.</p>
             <div class="offer-grid">
                 <article class="offer-card" data-reveal>
                     <span class="offer-index">01 / Petrol</span>
@@ -1113,7 +1113,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
                         <path d="M30 8a10 10 0 0 0-9.6 12.8L8 33.2a4 4 0 0 0 5.7 5.7l12.4-12.4A10 10 0 0 0 38.9 14l-6.4 6.4-4.9-4.9L34 9.1A10 10 0 0 0 30 8z"/>
                     </svg>
                     <h3>HP Diesel</h3>
-                    <p>High-speed diesel for cars, tractors, generators and commercial vehicles. Sited beside the HP depot, so supply stays steady.</p>
+                    <p>High-speed diesel for cars, tractors, generators and commercial vehicles — dispensed a short run from the HP storage depot next door.</p>
                     <div class="offer-spec">
                         <span class="spec-label">Suited to</span>
                         <span class="spec-value">Trucks &amp; fleets</span>
@@ -1139,10 +1139,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
                         <path d="M24 4v18m0 0l16-9M24 22L8 13"/>
                     </svg>
                     <h3>Air &amp; Water</h3>
-                    <p>Free air for your tyres and drinking water on the forecourt — the small things that make a highway stop worth taking.</p>
+                    <p>Air for your tyres and drinking water on the forecourt, as the HPCL retail standard provides — the small things that make a highway stop worth taking.</p>
                     <div class="offer-spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">Free, always</span>
+                        <span class="spec-label">Ask</span>
+                        <span class="spec-value">At the forecourt</span>
                     </div>
                 </article>
                 <article class="offer-card" data-reveal>
@@ -1189,7 +1189,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         </div>
     </section>
 
-    <!-- STATS BAND — qualitative (no invented numbers). For real clients: add data-count="N" to .stat-num for CountUp. -->
+    <!-- STATS BAND -->
     <section class="stats section-pad">
         <div class="container">
             <div class="stats-grid">
@@ -1300,7 +1300,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: FUEL / FLEET ENQUIRY -->
+    <!-- FUEL / FLEET ENQUIRY -->
     <section id="book" class="booking section-pad">
         <div class="container">
             <span class="section-kicker" data-reveal>Ask Before You Drive</span>
@@ -1598,7 +1598,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         });
     });
 
-    /* ---------- Booking mock (front-end only) ---------- */
+    /* ---------- Enquiry form (front-end demo only) ---------- */
     var form = document.getElementById('booking-form');
     var success = document.getElementById('booking-success');
     var echo = document.getElementById('success-echo');
@@ -1617,7 +1617,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
             });
             if (!ok) return;
 
-            var type = (document.getElementById('bk-type') || {}).value || 'Booking';
+            var type = (document.getElementById('bk-type') || {}).value || 'Enquiry';
             var vehicle = (document.getElementById('bk-vehicle') || {}).value || '';
             var day = (document.getElementById('bk-day') || {}).value || '';
             var name = (document.getElementById('bk-name') || {}).value || '';
@@ -1702,10 +1702,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
             // Animations are decorative; never break the page over them.
         }
 
-        /* ---------- CountUp counters (for customization agents) ----------
-           Qualitative exemplar stats have no data-count. When a real business
-           has REAL numbers, set e.g. <span class="stat-num" data-count="1200"
-           data-suffix="+">0</span> and this will animate them. */
+        /* ---------- CountUp counters (only for .stat-num[data-count]) ---------- */
         if (typeof window.countUp !== 'undefined' && window.countUp.CountUp) {
             document.querySelectorAll('.stat-num[data-count]').forEach(function (el) {
                 var target = parseFloat(el.getAttribute('data-count'));

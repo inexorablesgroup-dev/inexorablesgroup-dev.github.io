@@ -516,7 +516,7 @@
         .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
         /* ================================
-           SIGNATURE SECTION — THE BRIDAL EDIT
+           SIGNATURE SECTION — THE WHOLESALE SIDE
            ================================ */
         .bridal { padding: 120px 24px 130px; background: var(--bg); }
         .bridal::before {
@@ -781,25 +781,6 @@
         /* ================================
            FLOATING ELEMENTS
            ================================ */
-        .whatsapp-fab {
-            position: fixed;
-            right: 20px; bottom: 20px;
-            z-index: 1100;
-            width: 58px; height: 58px;
-            border-radius: 50%;
-            background: #25D366;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-            animation: waPulse 2.6s ease-in-out infinite;
-            transition: transform 0.3s var(--ease-lux);
-        }
-        .whatsapp-fab:hover { transform: scale(1.08); }
-        .whatsapp-fab svg { width: 30px; height: 30px; fill: #ffffff; }
-        @keyframes waPulse {
-            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
-            50%      { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 14px rgba(37, 211, 102, 0); }
-        }
-
         .demo-badge {
             position: fixed;
             left: 16px; bottom: 16px;
@@ -944,7 +925,6 @@
             *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; }
             .silk-wave .drift-a, .silk-wave .drift-b { animation: none !important; }
             .orb { animation: none !important; }
-            .whatsapp-fab { animation: none !important; }
             .hero::before { animation: none !important; transform: scale(1.02) !important; }
             .story-art:hover img { transform: none !important; }
         }
@@ -1097,7 +1077,7 @@
         <div class="container">
             <span class="section-kicker">What We Keep</span>
             <h2 class="section-headline">On the <span class="gradient-text">Racks.</span></h2>
-            <p class="section-sub">Six shelves. One standard. If it won't survive a Gonda monsoon, it doesn't come into the shop.</p>
+            <p class="section-sub">One standard, top to bottom. If it won't survive a Gonda monsoon, it doesn't come into the shop.</p>
             <div class="collections-grid">
                 <article class="collection-card reveal">
                     <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
@@ -1198,12 +1178,12 @@
         </div>
     </section>
 
-    <!-- SIGNATURE SECTION: THE BRIDAL EDIT -->
+    <!-- SIGNATURE SECTION: THE WHOLESALE SIDE -->
     <section class="bridal" id="bridal">
         <div class="container">
             <span class="section-kicker">The Back Door</span>
             <h2 class="section-headline">The Wholesale <span class="gradient-text">Side.</span></h2>
-            <p class="section-sub">Half of what leaves this shop never crosses the counter. Shopkeepers across the district buy their stock here.</p>
+            <p class="section-sub">A good deal of what leaves this shop never crosses the counter. Shopkeepers across the district buy their stock here.</p>
             <div class="bridal-grid">
                 <article class="swatch-card reveal">
                     <div class="swatch-scene scene-crimson" aria-hidden="true"></div>
@@ -1260,7 +1240,7 @@
                         <input type="tel" id="alert-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
                     </div>
                     <div class="field">
-                        <label for="alert-interest">I'd Love Alerts About</label>
+                        <label for="alert-interest">Send Me Alerts About</label>
                         <select id="alert-interest" name="interest">
                             <option value="everything" selected>Everything New</option>
                             <option value="ladies">Ladies' Footwear</option>
@@ -1317,15 +1297,18 @@
                 </div>
                 <div class="visit-card reveal">
                     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                        <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/>
-                        <path d="M20 11v9l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M7 15h26l3 7H4l3-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M8 22v13h24V22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M16 35v-8h8v8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M12 9h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                     <h3>Retail &amp; Wholesale</h3>
                     <p>Walk-in customers welcome<br>Trade buyers, ask for the owner</p>
                 </div>
                 <div class="visit-card reveal">
                     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                        <path d="M12 6h4l3 7-3 2c1.5 3 4 5.5 7 7l2-3 7 3v4c0 2-1.6 3.6-3.6 3.4C17.6 28.6 11.4 22.4 10.6 11.6 10.4 9.6 12 8 14 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/>
+                        <path d="M26 14l-3.4 8.6L14 26l3.4-8.6L26 14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     </svg>
                     <h3>Find Us</h3>
                     <p>Main Chowk market, on Faizabad Road beside the Masjid &mdash; ask any shopkeeper on the row.</p>
@@ -1370,7 +1353,7 @@
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">What if the pair doesn't fit once I get home?</button>
                     <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>Come back and speak to us. Unworn footwear with the box and tags intact can be exchanged &mdash; we'd rather swap the size than have a pair sit unused under a bed.</p>
+                        <p>Come back and speak to us. Bring the pair unworn, with its box, and the owner will do what he can on the size &mdash; we'd rather sort out the fit than have a pair sit unused under a bed.</p>
                     </div>
                 </div>
             </div>
@@ -1432,7 +1415,6 @@
     <!-- Animation Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
 
     <script>
     (function () {

@@ -14,7 +14,7 @@
 
     <style>
         /* ==========================================================
-           NEW GUPTA ELECTRONICS — home-retail template
+           NEW GUPTA ELECTRONICS (with Sleepwell Gallery) — Gonda
            Charcoal #121212 · Copper #d97941 · Light gray text
            Inter (tight) body · Space Grotesk display
            ========================================================== */
@@ -257,7 +257,7 @@
         }
 
         /* ==================== HERO ==================== */
-        /* Full-bleed showroom photo sits UNDER the brand tint layers,
+        /* Full-bleed interior photo sits UNDER the brand tint layers,
            so headline contrast survives even if the photo fails to load. */
         .hero {
             min-height: 100vh;
@@ -270,7 +270,7 @@
             background-image:
                 linear-gradient(180deg, rgba(12, 12, 12, 0.90) 0%, rgba(12, 12, 12, 0.74) 42%, rgba(12, 12, 12, 0.96) 100%),
                 radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.20), transparent 65%),
-                url('https://images.pexels.com/photos/17565491/pexels-photo-17565491.jpeg?auto=compress&cs=tinysrgb&w=1600');
+                url('https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-color: var(--bg);
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-position: center, center, center 40%;
@@ -1147,12 +1147,12 @@
                     <span class="eyebrow eyebrow-left">Our Story</span>
                     <h2>Since 1986, the same <span class="gradient-text">counter, the same name.</span></h2>
                     <p>Three showrooms across Gonda under one family: the main electronics and appliance store on <strong>Utraula Road</strong>, the <strong>LG Best Shop</strong> at LIC City Center, and the exclusive <strong>Sleepwell Gallery</strong> on Ayodhya Road.</p>
-                    <p>Nearly four decades in this market means we are not going anywhere after the sale. Families who bought their first television here now send their sons for a refrigerator — and for the mattress that goes with the new bed.</p>
+                    <p>Four decades in this market mean we are not going anywhere after the sale. Families who bought their first television here now come back for a refrigerator — and for the mattress that goes with the new bed.</p>
                     <p><strong>Genuine stock. Proper GST bill. Full manufacturer warranty. Nothing hidden on the invoice.</strong></p>
                 </div>
                 <div class="story-panel reveal">
                     <div class="photo-frame story-photo">
-                        <img src="https://images.pexels.com/photos/30536511/pexels-photo-30536511.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Home appliances on display at the showroom entrance" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                        <img src="https://images.pexels.com/photos/10078142/pexels-photo-10078142.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Wall-mounted LG television installed in a customer's home" loading="lazy" decoding="async" onerror="this.style.display='none'">
                     </div>
                     <div class="story-point">
                         <span class="story-point-icon" aria-hidden="true">
@@ -1275,9 +1275,9 @@
     <!-- PROMISE GRID -->
     <section class="promise" id="why-us">
         <div class="container">
-            <span class="eyebrow reveal">Forty Years On One Road</span>
+            <span class="eyebrow reveal">Forty Years In Gonda</span>
             <h2 class="section-headline reveal">Why Gonda <span class="gradient-text">Shops Here.</span></h2>
-            <p class="section-sub reveal">Nearly forty years in the same market. You know where to find us if anything goes wrong — and we know we will see you again.</p>
+            <p class="section-sub reveal">Forty years serving the same town. You know where to find us if anything goes wrong — and we know we will see you again.</p>
             <div class="promise-grid">
                 <div class="promise-card reveal">
                     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4l13 7v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9l13-7z" stroke="#d97941" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1303,7 +1303,7 @@
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <!-- STATS BAND -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1450,7 +1450,7 @@
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What if something goes wrong after purchase?</button>
                     <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-                        <p>Call us first. Every product carries its full manufacturer warranty, and we coordinate the service visit with the brand on your behalf. Your bill from us is all the proof you need — and we have been at this address since 1986, so you know where to find us.</p>
+                        <p>Call us first. Every product carries its full manufacturer warranty, and we coordinate the service visit with the brand on your behalf. Your bill from us is all the proof you need — and we have been in Gonda since 1986, so you know where to find us.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1698,10 +1698,7 @@
                 });
             });
 
-            /* ---------- CountUp counters (guarded) ----------
-               Stats are qualitative by default (no invented numbers).
-               Customization agents: give a .stat-value real data via
-               data-count="1234" and it will animate automatically. */
+            /* ---------- CountUp counters (guarded) ---------- */
             if (typeof window.countUp !== 'undefined') {
                 document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
                     var target = parseFloat(el.getAttribute('data-count'));

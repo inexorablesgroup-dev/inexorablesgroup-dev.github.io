@@ -621,7 +621,7 @@ Unverified (kept off the page): owner name, years in business, staff count, hour
         }
         .demo-badge button {
             background: none; border: none; color: var(--ink-dim); font-size: 1.05rem; line-height: 1; cursor: pointer;
-            padding: 6px; min-width: 28px; min-height: 28px; border-radius: 50%; transition: color 0.3s, background 0.3s;
+            padding: 8px; min-width: 34px; min-height: 34px; border-radius: 50%; transition: color 0.3s, background 0.3s;
         }
         .demo-badge button:hover { color: var(--ink); background: rgba(255, 255, 255, 0.08); }
         .demo-badge.hidden { display: none; }
@@ -699,6 +699,15 @@ Unverified (kept off the page): owner name, years in business, staff count, hour
             .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
         }
     </style>
+
+    <noscript>
+        <style>
+            /* Without JS the accordion cannot open, so every answer stays readable. */
+            .faq-answer { max-height: none; }
+            .faq-question { cursor: default; }
+            .faq-question::after { content: ''; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -879,7 +888,7 @@ Unverified (kept off the page): owner name, years in business, staff count, hour
     </section>
 
     <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <section class="stats" aria-label="Why families come back">
         <div class="container">
             <span class="eyebrow reveal">Why Families Come Back</span>
             <h2 class="section-headline reveal" style="margin-bottom:44px;">The Part You Don't <span class="gradient-text">Have To Manage.</span></h2>
@@ -1019,7 +1028,7 @@ Unverified (kept off the page): owner name, years in business, staff count, hour
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#a5b4fc" stroke-width="1.6"/><path d="M11 6.5V11l3.5 2.5" stroke="#a855f7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <h3>When To Reach Us</h3>
-                    <p>Open through the week<br>WhatsApp answered day and night<br>Site visits by appointment</p>
+                    <p>Phone or WhatsApp is the quickest way<br>Busiest through wedding season<br>Site visits by appointment</p>
                 </div>
             </div>
             <div class="visit-actions reveal">

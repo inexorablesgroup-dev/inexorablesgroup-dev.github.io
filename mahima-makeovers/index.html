@@ -383,7 +383,7 @@
         .stats::before {
             content: ''; position: absolute; inset: 0; background:
             radial-gradient(circle at 82% 24%, rgba(242, 215, 184, 0.07) 0%, transparent 42%),
-            radial-gradient(circle at 16% 78%, rgba(139, 92, 246, 0.07) 0%, transparent 42%); pointer-events: none;
+            radial-gradient(circle at 16% 78%, rgba(201, 71, 111, 0.07) 0%, transparent 42%); pointer-events: none;
         }
         .stats .container { position: relative; z-index: 1; }
 
@@ -438,7 +438,7 @@
         .approach-card-inner h3 { font-size: 1.25rem; margin-bottom: 12px; }
         .approach-card-inner p { color: var(--ink-dim); font-size: 0.95rem; }
 
-        /* ---------- Automation mock: free consultation booking ---------- */
+        /* ---------- Automation mock: bridal / salon slot booking ---------- */
         .consult { padding: 130px 24px; background: var(--bg-deep); }
         .consult::before {
             content: ''; position: absolute; inset: 0;
@@ -466,8 +466,9 @@
             width: 100%; min-height: 48px; padding: 12px 16px; border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(9, 11, 18, 0.7); color: var(--ink);
             font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            appearance: none; -webkit-appearance: none;
+            appearance: none; -webkit-appearance: none; color-scheme: dark;
         }
+        .field input[type="date"] { appearance: auto; -webkit-appearance: none; }
 
         .field select {
             background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238b8fa3' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -672,6 +673,24 @@
             .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
         }
     </style>
+
+    <!-- No-JS fallback: FAQ answers stay readable and the menu stays reachable -->
+    <noscript>
+        <style>
+            .faq-answer { max-height: none !important; overflow: visible !important; }
+            .faq-question::after { content: ''; }
+            @media (max-width: 820px) {
+                .nav-hamburger { display: none; }
+                .nav-links {
+                    position: static; flex-direction: row; flex-wrap: wrap; justify-content: flex-end;
+                    gap: 4px 14px; background: none; border-bottom: none; padding: 0;
+                    transform: none; opacity: 1; visibility: visible;
+                }
+                .nav-links a { padding: 8px 2px; font-size: 0.8rem; border-bottom: none; }
+                .nav-cta { margin-top: 0; padding: 8px 14px !important; border-radius: 980px; }
+            }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -827,7 +846,7 @@
     </section>
 
     <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <section class="stats" aria-label="Mahima Makeovers at a glance">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat reveal">
@@ -887,7 +906,7 @@
         <div class="container">
             <span class="eyebrow reveal">Gallery</span>
             <h2 class="section-headline reveal">The Days We <span class="gradient-text">Get Ready For.</span></h2>
-            <p class="section-sub reveal">Weddings, receptions and ceremonies across Gonda and the districts around it.</p>
+            <p class="section-sub reveal">The occasions a bridal studio gets ready for — weddings, receptions and the ceremonies in between.</p>
             <div class="gallery-grid reveal">
                 <div class="photo-frame">
                     <img src="https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Wedding stage with floral arch and traditional attire" loading="lazy" onerror="this.style.display='none'">
@@ -946,8 +965,12 @@
                             <option value="" selected disabled>Choose a branch</option>
                             <option>Family Salon — Circular Road</option>
                             <option>Beauty Salon — Sonar Gali, Station Road</option>
-                            <option>Either — whichever is free</option>
+                            <option>Either branch — whichever is free</option>
                         </select>
+                    </div>
+                    <div class="field">
+                        <label for="cf-date">Date of the Function</label>
+                        <input type="date" id="cf-date" name="date" required>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Check My Date</button>
                     <p class="consult-note">No advance to enquire. We'll simply tell you if the date is open.</p>
@@ -1212,10 +1235,11 @@
                 var service = document.getElementById('cf-service');
                 var phone = document.getElementById('cf-phone');
                 var time = document.getElementById('cf-time');
+                var date = document.getElementById('cf-date');
 
                 // minimal friendly validation
                 var firstInvalid = null;
-                [name, service, phone, time].forEach(function (field) {
+                [name, service, phone, time, date].forEach(function (field) {
                     if (!field) return;
                     var ok = field.value && field.value.trim().length > 0;
                     if (field === phone && ok) {
@@ -1226,10 +1250,17 @@
                 });
                 if (firstInvalid) { firstInvalid.focus(); return; }
 
-                if (successDetail && name && time) {
+                if (successDetail && name && service && time && date) {
+                    var pretty = date.value;
+                    var parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date.value);
+                    if (parts) {
+                        var months = ['January', 'February', 'March', 'April', 'May', 'June',
+                            'July', 'August', 'September', 'October', 'November', 'December'];
+                        pretty = Number(parts[3]) + ' ' + months[Number(parts[2]) - 1] + ' ' + parts[1];
+                    }
                     successDetail.textContent = 'Thank you, ' + name.value.trim().split(' ')[0] +
-                        '. We’ll confirm your ' + service.value +
-                        ' booking at ' + time.value + ' on WhatsApp shortly.';
+                        '. We have your enquiry for ' + service.value + ' on ' + pretty +
+                        '. Branch: ' + time.value + '. We’ll confirm on WhatsApp shortly.';
                 }
                 consultShell.classList.add('done');
             });

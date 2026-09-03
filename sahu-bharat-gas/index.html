@@ -532,7 +532,10 @@
         }
         .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
 
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.23, 1, 0.32, 1); }
+        /* Answers are open by default so the FAQ reads fully with JS disabled;
+           the inline head script adds .js and the accordion takes over. */
+        .faq-answer { max-height: none; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.23, 1, 0.32, 1); }
+        .js .faq-answer { max-height: 0; }
         .faq-answer p { color: var(--ink-dim); font-size: 0.98rem; padding: 0 4px 26px; max-width: 640px; }
 
         /* ---------- Final CTA ---------- */
@@ -561,7 +564,10 @@
         /* ---------- Footer ---------- */
         .footer { padding: 64px 24px 96px; background: var(--bg-deep); border-top: 1px solid var(--line); text-align: center; }
         .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; margin-bottom: 28px; }
-        .footer-links a { color: var(--ink-dim); text-decoration: none; font-size: 0.9rem; padding: 8px 2px; transition: color 0.3s; }
+        .footer-links a {
+            color: var(--ink-dim); text-decoration: none; font-size: 0.9rem; padding: 12px 4px;
+            display: inline-flex; align-items: center; min-height: 44px; transition: color 0.3s;
+        }
         .footer-links a:hover { color: var(--ink); }
         .footer-name { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin-bottom: 8px; }
         .footer-copy { color: var(--ink-dim); font-size: 0.85rem; margin-bottom: 20px; }
@@ -669,6 +675,7 @@
             .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
         }
     </style>
+    <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 
@@ -707,7 +714,7 @@
     <section class="hero" id="top">
         <div class="hero-photo" aria-hidden="true"></div>
         <div class="container">
-            <p class="hero-badge reveal">Bharatgas Gramin Vitrak &middot; Gonda</p>
+            <p class="hero-badge reveal">Sahu Bharat Gas &middot; Bharatgas Gramin Vitrak, Gonda</p>
             <h1 class="hero-headline reveal">Your Cylinder. <span class="gradient-text">At Print Rate.</span></h1>
             <p class="hero-subtext reveal">Bharatgas LPG refills and new connections for Gonda city and the villages around it. Booked simply, delivered to your door, charged at the printed price — nothing extra.</p>
             <div class="hero-ctas reveal">
@@ -733,7 +740,7 @@
                     <h2>A Kitchen Should <span class="gradient-text">Never Wait.</span></h2>
                     <p>A gas cylinder is not a purchase you plan for. It runs out mid-cooking, on a working morning, in a house where the next meal depends on it. <strong>Sahu Bharat Gas Gramin Vitrak exists so that gap is as short as possible.</strong></p>
                     <p>We are a Bharatgas <em>gramin vitrak</em> — a rural distributorship — working out of Chhedi Purwa on Station Road, Gonda. From here we serve city households and the villages in our territory: refills, new connections, transfers, and the paperwork that comes with all of it.</p>
-                    <p>The price on the cylinder is the price you pay. That has been the whole reputation, and we intend to keep it that way.</p>
+                    <p>Print rate only &mdash; that is the reputation this counter was built on in Gonda, and it is the one thing we will not let slip.</p>
                 </div>
                 <div class="story-panel reveal">
                     <h3>What We Stand By</h3>

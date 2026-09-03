@@ -583,20 +583,21 @@ to { stroke-dashoffset: 0; }
 
 .booking-success .demo-line { display: inline-block; font-size: 0.8rem; color: var(--gold-soft); border: 1px dashed rgba(216, 181, 106, 0.4); border-radius: 10px; padding: 10px 16px; margin-bottom: 24px; }
 
-/* Reports on WhatsApp strip */
+/* Direct-line strip (brand emerald — deliberately NOT WhatsApp green:
+   no direct mobile is confirmed, so nothing here should imply a WhatsApp channel) */
 .wa-strip {
     max-width: 760px;
     margin: 56px auto 0;
     display: flex;
     align-items: center;
     gap: 22px;
-    background: linear-gradient(120deg, rgba(37, 211, 102, 0.09), rgba(216, 181, 106, 0.06));
-    border: 1px solid rgba(37, 211, 102, 0.22);
+    background: linear-gradient(120deg, rgba(45, 212, 160, 0.09), rgba(216, 181, 106, 0.06));
+    border: 1px solid rgba(45, 212, 160, 0.22);
     border-radius: var(--radius);
     padding: 26px 30px;
 }
 
-.wa-strip-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(37, 211, 102, 0.35); }
+.wa-strip-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--emerald-deep), var(--emerald)); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(45, 212, 160, 0.32); }
 
 .wa-strip h3 { font-size: 1.15rem; margin-bottom: 4px; }
 
@@ -1086,7 +1087,7 @@ html { scroll-behavior: auto; }
                     <p>Fewer suppliers means fewer things to chase on a busy morning.</p>
                 </div>
                 <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/15277947/pexels-photo-15277947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Medical diagnostic equipment in a clinical facility" loading="lazy" onerror="this.style.display='none'">
+                    <img src="https://images.pexels.com/photos/15277947/pexels-photo-15277947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Clinician with a patient beside an MRI scanner in a diagnostic imaging room" loading="lazy" onerror="this.style.display='none'">
                 </div>
             </div>
 
@@ -1204,8 +1205,8 @@ html { scroll-behavior: auto; }
                         </select>
                     </div>
                     <div class="form-row">
-                        <label for="bk-date">Town / territory</label>
-                        <input type="text" id="bk-date" name="territory" placeholder="e.g. Gonda city, Balrampur, Colonelganj" required>
+                        <label for="bk-territory">Town / territory</label>
+                        <input type="text" id="bk-territory" name="territory" placeholder="e.g. Gonda city, Balrampur, Colonelganj" required>
                     </div>
                     <div class="form-row">
                         <label for="bk-phone">Mobile number</label>
@@ -1266,7 +1267,7 @@ html { scroll-behavior: auto; }
                         <path d="M20 12v8l5.5 3.5" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <h3>Trading Hours</h3>
-                    <p>Open through the working week<br>Call ahead to confirm timings</p>
+                    <p>Timings are best confirmed on the day<br>Call the desk before you travel</p>
                 </div>
                 <div class="visit-card" data-reveal>
                     <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">

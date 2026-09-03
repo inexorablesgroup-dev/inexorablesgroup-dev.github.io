@@ -478,6 +478,14 @@
         /* ============================================================ MOTION SAFETY ============================================================ */ @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; } .orb { animation: none; } .hero-media::before { animation: none !important; transform: none !important; inset: 0; } }
 
     </style>
+
+    <noscript>
+        <style>
+            /* Without JS the accordion cannot open — show every answer instead */
+            .faq-answer { max-height: none; }
+            .faq-question::after { content: ''; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -658,7 +666,7 @@
                         <path d="M8 40h36v4H8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     </svg>
                     <h3>By-Products</h3>
-                    <p>Process by-products sold in volume — a steady, contracted offtake for feed makers and downstream processors.</p>
+                    <p>Processing by-products sold in volume — a steady, contracted offtake for feed makers and downstream processors.</p>
                 </article>
             </div>
         </div>
@@ -727,7 +735,7 @@
                 <div class="p-step reveal">
                     <span class="p-step-num">03 — STORE</span>
                     <h3>Bag &amp; Hold</h3>
-                    <p>Weight-true bagging, stacked in dry, pest-managed storage until your order calls it up.</p>
+                    <p>Weight-true bagging, then stacked under cover on the premises until your order calls it up.</p>
                 </div>
                 <div class="p-step reveal">
                     <span class="p-step-num">04 — DISPATCH</span>
@@ -743,11 +751,11 @@
         <div class="container center">
             <span class="kicker">A Look Inside</span>
             <h2 class="section-headline">Grain, Graded <span class="gradient-text">and Gone.</span></h2>
-            <p class="section-sub">Intake to loading — the four things that happen to every lot that comes through the gate.</p>
+            <p class="section-sub">Field to loading bay — the arc every lot follows once it comes through our gate.</p>
             <div class="gallery-strip">
                 <div class="gallery-cell reveal">
                     <img src="https://images.pexels.com/photos/28488757/pexels-photo-28488757.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Ripe grain on the plant, close up" loading="lazy" decoding="async"
+                         alt="Close-up of ripe grain still on the stalk in the field" loading="lazy" decoding="async"
                          onerror="this.style.display='none'">
                 </div>
                 <div class="gallery-cell reveal">
@@ -847,7 +855,7 @@
         <div class="container center">
             <span class="kicker">Come See the Plant</span>
             <h2 class="section-headline">Visit. Inspect. <span class="gradient-text">Then Decide.</span></h2>
-            <p class="section-sub">Serious buyers are welcome to walk the floor before the first order. Message us and we will fix a time.</p>
+            <p class="section-sub">Serious buyers are welcome to walk the floor before the first order. Write in and we will fix a time.</p>
             <div class="visit-grid" style="text-align:left;">
                 <div class="visit-card reveal">
                     <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M15 27s-9-8.1-9-14a9 9 0 1118 0c0 5.9-9 14-9 14z" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="12.5" r="3.5" stroke="currentColor" stroke-width="2"/></svg>
@@ -890,7 +898,7 @@
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How do I get the current rate?</button>
                     <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>One rate sheet goes out to every buyer on the list — the same sheet, big buyer or small. Write in once and you are on it.</p>
+                        <p>Write in once and you go on the buyer list; from then on the day's rate reaches you without you having to ask for it.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -947,7 +955,7 @@
                 <a href="#visit">Visit</a>
             </div>
             <p class="footer-demo-note">Website concept by Inexorables Group · <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> · Design demo — not the official website of Ayaansh Agro Foods Private Limited.</p>
-            <p class="footer-copy">Concept demonstration. All names, figures and details on this page are illustrative.</p>
+            <p class="footer-copy">Concept demonstration. Photographs and service details on this page are illustrative and awaiting confirmation from the company.</p>
         </div>
     </footer>
 
@@ -1105,7 +1113,7 @@
                         if (!isNaN(target)) {
                             var cu = new window.countUp.CountUp(entry.target, target, {
                                 duration: 2.2,
-                                separator: ','
+                                separator: ''
                             });
                             if (!cu.error) cu.start();
                         }

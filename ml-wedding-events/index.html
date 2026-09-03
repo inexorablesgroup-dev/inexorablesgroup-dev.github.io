@@ -700,6 +700,9 @@
             .back-to-top { bottom: 96px; right: 24px; }
             .demo-badge { bottom: 18px; left: 14px; font-size: 0.7rem; }
             .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
+            /* Long business name must not blow past the fixed nav height */
+            .nav-logo-name { font-size: 0.8rem; line-height: 1.18; max-width: 190px; }
+            .nav-logo-name small { font-size: 0.54rem; letter-spacing: 0.1em; }
         }
     </style>
 </head>
@@ -712,7 +715,7 @@
         <div class="nav-container">
             <a href="#top" class="nav-logo" aria-label="M L Wedding Decorator &amp; Events Gonda — home">
                 <span class="nav-logo-mark" aria-hidden="true">ML</span>
-                <span class="nav-logo-name">M L Wedding Decorator &amp; Events Gonda<small>Gonda &middot; Decor &amp; Events since 2000s</small></span>
+                <span class="nav-logo-name">M L Wedding Decorator &amp; Events Gonda<small>Gonda &middot; Decor &amp; Events &middot; 20+ Years</small></span>
             </a>
             <div class="nav-links" id="nav-menu">
                 <a href="#services">What We Do</a>
@@ -742,7 +745,7 @@
         <div class="container">
             <p class="hero-badge reveal">Wedding Decor &amp; Events &middot; Gonda</p>
             <h1 class="hero-headline reveal">The Day They'll <span class="gradient-text">Never Forget.</span></h1>
-            <p class="hero-subtext reveal">Mandap, stage, gates, lights and fireworks — designed and built by Gonda's most trusted decorators. You enjoy the wedding. We handle everything you can see.</p>
+            <p class="hero-subtext reveal">Mandap, stage, gates, lights and fireworks — designed and built by Gonda's most-reviewed decorators. You enjoy the wedding. We handle everything you can see.</p>
             <div class="hero-ctas reveal">
                 <a href="#consult" class="btn btn-primary">Check Your Date</a>
                 <a href="#services" class="btn btn-secondary">See What We Do</a>
@@ -780,7 +783,7 @@
                     <ul>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Setup finished before the baraat arrives. Every time.
+                            Setup built and tested well before the baraat arrives.
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -853,8 +856,8 @@
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <!-- STATS BAND -->
+    <section class="stats" aria-label="Our record in Gonda">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat reveal">
@@ -876,7 +879,7 @@
             </div>
             <div class="creds reveal">
                 <span>Listed on Google Maps</span>
-                <span>Owner-Run Since the 2000s</span>
+                <span>Owner-Run for 20+ Years</span>
                 <span>Bargaon &middot; Station Road, Gonda</span>
                 <span>Gonda &amp; Surrounding Districts</span>
             </div>

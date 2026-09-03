@@ -1,13 +1,3 @@
-<!-- TEMPLATE:fashion-retail
-REPLACE-EVERYTHING LIST — customization agents must rewrite:
-[BIZ-NAME] every occurrence of the exemplar name
-[COPY] all headlines/body copy to fit the real business & its real facts
-[PHONE] wa.me + tel links
-[ADDRESS/HOURS/MAP] contact section
-[STATS] counters — real numbers only, else qualitative
-[FAQ] rewrite for the business
-[TITLE/META] title, description, demo-notice business name
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +14,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
 
     <style>
         /* ================================================================
-           NETRAM - THE OPTICAL SHOP — Fashion Retail Template
+           NETRAM - THE OPTICAL SHOP — Gonda
            Deep burgundy · rose-gold · cream. Flowing wave signature motion.
            ================================================================ */
 
@@ -264,8 +254,8 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             overflow: hidden;
             background:
                 radial-gradient(ellipse 90% 55% at 50% -10%, rgba(232, 180, 160, 0.13) 0%, transparent 62%),
+                radial-gradient(ellipse 60% 50% at 82% 88%, rgba(201, 120, 138, 0.12) 0%, transparent 62%),
                 linear-gradient(180deg, rgba(42, 10, 18, 0.90) 0%, rgba(28, 6, 12, 0.93) 55%, rgba(28, 6, 12, 0.985) 100%),
-                url('https://images.pexels.com/photos/8886947/pexels-photo-8886947.jpeg?auto=compress&cs=tinysrgb&w=1600') center 30% / cover no-repeat,
                 var(--bg);
             background-attachment: scroll, scroll, scroll, scroll;
         }
@@ -916,6 +906,11 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             .nav-cta { margin-top: 14px; text-align: center; padding: 14px 22px !important; }
         }
 
+        @media (max-width: 430px) {
+            .nav-logo-name { font-size: 0.98rem; }
+            .nav-logo-mark { width: 32px; height: 32px; }
+        }
+
         @media (max-width: 560px) {
             .collections-grid, .eyewear-grid, .visit-grid { grid-template-columns: 1fr; }
             .hero { padding: 110px 20px 70px; }
@@ -969,7 +964,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     <path d="M19 21 Q20 19.5 21 21 M9 20 L6.5 16 M31 20 L33.5 16"
                           fill="none" stroke="url(#logoGrad)" stroke-width="1.6" stroke-linecap="round"/>
                 </svg>
-                <span class="nav-logo-name">Netram <em>Opticals</em></span>
+                <span class="nav-logo-name">Netram <em>The Optical Shop</em></span>
             </a>
             <div class="nav-links" id="nav-menu">
                 <a href="#collections">What We Do</a>
@@ -1072,7 +1067,6 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     <p><strong>A 4.8-star rating across Gonda</strong> was not bought. It was earned one pair at a time.</p>
                 </div>
                 <div class="story-art reveal" aria-hidden="true">
-                    <img class="story-photo" src="https://images.pexels.com/photos/35741386/pexels-photo-35741386.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
                     <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
                         <defs>
                             <linearGradient id="artGrad" x1="0" y1="0" x2="1" y2="1">
@@ -1173,7 +1167,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </svg>
     </div>
 
-    <!-- STATS BAND [STATS] -->
+    <!-- STATS BAND -->
     <section class="stats" aria-label="Netram - The Optical Shop at a glance">
         <div class="container">
             <div class="stats-grid">
@@ -1186,8 +1180,8 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     <span class="stat-label">The District Hospital</span>
                 </div>
                 <div class="stat reveal">
-                    <span class="stat-value">Honest Price</span>
-                    <span class="stat-label">Told Before It's Cut</span>
+                    <span class="stat-value">Honest Advice</span>
+                    <span class="stat-label">Before You Buy</span>
                 </div>
                 <div class="stat reveal">
                     <span class="stat-value">Trusted</span>
@@ -1205,9 +1199,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             <p class="section-sub">You wear it every waking hour of every day. It is worth ten minutes of choosing properly.</p>
             <div class="eyewear-grid">
                 <article class="swatch-card reveal">
-                    <div class="swatch-scene scene-crimson" aria-hidden="true">
-                        <img class="swatch-photo" src="https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
-                    </div>
+                    <div class="swatch-scene scene-crimson" aria-hidden="true"></div>
                     <div class="swatch-body">
                         <h3>The Everyday Pair</h3>
                         <p>Light on the nose, tough enough for a full working day. The frame you forget you're wearing.</p>
@@ -1215,9 +1207,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     </div>
                 </article>
                 <article class="swatch-card reveal">
-                    <div class="swatch-scene scene-amber" aria-hidden="true">
-                        <img class="swatch-photo" src="https://images.pexels.com/photos/4566670/pexels-photo-4566670.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
-                    </div>
+                    <div class="swatch-scene scene-amber" aria-hidden="true"></div>
                     <div class="swatch-body">
                         <h3>The Screen Pair</h3>
                         <p>Anti-glare and blue-cut lenses for students and desk work — for eyes that end the day tired.</p>
@@ -1245,10 +1235,10 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </svg>
     </div>
 
-    <!-- AUTOMATION TEASER: NEW COLLECTION ALERTS -->
+    <!-- AUTOMATION TEASER: ENQUIRY / ORDER-READY FLOW -->
     <section class="automation" id="alerts">
         <div class="container">
-            <span class="section-kicker">No More Waiting Calls</span>
+            <span class="section-kicker">No More Chasing Calls</span>
             <h2 class="section-headline">Order Updates, <span class="gradient-text">Straight to Your Phone.</span></h2>
             <p class="section-sub">Ask a question, book an eye test, or get a message the moment your spectacles are ready — on WhatsApp, without calling a busy counter.</p>
 
@@ -1304,7 +1294,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </svg>
     </div>
 
-    <!-- VISIT / CONTACT [ADDRESS/HOURS/MAP] -->
+    <!-- VISIT / CONTACT -->
     <section class="visit" id="visit">
         <div class="container">
             <span class="section-kicker">Come and See</span>
@@ -1341,7 +1331,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         </div>
     </section>
 
-    <!-- FAQ [FAQ] -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
             <span class="section-kicker">Good Questions</span>
@@ -1431,7 +1421,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-name">Netram <em>Opticals</em></p>
+            <p class="footer-name">Netram <em>The Optical Shop</em></p>
             <div class="footer-links">
                 <a href="#collections">What We Do</a>
                 <a href="#eyewear">Eyewear</a>
@@ -1506,7 +1496,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             });
         });
 
-        /* ---------- Automation mock: collection alerts ---------- */
+        /* ---------- Automation mock: WhatsApp enquiry ---------- */
         var form = document.getElementById('alert-form');
         var success = document.getElementById('alert-success');
         if (form && success) {

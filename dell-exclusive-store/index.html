@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Dell Exclusive Store - Gonda — Dell Laptops, Desktops &amp; Authorised Service, Gonda</title>
-    <meta name="description" content="Gonda's exclusive Dell store on Kachery Road — laptops, desktops, accessories and authorised Dell service, without the trip to Lucknow. Design demo by Inexorables Group.">
+    <title>Dell Exclusive Store - Gonda — Laptops, Desktops &amp; Authorised Dell Service on Kachery Road</title>
+    <meta name="description" content="Dell Exclusive Store - Gonda, on Kachery Road above the SBI AD Branch — laptops, desktops, accessories and authorised Dell service for Gonda district. Design demo by Inexorables Group.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1070,7 +1070,7 @@
                         </span>
                         <div>
                             <h3>Set up before you leave</h3>
-                            <p>Windows activated, updates run, your data moved across — done at the counter.</p>
+                            <p>Ask the counter to get the machine ready — Windows activated, updates run, your files moved across.</p>
                         </div>
                     </div>
                 </div>
@@ -1187,7 +1187,7 @@
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <!-- STATS BAND -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1228,7 +1228,7 @@
     <section class="automation" id="enquiry">
         <div class="container">
             <h2 class="section-headline reveal">Ask Before <span class="gradient-text">You Travel.</span></h2>
-            <p class="section-sub reveal">Coming in from Colonelganj, Karnailganj or a village an hour away? Check the model is on the shelf, or book a service slot, before you make the trip.</p>
+            <p class="section-sub reveal">Coming in from Colonelganj, Mankapur or a village an hour away? Check the model is on the shelf, or book a service slot, before you make the trip.</p>
 
             <div class="automation-shell reveal">
                 <span class="automation-tag"><span class="dot" aria-hidden="true"></span> Instant Enquiry Assistant</span>
@@ -1332,7 +1332,7 @@
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Can you repair a Dell laptop I bought somewhere else?</button>
                     <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>The store operates as an authorised Dell service point, so warranty and out-of-warranty work is handled here regardless of where the machine was purchased. Call before you come so the right technician is at the counter.</p>
+                        <p>The store operates as an authorised Dell service point, so both warranty and out-of-warranty work can be looked at here. Call before you come with the model and the fault, so you know what the counter can do before you make the trip.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1493,7 +1493,7 @@
             });
         });
 
-        /* ---------- Automation mock: EMI / price check ---------- */
+        /* ---------- Automation mock: stock & service enquiry ---------- */
         var emiForm = document.getElementById('emi-form');
         var emiSuccess = document.getElementById('emi-success');
         var emiReset = document.getElementById('emi-reset');
@@ -1580,10 +1580,7 @@
                 });
             });
 
-            /* ---------- CountUp counters (guarded) ----------
-               Stats are qualitative by default (no invented numbers).
-               Customization agents: give a .stat-value real data via
-               data-count="1234" and it will animate automatically. */
+            /* ---------- CountUp counters (guarded) ---------- */
             if (typeof window.countUp !== 'undefined') {
                 document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
                     var target = parseFloat(el.getAttribute('data-count'));

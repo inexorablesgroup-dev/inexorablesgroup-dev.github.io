@@ -981,7 +981,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
     <!-- NAVIGATION -->
     <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#" class="nav-logo" aria-label="Amit Motors Pvt. Ltd. — home">
+            <a href="#top" class="nav-logo" aria-label="Amit Motors Pvt. Ltd. — home">
                 <svg class="nav-logo-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
                     <rect width="64" height="64" rx="14" fill="#0e1116" stroke="rgba(255,255,255,0.1)"/>
                     <path d="M10 40h26l6-8H16l4-6h26l8 6-10 14H14z" fill="#e63946"/>
@@ -1254,7 +1254,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: BOOK TEST RIDE / SERVICE SLOT -->
+    <!-- AUTOMATION MOCK: BOOK TEST DRIVE / SERVICE SLOT -->
     <section id="book" class="booking section-pad">
         <div class="container">
             <span class="section-kicker" data-reveal>Skip the Queue</span>
@@ -1327,11 +1327,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         <div class="container">
             <span class="section-kicker" data-reveal>Inside Amit Motors</span>
             <h2 class="section-headline" data-reveal>Showroom Floor, Workshop Bay, Open Road.</h2>
-            <p class="section-sub" data-reveal>The three places a Mahindra spends its life &mdash; and the two of them we are responsible for.</p>
+            <p class="section-sub" data-reveal>The three places a Mahindra spends its life &mdash; and the two we stay answerable for.</p>
             <div class="gallery-grid">
                 <div class="photo-frame" data-reveal>
-                    <img src="https://images.pexels.com/photos/30905269/pexels-photo-30905269.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Cars on display under soft lighting in a showroom"
+                    <img src="https://images.pexels.com/photos/12565887/pexels-photo-12565887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="New vehicles on display in a modern car showroom interior"
                          loading="lazy" decoding="async" onerror="this.style.display='none'">
                     <span class="photo-caption">Sales floor</span>
                 </div>
@@ -1685,10 +1685,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
             // Animations are decorative; never break the page over them.
         }
 
-        /* ---------- CountUp counters (for customization agents) ----------
-           Qualitative exemplar stats have no data-count. When a real business
-           has REAL numbers, set e.g. <span class="stat-num" data-count="1200"
-           data-suffix="+">0</span> and this will animate them. */
+        /* ---------- CountUp counters ----------
+           The stats band here is deliberately qualitative — no verified numbers
+           exist for this dealership, so no .stat-num carries data-count and
+           nothing animates. Kept in place for future verified figures. */
         if (typeof window.countUp !== 'undefined' && window.countUp.CountUp) {
             document.querySelectorAll('.stat-num[data-count]').forEach(function (el) {
                 var target = parseFloat(el.getAttribute('data-count'));

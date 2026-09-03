@@ -1,13 +1,3 @@
-<!-- TEMPLATE:automotive
-REPLACE-EVERYTHING LIST — customization agents must rewrite:
-[BIZ-NAME] every occurrence of the exemplar name "Madhuri Fuel Centre (Bharat Petroleum)"
-[COPY] all headlines/body copy to fit the real business & its real facts
-[PHONE] wa.me + tel links (currently placeholder 919984553553)
-[ADDRESS/HOURS/MAP] contact section
-[STATS] counters — real numbers only (add data-count to .stat-num), else qualitative
-[FAQ] rewrite for the business
-[TITLE/META] title, description, demo-notice business name
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -996,7 +986,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
                 <span class="nav-logo-name">Madhuri<span>&nbsp;Fuel Centre</span></span>
             </a>
             <div class="nav-links" id="nav-menu">
-                <a href="#showroom">What We Offer</a>
+                <a href="#forecourt">What We Offer</a>
                 <a href="#standard">Our Standard</a>
                 <a href="#visit">Visit</a>
                 <a href="#faq">FAQ</a>
@@ -1066,7 +1056,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
     </section>
 
     <!-- OFFERINGS -->
-    <section id="showroom" class="offerings section-pad">
+    <section id="forecourt" class="offerings section-pad">
         <div class="container">
             <span class="section-kicker" data-reveal>At the Forecourt</span>
             <h2 class="section-headline" data-reveal>More Than a Fill-Up.</h2>
@@ -1161,7 +1151,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         </div>
     </section>
 
-    <!-- STATS BAND — qualitative (no invented numbers). For real clients: add data-count="N" to .stat-num for CountUp. -->
+    <!-- STATS BAND -->
     <section class="stats section-pad">
         <div class="container">
             <div class="stats-grid">
@@ -1250,7 +1240,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: BOOK TEST RIDE / SERVICE SLOT -->
+    <!-- AUTOMATION MOCK: FLEET / COMMERCIAL ENQUIRY -->
     <section id="book" class="booking section-pad">
         <div class="container">
             <span class="section-kicker" data-reveal>For Fleets &amp; Businesses</span>
@@ -1368,8 +1358,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                         Timings
                     </h3>
-                    <p>Open every day, long hours</p>
-                    <p class="visit-muted">Message us to confirm before a late run</p>
+                    <p>Call or WhatsApp for today's timings</p>
+                    <p class="visit-muted">Worth a message before a late-night or early-morning run</p>
                 </div>
             </div>
             <div class="visit-actions" data-reveal>
@@ -1482,7 +1472,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         <div class="container">
             <p class="footer-name">Madhuri<span>&nbsp;Fuel Centre</span></p>
             <div class="footer-links">
-                <a href="#showroom">What We Offer</a>
+                <a href="#forecourt">What We Offer</a>
                 <a href="#standard">Our Standard</a>
                 <a href="#book">Fleet Enquiry</a>
                 <a href="#visit">Visit</a>
@@ -1675,10 +1665,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
             // Animations are decorative; never break the page over them.
         }
 
-        /* ---------- CountUp counters (for customization agents) ----------
-           Qualitative exemplar stats have no data-count. When a real business
-           has REAL numbers, set e.g. <span class="stat-num" data-count="1200"
-           data-suffix="+">0</span> and this will animate them. */
+        /* ---------- CountUp counters (only for .stat-num[data-count]) ---------- */
         if (typeof window.countUp !== 'undefined' && window.countUp.CountUp) {
             document.querySelectorAll('.stat-num[data-count]').forEach(function (el) {
                 var target = parseFloat(el.getAttribute('data-count'));

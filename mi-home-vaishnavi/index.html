@@ -1124,7 +1124,7 @@ All copy is drawn from verified public facts only; no invented figures, awards o
                 <div class="story-copy reveal">
                     <span class="eyebrow eyebrow-left">The store on Station Road</span>
                     <h2>The whole Mi world, <span class="gradient-text">in Gonda.</span></h2>
-                    <p>Mi Home is Xiaomi's own brand-store format, and in Gonda it is run by <strong>Vaishnavi Infotech</strong> on Station Road, Sahebganj — near Durga Mandir, just off Daduwa Bazar Road. Phones, smart TVs, audio, wearables and smart-home devices, displayed the way the brand intends and priced the way the brand sets.</p>
+                    <p>Mi Home is Xiaomi's own brand-store format, and in Gonda it is run by <strong>Vaishnavi Infotech</strong> on Station Road, Sahebganj — near Durga Mandir, just off Daduwa Bazar Road. Phones, smart TVs, audio, wearables and smart-home devices, displayed the way Xiaomi intends and sold at the brand's own prices.</p>
                     <p>What sets this address apart is what sits behind the counter: an <strong>authorised Mi service centre</strong>, in the same building. The place you buy from is the place that repairs it. No forwarding your handset to Lucknow, no arguing with a helpline about who is responsible.</p>
                     <p><strong>Genuine stock. Official warranty. One address for the whole life of the device.</strong></p>
                 </div>
@@ -1272,7 +1272,7 @@ All copy is drawn from verified public facts only; no invented figures, awards o
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <!-- STATS BAND (verified Google review figures only) -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1296,7 +1296,7 @@ All copy is drawn from verified public facts only; no invented figures, awards o
         </div>
     </section>
 
-    <!-- AUTOMATION MOCK: EMI / PRICE CHECK -->
+    <!-- AUTOMATION MOCK: REPAIR STATUS / STOCK CHECK -->
     <section class="automation" id="service-check">
         <div class="container">
             <span class="eyebrow reveal">Stop waiting on hold</span>
@@ -1351,14 +1351,14 @@ All copy is drawn from verified public facts only; no invented figures, awards o
     <!-- GALLERY STRIP -->
     <section class="gallery" aria-label="Smart TV and smart home ideas">
         <div class="container">
-            <span class="eyebrow reveal">Seen at the store</span>
+            <span class="eyebrow reveal">Once it is home</span>
             <h2 class="section-headline reveal">Smart Home, <span class="gradient-text">Actually At Home.</span></h2>
-            <p class="section-sub reveal">Screens, sound and connected devices set up the way you would actually live with them.</p>
+            <p class="section-sub reveal">Screens, sound and connected devices, pictured the way you would actually live with them — and set up on the shelf here first, so you can judge the panel before you carry it out.</p>
             <div class="gallery-grid">
                 <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/10078142/pexels-photo-10078142.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Wall-mounted television in a minimalist room" loading="lazy" onerror="this.style.display='none'"></div>
                 <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/37748259/pexels-photo-37748259.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bright living room with a sleek television setup" loading="lazy" onerror="this.style.display='none'"></div>
                 <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/7546648/pexels-photo-7546648.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Living room with a wall-mounted television above a couch" loading="lazy" onerror="this.style.display='none'"></div>
-                <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/19599329/pexels-photo-19599329.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Retail display of modern home electronics" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/6980724/pexels-photo-6980724.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Contemporary living room with a large wall-mounted television" loading="lazy" onerror="this.style.display='none'"></div>
             </div>
         </div>
     </section>
@@ -1392,7 +1392,7 @@ All copy is drawn from verified public facts only; no invented figures, awards o
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#ff6900" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#ff6900" stroke-width="1.8" stroke-linecap="round"/></svg>
                         Store Hours
                     </h3>
-                    <p>Please call ahead to confirm today's timings — especially during the festival season, when we often stay open later.</p>
+                    <p>Please call ahead to confirm today's timings — hours can shift around the festival season and on local holidays.</p>
                     <a class="visit-link" href="tel:+919415120744">Call the store &rarr;</a>
                 </div>
                 <div class="visit-card reveal">
@@ -1590,7 +1590,7 @@ All copy is drawn from verified public facts only; no invented figures, awards o
             });
         });
 
-        /* ---------- Automation mock: EMI / price check ---------- */
+        /* ---------- Automation mock: repair status / stock check ---------- */
         var emiForm = document.getElementById('emi-form');
         var emiSuccess = document.getElementById('emi-success');
         var emiReset = document.getElementById('emi-reset');
@@ -1678,9 +1678,8 @@ All copy is drawn from verified public facts only; no invented figures, awards o
             });
 
             /* ---------- CountUp counters (guarded) ----------
-               Stats are qualitative by default (no invented numbers).
-               Customization agents: give a .stat-value real data via
-               data-count="1234" and it will animate automatically. */
+               Only verified public figures are animated here: the Google
+               review counts for the store and the service centre. */
             if (typeof window.countUp !== 'undefined') {
                 document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
                     var target = parseFloat(el.getAttribute('data-count'));

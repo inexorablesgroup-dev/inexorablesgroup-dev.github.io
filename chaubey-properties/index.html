@@ -686,6 +686,15 @@ Facts used: Sabalpur Road / Circuit House area address, phone +91 92500 84984,
             .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
         }
     </style>
+
+    <noscript>
+        <style>
+            /* Without JS the accordion cannot open, so show every answer. */
+            .faq-answer { max-height: none; }
+            .faq-question { cursor: default; }
+            .faq-question::after { content: ''; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -728,7 +737,7 @@ Facts used: Sabalpur Road / Circuit House area address, phone +91 92500 84984,
         <div class="container">
             <p class="hero-badge reveal">Property Dealers &amp; Builders &middot; Gonda</p>
             <h1 class="hero-headline reveal">Land in Gonda. <span class="gradient-text">Bought Right.</span></h1>
-            <p class="hero-subtext reveal">Plots, houses and commercial space across Gonda city — from Sabalpur Road and the Circuit House belt to Civil Line and Vishnupuri Colony. Straight rates, clean papers, no middleman games.</p>
+            <p class="hero-subtext reveal">Plots, houses and commercial space across Gonda city — from Sabalpur Road and the Circuit House belt to Civil Line and Vishnupuri Colony. Straight rates, papers checked first, and the same figure quoted to both sides.</p>
             <div class="hero-ctas reveal">
                 <a href="#consult" class="btn btn-primary">Tell Us What You're Looking For</a>
                 <a href="#services" class="btn btn-secondary">What We Handle</a>
@@ -861,7 +870,7 @@ Facts used: Sabalpur Road / Circuit House area address, phone +91 92500 84984,
     </section>
 
     <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <section class="stats" aria-label="Chaubey Properties at a glance">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat reveal">
@@ -1227,10 +1236,17 @@ Facts used: Sabalpur Road / Circuit House area address, phone +91 92500 84984,
                 });
                 if (firstInvalid) { firstInvalid.focus(); return; }
 
-                if (successDetail && name && time) {
-                    successDetail.textContent = 'Thank you, ' + name.value.trim().split(' ')[0] +
-                        '. We’ll send you matching options for ' + service.value +
-                        ' in the ' + time.value + ' range on WhatsApp shortly.';
+                if (successDetail && name && service && time) {
+                    var firstName = name.value.trim().split(' ')[0];
+                    var what = service.value === 'Something Else'
+                        ? 'what you are looking for'
+                        : '“' + service.value + '”';
+                    var budget = time.value === 'Still deciding'
+                        ? ''
+                        : ', budget ' + time.value;
+                    successDetail.textContent = 'Thank you, ' + firstName +
+                        '. We have your requirement — ' + what + budget +
+                        ' — and we’ll come back to you on WhatsApp shortly.';
                 }
                 consultShell.classList.add('done');
             });

@@ -1140,7 +1140,7 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
                 </div>
                 <div class="trust-item">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
-                    <span><strong>Delivered &amp; fitted</strong>Across Gonda district</span>
+                    <span><strong>Delivered &amp; fitted</strong>Across Gonda district — ask us</span>
                 </div>
                 <div class="trust-item">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4a8 8 0 108 8" stroke="#d97941" stroke-width="1.6" stroke-linecap="round"/><path d="M12 8v4l3 2" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 4l4 1-1 4" stroke="#d97941" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1229,7 +1229,7 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
                     </span>
                     <span class="tile-label">
                         <h3>Air Conditioners</h3>
-                        <p>Daikin, Mitsubishi, Voltas, Samsung.</p>
+                        <p>Daikin, Mitsubishi and Voltas splits.</p>
                     </span>
                 </a>
                 <a href="https://wa.me/919919088640?text=I%20want%20to%20ask%20about%20Samsung%20smartphones" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
@@ -1300,7 +1300,7 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
                 <div class="promise-card reveal">
                     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="12" width="20" height="16" rx="2" stroke="#d97941" stroke-width="2"/><path d="M24 17h6l6 5v6h-12V17z" stroke="#d97941" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/><circle cx="30" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/></svg>
                     <h3>Delivered &amp; installed</h3>
-                    <p>It reaches your home and gets fitted — no courier box left at the gate.</p>
+                    <p>It reaches your home and gets fitted — no courier box left at the gate. Tell us your area and we will confirm.</p>
                 </div>
                 <div class="promise-card reveal">
                     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6a14 14 0 1014 14" stroke="#d97941" stroke-width="2" stroke-linecap="round"/><path d="M20 12v8l6 4" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 6l6 2-2 6" stroke="#d97941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1311,7 +1311,7 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
         </div>
     </section>
 
-    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <!-- STATS BAND -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1328,8 +1328,8 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
                     <span class="stat-label">Samsung's official format for Gonda</span>
                 </div>
                 <div class="stat reveal">
-                    <span class="stat-value">4 AC Brands</span>
-                    <span class="stat-label">Daikin, Mitsubishi, Voltas, Samsung</span>
+                    <span class="stat-value">3 AC Brands</span>
+                    <span class="stat-label">Daikin, Mitsubishi and Voltas</span>
                 </div>
             </div>
         </div>
@@ -1461,7 +1461,7 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
                 <div class="faq-item">
                     <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you only sell Samsung?</button>
                     <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-                        <p>Not for cooling. Our showroom is Samsung for televisions, refrigerators, phones and appliances — but on air conditioners we are a multi-brand dealer, stocking Daikin, Mitsubishi and Voltas alongside Samsung. That means you get an honest comparison of tonnage, star rating and price instead of one brand's answer.</p>
+                        <p>Not for cooling. Our showroom is Samsung for televisions, refrigerators, phones and appliances — but on air conditioners we are a multi-brand dealer, stocking Daikin, Mitsubishi and Voltas. That means you get an honest comparison of tonnage, star rating and price instead of one brand's answer.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1711,9 +1711,8 @@ Unverified and therefore NOT asserted on this page: exact store hours, email, de
             });
 
             /* ---------- CountUp counters (guarded) ----------
-               Stats are qualitative by default (no invented numbers).
-               Customization agents: give a .stat-value real data via
-               data-count="1234" and it will animate automatically. */
+               Any .stat-value carrying a data-count="1234" attribute
+               animates up to that figure on scroll. */
             if (typeof window.countUp !== 'undefined') {
                 document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
                     var target = parseFloat(el.getAttribute('data-count'));

@@ -706,6 +706,15 @@
             .trust-strip { gap: 12px 20px; }
         }
     </style>
+
+    <!-- Without JS the accordion can't open, so every answer stays readable. -->
+    <noscript>
+        <style>
+            .faq-answer { max-height: none; }
+            .faq-question { cursor: default; }
+            .faq-question::after { display: none; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -842,7 +851,7 @@
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#a5b4fc" stroke-width="1.6"/><path d="M13 7v6l4 3" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M6 3h9l5 5v15H6z" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 3v5h5" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 12h6M10 15h6M13.5 15c0 2.4-1.4 3.4-3.5 3.6L15 22" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <h3>Estimates &amp; Bank Files</h3>
                     <p>Costing and drawings prepared the way banks want them — so your home loan file moves.</p>
@@ -852,10 +861,10 @@
     </section>
 
     <!-- STATS BAND (qualitative — replace with real numbers only) -->
-    <section class="stats" aria-label="Why clients stay">
+    <section class="stats" aria-label="Reputation and reach">
         <div class="container">
             <span class="eyebrow reveal">The Record</span>
-            <h2 class="section-headline reveal" style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:44px;">What Clients Already Say.</h2>
+            <h2 class="section-headline reveal" style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:44px;">Where We Already Stand.</h2>
             <div class="stats-grid">
                 <div class="stat reveal">
                     <span class="stat-value">5.0 &#9733;</span>
@@ -908,7 +917,7 @@
                     <div class="approach-card-inner">
                         <span class="approach-step">03 &mdash; BUILD</span>
                         <h3>We Execute It.</h3>
-                        <p>Our own team on site, stage by stage — foundation, slab, plaster, finishing — with progress shown to you at every stage until handover.</p>
+                        <p>Our own team on site — foundation, slab, plaster, finishing — with photographs at each milestone, so you watch the house come up rather than hear about it. Right through to handover.</p>
                     </div>
                 </div>
             </div>
@@ -932,7 +941,7 @@
                     <img src="https://images.pexels.com/photos/28304971/pexels-photo-28304971.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
                          alt="Completed residential buildings"
                          loading="lazy" decoding="async" onerror="this.style.display='none'">
-                    <h3><small>Residential</small>Homes planned around the plot</h3>
+                    <h3><small>Residential</small>Houses and residential blocks</h3>
                 </div>
                 <div class="photo-frame gallery-item reveal">
                     <img src="https://images.pexels.com/photos/5859965/pexels-photo-5859965.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
@@ -949,7 +958,7 @@
     <section class="consult" id="consult">
         <div class="container">
             <span class="eyebrow reveal">Get Started</span>
-            <h2 class="section-headline reveal">A Free Site Visit. <span class="gradient-text">This Week.</span></h2>
+            <h2 class="section-headline reveal">A Free Site Visit. <span class="gradient-text">On Your Plot.</span></h2>
             <p class="section-sub reveal">Tell us about your plot. We'll confirm your slot on WhatsApp.</p>
 
             <div class="consult-shell reveal" id="consult-shell">
@@ -979,9 +988,9 @@
                         <label for="cf-time">Preferred Time</label>
                         <select id="cf-time" name="time" required>
                             <option value="" selected disabled>Pick a time</option>
-                            <option>Morning (10 AM – 1 PM)</option>
-                            <option>Afternoon (1 PM – 4 PM)</option>
-                            <option>Evening (4 PM – 7 PM)</option>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Request My Site Visit</button>
@@ -1023,7 +1032,7 @@
                 </div>
                 <div class="visit-card reveal">
                     <div class="visit-icon" aria-hidden="true">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#a5b4fc" stroke-width="1.6"/><path d="M11 6.5V11l3.5 2.5" stroke="#a855f7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#a5b4fc" stroke-width="1.6"/><path d="M2.5 11h17M11 2.5c2.4 2.4 3.6 5.3 3.6 8.5s-1.2 6.1-3.6 8.5C8.6 17.1 7.4 14.2 7.4 11S8.6 4.9 11 2.5z" stroke="#a855f7" stroke-width="1.5" stroke-linejoin="round"/></svg>
                     </div>
                     <h3>Where We Work</h3>
                     <p>Gonda &middot; Lucknow &middot; Barabanki<br>Site visits by appointment</p>
