@@ -47,7 +47,10 @@ html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 86px; -webk
 
 body {
   font-family: var(--body);
-  background: var(--parchment);
+  background:
+    repeating-linear-gradient(0deg, rgba(38, 32, 26, 0.018) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(38, 32, 26, 0.012) 0 1px, transparent 1px 5px),
+    var(--parchment);
   color: var(--ink);
   font-size: 1.06rem;
   line-height: 1.75;
@@ -67,18 +70,6 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700; line-height: 1.1
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 26px; }
 .wrap-narrow { max-width: 900px; margin: 0 auto; padding: 0 26px; }
 
-.eyebrow {
-  font-family: var(--body);
-  font-weight: 600;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--oxblood);
-  display: block;
-  margin-bottom: 1.1rem;
-}
-.eyebrow.on-dark { color: var(--gilt-pale); }
-
 .h2 {
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   color: var(--oxblood);
@@ -88,9 +79,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700; line-height: 1.1
 .h2::after {
   content: '';
   display: block;
-  width: 64px;
-  height: 1px;
-  background: var(--gilt);
+  width: 72px;
+  height: 4px;
+  background: none;
+  border-top: 2px solid var(--gilt);
+  border-bottom: 1px solid var(--gilt);
   margin-top: 1.15rem;
 }
 .h2.center { text-align: center; }
@@ -99,6 +92,33 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700; line-height: 1.1
 
 .lede { font-size: 1.12rem; color: var(--ink-soft); max-width: 62ch; margin-top: 1.4rem; }
 .lede.on-dark { color: rgba(246, 241, 231, 0.78); }
+
+/* ---------- signature motif: folio mark + old-gold double hairline ---------- */
+.dbl-rule {
+  height: 4px;
+  border-top: 1px solid var(--hair-gilt);
+  border-bottom: 1px solid var(--hair-gilt);
+}
+.dbl-rule.on-dark { border-top-color: rgba(216, 184, 114, 0.4); border-bottom-color: rgba(216, 184, 114, 0.4); }
+
+.folio {
+  display: flex; align-items: center; gap: 1.1rem;
+  margin-bottom: 2.4rem;
+  font-family: var(--body); font-weight: 600; font-size: 0.6rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--gilt);
+  white-space: nowrap;
+}
+.folio::after {
+  content: ''; flex: 1 1 auto; min-width: 24px; height: 4px;
+  border-top: 1px solid var(--hair-gilt); border-bottom: 1px solid var(--hair-gilt);
+}
+.folio.on-dark { color: var(--gilt-pale); }
+.folio.on-dark::after { border-top-color: rgba(216, 184, 114, 0.34); border-bottom-color: rgba(216, 184, 114, 0.34); }
+.folio.center { justify-content: center; }
+.folio.center::before {
+  content: ''; flex: 1 1 auto; min-width: 24px; height: 4px;
+  border-top: 1px solid var(--hair-gilt); border-bottom: 1px solid var(--hair-gilt);
+}
 
 .section { padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
 .band-deep { background: var(--parchment-deep); }
@@ -164,16 +184,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 #preloader.done { opacity: 0; visibility: hidden; }
-.crest { width: 118px; height: 118px; }
-.crest circle, .crest path, .crest line { stroke: var(--gilt); fill: none; }
-.crest .ring { stroke-width: 1.2; stroke-dasharray: 345; stroke-dashoffset: 345; animation: draw 1.5s var(--ease) forwards; }
-.crest .ring-inner { stroke-width: 0.6; stroke-dasharray: 314; stroke-dashoffset: 314; animation: draw 1.5s 0.15s var(--ease) forwards; }
+.crest { width: 154px; height: 132px; }
+.crest rect, .crest path, .crest line { stroke: var(--gilt); fill: none; }
+.crest .ring { stroke-width: 1.2; stroke-dasharray: 476; stroke-dashoffset: 476; animation: draw 1.5s var(--ease) forwards; }
+.crest .ring-inner { stroke-width: 0.6; stroke-dasharray: 428; stroke-dashoffset: 428; animation: draw 1.5s 0.15s var(--ease) forwards; }
 .crest .mono {
   fill: var(--gilt); stroke: none;
-  font-family: var(--display); font-size: 32px; font-weight: 700; letter-spacing: 0.06em;
+  font-family: var(--display); font-size: 30px; font-weight: 700; letter-spacing: 0.1em;
   opacity: 0; animation: fadein 0.7s 0.6s ease forwards;
 }
 .crest .tick { stroke-width: 1; opacity: 0; animation: fadein 0.6s 0.9s ease forwards; }
+.crest .gilt-line { stroke-width: 1; transform-origin: 70px 50%; transform: scaleX(0); animation: openrule 0.8s 0.75s var(--ease) forwards; }
+@keyframes openrule { to { transform: scaleX(1); } }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes fadein { to { opacity: 1; } }
 .pre-bar { width: 168px; height: 1px; background: rgba(185, 139, 62, 0.26); overflow: hidden; }
@@ -189,7 +211,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .masthead {
   position: sticky; top: 0; z-index: 800;
   background: var(--parchment);
-  border-bottom: 1px solid var(--hair);
+  border-bottom: 1px solid var(--gilt);
+  box-shadow: 0 3px 0 -2px var(--gilt);
 }
 .masthead-in {
   max-width: 1180px; margin: 0 auto; padding: 0 26px;
@@ -197,8 +220,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   min-height: 78px;
 }
 .brand { display: flex; align-items: center; gap: 0.85rem; }
-.brand-crest { width: 40px; height: 40px; flex: none; }
-.brand-crest circle { fill: none; stroke: var(--gilt); stroke-width: 1.1; }
+.brand-crest { width: 46px; height: 40px; flex: none; }
+.brand-crest rect, .brand-crest line { fill: none; stroke: var(--gilt); stroke-width: 1.1; }
 .brand-crest text { fill: var(--oxblood); font-family: var(--display); font-weight: 700; font-size: 15px; }
 .brand-txt strong {
   display: block; font-family: var(--display); font-weight: 700; font-size: 1.02rem;
@@ -238,37 +261,89 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--oxblood);
 }
 
-/* ---------- hero ---------- */
-.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
-.hero-photo { position: absolute; inset: 0; z-index: 0; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.06); animation: kb 14s ease-out forwards; }
-@keyframes kb { from { transform: scale(1.06); } to { transform: scale(1); } }
-.hero-photo::after {
-  content: ''; position: absolute; inset: 0; z-index: 2;
-  background: linear-gradient(180deg, rgba(74, 13, 24, 0.55), rgba(74, 13, 24, 0.82));
+/* ---------- journal-cover hero ---------- */
+.cover { background: var(--parchment); padding: clamp(2rem, 4vw, 3.4rem) 0 clamp(2.6rem, 5vw, 4rem); }
+.cover-in {
+  border: 1px solid var(--hair-gilt);
+  padding: clamp(1.5rem, 3.4vw, 3rem) clamp(1.3rem, 3vw, 2.8rem) clamp(1.2rem, 2.4vw, 2rem);
+  position: relative;
 }
-.hero-in { position: relative; z-index: 4; text-align: center; padding: 7rem 26px 5.5rem; margin: 0 auto; max-width: 940px; }
-.hero-eyebrow {
-  font-weight: 600; font-size: 0.66rem; letter-spacing: 0.26em; text-transform: uppercase;
-  color: var(--gilt-pale); display: block; margin-bottom: 1.6rem;
+.cover-in::before {
+  content: ''; position: absolute; inset: 5px; border: 1px solid var(--hair-gilt);
+  pointer-events: none;
 }
-.hero h1 {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
-  color: var(--parchment); line-height: 1.08; letter-spacing: -0.01em;
+
+.cover-strap {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem; justify-content: center;
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--ink-soft); text-align: center;
 }
-.hero h1 em { font-style: italic; font-weight: 500; color: var(--gilt-pale); }
-.hero-rule { width: 64px; height: 1px; background: var(--gilt); margin: 1.9rem auto; }
-.hero p {
-  color: rgba(246, 241, 231, 0.86); font-size: 1.08rem; max-width: 60ch;
-  margin: 0 auto 2.4rem; line-height: 1.8;
+.cover-strap span { position: relative; }
+.cover-strap span + span::before {
+  content: '\2022'; position: absolute; left: -0.95rem; color: var(--gilt);
 }
-.hero-cta { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
-.hero-foot {
-  position: absolute; bottom: 0; left: 0; right: 0; z-index: 4;
-  border-top: 1px solid rgba(185, 139, 62, 0.3);
-  padding: 0.95rem 26px; text-align: center;
-  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(246, 241, 231, 0.66);
+.cover-strap-rule { margin: 1rem 0 clamp(1.6rem, 3vw, 2.6rem); }
+
+.cover-masthead { text-align: center; }
+.cover-masthead h1 {
+  font-size: clamp(2rem, 5.4vw, 4.15rem);
+  color: var(--oxblood); line-height: 1.02; letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.cover-masthead h1 em {
+  display: block; font-style: italic; font-weight: 500; color: var(--oxblood-deep);
+}
+/* the gilt rule under the masthead headline */
+.gilt-rule {
+  height: 5px; margin: clamp(1.1rem, 2.2vw, 1.7rem) auto clamp(0.9rem, 1.8vw, 1.3rem);
+  max-width: 620px;
+  border-top: 2px solid var(--gilt);
+  border-bottom: 1px solid var(--gilt);
+}
+.cover-sub {
+  text-align: center; font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--gilt);
+}
+
+.cover-body {
+  display: grid; grid-template-columns: 6fr 5fr;
+  gap: clamp(1.8rem, 4vw, 3.6rem);
+  align-items: stretch;
+  margin-top: clamp(2rem, 4vw, 3.2rem);
+}
+.cover-line {
+  font-family: var(--display); font-style: italic; font-weight: 500;
+  font-size: clamp(1.5rem, 3.1vw, 2.35rem); line-height: 1.28; color: var(--oxblood);
+}
+.cover-stand { color: var(--ink-soft); font-size: 1.05rem; margin-top: 1.2rem; max-width: 52ch; }
+.cover-stand::first-letter {
+  font-family: var(--display); font-weight: 700; color: var(--oxblood);
+  float: left; font-size: 3.1rem; line-height: 0.82; padding: 0.1em 0.11em 0 0;
+}
+.hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.9rem; }
+
+.cover-plate { position: relative; display: flex; flex-direction: column; margin: 0; }
+.cover-plate .duo { flex: 1 1 auto; min-height: 280px; border: 1px solid var(--hair-gilt); }
+.cover-plate figcaption {
+  margin-top: 0.75rem; padding-top: 0.55rem; border-top: 1px solid var(--hair-gilt);
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.cover-contents { list-style: none; margin-top: clamp(1.8rem, 3.4vw, 2.6rem); }
+.cover-contents-head {
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gilt); margin-bottom: 0.9rem;
+}
+.cover-contents ol { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.1rem 2rem; }
+.cover-contents li {
+  display: flex; align-items: baseline; gap: 0.55rem;
+  padding: 0.55rem 0; border-bottom: 1px solid var(--hair);
+  font-size: 0.82rem; color: var(--ink);
+}
+.cover-contents li b {
+  font-family: var(--display); font-weight: 700; color: var(--gilt); font-size: 0.78rem;
+  flex: none; width: 26px;
 }
 
 /* ---------- masthead rule strip ---------- */
@@ -337,15 +412,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   flex: none; width: 42px; transition: color 0.4s var(--ease);
 }
 .prog-row:hover .prog-num, .prog-row:focus-visible .prog-num { color: var(--crimson); }
+.prog-row > span:last-child { flex: 1 1 auto; min-width: 0; }
+.prog-head { display: flex; align-items: baseline; gap: 0.7rem; margin-bottom: 0.35rem; }
 .prog-name {
-  display: block;
   font-family: var(--display); font-weight: 700; font-size: clamp(1.15rem, 2vw, 1.45rem);
-  color: var(--oxblood); line-height: 1.25; margin-bottom: 0.3rem;
+  color: var(--oxblood); line-height: 1.25;
 }
-.prog-desc { display: block; font-size: 0.98rem; color: var(--ink-soft); line-height: 1.65; }
+.prog-leader {
+  flex: 1 1 auto; min-width: 14px; height: 0.5em;
+  border-bottom: 1px dotted var(--hair-gilt);
+  transition: border-bottom-color 0.4s var(--ease);
+}
+.prog-row:hover .prog-leader, .prog-row:focus-visible .prog-leader { border-bottom-color: var(--gilt); }
+.prog-desc { display: block; font-size: 0.98rem; color: var(--ink-soft); line-height: 1.65; max-width: 56ch; }
 .prog-degrees {
-  display: block; margin-top: 0.5rem; font-size: 0.62rem; font-weight: 600;
-  letter-spacing: 0.17em; text-transform: uppercase; color: var(--gilt);
+  flex: none; font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.17em; text-transform: uppercase; color: var(--gilt); white-space: nowrap;
 }
 .prog-gutter { position: sticky; top: 118px; }
 .prog-frame { position: relative; aspect-ratio: 3 / 4; background: linear-gradient(150deg, #6e1423, #4a0d18); overflow: hidden; }
@@ -356,25 +438,40 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: var(--ink-soft); margin-top: 0.9rem; text-align: right;
 }
 
-/* ---------- life editorial split ---------- */
-.life { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(2rem, 4.5vw, 3.6rem); margin-top: 3rem; }
-.life-lead .duo { aspect-ratio: 4 / 3; }
-.life-lead:hover .duo::after, .life-item:hover .duo::after { opacity: 0.12; }
-.life-lead:hover .duo img, .life-item:hover .duo img { filter: grayscale(0) contrast(1.02); }
-.life-lead h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); color: var(--oxblood); margin-top: 1.3rem; }
-.life-lead p { color: var(--ink-soft); margin-top: 0.7rem; font-size: 1rem; max-width: 52ch; }
-.life-rows { list-style: none; border-top: 1px solid var(--hair); }
-.life-item {
-  display: grid; grid-template-columns: 116px 1fr; gap: 1.2rem; align-items: center;
-  padding: 1.25rem 0; border-bottom: 1px solid var(--hair);
+/* ---------- editorial article grid ---------- */
+.artlead {
+  display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.8rem, 4vw, 3.4rem);
+  align-items: center; margin-top: 2.6rem;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--gilt);
 }
-.life-item .duo { aspect-ratio: 4 / 3; }
-.life-item h4 { font-size: 1.05rem; color: var(--oxblood); line-height: 1.3; }
-.life-item span {
-  display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.17em;
-  text-transform: uppercase; color: var(--gilt); margin-bottom: 0.35rem;
+.artlead .duo { aspect-ratio: 16 / 10; }
+.art-kicker {
+  display: block; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--gilt); margin-bottom: 0.7rem;
 }
-.life-item p { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.35rem; line-height: 1.6; }
+.artlead h3 { font-size: clamp(1.5rem, 2.9vw, 2.15rem); color: var(--oxblood); line-height: 1.18; }
+.artlead p { color: var(--ink-soft); margin-top: 0.9rem; font-size: 1.02rem; max-width: 50ch; }
+
+.artgrid {
+  list-style: none; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0; margin-top: 0;
+}
+.art {
+  padding: clamp(1.6rem, 3vw, 2.2rem) clamp(1.1rem, 2.2vw, 1.9rem);
+  border-right: 1px solid var(--hair);
+  transition: background 0.45s var(--ease);
+}
+.art:first-child { padding-left: 0; }
+.art:last-child { border-right: 0; padding-right: 0; }
+.art:hover { background: rgba(185, 139, 62, 0.055); }
+.art .duo { aspect-ratio: 5 / 4; }
+.art:hover .duo::after, .artlead:hover .duo::after { opacity: 0.2; }
+.art:hover .duo img, .artlead:hover .duo img { filter: grayscale(0.15) contrast(1.02); }
+.art h4 { font-size: clamp(1.08rem, 1.7vw, 1.3rem); color: var(--oxblood); line-height: 1.26; margin-top: 1rem; }
+.art .art-kicker { margin: 1.1rem 0 0; }
+.art .art-rule { margin: 0.85rem 0; max-width: 44px; }
+.art p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.68; }
 .repcap {
   font-size: 0.62rem; font-weight: 600; letter-spacing: 0.17em; text-transform: uppercase;
   color: var(--ink-soft); margin-top: 1.6rem; text-align: right; opacity: 0.8;
@@ -410,7 +507,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font-size: clamp(1.6rem, 3.4vw, 2.5rem); line-height: 1.38; color: var(--oxblood);
   margin: 2rem 0;
 }
-.mentor-rule { width: 64px; height: 1px; background: var(--gilt); margin: 0 auto; }
+.mentor-rule { width: 84px; height: 4px; border-top: 2px solid var(--gilt); border-bottom: 1px solid var(--gilt); margin: 0 auto; }
 .mentor-body { max-width: 62ch; margin: 2.2rem auto 0; text-align: left; color: var(--ink-soft); }
 .mentor-body .dropcap::first-letter { font-size: 3.6rem; }
 .mentor-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.2rem; text-align: left; }
@@ -503,8 +600,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer { background: var(--oxblood-deep); color: var(--parchment); padding: clamp(3.5rem, 6vw, 5rem) 0 2.6rem; }
 .footer-top { display: grid; grid-template-columns: 5fr 7fr; gap: 2.5rem; align-items: start; padding-bottom: 2.4rem; border-bottom: 1px solid var(--hair-light); }
 .footer-crest { display: flex; gap: 1rem; align-items: flex-start; }
-.footer-crest svg { width: 46px; height: 46px; flex: none; }
-.footer-crest svg circle { fill: none; stroke: var(--gilt); stroke-width: 1.1; }
+.footer-crest svg { width: 56px; height: 48px; flex: none; }
+.footer-crest svg rect { fill: none; stroke: var(--gilt); stroke-width: 1.1; }
 .footer-crest svg text { fill: var(--gilt-pale); font-family: var(--display); font-weight: 700; font-size: 15px; }
 .footer-crest strong { display: block; font-family: var(--display); font-size: 1.1rem; color: var(--parchment); line-height: 1.3; }
 .footer-crest span { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246, 241, 231, 0.6); margin-top: 0.45rem; }
@@ -548,7 +645,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
-  .essay, .prog-grid, .life, .numbers, .adm-grid, .visit, .footer-top { grid-template-columns: 1fr; }
+  .essay, .prog-grid, .artlead, .numbers, .adm-grid, .visit, .footer-top { grid-template-columns: 1fr; }
+  .cover-body { grid-template-columns: 1fr; }
+  .cover-plate { max-width: 420px; margin: 0 auto; }
+  .cover-plate .duo { aspect-ratio: 4 / 3; }
+  .artgrid { grid-template-columns: 1fr 1fr; }
+  .art:nth-child(2) { border-right: 0; padding-right: 0; }
+  .art:nth-child(3) { padding-left: 0; border-top: 1px solid var(--hair); }
   .essay-quote, .prog-gutter { position: static; }
   .prog-gutter { display: none; }
   .numbers-photo { max-width: 340px; }
@@ -559,7 +662,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px) {
   .nav { display: none; }
   .burger { display: block; }
-  .hero { min-height: 84vh; }
+  .cover-contents ol { grid-template-columns: 1fr 1fr; }
   .stat { grid-template-columns: 1fr; gap: 0.3rem; }
   .visit-list li { grid-template-columns: 1fr; gap: 0.2rem; }
   .essay-facts li { flex-direction: column; gap: 0.2rem; }
@@ -583,9 +686,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .wa-float { bottom: 74px; width: 48px; height: 48px; }
   .wa-float svg { width: 24px; height: 24px; }
   .badge-demo { top: 88px; right: 12px; }
-  .hero-in { padding: 5rem 22px 5rem; }
   .hero-cta .btn { width: 100%; }
-  .life-item { grid-template-columns: 92px 1fr; }
+  .artgrid { grid-template-columns: 1fr; }
+  .art { padding-left: 0; padding-right: 0; border-right: 0; border-top: 1px solid var(--hair); }
+  .art:first-child { border-top: 0; }
+  .cover-contents ol { grid-template-columns: 1fr; }
+  .cover-strap { gap: 0.35rem 1.2rem; font-size: 0.55rem; }
   .timeline { padding-left: 2.6rem; }
   .step-num { left: -2.6rem; }
   .prog-row { padding: 1.25rem 0; }
@@ -593,8 +699,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @media (max-width: 400px) {
   .brand-txt strong { font-size: 0.92rem; }
-  .hero h1 { font-size: 2.35rem; }
-  .life-item { grid-template-columns: 78px 1fr; gap: 0.9rem; }
+  .cover-in { padding-left: 1rem; padding-right: 1rem; }
+  .cover-masthead h1 { font-size: 1.85rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -602,7 +708,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .rulestrip-track { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; }
   .rv { opacity: 1; transform: none; }
-  .hero-photo img { animation: none; }
   .prog-row:hover { transform: none; }
 }
 </style>
@@ -619,14 +724,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 <!-- ============================ PRELOADER ============================ -->
 <div id="preloader" role="status" aria-label="Loading">
-  <svg class="crest" viewBox="0 0 120 120" aria-hidden="true">
-    <circle class="ring" cx="60" cy="60" r="55"></circle>
-    <circle class="ring-inner" cx="60" cy="60" r="50"></circle>
-    <line class="tick" x1="60" y1="5" x2="60" y2="14"></line>
-    <line class="tick" x1="60" y1="106" x2="60" y2="115"></line>
-    <line class="tick" x1="5" y1="60" x2="14" y2="60"></line>
-    <line class="tick" x1="106" y1="60" x2="115" y2="60"></line>
-    <text class="mono" x="60" y="72" text-anchor="middle">LBS</text>
+  <svg class="crest" viewBox="0 0 140 120" aria-hidden="true">
+    <rect class="ring" x="6" y="6" width="128" height="108"></rect>
+    <rect class="ring-inner" x="13" y="13" width="114" height="94"></rect>
+    <line class="gilt-line" x1="34" y1="44" x2="106" y2="44"></line>
+    <text class="mono" x="70" y="72" text-anchor="middle">LBS</text>
+    <line class="gilt-line" x1="34" y1="86" x2="106" y2="86"></line>
+    <line class="tick" x1="70" y1="0" x2="70" y2="6"></line>
+    <line class="tick" x1="70" y1="114" x2="70" y2="120"></line>
   </svg>
   <div class="pre-bar"><i></i></div>
   <p class="pre-name">Shri Lal Bahadur Shastri Degree College<br>Civil Lines, Gonda</p>
@@ -636,10 +741,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <header class="masthead">
   <div class="masthead-in">
     <a class="brand" href="#top" aria-label="Shri Lal Bahadur Shastri Degree College, home">
-      <svg class="brand-crest" viewBox="0 0 48 48" aria-hidden="true">
-        <circle cx="24" cy="24" r="22"></circle>
-        <circle cx="24" cy="24" r="19" stroke-width="0.5"></circle>
-        <text x="24" y="29" text-anchor="middle">LBS</text>
+      <svg class="brand-crest" viewBox="0 0 56 48" aria-hidden="true">
+        <rect x="2" y="2" width="52" height="44"></rect>
+        <rect x="6" y="6" width="44" height="36" stroke-width="0.5"></rect>
+        <text x="28" y="30" text-anchor="middle">LBS</text>
       </svg>
       <span class="brand-txt">
         <strong>LBS PG College</strong>
@@ -673,24 +778,57 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <main id="main">
 <span id="top"></span>
 
-<!-- ============================ HERO ============================ -->
-<section class="hero">
-  <div class="hero-photo">
-    <img src="https://images.pexels.com/photos/38790890/pexels-photo-38790890.png?auto=compress&cs=tinysrgb&w=1600"
-         alt="Heritage university architecture — representative campus imagery" loading="lazy" decoding="async"
-         onerror="this.style.display='none'">
-  </div>
-  <div class="hero-in">
-    <span class="hero-eyebrow">Established 2 October 1966 &middot; Civil Lines, Gonda</span>
-    <h1>Where a degree in Gonda <em>begins</em>.</h1>
-    <div class="hero-rule"></div>
-    <p>Shri Lal Bahadur Shastri Degree College &mdash; LBS PG College &mdash; teaches six faculties across three campuses in Gonda city, from B.A. to M.Com., affiliated to Maa Pateshwari University, Balrampur.</p>
-    <div class="hero-cta">
-      <a class="btn btn-light" href="#enquiry">Begin an Enquiry</a>
-      <a class="btn btn-outline-light" href="#programmes">Explore Programmes</a>
+<!-- ============================ JOURNAL-COVER HERO ============================ -->
+<section class="cover">
+  <div class="wrap">
+    <div class="cover-in">
+
+      <div class="cover-strap">
+        <span>Established 2 October 1966</span>
+        <span>Civil Lines, Gonda 271003</span>
+        <span>Government-aided &middot; Co-educational</span>
+      </div>
+      <div class="dbl-rule cover-strap-rule"></div>
+
+      <div class="cover-masthead">
+        <h1>Shri Lal Bahadur Shastri <em>Degree College</em></h1>
+        <div class="gilt-rule"></div>
+        <p class="cover-sub">LBS PG College &middot; Gonda, Uttar Pradesh</p>
+      </div>
+
+      <div class="cover-body">
+        <div>
+          <p class="cover-line">Where a degree in Gonda begins.</p>
+          <p class="cover-stand">Six faculties across three campuses in Gonda city, from B.A. to M.Com., taught in Hindi and English and affiliated to Maa Pateshwari University, Balrampur. UGC recognised, NAAC accredited, and open at the counter on every working day since 1966.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#enquiry">Begin an Enquiry</a>
+            <a class="btn btn-ghost" href="#programmes">Explore Programmes</a>
+          </div>
+        </div>
+        <figure class="cover-plate">
+          <div class="duo">
+            <img src="https://images.pexels.com/photos/36428825/pexels-photo-36428825.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="Grand ceremonial entrance of an Indian college campus — representative campus imagery" loading="lazy" decoding="async"
+                 onerror="this.style.display='none'">
+          </div>
+          <figcaption>Plate I &mdash; representative campus imagery</figcaption>
+        </figure>
+      </div>
+
+      <nav class="cover-contents" aria-label="Faculties">
+        <p class="cover-contents-head">In this college &mdash; six faculties</p>
+        <ol>
+          <li><b>I</b><span>Arts &amp; Humanities</span></li>
+          <li><b>II</b><span>Science</span></li>
+          <li><b>III</b><span>Commerce &amp; Management</span></li>
+          <li><b>IV</b><span>Engineering &amp; Technology</span></li>
+          <li><b>V</b><span>Education</span></li>
+          <li><b>VI</b><span>Agriculture</span></li>
+        </ol>
+      </nav>
+
     </div>
   </div>
-  <div class="hero-foot">Arts &middot; Science &middot; Commerce &middot; Education &middot; Computer Applications &middot; Agriculture</div>
 </section>
 
 <!-- ============================ RULE STRIP ============================ -->
@@ -719,7 +857,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="section" id="college">
   <div class="wrap essay">
     <div class="essay-quote rv">
-      <span class="eyebrow">The College</span>
+      <p class="folio">&sect;&nbsp;I &middot; The College</p>
       <blockquote>For most families in Gonda, a degree still begins here.</blockquote>
       <cite>Six decades in the service of the district</cite>
     </div>
@@ -751,68 +889,68 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   <div class="wrap prog-grid">
     <div>
       <div class="rv">
-        <span class="eyebrow">The Programmes</span>
+        <p class="folio">&sect;&nbsp;II &middot; The Programmes</p>
         <h2 class="h2">Six faculties, <em>one</em> college</h2>
         <p class="lede">From B.A. to M.Com., from a chemistry bench to an agriculture field &mdash; the whole degree journey, taught inside Gonda city.</p>
       </div>
       <ul class="prog-list rv" id="prog-list">
         <li>
           <button class="prog-row" type="button" data-photo="0">
-            <span class="prog-num">01</span>
+            <span class="prog-num">I</span>
             <span>
-              <span class="prog-name">Arts &amp; Humanities</span>
+              <span class="prog-head"><span class="prog-name">Arts &amp; Humanities</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.A. &middot; M.A.</span></span>
               <span class="prog-desc">Fourteen departments &mdash; among them English, History and Psychology &mdash; taught in Hindi and English, and the largest faculty in the college.</span>
-              <span class="prog-degrees">B.A. &middot; M.A.</span>
+              
             </span>
           </button>
         </li>
         <li>
           <button class="prog-row" type="button" data-photo="1">
-            <span class="prog-num">02</span>
+            <span class="prog-num">II</span>
             <span>
-              <span class="prog-name">Faculty of Science</span>
+              <span class="prog-head"><span class="prog-name">Faculty of Science</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.Sc.</span></span>
               <span class="prog-desc">Physics, Chemistry, Botany and the other science departments, taught on a campus of their own with working teaching laboratories.</span>
-              <span class="prog-degrees">B.Sc.</span>
+              
             </span>
           </button>
         </li>
         <li>
           <button class="prog-row" type="button" data-photo="2">
-            <span class="prog-num">03</span>
+            <span class="prog-num">III</span>
             <span>
-              <span class="prog-name">Commerce &amp; Management</span>
+              <span class="prog-head"><span class="prog-name">Commerce &amp; Management</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.Com. &middot; M.Com. &middot; B.B.A.</span></span>
               <span class="prog-desc">Accountancy, business studies and management &mdash; for students who want a trade in hand alongside the certificate.</span>
-              <span class="prog-degrees">B.Com. &middot; M.Com. &middot; B.B.A.</span>
+              
             </span>
           </button>
         </li>
         <li>
           <button class="prog-row" type="button" data-photo="3">
-            <span class="prog-num">04</span>
+            <span class="prog-num">IV</span>
             <span>
-              <span class="prog-name">Engineering &amp; Technology</span>
+              <span class="prog-head"><span class="prog-name">Engineering &amp; Technology</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.C.A.</span></span>
               <span class="prog-desc">Computer Applications &mdash; the practical, employable side of the college, taught on machines rather than from a blackboard.</span>
-              <span class="prog-degrees">B.C.A.</span>
+              
             </span>
           </button>
         </li>
         <li>
           <button class="prog-row" type="button" data-photo="4">
-            <span class="prog-num">05</span>
+            <span class="prog-num">V</span>
             <span>
-              <span class="prog-name">Faculty of Education</span>
+              <span class="prog-head"><span class="prog-name">Faculty of Education</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.Ed.</span></span>
               <span class="prog-desc">A dedicated B.Ed Campus, training the next generation of schoolteachers for classrooms across the district.</span>
-              <span class="prog-degrees">B.Ed.</span>
+              
             </span>
           </button>
         </li>
         <li>
           <button class="prog-row" type="button" data-photo="5">
-            <span class="prog-num">06</span>
+            <span class="prog-num">VI</span>
             <span>
-              <span class="prog-name">Faculty of Agriculture</span>
+              <span class="prog-head"><span class="prog-name">Faculty of Agriculture</span><i class="prog-leader" aria-hidden="true"></i><span class="prog-degrees">B.Sc. (Agriculture)</span></span>
               <span class="prog-desc">A degree that speaks directly to the district it sits in &mdash; written for students who come from farming families.</span>
-              <span class="prog-degrees">B.Sc. (Agriculture)</span>
+              
             </span>
           </button>
         </li>
@@ -836,59 +974,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="section" id="campus">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">From the Campus</span>
+      <p class="folio">&sect;&nbsp;III &middot; From the Campus</p>
       <h2 class="h2">Life at the college</h2>
       <p class="lede">Three campuses, one rhythm &mdash; lectures, laboratories, the reading room and the long queue at the office counter, from gate-opening to the day&rsquo;s last notice.</p>
     </div>
-    <div class="life">
-      <article class="life-lead rv">
+    <article class="artlead rv">
+      <div class="duo">
+        <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&cs=tinysrgb&w=1600"
+             alt="Students studying together in a college library — representative campus imagery" loading="lazy" decoding="async"
+             onerror="this.style.display='none'">
+      </div>
+      <div>
+        <span class="art-kicker">The lead &mdash; Plate II</span>
+        <h3>The reading room, between lectures</h3>
+        <div class="gilt-rule" style="margin-left:0;max-width:72px"></div>
+        <p>The part of college that is not on the timetable &mdash; reading rooms, department seminars, NSS and sport &mdash; runs through the afternoon on all three campuses, after the morning&rsquo;s parallel lectures have finished.</p>
+      </div>
+    </article>
+
+    <ul class="artgrid rv">
+      <li class="art">
         <div class="duo">
-          <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&cs=tinysrgb&w=1600"
-               alt="Students studying together in a college library — representative campus imagery" loading="lazy" decoding="async"
+          <img src="https://images.pexels.com/photos/13019686/pexels-photo-13019686.jpeg?auto=compress&cs=tinysrgb&w=1600"
+               alt="Graduates in caps and gowns — representative campus imagery" loading="lazy" decoding="async"
                onerror="this.style.display='none'">
         </div>
-        <h3>The reading room, between lectures</h3>
-        <p>The part of college that is not on the timetable &mdash; reading rooms, department seminars, NSS and sport &mdash; runs through the afternoon on all three campuses, after the morning&rsquo;s parallel lectures have finished.</p>
-      </article>
-      <ul class="life-rows rv">
-        <li class="life-item">
-          <div class="duo">
-            <img src="https://images.pexels.com/photos/13019686/pexels-photo-13019686.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="Graduates in caps and gowns — representative campus imagery" loading="lazy" decoding="async"
-                 onerror="this.style.display='none'">
-          </div>
-          <div>
-            <span>The end of three years</span>
-            <h4>Where a degree is handed over</h4>
-            <p>Examinations and degrees follow the calendar of Maa Pateshwari University, Balrampur.</p>
-          </div>
-        </li>
-        <li class="life-item">
-          <div class="duo">
-            <img src="https://images.pexels.com/photos/7973119/pexels-photo-7973119.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="Convocation ceremony — representative campus imagery" loading="lazy" decoding="async"
-                 onerror="this.style.display='none'">
-          </div>
-          <div>
-            <span>Alumni</span>
-            <h4>A register that keeps growing</h4>
-            <p>The college maintains an alumni registration, and an IQAC cell that documents the work.</p>
-          </div>
-        </li>
-        <li class="life-item">
-          <div class="duo">
-            <img src="https://images.pexels.com/photos/35550999/pexels-photo-35550999.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="Students at study in a college library — representative campus imagery" loading="lazy" decoding="async"
-                 onerror="this.style.display='none'">
-          </div>
-          <div>
-            <span>Every working day</span>
-            <h4>The counter at midday</h4>
-            <p>Admission forms, exam forms, scholarship papers and marksheets &mdash; the busiest hour on the Main Campus.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+        <span class="art-kicker">The end of three years</span>
+        <h4>Where a degree is handed over</h4>
+        <div class="dbl-rule art-rule"></div>
+        <p>Examinations and degrees follow the calendar of Maa Pateshwari University, Balrampur.</p>
+      </li>
+      <li class="art">
+        <div class="duo">
+          <img src="https://images.pexels.com/photos/7973119/pexels-photo-7973119.jpeg?auto=compress&cs=tinysrgb&w=1600"
+               alt="Convocation ceremony — representative campus imagery" loading="lazy" decoding="async"
+               onerror="this.style.display='none'">
+        </div>
+        <span class="art-kicker">Alumni</span>
+        <h4>A register that keeps growing</h4>
+        <div class="dbl-rule art-rule"></div>
+        <p>The college maintains an alumni registration, and an IQAC cell that documents the work.</p>
+      </li>
+      <li class="art">
+        <div class="duo">
+          <img src="https://images.pexels.com/photos/35550999/pexels-photo-35550999.jpeg?auto=compress&cs=tinysrgb&w=1600"
+               alt="Students at study in a college library — representative campus imagery" loading="lazy" decoding="async"
+               onerror="this.style.display='none'">
+        </div>
+        <span class="art-kicker">Every working day</span>
+        <h4>The counter at midday</h4>
+        <div class="dbl-rule art-rule"></div>
+        <p>Admission forms, exam forms, scholarship papers and marksheets &mdash; the busiest hour on the Main Campus.</p>
+      </li>
+    </ul>
     <p class="repcap">Representative imagery</p>
   </div>
 </section>
@@ -904,7 +1042,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       </div>
     </div>
     <div class="rv">
-      <span class="eyebrow on-dark">In Numbers</span>
+      <p class="folio on-dark">&sect;&nbsp;IV &middot; In Numbers</p>
       <h2 class="h2 on-dark">The college, counted</h2>
       <div class="stat-list" style="margin-top:2.4rem">
         <div class="stat">
@@ -938,7 +1076,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <!-- ============================ TEACHING ============================ -->
 <section class="section band-deep" id="teaching">
   <div class="wrap-narrow mentor rv">
-    <span class="eyebrow">Teaching</span>
+    <p class="folio center">&sect;&nbsp;V &middot; Teaching</p>
     <div class="mentor-rule"></div>
     <blockquote>A college is measured less by its buildings than by the hours a teacher gives after the lecture has ended.</blockquote>
     <div class="mentor-rule"></div>
@@ -967,7 +1105,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="section" id="admissions">
   <div class="wrap adm-grid">
     <div class="rv">
-      <span class="eyebrow">Admissions</span>
+      <p class="folio">&sect;&nbsp;VI &middot; Admissions</p>
       <h2 class="h2">How admission <em>proceeds</em></h2>
       <p class="lede">Admission dates follow the university calendar. Ask early &mdash; the counter is open on working days, and the enquiry line answers before the queue forms.</p>
       <div class="timeline">
@@ -1046,7 +1184,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="section band-deep" id="faq">
   <div class="wrap">
     <div class="rv" style="text-align:center">
-      <span class="eyebrow">Enquiries</span>
+      <p class="folio center">&sect;&nbsp;VII &middot; Enquiries</p>
       <h2 class="h2 center">Questions students ask</h2>
     </div>
     <div class="faq rv">
@@ -1082,7 +1220,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="section" id="visit">
   <div class="wrap visit">
     <div class="rv">
-      <span class="eyebrow">Visit</span>
+      <p class="folio">&sect;&nbsp;VIII &middot; Visit</p>
       <h2 class="h2">Come and see the <em>campus</em></h2>
       <p class="lede">Ten minutes at the Civil Lines campus will tell you more than any website. Walk in on a working day.</p>
       <div class="visit-cta">
@@ -1108,10 +1246,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-crest">
-        <svg viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="24" r="22"></circle>
-          <circle cx="24" cy="24" r="19" stroke-width="0.5"></circle>
-          <text x="24" y="29" text-anchor="middle">LBS</text>
+        <svg viewBox="0 0 56 48" aria-hidden="true">
+          <rect x="2" y="2" width="52" height="44"></rect>
+          <rect x="6" y="6" width="44" height="36" stroke-width="0.5"></rect>
+          <text x="28" y="30" text-anchor="middle">LBS</text>
         </svg>
         <div>
           <strong>Shri Lal Bahadur Shastri Degree College</strong>
@@ -1323,6 +1461,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
     if (!reduce && window.gsap && window.ScrollTrigger) {
       window.gsap.registerPlugin(window.ScrollTrigger);
+
       var photo = document.querySelector('#numbers-photo .duo img');
       if (photo) {
         window.gsap.to(photo, {

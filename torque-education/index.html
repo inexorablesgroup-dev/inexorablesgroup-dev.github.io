@@ -1,10 +1,12 @@
-<!-- CONCEPT DEMO — Torque Education, Circular Road, Gonda (rank 41). Design direction E "Future Campus".
+<!-- CONCEPT DEMO — Torque Education, Circular Road, Gonda (rank 41).
+Visual identity: deep charcoal #0e0e12, electric violet-to-cyan gradient used surgically, Space Grotesk +
+JetBrains Mono, numbered 12-column hairline grid, kinetic typographic hero, terminal stat readouts.
 Verified facts only (source: torqueeducation.com + dossier): in front of Karbala, Circular Road, Gonda 271001;
 phone +91 9696219756; WhatsApp 7524943464; email contact.torqueeducation@gmail.com; Mon-Sat 7:00 AM-8:00 PM;
-since 2014; faculty of seven (names/subjects as published); three course tracks at Rs 18,000 / Rs 30,000 / Rs 50,000;
-online student portal. Deliberately NOT reproduced: the live site's self-reported "1000+ selections / 500+ IIT /
-300+ NEET" figures (unverified and internally inconsistent). No testimonials, awards or headcounts invented.
-Photography is representative stock, labelled as such. Not the official website of Torque Education.
+since 2014; faculty of seven (names/subjects as published); three course tracks at Rs 18,000 / Rs 30,000 /
+Rs 50,000; online student portal. Deliberately NOT reproduced: the live site's self-reported "1000+ selections /
+500+ IIT / 300+ NEET" figures (unverified and internally inconsistent). No testimonials, awards or headcounts
+invented. Photography is representative stock, labelled as such. Not the official website of Torque Education.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +19,13 @@ Photography is representative stock, labelled as such. Not the official website 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   TORQUE EDUCATION — Direction E "Future Campus"
-   Charcoal base, violet-cyan gradient used as a scalpel. One kinetic device.
+   TORQUE EDUCATION — "Kinetic Grid"
+   Charcoal machine-room base. Violet→cyan applied like a scalpel, never a wash.
+   Devices: numbered 12-column hairline grid · counter-running marquee lanes ·
+   terminal readouts · corner-bracket cards.
    Single-file concept demo by Inexorables Group.
    ========================================================================== */
 
@@ -29,506 +33,540 @@ Photography is representative stock, labelled as such. Not the official website 
 
 :root {
   --bg: #0e0e12;
-  --bg-raised: #16161d;
-  --bg-inset: #0a0a0e;
-  --line: rgba(255,255,255,.08);
-  --line-strong: rgba(255,255,255,.16);
-  --ink: #f4f4f6;
-  --ink-dim: #a3a3b0;
-  --ink-faint: #6b6b78;
+  --bg-raised: #14141b;
+  --bg-inset: #08080b;
+  --line: rgba(255,255,255,.07);
+  --line-mid: rgba(255,255,255,.13);
+  --line-hot: rgba(255,255,255,.24);
+  --ink: #f5f5f8;
+  --ink-dim: #9d9daa;
+  --ink-faint: #64646f;
   --violet: #7c3aed;
   --cyan: #22d3ee;
-  --grad: linear-gradient(100deg, #7c3aed, #22d3ee);
-  --glow: 0 0 40px rgba(124,58,237,.35);
+  --grad: linear-gradient(96deg, #7c3aed 0%, #a855f7 42%, #22d3ee 100%);
+  --grad-rev: linear-gradient(96deg, #22d3ee 0%, #7c3aed 100%);
+  --glow: 0 0 0 1px rgba(124,58,237,.5), 0 14px 44px -12px rgba(124,58,237,.65);
   --wa: #25d366;
-  --ease: cubic-bezier(.22,1,.36,1);
-  --shell: 1200px;
+  --snap: cubic-bezier(.16,1,.3,1);
+  --shell: 1240px;
+  --gut: 34px;
 }
 
-html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 76px; background: var(--bg); }
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; background: var(--bg); }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--ink-dim);
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.06;
-  letter-spacing: -.02em;
-}
-
-::selection { background: rgba(124,58,237,.45); color: #fff; }
-
-a { color: inherit; }
-
-.shell { width: 100%; max-width: var(--shell); margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+h1, h2, h3, h4 { font-weight: 700; color: var(--ink); line-height: 1.02; letter-spacing: -.03em; }
 
 .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
 
+::selection { background: rgba(34,211,238,.35); color: #fff; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+.shell { width: 100%; max-width: var(--shell); margin: 0 auto; padding: 0 var(--gut); position: relative; z-index: 2; }
+
 .skip {
   position: absolute; left: -9999px; top: 0; z-index: 4000;
-  background: var(--violet); color: #fff; padding: 12px 20px;
-  font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0;
+  background: var(--violet); color: #fff; padding: 12px 20px; font-weight: 600;
+  text-decoration: none;
 }
 .skip:focus { left: 0; }
 
-:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
-
-/* ---------- 12-column hairline grid (identity device) ---------- */
+/* ---------- Device 1: the numbered 12-column hairline grid ---------- */
 .gridbed {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background-image: linear-gradient(90deg, var(--line) 0 1px, transparent 1px 100%);
-  background-size: calc(100% / 12) 100%;
-  opacity: .9;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 88%, transparent 100%);
-          mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+  max-width: var(--shell); margin: 0 auto; padding: 0 var(--gut);
+  display: grid; grid-template-columns: repeat(12, 1fr);
+}
+.gridbed i { border-left: 1px solid var(--line); }
+.gridbed i:last-child { border-right: 1px solid var(--line); }
+@media (max-width: 899px) { .gridbed { grid-template-columns: repeat(6, 1fr); } .gridbed i:nth-child(n+7) { display: none; } }
+@media (max-width: 640px) { .gridbed { grid-template-columns: repeat(4, 1fr); } .gridbed i:nth-child(n+5) { display: none; } }
+.gridbed::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, var(--bg) 0, transparent 9%, transparent 91%, var(--bg) 100%);
 }
 
-/* ---------- Preloader ---------- */
+/* column ruler across the top of the hero */
+.ruler {
+  display: grid; grid-template-columns: repeat(12, 1fr);
+  border-top: 1px solid var(--line-mid); border-bottom: 1px solid var(--line);
+  margin-bottom: 46px;
+}
+.ruler span {
+  font-family: 'JetBrains Mono', monospace; font-size: .58rem; letter-spacing: .14em;
+  color: #3a3a44; padding: 7px 0 7px 6px; border-left: 1px solid var(--line);
+}
+.ruler span:first-child { border-left: none; padding-left: 0; color: var(--cyan); }
+@media (max-width: 899px) {
+  .ruler { grid-template-columns: repeat(6, 1fr); }
+  .ruler span:nth-child(n+7) { display: none; }
+}
+@media (max-width: 640px) {
+  .ruler { grid-template-columns: repeat(4, 1fr); }
+  .ruler span:nth-child(n+5) { display: none; }
+}
+
+/* ---------- Preloader: torque dial ---------- */
 .pre {
-  position: fixed; inset: 0; z-index: 5000;
-  background: var(--bg-inset);
-  display: flex;
-  align-items: center; justify-content: center; flex-direction: column;
-  transition: opacity .5s ease, visibility .5s ease;
+  position: fixed; inset: 0; z-index: 5000; background: var(--bg-inset);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  transition: opacity .45s ease, visibility .45s ease;
 }
 .pre.gone { opacity: 0; visibility: hidden; pointer-events: none; }
-.pre-mark { width: 168px; height: 96px; display: block; }
-.pre-mark .frame { stroke-dasharray: 320; stroke-dashoffset: 320; animation: draw 1.5s ease-out forwards; }
-.pre-mark .letters { opacity: 0; animation: fadeUp .8s ease-out .45s forwards; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-.pre-bar {
-  width: 168px; height: 2px; margin-top: 22px;
-  background: rgba(255,255,255,.08); overflow: hidden; border-radius: 2px;
+.pre-dial { width: 120px; height: 120px; display: block; }
+.pre-dial .arc {
+  fill: none; stroke: url(#pg); stroke-width: 3; stroke-linecap: round;
+  stroke-dasharray: 226; stroke-dashoffset: 226;
+  animation: torque 1.5s var(--snap) forwards;
 }
-.pre-bar i { display: block; height: 100%; width: 0; background: var(--grad); animation: fill 2s ease-in-out forwards; }
-@keyframes fill { to { width: 100%; } }
-.pre-cap {
-  margin-top: 16px; font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--ink-faint);
+.pre-dial .ring { fill: none; stroke: rgba(255,255,255,.07); stroke-width: 1; }
+.pre-dial .mono-mark { opacity: 0; animation: markIn .6s ease-out .4s forwards; }
+@keyframes torque { to { stroke-dashoffset: 56; } }
+@keyframes markIn { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: none; } }
+.pre-dial { transform-origin: 60px 60px; }
+.pre-read {
+  margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: .64rem;
+  letter-spacing: .3em; text-transform: uppercase; color: var(--ink-faint);
 }
+.pre-read b { color: var(--cyan); font-weight: 500; }
 
-/* ---------- Kinetic mask reveal (signature) ---------- */
+/* ---------- Reveals ---------- */
 .kin { display: block; }
-.kl { display: block; overflow: hidden; }
-.kl > i { display: block; font-style: normal; }
-.kl > i { transform: translateY(110%); }
-.kin.in .kl > i { transform: translateY(0); transition: transform .6s var(--ease); }
-.kin.in .kl:nth-child(2) > i { transition-delay: .06s; }
-.kin.in .kl:nth-child(3) > i { transition-delay: .12s; }
-.kin.in .kl:nth-child(4) > i { transition-delay: .18s; }
+.kl { display: block; overflow: hidden; padding-bottom: .04em; }
+.kl > i { display: block; font-style: normal; transform: translateY(108%); }
+.kin.in .kl > i { transform: translateY(0); transition: transform .72s var(--snap); }
+.kin.in .kl:nth-child(2) > i { transition-delay: .07s; }
+.kin.in .kl:nth-child(3) > i { transition-delay: .14s; }
+.kin.in .kl:nth-child(4) > i { transition-delay: .21s; }
+
+.rise { opacity: 0; transform: translateY(20px); }
+.rise.in { opacity: 1; transform: none; transition: opacity .55s ease, transform .7s var(--snap); }
+.rise.d1.in { transition-delay: .06s; } .rise.d2.in { transition-delay: .12s; } .rise.d3.in { transition-delay: .18s; }
 
 .grad-word {
-  background: var(--grad);
+  background: var(--grad); background-size: 200% 100%;
+  background-position: var(--gp, 0%) 0;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
 }
 
-/* fade-rise for non-headline blocks */
-.rise { opacity: 0; transform: translateY(18px); }
-.rise.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s var(--ease); }
-
-/* ---------- Eyebrow ---------- */
-.eyebrow {
-  display: flex; align-items: center; gap: 12px;
-  font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--ink-faint); margin-bottom: 20px;
+/* ---------- Labels ---------- */
+.tag {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: 'JetBrains Mono', monospace; font-size: .64rem; font-weight: 500;
+  letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint);
+  margin-bottom: 22px;
 }
-.eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--grad); flex: 0 0 24px; }
+.tag::before {
+  content: ''; width: 7px; height: 7px; background: var(--grad); flex: 0 0 7px;
+  transform: rotate(45deg);
+}
+.tag b { color: var(--cyan); font-weight: 500; }
 
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  min-height: 52px; padding: 14px 28px;
-  font-family: 'Inter', sans-serif; font-size: .84rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase;
-  text-decoration: none; cursor: pointer; border: none; border-radius: 4px;
-  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease, color .2s ease;
+  min-height: 54px; padding: 15px 30px; border: none; cursor: pointer; text-decoration: none;
+  font-family: 'JetBrains Mono', monospace; font-size: .72rem; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase;
+  position: relative; overflow: hidden;
+  transition: transform .25s var(--snap), box-shadow .25s ease, color .25s ease;
 }
-.btn-grad { background: var(--grad); color: #0a0a0e; box-shadow: var(--glow); }
-.btn-grad:hover { box-shadow: 0 0 60px rgba(124,58,237,.55); transform: translateY(-2px); }
-.btn-ghost {
-  background: transparent; color: var(--ink);
-  border: 1px solid var(--line-strong); position: relative;
+.btn-grad { background: var(--grad); color: #07070a; font-weight: 700; box-shadow: var(--glow); }
+.btn-grad:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px rgba(34,211,238,.6), 0 20px 52px -14px rgba(34,211,238,.7); }
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-hot); }
+.btn-ghost::after {
+  content: ''; position: absolute; inset: 0; background: var(--grad);
+  transform: translateY(101%); transition: transform .35s var(--snap); z-index: -1;
 }
-.btn-ghost:hover { border-color: transparent; background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--grad) border-box; border: 1px solid transparent; transform: translateY(-2px); }
+.btn-ghost:hover { color: #07070a; box-shadow: inset 0 0 0 1px transparent; transform: translateY(-3px); }
+.btn-ghost:hover::after { transform: translateY(0); }
+.btn-ghost { z-index: 0; }
 
 /* ---------- Nav ---------- */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1200;
-  background: rgba(14,14,18,.82);
-  border-bottom: 1px solid transparent;
-  transition: background .3s ease, border-color .3s ease;
+  background: rgba(14,14,18,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  transition: background .3s ease;
 }
-.nav.stuck { background: rgba(10,10,14,.96); border-bottom-color: var(--line); }
+.nav::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line); }
+.nav.stuck { background: rgba(8,8,11,.94); }
+.scrollbar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--grad); z-index: 2; }
 .nav-in {
-  max-width: var(--shell); margin: 0 auto; padding: 0 32px; height: 76px;
+  max-width: var(--shell); margin: 0 auto; padding: 0 var(--gut); height: 84px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand svg { width: 54px; height: 32px; flex: 0 0 54px; }
-.brand-txt { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: .98rem; color: var(--ink); line-height: 1.2; }
+.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+.brand svg { width: 38px; height: 38px; flex: 0 0 38px; }
+.brand-txt { font-weight: 700; font-size: 1rem; color: var(--ink); line-height: 1.15; letter-spacing: -.02em; }
 .brand-txt small {
-  display: block; font-family: 'JetBrains Mono', monospace; font-weight: 400;
-  font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); margin-top: 2px;
+  display: block; font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: .55rem;
+  letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint); margin-top: 3px;
 }
-.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a {
-  font-size: .84rem; color: var(--ink-dim); text-decoration: none; padding: 8px 0;
-  position: relative; transition: color .2s ease;
+  font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-dim); text-decoration: none; padding: 9px 0; position: relative; transition: color .2s ease;
 }
 .nav-links a::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px;
-  background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .2s ease;
+  content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: var(--grad);
+  transform: scaleX(0); transform-origin: left; transition: transform .3s var(--snap);
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after { transform: scaleX(1); }
-.nav-links .nav-cta {
-  background: var(--grad); color: #0a0a0e; font-weight: 600; padding: 11px 20px; border-radius: 4px;
-  font-size: .74rem; letter-spacing: .12em; text-transform: uppercase;
-}
+.nav-links .nav-cta { background: var(--grad); color: #07070a; font-weight: 700; padding: 12px 20px; }
 .nav-links .nav-cta::after { display: none; }
-.nav-links .nav-cta:hover { color: #0a0a0e; box-shadow: var(--glow); }
+.nav-links .nav-cta:hover { color: #07070a; box-shadow: var(--glow); }
 .burger {
-  display: none; width: 48px; height: 48px; background: transparent; border: 1px solid var(--line);
-  border-radius: 4px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  display: none; width: 48px; height: 48px; background: transparent; cursor: pointer;
+  box-shadow: inset 0 0 0 1px var(--line-mid);
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: none;
 }
-.burger i { display: block; width: 20px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease), opacity .2s ease; }
+.burger i { display: block; width: 20px; height: 1.5px; background: var(--ink); transition: transform .3s var(--snap), opacity .2s ease; }
 .burger[aria-expanded="true"] i:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .burger[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
 .burger[aria-expanded="true"] i:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ---------- Section frame ---------- */
 section { position: relative; z-index: 1; }
-.band { padding: 108px 0; }
+.band { padding: 110px 0; }
 .band-raised { background: var(--bg-raised); }
 .band-inset { background: var(--bg-inset); }
-.divider { height: 1px; background: var(--line); position: relative; overflow: hidden; }
-.divider span {
-  position: absolute; left: 0; top: 0; height: 100%; width: 28%;
-  background: var(--grad); transform: translateX(-110%);
-}
-.divider.in span { animation: sweep 1.6s var(--ease) forwards; }
-@keyframes sweep { to { transform: translateX(300%); } }
 
-.h2 { font-size: clamp(1.9rem, 4.2vw, 3.1rem); margin-bottom: 18px; }
-.lede { font-size: 1.02rem; color: var(--ink-dim); max-width: 620px; }
+/* Device: index rail divider */
+.rail {
+  display: flex; align-items: center; gap: 16px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 11px 0; overflow: hidden;
+}
+.rail em {
+  font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: .6rem;
+  letter-spacing: .26em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap;
+}
+.rail em b { color: var(--violet); font-weight: 400; }
+.rail .sweep { flex: 1; height: 1px; background: var(--line); position: relative; overflow: hidden; }
+.rail .sweep i { position: absolute; inset: 0 auto 0 0; width: 34%; background: var(--grad); transform: translateX(-110%); }
+.rail.in .sweep i { animation: sweep 1.5s var(--snap) forwards; }
+@keyframes sweep { to { transform: translateX(320%); } }
+
+.h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-bottom: 18px; }
+.lede { font-size: 1.03rem; color: var(--ink-dim); max-width: 620px; }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 44px; margin-bottom: 54px; flex-wrap: wrap; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 148px 0 0; position: relative; }
-.hero-grid {
-  display: grid; grid-template-columns: minmax(0,1.42fr) minmax(0,1fr);
-  gap: 56px; align-items: center;
-}
+.hero { padding: 128px 0 0; }
 .hero h1 {
-  font-size: clamp(2.6rem, 7vw, 5.5rem);
-  line-height: 1.02; letter-spacing: -.03em; margin-bottom: 26px;
+  font-size: clamp(3rem, 12.4vw, 9.6rem);
+  line-height: .92; letter-spacing: -.055em; text-transform: uppercase; font-weight: 700;
+  margin-bottom: 34px;
 }
-.hero-sub { font-size: clamp(1rem, 1.5vw, 1.12rem); color: var(--ink-dim); max-width: 520px; margin-bottom: 34px; }
+.hero-body { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,320px); gap: 48px; align-items: end; }
+.hero-sub { font-size: 1.06rem; color: var(--ink-dim); max-width: 540px; margin-bottom: 30px; }
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-.hero-note {
-  margin-top: 22px; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
-}
-.hero-note b { color: var(--cyan); font-weight: 600; }
 
-.shot {
-  position: relative; border-radius: 12px; overflow: hidden;
-  border: 1px solid var(--line);
-  background: linear-gradient(150deg, rgba(124,58,237,.30), rgba(34,211,238,.14) 55%, var(--bg-raised));
+.viewport {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  background: linear-gradient(150deg, rgba(124,58,237,.34), rgba(34,211,238,.16) 60%, var(--bg-raised));
+  box-shadow: inset 0 0 0 1px var(--line-mid);
 }
-.shot::after {
+.viewport img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08) brightness(.88); }
+.viewport::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, rgba(124,58,237,.20), rgba(10,10,14,.55));
-  mix-blend-mode: multiply;
+  background: linear-gradient(200deg, rgba(124,58,237,.30), rgba(8,8,11,.5) 70%);
+  mix-blend-mode: hard-light;
 }
-.shot img {
-  display: block; width: 100%; height: 100%; object-fit: cover;
-  filter: saturate(.7) contrast(1.05);
+.viewport-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+  display: flex; justify-content: space-between; gap: 10px; padding: 10px 12px;
+  background: linear-gradient(0deg, rgba(8,8,11,.92), transparent);
+  font-family: 'JetBrains Mono', monospace; font-size: .56rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-faint);
 }
-.hero-shot { aspect-ratio: 4 / 5; }
-.hero-shot-wrap { position: relative; }
-.hero-shot-wrap::before {
-  content: ''; position: absolute; inset: -1px; border-radius: 13px; z-index: -1;
-  background: var(--grad); opacity: .55;
-}
-.chip {
-  position: absolute; left: -18px; bottom: 28px; z-index: 3;
-  background: var(--bg-inset); border: 1px solid var(--line-strong);
-  border-radius: 6px; padding: 12px 16px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.6);
-}
-.chip .k { font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-faint); display: block; }
-.chip .v { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.02rem; color: var(--ink); letter-spacing: -.01em; }
+.viewport-cap b { color: var(--cyan); font-weight: 400; }
 
-/* ---------- Ticker ---------- */
-.ticker {
-  margin-top: 88px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  overflow: hidden; background: var(--bg-inset); position: relative; z-index: 2;
+/* spec rail */
+.spec {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px;
+  background: var(--line); margin-top: 62px; box-shadow: 0 0 0 1px var(--line);
 }
-.ticker-track { display: flex; width: max-content; animation: roll 42s linear infinite; }
-.ticker:hover .ticker-track { animation-play-state: paused; }
-.ticker-seq { display: flex; align-items: center; flex: 0 0 auto; }
-.ticker-seq span {
-  font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
-  color: var(--ink-faint); padding: 14px 0; white-space: nowrap;
+.spec div { background: var(--bg); padding: 20px 20px 22px; }
+.spec dt {
+  font-family: 'JetBrains Mono', monospace; font-size: .56rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 9px;
 }
-.ticker-seq b { color: var(--violet); padding: 0 20px; font-weight: 400; }
-@keyframes roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.spec dd { font-size: 1.04rem; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+.spec dd small { display: block; font-size: .78rem; font-weight: 400; color: var(--ink-dim); margin-top: 2px; letter-spacing: 0; }
 
-/* ---------- Trust strip ---------- */
-.trust { padding: 46px 0; }
-.trust-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.trust-row span {
-  font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink-faint); border: 1px solid var(--line); border-radius: 4px; padding: 9px 14px;
-  transition: color .2s ease, border-color .2s ease;
+/* ---------- Device 2: counter-running marquee lanes ---------- */
+.lanes { margin-top: 66px; border-top: 1px solid var(--line-mid); border-bottom: 1px solid var(--line-mid); background: var(--bg-inset); overflow: hidden; position: relative; z-index: 2; }
+.lane { overflow: hidden; display: flex; }
+.lane + .lane { border-top: 1px solid var(--line); }
+.lane-track { display: flex; width: max-content; flex: 0 0 auto; }
+.lane-a .lane-track { animation: rollA 21s linear infinite; }
+.lane-b .lane-track { animation: rollB 26s linear infinite; }
+.lanes:hover .lane-track { animation-play-state: paused; }
+.seq { display: flex; align-items: center; flex: 0 0 auto; }
+.seq span {
+  font-family: 'JetBrains Mono', monospace; font-size: .74rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 13px 0; white-space: nowrap;
 }
-.trust-row span:hover { color: var(--ink-dim); border-color: var(--line-strong); }
+.seq b { padding: 0 22px; font-weight: 400; color: var(--violet); }
+.lane-b .seq span {
+  font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -.01em;
+  text-transform: uppercase; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.16); padding: 11px 0;
+}
+.lane-b .seq b { color: var(--cyan); font-size: .8rem; }
+@keyframes rollA { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes rollB { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
-/* ---------- Programs ---------- */
-.sec-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 52px; flex-wrap: wrap; }
+/* ---------- Programs: corner-bracket cards with pointer glow ---------- */
 .prog-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
 .prog {
-  background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px;
-  padding: 30px 26px 26px; display: flex; flex-direction: column;
-  text-decoration: none; position: relative;
-  transition: border-color .2s ease, transform .2s ease;
+  position: relative; background: var(--bg-raised); padding: 32px 28px 28px;
+  display: flex; flex-direction: column; text-decoration: none; overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: transform .3s var(--snap), box-shadow .3s ease;
 }
 .prog::before {
-  content: ''; position: absolute; inset: -1px; border-radius: 13px; padding: 1px;
-  background: var(--grad); opacity: 0; transition: opacity .2s ease;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity .3s ease; pointer-events: none;
+  background: radial-gradient(340px circle at var(--mx,50%) var(--my,0%), rgba(124,58,237,.24), transparent 62%);
 }
 .prog:hover::before { opacity: 1; }
-.prog:hover { transform: translateY(-3px); }
-.prog .idx { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--violet); letter-spacing: .1em; margin-bottom: 18px; }
-.prog h3 { font-size: 1.24rem; margin-bottom: 10px; }
-.prog p { font-size: .92rem; color: var(--ink-dim); margin-bottom: 20px; }
-.prog .meta {
-  display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px;
-  font-family: 'JetBrains Mono', monospace; font-size: .74rem; color: var(--ink-faint);
-}
-.prog .fee { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--ink); letter-spacing: -.02em; }
+.prog:hover { transform: translateY(-5px); box-shadow: inset 0 0 0 1px var(--line-hot); }
+.brk { position: absolute; width: 13px; height: 13px; pointer-events: none; transition: opacity .3s ease, transform .3s var(--snap); opacity: .55; }
+.brk-tl { top: 9px; left: 9px; border-top: 1px solid var(--cyan); border-left: 1px solid var(--cyan); }
+.brk-br { bottom: 9px; right: 9px; border-bottom: 1px solid var(--violet); border-right: 1px solid var(--violet); }
+.prog:hover .brk { opacity: 1; }
+.prog:hover .brk-tl { transform: translate(-3px,-3px); }
+.prog:hover .brk-br { transform: translate(3px,3px); }
+.prog .idx { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .2em; color: var(--violet); margin-bottom: 20px; }
+.prog h3 { font-size: 1.3rem; margin-bottom: 11px; letter-spacing: -.025em; }
+.prog p { font-size: .93rem; color: var(--ink-dim); margin-bottom: 22px; }
+.prog .meta { display: flex; align-items: baseline; gap: 10px; margin-bottom: 22px; }
+.prog .fee { font-size: 1.7rem; font-weight: 700; letter-spacing: -.035em; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+.prog .per { font-family: 'JetBrains Mono', monospace; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); }
 .prog .go {
-  margin-top: auto; display: inline-flex; align-items: center; gap: 8px;
-  font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan);
+  margin-top: auto; display: inline-flex; align-items: center; gap: 9px;
+  font-family: 'JetBrains Mono', monospace; font-size: .64rem; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--cyan);
 }
-.prog .go svg { width: 14px; height: 14px; transition: transform .2s ease; }
-.prog:hover .go svg { transform: translateX(4px); }
+.prog .go svg { width: 15px; height: 15px; transition: transform .25s var(--snap); }
+.prog:hover .go svg { transform: translateX(5px); }
+.prog-note { margin-top: 22px; font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
 
 /* ---------- Method ---------- */
-.method-grid { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 60px; align-items: center; }
+.method-grid { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,1fr); gap: 64px; align-items: start; }
 .rows { display: flex; flex-direction: column; }
-.row { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 54px 1fr; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); position: relative; }
 .row:last-child { border-bottom: none; }
-.row-ico {
-  flex: 0 0 44px; width: 44px; height: 44px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid transparent;
-  background: linear-gradient(var(--bg-raised), var(--bg-raised)) padding-box, var(--grad) border-box;
-}
-.row-ico svg { width: 20px; height: 20px; stroke: var(--cyan); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.row h3 { font-size: 1.05rem; margin-bottom: 4px; }
-.row p { font-size: .92rem; color: var(--ink-dim); }
-.method-shot { aspect-ratio: 3 / 4; }
+.row .rn { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .16em; color: var(--ink-faint); padding-top: 5px; transition: color .25s ease; }
+.row:hover .rn { color: var(--cyan); }
+.row h3 { font-size: 1.08rem; margin-bottom: 5px; letter-spacing: -.02em; }
+.row p { font-size: .93rem; color: var(--ink-dim); }
+.row::after { content: ''; position: absolute; left: 0; bottom: -1px; height: 1px; width: 0; background: var(--grad); transition: width .5s var(--snap); }
+.row:hover::after { width: 100%; }
+.method-media { position: relative; }
+.method-media .viewport { aspect-ratio: 3 / 4; }
 
-/* ---------- Stats ---------- */
-.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.stat { background: var(--bg-inset); padding: 38px 26px; }
-.stat .num {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2.2rem, 4.4vw, 3.4rem);
-  line-height: 1; letter-spacing: -.03em; margin-bottom: 12px;
+/* ---------- Device 3: terminal readouts ---------- */
+.term { box-shadow: 0 0 0 1px var(--line-mid); background: var(--bg-inset); }
+.term-bar {
+  display: flex; align-items: center; gap: 9px; padding: 11px 16px;
+  border-bottom: 1px solid var(--line-mid); background: rgba(255,255,255,.02);
+}
+.term-bar u { width: 8px; height: 8px; border-radius: 50%; background: var(--line-hot); display: block; }
+.term-bar u:first-of-type { background: var(--violet); }
+.term-bar u:nth-of-type(2) { background: var(--cyan); }
+.term-bar span { font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); margin-left: 6px; }
+.term-body { padding: 26px 24px 22px; }
+.tline { font-family: 'JetBrains Mono', monospace; font-size: .7rem; letter-spacing: .1em; color: var(--ink-faint); margin-bottom: 6px; }
+.tline s { text-decoration: none; color: var(--violet); margin-right: 9px; }
+.tout { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding-bottom: 22px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.tout:last-of-type { border-bottom: none; }
+.tout .num {
+  font-size: clamp(2.1rem, 5vw, 3.2rem); font-weight: 700; line-height: 1; letter-spacing: -.045em;
   background: var(--grad); -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
 }
-.stat .lbl {
-  font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--ink-faint); line-height: 1.6;
-}
-.qual { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 26px; }
-.qual div { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: var(--ink-dim); }
-.qual svg { flex: 0 0 16px; width: 16px; height: 16px; stroke: var(--cyan); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; margin-top: 4px; }
+.tout .desc { font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.caret { display: inline-block; width: 8px; height: 14px; background: var(--cyan); vertical-align: -2px; animation: blink 1.1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.term-side { display: flex; flex-direction: column; gap: 16px; }
+.term-side .ck { display: grid; grid-template-columns: 18px 1fr; gap: 12px; font-size: .95rem; color: var(--ink-dim); }
+.term-side .ck svg { width: 16px; height: 16px; stroke: var(--cyan); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; margin-top: 5px; }
+.stats-wrap { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 56px; align-items: center; }
 
-/* ---------- Mosaic ---------- */
-.mosaic { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 150px; gap: 14px; }
-.mosaic figure { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--line);
-  background: linear-gradient(150deg, rgba(124,58,237,.28), var(--bg-raised)); }
-.mosaic figure::after {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: rgba(124,58,237,.18); mix-blend-mode: multiply; transition: opacity .25s ease;
+/* ---------- Campus filmstrip ---------- */
+.strip { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 152px; gap: 12px; }
+.strip figure { position: relative; overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); background: linear-gradient(150deg, rgba(124,58,237,.26), var(--bg-raised)); }
+.strip img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.55) contrast(1.1) brightness(.85); transition: filter .4s ease, transform .6s var(--snap); }
+.strip figure::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(124,58,237,.24), rgba(8,8,11,.34)); mix-blend-mode: hard-light; transition: opacity .4s ease; pointer-events: none; }
+.strip figure:hover img { filter: none; transform: scale(1.04); }
+.strip figure:hover::after { opacity: 0; }
+.strip figure figcaption {
+  position: absolute; left: 10px; bottom: 9px; z-index: 3;
+  font-family: 'JetBrains Mono', monospace; font-size: .54rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.75); text-shadow: 0 1px 6px rgba(0,0,0,.9);
 }
-.mosaic figure:hover::after { opacity: 0; }
-.mosaic img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.7) contrast(1.05); transition: filter .25s ease; }
-.mosaic figure:hover img { filter: none; }
-.m1 { grid-column: span 3; grid-row: span 2; }
-.m2 { grid-column: span 3; grid-row: span 1; }
-.m3 { grid-column: span 3; grid-row: span 1; }
-.m4 { grid-column: span 2; grid-row: span 1; }
-.m5 { grid-column: span 4; grid-row: span 1; }
-.mos-cap { margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); }
+.s1 { grid-column: span 3; grid-row: span 2; }
+.s2 { grid-column: span 3; }
+.s3 { grid-column: span 3; }
+.s4 { grid-column: span 2; }
+.s5 { grid-column: span 4; }
+.strip-note { margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); }
 
-/* ---------- Philosophy + faculty ---------- */
-.quote { max-width: 820px; }
-.quote .mark { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: .6; display: block; margin-bottom: 18px;
-  background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
-.quote p { font-family: 'Space Grotesk', sans-serif; font-weight: 500; color: var(--ink);
-  font-size: clamp(1.35rem, 3vw, 2.1rem); line-height: 1.28; letter-spacing: -.02em; }
-.quote cite { display: block; margin-top: 22px; font-style: normal; font-family: 'JetBrains Mono', monospace;
-  font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); }
-.faculty { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1px; background: var(--line);
-  border: 1px solid var(--line); margin-top: 56px; }
-.fac { background: var(--bg); padding: 22px 24px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.fac-n { font-family: 'Space Grotesk', sans-serif; font-weight: 500; color: var(--ink); font-size: 1rem; }
-.fac-s { font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); text-align: right; white-space: nowrap; }
-.fac-note { margin-top: 18px; font-size: .8rem; color: var(--ink-faint); }
+/* ---------- Faculty ---------- */
+.quote { max-width: 900px; }
+.quote p { font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 600; color: var(--ink); line-height: 1.18; letter-spacing: -.035em; }
+.quote cite { display: block; margin-top: 26px; font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); }
+.roster { margin-top: 58px; box-shadow: 0 0 0 1px var(--line); }
+.rosrow {
+  display: grid; grid-template-columns: 56px minmax(0,1fr) auto; gap: 18px; align-items: baseline;
+  padding: 18px 22px; border-bottom: 1px solid var(--line); transition: background .25s ease, padding-left .25s var(--snap);
+}
+.rosrow:last-child { border-bottom: none; }
+.rosrow:hover { background: rgba(124,58,237,.07); padding-left: 30px; }
+.rosrow .k { font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .16em; color: var(--ink-faint); }
+.rosrow:hover .k { color: var(--cyan); }
+.rosrow .n { font-size: 1.02rem; font-weight: 600; color: var(--ink); letter-spacing: -.02em; }
+.rosrow .s { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); text-align: right; }
+.fac-note { margin-top: 20px; font-size: .84rem; color: var(--ink-faint); max-width: 660px; }
 
 /* ---------- Admissions ---------- */
-.steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 24px; margin-bottom: 68px; }
-.steps-rail { position: absolute; left: 0; right: 0; top: 13px; height: 1px; background: var(--line); overflow: hidden; }
-.steps-rail i { display: block; height: 100%; width: 0; background: var(--grad); transition: width .9s var(--ease); }
+.steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 26px; margin-bottom: 72px; }
+.steps-rail { position: absolute; left: 0; right: 0; top: 5px; height: 1px; background: var(--line); overflow: hidden; }
+.steps-rail i { display: block; height: 100%; width: 0; background: var(--grad); transition: width 1.1s var(--snap); }
 .steps.in .steps-rail i { width: 100%; }
-.step { position: relative; padding-top: 44px; }
-.step::before {
-  content: ''; position: absolute; left: 0; top: 8px; width: 11px; height: 11px; border-radius: 50%;
-  background: var(--bg); border: 1px solid var(--line-strong);
-}
-.steps.in .step::before { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(34,211,238,.10); transition: border-color .3s ease .5s, box-shadow .3s ease .5s; }
-.step .n { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--violet); display: block; margin-bottom: 10px; }
-.step h3 { font-size: 1.02rem; margin-bottom: 6px; }
-.step p { font-size: .88rem; color: var(--ink-dim); }
+.step { position: relative; padding-top: 34px; }
+.step::before { content: ''; position: absolute; left: 0; top: 0; width: 11px; height: 11px; transform: rotate(45deg) translateY(-1px); background: var(--bg); box-shadow: inset 0 0 0 1px var(--line-hot); }
+.steps.in .step::before { box-shadow: inset 0 0 0 1px var(--cyan), 0 0 14px rgba(34,211,238,.5); transition: box-shadow .35s ease .55s; }
+.step .n { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .18em; color: var(--violet); display: block; margin-bottom: 11px; }
+.step h3 { font-size: 1.04rem; margin-bottom: 7px; letter-spacing: -.02em; }
+.step p { font-size: .89rem; color: var(--ink-dim); }
 
-.form-wrap { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.08fr); gap: 48px; align-items: start; }
-.form-card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 34px 32px; }
-.form-card h3 { font-size: 1.3rem; margin-bottom: 6px; }
-.form-card .note { font-size: .86rem; color: var(--ink-faint); margin-bottom: 26px; }
-.field { margin-bottom: 18px; }
-.field label {
-  display: block; font-family: 'JetBrains Mono', monospace; font-size: .64rem;
-  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px;
-}
+.form-wrap { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); gap: 52px; align-items: start; }
+.form-card { background: var(--bg-raised); box-shadow: inset 0 0 0 1px var(--line-mid); padding: 34px 32px; position: relative; }
+.form-card > .brk { position: absolute; }
+.form-card h3 { font-size: 1.34rem; margin-bottom: 7px; }
+.form-card .note { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 28px; }
+.field { margin-bottom: 20px; }
+.field label { display: block; font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 9px; }
 .field input, .field select {
-  width: 100%; min-height: 50px; padding: 13px 15px;
-  font-family: 'Inter', sans-serif; font-size: .96rem; color: var(--ink);
-  background: var(--bg-inset); border: 1px solid var(--line); border-radius: 6px;
-  transition: border-color .2s ease, box-shadow .2s ease;
-  -webkit-appearance: none; appearance: none;
+  width: 100%; min-height: 52px; padding: 14px 15px;
+  font-family: 'Space Grotesk', sans-serif; font-size: .98rem; color: var(--ink);
+  background: var(--bg-inset); border: none; box-shadow: inset 0 0 0 1px var(--line-mid);
+  transition: box-shadow .2s ease; -webkit-appearance: none; appearance: none; border-radius: 0;
 }
 .field select {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%2322d3ee' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: no-repeat; background-position: right 15px center; padding-right: 40px;
 }
-.field select option { background: var(--bg-inset); color: var(--ink); }
-.field input::placeholder { color: #55555f; }
-.field input:focus, .field select:focus {
-  outline: none; border-color: var(--violet); box-shadow: 0 0 0 3px rgba(124,58,237,.22);
-}
-.field.bad input, .field.bad select { border-color: #ef4444; }
-.err { display: none; font-size: .76rem; color: #f87171; margin-top: 7px; }
+.field select option { background: #08080b; color: #f5f5f8; }
+.field input::placeholder { color: #4f4f59; }
+.field input:focus, .field select:focus { outline: none; box-shadow: inset 0 0 0 1px var(--cyan), 0 0 0 3px rgba(34,211,238,.16); }
+.field.bad input, .field.bad select { box-shadow: inset 0 0 0 1px #ef4444; }
+.err { display: none; font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .1em; color: #f87171; margin-top: 8px; }
 .field.bad .err { display: block; }
-.form-card .btn { width: 100%; margin-top: 8px; }
-.privacy { margin-top: 14px; font-size: .74rem; color: var(--ink-faint); text-align: center; }
+.form-card .btn { width: 100%; margin-top: 10px; }
+.privacy { margin-top: 15px; font-family: 'JetBrains Mono', monospace; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); text-align: center; }
 
-.done { display: none; text-align: center; padding: 24px 4px 8px; }
-.done.show { display: block; animation: doneIn .5s var(--ease); }
-@keyframes doneIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.done { display: none; text-align: center; padding: 26px 4px 10px; }
+.done.show { display: block; animation: doneIn .5s var(--snap); }
+@keyframes doneIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 .done-ring {
-  width: 66px; height: 66px; margin: 0 auto 20px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--cyan); background: rgba(34,211,238,.08);
+  width: 70px; height: 70px; margin: 0 auto 22px; display: flex; align-items: center; justify-content: center;
+  box-shadow: inset 0 0 0 1px var(--cyan); background: rgba(34,211,238,.07); transform: rotate(45deg);
 }
-.done-ring svg { width: 30px; height: 30px; }
-.done-check { stroke: var(--cyan); stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round;
-  stroke-dasharray: 44; stroke-dashoffset: 44; animation: chk .6s ease-out .2s forwards; }
+.done-ring svg { width: 30px; height: 30px; transform: rotate(-45deg); }
+.done-check { stroke: var(--cyan); stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 44; stroke-dashoffset: 44; animation: chk .6s ease-out .2s forwards; }
 @keyframes chk { to { stroke-dashoffset: 0; } }
-.done h3 { font-size: 1.16rem; margin-bottom: 10px; }
-.done p { font-size: .92rem; color: var(--ink-dim); max-width: 360px; margin: 0 auto 6px; }
-.done .hint { color: var(--cyan); font-size: .8rem; margin-top: 14px; }
+.done h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.done p { font-size: .93rem; color: var(--ink-dim); max-width: 380px; margin: 0 auto 6px; }
+.done .hint { font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-top: 16px; }
 
-.auto-list { list-style: none; }
-.auto-list li { display: flex; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.auto-list { list-style: none; margin-top: 4px; }
+.auto-list li { display: grid; grid-template-columns: 46px 1fr; gap: 16px; padding: 19px 0; border-bottom: 1px solid var(--line); }
 .auto-list li:last-child { border-bottom: none; }
-.auto-list .t { font-family: 'JetBrains Mono', monospace; font-size: .68rem; color: var(--violet); flex: 0 0 28px; padding-top: 3px; }
-.auto-list strong { display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 500; color: var(--ink); font-size: 1rem; margin-bottom: 3px; }
-.auto-list span { font-size: .88rem; color: var(--ink-dim); }
+.auto-list .t { font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .1em; color: var(--violet); padding-top: 4px; }
+.auto-list strong { display: block; font-weight: 600; color: var(--ink); font-size: 1.01rem; margin-bottom: 4px; letter-spacing: -.015em; }
+.auto-list span { font-size: .89rem; color: var(--ink-dim); }
 
 /* ---------- FAQ ---------- */
-.faq-list { max-width: 820px; }
+.faq-list { max-width: 860px; }
 .faq-item { border-top: 1px solid var(--line); }
 .faq-item:last-child { border-bottom: 1px solid var(--line); }
 .faq-q {
-  width: 100%; min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  width: 100%; min-height: 70px; display: grid; grid-template-columns: 46px 1fr 18px; gap: 14px; align-items: center;
   background: transparent; border: none; cursor: pointer; padding: 22px 2px; text-align: left;
-  font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: clamp(1rem, 2vw, 1.14rem); color: var(--ink);
-  transition: color .2s ease;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(1rem, 2vw, 1.16rem);
+  color: var(--ink); letter-spacing: -.02em; transition: color .2s ease;
 }
+.faq-q .qn { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: .62rem; letter-spacing: .16em; color: var(--ink-faint); transition: color .2s ease; }
 .faq-q:hover { color: var(--cyan); }
-.faq-q .pl { position: relative; flex: 0 0 16px; width: 16px; height: 16px; transition: transform .3s var(--ease); }
-.faq-q .pl::before, .faq-q .pl::after {
-  content: ''; position: absolute; background: var(--cyan);
-}
+.faq-q:hover .qn, .faq-q[aria-expanded="true"] .qn { color: var(--violet); }
+.faq-q .pl { position: relative; width: 16px; height: 16px; transition: transform .35s var(--snap); }
+.faq-q .pl::before, .faq-q .pl::after { content: ''; position: absolute; background: var(--cyan); }
 .faq-q .pl::before { left: 0; right: 0; top: 7.5px; height: 1.5px; }
 .faq-q .pl::after { top: 0; bottom: 0; left: 7.5px; width: 1.5px; }
-.faq-q[aria-expanded="true"] .pl { transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s var(--ease); }
-.faq-a p { padding: 0 2px 24px; font-size: .94rem; color: var(--ink-dim); max-width: 660px; }
+.faq-q[aria-expanded="true"] .pl { transform: rotate(135deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--snap); }
+.faq-a p { padding: 0 2px 26px 60px; font-size: .95rem; color: var(--ink-dim); max-width: 700px; }
 
 /* ---------- Visit ---------- */
-.visit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 34px; }
-.vcard { background: var(--bg-raised); padding: 30px 26px; }
-.vcard h3 { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: .66rem; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 14px; }
-.vcard p { color: var(--ink); font-size: 1rem; }
-.vcard p span { display: block; color: var(--ink-dim); font-size: .9rem; margin-top: 5px; }
+.visit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: var(--line); box-shadow: 0 0 0 1px var(--line); margin-bottom: 36px; }
+.vcard { background: var(--bg-raised); padding: 30px 26px; position: relative; overflow: hidden; }
+.vcard::after { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--snap); }
+.vcard:hover::after { transform: scaleX(1); }
+.vcard h3 { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: .6rem; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 15px; }
+.vcard p { color: var(--ink); font-size: 1.02rem; font-weight: 600; letter-spacing: -.015em; }
+.vcard p span { display: block; color: var(--ink-dim); font-size: .91rem; font-weight: 400; margin-top: 6px; letter-spacing: 0; }
 .vcard a { color: var(--cyan); text-decoration: none; }
 .vcard a:hover { text-decoration: underline; }
 .visit-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--bg-inset); border-top: 1px solid var(--line); padding: 64px 0 40px; }
-.foot-top { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 42px; }
-.foot-brand svg { width: 62px; height: 36px; margin-bottom: 14px; display: block; }
-.foot-brand p { font-family: 'JetBrains Mono', monospace; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); }
+.footer { background: var(--bg-inset); border-top: 1px solid var(--line-mid); padding: 66px 0 42px; }
+.foot-top { display: flex; justify-content: space-between; gap: 44px; flex-wrap: wrap; margin-bottom: 44px; }
+.foot-brand svg { width: 44px; height: 44px; margin-bottom: 16px; display: block; }
+.foot-brand p { font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); }
 .foot-links { display: flex; flex-wrap: wrap; gap: 12px 30px; }
-.foot-links a { font-size: .86rem; color: var(--ink-dim); text-decoration: none; }
+.foot-links a { font-family: 'JetBrains Mono', monospace; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); text-decoration: none; }
 .foot-links a:hover { color: var(--cyan); }
-.foot-bottom { border-top: 1px solid var(--line); padding-top: 26px; }
-.demo-notice { font-size: .78rem; color: var(--ink-faint); line-height: 1.75; max-width: 720px; }
+.foot-bottom { border-top: 1px solid var(--line); padding-top: 28px; }
+.demo-notice { font-size: .8rem; color: var(--ink-faint); line-height: 1.78; max-width: 740px; }
 .demo-notice a { color: var(--cyan); text-decoration: none; }
-.foot-copy { margin-top: 12px; font-size: .72rem; color: #4c4c57; }
+.foot-copy { margin-top: 13px; font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: #46464f; }
 
 /* ---------- Floats ---------- */
 .wa-float {
-  position: fixed; right: 20px; bottom: 20px; z-index: 1300;
-  width: 54px; height: 54px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--wa); box-shadow: 0 10px 30px rgba(37,211,102,.32); text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
+  position: fixed; right: 20px; bottom: 20px; z-index: 1300; width: 54px; height: 54px;
+  display: flex; align-items: center; justify-content: center; background: var(--wa);
+  box-shadow: 0 10px 30px rgba(37,211,102,.34); text-decoration: none;
+  transition: transform .25s var(--snap), box-shadow .25s ease;
 }
-.wa-float:hover { transform: translateY(-3px); box-shadow: 0 14px 38px rgba(37,211,102,.5); }
-.wa-float svg { width: 28px; height: 28px; fill: #06170c; }
+.wa-float:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(37,211,102,.5); }
+.wa-float svg { width: 28px; height: 28px; fill: #05170b; }
 
 .demo-badge {
   position: fixed; left: 20px; bottom: 20px; z-index: 1300;
   display: flex; align-items: center; gap: 10px;
-  background: rgba(10,10,14,.9); border: 1px solid var(--line-strong); border-radius: 4px;
+  background: rgba(8,8,11,.92); box-shadow: inset 0 0 0 1px var(--line-hot);
   padding: 8px 8px 8px 14px;
-  font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-dim);
+  font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-dim);
 }
-.demo-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--grad); }
-.demo-badge button {
-  width: 24px; height: 24px; border: none; border-radius: 3px; cursor: pointer;
-  background: rgba(255,255,255,.06); color: var(--ink-dim); font-size: .9rem; line-height: 1;
-}
-.demo-badge button:hover { background: rgba(255,255,255,.14); }
+.demo-badge::before { content: ''; width: 7px; height: 7px; background: var(--grad); transform: rotate(45deg); }
+.demo-badge button { width: 24px; height: 24px; border: none; cursor: pointer; background: rgba(255,255,255,.07); color: var(--ink-dim); font-size: .9rem; line-height: 1; }
+.demo-badge button:hover { background: rgba(255,255,255,.16); }
 .demo-badge.hidden { display: none; }
 
 /* ---------- Mobile sticky bar ---------- */
@@ -537,77 +575,76 @@ section { position: relative; z-index: 1; }
   .mbar {
     display: grid; grid-template-columns: repeat(3, 1fr);
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 1400;
-    background: rgba(10,10,14,.97); border-top: 1px solid var(--line-strong);
+    background: rgba(8,8,11,.97); border-top: 1px solid var(--line-hot);
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
   .mbar a {
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
-    min-height: 60px; padding: 10px 6px; text-decoration: none;
-    font-family: 'JetBrains Mono', monospace; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase;
+    min-height: 62px; padding: 10px 6px; text-decoration: none;
+    font-family: 'JetBrains Mono', monospace; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase;
     color: var(--ink-dim); border-right: 1px solid var(--line);
   }
   .mbar a:last-child { border-right: none; }
   .mbar svg { width: 19px; height: 19px; }
   .mbar .m-call svg { stroke: url(#mgrad); fill: none; stroke-width: 1.8; }
   .mbar .m-wa svg { fill: var(--wa); }
-  .mbar .m-enq { background: var(--grad); color: #0a0a0e; font-weight: 600; }
-  .mbar .m-enq svg { stroke: #0a0a0e; fill: none; stroke-width: 1.8; }
-  .footer { padding-bottom: 110px; }
-  .wa-float { bottom: 76px; }
-  .demo-badge { bottom: 76px; }
+  .mbar .m-enq { background: var(--grad); color: #07070a; font-weight: 700; }
+  .mbar .m-enq svg { stroke: #07070a; fill: none; stroke-width: 1.8; }
+  .footer { padding-bottom: 112px; }
+  .wa-float { bottom: 78px; }
+  .demo-badge { bottom: 78px; }
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1000px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
-  .hero-shot { aspect-ratio: 16 / 10; }
-  .chip { left: auto; right: 18px; bottom: 18px; }
-  .method-grid { grid-template-columns: 1fr; gap: 40px; }
-  .method-shot { aspect-ratio: 16 / 10; }
+@media (max-width: 1040px) {
+  .hero-body { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+  .viewport { aspect-ratio: 16 / 9; }
+  .method-grid { grid-template-columns: 1fr; gap: 44px; }
+  .method-media .viewport { aspect-ratio: 16 / 10; }
+  .stats-wrap { grid-template-columns: 1fr; gap: 40px; }
   .prog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .form-wrap { grid-template-columns: 1fr; gap: 40px; }
-  .steps { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 30px 24px; }
+  .spec { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .form-wrap { grid-template-columns: 1fr; gap: 44px; }
+  .steps { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px 26px; }
   .steps-rail { display: none; }
-  .step::before { border-color: var(--cyan); }
+  .step::before { box-shadow: inset 0 0 0 1px var(--cyan); }
   .visit-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .nav-links {
-    position: fixed; top: 76px; left: 0; right: 0;
+    position: fixed; top: 84px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: rgba(10,10,14,.98); border-bottom: 1px solid var(--line);
-    padding: 8px 32px 24px;
+    background: rgba(8,8,11,.98); border-bottom: 1px solid var(--line-mid);
+    padding: 8px 34px 26px;
     opacity: 0; transform: translateY(-10px); pointer-events: none;
-    transition: opacity .25s ease, transform .25s var(--ease);
+    transition: opacity .25s ease, transform .3s var(--snap);
   }
   .nav-links.open { opacity: 1; transform: none; pointer-events: auto; }
-  .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
-  .nav-links .nav-cta { text-align: center; margin-top: 14px; border-bottom: none; padding: 15px 20px; }
+  .nav-links a { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: .82rem; }
+  .nav-links .nav-cta { text-align: center; margin-top: 16px; border-bottom: none; padding: 16px 20px; }
   .burger { display: flex; }
-  .faculty { grid-template-columns: 1fr; }
-  .qual { grid-template-columns: 1fr; gap: 12px; }
+  .rosrow { grid-template-columns: 46px 1fr; }
+  .rosrow .s { grid-column: 2; text-align: left; }
 }
 @media (max-width: 640px) {
-  .shell { padding: 0 20px; }
-  .nav-in { padding: 0 20px; height: 68px; }
-  .nav-links { top: 68px; padding: 8px 20px 24px; }
-  html { scroll-padding-top: 70px; }
-  .band { padding: 76px 0; }
-  .hero { padding: 116px 0 0; }
-  .gridbed { background-size: calc(100% / 4) 100%; }
+  :root { --gut: 20px; }
+  .nav-in { height: 72px; }
+  .nav-links { top: 72px; padding: 8px 20px 26px; }
+  html { scroll-padding-top: 76px; }
+  .band { padding: 78px 0; }
+  .hero { padding: 104px 0 0; }
   .prog-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: 1fr; }
+  .spec { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
-  .mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 128px; }
-  .m1 { grid-column: span 2; grid-row: span 2; }
-  .m2, .m3, .m4, .m5 { grid-column: span 1; grid-row: span 1; }
+  .strip { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
+  .s1 { grid-column: span 2; grid-row: span 2; }
+  .s2, .s3, .s4, .s5 { grid-column: span 1; grid-row: span 1; }
   .form-card { padding: 26px 20px; }
-  .hero-ctas .btn { width: 100%; }
-  .visit-actions .btn { width: 100%; }
-  .sec-head { margin-bottom: 36px; }
-  .fac { flex-direction: column; gap: 4px; }
-  .fac-s { text-align: left; }
+  .hero-ctas .btn, .visit-actions .btn { width: 100%; }
+  .sec-head { margin-bottom: 38px; }
+  .faq-q { grid-template-columns: 34px 1fr 16px; gap: 10px; }
+  .faq-a p { padding-left: 44px; }
+  .lane-b .seq span { font-size: .95rem; }
 }
 
 /* ---------- Reduced motion ---------- */
@@ -619,13 +656,13 @@ section { position: relative; z-index: 1; }
   }
   .kl > i { transform: none !important; }
   .rise { opacity: 1 !important; transform: none !important; }
-  .ticker-track { animation: none !important; transform: none !important; }
-  .divider span { transform: none; width: 22%; animation: none !important; }
+  .lane-track { animation: none !important; transform: none !important; }
+  .rail .sweep i { transform: none; width: 28%; animation: none !important; }
   .steps-rail i { width: 100% !important; }
-  .pre-mark .frame { stroke-dashoffset: 0; }
-  .pre-mark .letters { opacity: 1; }
-  .pre-bar i { width: 100%; }
+  .pre-dial .arc { stroke-dashoffset: 56; }
+  .pre-dial .mono-mark { opacity: 1; }
   .done-check { stroke-dashoffset: 0; }
+  .caret { animation: none !important; }
 }
 </style>
 <noscript>
@@ -636,12 +673,12 @@ section { position: relative; z-index: 1; }
   .faq-a { max-height: none; }
   .faq-q .pl { display: none; }
   .steps-rail i { width: 100%; }
-  .divider span { transform: none; width: 22%; }
-  @media (max-width: 860px) {
+  .rail .sweep i { transform: none; width: 28%; }
+  @media (max-width: 880px) {
     .nav { position: static; }
     .nav-in { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
     .nav-links { position: static; opacity: 1; transform: none; pointer-events: auto; flex-direction: row; flex-wrap: wrap; gap: 16px; padding: 12px 0 0; background: transparent; border: none; }
-    .nav-links a { border-bottom: none; padding: 6px 0; font-size: .86rem; }
+    .nav-links a { border-bottom: none; padding: 6px 0; }
     .burger { display: none; }
     html { scroll-padding-top: 0; }
   }
@@ -652,42 +689,41 @@ section { position: relative; z-index: 1; }
 
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- gradient defs used by icon strokes -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="mgrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
   </defs>
 </svg>
 
-<!-- ===================== PRELOADER ===================== -->
+<!-- ===================== PRELOADER — torque dial ===================== -->
 <div class="pre" id="pre" role="status" aria-label="Loading">
-  <svg class="pre-mark" viewBox="0 0 168 96" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#22d3ee"/>
-      </linearGradient>
-    </defs>
-    <path class="frame" d="M40 14 H16 V82 H40 M128 14 H152 V82 H128"
-          fill="none" stroke="url(#pg)" stroke-width="3" stroke-linecap="square"/>
-    <text class="letters" x="84" y="64" text-anchor="middle"
-          font-family="Space Grotesk, sans-serif" font-weight="700" font-size="44"
-          letter-spacing="2" fill="url(#pg)">TE</text>
+  <svg class="pre-dial" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+    <circle class="ring" cx="60" cy="60" r="46"/>
+    <path class="arc" d="M60 14 A46 46 0 1 1 59.9 14"/>
+    <g class="mono-mark">
+      <path d="M60 34 V60 L78 70" fill="none" stroke="#22d3ee" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="60" y="92" text-anchor="middle" font-family="JetBrains Mono, monospace"
+            font-size="12" letter-spacing="4" fill="#7c3aed">TE</text>
+    </g>
   </svg>
-  <div class="pre-bar"><i></i></div>
-  <p class="pre-cap mono">loading campus&hellip;</p>
+  <p class="pre-read mono">Torque &middot; <b id="pre-pct">00</b>%</p>
 </div>
 
-<div class="gridbed" aria-hidden="true"></div>
+<div class="gridbed" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="nav" aria-label="Main">
   <div class="nav-in">
     <a class="brand" href="#top" aria-label="Torque Education — home">
-      <svg viewBox="0 0 168 96" aria-hidden="true" focusable="false">
-        <path d="M40 14 H16 V82 H40 M128 14 H152 V82 H128" fill="none" stroke="url(#mgrad)" stroke-width="5" stroke-linecap="square"/>
-        <text x="84" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="46" fill="#f4f4f6">TE</text>
+      <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="20" r="17" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.4"/>
+        <path d="M20 3 A17 17 0 0 1 34.7 28.5" fill="none" stroke="url(#mgrad)" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M20 11 V20 L26.5 23.5" fill="none" stroke="#f5f5f8" stroke-width="2" stroke-linecap="round"/>
       </svg>
       <span class="brand-txt">Torque Education<small>Circular Rd &middot; Gonda</small></span>
     </a>
@@ -703,6 +739,7 @@ section { position: relative; z-index: 1; }
       <i></i><i></i><i></i>
     </button>
   </div>
+  <div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
 </nav>
 
 <main id="main">
@@ -710,177 +747,158 @@ section { position: relative; z-index: 1; }
 <!-- ===================== 1. HERO ===================== -->
 <section class="hero" id="top">
   <div class="shell">
-    <div class="hero-grid">
+    <div class="ruler mono" aria-hidden="true">
+      <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
+      <span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span>
+    </div>
+
+    <p class="tag rise">JEE &middot; NEET &middot; Foundation &nbsp;&mdash;&nbsp; <b>Gonda, since 2014</b></p>
+
+    <h1 class="kin" id="hero-h1">
+      <span class="kl"><i>Learn it.</i></span>
+      <span class="kl"><i>Drill it.</i></span>
+      <span class="kl"><i><span class="grad-word">Crack it.</span></i></span>
+    </h1>
+
+    <div class="hero-body">
       <div>
-        <p class="eyebrow rise">JEE &middot; NEET &middot; Foundation &middot; Gonda</p>
-        <h1 class="kin">
-          <span class="kl"><i>Learn it.</i></span>
-          <span class="kl"><i>Drill it.</i></span>
-          <span class="kl"><i><span class="grad-word">Crack it.</span></i></span>
-        </h1>
-        <p class="hero-sub rise">Competitive-exam coaching on Circular Road since 2014 &mdash; a faculty of seven you can name, batches paced to the paper, and fees published before you ask.</p>
-        <div class="hero-ctas rise">
+        <p class="hero-sub rise d1">Competitive-exam coaching on Circular Road since 2014 &mdash; a faculty of seven you can name, batches paced to the paper, and the fee card published before you ask for it.</p>
+        <div class="hero-ctas rise d2">
           <a class="btn btn-grad" href="#admissions">Enquire now</a>
-          <a class="btn btn-ghost" href="#programs">Explore programs</a>
+          <a class="btn btn-ghost" href="#programs">See the tracks</a>
         </div>
-        <p class="hero-note rise mono">Mon&ndash;Sat &middot; <b>7:00 AM &ndash; 8:00 PM</b> &middot; walk-ins welcome</p>
       </div>
-      <div class="hero-shot-wrap rise">
-        <figure class="shot hero-shot">
+      <div class="rise d3">
+        <figure class="viewport">
           <img src="https://images.pexels.com/photos/10638115/pexels-photo-10638115.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
                alt="Students working together at computers in a bright modern lab"
                loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <figcaption class="viewport-cap mono"><span>Representative imagery</span><b>GND / 271001</b></figcaption>
         </figure>
-        <div class="chip">
-          <span class="k mono">Established</span>
-          <span class="v">2014 &middot; Gonda</span>
+      </div>
+    </div>
+
+    <dl class="spec rise d2">
+      <div><dt>Established</dt><dd>2014<small>Circular Road, Gonda</small></dd></div>
+      <div><dt>Hours</dt><dd>7:00 AM &ndash; 8:00 PM<small>Monday to Saturday</small></dd></div>
+      <div><dt>Tracks</dt><dd>Three<small>&#8377;18,000 &ndash; &#8377;50,000 / year</small></dd></div>
+      <div><dt>Faculty</dt><dd>Seven<small>Named, with subjects</small></dd></div>
+    </dl>
+  </div>
+
+  <!-- counter-running marquee lanes -->
+  <div class="lanes" aria-hidden="true">
+    <div class="lane lane-a">
+      <div class="lane-track">
+        <div class="seq">
+          <span>JEE Main &amp; Advanced</span><b>/</b><span>NEET UG</span><b>/</b><span>Class 10 Foundation</span><b>/</b><span>Class 12 Programme</span><b>/</b><span>Weekly tests</span><b>/</b><span>Daily doubt hours</span><b>/</b><span>Online student portal</span><b>/</b><span>Fees published openly</span><b>/</b>
+        </div>
+        <div class="seq">
+          <span>JEE Main &amp; Advanced</span><b>/</b><span>NEET UG</span><b>/</b><span>Class 10 Foundation</span><b>/</b><span>Class 12 Programme</span><b>/</b><span>Weekly tests</span><b>/</b><span>Daily doubt hours</span><b>/</b><span>Online student portal</span><b>/</b><span>Fees published openly</span><b>/</b>
+        </div>
+      </div>
+    </div>
+    <div class="lane lane-b">
+      <div class="lane-track">
+        <div class="seq">
+          <span>Physics</span><b>&#9656;</b><span>Chemistry</span><b>&#9656;</b><span>Mathematics</span><b>&#9656;</b><span>Biology</span><b>&#9656;</b><span>Science</span><b>&#9656;</b><span>English</span><b>&#9656;</b>
+        </div>
+        <div class="seq">
+          <span>Physics</span><b>&#9656;</b><span>Chemistry</span><b>&#9656;</b><span>Mathematics</span><b>&#9656;</b><span>Biology</span><b>&#9656;</b><span>Science</span><b>&#9656;</b><span>English</span><b>&#9656;</b>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <div class="ticker-seq">
-        <span>Since 2014</span><b>&#9656;</b>
-        <span>JEE Main &amp; Advanced</span><b>&#9656;</b>
-        <span>NEET UG</span><b>&#9656;</b>
-        <span>Class 10 Foundation</span><b>&#9656;</b>
-        <span>Class 12 Programme</span><b>&#9656;</b>
-        <span>Faculty of seven</span><b>&#9656;</b>
-        <span>Online student portal</span><b>&#9656;</b>
-        <span>Weekly tests</span><b>&#9656;</b>
-        <span>Doubt hours daily</span><b>&#9656;</b>
-        <span>Fees published openly</span><b>&#9656;</b>
-        <span>Circular Road, Gonda</span><b>&#9656;</b>
-      </div>
-      <div class="ticker-seq">
-        <span>Since 2014</span><b>&#9656;</b>
-        <span>JEE Main &amp; Advanced</span><b>&#9656;</b>
-        <span>NEET UG</span><b>&#9656;</b>
-        <span>Class 10 Foundation</span><b>&#9656;</b>
-        <span>Class 12 Programme</span><b>&#9656;</b>
-        <span>Faculty of seven</span><b>&#9656;</b>
-        <span>Online student portal</span><b>&#9656;</b>
-        <span>Weekly tests</span><b>&#9656;</b>
-        <span>Doubt hours daily</span><b>&#9656;</b>
-        <span>Fees published openly</span><b>&#9656;</b>
-        <span>Circular Road, Gonda</span><b>&#9656;</b>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- ===================== 2. TRUST STRIP ===================== -->
-<section class="trust" aria-label="What we prepare students for">
-  <div class="shell">
-    <div class="trust-row rise">
-      <span>Est. 2014</span>
-      <span>JEE Main &amp; Advanced</span>
-      <span>NEET UG</span>
-      <span>Class 10 Foundation</span>
-      <span>Class 12 Boards</span>
-      <span>Online student portal</span>
-      <span>Published fee card</span>
-    </div>
-  </div>
-</section>
-
-<div class="divider" aria-hidden="true"><span></span></div>
-
-<!-- ===================== 3. PROGRAMS ===================== -->
+<!-- ===================== 2. PROGRAMS ===================== -->
 <section class="band" id="programs">
   <div class="shell">
-    <div class="sec-head">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 01 &mdash; Programs</em><span class="sweep"><i></i></span><em>Fee card, stated</em></div>
+    <div class="sec-head" style="margin-top:46px">
       <div>
-        <p class="eyebrow rise">Programs</p>
+        <p class="tag rise">Three tracks</p>
         <h2 class="h2 kin">
           <span class="kl"><i>Pick a track.</i></span>
           <span class="kl"><i><span class="grad-word">Know the fee.</span></i></span>
         </h2>
       </div>
-      <p class="lede rise">Three published tracks, one standard of teaching. Every fee below is the institute&rsquo;s stated annual figure &mdash; ask the office about instalments.</p>
+      <p class="lede rise">One standard of teaching across all three. Every figure below is the institute&rsquo;s own published annual fee &mdash; ask the office about instalments.</p>
     </div>
 
-    <div class="prog-grid">
+    <div class="prog-grid" id="prog-grid">
       <a class="prog rise" href="#admissions">
-        <span class="idx mono">01 /</span>
+        <span class="brk brk-tl" aria-hidden="true"></span><span class="brk brk-br" aria-hidden="true"></span>
+        <span class="idx mono">TRACK 01</span>
         <h3>Foundation &mdash; Class 10</h3>
         <p>The year that decides whether Class 11 feels hard or feels familiar. Board syllabus taught with an entrance-exam spine underneath it.</p>
-        <div class="meta"><span class="fee">&#8377;18,000</span><span class="mono">/ 1 year</span></div>
+        <div class="meta"><span class="fee">&#8377;18,000</span><span class="per">/ 1 year</span></div>
         <span class="go">Ask about this batch
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
         </span>
       </a>
-      <a class="prog rise" href="#admissions">
-        <span class="idx mono">02 /</span>
+      <a class="prog rise d1" href="#admissions">
+        <span class="brk brk-tl" aria-hidden="true"></span><span class="brk brk-br" aria-hidden="true"></span>
+        <span class="idx mono">TRACK 02</span>
         <h3>Class 12 Programme</h3>
         <p>Boards and entrance preparation carried together, so neither one gets sacrificed for the other in the final months.</p>
-        <div class="meta"><span class="fee">&#8377;30,000</span><span class="mono">/ 1 year</span></div>
+        <div class="meta"><span class="fee">&#8377;30,000</span><span class="per">/ 1 year</span></div>
         <span class="go">Ask about this batch
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
         </span>
       </a>
-      <a class="prog rise" href="#admissions">
-        <span class="idx mono">03 /</span>
+      <a class="prog rise d2" href="#admissions">
+        <span class="brk brk-tl" aria-hidden="true"></span><span class="brk brk-br" aria-hidden="true"></span>
+        <span class="idx mono">TRACK 03</span>
         <h3>NEET &amp; JEE Foundation</h3>
         <p>The full two-year run from Class 11 to the exam hall, paced the way the paper actually demands rather than the way a syllabus deadline does.</p>
-        <div class="meta"><span class="fee">&#8377;50,000</span><span class="mono">/ 2 years</span></div>
+        <div class="meta"><span class="fee">&#8377;50,000</span><span class="per">/ 2 years</span></div>
         <span class="go">Ask about this batch
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
         </span>
       </a>
     </div>
+    <p class="prog-note rise">Fees as published by the institute &middot; morning and evening batches</p>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"><span></span></div>
-
-<!-- ===================== 4. METHOD ===================== -->
+<!-- ===================== 3. METHOD ===================== -->
 <section class="band band-raised" id="method">
   <div class="shell">
-    <div class="method-grid">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 02 &mdash; Method</em><span class="sweep"><i></i></span><em>How a batch runs</em></div>
+    <div class="method-grid" style="margin-top:56px">
       <div>
-        <p class="eyebrow rise">The method</p>
+        <p class="tag rise">The method</p>
         <h2 class="h2 kin">
           <span class="kl"><i>Concepts first.</i></span>
           <span class="kl"><i><span class="grad-word">Speed after.</span></i></span>
         </h2>
-        <p class="lede rise" style="margin-bottom:34px">A student sitting in Gonda writes the same paper as a student sitting in Kota. Everything below exists because that is treated as obvious here.</p>
+        <p class="lede rise" style="margin-bottom:36px">A student sitting in Gonda writes exactly the same paper as a student sitting anywhere else. Everything below exists because that is treated here as obvious.</p>
 
         <div class="rows">
           <div class="row rise">
-            <div class="row-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/><path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/></svg>
-            </div>
+            <span class="rn mono">M / 01</span>
             <div>
               <h3>Derivation before shortcut</h3>
               <p>Nobody moves on until the derivation lands. Tricks are taught after the reasoning, never instead of it.</p>
             </div>
           </div>
           <div class="row rise">
-            <div class="row-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 20v-6M6 20v-4M18 20v-9"/><path d="M3 20h18"/></svg>
-            </div>
+            <span class="rn mono">M / 02</span>
             <div>
               <h3>A test every week</h3>
               <p>Weekly tests on the week&rsquo;s syllabus, then a session where the wrong answers get taken apart properly.</p>
             </div>
           </div>
           <div class="row rise">
-            <div class="row-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
+            <span class="rn mono">M / 03</span>
             <div>
               <h3>Doubt hours, every day</h3>
               <p>The questions a student will not ask in a full room get asked one to one, at the teacher&rsquo;s desk.</p>
             </div>
           </div>
           <div class="row rise">
-            <div class="row-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9h5M7 13h8"/></svg>
-            </div>
+            <span class="rn mono">M / 04</span>
             <div>
               <h3>Notes and results in one login</h3>
               <p>The student portal carries schedules, material and test results, so a missed class is not a missed chapter.</p>
@@ -889,62 +907,59 @@ section { position: relative; z-index: 1; }
         </div>
       </div>
 
-      <figure class="shot method-shot rise">
-        <img src="https://images.pexels.com/photos/8471946/pexels-photo-8471946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-             alt="Two students using a microscope during a science session"
-             loading="lazy" decoding="async" onerror="this.style.display='none'">
-      </figure>
+      <div class="method-media rise d1">
+        <figure class="viewport">
+          <img src="https://images.pexels.com/photos/18870255/pexels-photo-18870255.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+               alt="A teacher working through mathematics at the board in a bright classroom"
+               loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <figcaption class="viewport-cap mono"><span>Representative imagery</span><b>Mon&ndash;Sat</b></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 5. STATS ===================== -->
+<!-- ===================== 4. TERMINAL STATS ===================== -->
 <section class="band band-inset" aria-label="Torque Education at a glance">
   <div class="shell">
-    <p class="eyebrow rise">By the numbers</p>
-    <div class="stats-grid rise" id="stats">
-      <div class="stat">
-        <div class="num"><span data-count="10">10</span>+</div>
-        <p class="lbl">Years teaching<br>in Gonda</p>
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 03 &mdash; Verified</em><span class="sweep"><i></i></span><em>Nothing self-reported</em></div>
+    <div class="stats-wrap" style="margin-top:56px">
+      <div class="term rise" id="stats">
+        <div class="term-bar">
+          <u></u><u></u><u></u>
+          <span>torque &mdash; verified.log</span>
+        </div>
+        <div class="term-body">
+          <p class="tline mono"><s>&gt;</s>query years_on_circular_road</p>
+          <div class="tout"><span class="num"><span data-count="10">10</span>+</span><span class="desc">Years teaching in Gonda</span></div>
+          <p class="tline mono"><s>&gt;</s>query faculty --named</p>
+          <div class="tout"><span class="num"><span data-count="7">7</span></span><span class="desc">Teachers, listed with subjects</span></div>
+          <p class="tline mono"><s>&gt;</s>query course_tracks --with-fees</p>
+          <div class="tout"><span class="num"><span data-count="3">3</span></span><span class="desc">Tracks, fees published openly</span></div>
+          <p class="tline mono"><s>&gt;</s>query founded</p>
+          <div class="tout"><span class="num">2014</span><span class="desc">Founder-led, still teaching</span></div>
+          <p class="tline mono" style="margin-top:18px"><s>&gt;</s><span class="caret" aria-hidden="true"></span></p>
+        </div>
       </div>
-      <div class="stat">
-        <div class="num"><span data-count="7">7</span></div>
-        <p class="lbl">Named faculty,<br>listed with subjects</p>
-      </div>
-      <div class="stat">
-        <div class="num"><span data-count="3">3</span></div>
-        <p class="lbl">Course tracks,<br>fees published</p>
-      </div>
-      <div class="stat">
-        <div class="num">2014</div>
-        <p class="lbl">Founded on<br>Circular Road</p>
-      </div>
-    </div>
-    <div class="qual rise">
-      <div>
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
-        <span>Batches kept small enough that a raised hand is actually seen</span>
-      </div>
-      <div>
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
-        <span>Morning and evening slots, so school hours are never the obstacle</span>
-      </div>
-      <div>
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>
-        <span>Fee card stated openly &mdash; no charges introduced later</span>
+
+      <div class="term-side rise d1">
+        <p class="tag" style="margin-bottom:2px">What the numbers do not say</p>
+        <p class="ck"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Batches kept small enough that a raised hand is actually seen.</span></p>
+        <p class="ck"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Morning and evening slots, so school hours are never the obstacle.</span></p>
+        <p class="ck"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>The fee card is stated up front &mdash; no charges introduced later.</span></p>
+        <p class="ck"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Selection counts are deliberately left off this page until they can be shown properly.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"><span></span></div>
-
-<!-- ===================== 6. CAMPUS MOSAIC ===================== -->
+<!-- ===================== 5. CAMPUS ===================== -->
 <section class="band" id="campus">
   <div class="shell">
-    <div class="sec-head">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 04 &mdash; Campus</em><span class="sweep"><i></i></span><em>Circular Road, Gonda</em></div>
+    <div class="sec-head" style="margin-top:46px">
       <div>
-        <p class="eyebrow rise">Life here</p>
+        <p class="tag rise">Life here</p>
         <h2 class="h2 kin">
           <span class="kl"><i>See the room</i></span>
           <span class="kl"><i><span class="grad-word">before you decide.</span></i></span>
@@ -953,45 +968,48 @@ section { position: relative; z-index: 1; }
       <p class="lede rise">Ten minutes at the back of a class tells a parent more than any website can. The door is open six days a week.</p>
     </div>
 
-    <div class="mosaic rise">
-      <figure class="m1">
-        <img src="https://images.pexels.com/photos/18870255/pexels-photo-18870255.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-             alt="A teacher working through mathematics at the board in a bright classroom"
-             loading="lazy" decoding="async" onerror="this.style.display='none'">
-      </figure>
-      <figure class="m2">
+    <div class="strip rise">
+      <figure class="s1">
         <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-             alt="Students studying together with books and notes"
+             alt="Students in uniform studying together at a school library"
              loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <figcaption>Study hours</figcaption>
       </figure>
-      <figure class="m3">
+      <figure class="s2">
         <img src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-             alt="Students running a science experiment with a microscope and flask"
+             alt="Two students running a science experiment with a microscope and flask"
              loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <figcaption>Practical work</figcaption>
       </figure>
-      <figure class="m4">
+      <figure class="s3">
+        <img src="https://images.pexels.com/photos/8471946/pexels-photo-8471946.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+             alt="Two students using a microscope during a science class"
+             loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <figcaption>Biology bench</figcaption>
+      </figure>
+      <figure class="s4">
         <img src="https://images.pexels.com/photos/30096344/pexels-photo-30096344.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
              alt="Sunlit academic corridor on a campus"
              loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <figcaption>Between batches</figcaption>
       </figure>
-      <figure class="m5">
+      <figure class="s5">
         <img src="https://images.pexels.com/photos/13019686/pexels-photo-13019686.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
              alt="Two graduates in caps and gowns smiling outdoors"
              loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <figcaption>The point of it</figcaption>
       </figure>
     </div>
-    <p class="mos-cap">Representative imagery</p>
+    <p class="strip-note">Representative imagery &middot; not photographs of the institute</p>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"><span></span></div>
-
-<!-- ===================== 7. FACULTY / PHILOSOPHY ===================== -->
+<!-- ===================== 6. FACULTY ===================== -->
 <section class="band band-raised" id="faculty">
   <div class="shell">
-    <p class="eyebrow rise">Who teaches</p>
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 05 &mdash; Faculty</em><span class="sweep"><i></i></span><em>Seven, named</em></div>
+    <p class="tag rise" style="margin-top:52px">Who teaches</p>
     <blockquote class="quote">
-      <span class="mark" aria-hidden="true">&ldquo;</span>
       <p class="kin">
         <span class="kl"><i>A student from Gonda sits the same paper</i></span>
         <span class="kl"><i>as a student from anywhere else.</i></span>
@@ -1000,26 +1018,26 @@ section { position: relative; z-index: 1; }
       <cite class="mono">Torque Education &middot; founded 2014 &middot; Dr. Shubham Pandey, Founder &amp; Director</cite>
     </blockquote>
 
-    <div class="faculty rise">
-      <div class="fac"><span class="fac-n">Er. A. M. Sir</span><span class="fac-s">Chemistry &middot; 9 yrs</span></div>
-      <div class="fac"><span class="fac-n">Er. Mohd. Shoeb</span><span class="fac-s">Physics &middot; 6 yrs</span></div>
-      <div class="fac"><span class="fac-n">Dr. Shubham Pandey</span><span class="fac-s">Biology, BAMS &middot; 6 yrs</span></div>
-      <div class="fac"><span class="fac-n">Er. Ravi Shankar Singh</span><span class="fac-s">Mathematics</span></div>
-      <div class="fac"><span class="fac-n">NMS Sir</span><span class="fac-s">Mathematics</span></div>
-      <div class="fac"><span class="fac-n">Shyam Sharma</span><span class="fac-s">Science</span></div>
-      <div class="fac"><span class="fac-n">Parul Srivastav</span><span class="fac-s">English</span></div>
-      <div class="fac"><span class="fac-n">Meet them first</span><span class="fac-s">Before you enrol</span></div>
+    <div class="roster rise">
+      <div class="rosrow"><span class="k mono">F/01</span><span class="n">Er. A. M. Sir</span><span class="s">Chemistry &middot; 9 yrs</span></div>
+      <div class="rosrow"><span class="k mono">F/02</span><span class="n">Er. Mohd. Shoeb</span><span class="s">Physics &middot; 6 yrs</span></div>
+      <div class="rosrow"><span class="k mono">F/03</span><span class="n">Dr. Shubham Pandey</span><span class="s">Biology, BAMS &middot; 6 yrs</span></div>
+      <div class="rosrow"><span class="k mono">F/04</span><span class="n">Er. Ravi Shankar Singh</span><span class="s">Mathematics</span></div>
+      <div class="rosrow"><span class="k mono">F/05</span><span class="n">NMS Sir</span><span class="s">Mathematics</span></div>
+      <div class="rosrow"><span class="k mono">F/06</span><span class="n">Shyam Sharma</span><span class="s">Science</span></div>
+      <div class="rosrow"><span class="k mono">F/07</span><span class="n">Parul Srivastav</span><span class="s">English</span></div>
     </div>
     <p class="fac-note">Faculty names, subjects and experience as published by the institute. You can meet the subject teacher before enrolling &mdash; ask at the office.</p>
   </div>
 </section>
 
-<!-- ===================== 8. ADMISSIONS ===================== -->
+<!-- ===================== 7. ADMISSIONS ===================== -->
 <section class="band" id="admissions">
   <div class="shell">
-    <div class="sec-head">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 06 &mdash; Admissions</em><span class="sweep"><i></i></span><em>Four steps</em></div>
+    <div class="sec-head" style="margin-top:46px">
       <div>
-        <p class="eyebrow rise">Admissions</p>
+        <p class="tag rise">Admissions</p>
         <h2 class="h2 kin">
           <span class="kl"><i>Start with</i></span>
           <span class="kl"><i><span class="grad-word">one message.</span></i></span>
@@ -1031,22 +1049,22 @@ section { position: relative; z-index: 1; }
     <div class="steps" id="steps">
       <div class="steps-rail" aria-hidden="true"><i></i></div>
       <div class="step">
-        <span class="n mono">01 /</span>
+        <span class="n mono">STEP 01</span>
         <h3>Send the enquiry</h3>
         <p>Name, the course you are asking about, and a number we can reach on WhatsApp.</p>
       </div>
       <div class="step">
-        <span class="n mono">02 /</span>
+        <span class="n mono">STEP 02</span>
         <h3>Talk it through</h3>
         <p>Fees, batch timings and seat availability come back to you &mdash; then we discuss the student&rsquo;s current level.</p>
       </div>
       <div class="step">
-        <span class="n mono">03 /</span>
+        <span class="n mono">STEP 03</span>
         <h3>Sit in on a class</h3>
         <p>Ask to observe the subject teacher before committing. Ten minutes at the back of the room decides most parents.</p>
       </div>
       <div class="step">
-        <span class="n mono">04 /</span>
+        <span class="n mono">STEP 04</span>
         <h3>Pick the batch</h3>
         <p>Morning or evening slot, form completed at the Circular Road office, fee paid, seat confirmed.</p>
       </div>
@@ -1054,9 +1072,10 @@ section { position: relative; z-index: 1; }
 
     <div class="form-wrap">
       <div class="form-card rise">
+        <span class="brk brk-tl" aria-hidden="true"></span><span class="brk brk-br" aria-hidden="true"></span>
         <form id="enq" novalidate>
           <h3>Batch enquiry</h3>
-          <p class="note">Takes thirty seconds. No documents needed yet.</p>
+          <p class="note mono">Thirty seconds &middot; no documents yet</p>
           <div class="field" id="f-name">
             <label for="i-name">Student&rsquo;s name</label>
             <input type="text" id="i-name" name="name" placeholder="Full name" autocomplete="name">
@@ -1078,8 +1097,8 @@ section { position: relative; z-index: 1; }
             <input type="tel" id="i-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel">
             <span class="err">Please enter a 10-digit mobile number.</span>
           </div>
-          <button type="submit" class="btn btn-grad">Let&rsquo;s talk &rarr;</button>
-          <p class="privacy">Concept demo &mdash; nothing is submitted or stored.</p>
+          <button type="submit" class="btn btn-grad">Send enquiry</button>
+          <p class="privacy">Concept demo &mdash; nothing is submitted or stored</p>
         </form>
 
         <div class="done" id="done" role="status" aria-live="polite">
@@ -1088,68 +1107,67 @@ section { position: relative; z-index: 1; }
           </div>
           <h3>Enquiry received.</h3>
           <p>This is how Torque Education would hear from a parent &mdash; the moment they decide, at any hour, without a call being missed.</p>
-          <p class="hint mono">Concept demo &middot; no data was sent anywhere.</p>
+          <p class="hint mono">Concept demo &middot; no data was sent anywhere</p>
         </div>
       </div>
 
-      <div class="rise">
-        <p class="eyebrow">What happens behind it</p>
-        <h3 style="font-size:1.3rem;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;color:var(--ink)">The enquiry does not sit in an inbox.</h3>
-        <p style="font-size:.94rem;margin-bottom:22px">In the working version, each of these fires on its own &mdash; the institute only steps in when a human answer is actually needed.</p>
+      <div class="rise d1">
+        <p class="tag">What happens behind it</p>
+        <h3 style="font-size:1.36rem;margin-bottom:10px;letter-spacing:-.025em">The enquiry does not sit in an inbox.</h3>
+        <p style="font-size:.95rem;margin-bottom:24px">In the working version each of these fires on its own &mdash; the institute steps in only when a human answer is actually needed.</p>
         <ul class="auto-list">
-          <li><span class="t">00s</span><div><strong>Auto-reply on WhatsApp</strong><span>Fee structure, batch timings and the Circular Road address, sent back within seconds &mdash; even at 10 in the night.</span></div></li>
-          <li><span class="t">D+1</span><div><strong>Demo-class slot &amp; reminder</strong><span>The parent picks a time from their phone and gets a nudge the morning of, so &ldquo;I&rsquo;ll come sometime&rdquo; turns into a visit.</span></div></li>
-          <li><span class="t">Wkly</span><div><strong>Test scores and attendance</strong><span>Parents hear the same day a child misses a class or slips in a weekly test, not at a term-end meeting.</span></div></li>
-          <li><span class="t">Due</span><div><strong>Fee &amp; instalment reminders</strong><span>Automatic due-date nudges for every parent &mdash; no month-end chasing, no awkward phone calls.</span></div></li>
+          <li><span class="t mono">T+00s</span><div><strong>Auto-reply on WhatsApp</strong><span>Fee structure, batch timings and the Circular Road address, sent back within seconds &mdash; even at 10 in the night.</span></div></li>
+          <li><span class="t mono">T+1d</span><div><strong>Demo-class slot &amp; reminder</strong><span>The parent picks a time from their phone and gets a nudge the morning of, so &ldquo;I&rsquo;ll come sometime&rdquo; turns into a visit.</span></div></li>
+          <li><span class="t mono">Wkly</span><div><strong>Test scores and attendance</strong><span>Parents hear the same day a child misses a class or slips in a weekly test, not at a term-end meeting.</span></div></li>
+          <li><span class="t mono">Due</span><div><strong>Fee &amp; instalment reminders</strong><span>Automatic due-date nudges for every parent &mdash; no month-end chasing, no awkward phone calls.</span></div></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"><span></span></div>
-
-<!-- ===================== 9. FAQ ===================== -->
+<!-- ===================== 8. FAQ ===================== -->
 <section class="band band-inset" id="faq">
   <div class="shell">
-    <p class="eyebrow rise">Questions parents ask</p>
-    <h2 class="h2 kin" style="margin-bottom:44px">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 07 &mdash; Questions</em><span class="sweep"><i></i></span><em>Answered plainly</em></div>
+    <p class="tag rise" style="margin-top:52px">Questions parents ask</p>
+    <h2 class="h2 kin" style="margin-bottom:46px">
       <span class="kl"><i>Answers, <span class="grad-word">straight.</span></i></span>
     </h2>
 
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1">What does each course cost?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1"><span class="qn mono">Q/01</span><span>What does each course cost?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
           <p>Foundation for Class 10 is &#8377;18,000 for one year. The Class 12 programme is &#8377;30,000 for one year. The two-year NEET &amp; JEE Foundation course is &#8377;50,000. Fees are published openly &mdash; ask at the office about instalment options.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">How do I enrol?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2"><span class="qn mono">Q/02</span><span>How do I enrol?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a2" role="region" aria-labelledby="q2">
           <p>Send an enquiry or walk in to the Circular Road office. We talk through the student&rsquo;s current level and which batch fits, then complete the form and fee. Ask about sitting in on a class before you decide.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3">Who actually teaches the classes?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3"><span class="qn mono">Q/03</span><span>Who actually teaches the classes?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a3" role="region" aria-labelledby="q3">
           <p>A faculty of seven, each named with their subject &mdash; engineers for Physics, Chemistry and Mathematics, a BAMS doctor for Biology, and dedicated Science and English teachers. The founder, Dr. Shubham Pandey, teaches Biology himself. You can meet the subject teacher before you enrol.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">How will I know how my child is doing?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4"><span class="qn mono">Q/04</span><span>How will I know how my child is doing?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
           <p>Weekly tests, a student portal with schedules and results, and WhatsApp updates for scores, attendance and fee due-dates. If a student starts slipping, you hear it before the exam, not after.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">What are the batch timings?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5"><span class="qn mono">Q/05</span><span>What are the batch timings?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
           <p>The institute runs 7:00 AM to 8:00 PM, Monday to Saturday, in morning and evening batches so school-going students can attend either side of their school day. Ask at the office which slot has seats for your course.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">Do you teach both NEET and JEE students together?<span class="pl" aria-hidden="true"></span></button>
+        <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6"><span class="qn mono">Q/06</span><span>Do you teach both NEET and JEE students together?</span><span class="pl" aria-hidden="true"></span></button>
         <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
           <p>The two-year programme covers the shared Class 11&ndash;12 foundation across Physics, Chemistry, Mathematics and Biology, with subject teachers for each. Which papers a student targets is settled with the faculty at the time of admission.</p>
         </div>
@@ -1158,12 +1176,13 @@ section { position: relative; z-index: 1; }
   </div>
 </section>
 
-<!-- ===================== 10. VISIT ===================== -->
+<!-- ===================== 9. VISIT ===================== -->
 <section class="band" id="visit">
   <div class="shell">
-    <div class="sec-head">
+    <div class="rail rise" aria-hidden="true"><em><b>//</b> 08 &mdash; Visit</em><span class="sweep"><i></i></span><em>In front of Karbala</em></div>
+    <div class="sec-head" style="margin-top:46px">
       <div>
-        <p class="eyebrow rise">Visit</p>
+        <p class="tag rise">Visit</p>
         <h2 class="h2 kin">
           <span class="kl"><i>Walk in.</i></span>
           <span class="kl"><i><span class="grad-word">Sit at the back.</span></i></span>
@@ -1187,7 +1206,7 @@ section { position: relative; z-index: 1; }
       </div>
     </div>
 
-    <div class="visit-actions rise">
+    <div class="visit-actions rise d1">
       <a class="btn btn-grad" href="https://www.google.com/maps/search/?api=1&amp;query=Torque%20Education%20Circular%20Road%20Gonda" target="_blank" rel="noopener noreferrer">Get directions</a>
       <a class="btn btn-ghost" href="https://wa.me/917524943464" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
     </div>
@@ -1201,9 +1220,10 @@ section { position: relative; z-index: 1; }
   <div class="shell">
     <div class="foot-top">
       <div class="foot-brand">
-        <svg viewBox="0 0 168 96" aria-hidden="true" focusable="false">
-          <path d="M40 14 H16 V82 H40 M128 14 H152 V82 H128" fill="none" stroke="url(#mgrad)" stroke-width="5" stroke-linecap="square"/>
-          <text x="84" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="46" fill="#f4f4f6">TE</text>
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.4"/>
+          <path d="M20 3 A17 17 0 0 1 34.7 28.5" fill="none" stroke="url(#mgrad)" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M20 11 V20 L26.5 23.5" fill="none" stroke="#f5f5f8" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <p>Torque Education &middot; Circular Road, Gonda &middot; Since 2014</p>
       </div>
@@ -1224,7 +1244,7 @@ section { position: relative; z-index: 1; }
         This is a design demonstration, not the official website of Torque Education. Photography is representative stock imagery.
         Course fees, timings, address and faculty details shown are as published by the institute.
       </p>
-      <p class="foot-copy">&copy; 2026 Inexorables Group &middot; Concept demonstration only.</p>
+      <p class="foot-copy">&copy; 2026 Inexorables Group &middot; Concept demonstration only</p>
     </div>
   </div>
 </footer>
@@ -1262,24 +1282,44 @@ section { position: relative; z-index: 1; }
   'use strict';
 
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
 
-  /* ---------- Preloader: hide on load, hard failsafe at 2.2s ---------- */
+  /* ---------- Preloader: dial + percentage, hard failsafe at 2.2s ---------- */
   var pre = document.getElementById('pre');
-  var dismissed = false;
+  var pct = document.getElementById('pre-pct');
+  var dismissed = false, tick = null, n = 0;
+  if (pct && !reduced) {
+    tick = window.setInterval(function () {
+      n = Math.min(99, n + Math.ceil(Math.random() * 11));
+      pct.textContent = n < 10 ? '0' + n : String(n);
+    }, 110);
+  }
   function dropPre() {
-    if (dismissed || !pre) return;
+    if (dismissed) return;
     dismissed = true;
+    if (tick) window.clearInterval(tick);
+    if (pct) pct.textContent = '100';
+    if (!pre) return;
     pre.classList.add('gone');
     window.setTimeout(function () { if (pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 600);
   }
-  window.addEventListener('load', function () { window.setTimeout(dropPre, reduced ? 0 : 500); });
+  window.addEventListener('load', function () { window.setTimeout(dropPre, reduced ? 0 : 480); });
   window.setTimeout(dropPre, 2200);
 
-  /* ---------- Nav ---------- */
+  /* ---------- Nav + scroll progress ---------- */
   var nav = document.getElementById('nav');
-  function stick() { if (nav) nav.classList.toggle('stuck', window.scrollY > 30); }
-  window.addEventListener('scroll', stick, { passive: true });
-  stick();
+  var bar = document.getElementById('scrollbar');
+  function onScroll() {
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if (nav) nav.classList.toggle('stuck', y > 30);
+    if (bar) {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
 
   var burger = document.getElementById('burger');
   var menu = document.getElementById('menu');
@@ -1293,14 +1333,12 @@ section { position: relative; z-index: 1; }
       var open = menu.classList.toggle('open');
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    Array.prototype.forEach.call(menu.querySelectorAll('a'), function (a) {
-      a.addEventListener('click', shut);
-    });
+    Array.prototype.forEach.call(menu.querySelectorAll('a'), function (a) { a.addEventListener('click', shut); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
   }
 
-  /* ---------- Signature: kinetic reveal + divider sweeps + step rail ---------- */
-  var watched = document.querySelectorAll('.kin, .rise, .divider, .steps');
+  /* ---------- Reveals: kinetic lines, rises, rail sweeps, step rail ---------- */
+  var watched = document.querySelectorAll('.kin, .rise, .rail, .steps');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -1308,36 +1346,55 @@ section { position: relative; z-index: 1; }
         en.target.classList.add('in');
         io.unobserve(en.target);
       });
-    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0.14, rootMargin: '0px 0px -7% 0px' });
     Array.prototype.forEach.call(watched, function (el) { io.observe(el); });
   } else {
     Array.prototype.forEach.call(watched, function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- Counters ---------- */
+  /* ---------- Signature interaction: the gradient rides the pointer ---------- */
+  var h1 = document.getElementById('hero-h1');
+  if (h1 && fine && !reduced) {
+    window.addEventListener('mousemove', function (e) {
+      var r = h1.getBoundingClientRect();
+      if (r.bottom < 0) return;
+      var p = Math.max(0, Math.min(1, (e.clientX - r.left) / (r.width || 1)));
+      h1.style.setProperty('--gp', (p * 100).toFixed(1) + '%');
+    }, { passive: true });
+  }
+
+  /* ---------- Hover physics: pointer-tracked glow on program cards ---------- */
+  if (fine && !reduced) {
+    Array.prototype.forEach.call(document.querySelectorAll('.prog'), function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      }, { passive: true });
+    });
+  }
+
+  /* ---------- Counters on the terminal readout ---------- */
   var statsBand = document.getElementById('stats');
   var counted = false;
   function runCounters() {
     if (counted || !statsBand) return;
     counted = true;
-    var nodes = statsBand.querySelectorAll('[data-count]');
-    Array.prototype.forEach.call(nodes, function (n) {
-      var target = parseInt(n.getAttribute('data-count'), 10);
+    Array.prototype.forEach.call(statsBand.querySelectorAll('[data-count]'), function (el) {
+      var target = parseInt(el.getAttribute('data-count'), 10);
       if (isNaN(target)) return;
       if (reduced || typeof window.countUp === 'undefined' || !window.countUp.CountUp) {
-        n.textContent = String(target);
+        el.textContent = String(target);
         return;
       }
-      var c = new window.countUp.CountUp(n, target, { duration: 1.6, useEasing: true });
-      if (!c.error) { n.textContent = '0'; c.start(); } else { n.textContent = String(target); }
+      var c = new window.countUp.CountUp(el, target, { duration: 1.5, useEasing: true });
+      if (!c.error) { el.textContent = '0'; c.start(); } else { el.textContent = String(target); }
     });
   }
   if (statsBand && 'IntersectionObserver' in window) {
     var io2 = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { runCounters(); io2.disconnect(); }
-      });
-    }, { threshold: 0.4 });
+      entries.forEach(function (en) { if (en.isIntersecting) { runCounters(); io2.disconnect(); } });
+    }, { threshold: 0.35 });
     io2.observe(statsBand);
   } else {
     runCounters();
@@ -1399,9 +1456,7 @@ section { position: relative; z-index: 1; }
   /* ---------- Demo badge dismiss ---------- */
   var badge = document.getElementById('badge');
   var badgeX = document.getElementById('badge-x');
-  if (badge && badgeX) {
-    badgeX.addEventListener('click', function () { badge.classList.add('hidden'); });
-  }
+  if (badge && badgeX) badgeX.addEventListener('click', function () { badge.classList.add('hidden'); });
 })();
 </script>
 

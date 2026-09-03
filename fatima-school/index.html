@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
 /* ==========================================================================
@@ -41,19 +41,47 @@
   --line-gold:      rgba(163, 132, 60, 0.42);
   --ease:           cubic-bezier(0.22, 0.61, 0.36, 1);
   --shadow-mat:     0 8px 30px rgba(23, 63, 44, 0.10);
+
+  /* No sans-serif anywhere on this page. Micro-type is letterspaced
+     Garamond capitals — the way an engraved certificate sets its labels. */
+  --micro:          'EB Garamond', Georgia, 'Times New Roman', serif;
 }
 
 html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body {
   font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-  font-size: 1.06rem;
-  line-height: 1.75;
+  font-size: 1.07rem;
+  line-height: 1.76;
   color: var(--ink);
-  background: var(--parchment);
+  background-color: var(--parchment);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+/* Laid-paper ground: faint chain lines, the way a sheet of hand-made
+   parchment catches raking light. Applied to every light-ground section. */
+.story, .pillars, .campus, .values, .admissions, .faq, .visit, .legacy {
+  position: relative;
+}
+.story::before, .pillars::before, .campus::before, .values::before,
+.admissions::before, .faq::before, .visit::before, .legacy::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(23,63,44,0.030) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(23,63,44,0.016) 0 1px, transparent 1px 27px);
+}
+.story > *, .pillars > *, .campus > *, .values > *,
+.admissions > *, .faq > *, .visit > *, .legacy > * { position: relative; z-index: 1; }
+
+/* Micro-type: engraved capitals */
+.caps {
+  font-family: var(--micro);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-variant-numeric: lining-nums;
 }
 
 h1, h2, h3, .display {
@@ -74,7 +102,7 @@ a { color: inherit; }
   position: absolute; left: -9999px; top: 0; z-index: 4000;
   background: var(--forest); color: var(--parchment);
   padding: 13px 22px; text-decoration: none;
-  font-family: 'Inter', sans-serif; font-size: 0.82rem;
+  font-family: var(--micro); font-size: 0.86rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase;
 }
 .skip-link:focus { left: 0; }
@@ -94,17 +122,22 @@ a { color: inherit; }
 @keyframes preFailsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 .preloader.done { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.6s ease, visibility 0s linear 0.6s; }
 
-.pre-mark { width: 132px; height: 132px; display: block; }
-.pre-ring-outer { stroke-dasharray: 340; stroke-dashoffset: 340; animation: preDraw 1.5s ease-out 0.15s forwards; }
-.pre-ring-inner { stroke-dasharray: 290; stroke-dashoffset: 290; animation: preDraw 1.5s ease-out 0.35s forwards; }
+.pre-mark {
+  width: 146px; height: 146px; display: block;
+  --crest-line: #c9a84c;
+  --crest-faint: rgba(201, 168, 76, 0.34);
+  --crest-ink: #c9a84c;
+}
+.pre-ring-outer { stroke-dasharray: 446; stroke-dashoffset: 446; animation: preDraw 1.6s var(--ease) 0.1s forwards; }
+.pre-ring-inner { stroke-dasharray: 418; stroke-dashoffset: 418; animation: preDraw 1.6s var(--ease) 0.3s forwards; }
 @keyframes preDraw { to { stroke-dashoffset: 0; } }
-.pre-initials { opacity: 0; animation: preFade 0.9s ease-out 0.75s forwards; }
+.pre-crest { opacity: 0; animation: preFade 1s ease-out 0.55s forwards; }
 @keyframes preFade { to { opacity: 1; } }
 
 .pre-estd {
-  margin-top: 20px;
-  font-family: 'Inter', sans-serif; font-size: 0.64rem; font-weight: 600;
-  letter-spacing: 0.42em; text-transform: uppercase;
+  margin-top: 22px;
+  font-family: var(--micro); font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.44em; text-transform: uppercase; text-indent: 0.44em;
   color: var(--gold-bright);
   opacity: 0; animation: preFade 0.9s ease-out 1s forwards;
 }
@@ -134,26 +167,42 @@ a { color: inherit; }
   border-bottom-color: var(--line);
   box-shadow: 0 1px 20px rgba(23, 63, 44, 0.06);
 }
+/* Reading rule — a single gold hairline drawn along the foot of the
+   masthead as the page is read. The only moving thing in the chrome. */
+.readrule {
+  position: absolute; left: 0; bottom: -1px; height: 1px;
+  width: 100%; transform: scaleX(0); transform-origin: left;
+  background: linear-gradient(90deg, rgba(163, 132, 60, 0.35), var(--gold));
+  pointer-events: none;
+}
 .nav-inner {
   max-width: 1160px; margin: 0 auto; padding: 0 26px;
   height: 76px; display: flex; align-items: center; justify-content: space-between;
 }
 .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
-.brand svg { width: 40px; height: 40px; flex-shrink: 0; }
+.brand svg {
+  width: 44px; height: 44px; flex-shrink: 0;
+  --crest-line: #a3843c;
+  --crest-faint: rgba(163, 132, 60, 0.42);
+  --crest-ink: #173f2c;
+  transition: transform 0.9s var(--ease);
+}
+.brand:hover svg { transform: rotate(15deg); }
 .brand-text {
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: 1.06rem; line-height: 1.18; color: var(--forest);
+  font-size: 1.1rem; line-height: 1.16; color: var(--forest);
+  max-width: 16ch;
 }
 .brand-text small {
-  display: block; margin-top: 3px;
-  font-family: 'Inter', sans-serif; font-weight: 500;
-  font-size: 0.575rem; letter-spacing: 0.26em; text-transform: uppercase;
-  color: var(--gold);
+  display: block; margin-top: 4px;
+  font-family: var(--micro); font-weight: 600;
+  font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); white-space: nowrap;
 }
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a {
-  font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 500;
-  letter-spacing: 0.17em; text-transform: uppercase;
+  font-family: var(--micro); font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.19em; text-transform: uppercase;
   color: var(--ink); text-decoration: none;
   padding: 10px 0; position: relative;
   transition: color 0.3s ease;
@@ -191,26 +240,45 @@ a { color: inherit; }
    3. TYPE SYSTEM — eyebrows, heads, rules
    -------------------------------------------------------------------------- */
 .eyebrow {
-  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.28em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 11px;
+  font-family: var(--micro); font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.3em; text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 16px;
 }
-.shead { text-align: center; margin-bottom: 54px; }
-.shead h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
-.shead .rule {
-  display: block; width: 48px; height: 1px; background: var(--gold);
-  margin: 22px auto 0;
-  transform: scaleX(0); transform-origin: center;
-  transition: transform 0.9s var(--ease) 0.18s;
+.eyebrow::before {
+  content: '\25C6'; font-size: 0.5em; letter-spacing: 0;
+  opacity: 0.85; transform: translateY(-0.12em);
 }
-.shead.in .rule { transform: scaleX(1); }
+.shead { text-align: center; margin-bottom: 54px; }
+.shead h2 { font-size: clamp(1.95rem, 4.1vw, 2.9rem); }
+
+/* Signature divider: two hairlines drawing outward from a gold lozenge */
+.shead .rule {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin: 24px auto 0; width: 190px; height: 9px;
+}
+.shead .rule::before, .shead .rule::after {
+  content: ''; flex: 1; height: 1px; background: var(--gold);
+  transform: scaleX(0); transition: transform 1s var(--ease) 0.2s;
+}
+.shead .rule::before { transform-origin: right; }
+.shead .rule::after  { transform-origin: left; }
+.shead .rule i {
+  width: 7px; height: 7px; background: var(--gold);
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.7s var(--ease) 0.05s;
+}
+.shead.in .rule::before, .shead.in .rule::after { transform: scaleX(1); }
+.shead.in .rule i { transform: rotate(45deg) scale(1); }
 .shead p.lede {
   max-width: 620px; margin: 20px auto 0;
   color: rgba(29, 42, 34, 0.78); font-size: 1.04rem;
 }
 .shead--left { text-align: left; }
-.shead--left .rule { margin-left: 0; margin-right: auto; transform-origin: left; }
+.shead--left .eyebrow { display: flex; }
+.shead--left .rule { margin-left: 0; margin-right: auto; width: 150px; }
+.shead--left .rule::before { flex: 0 0 14px; }
 .shead--left p.lede { margin-left: 0; }
 
 /* Engraved reveal */
@@ -220,15 +288,25 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    4. BUTTONS — quiet, ghost, letterspaced
    -------------------------------------------------------------------------- */
+/* Buttons are engraved plates: an outer rule, and an inner hairline
+   that draws itself in on hover. Nothing rounds, nothing lifts far. */
 .btn {
+  position: relative; isolation: isolate;
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  min-height: 52px; padding: 15px 30px;
-  font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 0.2em; text-transform: uppercase;
+  min-height: 54px; padding: 16px 34px;
+  font-family: var(--micro); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
   text-decoration: none; cursor: pointer; border-radius: 0;
   border: 1px solid var(--gold); background: transparent; color: var(--forest);
-  transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s ease;
+  transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.4s ease;
 }
+.btn::before {
+  content: ''; position: absolute; inset: 4px; z-index: -1;
+  border: 1px solid currentColor; opacity: 0;
+  transform: scale(1.035);
+  transition: opacity 0.45s var(--ease), transform 0.5s var(--ease);
+}
+.btn:hover::before, .btn:focus-visible::before { opacity: 0.42; transform: scale(1); }
 .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--cream); }
 .btn--filled { background: var(--gold); color: var(--cream); }
 .btn--filled:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
@@ -237,8 +315,8 @@ a { color: inherit; }
 
 .textlink {
   display: inline-flex; align-items: center; gap: 9px;
-  font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: var(--micro); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold-bright); text-decoration: none;
   border-bottom: 1px solid rgba(201, 168, 76, 0.5);
   padding-bottom: 5px;
@@ -251,27 +329,40 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    5. PHOTO FRAMES — cream mat, gold border, inner hairline
    -------------------------------------------------------------------------- */
+/* Matted, gold-framed photographs: cream mat, gold outer rule, a hairline
+   inside it, and an engraved gold pin at each corner of the mat. */
 .frame {
-  position: relative; background: var(--cream); padding: 10px;
-  border: 1px solid var(--gold); box-shadow: var(--shadow-mat);
+  position: relative; padding: 13px;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 19px 19px,               var(--gold) 0 1.9px, transparent 2.4px),
+    radial-gradient(circle at calc(100% - 19px) 19px,  var(--gold) 0 1.9px, transparent 2.4px),
+    radial-gradient(circle at 19px calc(100% - 19px),  var(--gold) 0 1.9px, transparent 2.4px),
+    radial-gradient(circle at calc(100% - 19px) calc(100% - 19px), var(--gold) 0 1.9px, transparent 2.4px);
+  background-repeat: no-repeat;
+  border: 1px solid var(--gold);
+  box-shadow: var(--shadow-mat);
+  transition: box-shadow 0.6s var(--ease), transform 0.6s var(--ease);
 }
+.frame:hover { box-shadow: 0 16px 44px rgba(23, 63, 44, 0.15); }
 .frame::after {
-  content: ''; position: absolute; inset: 16px; z-index: 3;
+  content: ''; position: absolute; inset: 19px; z-index: 3;
   border: 1px solid var(--line-gold); pointer-events: none;
 }
 .frame-inner {
   position: relative; overflow: hidden;
   background: linear-gradient(150deg, var(--parchment-deep), #ddd3bd);
+  box-shadow: inset 0 0 0 1px rgba(23, 63, 44, 0.10);
 }
 .frame img {
   display: block; width: 100%; height: 100%;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.02);
-  transition: transform 0.9s var(--ease), clip-path 1s var(--ease);
+  filter: saturate(0.88) contrast(1.03) sepia(0.07);
+  transition: transform 1s var(--ease), clip-path 1.15s var(--ease), filter 0.8s var(--ease);
   clip-path: inset(100% 0 0 0);
 }
 .frame.in img { clip-path: inset(0 0 0 0); }
-.frame:hover img { transform: scale(1.045); }
+.frame:hover img { transform: scale(1.04); filter: saturate(0.98) contrast(1.03) sepia(0.02); }
 
 /* --------------------------------------------------------------------------
    6. HERO
@@ -284,32 +375,77 @@ a { color: inherit; }
   background: linear-gradient(160deg, var(--forest), var(--forest-deep));
 }
 .hero-photo { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+/* One slow, single-direction Ken Burns push on the heritage building.
+   No carousel, no parallax layers — the building simply breathes. */
 .hero-photo img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 42%;
-  filter: saturate(0.9) contrast(1.03);
-  animation: kenBurns 14s ease-out forwards;
-  transform-origin: 52% 46%;
+  filter: saturate(0.86) contrast(1.02) sepia(0.09) brightness(1.06);
+  animation: kenBurns 26s linear forwards;
+  transform-origin: 54% 44%;
 }
-@keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.06); } }
+@keyframes kenBurns { from { transform: scale(1.005); } to { transform: scale(1.09); } }
 .hero-scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
-    linear-gradient(rgba(14, 42, 29, 0.25), rgba(14, 42, 29, 0.72)),
-    linear-gradient(90deg, rgba(14, 42, 29, 0.55) 0%, rgba(14, 42, 29, 0.12) 62%, transparent 100%);
+    linear-gradient(rgba(14, 42, 29, 0.12), rgba(14, 42, 29, 0.44) 46%, rgba(14, 42, 29, 0.88)),
+    linear-gradient(90deg, rgba(14, 42, 29, 0.62) 0%, rgba(14, 42, 29, 0.10) 62%, transparent 100%);
 }
-.hero .wrap { position: relative; z-index: 2; width: 100%; }
-.hero-copy { max-width: 720px; }
+
+/* Plate mark — the engraver's double rule around the whole image */
+.hero-plate {
+  position: absolute; inset: 26px; z-index: 2; pointer-events: none;
+  border: 1px solid rgba(201, 168, 76, 0.42);
+  clip-path: inset(0 100% 0 0);
+  animation: plateDraw 1.6s var(--ease) 0.5s forwards;
+}
+.hero-plate::after {
+  content: ''; position: absolute; inset: 5px;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+}
+@keyframes plateDraw { to { clip-path: inset(0 0 0 0); } }
+
+/* Vertical rubric down the right edge, set in engraved capitals */
+.hero-rubric {
+  position: absolute; right: 46px; top: 50%; z-index: 3;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-family: var(--micro); font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: rgba(201, 168, 76, 0.72);
+  opacity: 0; animation: preFade 1.2s ease 1.5s forwards;
+}
+
+.hero .wrap { position: relative; z-index: 3; width: 100%; }
+
+/* Hero entrance is pure CSS and the resting state is VISIBLE, so the copy
+   is readable even if the animation never runs. The stagger is built into
+   the keyframes rather than into delays — nothing is held hidden. */
+.hero-copy { max-width: 860px; }
+.hero-copy > * { animation: heroRise 1.1s var(--ease) both; }
+.hero-copy > h1 { animation-duration: 1.4s; }
+.hero-copy > .hero-sub { animation-duration: 1.7s; }
+.hero-copy > .hero-ctas { animation-duration: 2s; }
+@keyframes heroRise {
+  0%, 22% { opacity: 0; transform: translateY(22px); }
+  100%    { opacity: 1; transform: none; }
+}
 .hero .eyebrow { color: var(--gold-bright); }
 .hero h1 {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.2rem);
+  font-weight: 500;
   color: var(--parchment);
   margin-bottom: 22px;
-  text-shadow: 0 2px 30px rgba(14, 42, 29, 0.45);
+  text-shadow: 0 2px 34px rgba(14, 42, 29, 0.55);
+}
+.hero h1 em {
+  font-style: italic; font-weight: 400;
+  color: var(--gold-bright);
 }
 .hero-sub {
   font-size: clamp(1.02rem, 1.6vw, 1.2rem);
-  color: rgba(247, 243, 234, 0.86);
-  max-width: 560px; margin-bottom: 38px;
+  color: rgba(247, 243, 234, 0.9);
+  max-width: 585px; margin-bottom: 38px;
+  text-shadow: 0 1px 18px rgba(14, 42, 29, 0.6);
 }
 .hero-ctas { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
 .scroll-cue {
@@ -324,20 +460,27 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    7. LEGACY STRIP
    -------------------------------------------------------------------------- */
+/* Legacy strip — an engraved band of facts, gold lozenges between them,
+   ruled top and bottom in the school's own gold. */
 .legacy {
   background: var(--parchment-deep);
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  padding: 26px 0;
+  border-top: 1px solid var(--line-gold); border-bottom: 1px solid var(--line-gold);
+  padding: 24px 0;
+  box-shadow: inset 0 1px 0 rgba(251, 249, 243, 0.7), inset 0 -1px 0 rgba(251, 249, 243, 0.7);
 }
 .legacy-row {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 10px 20px;
-  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(29, 42, 34, 0.82);
+  gap: 8px 22px;
+  font-family: var(--micro); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.21em; text-transform: uppercase;
+  color: rgba(29, 42, 34, 0.86);
   text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
-.legacy-row .dia { color: var(--gold); font-size: 0.62rem; }
+.legacy-row .dia {
+  color: var(--gold); font-size: 0.55rem;
+  transform: translateY(-0.14em);
+}
 
 /* --------------------------------------------------------------------------
    8. STORY
@@ -348,6 +491,16 @@ a { color: inherit; }
   gap: 66px; align-items: center;
 }
 .story-copy p { margin-bottom: 20px; color: rgba(29, 42, 34, 0.86); }
+/* Drop capital on the opening paragraph — a prospectus, not a landing page */
+.story-copy p.opening::first-letter {
+  float: left;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600; font-size: 4.15rem; line-height: 0.78;
+  color: var(--forest);
+  margin: 0.1em 0.12em 0 0;
+  padding-right: 0.04em;
+  border-bottom: 1px solid var(--line-gold);
+}
 .pullquote {
   position: relative;
   margin-top: 34px; padding: 26px 0 0 46px;
@@ -366,7 +519,7 @@ a { color: inherit; }
 }
 .pullquote cite {
   display: block; margin-top: 14px; font-style: normal;
-  font-family: 'Inter', sans-serif; font-size: 0.66rem; font-weight: 600;
+  font-family: var(--micro); font-size: 0.78rem; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
 }
 .story .frame-inner { aspect-ratio: 4 / 5; }
@@ -378,25 +531,35 @@ a { color: inherit; }
 .pillar-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
 }
+/* Each pillar is a card cut from the same mat board as the picture frames:
+   an inner gold hairline that opens outward as you approach it. */
 .pillar {
   position: relative; background: var(--cream);
-  border: 1px solid var(--line); padding: 38px 30px 34px;
-  transition: transform 0.5s var(--ease), border-color 0.4s ease, box-shadow 0.5s ease;
+  border: 1px solid var(--line); padding: 46px 32px 36px;
+  transition: transform 0.55s var(--ease), border-color 0.45s ease, box-shadow 0.55s ease;
+}
+.pillar::before {
+  content: ''; position: absolute; inset: 14px; pointer-events: none;
+  border: 1px solid var(--line-gold);
+  opacity: 0.34;
+  transition: opacity 0.5s var(--ease), inset 0.55s var(--ease);
 }
 .pillar:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--gold);
-  box-shadow: 0 14px 34px rgba(23, 63, 44, 0.09);
+  box-shadow: 0 16px 38px rgba(23, 63, 44, 0.11);
 }
+.pillar:hover::before { opacity: 1; inset: 8px; }
 .pillar-num {
-  position: absolute; top: 20px; left: 30px;
-  font-family: 'Inter', sans-serif; font-size: 0.66rem; font-weight: 600;
-  letter-spacing: 0.2em; color: var(--gold);
+  position: absolute; top: 22px; left: 32px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.14em; color: var(--gold);
 }
-.pillar-icon { width: 34px; height: 34px; margin: 22px 0 20px; display: block; }
-.pillar-icon svg { width: 100%; height: 100%; stroke: var(--gold); fill: none; stroke-width: 1.2; }
-.pillar h3 { font-size: 1.38rem; margin-bottom: 9px; }
-.pillar p { font-size: 0.99rem; color: rgba(29, 42, 34, 0.78); line-height: 1.68; }
+.pillar-icon { width: 36px; height: 36px; margin: 26px 0 20px; display: block; }
+.pillar-icon svg { width: 100%; height: 100%; stroke: var(--gold); fill: none; stroke-width: 1.1; }
+.pillar h3 { font-size: 1.42rem; margin-bottom: 9px; }
+.pillar p { font-size: 1rem; color: rgba(29, 42, 34, 0.78); line-height: 1.68; }
 
 /* --------------------------------------------------------------------------
    10. CAMPUS MOSAIC
@@ -409,51 +572,76 @@ a { color: inherit; }
 .m3 { grid-column: span 2; } .m3 .frame-inner { aspect-ratio: 3 / 4; }
 .m4 { grid-column: span 2; } .m4 .frame-inner { aspect-ratio: 3 / 4; }
 .m5 { grid-column: span 2; } .m5 .frame-inner { aspect-ratio: 3 / 4; }
+.mosaic figcaption::before {
+  content: '\25C6'; color: var(--gold); font-size: 0.6em;
+  margin-right: 9px; letter-spacing: 0; vertical-align: 0.12em;
+}
 .mosaic figcaption {
-  margin-top: 11px;
-  font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 500;
+  margin-top: 12px;
+  font-family: var(--micro); font-size: 0.76rem; font-weight: 500;
   letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(29, 42, 34, 0.55);
+  color: rgba(29, 42, 34, 0.6);
 }
 .repnote {
   margin-top: 26px; text-align: center;
-  font-family: 'Inter', sans-serif; font-size: 0.62rem;
+  font-family: var(--micro); font-size: 0.74rem;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(29, 42, 34, 0.42);
+  color: rgba(29, 42, 34, 0.45);
 }
 
 /* --------------------------------------------------------------------------
    11. STATS BAND
    -------------------------------------------------------------------------- */
-.stats { background: var(--forest); padding: 84px 0; }
-.stats .eyebrow { color: var(--gold-bright); text-align: center; }
+.stats {
+  position: relative; background: var(--forest); padding: 84px 0;
+  border-top: 1px solid rgba(163, 132, 60, 0.5);
+  border-bottom: 1px solid rgba(163, 132, 60, 0.5);
+}
+.stats::before {
+  content: ''; position: absolute; inset: 12px; pointer-events: none;
+  border: 1px solid rgba(163, 132, 60, 0.16);
+}
+.stats .wrap { position: relative; }
+.stats .eyebrow { color: var(--gold-bright); }
+.stats-head { text-align: center; }
+.stats-head .eyebrow { display: inline-flex; }
 .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 40px; }
 .stat { text-align: center; padding: 12px 18px; border-left: 1px solid rgba(163, 132, 60, 0.35); }
 .stat:first-child { border-left: none; }
 .stat-num {
   display: block;
-  font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.05;
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.05;
   color: var(--parchment);
+  font-variant-numeric: lining-nums;
+}
+.stat-rule {
+  display: block; width: 22px; height: 1px; margin: 14px auto 0;
+  background: rgba(163, 132, 60, 0.8);
 }
 .stat-lab {
   display: block; margin-top: 12px;
-  font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 500;
+  font-family: var(--micro); font-size: 0.76rem; font-weight: 500;
   letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(247, 243, 234, 0.62); line-height: 1.7;
+  color: rgba(247, 243, 234, 0.66); line-height: 1.7;
 }
 
 /* --------------------------------------------------------------------------
    12. VALUES BAND (giant typographic)
    -------------------------------------------------------------------------- */
-.values { padding: 116px 0 104px; background: var(--parchment); text-align: center; overflow: hidden; }
+.values { padding: 116px 0 104px; background: var(--parchment); text-align: center; }
 .values .eyebrow { color: var(--gold); }
+/* Blind-embossed values: the words are pressed into the parchment
+   rather than printed on it — highlight above, shadow below. */
 .values-line {
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(3rem, 9vw, 7.5rem); line-height: 1.02;
-  color: var(--parchment-deep);
+  font-size: clamp(2.7rem, 8.2vw, 6.8rem); line-height: 1.2;
+  color: #e2d7bd;
   letter-spacing: -0.015em;
-  margin: 10px 0 26px;
+  margin: 14px 0 28px;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95),
+    0 -1px 1px rgba(94, 72, 28, 0.22);
 }
 .values-line span {
   display: inline-block;
@@ -462,9 +650,13 @@ a { color: inherit; }
 }
 .values-line.in span { opacity: 1; transform: none; }
 .values-note {
-  font-family: 'Inter', sans-serif; font-size: 0.66rem; font-weight: 500;
-  letter-spacing: 0.24em; text-transform: uppercase;
-  color: rgba(29, 42, 34, 0.5);
+  font-family: var(--micro); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(29, 42, 34, 0.52);
+}
+.values-note::before, .values-note::after {
+  content: '\2014'; color: var(--gold); opacity: 0.7;
+  margin: 0 14px; letter-spacing: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -480,15 +672,16 @@ a { color: inherit; }
 .step { position: relative; padding-bottom: 38px; }
 .step:last-child { padding-bottom: 0; }
 .step-num {
-  position: absolute; left: -44px; top: 0;
+  position: absolute; left: -44px; top: -1px;
   width: 25px; text-align: center;
   background: var(--parchment-deep);
-  font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600;
-  letter-spacing: 0.12em; color: var(--gold);
-  padding: 2px 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem; font-weight: 600;
+  letter-spacing: 0.1em; color: var(--gold);
+  padding: 3px 0;
 }
-.step h3 { font-size: 1.3rem; margin-bottom: 7px; }
-.step p { font-size: 0.99rem; color: rgba(29, 42, 34, 0.78); }
+.step h3 { font-size: 1.34rem; margin-bottom: 7px; }
+.step p { font-size: 1rem; color: rgba(29, 42, 34, 0.78); }
 
 .enquiry {
   background: var(--cream); border: 1px solid var(--gold);
@@ -506,7 +699,7 @@ a { color: inherit; }
 .field { margin-bottom: 18px; }
 .field label {
   display: block; margin-bottom: 7px;
-  font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 600;
+  font-family: var(--micro); font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
 }
 .field input, .field select {
@@ -529,8 +722,8 @@ a { color: inherit; }
 .enquiry .btn { width: 100%; margin-top: 8px; }
 .privacy {
   margin-top: 14px; text-align: center;
-  font-family: 'Inter', sans-serif; font-size: 0.64rem;
-  letter-spacing: 0.1em; color: rgba(29, 42, 34, 0.5);
+  font-family: var(--micro); font-size: 0.78rem;
+  letter-spacing: 0.1em; color: rgba(29, 42, 34, 0.52);
 }
 .esuccess { display: none; text-align: center; padding: 14px 0 6px; }
 .esuccess.show { display: block; animation: sIn 0.7s var(--ease); }
@@ -551,7 +744,7 @@ a { color: inherit; }
 .esuccess p { font-size: 0.99rem; color: rgba(29, 42, 34, 0.74); max-width: 380px; margin: 0 auto 8px; }
 .esuccess .hint {
   margin-top: 16px;
-  font-family: 'Inter', sans-serif; font-size: 0.63rem;
+  font-family: var(--micro); font-size: 0.76rem;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
 }
 
@@ -567,26 +760,43 @@ a { color: inherit; }
    14. FAQ
    -------------------------------------------------------------------------- */
 .faq { padding: 118px 0; background: var(--parchment); }
-.faq-list { max-width: 800px; margin: 0 auto; border-top: 1px solid var(--line); }
-.faq-item { border-bottom: 1px solid var(--line); }
+.faq-list { max-width: 800px; margin: 0 auto; border-top: 1px solid var(--line-gold); }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.45s var(--ease);
+}
+.faq-item.open { background: rgba(163, 132, 60, 0.045); }
 .faq-q {
-  width: 100%; min-height: 68px; padding: 22px 4px;
+  position: relative; width: 100%; min-height: 70px; padding: 23px 4px 23px 30px;
   display: flex; align-items: center; justify-content: space-between; gap: 22px;
   background: none; border: none; cursor: pointer; text-align: left;
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(1.15rem, 2.2vw, 1.4rem); color: var(--forest);
-  transition: color 0.3s ease;
+  font-size: clamp(1.18rem, 2.2vw, 1.45rem); color: var(--forest);
+  transition: color 0.3s ease, padding-left 0.45s var(--ease);
 }
-.faq-q:hover { color: var(--gold); }
+/* The marker is a gold lozenge that turns a quarter-turn, not a plus sign */
+.faq-q::before {
+  content: ''; position: absolute; left: 6px; top: 50%;
+  width: 7px; height: 7px; margin-top: -3.5px;
+  border: 1px solid var(--gold); background: transparent;
+  transform: rotate(45deg);
+  transition: transform 0.55s var(--ease), background 0.45s ease;
+}
+.faq-q[aria-expanded="true"]::before { transform: rotate(135deg); background: var(--gold); }
+.faq-q:hover { color: var(--gold); padding-left: 36px; }
 .faq-q i {
   flex-shrink: 0; font-style: normal;
-  font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.5rem; line-height: 1;
+  font-family: 'Cormorant Garamond', serif; font-weight: 400;
+  font-size: 1.6rem; line-height: 1;
   color: var(--gold);
-  transition: transform 0.45s var(--ease);
+  transition: transform 0.5s var(--ease), opacity 0.4s ease;
 }
-.faq-q[aria-expanded="true"] i { transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease); }
-.faq-a p { padding: 0 4px 26px; color: rgba(29, 42, 34, 0.82); max-width: 700px; }
+.faq-q[aria-expanded="true"] i { transform: rotate(45deg); opacity: 0.55; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.55s var(--ease); }
+.faq-a p {
+  padding: 0 4px 28px 30px; color: rgba(29, 42, 34, 0.82); max-width: 700px;
+  border-left: 1px solid transparent;
+}
 
 /* --------------------------------------------------------------------------
    15. VISIT
@@ -596,11 +806,11 @@ a { color: inherit; }
 .visit-cards { display: grid; gap: 2px; background: var(--line); border: 1px solid var(--line); }
 .vcard { background: var(--cream); padding: 26px 28px; }
 .vcard h3 {
-  font-family: 'Inter', sans-serif; font-size: 0.63rem; font-weight: 600;
+  font-family: var(--micro); font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
   margin-bottom: 9px;
 }
-.vcard p { font-size: 1.04rem; color: var(--forest); }
+.vcard p { font-size: 1.06rem; color: var(--forest); }
 .vcard p span { display: block; font-size: 0.96rem; color: rgba(29, 42, 34, 0.7); margin-top: 3px; }
 .vcard a { color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--line-gold); }
 .vcard a:hover { color: var(--gold); }
@@ -610,12 +820,25 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    16. FOOTER
    -------------------------------------------------------------------------- */
-.footer { background: var(--forest-deep); color: rgba(247, 243, 234, 0.72); padding: 66px 0 42px; text-align: center; }
-.footer-mark { width: 52px; height: 52px; margin: 0 auto 18px; display: block; }
-.footer-name { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.36rem; color: var(--parchment); }
+.footer {
+  position: relative;
+  background: var(--forest-deep); color: rgba(247, 243, 234, 0.72);
+  padding: 70px 0 44px; text-align: center;
+  border-top: 1px solid rgba(163, 132, 60, 0.45);
+}
+.footer-mark {
+  width: 62px; height: 62px; margin: 0 auto 20px; display: block;
+  --crest-line: #a3843c;
+  --crest-faint: rgba(163, 132, 60, 0.4);
+  --crest-ink: #c9a84c;
+}
+.footer-name {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.5rem; color: var(--parchment); letter-spacing: 0.012em;
+}
 .footer-meta {
-  margin-top: 8px;
-  font-family: 'Inter', sans-serif; font-size: 0.64rem; font-weight: 500;
+  margin-top: 10px;
+  font-family: var(--micro); font-size: 0.76rem; font-weight: 500;
   letter-spacing: 0.22em; text-transform: uppercase; color: rgba(201, 168, 76, 0.85);
   line-height: 2;
 }
@@ -623,9 +846,9 @@ a { color: inherit; }
 .footer-hr { width: 100%; max-width: 640px; height: 1px; background: rgba(163, 132, 60, 0.3); margin: 30px auto; }
 .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; }
 .footer-nav a {
-  font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 500;
+  font-family: var(--micro); font-size: 0.78rem; font-weight: 500;
   letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(247, 243, 234, 0.6); text-decoration: none; padding: 6px 0;
+  color: rgba(247, 243, 234, 0.62); text-decoration: none; padding: 6px 0;
   transition: color 0.3s ease;
 }
 .footer-nav a:hover { color: var(--gold-bright); }
@@ -636,8 +859,8 @@ a { color: inherit; }
 .footer-demo a { color: rgba(201, 168, 76, 0.9); text-decoration: none; }
 .footer-copy {
   margin-top: 12px;
-  font-family: 'Inter', sans-serif; font-size: 0.62rem;
-  letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247, 243, 234, 0.34);
+  font-family: var(--micro); font-size: 0.74rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247, 243, 234, 0.36);
 }
 
 /* --------------------------------------------------------------------------
@@ -661,7 +884,7 @@ a { color: inherit; }
   display: flex; align-items: center; gap: 8px;
   padding: 8px 8px 8px 15px;
   background: var(--cream); border: 1px solid var(--gold);
-  font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 600;
+  font-family: var(--micro); font-size: 0.75rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--forest);
 }
 .demo-badge button {
@@ -682,7 +905,7 @@ a { color: inherit; }
   flex: 1; min-height: 58px;
   display: flex; align-items: center; justify-content: center; gap: 8px;
   text-decoration: none;
-  font-family: 'Inter', sans-serif; font-size: 0.64rem; font-weight: 600;
+  font-family: var(--micro); font-size: 0.78rem; font-weight: 600;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--gold-bright);
 }
@@ -722,11 +945,19 @@ a { color: inherit; }
   .nav-links a { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 0.76rem; }
   .nav-links a.nav-cta { margin-top: 16px; text-align: center; border: 1px solid var(--gold); }
   .burger { display: flex; }
-  .hero { align-items: center; text-align: center; padding: 140px 0 110px; }
-  .hero-copy { margin: 0 auto; }
-  .hero-sub { margin-left: auto; margin-right: auto; }
-  .hero-ctas { justify-content: center; }
-  .hero-scrim { background: linear-gradient(rgba(14, 42, 29, 0.32), rgba(14, 42, 29, 0.76)); }
+  .hero { padding: 130px 0 84px; }
+  .hero h1 { font-size: clamp(2.3rem, 8.2vw, 3.4rem); }
+  .hero-scrim {
+    background: linear-gradient(rgba(14, 42, 29, 0.28), rgba(14, 42, 29, 0.62) 50%, rgba(14, 42, 29, 0.88));
+  }
+}
+@media (max-width: 1120px) {
+  .hero-rubric { display: none; }
+}
+@media (max-width: 760px) {
+  .hero-plate { inset: 14px; }
+  .hero h1 br { display: none; }
+  .hero h1 em { display: block; }
 }
 @media (max-width: 760px) {
   .sticky-bar { display: flex; }
@@ -777,9 +1008,13 @@ a { color: inherit; }
   .values-line span { opacity: 1; transform: none; }
   .hero-photo img { animation: none; transform: none; }
   .scroll-cue { animation: none; opacity: 0.7; }
+  .hero-copy > * { animation: none; opacity: 1; transform: none; }
   .scheck { stroke-dashoffset: 0; }
   .pre-ring-outer, .pre-ring-inner { stroke-dashoffset: 0; }
-  .pre-initials, .pre-estd { opacity: 1; }
+  .pre-crest, .pre-estd, .hero-rubric { opacity: 1; }
+  .hero-plate { clip-path: none; }
+  .shead .rule::before, .shead .rule::after { transform: scaleX(1); }
+  .shead .rule i { transform: rotate(45deg) scale(1); }
 }
 </style>
 
@@ -791,6 +1026,9 @@ a { color: inherit; }
   .shead .rule { transform: scaleX(1) !important; }
   .frame img { clip-path: inset(0 0 0 0) !important; }
   .values-line span { opacity: 1 !important; transform: none !important; }
+  .hero-copy > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .hero-plate { clip-path: none !important; }
+  .hero-rubric, .pre-estd { opacity: 1 !important; }
   .faq-a { max-height: none; }
   .faq-q i { display: none; }
   .totop, .demo-badge button { display: none; }
@@ -808,16 +1046,75 @@ a { color: inherit; }
 
 <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- ===================== CREST SYMBOL =====================
+     One engraved double-ring crest, defined once and used by the nav,
+     the footer and the sticky bar. Colours are inherited through
+     custom properties so a single mark serves light and dark grounds. -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="crest" viewBox="0 0 100 100">
+    <g fill="none" stroke-linecap="round">
+      <circle cx="50" cy="50" r="47.2" style="stroke:var(--crest-line,#a3843c)" stroke-width="1.1"/>
+      <circle cx="50" cy="50" r="43.4" style="stroke:var(--crest-faint,rgba(163,132,60,0.42))" stroke-width="0.6"/>
+      <circle cx="50" cy="50" r="33.4" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85"/>
+      <circle cx="50" cy="50" r="30.6" style="stroke:var(--crest-faint,rgba(163,132,60,0.42))" stroke-width="0.5"/>
+      <path d="M50.00 15.40 L50.00 9.00" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M56.32 14.15 L56.98 10.41" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M62.45 15.80 L63.75 12.22" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M67.30 20.04 L70.50 14.49" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M73.40 22.12 L75.84 19.21" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M77.88 26.60 L80.79 24.16" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M79.96 32.70 L85.51 29.50" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M84.20 37.55 L87.78 36.25" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M85.85 43.68 L89.59 43.02" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M84.60 50.00 L91.00 50.00" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M85.85 56.32 L89.59 56.98" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M84.20 62.45 L87.78 63.75" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M79.96 67.30 L85.51 70.50" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M77.88 73.40 L80.79 75.84" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M73.40 77.88 L75.84 80.79" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M67.30 79.96 L70.50 85.51" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M62.45 84.20 L63.75 87.78" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M56.32 85.85 L56.98 89.59" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M50.00 84.60 L50.00 91.00" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M43.68 85.85 L43.02 89.59" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M37.55 84.20 L36.25 87.78" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M32.70 79.96 L29.50 85.51" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M26.60 77.88 L24.16 80.79" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M22.12 73.40 L19.21 75.84" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M20.04 67.30 L14.49 70.50" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M15.80 62.45 L12.22 63.75" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M14.15 56.32 L10.41 56.98" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M15.40 50.00 L9.00 50.00" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M14.15 43.68 L10.41 43.02" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M15.80 37.55 L12.22 36.25" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M20.04 32.70 L14.49 29.50" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M22.12 26.60 L19.21 24.16" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M26.60 22.12 L24.16 19.21" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M32.70 20.04 L29.50 14.49" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.85" opacity="0.90"/>
+      <path d="M37.55 15.80 L36.25 12.22" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+      <path d="M43.68 14.15 L43.02 10.41" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.50" opacity="0.50"/>
+    </g>
+    <g style="fill:var(--crest-line,#a3843c)">
+      <path d="M50 2.2 L53.2 5.4 L50 8.6 L46.8 5.4 Z"/>
+      <path d="M50 91.4 L53.2 94.6 L50 97.8 L46.8 94.6 Z"/>
+    </g>
+    <text x="50" y="61.5" text-anchor="middle"
+          font-family="Cormorant Garamond, Georgia, serif" font-size="34" font-weight="600"
+          letter-spacing="1.5" style="fill:var(--crest-ink,#173f2c)">FS</text>
+    <path d="M38 68.5 H62" style="stroke:var(--crest-line,#a3843c)" stroke-width="0.7" opacity="0.75"/>
+  </symbol>
+</svg>
+
 <!-- ===================== PRELOADER ===================== -->
 <div class="preloader" id="preloader" role="status" aria-label="Loading">
-  <svg class="pre-mark" viewBox="0 0 132 132" aria-hidden="true" focusable="false">
-    <circle class="pre-ring-outer" cx="66" cy="66" r="54" fill="none" stroke="#c9a84c" stroke-width="1.4"/>
-    <circle class="pre-ring-inner" cx="66" cy="66" r="46" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.9"/>
-    <text class="pre-initials" x="66" y="82" text-anchor="middle"
-          font-family="Cormorant Garamond, Georgia, serif" font-size="46" font-weight="600" fill="#c9a84c"
-          letter-spacing="2">FS</text>
+  <svg class="pre-mark" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <circle class="pre-ring-outer" cx="75" cy="75" r="71" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.55"
+            transform="rotate(-90 75 75)"/>
+    <circle class="pre-ring-inner" cx="75" cy="75" r="66.5" fill="none" stroke="rgba(201,168,76,0.30)" stroke-width="0.6"
+            transform="rotate(-90 75 75)"/>
+    <use class="pre-crest" href="#crest" x="19" y="19" width="112" height="112"/>
   </svg>
-  <p class="pre-estd">Estd 1976</p>
+  <p class="pre-estd">Estd &middot; MCMLXXVI</p>
   <div class="pre-bar" aria-hidden="true"><span></span></div>
 </div>
 
@@ -825,13 +1122,8 @@ a { color: inherit; }
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a class="brand" href="#top" aria-label="Fatima Senior Secondary School — top of page">
-      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-        <circle cx="32" cy="32" r="28" fill="none" stroke="#a3843c" stroke-width="1.3"/>
-        <circle cx="32" cy="32" r="23" fill="none" stroke="rgba(163,132,60,0.45)" stroke-width="0.8"/>
-        <text x="32" y="41" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif"
-              font-size="23" font-weight="600" fill="#173f2c">FS</text>
-      </svg>
-      <span class="brand-text">Fatima Senior Secondary School<small>Gonda &middot; Since 1976</small></span>
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#crest"/></svg>
+      <span class="brand-text">Fatima Senior Secondary School<small>Gonda &middot; Estd. 1976</small></span>
     </a>
     <div class="nav-links" id="navmenu">
       <a href="#story">Our Story</a>
@@ -844,6 +1136,7 @@ a { color: inherit; }
       <span></span><span></span><span></span>
     </button>
   </div>
+  <span class="readrule" id="readrule" aria-hidden="true"></span>
 </nav>
 
 <main id="main">
@@ -856,10 +1149,12 @@ a { color: inherit; }
          loading="lazy" decoding="async" onerror="this.style.display='none'">
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-plate" aria-hidden="true"></div>
+  <p class="hero-rubric" aria-hidden="true">Circular Road &middot; Bargaon &middot; Gonda</p>
   <div class="wrap">
     <div class="hero-copy">
       <p class="eyebrow">Estd. MCMLXXVI &middot; Gonda</p>
-      <h1>Half a century of learning on Circular Road.</h1>
+      <h1>Half a century of learning<br><em>on Circular Road.</em></h1>
       <p class="hero-sub">Founded in 1976 and run by the Diocese of Lucknow, Fatima Senior Secondary School teaches from the junior classes to Class XII on an English-medium CBSE curriculum.</p>
       <div class="hero-ctas">
         <a class="btn btn--onDark" href="#visit">Book a Campus Visit</a>
@@ -899,9 +1194,9 @@ a { color: inherit; }
         <div class="shead shead--left reveal">
           <p class="eyebrow">Our Story</p>
           <h2>Fifty years, one address, one standard.</h2>
-          <span class="rule"></span>
+          <span class="rule" aria-hidden="true"><i></i></span>
         </div>
-        <p class="reveal">Fatima Senior Secondary School has stood on Circular Road, Bargaon, since 1976. It is a co-educational, English-medium school affiliated to the Central Board of Secondary Education under affiliation number 2130053, and it is run by the Catholic Diocese of Lucknow &mdash; an institution, not a proprietorship.</p>
+        <p class="reveal opening">Fatima Senior Secondary School has stood on Circular Road, Bargaon, since 1976. It is a co-educational, English-medium school affiliated to the Central Board of Secondary Education under affiliation number 2130053, and it is run by the Catholic Diocese of Lucknow &mdash; an institution, not a proprietorship.</p>
         <p class="reveal">Children join in the junior classes and stay through to the board examinations of Class XII. Mind, body and spirit are held together here, never one at the cost of the others; discipline comes from respect rather than fear, and results follow because the fundamentals were never rushed.</p>
 
         <div class="pullquote reveal">
@@ -920,7 +1215,7 @@ a { color: inherit; }
     <div class="shead reveal">
       <p class="eyebrow">What We Stand For</p>
       <h2>The measure of a Fatima education.</h2>
-      <span class="rule"></span>
+      <span class="rule" aria-hidden="true"><i></i></span>
       <p class="lede">One campus, from the first day of school to the last board paper &mdash; with the rooms, grounds and people that a full education asks for.</p>
     </div>
 
@@ -1010,7 +1305,7 @@ a { color: inherit; }
     <div class="shead reveal">
       <p class="eyebrow">Life on Campus</p>
       <h2>Inside the gates.</h2>
-      <span class="rule"></span>
+      <span class="rule" aria-hidden="true"><i></i></span>
       <p class="lede">Assembly on the ground, the reading room, the corridors between periods, and the mornings the whole school turns out in its best.</p>
     </div>
 
@@ -1079,22 +1374,26 @@ a { color: inherit; }
 <!-- ===================== STATS BAND ===================== -->
 <section class="stats" aria-label="The school in numbers">
   <div class="wrap">
-    <p class="eyebrow">At a Glance</p>
+    <div class="stats-head"><p class="eyebrow">At a Glance</p></div>
     <div class="stat-grid">
       <div class="stat">
         <span class="stat-num" data-count="1976" data-start="1900">1976</span>
+        <span class="stat-rule" aria-hidden="true"></span>
         <span class="stat-lab">Established &mdash; teaching Gonda ever since</span>
       </div>
       <div class="stat">
         <span class="stat-num" data-count="36543" data-sep="1">36,543</span>
+        <span class="stat-rule" aria-hidden="true"></span>
         <span class="stat-lab">Square metres of campus</span>
       </div>
       <div class="stat">
         <span class="stat-num" data-count="4">4</span>
+        <span class="stat-rule" aria-hidden="true"></span>
         <span class="stat-lab">School vans, each with an attendant</span>
       </div>
       <div class="stat">
         <span class="stat-num">LKG&ndash;XII</span>
+        <span class="stat-rule" aria-hidden="true"></span>
         <span class="stat-lab">One campus, one unbroken journey</span>
       </div>
     </div>
@@ -1116,7 +1415,7 @@ a { color: inherit; }
     <div class="shead reveal">
       <p class="eyebrow">Joining Us</p>
       <h2>How admission works.</h2>
-      <span class="rule"></span>
+      <span class="rule" aria-hidden="true"><i></i></span>
       <p class="lede">Registration for the junior classes runs on a published schedule each year; the higher classes are considered as seats allow.</p>
     </div>
 
@@ -1201,7 +1500,7 @@ a { color: inherit; }
     <div class="shead reveal">
       <p class="eyebrow">Questions Parents Ask</p>
       <h2>Answers, plainly given.</h2>
-      <span class="rule"></span>
+      <span class="rule" aria-hidden="true"><i></i></span>
     </div>
 
     <div class="faq-list">
@@ -1252,7 +1551,7 @@ a { color: inherit; }
         <div class="shead shead--left reveal">
           <p class="eyebrow">Visit Us</p>
           <h2>Come and see the campus.</h2>
-          <span class="rule"></span>
+          <span class="rule" aria-hidden="true"><i></i></span>
           <p class="lede">Ten minutes on the Circular Road campus will tell you more than any website. The office is open on working days.</p>
         </div>
 
@@ -1295,12 +1594,7 @@ a { color: inherit; }
 <!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="wrap">
-    <svg class="footer-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-      <circle cx="32" cy="32" r="28" fill="none" stroke="#a3843c" stroke-width="1.3"/>
-      <circle cx="32" cy="32" r="23" fill="none" stroke="rgba(163,132,60,0.45)" stroke-width="0.8"/>
-      <text x="32" y="41" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif"
-            font-size="23" font-weight="600" fill="#c9a84c">FS</text>
-    </svg>
+    <svg class="footer-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#crest"/></svg>
     <p class="footer-name">Fatima Senior Secondary School</p>
     <p class="footer-meta">
       Circular Road, Bargaon, Gonda, Uttar Pradesh 271002<br>
@@ -1386,11 +1680,18 @@ a { color: inherit; }
   var burger = document.getElementById('burger');
   var menu = document.getElementById('navmenu');
   var totop = document.getElementById('totop');
+  var readrule = document.getElementById('readrule');
 
   function onScroll() {
     var y = window.pageYOffset || document.documentElement.scrollTop;
     if (nav) nav.classList.toggle('solid', y > 40);
     if (totop) totop.classList.toggle('on', y > 700);
+    if (readrule) {
+      var doc = document.documentElement;
+      var span = (doc.scrollHeight - window.innerHeight) || 1;
+      var p = Math.max(0, Math.min(1, y / span));
+      readrule.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -1483,6 +1784,7 @@ a { color: inherit; }
       var start = parseInt(node.getAttribute('data-start') || '0', 10);
       var sep = node.getAttribute('data-sep') ? ',' : '';
       if (reduce || !CU) return; /* final value is already in the markup */
+      var final = node.textContent;
       var run = function () {
         try {
           var c = new CU(node, target, {
@@ -1490,6 +1792,11 @@ a { color: inherit; }
           });
           if (!c.error) c.start();
         } catch (err) { /* markup value stands */ }
+        /* If rAF is throttled (backgrounded tab), the count can stall part-way.
+           Restore the true figure rather than leave a wrong number on screen. */
+        setTimeout(function () {
+          if (node.textContent !== final) node.textContent = final;
+        }, 3000);
       };
       if (!('IntersectionObserver' in window)) { run(); return; }
       var sio = new IntersectionObserver(function (entries) {
@@ -1499,20 +1806,24 @@ a { color: inherit; }
     });
   }
 
-  /* ---------------- Hero entrance (GSAP if present) ---------------- */
-  function heroIntro() {
-    if (reduce || !window.gsap) return;
-    var targets = document.querySelectorAll('.hero-copy .eyebrow, .hero-copy h1, .hero-copy .hero-sub, .hero-copy .hero-ctas');
-    if (!targets.length) return;
-    window.gsap.from(targets, {
-      y: 26, opacity: 0, duration: 0.95, ease: 'power2.out', stagger: 0.13, delay: 0.15,
-      clearProps: 'all'
+  /* ---------------- Framed photographs drift (GSAP, purely additive) ----
+     The hero entrance is CSS. GSAP only adds a slow vertical drift to the
+     matted frames; if the library never arrives, nothing is missing.      */
+  function frameDrift() {
+    if (reduce || !window.gsap || !window.ScrollTrigger) return;
+    window.gsap.registerPlugin(window.ScrollTrigger);
+    var frames = document.querySelectorAll('.story .frame, .visit .frame, .mosaic .m3 .frame, .mosaic .m5 .frame');
+    Array.prototype.forEach.call(frames, function (el, i) {
+      window.gsap.fromTo(el, { y: 16 }, {
+        y: -16, ease: 'none',
+        scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1.1 }
+      });
     });
   }
 
   window.addEventListener('load', function () {
     runCounts();
-    heroIntro();
+    frameDrift();
   });
 
   /* ---------------- FAQ accordion ---------------- */
@@ -1525,10 +1836,12 @@ a { color: inherit; }
       qs.forEach(function (other) {
         var op = document.getElementById(other.getAttribute('aria-controls'));
         other.setAttribute('aria-expanded', 'false');
+        if (other.parentNode && other.parentNode.classList) other.parentNode.classList.remove('open');
         if (op) op.style.maxHeight = null;
       });
       if (!open) {
         q.setAttribute('aria-expanded', 'true');
+        if (q.parentNode && q.parentNode.classList) q.parentNode.classList.add('open');
         panel.style.maxHeight = panel.scrollHeight + 'px';
       }
     });

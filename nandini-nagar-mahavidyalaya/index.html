@@ -88,11 +88,25 @@ button { font: inherit; color: inherit; }
 .sec-title { font-size: clamp(1.9rem, 4vw, 3.1rem); line-height: 1.1; margin: 0 0 20px; }
 .sec-lead { max-width: 62ch; font-size: 1.02rem; color: var(--mist); }
 
-/* Recurring royal motif: hairline rule with a diamond */
-.motif { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0; margin: 0 auto; }
-.motif::before, .motif::after { content: ""; display: block; width: 60px; height: 1px; background: rgba(165, 135, 88, 0.5); }
-.motif span { width: 5px; height: 5px; transform: rotate(45deg); background: var(--bronze); display: block; }
+/* Recurring royal motif: hairline rules flanking a bronze–gold–bronze diamond triad */
+.motif { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0; margin: 0 auto; }
+.motif::before, .motif::after {
+    content: ""; display: block; height: 1px; width: clamp(48px, 14vw, 150px);
+}
+.motif::before { background: linear-gradient(90deg, transparent, rgba(165, 135, 88, 0.62)); }
+.motif::after  { background: linear-gradient(270deg, transparent, rgba(165, 135, 88, 0.62)); }
+.motif i { width: 4px; height: 4px; transform: rotate(45deg); background: var(--bronze-d); display: block; flex: 0 0 auto; }
+.motif span { width: 7px; height: 7px; transform: rotate(45deg); background: var(--gold); display: block; flex: 0 0 auto; box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1); }
 .band-motif { padding: 52px 0; }
+
+/* Gold scroll-progress hairline */
+.progress {
+    position: fixed; left: 0; top: 0; z-index: 1500;
+    height: 2px; width: 100%;
+    transform: scaleX(0); transform-origin: left;
+    background: linear-gradient(90deg, var(--bronze), var(--gold) 55%, var(--gold-lt));
+    pointer-events: none;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -195,6 +209,8 @@ button { font: inherit; color: inherit; }
 }
 .nav-link:hover { color: var(--gold-lt); }
 .nav-link:hover::after { transform: scaleX(1); }
+.nav-link.here { color: var(--gold-lt); }
+.nav-link.here::after { transform: scaleX(1); background: var(--gold); }
 
 .utility {
     display: inline-flex; align-items: center; gap: 8px;
@@ -290,28 +306,34 @@ button { font: inherit; color: inherit; }
    MARQUEE
    ========================================================================== */
 .ribbon {
-    background: var(--navy-2);
-    border-top: 1px solid rgba(165, 135, 88, 0.45);
-    border-bottom: 1px solid rgba(165, 135, 88, 0.45);
-    height: 44px;
+    background: linear-gradient(180deg, var(--gold-lt) 0%, var(--gold) 48%, #b8942f 100%);
+    border-top: 1px solid rgba(10, 22, 51, 0.35);
+    border-bottom: 1px solid rgba(10, 22, 51, 0.35);
+    box-shadow: inset 0 1px 0 rgba(255, 250, 226, 0.5), inset 0 -1px 0 rgba(90, 68, 16, 0.35);
+    height: 46px;
     display: flex; align-items: center;
     overflow: hidden;
     position: relative;
 }
-.ribbon-track { display: flex; white-space: nowrap; animation: slide-left 28s linear infinite; }
+.ribbon::before, .ribbon::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 78px; z-index: 2; pointer-events: none;
+}
+.ribbon::before { left: 0;  background: linear-gradient(90deg, rgba(212, 175, 55, 0.95), transparent); }
+.ribbon::after  { right: 0; background: linear-gradient(270deg, rgba(212, 175, 55, 0.95), transparent); }
+.ribbon-track { display: flex; white-space: nowrap; animation: slide-left 34s linear infinite; }
 .ribbon:hover .ribbon-track { animation-play-state: paused; }
 @keyframes slide-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .ribbon-group { display: flex; flex-shrink: 0; }
 .ribbon-item {
-    display: inline-flex; align-items: center; gap: 22px;
-    padding: 0 22px;
-    font-size: 0.68rem;
+    display: inline-flex; align-items: center; gap: 24px;
+    padding: 0 24px;
+    font-size: 0.67rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
+    letter-spacing: 0.22em;
+    color: #14203f;
 }
-.ribbon-item::after { content: ""; width: 5px; height: 5px; background: var(--bronze); transform: rotate(45deg); }
+.ribbon-item::after { content: ""; width: 5px; height: 5px; background: rgba(20, 32, 63, 0.55); transform: rotate(45deg); }
 
 /* ==========================================================================
    SECTION FRAME
@@ -364,13 +386,40 @@ section { position: relative; }
 .pillars-head { max-width: 62ch; margin-bottom: 52px; }
 .pillar-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .pillar {
+    position: relative;
     background: var(--navy-2);
     border: 1px solid rgba(165, 135, 88, 0.2);
     border-radius: var(--radius);
     padding: 34px 26px 32px;
-    transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), background 0.4s var(--ease);
+    overflow: hidden;
+    transition: transform 0.45s var(--ease), border-color 0.45s var(--ease),
+                background 0.45s var(--ease), box-shadow 0.45s var(--ease);
 }
-.pillar:hover { transform: translateY(-6px); border-color: rgba(165, 135, 88, 0.75); background: #12235356; }
+/* Gold hairline that draws itself across the card top on hover */
+.pillar::before {
+    content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 100%;
+    background: linear-gradient(90deg, var(--bronze), var(--gold));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.5s var(--ease);
+}
+/* Bronze corner diamond that lifts in behind the type */
+.pillar::after {
+    content: ""; position: absolute; right: -18px; top: -18px;
+    width: 54px; height: 54px; transform: rotate(45deg) scale(0.4);
+    background: rgba(212, 175, 55, 0.07);
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.pillar:hover {
+    transform: translateY(-7px);
+    border-color: rgba(165, 135, 88, 0.75);
+    background: #122353;
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.85);
+}
+.pillar:hover::before { transform: scaleX(1); }
+.pillar:hover::after  { opacity: 1; transform: rotate(45deg) scale(1); }
+.pillar > * { position: relative; z-index: 1; }
 .pillar-icon {
     width: 34px; height: 34px;
     margin-bottom: 24px;
@@ -818,6 +867,7 @@ section { position: relative; }
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- ============================ PRELOADER ============================ -->
 <div class="preloader" id="preloader" role="status" aria-label="Loading">
@@ -986,7 +1036,7 @@ section { position: relative; }
     </div>
 </section>
 
-<div class="motif band-motif" aria-hidden="true"><span></span></div>
+<div class="motif band-motif" aria-hidden="true"><i></i><span></span><i></i></div>
 
 <!-- ============================ 4 · PILLARS ============================ -->
 <section class="band" id="faculties">
@@ -1250,7 +1300,7 @@ section { position: relative; }
     </div>
 </section>
 
-<div class="motif band-motif" aria-hidden="true"><span></span></div>
+<div class="motif band-motif" aria-hidden="true"><i></i><span></span><i></i></div>
 
 <!-- ============================ 9 · FAQ ============================ -->
 <section class="band" id="faq">
@@ -1450,15 +1500,57 @@ section { position: relative; }
     });
     window.setTimeout(dismissPreloader, 2200);
 
-    /* ---------------- Header state ---------------- */
+    /* ---------------- Header state + gold scroll-progress hairline ---------------- */
     var head = doc.getElementById('head');
+    var bar  = doc.getElementById('progress');
+    var ticking = false;
+    function paintScroll() {
+        ticking = false;
+        if (head) {
+            if (window.scrollY > 80) head.classList.add('stuck');
+            else head.classList.remove('stuck');
+        }
+        if (bar) {
+            var span = (doc.documentElement.scrollHeight - window.innerHeight);
+            var pct = span > 0 ? Math.min(1, Math.max(0, window.scrollY / span)) : 0;
+            bar.style.transform = 'scaleX(' + pct + ')';
+        }
+    }
     function onScroll() {
-        if (!head) return;
-        if (window.scrollY > 80) head.classList.add('stuck');
-        else head.classList.remove('stuck');
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame ? window.requestAnimationFrame(paintScroll) : paintScroll();
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    window.addEventListener('resize', onScroll, { passive: true });
+    paintScroll();
+
+    /* ---------------- Active section in the nav ---------------- */
+    (function activeNav() {
+        var links = Array.prototype.slice.call(doc.querySelectorAll('.nav-link[href^="#"]'));
+        if (!links.length || !('IntersectionObserver' in window)) return;
+        var map = {};
+        var targets = [];
+        links.forEach(function (a) {
+            var id = a.getAttribute('href').slice(1);
+            var sec = id && doc.getElementById(id);
+            if (!sec) return;
+            map[id] = a;
+            targets.push(sec);
+        });
+        if (!targets.length) return;
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                var a = map[entry.target.id];
+                if (!a) return;
+                if (entry.isIntersecting) {
+                    links.forEach(function (l) { l.classList.remove('here'); });
+                    a.classList.add('here');
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        targets.forEach(function (t) { io.observe(t); });
+    })();
 
     /* ---------------- Mobile drawer ---------------- */
     var burger = doc.getElementById('burger');

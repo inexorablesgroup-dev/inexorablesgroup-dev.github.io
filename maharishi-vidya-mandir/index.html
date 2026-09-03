@@ -16,811 +16,882 @@ Every figure on this page is published by the school itself: est. 1992, 312 stud
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 /* MAHARISHI VIDYA MANDIR, GONDA
    Concept demo — Inexorables Group
-   Royal slideshow: navy ground, bronze rules, gold reserved. */
+   Identity: serene sage ground, deep moss ink, saffron reserved.
+   Symmetry, lotus geometry, botanical rules, breathing space. */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --navy: #0a1633;
-    --navy-2: #101f4a;
-    --navy-3: #24346d;
-    --gold: #d4af37;
-    --bronze: #a58758;
-    --ivory: #f5f1e6;
-    --mist: #b9c0d4;
-    --paper: #fbf9f4;
+    --sage: #f2f5ef;
+    --sage-2: #e8eee3;
+    --sage-3: #dde6d7;
+    --paper: #fbfcfa;
+    --moss: #2f4b32;
+    --moss-2: #3a5c3e;
+    --moss-3: #243a27;
+    --moss-mute: #6d8570;
+    --saffron: #e09f3e;
+    --saffron-2: #c98524;
+    --saffron-wash: rgba(224, 159, 62, 0.14);
+    --ink: #2b3527;
+    --ink-soft: #55614f;
     --wa: #25d366;
-    --rule: rgba(165, 135, 88, 0.34);
-    --rule-soft: rgba(165, 135, 88, 0.18);
-    --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
-    --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --line: rgba(47, 75, 50, 0.16);
+    --line-soft: rgba(47, 75, 50, 0.09);
+    --line-light: rgba(242, 245, 239, 0.2);
+    --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --calm: cubic-bezier(0.33, 0.02, 0.16, 1);
+    --r-lg: 40px;
+    --r-md: 22px;
+    --r-sm: 14px;
 }
 
-html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 110px; }
 
 body {
     font-family: var(--sans);
     font-weight: 400;
-    background: var(--navy);
-    color: var(--mist);
-    line-height: 1.75;
+    background: var(--sage);
+    color: var(--ink-soft);
+    line-height: 1.85;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-h1, h2, h3, .serif {
-    font-family: var(--serif);
-    font-weight: 500;
-    color: var(--ivory);
-    line-height: 1.12;
-    letter-spacing: 0.005em;
+h1, h2, h3, .display {
+    font-family: var(--display);
+    font-weight: 400;
+    font-variation-settings: 'SOFT' 40, 'WONK' 0;
+    color: var(--moss);
+    line-height: 1.16;
+    letter-spacing: -0.012em;
 }
 
 a { color: inherit; }
 img { max-width: 100%; display: block; }
-::selection { background: rgba(212, 175, 55, 0.28); color: var(--ivory); }
+::selection { background: var(--saffron-wash); color: var(--moss); }
 
-.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 28px; }
-.wrap-narrow { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 28px; }
+.wrap { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 30px; }
+.wrap-narrow { width: 100%; max-width: 820px; margin: 0 auto; padding: 0 30px; }
 
 .skip-link {
     position: absolute; left: -9999px; top: 0; z-index: 3000;
-    background: var(--gold); color: #14100a;
-    padding: 12px 22px; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+    background: var(--moss); color: var(--sage);
+    padding: 14px 24px; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.1em; text-decoration: none; border-radius: 0 0 var(--r-sm) 0;
 }
 .skip-link:focus { left: 0; }
 
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--saffron); outline-offset: 4px; border-radius: 4px; }
 
 /* ---------- shared type ---------- */
 .eyebrow {
     display: block;
     font-family: var(--sans);
-    font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.35em; text-transform: uppercase;
-    color: var(--bronze);
-    margin-bottom: 22px;
-}
-.sec-title {
-    font-size: clamp(1.9rem, 4.4vw, 3.1rem);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--saffron-2);
     margin-bottom: 20px;
 }
+.sec-title {
+    font-size: clamp(1.95rem, 4.2vw, 3.15rem);
+    margin-bottom: 22px;
+}
 .sec-lede {
-    font-size: 0.99rem;
-    color: var(--mist);
-    max-width: 58ch;
+    font-size: 1.02rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    font-weight: 300;
 }
 .centered { text-align: center; }
 .centered .sec-lede { margin-left: auto; margin-right: auto; }
 
-/* ---------- royal divider motif ---------- */
-.divider {
-    display: flex; align-items: center; justify-content: center;
-    gap: 12px; padding: 0;
+/* ---------- botanical leaf divider ---------- */
+.leaf-rule {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
 }
-.divider span { display: block; width: 60px; height: 1px; background: var(--rule); }
-.divider i {
-    display: block; width: 5px; height: 5px;
-    background: var(--bronze); transform: rotate(45deg);
+.leaf-rule .ln {
+    display: block; height: 1px; width: clamp(48px, 12vw, 122px);
+    background: linear-gradient(90deg, rgba(47,75,50,0), var(--line));
 }
-.band-divider { padding: 54px 0; background: var(--navy); }
+.leaf-rule .ln:last-child { background: linear-gradient(90deg, var(--line), rgba(47,75,50,0)); }
+.leaf-rule svg { width: 46px; height: 26px; overflow: visible; }
+.leaf-rule svg path, .leaf-rule svg line { fill: none; stroke: var(--moss-mute); stroke-width: 1.05; stroke-linecap: round; }
+.leaf-rule svg .seed { fill: var(--saffron); stroke: none; }
+.band-rule { padding: 62px 0; }
+.band-rule.on-moss .ln { background: linear-gradient(90deg, rgba(242,245,239,0), var(--line-light)); }
+.band-rule.on-moss .ln:last-child { background: linear-gradient(90deg, var(--line-light), rgba(242,245,239,0)); }
+.band-rule.on-moss svg path, .band-rule.on-moss svg line { stroke: rgba(242, 245, 239, 0.5); }
 
 /* ---------- buttons ---------- */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    min-height: 52px; padding: 15px 32px;
-    border: 1px solid transparent; border-radius: 2px;
+    min-height: 54px; padding: 15px 34px;
+    border: 1px solid transparent; border-radius: 999px;
     font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
     letter-spacing: 0.14em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
-    transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, transform 0.35s var(--ease);
+    transition: background 0.55s var(--calm), color 0.55s var(--calm),
+                border-color 0.55s var(--calm), transform 0.55s var(--calm),
+                box-shadow 0.55s var(--calm);
 }
-.btn-gold { background: var(--gold); color: #14100a; }
-.btn-gold:hover { background: #e0c05a; transform: translateY(-2px); }
-.btn-ghost { background: transparent; color: var(--ivory); border-color: rgba(245, 241, 230, 0.42); }
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-.btn-dark { background: var(--navy); color: var(--ivory); }
-.btn-dark:hover { background: var(--navy-2); transform: translateY(-2px); }
+.btn-moss { background: var(--moss); color: var(--sage); box-shadow: 0 2px 0 0 rgba(47,75,50,0.12); }
+.btn-moss:hover { background: var(--moss-2); transform: translateY(-2px); box-shadow: 0 12px 28px -14px rgba(47,75,50,0.55); }
+.btn-saffron { background: var(--saffron); color: #2a1d05; }
+.btn-saffron:hover { background: #eaae53; transform: translateY(-2px); box-shadow: 0 12px 28px -14px rgba(201,133,36,0.7); }
+.btn-outline { background: transparent; color: var(--moss); border-color: var(--line); }
+.btn-outline:hover { border-color: var(--moss); transform: translateY(-2px); }
+.btn-light { background: transparent; color: var(--sage); border-color: rgba(242,245,239,0.4); }
+.btn-light:hover { border-color: var(--sage); background: rgba(242,245,239,0.08); transform: translateY(-2px); }
 .btn-block { width: 100%; }
 
-/* PRELOADER — monogram crest */
+/* PRELOADER — lotus mandala, breathing */
 .preloader {
     position: fixed; inset: 0; z-index: 4000;
-    background: var(--navy);
+    background: var(--sage);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 30px;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    gap: 26px;
+    transition: opacity 0.7s var(--calm), visibility 0.7s var(--calm);
 }
 .no-js .preloader { display: none; }
 .preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
-.pre-crest { width: 132px; height: 132px; }
-.pre-ring-outer, .pre-ring-inner { transform-origin: 60px 60px; }
-.pre-ring-outer { animation: spinRing 2.6s linear infinite; }
-.pre-ring-inner { animation: spinRing 2.6s linear infinite reverse; }
-@keyframes spinRing { to { transform: rotate(360deg); } }
-.pre-mono-stroke {
-    stroke-dasharray: 460; stroke-dashoffset: 460;
-    animation: monoDraw 1.5s ease-out forwards;
+.pre-lotus { width: 138px; height: 138px; }
+.pre-lotus .draw {
+    fill: none; stroke: var(--moss); stroke-width: 1.1; stroke-linecap: round;
+    stroke-dasharray: 300; stroke-dashoffset: 300;
+    animation: petalDraw 1.5s var(--calm) forwards;
 }
-@keyframes monoDraw { to { stroke-dashoffset: 0; } }
-.pre-mono-fill { opacity: 0; animation: monoFill 0.9s ease-out 0.85s forwards; }
-@keyframes monoFill { to { opacity: 1; } }
+.pre-lotus .draw.d2 { animation-delay: 0.18s; stroke: var(--moss-mute); }
+.pre-lotus .ring {
+    fill: none; stroke: var(--line); stroke-width: 1;
+    opacity: 0; animation: softIn 1s ease 0.7s forwards;
+}
+.pre-lotus .core { fill: var(--saffron); opacity: 0; animation: softIn 1.1s ease 0.95s forwards; }
+.pre-lotus-wrap { animation: breatheSlow 6s ease-in-out infinite; transform-origin: center; }
+@keyframes petalDraw { to { stroke-dashoffset: 0; } }
+@keyframes softIn { to { opacity: 1; } }
+@keyframes breatheSlow { 0%, 100% { transform: scale(0.965); } 50% { transform: scale(1.03); } }
 .pre-label {
-    font-size: 0.68rem; font-weight: 600;
-    letter-spacing: 0.35em; text-transform: uppercase;
-    color: var(--bronze);
+    font-size: 0.64rem; font-weight: 600;
+    letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--moss-mute);
+    padding-left: 0.42em;
 }
 
 /* HEADER */
 .header {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1200;
-    background: transparent;
+    background: rgba(242, 245, 239, 0);
     border-bottom: 1px solid transparent;
-    transition: background 0.4s ease, border-color 0.4s ease;
+    transition: background 0.6s var(--calm), border-color 0.6s var(--calm), backdrop-filter 0.6s var(--calm);
 }
-.header.solid { background: var(--navy); border-bottom-color: var(--rule); }
+.header.solid {
+    background: rgba(242, 245, 239, 0.93);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-bottom-color: var(--line-soft);
+}
 .header-inner {
-    max-width: 1300px; margin: 0 auto; padding: 0 24px;
-    height: 92px;
-    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
-    gap: 20px;
+    max-width: 1280px; margin: 0 auto; padding: 0 26px;
+    height: 96px;
+    display: flex; align-items: center; justify-content: space-between; gap: 22px;
 }
-.nav-side { display: flex; align-items: center; gap: 26px; }
-.nav-side.right { justify-content: flex-end; }
-.nav-side a {
-    font-size: 0.72rem; font-weight: 500;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ivory); text-decoration: none;
-    padding: 8px 0; position: relative;
-    transition: color 0.3s ease;
-}
-.nav-side a::after {
-    content: ''; position: absolute; left: 0; right: 100%; bottom: 2px;
-    height: 1px; background: var(--bronze);
-    transition: right 0.35s var(--ease);
-}
-.nav-side a:hover { color: var(--gold); }
-.nav-side a:hover::after { right: 0; }
-
-.brand {
-    display: flex; flex-direction: column; align-items: center; gap: 5px;
-    text-decoration: none; color: var(--ivory);
-}
-.brand svg { width: 38px; height: 38px; }
+.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+.brand-mark { width: 42px; height: 42px; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-name {
-    font-family: var(--serif); font-weight: 600;
-    font-size: 1.02rem; line-height: 1; letter-spacing: 0.03em;
+    font-family: var(--display); font-weight: 500;
+    font-size: 1.06rem; color: var(--moss); letter-spacing: -0.01em;
     white-space: nowrap;
 }
 .brand-sub {
-    font-size: 0.55rem; font-weight: 600;
-    letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--bronze); white-space: nowrap;
+    font-size: 0.56rem; font-weight: 600;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--saffron-2); white-space: nowrap; margin-top: 3px;
 }
-
-.util {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 0.6rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ivory); text-decoration: none;
-    transition: color 0.3s ease;
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a {
+    font-size: 0.74rem; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    position: relative; padding: 6px 0;
+    transition: color 0.45s var(--calm);
 }
-.util svg { width: 15px; height: 15px; stroke: var(--bronze); fill: none; stroke-width: 1.6; transition: stroke 0.3s ease; }
-.util:hover { color: var(--gold); }
-.util:hover svg { stroke: var(--gold); }
-.util::after { display: none; }
+.nav a::after {
+    content: ''; position: absolute; left: 50%; right: 50%; bottom: 0;
+    height: 1px; background: var(--saffron);
+    transition: left 0.5s var(--calm), right 0.5s var(--calm);
+}
+.nav a:hover { color: var(--moss); }
+.nav a:hover::after { left: 0; right: 0; }
+.nav .btn { padding: 12px 26px; min-height: 46px; }
+.nav .btn::after { display: none; }
 
 .burger {
-    display: none; width: 46px; height: 46px;
+    display: none; width: 48px; height: 48px;
     background: transparent; border: none; cursor: pointer;
-    flex-direction: column; justify-content: center; gap: 6px; padding: 10px;
+    flex-direction: column; justify-content: center; gap: 6px; padding: 12px;
 }
-.burger span { display: block; height: 1px; width: 100%; background: var(--ivory); transition: transform 0.35s var(--ease), opacity 0.25s ease; }
-.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger span { display: block; height: 1.5px; width: 100%; background: var(--moss); border-radius: 2px; transition: transform 0.5s var(--calm), opacity 0.35s ease; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
 .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
 .drawer {
     display: none;
-    background: var(--navy);
-    border-top: 1px solid var(--rule-soft);
-    border-bottom: 1px solid var(--rule);
-    padding: 8px 28px 26px;
+    background: var(--sage);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 30px 28px;
 }
 .drawer.open { display: block; }
 .drawer a {
     display: block; padding: 15px 0;
-    border-bottom: 1px solid rgba(245, 241, 230, 0.07);
-    font-size: 0.76rem; font-weight: 500;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ivory); text-decoration: none;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
 }
 .drawer a:last-of-type { border-bottom: none; }
-.drawer .btn { margin-top: 18px; }
+.drawer .btn { margin-top: 20px; }
 
-/* HERO — crossfading slideshow */
+/* HERO — symmetric, lotus halo behind the headline, photo framed below */
 .hero {
     position: relative;
-    min-height: 100vh; min-height: 100svh;
-    display: flex; align-items: flex-end;
-    padding: 150px 0 92px;
+    padding: 168px 0 0;
+    background: var(--sage);
     overflow: hidden;
-    background: var(--navy);
+    text-align: center;
 }
-.hero-stage { position: absolute; inset: 0; z-index: 0; background: var(--navy-2); }
-.hero-slide {
-    position: absolute; inset: 0;
-    opacity: 0;
-    transition: opacity 1.6s ease-in-out;
-}
-.hero-slide.active { opacity: 1; }
-.hero-slide img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: contrast(1.08) saturate(0.92) brightness(0.86);
-    transform-origin: center;
-}
-.hero-slide:nth-child(odd).active img { animation: kbZoom 9s ease-out forwards; }
-.hero-slide:nth-child(even).active img { animation: kbPan 9s ease-out forwards; }
-@keyframes kbZoom { from { transform: scale(1.02); } to { transform: scale(1.13); } }
-@keyframes kbPan { from { transform: scale(1.1) translateX(-1.6%); } to { transform: scale(1.1) translateX(1.6%); } }
-.hero-scrim {
-    position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background:
-        linear-gradient(180deg, rgba(10, 22, 51, 0.25) 0%, rgba(10, 22, 51, 0.92) 100%),
-        linear-gradient(90deg, rgba(10, 22, 51, 0.72) 0%, rgba(10, 22, 51, 0.18) 62%),
-        rgba(16, 31, 74, 0.14);
-}
-.hero-inner { position: relative; z-index: 2; width: 100%; }
-.hero-copy { max-width: 640px; }
-.hero h1 {
-    font-size: clamp(2.4rem, 6vw, 4.6rem);
-    line-height: 1.08;
-    margin-bottom: 22px;
-}
-.hero h1 .rotator {
-    display: block; position: relative;
-    height: 1.14em; overflow: hidden;
-    color: var(--ivory);
-}
-.hero h1 .rotator span {
-    position: absolute; left: 0; top: 0; width: 100%;
-    opacity: 0; transform: translateY(0.5em);
-    transition: opacity 0.6s ease, transform 0.6s var(--ease);
-    white-space: nowrap;
-}
-.hero h1 .rotator span.on { opacity: 1; transform: translateY(0); }
-.hero-body {
-    font-size: 1rem; color: var(--mist);
-    max-width: 52ch; margin-bottom: 34px;
-}
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
-
-.hero-foot {
-    position: absolute; left: 0; right: 0; bottom: 30px; z-index: 3;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 20px;
-    max-width: 1180px; margin: 0 auto; padding: 0 28px;
-}
-.slide-count {
-    display: flex; align-items: center; gap: 14px;
-    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
-    color: var(--bronze);
-}
-.slide-count::before { content: ''; display: block; width: 54px; height: 1px; background: var(--rule); }
-.slide-count b { color: var(--ivory); font-weight: 600; }
-.dots { display: flex; gap: 10px; }
-.dots button {
-    width: 26px; height: 2px; padding: 10px 0; background: transparent;
-    border: none; cursor: pointer; position: relative;
-}
-.dots button::after {
-    content: ''; position: absolute; left: 0; right: 0; top: 50%;
-    height: 1px; background: rgba(245, 241, 230, 0.32);
-    transition: background 0.35s ease;
-}
-.dots button[aria-current="true"]::after { background: var(--gold); height: 2px; }
-.hero-scroll-hint {
-    font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase;
-    color: rgba(185, 192, 212, 0.7);
-}
-
-/* MARQUEE */
-.marquee {
-    background: var(--navy-2);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    height: 44px; overflow: hidden;
-    display: flex; align-items: center;
-}
-.marquee-track {
-    display: flex; align-items: center; white-space: nowrap;
-    animation: marqueeRun 28s linear infinite;
-}
-.marquee:hover .marquee-track { animation-play-state: paused; }
-@keyframes marqueeRun { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.marquee-item {
-    display: inline-flex; align-items: center; gap: 20px;
-    padding: 0 20px;
-    font-size: 0.66rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold);
-}
-.marquee-item::after { content: '◆'; color: var(--bronze); font-size: 0.5rem; letter-spacing: 0; }
-
-/* WELCOME */
-.welcome { padding: 108px 0 88px; background: var(--navy); }
-.welcome-grid {
-    display: grid; grid-template-columns: 1.05fr 0.95fr;
-    gap: 68px; align-items: center;
-}
-.welcome-copy { position: relative; padding-left: 30px; }
-.welcome-copy::before {
-    content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
-    width: 1px; background: linear-gradient(180deg, var(--bronze), rgba(165, 135, 88, 0));
-}
-.dropcap::first-letter {
-    float: left;
-    font-family: var(--serif); font-weight: 600;
-    font-size: 3.6rem; line-height: 0.86;
-    color: var(--bronze);
-    padding: 6px 12px 0 0;
-}
-.welcome-copy p { margin-bottom: 18px; font-size: 0.99rem; }
-.welcome-copy p:last-of-type { margin-bottom: 0; }
-.signature {
-    margin-top: 30px; padding-top: 22px;
-    border-top: 1px solid var(--rule-soft);
-}
-.signature strong {
-    display: block; font-family: var(--serif); font-weight: 600;
-    font-size: 1.15rem; color: var(--ivory); letter-spacing: 0.02em;
-}
-.signature span {
-    font-size: 0.64rem; font-weight: 600;
-    letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--bronze);
-}
-
-.frame {
-    position: relative;
-    padding: 0;
-}
-.frame::before {
-    content: ''; position: absolute;
-    left: -14px; top: 14px; right: 14px; bottom: -14px;
-    border: 1px solid var(--rule);
+.hero::before {
+    content: ''; position: absolute; left: 50%; top: -8%;
+    width: min(1180px, 150vw); height: min(1180px, 150vw);
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 42%, rgba(224,159,62,0.10), rgba(224,159,62,0) 58%);
     pointer-events: none;
 }
-.frame-media {
-    position: relative; overflow: hidden;
-    aspect-ratio: 3 / 4;
-    background: linear-gradient(165deg, var(--navy-3), var(--navy-2) 60%, var(--navy));
-    border: 1px solid var(--rule-soft);
+.halo {
+    position: absolute; left: 50%; top: 232px;
+    width: min(700px, 118vw); height: min(700px, 118vw);
+    transform: translate(-50%, -50%);
+    z-index: 0; pointer-events: none;
+    opacity: 0.5;
+    animation: haloBreathe 13s ease-in-out infinite;
+    transform-origin: center;
 }
-.frame-media img {
+@keyframes haloBreathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(0.955) rotate(0deg); opacity: 0.42; }
+    50% { transform: translate(-50%, -50%) scale(1.035) rotate(4deg); opacity: 0.58; }
+}
+.halo svg { width: 100%; height: 100%; }
+.halo .p { fill: none; stroke: var(--moss); stroke-width: 0.55; opacity: 0.5; }
+.halo .p2 { fill: none; stroke: var(--saffron-2); stroke-width: 0.5; opacity: 0.5; }
+.halo .rg { fill: none; stroke: var(--moss-mute); stroke-width: 0.4; opacity: 0.5; }
+
+.hero-inner { position: relative; z-index: 2; }
+.hero .eyebrow { margin-bottom: 24px; }
+.hero h1 {
+    font-size: clamp(2.35rem, 6.1vw, 4.35rem);
+    font-weight: 300;
+    font-variation-settings: 'SOFT' 60, 'WONK' 1;
+    line-height: 1.09;
+    max-width: 15ch; margin: 0 auto 26px;
+}
+.hero h1 em { font-style: normal; color: var(--saffron-2); font-weight: 500; }
+.hero-body {
+    font-size: 1.06rem; font-weight: 300; color: var(--ink-soft);
+    max-width: 54ch; margin: 0 auto 36px;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.hero-meta {
+    margin-top: 30px;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 10px 22px;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--moss-mute);
+}
+.hero-meta i { display: block; width: 5px; height: 5px; border-radius: 50%; background: var(--saffron); }
+
+/* hero photo in a soft-radius frame */
+.hero-photo {
+    position: relative; z-index: 2;
+    margin: 62px auto 0;
+    max-width: 1000px; padding: 0 30px;
+}
+.hero-photo-frame {
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--sage-3), var(--sage-2));
+    box-shadow: 0 34px 70px -46px rgba(47, 75, 50, 0.55);
+    aspect-ratio: 21 / 9;
+}
+.hero-photo-frame img {
     width: 100%; height: 100%; object-fit: cover;
-    filter: contrast(1.06) saturate(0.95);
+    filter: saturate(0.88) contrast(1.02) brightness(1.02);
 }
-.frame-media::after {
+.hero-photo-frame::after {
     content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: rgba(16, 31, 74, 0.16);
-    mix-blend-mode: multiply;
+    border-radius: var(--r-lg);
+    box-shadow: inset 0 0 0 1px rgba(47, 75, 50, 0.14);
+    background: linear-gradient(180deg, rgba(47,75,50,0.02), rgba(47,75,50,0.14));
+}
+.hero-photo-cap {
+    margin-top: 14px; text-align: center;
+    font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(109, 133, 112, 0.85);
+}
+
+/* QUIET FACT RAIL */
+.rail { background: var(--sage); padding: 78px 0 8px; }
+.rail-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+}
+.rail-cell {
+    text-align: center; padding: 26px 18px;
+    border-left: 1px solid var(--line-soft);
+}
+.rail-cell:first-child { border-left: none; }
+.rail-cell b {
+    display: block; font-family: var(--display); font-weight: 400;
+    font-size: 1.15rem; color: var(--moss); margin-bottom: 4px;
+}
+.rail-cell span {
+    display: block; font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--moss-mute);
+}
+
+/* WELCOME — centred, symmetric */
+.welcome { padding: 86px 0 92px; background: var(--sage); }
+.welcome-portrait {
+    width: min(360px, 76vw); aspect-ratio: 1 / 1;
+    margin: 0 auto 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(160deg, var(--sage-3), var(--sage-2));
+    box-shadow: 0 0 0 1px var(--line-soft), 0 0 0 12px var(--sage), 0 0 0 13px var(--line-soft);
+}
+.welcome-portrait img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.86) contrast(1.02);
+}
+.welcome-copy { text-align: center; }
+.welcome-copy p {
+    margin-bottom: 20px; font-size: 1.02rem; font-weight: 300;
+    max-width: 66ch; margin-left: auto; margin-right: auto;
+}
+.welcome-copy p:last-of-type { margin-bottom: 0; }
+.welcome-copy .lead { font-size: 1.14rem; color: var(--ink); }
+.signature {
+    margin-top: 38px; padding-top: 26px;
+    border-top: 1px solid var(--line-soft);
+    display: inline-block;
+}
+.signature strong {
+    display: block; font-family: var(--display); font-weight: 500;
+    font-size: 1.2rem; color: var(--moss);
+}
+.signature span {
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--saffron-2);
 }
 
 /* PILLARS */
-.pillars { padding: 96px 0 104px; background: var(--navy); }
-.pillar-head { margin-bottom: 54px; }
-.pillar-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
-}
+.pillars { padding: 20px 0 100px; background: var(--sage); }
+.pillar-head { margin-bottom: 56px; }
+.pillar-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
 .pillar {
-    background: var(--navy-2);
-    border: 1px solid var(--rule-soft);
-    border-radius: 2px;
-    padding: 34px 24px 30px;
-    transition: transform 0.45s var(--ease), border-color 0.4s ease, background 0.4s ease;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-md);
+    padding: 34px 24px 32px;
+    text-align: center;
+    transition: transform 0.65s var(--calm), box-shadow 0.65s var(--calm), border-color 0.65s var(--calm);
 }
-.pillar:hover { transform: translateY(-6px); border-color: var(--rule); background: #122352; }
-.pillar-icon { width: 34px; height: 34px; margin-bottom: 20px; }
-.pillar-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--bronze); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.4s ease; }
-.pillar:hover .pillar-icon svg { stroke: var(--gold); }
-.pillar h3 { font-size: 1.32rem; margin-bottom: 10px; }
-.pillar p { font-size: 0.85rem; line-height: 1.7; color: var(--mist); }
+.pillar:hover {
+    transform: translateY(-8px);
+    border-color: var(--line);
+    box-shadow: 0 26px 44px -32px rgba(47, 75, 50, 0.5);
+}
+.pillar-icon {
+    width: 56px; height: 56px; margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--sage-2);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.65s var(--calm);
+}
+.pillar:hover .pillar-icon { background: var(--saffron-wash); }
+.pillar-icon svg { width: 26px; height: 26px; fill: none; stroke: var(--moss); stroke-width: 1.15; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.65s var(--calm); }
+.pillar:hover .pillar-icon svg { stroke: var(--saffron-2); }
+.pillar h3 { font-size: 1.22rem; margin-bottom: 10px; font-weight: 500; }
+.pillar p { font-size: 0.86rem; line-height: 1.75; color: var(--ink-soft); font-weight: 300; }
 
-/* STATS BAND */
+/* STATS */
 .stats {
-    position: relative;
-    padding: 80px 0;
-    background: var(--navy-2);
-    border-top: 1px solid var(--rule-soft);
-    border-bottom: 1px solid var(--rule-soft);
-    overflow: hidden;
+    padding: 92px 0 96px;
+    background: var(--sage-2);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
 }
-.stats::before {
-    content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(165, 135, 88, 0.06), transparent 70%);
-}
-.stats .wrap { position: relative; z-index: 1; }
-.stats-head { text-align: center; margin-bottom: 46px; }
-.stats-head .eyebrow { margin-bottom: 12px; }
-.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat { text-align: center; padding: 8px 18px; border-left: 1px solid rgba(212, 175, 55, 0.2); }
-.stat:first-child { border-left: none; }
+.stats-head { text-align: center; margin-bottom: 52px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat { text-align: center; padding: 6px 14px; }
 .stat-num {
     display: block;
-    font-family: var(--serif); font-weight: 600;
-    font-size: clamp(2.4rem, 5.4vw, 3.6rem);
-    line-height: 1; color: var(--gold);
-    margin-bottom: 14px;
+    font-family: var(--display); font-weight: 400;
+    font-variation-settings: 'SOFT' 60, 'WONK' 1;
+    font-size: clamp(2.5rem, 5.6vw, 3.7rem);
+    line-height: 1; color: var(--moss);
+    margin-bottom: 16px;
 }
+.stat-leaf { display: block; width: 30px; height: 12px; margin: 0 auto 14px; }
+.stat-leaf svg { width: 30px; height: 12px; fill: none; stroke: var(--saffron); stroke-width: 1.1; stroke-linecap: round; }
 .stat-cap {
     display: block;
     font-size: 0.63rem; font-weight: 600;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ivory); line-height: 1.7;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); line-height: 1.75;
 }
 .stat-note {
-    margin-top: 34px; text-align: center;
-    font-size: 0.72rem; letter-spacing: 0.06em;
-    color: rgba(185, 192, 212, 0.72);
+    margin-top: 42px; text-align: center;
+    font-size: 0.82rem; font-weight: 300;
+    color: var(--ink-soft);
+    max-width: 66ch; margin-left: auto; margin-right: auto;
 }
 
-/* MOSAIC */
-.mosaic-sec { padding: 100px 0 92px; background: var(--navy); }
-.mosaic-head { margin-bottom: 44px; }
+/* STILLNESS — the deep-moss centre of the page */
+.stillness {
+    position: relative;
+    padding: 108px 0 112px;
+    background: var(--moss);
+    color: rgba(242, 245, 239, 0.82);
+    overflow: hidden;
+    text-align: center;
+}
+.stillness-bg { position: absolute; inset: 0; z-index: 0; }
+.stillness-bg img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.18; filter: saturate(0.55) contrast(1.05);
+}
+.stillness-scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+        radial-gradient(ellipse 70% 70% at 50% 46%, rgba(47,75,50,0.62), rgba(36,58,39,0.95) 78%),
+        linear-gradient(180deg, rgba(36,58,39,0.9), rgba(47,75,50,0.86));
+}
+.stillness .wrap-narrow { position: relative; z-index: 2; }
+.stillness .eyebrow { color: var(--saffron); }
+.stillness h2 { color: var(--sage); font-weight: 300; font-variation-settings: 'SOFT' 60, 'WONK' 1; }
+.stillness-quote {
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(1.45rem, 3.3vw, 2.15rem);
+    line-height: 1.42; color: var(--sage);
+    max-width: 24ch; margin: 0 auto 30px;
+}
+.stillness p { font-size: 1rem; font-weight: 300; max-width: 58ch; margin: 0 auto 18px; }
+.stillness-halls {
+    margin-top: 46px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
+}
+.hall-chip {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 11px 22px;
+    border: 1px solid rgba(242, 245, 239, 0.24);
+    border-radius: 999px;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--sage);
+}
+.hall-chip i { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--saffron); }
+
+/* signature interaction — the breathing guide */
+.breath {
+    position: relative; z-index: 2;
+    width: 190px; height: 190px; margin: 0 auto 40px;
+    display: flex; align-items: center; justify-content: center;
+}
+.breath-ring, .breath-ring-2 {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 1px solid rgba(242, 245, 239, 0.26);
+    animation: breatheCycle 11s ease-in-out infinite;
+}
+.breath-ring-2 { border-color: rgba(224, 159, 62, 0.42); animation-delay: 0.55s; }
+.breath-core {
+    width: 62px; height: 62px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 42%, rgba(224,159,62,0.42), rgba(224,159,62,0.06) 70%);
+    border: 1px solid rgba(224, 159, 62, 0.5);
+    animation: breatheCycle 11s ease-in-out infinite;
+}
+@keyframes breatheCycle {
+    0% { transform: scale(0.78); }
+    36% { transform: scale(1.04); }
+    54% { transform: scale(1.04); }
+    100% { transform: scale(0.78); }
+}
+.breath-label {
+    position: absolute; left: 50%; bottom: -34px; transform: translateX(-50%);
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(242, 245, 239, 0.66); white-space: nowrap;
+}
+.breath-label span { position: absolute; left: 50%; transform: translateX(-50%); top: 0; }
+.breath-label .in { animation: labelIn 11s ease-in-out infinite; }
+.breath-label .out { animation: labelOut 11s ease-in-out infinite; }
+@keyframes labelIn { 0%, 34% { opacity: 1; } 44%, 100% { opacity: 0; } }
+@keyframes labelOut { 0%, 46% { opacity: 0; } 56%, 96% { opacity: 1; } 100% { opacity: 0; } }
+.breath-static { display: none; }
+
+/* CAMPUS — symmetric soft-radius mosaic */
+.campus { padding: 100px 0 96px; background: var(--sage); }
+.campus-head { margin-bottom: 48px; }
 .mosaic {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 168px;
-    gap: 14px;
+    display: grid; grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 176px; gap: 16px;
 }
 .tile {
     position: relative; overflow: hidden;
-    border: 1px solid var(--rule-soft);
-    background: linear-gradient(150deg, var(--navy-3), var(--navy-2) 65%, var(--navy));
+    border-radius: var(--r-md);
+    background: linear-gradient(150deg, var(--sage-3), var(--sage-2));
+    box-shadow: 0 0 0 1px var(--line-soft);
 }
 .tile img {
     width: 100%; height: 100%; object-fit: cover;
-    filter: contrast(1.07) saturate(0.93);
-    transition: transform 0.7s var(--ease);
+    filter: saturate(0.88) contrast(1.02);
+    transition: transform 1.2s var(--calm), filter 1.2s var(--calm);
 }
-.tile::after {
-    content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: rgba(10, 22, 51, 0.28);
-    transition: background 0.6s ease;
-}
-.tile:hover img { transform: scale(1.05); }
-.tile:hover::after { background: rgba(10, 22, 51, 0.08); }
+.tile:hover img { transform: scale(1.045); filter: saturate(1) contrast(1.03); }
 .tile-cap {
     position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-    padding: 26px 20px 16px;
-    background: linear-gradient(180deg, rgba(10, 22, 51, 0), rgba(10, 22, 51, 0.86));
+    padding: 34px 20px 16px;
+    background: linear-gradient(180deg, rgba(36,58,39,0), rgba(36,58,39,0.8));
     font-size: 0.6rem; font-weight: 600;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ivory);
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sage); text-align: center;
 }
-.t-a { grid-column: span 6; grid-row: span 2; }
-.t-b { grid-column: span 3; }
+.t-a { grid-column: span 3; }
+.t-b { grid-column: span 6; grid-row: span 2; }
 .t-c { grid-column: span 3; }
 .t-d { grid-column: span 3; }
 .t-e { grid-column: span 3; }
 .repcap {
-    margin-top: 16px; text-align: right;
-    font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
-    color: rgba(185, 192, 212, 0.55);
+    margin-top: 18px; text-align: center;
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(109, 133, 112, 0.8);
 }
 
-/* LIGHT SECTION — ADMISSIONS */
-.admissions {
-    padding: 104px 0 108px;
-    background: var(--paper);
-    color: #3b3a34;
-}
-.admissions h2, .admissions h3 { color: #0f1c3f; }
-.admissions .eyebrow { color: #8a6f45; }
-.admissions .sec-lede { color: #5a5850; }
-.adm-head { margin-bottom: 62px; }
-
+/* ADMISSIONS */
+.admissions { padding: 100px 0 108px; background: var(--paper); border-top: 1px solid var(--line-soft); }
+.adm-head { margin-bottom: 64px; }
 .steps {
     position: relative;
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px;
-    margin-bottom: 68px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+    margin-bottom: 74px;
 }
 .steps::before {
-    content: ''; position: absolute; left: 11%; right: 11%; top: 27px;
-    border-top: 1px dashed rgba(165, 135, 88, 0.55);
+    content: ''; position: absolute; left: 12.5%; right: 12.5%; top: 29px;
+    border-top: 1px dashed rgba(47, 75, 50, 0.24);
     z-index: 0;
 }
 .step { position: relative; z-index: 1; text-align: center; }
 .step-num {
-    width: 54px; height: 54px; margin: 0 auto 20px;
-    border: 1px solid var(--bronze); border-radius: 50%;
+    width: 58px; height: 58px; margin: 0 auto 22px;
+    border-radius: 50%;
     background: var(--paper);
+    box-shadow: 0 0 0 1px var(--line), inset 0 0 0 5px var(--paper), 0 0 0 6px var(--paper);
     display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif); font-weight: 600; font-size: 1.4rem;
-    color: #8a6f45;
+    font-family: var(--display); font-weight: 500; font-size: 1.2rem;
+    color: var(--saffron-2);
 }
-.step h3 { font-size: 1.24rem; margin-bottom: 8px; }
-.step p { font-size: 0.86rem; line-height: 1.7; color: #5a5850; max-width: 30ch; margin: 0 auto; }
+.step h3 { font-size: 1.18rem; margin-bottom: 8px; font-weight: 500; }
+.step p { font-size: 0.86rem; line-height: 1.75; color: var(--ink-soft); max-width: 30ch; margin: 0 auto; font-weight: 300; }
 
 .enquiry {
-    max-width: 640px; margin: 0 auto;
-    background: #fff;
-    border: 1px solid rgba(165, 135, 88, 0.34);
-    border-radius: 2px;
-    padding: 40px 38px 34px;
+    max-width: 620px; margin: 0 auto;
+    background: var(--sage);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-lg);
+    padding: 44px 42px 38px;
+    box-shadow: 0 30px 60px -50px rgba(47, 75, 50, 0.6);
 }
-.enquiry-top { text-align: center; margin-bottom: 28px; }
-.enquiry-top h3 { font-size: 1.6rem; margin-bottom: 6px; }
-.enquiry-top p { font-size: 0.84rem; color: #5a5850; }
+.enquiry-top { text-align: center; margin-bottom: 30px; }
+.enquiry-top h3 { font-size: 1.55rem; margin-bottom: 6px; font-weight: 500; }
+.enquiry-top p { font-size: 0.86rem; color: var(--ink-soft); font-weight: 300; }
 .field { margin-bottom: 18px; }
 .field label {
     display: block; margin-bottom: 8px;
     font-size: 0.62rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: #8a6f45;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--moss-mute);
 }
 .field input, .field select {
-    width: 100%; min-height: 52px;
-    padding: 13px 15px;
-    font-family: var(--sans); font-size: 0.95rem;
-    color: var(--ivory);
-    background: var(--navy);
-    border: 1px solid var(--navy-3);
-    border-radius: 2px;
+    width: 100%; min-height: 54px;
+    padding: 14px 18px;
+    font-family: var(--sans); font-size: 0.96rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
     -webkit-appearance: none; appearance: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.45s var(--calm), box-shadow 0.45s var(--calm);
 }
 .field select {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23a58758' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
-    background-repeat: no-repeat; background-position: right 16px center;
-    padding-right: 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%232f4b32' stroke-width='1.4' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat; background-position: right 18px center;
+    padding-right: 42px;
 }
-.field select option { background: var(--navy); color: var(--ivory); }
-.field input::placeholder { color: rgba(185, 192, 212, 0.55); }
+.field input::placeholder { color: rgba(85, 97, 79, 0.5); }
 .field input:focus, .field select:focus {
-    outline: none; border-color: var(--gold);
-    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    outline: none; border-color: var(--saffron);
+    box-shadow: 0 0 0 3px var(--saffron-wash);
 }
-.enquiry .btn { margin-top: 6px; }
+.enquiry .btn { margin-top: 8px; }
 .enquiry-fine {
-    margin-top: 14px; text-align: center;
-    font-size: 0.7rem; color: #6b6960;
+    margin-top: 16px; text-align: center;
+    font-size: 0.72rem; color: var(--moss-mute); font-weight: 300; line-height: 1.7;
 }
-.enquiry-fine a { color: #8a6f45; }
+.enquiry-fine a { color: var(--saffron-2); }
 
-.enq-success { display: none; text-align: center; padding: 12px 0 6px; }
+.enq-success { display: none; text-align: center; padding: 10px 0 4px; }
 .enq-success.show { display: block; }
 .enq-ring {
-    width: 74px; height: 74px; margin: 0 auto 22px;
-    border: 1px solid var(--bronze); border-radius: 50%;
+    width: 84px; height: 84px; margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--saffron-wash);
     display: flex; align-items: center; justify-content: center;
 }
-.enq-ring svg { width: 32px; height: 32px; }
+.enq-ring svg { width: 34px; height: 34px; }
 .enq-check {
-    fill: none; stroke: #8a6f45; stroke-width: 2.4;
+    fill: none; stroke: var(--saffron-2); stroke-width: 2.2;
     stroke-linecap: round; stroke-linejoin: round;
     stroke-dasharray: 48; stroke-dashoffset: 48;
-    animation: checkDraw 0.7s ease-out 0.15s forwards;
+    animation: checkDraw 0.9s var(--calm) 0.15s forwards;
 }
 @keyframes checkDraw { to { stroke-dashoffset: 0; } }
-.enq-success h3 { font-size: 1.5rem; margin-bottom: 10px; }
-.enq-success p { font-size: 0.9rem; color: #5a5850; max-width: 42ch; margin: 0 auto 8px; }
-.enq-success .demo-line { font-size: 0.74rem; color: #8a6f45; letter-spacing: 0.06em; margin-top: 14px; }
+.enq-success h3 { font-size: 1.5rem; margin-bottom: 12px; font-weight: 500; }
+.enq-success p { font-size: 0.92rem; color: var(--ink-soft); max-width: 44ch; margin: 0 auto 8px; font-weight: 300; }
+.enq-success .demo-line { font-size: 0.74rem; color: var(--saffron-2); letter-spacing: 0.06em; margin-top: 16px; }
 
-/* AFFILIATION STRIP */
-.affil { padding: 74px 0; background: var(--navy); border-bottom: 1px solid var(--rule-soft); }
-.affil-head { text-align: center; margin-bottom: 40px; }
-.affil-title { font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
-.affil-row {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--rule-soft);
-    border-bottom: 1px solid var(--rule-soft);
-}
+/* AFFILIATION */
+.affil { padding: 88px 0 92px; background: var(--sage); }
+.affil-head { margin-bottom: 46px; }
+.affil-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .badge {
     padding: 30px 22px; text-align: center;
-    border-left: 1px solid var(--rule-soft);
+    border-radius: var(--r-md);
+    background: var(--sage-2);
+    transition: transform 0.6s var(--calm), background 0.6s var(--calm);
 }
-.badge:first-child { border-left: none; }
+.badge:hover { transform: translateY(-5px); background: var(--sage-3); }
 .badge b {
     display: block;
-    font-family: var(--serif); font-weight: 600;
-    font-size: 1.28rem; color: var(--ivory); margin-bottom: 8px;
+    font-family: var(--display); font-weight: 500;
+    font-size: 1.32rem; color: var(--moss); margin-bottom: 10px;
 }
 .badge span {
     display: block;
     font-size: 0.6rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--bronze); line-height: 1.7;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--moss-mute); line-height: 1.85;
 }
 .affil-note {
-    margin-top: 26px; text-align: center;
-    font-size: 0.76rem; color: rgba(185, 192, 212, 0.72);
-    max-width: 62ch; margin-left: auto; margin-right: auto;
+    margin-top: 30px; text-align: center;
+    font-size: 0.8rem; color: var(--ink-soft); font-weight: 300;
+    max-width: 64ch; margin-left: auto; margin-right: auto;
 }
 
 /* FAQ */
-.faq { padding: 96px 0 100px; background: var(--navy); }
-.faq-head { margin-bottom: 42px; }
-.faq-list { max-width: 820px; margin: 0 auto; border-top: 1px solid var(--rule-soft); }
-.faq-item { border-bottom: 1px solid var(--rule-soft); }
+.faq { padding: 20px 0 104px; background: var(--sage); }
+.faq-head { margin-bottom: 46px; }
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: border-color 0.55s var(--calm), box-shadow 0.55s var(--calm);
+}
+.faq-item:hover { border-color: var(--line); }
+.faq-item.open { box-shadow: 0 22px 40px -34px rgba(47, 75, 50, 0.55); }
 .faq-q {
-    width: 100%; min-height: 68px;
+    width: 100%; min-height: 70px;
     display: flex; align-items: center; justify-content: space-between; gap: 20px;
-    padding: 22px 2px;
+    padding: 22px 26px;
     background: transparent; border: none; cursor: pointer;
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(1.12rem, 2.3vw, 1.42rem);
-    color: var(--ivory); text-align: left;
-    transition: color 0.3s ease;
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(1.04rem, 2.1vw, 1.24rem);
+    color: var(--moss); text-align: left;
+    transition: color 0.45s var(--calm);
 }
-.faq-q:hover { color: var(--gold); }
-.faq-icon { flex-shrink: 0; width: 16px; height: 16px; position: relative; transition: transform 0.4s var(--ease); }
-.faq-icon::before, .faq-icon::after {
-    content: ''; position: absolute; left: 0; top: 50%;
-    width: 16px; height: 1px; background: var(--bronze);
-}
-.faq-icon::after { transform: rotate(90deg); }
-.faq-q[aria-expanded="true"] .faq-icon { transform: rotate(135deg); }
-.faq-q[aria-expanded="true"] .faq-icon::before, .faq-q[aria-expanded="true"] .faq-icon::after { background: var(--gold); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease); }
-.faq-a p { padding: 0 2px 26px; font-size: 0.93rem; color: var(--mist); max-width: 66ch; }
+.faq-q:hover { color: var(--saffron-2); }
+.faq-icon { flex-shrink: 0; width: 22px; height: 22px; transition: transform 0.6s var(--calm); }
+.faq-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--moss-mute); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.5s var(--calm); }
+.faq-q[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+.faq-q[aria-expanded="true"] .faq-icon svg { stroke: var(--saffron); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.7s var(--calm); }
+.faq-a p { padding: 0 26px 26px; font-size: 0.94rem; color: var(--ink-soft); max-width: 66ch; font-weight: 300; }
 
 /* VISIT */
-.visit {
-    padding: 100px 0 96px;
-    background: linear-gradient(160deg, var(--navy-3) 0%, var(--navy-2) 46%, var(--navy) 100%);
+.visit { padding: 104px 0 100px; background: var(--moss); color: rgba(242,245,239,0.8); }
+.visit .eyebrow { color: var(--saffron); }
+.visit h2 { color: var(--sage); font-weight: 300; }
+.visit .sec-lede { color: rgba(242,245,239,0.72); }
+.visit-head { margin-bottom: 52px; }
+.visit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.visit-card {
+    background: rgba(242, 245, 239, 0.055);
+    border: 1px solid rgba(242, 245, 239, 0.14);
+    border-radius: var(--r-md);
+    padding: 30px 24px;
+    text-align: center;
+    transition: background 0.6s var(--calm), border-color 0.6s var(--calm), transform 0.6s var(--calm);
 }
-.visit-head { margin-bottom: 48px; }
-.visit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); }
-.visit-card { background: rgba(10, 22, 51, 0.55); padding: 30px 24px; }
+.visit-card:hover { background: rgba(242,245,239,0.1); border-color: rgba(242,245,239,0.3); transform: translateY(-5px); }
 .visit-card h3 {
     font-family: var(--sans); font-size: 0.6rem; font-weight: 600;
     letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--bronze); margin-bottom: 14px;
+    color: var(--saffron); margin-bottom: 14px;
 }
-.visit-card p { font-size: 0.94rem; color: var(--ivory); line-height: 1.65; }
-.visit-card p span { display: block; margin-top: 6px; font-size: 0.78rem; color: var(--mist); }
-.visit-card a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--rule); }
-.visit-card a:hover { color: var(--gold); border-bottom-color: var(--gold); }
-.visit-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.visit-card p { font-size: 0.96rem; color: var(--sage); line-height: 1.7; }
+.visit-card p span { display: block; margin-top: 8px; font-size: 0.78rem; color: rgba(242,245,239,0.62); font-weight: 300; }
+.visit-card a { color: var(--sage); text-decoration: none; border-bottom: 1px solid rgba(224,159,62,0.55); padding-bottom: 2px; }
+.visit-card a:hover { color: var(--saffron); }
+.visit-actions { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
 /* FOOTER */
-.footer { background: var(--navy); border-top: 1px solid var(--rule); padding: 60px 0 40px; text-align: center; }
-.footer-crest { width: 40px; height: 40px; margin: 0 auto 16px; }
-.footer-name { font-family: var(--serif); font-weight: 600; font-size: 1.22rem; color: var(--ivory); margin-bottom: 6px; }
-.footer-addr { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bronze); margin-bottom: 28px; }
-.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-bottom: 30px; }
-.footer-links a { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mist); text-decoration: none; }
-.footer-links a:hover { color: var(--gold); }
-.footer-legal { font-size: 0.74rem; color: rgba(185, 192, 212, 0.68); max-width: 66ch; margin: 0 auto 10px; line-height: 1.8; }
-.footer-legal a { color: var(--bronze); text-decoration: none; }
-.footer-legal a:hover { color: var(--gold); }
-.footer-copy { font-size: 0.68rem; color: rgba(185, 192, 212, 0.42); margin-top: 14px; }
+.footer { background: var(--sage-2); border-top: 1px solid var(--line-soft); padding: 66px 0 44px; text-align: center; }
+.footer-mark { width: 46px; height: 46px; margin: 0 auto 18px; }
+.footer-name { font-family: var(--display); font-weight: 500; font-size: 1.24rem; color: var(--moss); margin-bottom: 6px; }
+.footer-addr { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--saffron-2); margin-bottom: 30px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-bottom: 32px; }
+.footer-links a { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
+.footer-links a:hover { color: var(--moss); }
+.footer-legal { font-size: 0.76rem; color: var(--ink-soft); max-width: 68ch; margin: 0 auto 10px; line-height: 1.85; font-weight: 300; }
+.footer-legal a { color: var(--saffron-2); text-decoration: none; }
+.footer-copy { font-size: 0.68rem; color: rgba(109, 133, 112, 0.8); margin-top: 16px; }
 
 /* FLOATS */
 .wa-float {
-    position: fixed; right: 22px; bottom: 22px; z-index: 1300;
-    width: 54px; height: 54px; border-radius: 2px;
+    position: fixed; right: 24px; bottom: 24px; z-index: 1300;
+    width: 56px; height: 56px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    background: var(--navy-2);
-    border: 1px solid var(--rule);
+    background: var(--moss);
+    box-shadow: 0 14px 30px -14px rgba(47, 75, 50, 0.8);
     text-decoration: none;
-    transition: border-color 0.35s ease, transform 0.35s var(--ease), background 0.35s ease;
+    transition: transform 0.55s var(--calm), background 0.55s var(--calm);
 }
 .wa-float svg { width: 26px; height: 26px; fill: var(--wa); }
-.wa-float:hover { border-color: var(--gold); transform: translateY(-3px); background: #14275c; }
+.wa-float:hover { transform: translateY(-4px) scale(1.04); background: var(--moss-2); }
 
 .demo-badge {
-    position: fixed; left: 20px; bottom: 22px; z-index: 1300;
+    position: fixed; left: 22px; bottom: 24px; z-index: 1300;
     display: inline-flex; align-items: center; gap: 10px;
-    padding: 9px 10px 9px 14px;
-    background: var(--navy-2);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
+    padding: 8px 10px 8px 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 999px;
     font-size: 0.6rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--bronze);
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--moss-mute);
+    box-shadow: 0 10px 24px -18px rgba(47,75,50,0.7);
 }
 .demo-badge button {
-    width: 22px; height: 22px; border: none; cursor: pointer;
-    background: rgba(165, 135, 88, 0.16); color: var(--bronze);
-    font-size: 0.85rem; line-height: 1; border-radius: 2px;
+    width: 22px; height: 22px; border: none; cursor: pointer; border-radius: 50%;
+    background: var(--sage-2); color: var(--moss);
+    font-size: 0.85rem; line-height: 1;
 }
-.demo-badge button:hover { background: rgba(165, 135, 88, 0.3); }
+.demo-badge button:hover { background: var(--sage-3); }
 .demo-badge.hidden { display: none; }
 
 .mobile-bar { display: none; }
 
-/* REVEAL */
-.js .reveal { opacity: 0; transform: translateY(24px); }
-.js .reveal.in { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s var(--ease); }
+/* REVEAL — slow, meditative fade only */
+.js .reveal { opacity: 0; transform: translateY(14px); }
+.js .reveal.in {
+    opacity: 1; transform: translateY(0);
+    transition: opacity 1.15s var(--calm), transform 1.15s var(--calm);
+}
 
 /* RESPONSIVE */
 @media (max-width: 1080px) {
     .pillar-grid { grid-template-columns: repeat(3, 1fr); }
-    .welcome-grid { gap: 46px; }
 }
 @media (max-width: 960px) {
-    .header-inner { grid-template-columns: auto 1fr auto; height: 76px; }
-    .nav-side.left { display: none; }
-    .nav-side.right { display: none; }
+    .header-inner { height: 78px; }
+    .nav { display: none; }
     .burger { display: flex; }
-    .brand { align-items: flex-start; }
-    .header-inner .brand { justify-self: start; grid-column: 2; }
-    .burger { grid-column: 3; justify-self: end; }
-    .header-inner::before { content: ''; grid-column: 1; width: 0; }
-    html { scroll-padding-top: 84px; }
-
-    .welcome-grid { grid-template-columns: 1fr; gap: 44px; }
-    .frame { order: -1; max-width: 460px; }
-    .frame-media { aspect-ratio: 4 / 3; }
+    html { scroll-padding-top: 88px; }
+    .hero { padding-top: 140px; }
+    .halo { top: 200px; }
     .visit-grid { grid-template-columns: repeat(2, 1fr); }
-    .steps { grid-template-columns: repeat(2, 1fr); gap: 34px 20px; }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 40px 22px; }
     .steps::before { display: none; }
-    .stat-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
-    .stat:nth-child(3) { border-left: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
     .affil-row { grid-template-columns: repeat(2, 1fr); }
-    .badge:nth-child(3) { border-left: none; }
-    .badge:nth-child(3), .badge:nth-child(4) { border-top: 1px solid var(--rule-soft); }
+    .rail-grid { grid-template-columns: repeat(2, 1fr); }
+    .rail-cell:nth-child(3) { border-left: none; }
+    .rail-cell:nth-child(3), .rail-cell:nth-child(4) { border-top: 1px solid var(--line-soft); }
 }
 @media (max-width: 720px) {
-    .wrap, .wrap-narrow { padding: 0 20px; }
-    .hero { padding: 130px 0 118px; align-items: flex-end; }
-    .hero-foot { flex-direction: column; align-items: flex-start; gap: 14px; bottom: 74px; padding: 0 20px; }
-    .hero-scroll-hint { display: none; }
+    .wrap, .wrap-narrow, .hero-photo { padding: 0 20px; }
+    .hero { padding-top: 128px; }
+    .hero-photo-frame { aspect-ratio: 4 / 3; border-radius: var(--r-md); }
+    .hero-photo-frame::after { border-radius: var(--r-md); }
     .hero-ctas .btn { flex: 1 1 100%; }
     .pillar-grid { grid-template-columns: repeat(2, 1fr); }
-    .mosaic { grid-auto-rows: 132px; }
-    .t-a { grid-column: span 12; grid-row: span 2; }
-    .t-b, .t-c, .t-d, .t-e { grid-column: span 6; }
-    .repcap { text-align: left; }
-    .enquiry { padding: 30px 22px 26px; }
-    .welcome { padding: 78px 0 66px; }
-    .pillars, .mosaic-sec, .faq { padding: 74px 0; }
-    .admissions { padding: 78px 0 82px; }
-    .visit { padding: 74px 0 78px; }
+    .mosaic { grid-auto-rows: 150px; }
+    .t-b { grid-column: span 12; grid-row: span 2; }
+    .t-a, .t-c, .t-d, .t-e { grid-column: span 6; }
+    .enquiry { padding: 32px 22px 28px; border-radius: var(--r-md); }
+    .welcome { padding: 64px 0 70px; }
+    .pillars { padding-bottom: 80px; }
+    .campus, .admissions, .affil { padding: 78px 0 82px; }
+    .faq { padding-bottom: 84px; }
+    .stillness { padding: 88px 0 92px; }
+    .visit { padding: 84px 0 82px; }
+    .band-rule { padding: 46px 0; }
 
     .mobile-bar {
         display: grid; grid-template-columns: repeat(3, 1fr);
         position: fixed; left: 0; right: 0; bottom: 0; z-index: 1350;
-        background: var(--navy-2);
-        border-top: 1px solid var(--rule);
+        background: var(--sage);
+        border-top: 1px solid var(--line);
         padding-bottom: env(safe-area-inset-bottom, 0);
     }
     .mobile-bar a {
         display: flex; align-items: center; justify-content: center; gap: 8px;
-        min-height: 56px; padding: 12px 6px;
-        font-size: 0.63rem; font-weight: 600;
-        letter-spacing: 0.14em; text-transform: uppercase;
-        color: var(--gold); text-decoration: none;
-        border-left: 1px solid var(--rule-soft);
+        min-height: 58px; padding: 12px 6px;
+        font-size: 0.64rem; font-weight: 600;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--moss); text-decoration: none;
+        border-left: 1px solid var(--line-soft);
     }
     .mobile-bar a:first-child { border-left: none; }
     .mobile-bar a svg { width: 16px; height: 16px; }
-    .mobile-bar a.mb-enq { background: var(--gold); color: #14100a; }
-    .wa-float { bottom: 78px; right: 16px; }
-    .demo-badge { bottom: 80px; left: 16px; }
-    .footer { padding-bottom: 96px; }
+    .mobile-bar a.mb-enq { background: var(--saffron); color: #2a1d05; }
+    .wa-float { bottom: 80px; right: 16px; }
+    .demo-badge { bottom: 82px; left: 16px; }
+    .footer { padding-bottom: 98px; }
 }
-@media (max-width: 420px) {
+@media (max-width: 460px) {
     .pillar-grid { grid-template-columns: 1fr; }
     .visit-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; }
     .stat-grid { grid-template-columns: 1fr; }
-    .stat { border-left: none; }
     .affil-row { grid-template-columns: 1fr; }
-    .badge { border-left: none; border-top: 1px solid var(--rule-soft); }
-    .badge:first-child { border-top: none; }
-    .hero h1 .rotator span { white-space: normal; }
-    .hero h1 .rotator { height: 2.3em; }
+    .rail-grid { grid-template-columns: 1fr; }
+    .rail-cell { border-left: none; border-top: 1px solid var(--line-soft); }
+    .rail-cell:first-child { border-top: none; }
+    .brand-name { font-size: 0.95rem; }
 }
 
 /* REDUCED MOTION */
@@ -831,12 +902,16 @@ img { max-width: 100%; display: block; }
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
     }
-    .hero-slide.active img { animation: none !important; transform: none !important; }
-    .marquee-track { animation: none !important; }
-    .pre-mono-stroke { stroke-dashoffset: 0; }
-    .pre-mono-fill { opacity: 1; }
+    .halo { animation: none !important; transform: translate(-50%, -50%) !important; opacity: 0.45; }
+    .pre-lotus-wrap { animation: none !important; }
+    .pre-lotus .draw { stroke-dashoffset: 0; }
+    .pre-lotus .ring, .pre-lotus .core { opacity: 1; }
+    .breath-ring, .breath-ring-2, .breath-core { animation: none !important; transform: scale(1); }
+    .breath-label .in, .breath-label .out { display: none; }
+    .breath-static { display: block; }
     .enq-check { stroke-dashoffset: 0; }
     .js .reveal { opacity: 1; transform: none; }
+    .tile:hover img { transform: none; }
 }
 </style>
 
@@ -845,11 +920,8 @@ img { max-width: 100%; display: block; }
     .preloader { display: none; }
     .faq-a { max-height: none; }
     .faq-icon { display: none; }
-    .hero h1 .rotator { height: auto; }
-    .hero h1 .rotator span { position: static; opacity: 1; transform: none; white-space: normal; }
-    .hero h1 .rotator span:not(.on) { display: none; }
-    .dots, .demo-badge button { display: none; }
-    .marquee-track { animation: none; }
+    .demo-badge button { display: none; }
+    .halo { animation: none; }
 </style>
 </noscript>
 </head>
@@ -857,50 +929,60 @@ img { max-width: 100%; display: block; }
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- PRELOADER -->
+<!-- PRELOADER — lotus mandala -->
 <div class="preloader" id="preloader" role="status" aria-label="Loading">
-    <svg class="pre-crest" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-        <circle class="pre-ring-outer" cx="60" cy="60" r="46" fill="none" stroke="#a58758" stroke-width="1" stroke-dasharray="1.5 5.2"/>
-        <circle class="pre-ring-inner" cx="60" cy="60" r="38" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="1.5 5.2" stroke-dashoffset="3"/>
-        <text class="pre-mono-stroke" x="60" y="69" text-anchor="middle"
-              font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="600"
-              fill="none" stroke="#f5f1e6" stroke-width="0.7" letter-spacing="1.5">MVM</text>
-        <text class="pre-mono-fill" x="60" y="69" text-anchor="middle"
-              font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="600"
-              fill="#f5f1e6" letter-spacing="1.5">MVM</text>
+    <svg class="pre-lotus" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <g class="pre-lotus-wrap">
+            <circle class="ring" cx="60" cy="60" r="50"/>
+            <circle class="ring" cx="60" cy="60" r="38"/>
+            <g>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z"/>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z" transform="rotate(60 60 60)"/>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z" transform="rotate(120 60 60)"/>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z" transform="rotate(180 60 60)"/>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z" transform="rotate(240 60 60)"/>
+                <path class="draw" d="M60 16 C72 34, 72 48, 60 60 C48 48, 48 34, 60 16 Z" transform="rotate(300 60 60)"/>
+            </g>
+            <g>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(30 60 60)"/>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(90 60 60)"/>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(150 60 60)"/>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(210 60 60)"/>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(270 60 60)"/>
+                <path class="draw d2" d="M60 28 C68 40, 68 51, 60 60 C52 51, 52 40, 60 28 Z" transform="rotate(330 60 60)"/>
+            </g>
+            <circle class="core" cx="60" cy="60" r="5"/>
+        </g>
     </svg>
-    <p class="pre-label">Loading</p>
+    <p class="pre-label">Maharishi Vidya Mandir</p>
 </div>
 
 <!-- HEADER -->
 <header class="header" id="header">
     <div class="header-inner">
-        <nav class="nav-side left" aria-label="Primary navigation left">
-            <a class="util" href="tel:+915262231698">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
-                05262-231698
-            </a>
-            <a href="#welcome">About</a>
-            <a href="#pillars">School Life</a>
-        </nav>
-
         <a class="brand" href="#top" aria-label="Maharishi Vidya Mandir, Gonda — top of page">
-            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-                <circle cx="60" cy="60" r="52" fill="none" stroke="#a58758" stroke-width="1.4"/>
-                <circle cx="60" cy="60" r="44" fill="none" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="1.5 5.2"/>
-                <text x="60" y="70" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#f5f1e6" letter-spacing="1">MVM</text>
+            <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(47,75,50,0.16)" stroke-width="1.2"/>
+                <g fill="none" stroke="#2f4b32" stroke-width="2.2" stroke-linejoin="round">
+                    <path d="M60 22 C74 42, 74 56, 60 70 C46 56, 46 42, 60 22 Z"/>
+                    <path d="M60 34 C78 46, 82 60, 78 74 C62 72, 54 62, 60 34 Z" transform="rotate(0 60 60)"/>
+                    <path d="M60 34 C42 46, 38 60, 42 74 C58 72, 66 62, 60 34 Z"/>
+                </g>
+                <path d="M34 80 C44 92, 76 92, 86 80" fill="none" stroke="#e09f3e" stroke-width="2.4" stroke-linecap="round"/>
             </svg>
-            <span class="brand-name">Maharishi Vidya Mandir</span>
-            <span class="brand-sub">Gonda &middot; Since 1992</span>
+            <span class="brand-text">
+                <span class="brand-name">Maharishi Vidya Mandir</span>
+                <span class="brand-sub">Gonda &middot; Since 1992</span>
+            </span>
         </a>
 
-        <nav class="nav-side right" aria-label="Primary navigation right">
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="#welcome">About</a>
+            <a href="#pillars">School Life</a>
+            <a href="#stillness">Stillness</a>
             <a href="#campus">Campus</a>
-            <a href="#admissions">Admissions</a>
-            <a class="util" href="#visit">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg>
-                Visit Us
-            </a>
+            <a href="#faq">Questions</a>
+            <a class="btn btn-moss" href="#admissions">Enquire</a>
         </nav>
 
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
@@ -910,152 +992,176 @@ img { max-width: 100%; display: block; }
     <div class="drawer" id="drawer">
         <a href="#welcome">About the School</a>
         <a href="#pillars">School Life</a>
+        <a href="#stillness">Stillness</a>
         <a href="#campus">Campus</a>
         <a href="#admissions">Admissions</a>
         <a href="#faq">Questions</a>
         <a href="#visit">Visit Us</a>
-        <a class="btn btn-gold btn-block" href="#admissions">Enquire Now</a>
+        <a class="btn btn-saffron btn-block" href="#admissions">Enquire Now</a>
     </div>
 </header>
 
 <main id="main">
 
-<!-- 1 — HERO SLIDESHOW -->
+<!-- 1 — HERO: symmetric, lotus halo, framed photo below -->
 <section class="hero" id="top">
-    <div class="hero-stage" aria-hidden="true">
-        <div class="hero-slide active" data-slide="0">
-            <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
-        </div>
-        <div class="hero-slide" data-slide="1">
-            <img src="https://images.pexels.com/photos/6813041/pexels-photo-6813041.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
-        </div>
-        <div class="hero-slide" data-slide="2">
-            <img src="https://images.pexels.com/photos/37789735/pexels-photo-37789735.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
-        </div>
-        <div class="hero-scrim"></div>
+    <div class="halo" aria-hidden="true">
+        <svg viewBox="0 0 240 240" focusable="false">
+            <g class="rg">
+                <circle cx="120" cy="120" r="112"/>
+                <circle cx="120" cy="120" r="90"/>
+                <circle cx="120" cy="120" r="54"/>
+            </g>
+            <g class="p">
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(45 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(90 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(135 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(180 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(225 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(270 120 120)"/>
+                <path d="M120 16 C150 56, 150 88, 120 120 C90 88, 90 56, 120 16 Z" transform="rotate(315 120 120)"/>
+            </g>
+            <g class="p2">
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(22.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(67.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(112.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(157.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(202.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(247.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(292.5 120 120)"/>
+                <path d="M120 46 C140 72, 140 98, 120 120 C100 98, 100 72, 120 46 Z" transform="rotate(337.5 120 120)"/>
+            </g>
+        </svg>
     </div>
 
     <div class="hero-inner">
         <div class="wrap">
-            <div class="hero-copy">
-                <span class="eyebrow">CBSE &middot; KG to Class XII &middot; Gonda</span>
-                <h1>
-                    A Settled Mind
-                    <span class="rotator" id="rotator">
-                        <span class="on">Learns Faster.</span>
-                        <span>Asks Better Questions.</span>
-                        <span>Keeps Its Composure.</span>
-                    </span>
-                </h1>
-                <p class="hero-body">A CBSE senior secondary school on Bahraich Road since 1992 &mdash; 312 students, 37 teachers, and a 2.5-acre campus where meditation and yoga sit beside the syllabus.</p>
-                <div class="hero-ctas">
-                    <a class="btn btn-gold" href="#admissions">Enquire Now</a>
-                    <a class="btn btn-ghost" href="#campus">Explore Campus</a>
-                </div>
+            <span class="eyebrow">CBSE &middot; KG to Class XII &middot; Gonda</span>
+            <h1>A settled mind <em>learns</em> more in the same hour.</h1>
+            <p class="hero-body">A CBSE senior secondary school on Bahraich Road since 1992 &mdash; 312 students, 37 teachers, and a 2.5-acre campus where meditation and yoga sit beside the syllabus.</p>
+            <div class="hero-ctas">
+                <a class="btn btn-moss" href="#admissions">Enquire About Admission</a>
+                <a class="btn btn-outline" href="#campus">Walk the Campus</a>
             </div>
+            <p class="hero-meta">
+                <span>Janki Nagar, Bahraich Road</span><i aria-hidden="true"></i>
+                <span>Affiliation 2131093</span><i aria-hidden="true"></i>
+                <span>Roughly 8 students to a teacher</span>
+            </p>
         </div>
     </div>
 
-    <div class="hero-foot">
-        <p class="slide-count"><b id="slide-index">01</b>&nbsp;/&nbsp;03</p>
-        <div class="dots" id="dots" role="tablist" aria-label="Hero images">
-            <button type="button" aria-label="Show image 1" aria-current="true"></button>
-            <button type="button" aria-label="Show image 2"></button>
-            <button type="button" aria-label="Show image 3"></button>
+    <div class="hero-photo">
+        <div class="hero-photo-frame">
+            <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="An established Indian school building with a long, calm frontage"
+                 loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
-        <p class="hero-scroll-hint">Scroll</p>
+        <p class="hero-photo-cap">Representative imagery</p>
     </div>
 </section>
 
-<!-- 2 — MARQUEE RIBBON -->
-<div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-        <span class="marquee-item">Admission enquiries welcome &mdash; KG to Class XII</span>
-        <span class="marquee-item">CBSE affiliation 2131093</span>
-        <span class="marquee-item">In Gonda since 1992</span>
-        <span class="marquee-item">312 students &middot; 37 teachers</span>
-        <span class="marquee-item">Meditation &amp; yoga halls on campus</span>
-        <span class="marquee-item">2.5-acre campus, Bahraich Road</span>
-        <span class="marquee-item">Admission enquiries welcome &mdash; KG to Class XII</span>
-        <span class="marquee-item">CBSE affiliation 2131093</span>
-        <span class="marquee-item">In Gonda since 1992</span>
-        <span class="marquee-item">312 students &middot; 37 teachers</span>
-        <span class="marquee-item">Meditation &amp; yoga halls on campus</span>
-        <span class="marquee-item">2.5-acre campus, Bahraich Road</span>
+<!-- 2 — QUIET FACT RAIL -->
+<section class="rail" aria-label="School at a glance">
+    <div class="wrap">
+        <div class="rail-grid reveal">
+            <div class="rail-cell"><b>Since 1992</b><span>Teaching in Gonda</span></div>
+            <div class="rail-cell"><b>KG &ndash; Class XII</b><span>CBSE senior secondary</span></div>
+            <div class="rail-cell"><b>2.5 acres</b><span>Janki Nagar campus</span></div>
+            <div class="rail-cell"><b>TM &amp; yoga halls</b><span>On the grounds</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="band-rule">
+    <div class="leaf-rule" aria-hidden="true">
+        <span class="ln"></span>
+        <svg viewBox="0 0 46 26" focusable="false">
+            <path d="M23 4 C33 9, 34 17, 23 22 C12 17, 13 9, 23 4 Z"/>
+            <line x1="23" y1="4" x2="23" y2="22"/>
+            <path d="M23 10 L18 8 M23 10 L28 8 M23 15 L18 13 M23 15 L28 13"/>
+            <circle class="seed" cx="23" cy="22" r="1.6"/>
+        </svg>
+        <span class="ln"></span>
     </div>
 </div>
 
 <!-- 3 — WELCOME -->
 <section class="welcome" id="welcome">
-    <div class="wrap">
-        <div class="welcome-grid">
-            <div class="welcome-copy reveal">
-                <span class="eyebrow">A Message from the School</span>
-                <h2 class="sec-title">Excellence, With Stillness</h2>
-                <p class="dropcap">Maharishi Vidya Mandir has taught the children of Gonda since 1992. Three decades on, the school still runs from the same 2.5 acres at Janki Nagar on Bahraich Road &mdash; a campus deliberately set back from the traffic, with room to run and rooms kept quiet.</p>
-                <p>Three hundred and twelve students are taught here by thirty-seven teachers. That is roughly eight children to a teacher: small enough that a raised hand is answered and a puzzled face is noticed, and small enough that a subject teacher follows a child&rsquo;s work over years rather than over a single term.</p>
-                <p>The academic course is the full CBSE syllabus under senior secondary affiliation 2131093. What sits alongside it is Consciousness-Based Education, the approach every Maharishi Vidya Mandir school follows: dedicated Transcendental Meditation and yoga halls on campus, and a daily practice of settling the attention before the lesson begins. The reasoning is plain. A calm mind absorbs more in an hour than a restless one does in three.</p>
-                <div class="signature">
-                    <strong>Mr. Vinay Kumar Mishra</strong>
-                    <span>Principal &middot; Maharishi Vidya Mandir, Gonda</span>
-                </div>
-            </div>
-            <div class="frame reveal">
-                <div class="frame-media">
-                    <img src="https://images.pexels.com/photos/38305335/pexels-photo-38305335.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="A long arched school corridor, quiet and shaded"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                </div>
+    <div class="wrap-narrow">
+        <div class="welcome-portrait reveal">
+            <img src="https://images.pexels.com/photos/38305335/pexels-photo-38305335.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="A long arched school corridor, quiet and shaded"
+                 loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </div>
+        <div class="welcome-copy centered reveal">
+            <span class="eyebrow">A Message from the School</span>
+            <h2 class="sec-title">Excellence, with stillness</h2>
+            <p class="lead">Maharishi Vidya Mandir has taught the children of Gonda since 1992. Three decades on, the school still runs from the same 2.5 acres at Janki Nagar on Bahraich Road &mdash; a campus deliberately set back from the traffic, with room to run and rooms kept quiet.</p>
+            <p>Three hundred and twelve students are taught here by thirty-seven teachers. That is roughly eight children to a teacher: small enough that a raised hand is answered and a puzzled face is noticed, and small enough that a subject teacher follows a child&rsquo;s work over years rather than over a single term.</p>
+            <p>The academic course is the full CBSE syllabus under senior secondary affiliation 2131093. What sits alongside it is Consciousness-Based Education, the approach every Maharishi Vidya Mandir school follows: dedicated Transcendental Meditation and yoga halls on campus, and a daily practice of settling the attention before the lesson begins. The reasoning is plain &mdash; a calm mind absorbs more in an hour than a restless one does in three.</p>
+            <div class="signature">
+                <strong>Mr. Vinay Kumar Mishra</strong>
+                <span>Principal &middot; Maharishi Vidya Mandir, Gonda</span>
             </div>
         </div>
     </div>
 </section>
 
-<div class="band-divider"><div class="divider" aria-hidden="true"><span></span><i></i><span></span></div></div>
+<div class="band-rule">
+    <div class="leaf-rule" aria-hidden="true">
+        <span class="ln"></span>
+        <svg viewBox="0 0 46 26" focusable="false">
+            <path d="M23 4 C33 9, 34 17, 23 22 C12 17, 13 9, 23 4 Z"/>
+            <line x1="23" y1="4" x2="23" y2="22"/>
+            <path d="M23 10 L18 8 M23 10 L28 8 M23 15 L18 13 M23 15 L28 13"/>
+            <circle class="seed" cx="23" cy="22" r="1.6"/>
+        </svg>
+        <span class="ln"></span>
+    </div>
+</div>
 
 <!-- 4 — PILLARS -->
 <section class="pillars" id="pillars">
     <div class="wrap">
         <div class="pillar-head centered reveal">
             <span class="eyebrow">Life at Maharishi Vidya Mandir</span>
-            <h2 class="sec-title">Five Things a School Day Must Hold</h2>
+            <h2 class="sec-title">Five things a school day must hold</h2>
             <p class="sec-lede">The timetable is built around the CBSE course, but a day here is not only lessons. These five run through every year, from kindergarten to the Class XII boards.</p>
         </div>
         <div class="pillar-grid">
             <article class="pillar reveal">
                 <div class="pillar-icon" aria-hidden="true">
-                    <svg viewBox="0 0 34 34"><path d="M4 26V9a2 2 0 0 1 2-2h10v20H6a2 2 0 0 0-2 2z"/><path d="M30 26V9a2 2 0 0 0-2-2H18v20h10a2 2 0 0 1 2 2z"/></svg>
+                    <svg viewBox="0 0 26 26"><path d="M3 20V6a1.6 1.6 0 0 1 1.6-1.6H12V20H4.6A1.6 1.6 0 0 0 3 21.6z"/><path d="M23 20V6a1.6 1.6 0 0 0-1.6-1.6H14V20h7.4A1.6 1.6 0 0 1 23 21.6z"/></svg>
                 </div>
                 <h3>Academics</h3>
                 <p>The complete CBSE syllabus, KG to Class XII, under affiliation 2131093 &mdash; taught unhurried, concepts first.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon" aria-hidden="true">
-                    <svg viewBox="0 0 34 34"><path d="M17 29c6-2.4 10-6.4 10-12V9l-10-4-10 4v8c0 5.6 4 9.6 10 12z"/><path d="M13 17l3 3 6-6"/></svg>
+                    <svg viewBox="0 0 26 26"><path d="M13 22.5c4.6-1.9 7.6-5 7.6-9.2V7L13 3.8 5.4 7v6.3c0 4.2 3 7.3 7.6 9.2z"/><path d="M10 13l2.3 2.3L17 10.6"/></svg>
                 </div>
                 <h3>Pastoral Care</h3>
                 <p>Roughly eight students to a teacher. Teachers here know every child by name, and notice when something changes.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon" aria-hidden="true">
-                    <svg viewBox="0 0 34 34"><circle cx="17" cy="12" r="6"/><path d="M6 30c1.4-6 5.6-9 11-9s9.6 3 11 9"/><path d="M17 6V3"/></svg>
+                    <svg viewBox="0 0 26 26"><path d="M13 4 C18 10, 18 15, 13 19 C8 15, 8 10, 13 4 Z"/><path d="M13 19 C8 17, 5 19, 4 21 C8 22.6, 11 21.6, 13 19 Z"/><path d="M13 19 C18 17, 21 19, 22 21 C18 22.6, 15 21.6, 13 19 Z"/></svg>
                 </div>
                 <h3>Stillness</h3>
                 <p>Purpose-built Transcendental Meditation and yoga halls &mdash; the part of a Maharishi Vidya Mandir education that is ours alone in Gonda.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon" aria-hidden="true">
-                    <svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="12"/><path d="M5 17h24M17 5c3.4 3.4 3.4 20.6 0 24M17 5c-3.4 3.4-3.4 20.6 0 24"/></svg>
+                    <svg viewBox="0 0 26 26"><circle cx="13" cy="13" r="9.4"/><path d="M3.6 13h18.8M13 3.6c2.7 2.7 2.7 15.1 0 18.8M13 3.6c-2.7 2.7-2.7 15.1 0 18.8"/></svg>
                 </div>
                 <h3>Sport &amp; Activity</h3>
                 <p>Open grounds on a 2.5-acre, pollution-free campus, with music and art rooms for the hours that are not spent on a field.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon" aria-hidden="true">
-                    <svg viewBox="0 0 34 34"><path d="M17 5l3.6 7.4 8.4 1.2-6 5.9 1.4 8.3L17 24l-7.4 3.8L11 19.5l-6-5.9 8.4-1.2z"/></svg>
+                    <svg viewBox="0 0 26 26"><path d="M13 3.6l2.8 5.7 6.3.9-4.6 4.5 1.1 6.3-5.6-3-5.6 3 1.1-6.3L3.9 10.2l6.3-.9z"/></svg>
                 </div>
                 <h3>Character</h3>
                 <p>Two generations of Gonda families have passed through these gates. What they took away was not only a mark sheet.</p>
@@ -1064,28 +1170,32 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- 5 — STATS BAND -->
-<section class="stats" aria-label="The school at a glance">
+<!-- 5 — STATS -->
+<section class="stats" aria-label="The school at a glance, by the numbers">
     <div class="wrap">
         <div class="stats-head reveal">
             <span class="eyebrow">By the Numbers</span>
-            <h2 class="sec-title">Published by the School Itself</h2>
+            <h2 class="sec-title">Published by the school itself</h2>
         </div>
         <div class="stat-grid">
             <div class="stat reveal">
                 <span class="stat-num" data-count="1992" data-plain="true">1992</span>
+                <span class="stat-leaf" aria-hidden="true"><svg viewBox="0 0 30 12" focusable="false"><path d="M15 2 C21 4, 22 8, 15 10 C8 8, 9 4, 15 2 Z"/></svg></span>
                 <span class="stat-cap">Teaching in Gonda since</span>
             </div>
             <div class="stat reveal">
                 <span class="stat-num" data-count="312">312</span>
+                <span class="stat-leaf" aria-hidden="true"><svg viewBox="0 0 30 12" focusable="false"><path d="M15 2 C21 4, 22 8, 15 10 C8 8, 9 4, 15 2 Z"/></svg></span>
                 <span class="stat-cap">Students on roll</span>
             </div>
             <div class="stat reveal">
                 <span class="stat-num" data-count="37">37</span>
+                <span class="stat-leaf" aria-hidden="true"><svg viewBox="0 0 30 12" focusable="false"><path d="M15 2 C21 4, 22 8, 15 10 C8 8, 9 4, 15 2 Z"/></svg></span>
                 <span class="stat-cap">Teaching staff</span>
             </div>
             <div class="stat reveal">
                 <span class="stat-num" data-count="2.5" data-decimals="1">2.5</span>
+                <span class="stat-leaf" aria-hidden="true"><svg viewBox="0 0 30 12" focusable="false"><path d="M15 2 C21 4, 22 8, 15 10 C8 8, 9 4, 15 2 Z"/></svg></span>
                 <span class="stat-cap">Acre campus, Bahraich Road</span>
             </div>
         </div>
@@ -1093,26 +1203,58 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- 6 — CAMPUS MOSAIC -->
-<section class="mosaic-sec" id="campus">
+<!-- 6 — STILLNESS (the deep-moss centre) -->
+<section class="stillness" id="stillness">
+    <div class="stillness-bg" aria-hidden="true">
+        <img src="https://images.pexels.com/photos/21326919/pexels-photo-21326919.jpeg?auto=compress&cs=tinysrgb&w=1600"
+             alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+    </div>
+    <div class="stillness-scrim" aria-hidden="true"></div>
+    <div class="wrap-narrow">
+        <div class="breath reveal" aria-hidden="true">
+            <span class="breath-ring"></span>
+            <span class="breath-ring-2"></span>
+            <span class="breath-core"></span>
+            <span class="breath-label">
+                <span class="in">Breathe in</span>
+                <span class="out">Breathe out</span>
+                <span class="breath-static">Stillness</span>
+            </span>
+        </div>
+        <div class="reveal">
+            <span class="eyebrow">Consciousness-Based Education</span>
+            <p class="stillness-quote">Before the lesson begins, the attention is settled.</p>
+            <p>Every Maharishi Vidya Mandir school teaches the standard CBSE syllabus alongside a daily practice of Transcendental Meditation and yoga. This campus has dedicated halls for both, built for the purpose and used every day.</p>
+            <p>It is not a mystical claim and we do not make one. It is a practical observation any teacher in Gonda will recognise: a class that has been quiet for a few minutes learns better than a class that has not. That is the whole of it.</p>
+            <div class="stillness-halls">
+                <span class="hall-chip"><i aria-hidden="true"></i>Meditation hall</span>
+                <span class="hall-chip"><i aria-hidden="true"></i>Yoga hall</span>
+                <span class="hall-chip"><i aria-hidden="true"></i>Pollution-free grounds</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7 — CAMPUS -->
+<section class="campus" id="campus">
     <div class="wrap">
-        <div class="mosaic-head centered reveal">
+        <div class="campus-head centered reveal">
             <span class="eyebrow">The Campus</span>
-            <h2 class="sec-title">Ten Minutes on the Grounds</h2>
+            <h2 class="sec-title">Ten minutes on the grounds</h2>
             <p class="sec-lede">A prospectus can only say so much. Until you can walk the campus yourself, this is the shape of an ordinary day at Janki Nagar.</p>
         </div>
         <div class="mosaic">
             <figure class="tile t-a reveal">
-                <img src="https://images.pexels.com/photos/28389291/pexels-photo-28389291.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                     alt="School students in uniform standing at a morning assembly"
-                     loading="lazy" decoding="async" onerror="this.style.display='none'">
-                <figcaption class="tile-cap">Morning assembly</figcaption>
-            </figure>
-            <figure class="tile t-b reveal">
                 <img src="https://images.pexels.com/photos/3231358/pexels-photo-3231358.jpeg?auto=compress&cs=tinysrgb&w=1600"
                      alt="Students in uniform listening attentively in a classroom"
                      loading="lazy" decoding="async" onerror="this.style.display='none'">
                 <figcaption class="tile-cap">The classroom</figcaption>
+            </figure>
+            <figure class="tile t-b reveal">
+                <img src="https://images.pexels.com/photos/28389291/pexels-photo-28389291.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="School students in uniform standing at a morning assembly"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">Morning assembly</figcaption>
             </figure>
             <figure class="tile t-c reveal">
                 <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -1137,12 +1279,12 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- 7 — ADMISSIONS (the one light section) -->
+<!-- 8 — ADMISSIONS -->
 <section class="admissions" id="admissions">
     <div class="wrap">
         <div class="adm-head centered reveal">
             <span class="eyebrow">Admissions</span>
-            <h2 class="sec-title">Four Steps, and the First One Is Free</h2>
+            <h2 class="sec-title">Four steps, and the first one is free</h2>
             <p class="sec-lede">Registration and admission forms are available online and at the school office. If you would rather begin with a question than a form, send an enquiry and the office will reply on WhatsApp.</p>
         </div>
 
@@ -1194,13 +1336,13 @@ img { max-width: 100%; display: block; }
                     <label for="f-phone">Parent&rsquo;s phone (WhatsApp)</label>
                     <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
                 </div>
-                <button type="submit" class="btn btn-dark btn-block">Send Enquiry</button>
+                <button type="submit" class="btn btn-moss btn-block">Send Enquiry</button>
                 <p class="enquiry-fine">Concept demo &mdash; nothing is submitted anywhere. In the live version this lands on the school office WhatsApp at <a href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">93895 41281</a>.</p>
             </form>
 
             <div class="enq-success" id="enq-success" role="status" aria-live="polite">
                 <div class="enq-ring" aria-hidden="true">
-                    <svg viewBox="0 0 32 32"><path class="enq-check" d="M7 17 L13 23 L25 9"/></svg>
+                    <svg viewBox="0 0 32 32" focusable="false"><path class="enq-check" d="M7 17 L13 23 L25 9"/></svg>
                 </div>
                 <h3>Enquiry received.</h3>
                 <p>This is how the school office would hear from a parent &mdash; instantly, on WhatsApp, at nine in the evening or on a Sunday, the moment the decision is made.</p>
@@ -1210,12 +1352,12 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- 8 — AFFILIATION STRIP -->
+<!-- 9 — AFFILIATION -->
 <section class="affil" aria-label="Affiliation and standing">
     <div class="wrap">
-        <div class="affil-head reveal">
+        <div class="affil-head centered reveal">
             <span class="eyebrow">Affiliation &amp; Standing</span>
-            <h2 class="affil-title">On the Record</h2>
+            <h2 class="sec-title">On the record</h2>
         </div>
         <div class="affil-row">
             <div class="badge reveal"><b>CBSE</b><span>Senior Secondary<br>Affiliation 2131093</span></div>
@@ -1227,65 +1369,76 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<div class="band-divider"><div class="divider" aria-hidden="true"><span></span><i></i><span></span></div></div>
+<div class="band-rule">
+    <div class="leaf-rule" aria-hidden="true">
+        <span class="ln"></span>
+        <svg viewBox="0 0 46 26" focusable="false">
+            <path d="M23 4 C33 9, 34 17, 23 22 C12 17, 13 9, 23 4 Z"/>
+            <line x1="23" y1="4" x2="23" y2="22"/>
+            <path d="M23 10 L18 8 M23 10 L28 8 M23 15 L18 13 M23 15 L28 13"/>
+            <circle class="seed" cx="23" cy="22" r="1.6"/>
+        </svg>
+        <span class="ln"></span>
+    </div>
+</div>
 
-<!-- 9 — FAQ -->
+<!-- 10 — FAQ -->
 <section class="faq" id="faq">
     <div class="wrap">
         <div class="faq-head centered reveal">
             <span class="eyebrow">Questions Parents Ask</span>
-            <h2 class="sec-title">Answers, Straight</h2>
+            <h2 class="sec-title">Answers, straight</h2>
         </div>
         <div class="faq-list">
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1">
                     Which classes can my child join?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
                     <p>Kindergarten through Class XII, subject to seats in each section. We are a CBSE senior secondary school, affiliation number 2131093. For a mid-session transfer, bring the previous school&rsquo;s report card and speak to the office.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">
                     How does the admission process work?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a2" role="region" aria-labelledby="q2">
                     <p>Registration and admission forms are available online and at the school office. Send an enquiry or walk in, collect the form, then complete document verification and fee submission at the counter. The office will tell you exactly what is required for your child&rsquo;s class.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3">
                     What is Consciousness-Based Education?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a3" role="region" aria-labelledby="q3">
                     <p>It is the approach every Maharishi Vidya Mandir school follows: the standard CBSE syllabus, taught alongside a daily practice of Transcendental Meditation and yoga. We have dedicated halls on campus for both. The aim is simple &mdash; a child whose attention is settled learns more in the same hour.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">
                     How large are the classes?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
                     <p>The school has 312 students and 37 teaching staff &mdash; a ratio of roughly eight children to a teacher. We are deliberately a mid-sized school rather than a crowded one, which is why teachers here know every child by name.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">
                     What facilities are on the campus?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
                     <p>Science and computer laboratories, a library and reading room, music and art rooms, Transcendental Meditation and yoga halls, and sports grounds &mdash; all on a pollution-free 2.5-acre campus at Janki Nagar.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
                 <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">
                     Where exactly is the school, and when can I visit?
-                    <span class="faq-icon" aria-hidden="true"></span>
+                    <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 22 22" focusable="false"><path d="M4 8.5 L11 15 L18 8.5"/></svg></span>
                 </button>
                 <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
                     <p>The campus is at Janki Nagar on Bahraich Road, Gonda 271003, set back from the traffic. Call the school office on 05262-231698 during working hours to confirm a convenient time, or send a WhatsApp message to 93895 41281 and we will reply with directions.</p>
@@ -1295,7 +1448,7 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- 10 — VISIT US -->
+<!-- 11 — VISIT -->
 <section class="visit" id="visit">
     <div class="wrap">
         <div class="visit-head centered reveal">
@@ -1321,9 +1474,21 @@ img { max-width: 100%; display: block; }
                 <p><a href="mailto:mvmgonda@mssmail.org">mvmgonda@mssmail.org</a><span>For documents and written enquiries</span></p>
             </div>
         </div>
+        <div class="band-rule on-moss">
+            <div class="leaf-rule" aria-hidden="true">
+                <span class="ln"></span>
+                <svg viewBox="0 0 46 26" focusable="false">
+                    <path d="M23 4 C33 9, 34 17, 23 22 C12 17, 13 9, 23 4 Z"/>
+                    <line x1="23" y1="4" x2="23" y2="22"/>
+                    <path d="M23 10 L18 8 M23 10 L28 8 M23 15 L18 13 M23 15 L28 13"/>
+                    <circle class="seed" cx="23" cy="22" r="1.6"/>
+                </svg>
+                <span class="ln"></span>
+            </div>
+        </div>
         <div class="visit-actions reveal">
-            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Maharishi+Vidya+Mandir+Janki+Nagar+Bahraich+Road+Gonda+271003" target="_blank" rel="noopener noreferrer">Plan a Visit</a>
-            <a class="btn btn-ghost" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">Message the Office</a>
+            <a class="btn btn-saffron" href="https://www.google.com/maps/search/?api=1&amp;query=Maharishi+Vidya+Mandir+Janki+Nagar+Bahraich+Road+Gonda+271003" target="_blank" rel="noopener noreferrer">Plan a Visit</a>
+            <a class="btn btn-light" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">Message the Office</a>
         </div>
     </div>
 </section>
@@ -1333,15 +1498,20 @@ img { max-width: 100%; display: block; }
 <!-- FOOTER -->
 <footer class="footer">
     <div class="wrap">
-        <svg class="footer-crest" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-            <circle cx="60" cy="60" r="52" fill="none" stroke="#a58758" stroke-width="1.4"/>
-            <text x="60" y="70" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#f5f1e6" letter-spacing="1">MVM</text>
+        <svg class="footer-mark" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="#2f4b32" stroke-width="2.2" stroke-linejoin="round">
+                <path d="M60 22 C74 42, 74 56, 60 70 C46 56, 46 42, 60 22 Z"/>
+                <path d="M60 34 C78 46, 82 60, 78 74 C62 72, 54 62, 60 34 Z"/>
+                <path d="M60 34 C42 46, 38 60, 42 74 C58 72, 66 62, 60 34 Z"/>
+            </g>
+            <path d="M34 80 C44 92, 76 92, 86 80" fill="none" stroke="#e09f3e" stroke-width="2.4" stroke-linecap="round"/>
         </svg>
         <p class="footer-name">Maharishi Vidya Mandir, Gonda</p>
         <p class="footer-addr">Janki Nagar &middot; Bahraich Road &middot; Gonda 271003</p>
         <nav class="footer-links" aria-label="Footer navigation">
             <a href="#welcome">About</a>
             <a href="#pillars">School Life</a>
+            <a href="#stillness">Stillness</a>
             <a href="#campus">Campus</a>
             <a href="#admissions">Admissions</a>
             <a href="#faq">Questions</a>
@@ -1355,7 +1525,7 @@ img { max-width: 100%; display: block; }
 
 <!-- FLOATS -->
 <a class="wa-float" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer" aria-label="Message the school office on WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
 </a>
 
 <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
@@ -1365,11 +1535,11 @@ img { max-width: 100%; display: block; }
 
 <div class="mobile-bar" role="group" aria-label="Contact the school office">
     <a href="tel:+915262231698">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
         Call
     </a>
     <a href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
         WhatsApp
     </a>
     <a class="mb-enq" href="#admissions">Enquire</a>
@@ -1390,7 +1560,7 @@ img { max-width: 100%; display: block; }
 
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------- 1. Preloader with 2.2s failsafe ---------- */
+    /* ---------- 1. Preloader with a 2.2s failsafe ---------- */
     var preloader = document.getElementById('preloader');
     var preloaderDone = false;
     function dismissPreloader() {
@@ -1399,19 +1569,19 @@ img { max-width: 100%; display: block; }
         preloader.classList.add('done');
         window.setTimeout(function () {
             if (preloader && preloader.parentNode) { preloader.parentNode.removeChild(preloader); }
-        }, 700);
+        }, 800);
     }
-    window.addEventListener('load', function () { window.setTimeout(dismissPreloader, 320); });
+    window.addEventListener('load', function () { window.setTimeout(dismissPreloader, 340); });
     window.setTimeout(dismissPreloader, 2200);
 
-    /* ---------- 2. Header state ---------- */
+    /* ---------- 2. Header state + drawer ---------- */
     var header = document.getElementById('header');
     var burger = document.getElementById('burger');
     var drawer = document.getElementById('drawer');
 
     function onScroll() {
         if (!header) { return; }
-        if (window.pageYOffset > 80) { header.classList.add('solid'); }
+        if (window.pageYOffset > 60) { header.classList.add('solid'); }
         else if (!drawer || !drawer.classList.contains('open')) { header.classList.remove('solid'); }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -1434,43 +1604,7 @@ img { max-width: 100%; display: block; }
         });
     }
 
-    /* ---------- 3. Hero slideshow + rotating sub-line ---------- */
-    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
-    var lines = Array.prototype.slice.call(document.querySelectorAll('#rotator span'));
-    var dots = Array.prototype.slice.call(document.querySelectorAll('#dots button'));
-    var slideIndexEl = document.getElementById('slide-index');
-    var current = 0;
-    var slideTimer = null;
-
-    function paint(i) {
-        current = (i + slides.length) % slides.length;
-        slides.forEach(function (s, n) { s.classList.toggle('active', n === current); });
-        lines.forEach(function (l, n) { l.classList.toggle('on', n === current); });
-        dots.forEach(function (d, n) {
-            if (n === current) { d.setAttribute('aria-current', 'true'); }
-            else { d.removeAttribute('aria-current'); }
-        });
-        if (slideIndexEl) { slideIndexEl.textContent = '0' + (current + 1); }
-    }
-
-    function startSlides() {
-        if (slideTimer) { window.clearInterval(slideTimer); }
-        if (slides.length < 2) { return; }
-        slideTimer = window.setInterval(function () { paint(current + 1); }, 6000);
-    }
-
-    if (slides.length) {
-        dots.forEach(function (d, n) {
-            d.addEventListener('click', function () { paint(n); startSlides(); });
-        });
-        if (!reduceMotion) { startSlides(); }
-        document.addEventListener('visibilitychange', function () {
-            if (document.hidden) { window.clearInterval(slideTimer); }
-            else if (!reduceMotion) { startSlides(); }
-        });
-    }
-
-    /* ---------- 4. Scroll reveal (IntersectionObserver, staggered) ---------- */
+    /* ---------- 3. Meditative scroll reveal (slow, staggered fade) ---------- */
     var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
     if (reduceMotion || !('IntersectionObserver' in window)) {
         revealTargets.forEach(function (el) { el.classList.add('in'); });
@@ -1481,35 +1615,50 @@ img { max-width: 100%; display: block; }
                 if (entry.isIntersecting) { batch.push(entry.target); io.unobserve(entry.target); }
             });
             batch.forEach(function (el, n) {
-                window.setTimeout(function () { el.classList.add('in'); }, n * 90);
+                window.setTimeout(function () { el.classList.add('in'); }, n * 130);
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
         revealTargets.forEach(function (el) { io.observe(el); });
     }
 
-    /* ---------- 5. Counters ---------- */
+    /* ---------- 4. Hero halo drifts a touch with the scroll ---------- */
+    var halo = document.querySelector('.halo');
+    if (halo && !reduceMotion) {
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (ticking) { return; }
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                var y = window.pageYOffset;
+                if (y < 900) { halo.style.marginTop = (y * 0.12) + 'px'; }
+                ticking = false;
+            });
+        }, { passive: true });
+    }
+
+    /* ---------- 5. Counters on the published figures ---------- */
     var counters = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
     var countersRun = false;
 
     function runCounters() {
         if (countersRun) { return; }
         countersRun = true;
+        if (reduceMotion) { return; }
         counters.forEach(function (el) {
             var target = parseFloat(el.getAttribute('data-count'));
             var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
             var plain = el.getAttribute('data-plain') === 'true';
-            if (reduceMotion) { return; }
             var CU = window.countUp && window.countUp.CountUp;
             if (CU) {
                 try {
                     var counter = new CU(el, target, {
-                        duration: 2,
+                        duration: 2.6,
                         decimalPlaces: decimals,
                         separator: plain ? '' : ',',
                         startVal: plain ? Math.max(target - 40, 0) : 0
                     });
                     if (!counter.error) { counter.start(); return; }
-                } catch (e) { /* fall through to the static value */ }
+                } catch (e) { /* the static value stays on screen */ }
             }
         });
     }
@@ -1521,7 +1670,7 @@ img { max-width: 100%; display: block; }
                 if (entry.isIntersecting) { runCounters(); statsIO.disconnect(); }
             });
         }, { threshold: 0.3 });
-        window.setTimeout(function () { statsIO.observe(statsSection); }, 400);
+        window.setTimeout(function () { statsIO.observe(statsSection); }, 420);
     }
 
     /* ---------- 6. FAQ accordion ---------- */
@@ -1534,9 +1683,11 @@ img { max-width: 100%; display: block; }
                 if (other === btn) { return; }
                 var otherPanel = document.getElementById(other.getAttribute('aria-controls'));
                 other.setAttribute('aria-expanded', 'false');
+                if (other.parentNode) { other.parentNode.classList.remove('open'); }
                 if (otherPanel) { otherPanel.style.maxHeight = null; }
             });
             btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+            if (btn.parentNode) { btn.parentNode.classList.toggle('open', !open); }
             panel.style.maxHeight = open ? null : (panel.scrollHeight + 'px');
         });
     });
@@ -1556,7 +1707,7 @@ img { max-width: 100%; display: block; }
             });
             if (missing) {
                 missing.focus();
-                missing.style.borderColor = '#d4af37';
+                missing.style.borderColor = '#e09f3e';
                 return;
             }
             form.style.display = 'none';
@@ -1572,16 +1723,22 @@ img { max-width: 100%; display: block; }
         badgeClose.addEventListener('click', function () { badge.classList.add('hidden'); });
     }
 
-    /* ---------- 9. Optional GSAP polish (never required) ---------- */
+    /* ---------- 9. Optional GSAP polish — leaf rules unfurl (never required) ---------- */
     window.addEventListener('load', function () {
         if (reduceMotion) { return; }
         if (!window.gsap || !window.ScrollTrigger) { return; }
         try {
             window.gsap.registerPlugin(window.ScrollTrigger);
-            window.gsap.utils.toArray('.band-divider .divider').forEach(function (el) {
+            window.gsap.utils.toArray('.leaf-rule').forEach(function (el) {
                 window.gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 88%' },
-                    scaleX: 0.4, opacity: 0, duration: 0.9, ease: 'power2.out'
+                    scrollTrigger: { trigger: el, start: 'top 92%' },
+                    scaleX: 0.55, opacity: 0, duration: 1.5, ease: 'power2.out'
+                });
+            });
+            window.gsap.utils.toArray('.hero-photo-frame').forEach(function (el) {
+                window.gsap.from(el, {
+                    scrollTrigger: { trigger: el, start: 'top 96%' },
+                    y: 26, opacity: 0.55, duration: 1.5, ease: 'power2.out'
                 });
             });
         } catch (e) { /* decorative only */ }
