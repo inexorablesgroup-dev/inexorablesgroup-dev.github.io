@@ -261,8 +261,14 @@ CSS visual system instead of a forced mismatch.
                 radial-gradient(circle 300px at 33% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
                 radial-gradient(circle 300px at 67% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
                 radial-gradient(ellipse 90% 55% at 50% -10%, rgba(230, 182, 103, 0.15) 0%, transparent 62%),
-                linear-gradient(170deg, rgba(18, 32, 58, 0.90) 0%, rgba(14, 23, 40, 0.93) 55%, rgba(8, 16, 29, 0.96) 100%),
-                linear-gradient(170deg, #12203a 0%, #0e1728 55%, #08101d 100%);
+                linear-gradient(170deg, rgba(18, 32, 58, 0.88) 0%, rgba(14, 23, 40, 0.91) 55%, rgba(8, 16, 29, 0.95) 100%),
+                url('https://images.pexels.com/photos/35741386/pexels-photo-35741386.jpeg?auto=compress&cs=tinysrgb&w=1600'),
+                linear-gradient(170deg, #12203a 0%, #0e1728 55%, #08101d 100%),
+                var(--bg);
+            background-size: auto, auto, auto, auto, cover, auto, auto;
+            background-position: center, center, center, center, center, center, center;
+            background-repeat: no-repeat;
+            background-color: var(--bg);
         }
         .hero::after {
             content: '';
@@ -1134,7 +1140,7 @@ CSS visual system instead of a forced mismatch.
                     <p>In-store eye testing, frame adjustment, nose-pad and screw fixes. Bring the glasses in — most fixes take minutes.</p>
                 </article>
             </div>
-            <figure class="photo-band reveal" aria-hidden="true"></figure>
+            <figure class="photo-band reveal" aria-hidden="true"><img src="https://images.pexels.com/photos/8886947/pexels-photo-8886947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></figure>
         </div>
     </section>
 
@@ -1202,6 +1208,7 @@ CSS visual system instead of a forced mismatch.
             <span class="section-kicker">Start Here</span>
             <h2 class="section-headline">The Eye Test, <span class="gradient-text">Then the Frame.</span></h2>
             <p class="section-sub">Prescriptions drift quietly, and most of us notice long after the change has happened. A test in the store settles the question — and everything after it gets easier.</p>
+            <figure class="photo-band reveal" aria-hidden="true"><img src="https://images.pexels.com/photos/4566670/pexels-photo-4566670.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></figure>
             <div class="edit-grid">
                 <article class="swatch-card reveal">
                     <div class="swatch-scene scene-clear" aria-hidden="true"></div>
