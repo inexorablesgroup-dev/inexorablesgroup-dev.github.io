@@ -264,7 +264,10 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             overflow: hidden;
             background:
                 radial-gradient(ellipse 90% 55% at 50% -10%, rgba(232, 180, 160, 0.13) 0%, transparent 62%),
+                linear-gradient(180deg, rgba(42, 10, 18, 0.90) 0%, rgba(28, 6, 12, 0.93) 55%, rgba(28, 6, 12, 0.985) 100%),
+                url('https://images.pexels.com/photos/8886947/pexels-photo-8886947.jpeg?auto=compress&cs=tinysrgb&w=1600') center 30% / cover no-repeat,
                 var(--bg);
+            background-attachment: scroll, scroll, scroll, scroll;
         }
 
         .hero-badge {
@@ -376,7 +379,14 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             border: 1px solid var(--line);
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
         }
-        .story-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .story-art svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
+        .story-photo {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.52;
+            z-index: 1;
+        }
         .story-art::after {
             content: '';
             position: absolute; inset: 0;
@@ -497,6 +507,13 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
         }
 
         .swatch-scene { position: relative; height: 210px; overflow: hidden; }
+        .swatch-photo {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.45;
+            mix-blend-mode: luminosity;
+        }
         .swatch-scene::after {
             content: '';
             position: absolute; inset: 0;
@@ -1055,6 +1072,7 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     <p><strong>A 4.8-star rating across Gonda</strong> was not bought. It was earned one pair at a time.</p>
                 </div>
                 <div class="story-art reveal" aria-hidden="true">
+                    <img class="story-photo" src="https://images.pexels.com/photos/35741386/pexels-photo-35741386.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
                     <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
                         <defs>
                             <linearGradient id="artGrad" x1="0" y1="0" x2="1" y2="1">
@@ -1187,7 +1205,9 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
             <p class="section-sub">You wear it every waking hour of every day. It is worth ten minutes of choosing properly.</p>
             <div class="eyewear-grid">
                 <article class="swatch-card reveal">
-                    <div class="swatch-scene scene-crimson" aria-hidden="true"></div>
+                    <div class="swatch-scene scene-crimson" aria-hidden="true">
+                        <img class="swatch-photo" src="https://images.pexels.com/photos/10317127/pexels-photo-10317127.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
+                    </div>
                     <div class="swatch-body">
                         <h3>The Everyday Pair</h3>
                         <p>Light on the nose, tough enough for a full working day. The frame you forget you're wearing.</p>
@@ -1195,7 +1215,9 @@ REPLACE-EVERYTHING LIST — customization agents must rewrite:
                     </div>
                 </article>
                 <article class="swatch-card reveal">
-                    <div class="swatch-scene scene-amber" aria-hidden="true"></div>
+                    <div class="swatch-scene scene-amber" aria-hidden="true">
+                        <img class="swatch-photo" src="https://images.pexels.com/photos/4566670/pexels-photo-4566670.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
+                    </div>
                     <div class="swatch-body">
                         <h3>The Screen Pair</h3>
                         <p>Anti-glare and blue-cut lenses for students and desk work — for eyes that end the day tired.</p>

@@ -268,8 +268,12 @@
             text-align: center;
             padding: 130px 24px 90px;
             overflow: hidden;
+            /* Photo layered UNDER the brand gradient scrim — headline contrast preserved.
+               If the photo fails to load the gradient + var(--bg) still render the original design. */
             background:
-                radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.13), transparent 65%),
+                radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.20), transparent 65%),
+                linear-gradient(180deg, rgba(12, 12, 12, 0.90) 0%, rgba(18, 18, 18, 0.82) 45%, rgba(12, 12, 12, 0.96) 100%),
+                url('https://images.pexels.com/photos/36397983/pexels-photo-36397983.jpeg?auto=compress&cs=tinysrgb&w=1600') center 40% / cover no-repeat,
                 var(--bg);
         }
         .hero .container { position: relative; z-index: 1; }
@@ -436,6 +440,27 @@
         .tile-4 .tile-scene { background: linear-gradient(150deg, rgba(244, 193, 138, 0.12), rgba(18, 18, 18, 0) 60%); }
         .tile-5 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.14), rgba(18, 18, 18, 0) 60%); }
         .tile-6 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.15), rgba(18, 18, 18, 0) 60%); }
+        /* Photo layer for mosaic tiles — sits UNDER the tile-scene gradient.
+           Tiles keep their gradient background, so a dead URL degrades to the original design. */
+        .tile-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.40;
+            filter: saturate(0.8) contrast(1.04);
+            transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out);
+            pointer-events: none;
+        }
+        .mosaic-tile.has-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(12, 12, 12, 0.95) 0%, rgba(12, 12, 12, 0.78) 45%, rgba(12, 12, 12, 0.34) 100%);
+            pointer-events: none;
+        }
+        .mosaic-tile.has-photo:hover .tile-photo { opacity: 0.52; transform: scale(1.04); }
         .tile-label { position: relative; z-index: 1; transform: translateZ(30px); }
         .tile-label h3 { font-size: 1.2rem; margin-bottom: 4px; }
         .tile-lg .tile-label h3 { font-size: 1.55rem; }
@@ -1150,7 +1175,8 @@
             <h2 class="section-headline reveal">What We <span class="gradient-text">Stock.</span></h2>
             <p class="section-sub reveal">Everything the structure needs, from the footing to the roof slab. Tell us the size and quantity on WhatsApp and we will send the rate.</p>
             <div class="mosaic-grid">
-                <a href="https://wa.me/919918551399?text=I%20want%20today%27s%20TMT%20sariya%20rate" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg reveal" data-tilt>
+                <a href="https://wa.me/919918551399?text=I%20want%20today%27s%20TMT%20sariya%20rate" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg has-photo reveal" data-tilt>
+                    <img class="tile-photo" src="https://images.pexels.com/photos/46167/iron-rods-reinforcing-bars-rods-steel-bars-46167.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bundled TMT reinforcement bars stacked in a steel yard" loading="lazy" onerror="this.style.display='none'">
                     <span class="tile-scene" aria-hidden="true">
                         <svg viewBox="0 0 96 96" fill="none"><rect x="10" y="18" width="76" height="46" rx="4" stroke="#d97941" stroke-width="2.5"/><rect x="16" y="24" width="64" height="34" rx="2" fill="rgba(217,121,65,0.15)"/><path d="M38 70h20M48 64v6" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M24 34l10 8-10 8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
@@ -1169,7 +1195,8 @@
                         <p>Branded rebar, properly billed.</p>
                     </span>
                 </a>
-                <a href="https://wa.me/919918551399?text=I%20want%20to%20ask%20about%20TMT%20rings%20and%20stirrups" target="_blank" rel="noopener" class="mosaic-tile tile-3 reveal" data-tilt>
+                <a href="https://wa.me/919918551399?text=I%20want%20to%20ask%20about%20TMT%20rings%20and%20stirrups" target="_blank" rel="noopener" class="mosaic-tile tile-3 has-photo reveal" data-tilt>
+                    <img class="tile-photo" src="https://images.pexels.com/photos/37426459/pexels-photo-37426459.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Tied reinforcement mesh and bent steel bars ready for a column cage" loading="lazy" onerror="this.style.display='none'">
                     <span class="tile-scene" aria-hidden="true">
                         <svg viewBox="0 0 96 96" fill="none"><rect x="12" y="22" width="72" height="30" rx="6" stroke="#d97941" stroke-width="2.5"/><path d="M20 44h56" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M30 60c0 6-6 6-6 10M48 60c0 6-6 6-6 10M66 60c0 6-6 6-6 10" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
                     </span>
@@ -1178,7 +1205,8 @@
                         <p>Made to your column size.</p>
                     </span>
                 </a>
-                <a href="https://wa.me/919918551399?text=I%20want%20to%20ask%20about%20structural%20steel" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
+                <a href="https://wa.me/919918551399?text=I%20want%20to%20ask%20about%20structural%20steel" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide has-photo reveal" data-tilt>
+                    <img class="tile-photo" src="https://images.pexels.com/photos/19825178/pexels-photo-19825178.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Racks of structural steel sections — angles, channels, flats, pipes and rounds sorted by size" loading="lazy" onerror="this.style.display='none'">
                     <span class="tile-scene" aria-hidden="true">
                         <svg viewBox="0 0 96 96" fill="none"><path d="M14 48v-8a6 6 0 016-6h56a6 6 0 016 6v8" stroke="#f4c18a" stroke-width="2.5"/><rect x="10" y="48" width="76" height="18" rx="5" stroke="#f4c18a" stroke-width="2.5"/><path d="M16 66v8M80 66v8" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round"/></svg>
                     </span>

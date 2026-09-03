@@ -261,6 +261,8 @@ CSS visual system instead of a forced mismatch.
                 radial-gradient(circle 300px at 33% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
                 radial-gradient(circle 300px at 67% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
                 radial-gradient(ellipse 90% 55% at 50% -10%, rgba(230, 182, 103, 0.15) 0%, transparent 62%),
+                linear-gradient(170deg, rgba(18, 32, 58, 0.90) 0%, rgba(14, 23, 40, 0.93) 55%, rgba(8, 16, 29, 0.96) 100%),
+                url('https://images.pexels.com/photos/35741386/pexels-photo-35741386.jpeg?auto=compress&cs=tinysrgb&w=1600') center 35% / cover no-repeat,
                 linear-gradient(170deg, #12203a 0%, #0e1728 55%, #08101d 100%);
         }
         .hero::after {
@@ -347,6 +349,13 @@ CSS visual system instead of a forced mismatch.
                 linear-gradient(160deg, #16213a 0%, #0e1728 45%, #08101d 100%);
             border: 1px solid var(--line);
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        }
+        .story-art .story-photo {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.42;
+            filter: saturate(0.78) brightness(0.72);
         }
         .story-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
         .story-art::after {
@@ -446,6 +455,29 @@ CSS visual system instead of a forced mismatch.
             pointer-events: none;
         }
         .edit .container { position: relative; z-index: 1; }
+
+        .photo-band {
+            position: relative;
+            margin: 56px 0 0;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 21 / 9;
+            border: 1px solid var(--line);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+            background: linear-gradient(140deg, #16213a 0%, #0e1728 55%, #08101d 100%);
+        }
+        .photo-band img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.52;
+            filter: saturate(0.8) brightness(0.74);
+        }
+        .photo-band::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(8, 16, 29, 0.30) 0%, transparent 45%, rgba(8, 16, 29, 0.55) 100%);
+            pointer-events: none;
+        }
 
         .edit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
 
@@ -996,8 +1028,9 @@ CSS visual system instead of a forced mismatch.
                     <p>Same catalogue, same lens quality, same warranty as any Lenskart in the country. The difference is that you can walk in, try thirty frames on your own face, and walk out wearing the right one.</p>
                     <p><strong>Open eleven hours a day, seven days a week.</strong> Come after work. We will still be here.</p>
                 </div>
-                <div class="story-art reveal" aria-hidden="true">
-                    <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+                <div class="story-art reveal">
+                    <img class="story-photo" src="https://images.pexels.com/photos/8886947/pexels-photo-8886947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="A customer browsing at the counter of a modern retail store" loading="lazy" onerror="this.style.display='none'">
+                    <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                         <defs>
                             <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
                                 <stop offset="0" stop-color="#e6b667" stop-opacity="0.5"/>
@@ -1099,6 +1132,9 @@ CSS visual system instead of a forced mismatch.
                     <p>In-store eye testing, frame adjustment, nose-pad and screw fixes. Bring the glasses in — most fixes take minutes.</p>
                 </article>
             </div>
+            <figure class="photo-band reveal">
+                <img src="https://images.pexels.com/photos/33812005/pexels-photo-33812005.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Products arranged along the display shelves of a modern store" loading="lazy" onerror="this.style.display='none'">
+            </figure>
         </div>
     </section>
 

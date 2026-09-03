@@ -270,8 +270,12 @@ ACC association at the Galla Mandi counter. No invented numbers, awards or testi
             text-align: center;
             padding: 130px 24px 90px;
             overflow: hidden;
+            /* Photo layer sits UNDER the brand gradient tint — headline contrast preserved.
+               If the remote photo fails, the gradients + var(--bg) render the original design. */
             background:
                 radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.13), transparent 65%),
+                linear-gradient(180deg, rgba(18, 18, 18, 0.90), rgba(18, 18, 18, 0.86) 45%, rgba(18, 18, 18, 0.97)),
+                url('https://images.pexels.com/photos/23174993/pexels-photo-23174993.jpeg?auto=compress&cs=tinysrgb&w=1600') center 30% / cover no-repeat,
                 var(--bg);
         }
         /* structural grid texture — no external asset, sits under the copy */
@@ -338,6 +342,50 @@ ACC association at the Galla Mandi counter. No invented numbers, awards or testi
         @keyframes hintPulse {
             0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; }
             50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ==================== PHOTO BAND (section imagery) ==================== */
+        .photo-band {
+            position: relative;
+            z-index: 1;
+            margin: 56px 0 0;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            overflow: hidden;
+            /* brand-gradient fallback: a dead photo URL degrades to the original design */
+            background:
+                linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(18, 18, 18, 0) 65%),
+                var(--bg-raise);
+            min-height: 190px;
+        }
+        .photo-band img {
+            display: block;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            filter: saturate(0.85) contrast(1.02);
+            opacity: 0.9;
+        }
+        .photo-band::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(18, 18, 18, 0.05), rgba(18, 18, 18, 0.72));
+        }
+        .photo-band figcaption {
+            position: absolute;
+            left: 24px;
+            bottom: 20px;
+            z-index: 2;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+        }
+        @media (max-width: 760px) {
+            .photo-band img { height: 210px; }
+            .photo-band { margin-top: 40px; }
         }
 
         /* ==================== STORY ==================== */
@@ -1219,6 +1267,10 @@ ACC association at the Galla Mandi counter. No invented numbers, awards or testi
                     </div>
                 </div>
             </div>
+            <figure class="photo-band reveal">
+                <img src="https://images.pexels.com/photos/14486702/pexels-photo-14486702.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Tower crane working over a high-rise building under construction" loading="lazy" onerror="this.style.display='none'">
+                <figcaption>Material for work that cannot wait</figcaption>
+            </figure>
         </div>
     </section>
 
@@ -1286,6 +1338,10 @@ ACC association at the Galla Mandi counter. No invented numbers, awards or testi
                     </span>
                 </a>
             </div>
+            <figure class="photo-band reveal">
+                <img src="https://images.pexels.com/photos/17770160/pexels-photo-17770160.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Construction cranes over a city skyline at sunset" loading="lazy" onerror="this.style.display='none'">
+                <figcaption>Cement, sand and steel &mdash; loaded and moving</figcaption>
+            </figure>
         </div>
     </section>
 
@@ -1437,6 +1493,10 @@ ACC association at the Galla Mandi counter. No invented numbers, awards or testi
                     <p>Bulk and repeat contractor loads scheduled in advance.</p>
                 </div>
             </div>
+            <figure class="photo-band reveal">
+                <img src="https://images.pexels.com/photos/2091760/pexels-photo-2091760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Finished modern residential building among trees" loading="lazy" onerror="this.style.display='none'">
+                <figcaption>From the mandi road to the finished build</figcaption>
+            </figure>
         </div>
     </section>
 
