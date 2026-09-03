@@ -1,1572 +1,1591 @@
 <!-- CONCEPT DEMO — Maharishi Vidya Mandir, Gonda
 Built by Inexorables Group as a local admissions landing concept.
 Complements (does not replace) the official school website at mvmgonda.org.
-All figures used here are published by the school itself: est. 1992, 312 students,
-37 teaching staff, 2.5-acre campus, CBSE affiliation 2131093, KG-XII.
+Every figure on this page is published by the school itself: est. 1992, 312 students,
+37 teaching staff, 2.5-acre campus, CBSE affiliation 2131093, KG to Class XII.
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Maharishi Vidya Mandir, Gonda — CBSE Senior Secondary School, Gonda</title>
-    <meta name="description" content="Maharishi Vidya Mandir, Gonda. CBSE senior secondary, KG to Class XII, on Bahraich Road since 1992. 312 students, 37 teachers, a 2.5-acre campus with meditation and yoga halls. Concept demo.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Maharishi Vidya Mandir, Gonda — CBSE Senior Secondary School, Gonda</title>
+<meta name="description" content="Maharishi Vidya Mandir, Gonda — CBSE senior secondary school, KG to Class XII, on Bahraich Road since 1992. 312 students, 37 teachers, a 2.5-acre campus with meditation and yoga halls. Concept demo.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   MAHARISHI VIDYA MANDIR, GONDA — Royal Navy & Gold (education)
-   One-file concept demo. Inexorables Group.
-   ============================================================ */
+/* MAHARISHI VIDYA MANDIR, GONDA
+   Concept demo — Inexorables Group
+   Royal slideshow: navy ground, bronze rules, gold reserved. */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
     --navy: #0a1633;
-    --navy-deep: #060d21;
-    --navy-raise: #0e1d42;
+    --navy-2: #101f4a;
+    --navy-3: #24346d;
     --gold: #d4af37;
-    --gold-soft: #e8cf7a;
-    --gold-pale: #f5e6b8;
-    --ivory: #f6f2e8;
-    --ivory-dim: #b9b4a6;
-    --line: rgba(212, 175, 55, 0.16);
-    --glass: rgba(10, 22, 51, 0.72);
-    --wa-green: #25D366;
-    --radius: 20px;
-    --ease-soft: cubic-bezier(0.23, 1, 0.32, 1);
+    --bronze: #a58758;
+    --ivory: #f5f1e6;
+    --mist: #b9c0d4;
+    --paper: #fbf9f4;
+    --wa: #25d366;
+    --rule: rgba(165, 135, 88, 0.34);
+    --rule-soft: rgba(165, 135, 88, 0.18);
+    --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+    --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--sans);
+    font-weight: 400;
     background: var(--navy);
-    color: var(--ivory);
-    line-height: 1.65;
+    color: var(--mist);
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    line-height: 1.12;
+h1, h2, h3, .serif {
+    font-family: var(--serif);
+    font-weight: 500;
     color: var(--ivory);
-    letter-spacing: -0.015em;
+    line-height: 1.12;
+    letter-spacing: 0.005em;
 }
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+::selection { background: rgba(212, 175, 55, 0.28); color: var(--ivory); }
 
-::selection { background: rgba(212, 175, 55, 0.35); color: var(--ivory); }
+.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.wrap-narrow { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 28px; }
 
-/* Skip link */
 .skip-link {
-    position: absolute; left: -9999px; top: 0; z-index: 2000;
-    background: var(--gold); color: var(--navy-deep);
-    padding: 12px 20px; border-radius: 0 0 12px 0; font-weight: 600; text-decoration: none;
+    position: absolute; left: -9999px; top: 0; z-index: 3000;
+    background: var(--gold); color: #14100a;
+    padding: 12px 22px; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
 }
 .skip-link:focus { left: 0; }
 
-/* Section headline system */
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft);
-    margin-bottom: 18px;
-}
-.section-eyebrow::after {
-    content: ''; display: block; width: 44px; height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    margin: 10px auto 0;
-}
-.section-headline {
-    font-size: clamp(2rem, 5vw, 3.4rem);
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* ---------- shared type ---------- */
+.eyebrow {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--bronze);
     margin-bottom: 22px;
-    text-align: center;
 }
-.section-sub {
-    font-size: clamp(1rem, 1.8vw, 1.15rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 56px; text-align: center;
+.sec-title {
+    font-size: clamp(1.9rem, 4.4vw, 3.1rem);
+    margin-bottom: 20px;
 }
+.sec-lede {
+    font-size: 0.99rem;
+    color: var(--mist);
+    max-width: 58ch;
+}
+.centered { text-align: center; }
+.centered .sec-lede { margin-left: auto; margin-right: auto; }
 
-.gradient-text {
-    background: linear-gradient(120deg, var(--gold) 10%, var(--gold-pale) 40%, var(--gold) 70%, #b8912b 95%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    background-size: 220% auto;
-    animation: goldShift 5s ease-in-out infinite;
+/* ---------- royal divider motif ---------- */
+.divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; padding: 0;
 }
-@keyframes goldShift {
-    0%, 100% { background-position: 0% center; }
-    50% { background-position: 100% center; }
+.divider span { display: block; width: 60px; height: 1px; background: var(--rule); }
+.divider i {
+    display: block; width: 5px; height: 5px;
+    background: var(--bronze); transform: rotate(45deg);
 }
+.band-divider { padding: 54px 0; background: var(--navy); }
 
-/* Buttons */
+/* ---------- buttons ---------- */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    min-height: 52px; padding: 14px 34px;
-    border-radius: 980px; border: none;
-    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+    min-height: 52px; padding: 15px 32px;
+    border: 1px solid transparent; border-radius: 2px;
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, background 0.3s ease;
+    transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, transform 0.35s var(--ease);
 }
-.btn-primary {
-    background: linear-gradient(135deg, #c9a02c, var(--gold) 45%, var(--gold-soft));
-    color: #1a1503;
-    box-shadow: 0 0 34px rgba(212, 175, 55, 0.22);
-}
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 12px 44px rgba(212, 175, 55, 0.38);
-}
-.btn-secondary {
-    background: transparent; color: var(--ivory);
-    border: 1.5px solid rgba(246, 242, 232, 0.28);
-}
-.btn-secondary:hover {
-    border-color: var(--gold);
-    background: rgba(212, 175, 55, 0.08);
-    transform: translateY(-2px);
-}
-.btn-large { min-height: 58px; padding: 17px 46px; font-size: 1.1rem; }
+.btn-gold { background: var(--gold); color: #14100a; }
+.btn-gold:hover { background: #e0c05a; transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--ivory); border-color: rgba(245, 241, 230, 0.42); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.btn-dark { background: var(--navy); color: var(--ivory); }
+.btn-dark:hover { background: var(--navy-2); transform: translateY(-2px); }
+.btn-block { width: 100%; }
 
-/* ============ NAVIGATION ============ */
-.nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(10, 22, 51, 0.55);
-    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+/* PRELOADER — monogram crest */
+.preloader {
+    position: fixed; inset: 0; z-index: 4000;
+    background: var(--navy);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 30px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.nav.scrolled {
-    background: rgba(6, 13, 33, 0.92);
-    box-shadow: 0 1px 34px rgba(212, 175, 55, 0.10);
+.no-js .preloader { display: none; }
+.preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+.pre-crest { width: 132px; height: 132px; }
+.pre-ring-outer, .pre-ring-inner { transform-origin: 60px 60px; }
+.pre-ring-outer { animation: spinRing 2.6s linear infinite; }
+.pre-ring-inner { animation: spinRing 2.6s linear infinite reverse; }
+@keyframes spinRing { to { transform: rotate(360deg); } }
+.pre-mono-stroke {
+    stroke-dasharray: 460; stroke-dashoffset: 460;
+    animation: monoDraw 1.5s ease-out forwards;
 }
-.nav-container {
-    max-width: 1120px; margin: 0 auto; padding: 0 24px;
-    display: flex; justify-content: space-between; align-items: center;
-    height: 68px;
+@keyframes monoDraw { to { stroke-dashoffset: 0; } }
+.pre-mono-fill { opacity: 0; animation: monoFill 0.9s ease-out 0.85s forwards; }
+@keyframes monoFill { to { opacity: 1; } }
+.pre-label {
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--bronze);
 }
-.nav-logo {
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; color: var(--ivory);
+
+/* HEADER */
+.header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1200;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s ease, border-color 0.4s ease;
 }
-.nav-crest { width: 38px; height: 42px; flex-shrink: 0; }
-.nav-logo-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.02rem; letter-spacing: 0.01em; line-height: 1.15;
+.header.solid { background: var(--navy); border-bottom-color: var(--rule); }
+.header-inner {
+    max-width: 1300px; margin: 0 auto; padding: 0 24px;
+    height: 92px;
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+    gap: 20px;
 }
-.nav-logo-name small {
-    display: block; font-family: 'Inter', sans-serif; font-weight: 500;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--gold-soft);
-}
-.nav-links { display: flex; align-items: center; gap: 30px; }
-.nav-links a {
-    font-size: 0.9rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 10px 2px;
+.nav-side { display: flex; align-items: center; gap: 26px; }
+.nav-side.right { justify-content: flex-end; }
+.nav-side a {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ivory); text-decoration: none;
+    padding: 8px 0; position: relative;
     transition: color 0.3s ease;
 }
-.nav-links a:hover { color: var(--gold-soft); }
-.nav-cta {
-    background: linear-gradient(135deg, #c9a02c, var(--gold));
-    color: #1a1503 !important;
-    padding: 10px 22px !important; border-radius: 980px; font-weight: 600;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.nav-side a::after {
+    content: ''; position: absolute; left: 0; right: 100%; bottom: 2px;
+    height: 1px; background: var(--bronze);
+    transition: right 0.35s var(--ease);
 }
-.nav-cta:hover { box-shadow: 0 0 32px rgba(212, 175, 55, 0.4); transform: translateY(-1px); }
-.nav-hamburger {
-    display: none; flex-direction: column; justify-content: center; gap: 5px;
-    width: 48px; height: 48px; padding: 12px 11px;
+.nav-side a:hover { color: var(--gold); }
+.nav-side a:hover::after { right: 0; }
+
+.brand {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    text-decoration: none; color: var(--ivory);
+}
+.brand svg { width: 38px; height: 38px; }
+.brand-name {
+    font-family: var(--serif); font-weight: 600;
+    font-size: 1.02rem; line-height: 1; letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+.brand-sub {
+    font-size: 0.55rem; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--bronze); white-space: nowrap;
+}
+
+.util {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ivory); text-decoration: none;
+    transition: color 0.3s ease;
+}
+.util svg { width: 15px; height: 15px; stroke: var(--bronze); fill: none; stroke-width: 1.6; transition: stroke 0.3s ease; }
+.util:hover { color: var(--gold); }
+.util:hover svg { stroke: var(--gold); }
+.util::after { display: none; }
+
+.burger {
+    display: none; width: 46px; height: 46px;
     background: transparent; border: none; cursor: pointer;
+    flex-direction: column; justify-content: center; gap: 6px; padding: 10px;
 }
-.hamburger-line {
-    display: block; width: 100%; height: 2px;
-    background: var(--ivory); border-radius: 2px;
-    transition: transform 0.35s var(--ease-soft), opacity 0.25s ease;
-}
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.burger span { display: block; height: 1px; width: 100%; background: var(--ivory); transition: transform 0.35s var(--ease), opacity 0.25s ease; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ============ AMBIENT ORBS ============ */
-.orb {
-    position: fixed; border-radius: 50%;
-    filter: blur(90px); pointer-events: none; z-index: 0;
-    opacity: 0.55;
+.drawer {
+    display: none;
+    background: var(--navy);
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule);
+    padding: 8px 28px 26px;
 }
-.orb-1 {
-    width: 520px; height: 520px; top: -12%; right: -14%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, rgba(212, 175, 55, 0.05) 55%, transparent 75%);
-    animation: orbDrift1 26s ease-in-out infinite;
+.drawer.open { display: block; }
+.drawer a {
+    display: block; padding: 15px 0;
+    border-bottom: 1px solid rgba(245, 241, 230, 0.07);
+    font-size: 0.76rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ivory); text-decoration: none;
 }
-.orb-2 {
-    width: 460px; height: 460px; bottom: -18%; left: -12%;
-    background: radial-gradient(circle, rgba(46, 84, 179, 0.28) 0%, rgba(46, 84, 179, 0.08) 55%, transparent 75%);
-    animation: orbDrift2 32s ease-in-out infinite;
-}
-.orb-3 {
-    width: 340px; height: 340px; top: 42%; left: 58%;
-    background: radial-gradient(circle, rgba(232, 207, 122, 0.10) 0%, transparent 70%);
-    animation: orbDrift1 38s ease-in-out infinite reverse;
-}
-@keyframes orbDrift1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-60px, 50px) scale(1.12); }
-}
-@keyframes orbDrift2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(70px, -40px) scale(1.08); }
-}
+.drawer a:last-of-type { border-bottom: none; }
+.drawer .btn { margin-top: 18px; }
 
-section { position: relative; z-index: 1; }
-
-/* ============ HERO ============ */
+/* HERO — crossfading slideshow */
 .hero {
+    position: relative;
     min-height: 100vh; min-height: 100svh;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 130px 24px 90px;
-    position: relative; overflow: hidden;
-    background:
-        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
-        var(--navy);
+    display: flex; align-items: flex-end;
+    padding: 150px 0 92px;
+    overflow: hidden;
+    background: var(--navy);
 }
-/* Full-bleed campus photo layered UNDER the brand gradient tint */
-.hero::before {
-    content: '';
-    position: absolute; inset: -3%;
-    z-index: 0;
-    background-image:
-        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.20) 0%, transparent 62%),
-        linear-gradient(180deg, rgba(6, 13, 33, 0.86) 0%, rgba(10, 22, 51, 0.80) 40%, rgba(6, 13, 33, 0.94) 100%),
-        url('https://images.pexels.com/photos/39198178/pexels-photo-39198178.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    background-size: cover, cover, cover;
-    background-position: center, center, center 30%;
-    background-repeat: no-repeat;
+.hero-stage { position: absolute; inset: 0; z-index: 0; background: var(--navy-2); }
+.hero-slide {
+    position: absolute; inset: 0;
+    opacity: 0;
+    transition: opacity 1.6s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: contrast(1.08) saturate(0.92) brightness(0.86);
     transform-origin: center;
-    animation: kenBurns 26s ease-in-out infinite alternate;
-    pointer-events: none;
 }
-@keyframes kenBurns {
-    from { transform: scale(1); }
-    to { transform: scale(1.08); }
+.hero-slide:nth-child(odd).active img { animation: kbZoom 9s ease-out forwards; }
+.hero-slide:nth-child(even).active img { animation: kbPan 9s ease-out forwards; }
+@keyframes kbZoom { from { transform: scale(1.02); } to { transform: scale(1.13); } }
+@keyframes kbPan { from { transform: scale(1.1) translateX(-1.6%); } to { transform: scale(1.1) translateX(1.6%); } }
+.hero-scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(10, 22, 51, 0.25) 0%, rgba(10, 22, 51, 0.92) 100%),
+        linear-gradient(90deg, rgba(10, 22, 51, 0.72) 0%, rgba(10, 22, 51, 0.18) 62%),
+        rgba(16, 31, 74, 0.14);
 }
-.hero::after {
-    content: '';
-    position: absolute; left: 0; right: 0; bottom: 0; height: 180px;
-    z-index: 1;
-    background: linear-gradient(to bottom, transparent, var(--navy-deep));
-    pointer-events: none;
+.hero-inner { position: relative; z-index: 2; width: 100%; }
+.hero-copy { max-width: 640px; }
+.hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    line-height: 1.08;
+    margin-bottom: 22px;
 }
-.hero .container { position: relative; z-index: 2; }
+.hero h1 .rotator {
+    display: block; position: relative;
+    height: 1.14em; overflow: hidden;
+    color: var(--ivory);
+}
+.hero h1 .rotator span {
+    position: absolute; left: 0; top: 0; width: 100%;
+    opacity: 0; transform: translateY(0.5em);
+    transition: opacity 0.6s ease, transform 0.6s var(--ease);
+    white-space: nowrap;
+}
+.hero h1 .rotator span.on { opacity: 1; transform: translateY(0); }
+.hero-body {
+    font-size: 1rem; color: var(--mist);
+    max-width: 52ch; margin-bottom: 34px;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* ============ PHOTO SYSTEM ============ */
-.photo-frame {
+.hero-foot {
+    position: absolute; left: 0; right: 0; bottom: 30px; z-index: 3;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px;
+    max-width: 1180px; margin: 0 auto; padding: 0 28px;
+}
+.slide-count {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
+    color: var(--bronze);
+}
+.slide-count::before { content: ''; display: block; width: 54px; height: 1px; background: var(--rule); }
+.slide-count b { color: var(--ivory); font-weight: 600; }
+.dots { display: flex; gap: 10px; }
+.dots button {
+    width: 26px; height: 2px; padding: 10px 0; background: transparent;
+    border: none; cursor: pointer; position: relative;
+}
+.dots button::after {
+    content: ''; position: absolute; left: 0; right: 0; top: 50%;
+    height: 1px; background: rgba(245, 241, 230, 0.32);
+    transition: background 0.35s ease;
+}
+.dots button[aria-current="true"]::after { background: var(--gold); height: 2px; }
+.hero-scroll-hint {
+    font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase;
+    color: rgba(185, 192, 212, 0.7);
+}
+
+/* MARQUEE */
+.marquee {
+    background: var(--navy-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    height: 44px; overflow: hidden;
+    display: flex; align-items: center;
+}
+.marquee-track {
+    display: flex; align-items: center; white-space: nowrap;
+    animation: marqueeRun 28s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marqueeRun { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-item {
+    display: inline-flex; align-items: center; gap: 20px;
+    padding: 0 20px;
+    font-size: 0.66rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+}
+.marquee-item::after { content: '◆'; color: var(--bronze); font-size: 0.5rem; letter-spacing: 0; }
+
+/* WELCOME */
+.welcome { padding: 108px 0 88px; background: var(--navy); }
+.welcome-grid {
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: 68px; align-items: center;
+}
+.welcome-copy { position: relative; padding-left: 30px; }
+.welcome-copy::before {
+    content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
+    width: 1px; background: linear-gradient(180deg, var(--bronze), rgba(165, 135, 88, 0));
+}
+.dropcap::first-letter {
+    float: left;
+    font-family: var(--serif); font-weight: 600;
+    font-size: 3.6rem; line-height: 0.86;
+    color: var(--bronze);
+    padding: 6px 12px 0 0;
+}
+.welcome-copy p { margin-bottom: 18px; font-size: 0.99rem; }
+.welcome-copy p:last-of-type { margin-bottom: 0; }
+.signature {
+    margin-top: 30px; padding-top: 22px;
+    border-top: 1px solid var(--rule-soft);
+}
+.signature strong {
+    display: block; font-family: var(--serif); font-weight: 600;
+    font-size: 1.15rem; color: var(--ivory); letter-spacing: 0.02em;
+}
+.signature span {
+    font-size: 0.64rem; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--bronze);
+}
+
+.frame {
+    position: relative;
+    padding: 0;
+}
+.frame::before {
+    content: ''; position: absolute;
+    left: -14px; top: 14px; right: 14px; bottom: -14px;
+    border: 1px solid var(--rule);
+    pointer-events: none;
+}
+.frame-media {
     position: relative; overflow: hidden;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    /* gradient fallback shows if the photo fails to load */
-    background: linear-gradient(150deg, rgba(212, 175, 55, 0.14), rgba(14, 29, 66, 0.9) 60%, var(--navy-deep));
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(165deg, var(--navy-3), var(--navy-2) 60%, var(--navy));
+    border: 1px solid var(--rule-soft);
 }
-.photo-frame img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: saturate(1.05) contrast(1.02);
-    transition: transform 0.7s var(--ease-soft);
+.frame-media img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: contrast(1.06) saturate(0.95);
 }
-.photo-frame:hover img { transform: scale(1.05); }
-.photo-frame::after {
+.frame-media::after {
     content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(10, 22, 51, 0) 45%, rgba(6, 13, 33, 0.45) 100%);
+    background: rgba(16, 31, 74, 0.16);
+    mix-blend-mode: multiply;
 }
 
-/* Split feature rows: photo + copy */
-.feature-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 46px; align-items: center;
-    max-width: 1000px; margin: 0 auto 84px;
-    text-align: left;
+/* PILLARS */
+.pillars { padding: 96px 0 104px; background: var(--navy); }
+.pillar-head { margin-bottom: 54px; }
+.pillar-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
 }
-.feature-row:last-child { margin-bottom: 0; }
-.feature-row.reverse .photo-frame { order: 2; }
-@media (max-width: 720px) {
-    .feature-row.reverse .photo-frame { order: 0; }
-    .feature-row { gap: 30px; margin-bottom: 60px; }
+.pillar {
+    background: var(--navy-2);
+    border: 1px solid var(--rule-soft);
+    border-radius: 2px;
+    padding: 34px 24px 30px;
+    transition: transform 0.45s var(--ease), border-color 0.4s ease, background 0.4s ease;
 }
-.feature-copy .section-eyebrow { margin-bottom: 14px; }
-.feature-copy .section-eyebrow::after { margin-left: 0; margin-right: auto; }
-.feature-copy h3 {
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
+.pillar:hover { transform: translateY(-6px); border-color: var(--rule); background: #122352; }
+.pillar-icon { width: 34px; height: 34px; margin-bottom: 20px; }
+.pillar-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--bronze); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.4s ease; }
+.pillar:hover .pillar-icon svg { stroke: var(--gold); }
+.pillar h3 { font-size: 1.32rem; margin-bottom: 10px; }
+.pillar p { font-size: 0.85rem; line-height: 1.7; color: var(--mist); }
+
+/* STATS BAND */
+.stats {
+    position: relative;
+    padding: 80px 0;
+    background: var(--navy-2);
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+    overflow: hidden;
+}
+.stats::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(165, 135, 88, 0.06), transparent 70%);
+}
+.stats .wrap { position: relative; z-index: 1; }
+.stats-head { text-align: center; margin-bottom: 46px; }
+.stats-head .eyebrow { margin-bottom: 12px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { text-align: center; padding: 8px 18px; border-left: 1px solid rgba(212, 175, 55, 0.2); }
+.stat:first-child { border-left: none; }
+.stat-num {
+    display: block;
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(2.4rem, 5.4vw, 3.6rem);
+    line-height: 1; color: var(--gold);
     margin-bottom: 14px;
 }
-.feature-copy p { color: var(--ivory-dim); font-size: 1rem; max-width: 46ch; }
-.feature-copy p + p { margin-top: 14px; }
+.stat-cap {
+    display: block;
+    font-size: 0.63rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ivory); line-height: 1.7;
+}
+.stat-note {
+    margin-top: 34px; text-align: center;
+    font-size: 0.72rem; letter-spacing: 0.06em;
+    color: rgba(185, 192, 212, 0.72);
+}
 
-/* Gallery strip */
-.gallery-strip {
+/* MOSAIC */
+.mosaic-sec { padding: 100px 0 92px; background: var(--navy); }
+.mosaic-head { margin-bottom: 44px; }
+.mosaic {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 16px;
-    max-width: 1000px; margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 168px;
+    gap: 14px;
 }
-.gallery-strip .photo-frame { aspect-ratio: 4 / 3; border-radius: 14px; }
+.tile {
+    position: relative; overflow: hidden;
+    border: 1px solid var(--rule-soft);
+    background: linear-gradient(150deg, var(--navy-3), var(--navy-2) 65%, var(--navy));
+}
+.tile img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: contrast(1.07) saturate(0.93);
+    transition: transform 0.7s var(--ease);
+}
+.tile::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: rgba(10, 22, 51, 0.28);
+    transition: background 0.6s ease;
+}
+.tile:hover img { transform: scale(1.05); }
+.tile:hover::after { background: rgba(10, 22, 51, 0.08); }
+.tile-cap {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+    padding: 26px 20px 16px;
+    background: linear-gradient(180deg, rgba(10, 22, 51, 0), rgba(10, 22, 51, 0.86));
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ivory);
+}
+.t-a { grid-column: span 6; grid-row: span 2; }
+.t-b { grid-column: span 3; }
+.t-c { grid-column: span 3; }
+.t-d { grid-column: span 3; }
+.t-e { grid-column: span 3; }
+.repcap {
+    margin-top: 16px; text-align: right;
+    font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(185, 192, 212, 0.55);
+}
 
-/* Trust strip */
-.trust-strip {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 14px 18px;
-    max-width: 900px; margin: 0 auto;
+/* LIGHT SECTION — ADMISSIONS */
+.admissions {
+    padding: 104px 0 108px;
+    background: var(--paper);
+    color: #3b3a34;
 }
-.trust-chip {
-    display: inline-flex; align-items: center; gap: 9px;
-    padding: 11px 20px; border-radius: 980px;
-    border: 1px solid var(--line);
-    background: rgba(14, 29, 66, 0.55);
-    font-size: 0.82rem; font-weight: 500;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--ivory-dim);
-    transition: border-color 0.35s ease, color 0.35s ease;
-}
-.trust-chip:hover { border-color: rgba(212, 175, 55, 0.42); color: var(--ivory); }
-.trust-chip svg { width: 16px; height: 16px; stroke: var(--gold-soft); fill: none; stroke-width: 2; flex-shrink: 0; }
+.admissions h2, .admissions h3 { color: #0f1c3f; }
+.admissions .eyebrow { color: #8a6f45; }
+.admissions .sec-lede { color: #5a5850; }
+.adm-head { margin-bottom: 62px; }
 
-/* ============ STICKY MOBILE CALL / WHATSAPP BAR ============ */
+.steps {
+    position: relative;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px;
+    margin-bottom: 68px;
+}
+.steps::before {
+    content: ''; position: absolute; left: 11%; right: 11%; top: 27px;
+    border-top: 1px dashed rgba(165, 135, 88, 0.55);
+    z-index: 0;
+}
+.step { position: relative; z-index: 1; text-align: center; }
+.step-num {
+    width: 54px; height: 54px; margin: 0 auto 20px;
+    border: 1px solid var(--bronze); border-radius: 50%;
+    background: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-weight: 600; font-size: 1.4rem;
+    color: #8a6f45;
+}
+.step h3 { font-size: 1.24rem; margin-bottom: 8px; }
+.step p { font-size: 0.86rem; line-height: 1.7; color: #5a5850; max-width: 30ch; margin: 0 auto; }
+
+.enquiry {
+    max-width: 640px; margin: 0 auto;
+    background: #fff;
+    border: 1px solid rgba(165, 135, 88, 0.34);
+    border-radius: 2px;
+    padding: 40px 38px 34px;
+}
+.enquiry-top { text-align: center; margin-bottom: 28px; }
+.enquiry-top h3 { font-size: 1.6rem; margin-bottom: 6px; }
+.enquiry-top p { font-size: 0.84rem; color: #5a5850; }
+.field { margin-bottom: 18px; }
+.field label {
+    display: block; margin-bottom: 8px;
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: #8a6f45;
+}
+.field input, .field select {
+    width: 100%; min-height: 52px;
+    padding: 13px 15px;
+    font-family: var(--sans); font-size: 0.95rem;
+    color: var(--ivory);
+    background: var(--navy);
+    border: 1px solid var(--navy-3);
+    border-radius: 2px;
+    -webkit-appearance: none; appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.field select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23a58758' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat; background-position: right 16px center;
+    padding-right: 40px;
+}
+.field select option { background: var(--navy); color: var(--ivory); }
+.field input::placeholder { color: rgba(185, 192, 212, 0.55); }
+.field input:focus, .field select:focus {
+    outline: none; border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+.enquiry .btn { margin-top: 6px; }
+.enquiry-fine {
+    margin-top: 14px; text-align: center;
+    font-size: 0.7rem; color: #6b6960;
+}
+.enquiry-fine a { color: #8a6f45; }
+
+.enq-success { display: none; text-align: center; padding: 12px 0 6px; }
+.enq-success.show { display: block; }
+.enq-ring {
+    width: 74px; height: 74px; margin: 0 auto 22px;
+    border: 1px solid var(--bronze); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.enq-ring svg { width: 32px; height: 32px; }
+.enq-check {
+    fill: none; stroke: #8a6f45; stroke-width: 2.4;
+    stroke-linecap: round; stroke-linejoin: round;
+    stroke-dasharray: 48; stroke-dashoffset: 48;
+    animation: checkDraw 0.7s ease-out 0.15s forwards;
+}
+@keyframes checkDraw { to { stroke-dashoffset: 0; } }
+.enq-success h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.enq-success p { font-size: 0.9rem; color: #5a5850; max-width: 42ch; margin: 0 auto 8px; }
+.enq-success .demo-line { font-size: 0.74rem; color: #8a6f45; letter-spacing: 0.06em; margin-top: 14px; }
+
+/* AFFILIATION STRIP */
+.affil { padding: 74px 0; background: var(--navy); border-bottom: 1px solid var(--rule-soft); }
+.affil-head { text-align: center; margin-bottom: 40px; }
+.affil-title { font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+.affil-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+}
+.badge {
+    padding: 30px 22px; text-align: center;
+    border-left: 1px solid var(--rule-soft);
+}
+.badge:first-child { border-left: none; }
+.badge b {
+    display: block;
+    font-family: var(--serif); font-weight: 600;
+    font-size: 1.28rem; color: var(--ivory); margin-bottom: 8px;
+}
+.badge span {
+    display: block;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--bronze); line-height: 1.7;
+}
+.affil-note {
+    margin-top: 26px; text-align: center;
+    font-size: 0.76rem; color: rgba(185, 192, 212, 0.72);
+    max-width: 62ch; margin-left: auto; margin-right: auto;
+}
+
+/* FAQ */
+.faq { padding: 96px 0 100px; background: var(--navy); }
+.faq-head { margin-bottom: 42px; }
+.faq-list { max-width: 820px; margin: 0 auto; border-top: 1px solid var(--rule-soft); }
+.faq-item { border-bottom: 1px solid var(--rule-soft); }
+.faq-q {
+    width: 100%; min-height: 68px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    padding: 22px 2px;
+    background: transparent; border: none; cursor: pointer;
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(1.12rem, 2.3vw, 1.42rem);
+    color: var(--ivory); text-align: left;
+    transition: color 0.3s ease;
+}
+.faq-q:hover { color: var(--gold); }
+.faq-icon { flex-shrink: 0; width: 16px; height: 16px; position: relative; transition: transform 0.4s var(--ease); }
+.faq-icon::before, .faq-icon::after {
+    content: ''; position: absolute; left: 0; top: 50%;
+    width: 16px; height: 1px; background: var(--bronze);
+}
+.faq-icon::after { transform: rotate(90deg); }
+.faq-q[aria-expanded="true"] .faq-icon { transform: rotate(135deg); }
+.faq-q[aria-expanded="true"] .faq-icon::before, .faq-q[aria-expanded="true"] .faq-icon::after { background: var(--gold); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease); }
+.faq-a p { padding: 0 2px 26px; font-size: 0.93rem; color: var(--mist); max-width: 66ch; }
+
+/* VISIT */
+.visit {
+    padding: 100px 0 96px;
+    background: linear-gradient(160deg, var(--navy-3) 0%, var(--navy-2) 46%, var(--navy) 100%);
+}
+.visit-head { margin-bottom: 48px; }
+.visit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); }
+.visit-card { background: rgba(10, 22, 51, 0.55); padding: 30px 24px; }
+.visit-card h3 {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--bronze); margin-bottom: 14px;
+}
+.visit-card p { font-size: 0.94rem; color: var(--ivory); line-height: 1.65; }
+.visit-card p span { display: block; margin-top: 6px; font-size: 0.78rem; color: var(--mist); }
+.visit-card a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.visit-card a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+.visit-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+/* FOOTER */
+.footer { background: var(--navy); border-top: 1px solid var(--rule); padding: 60px 0 40px; text-align: center; }
+.footer-crest { width: 40px; height: 40px; margin: 0 auto 16px; }
+.footer-name { font-family: var(--serif); font-weight: 600; font-size: 1.22rem; color: var(--ivory); margin-bottom: 6px; }
+.footer-addr { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bronze); margin-bottom: 28px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-bottom: 30px; }
+.footer-links a { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mist); text-decoration: none; }
+.footer-links a:hover { color: var(--gold); }
+.footer-legal { font-size: 0.74rem; color: rgba(185, 192, 212, 0.68); max-width: 66ch; margin: 0 auto 10px; line-height: 1.8; }
+.footer-legal a { color: var(--bronze); text-decoration: none; }
+.footer-legal a:hover { color: var(--gold); }
+.footer-copy { font-size: 0.68rem; color: rgba(185, 192, 212, 0.42); margin-top: 14px; }
+
+/* FLOATS */
+.wa-float {
+    position: fixed; right: 22px; bottom: 22px; z-index: 1300;
+    width: 54px; height: 54px; border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--navy-2);
+    border: 1px solid var(--rule);
+    text-decoration: none;
+    transition: border-color 0.35s ease, transform 0.35s var(--ease), background 0.35s ease;
+}
+.wa-float svg { width: 26px; height: 26px; fill: var(--wa); }
+.wa-float:hover { border-color: var(--gold); transform: translateY(-3px); background: #14275c; }
+
+.demo-badge {
+    position: fixed; left: 20px; bottom: 22px; z-index: 1300;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 9px 10px 9px 14px;
+    background: var(--navy-2);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--bronze);
+}
+.demo-badge button {
+    width: 22px; height: 22px; border: none; cursor: pointer;
+    background: rgba(165, 135, 88, 0.16); color: var(--bronze);
+    font-size: 0.85rem; line-height: 1; border-radius: 2px;
+}
+.demo-badge button:hover { background: rgba(165, 135, 88, 0.3); }
+.demo-badge.hidden { display: none; }
+
 .mobile-bar { display: none; }
+
+/* REVEAL */
+.js .reveal { opacity: 0; transform: translateY(24px); }
+.js .reveal.in { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s var(--ease); }
+
+/* RESPONSIVE */
+@media (max-width: 1080px) {
+    .pillar-grid { grid-template-columns: repeat(3, 1fr); }
+    .welcome-grid { gap: 46px; }
+}
+@media (max-width: 960px) {
+    .header-inner { grid-template-columns: auto 1fr auto; height: 76px; }
+    .nav-side.left { display: none; }
+    .nav-side.right { display: none; }
+    .burger { display: flex; }
+    .brand { align-items: flex-start; }
+    .header-inner .brand { justify-self: start; grid-column: 2; }
+    .burger { grid-column: 3; justify-self: end; }
+    .header-inner::before { content: ''; grid-column: 1; width: 0; }
+    html { scroll-padding-top: 84px; }
+
+    .welcome-grid { grid-template-columns: 1fr; gap: 44px; }
+    .frame { order: -1; max-width: 460px; }
+    .frame-media { aspect-ratio: 4 / 3; }
+    .visit-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 34px 20px; }
+    .steps::before { display: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+    .stat:nth-child(3) { border-left: none; }
+    .affil-row { grid-template-columns: repeat(2, 1fr); }
+    .badge:nth-child(3) { border-left: none; }
+    .badge:nth-child(3), .badge:nth-child(4) { border-top: 1px solid var(--rule-soft); }
+}
 @media (max-width: 720px) {
+    .wrap, .wrap-narrow { padding: 0 20px; }
+    .hero { padding: 130px 0 118px; align-items: flex-end; }
+    .hero-foot { flex-direction: column; align-items: flex-start; gap: 14px; bottom: 74px; padding: 0 20px; }
+    .hero-scroll-hint { display: none; }
+    .hero-ctas .btn { flex: 1 1 100%; }
+    .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+    .mosaic { grid-auto-rows: 132px; }
+    .t-a { grid-column: span 12; grid-row: span 2; }
+    .t-b, .t-c, .t-d, .t-e { grid-column: span 6; }
+    .repcap { text-align: left; }
+    .enquiry { padding: 30px 22px 26px; }
+    .welcome { padding: 78px 0 66px; }
+    .pillars, .mosaic-sec, .faq { padding: 74px 0; }
+    .admissions { padding: 78px 0 82px; }
+    .visit { padding: 74px 0 78px; }
+
     .mobile-bar {
-        display: grid; grid-template-columns: 1fr 1fr;
-        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1150;
-        background: rgba(6, 13, 33, 0.96);
-        backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid rgba(212, 175, 55, 0.28);
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1350;
+        background: var(--navy-2);
+        border-top: 1px solid var(--rule);
         padding-bottom: env(safe-area-inset-bottom, 0);
     }
     .mobile-bar a {
-        display: flex; align-items: center; justify-content: center; gap: 9px;
-        min-height: 56px; padding: 14px 10px;
-        font-size: 0.95rem; font-weight: 600; text-decoration: none;
-        color: var(--ivory);
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: 56px; padding: 12px 6px;
+        font-size: 0.63rem; font-weight: 600;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--gold); text-decoration: none;
+        border-left: 1px solid var(--rule-soft);
     }
-    .mobile-bar a svg { width: 19px; height: 19px; }
-    .mobile-bar .mb-call { color: var(--gold-soft); border-right: 1px solid rgba(212, 175, 55, 0.2); }
-    .mobile-bar .mb-call svg { fill: none; stroke: var(--gold-soft); stroke-width: 2; }
-    .mobile-bar .mb-wa { color: #eafff2; background: rgba(37, 211, 102, 0.16); }
-    .mobile-bar .mb-wa svg { fill: var(--wa-green); }
-    .wa-float { bottom: 82px; }
-    .back-to-top { bottom: 150px; }
-    .demo-badge { bottom: 76px; }
-    .footer { padding-bottom: 140px; }
+    .mobile-bar a:first-child { border-left: none; }
+    .mobile-bar a svg { width: 16px; height: 16px; }
+    .mobile-bar a.mb-enq { background: var(--gold); color: #14100a; }
+    .wa-float { bottom: 78px; right: 16px; }
+    .demo-badge { bottom: 80px; left: 16px; }
+    .footer { padding-bottom: 96px; }
+}
+@media (max-width: 420px) {
+    .pillar-grid { grid-template-columns: 1fr; }
+    .visit-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr; }
+    .stat { border-left: none; }
+    .affil-row { grid-template-columns: 1fr; }
+    .badge { border-left: none; border-top: 1px solid var(--rule-soft); }
+    .badge:first-child { border-top: none; }
+    .hero h1 .rotator span { white-space: normal; }
+    .hero h1 .rotator { height: 2.3em; }
 }
 
-/* Crest — signature element */
-.hero-crest {
-    width: clamp(112px, 16vw, 152px); height: auto;
-    margin: 0 auto 30px; display: block;
-    filter: drop-shadow(0 0 26px rgba(212, 175, 55, 0.28));
-    animation: crestFloat 7s ease-in-out infinite;
-}
-@keyframes crestFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-9px); }
-}
-.crest-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: crestDraw 2.4s ease-out 0.3s forwards; }
-.crest-draw-slow { stroke-dasharray: 900; stroke-dashoffset: 900; animation: crestDraw 3s ease-out 0.6s forwards; }
-@keyframes crestDraw { to { stroke-dashoffset: 0; } }
-.crest-fade { opacity: 0; animation: crestFade 1.4s ease-out 1.6s forwards; }
-@keyframes crestFade { to { opacity: 1; } }
-
-.hero-badge {
-    display: inline-block;
-    font-size: 0.76rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold-pale);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    background: rgba(212, 175, 55, 0.07);
-    padding: 9px 22px; border-radius: 980px;
-    margin-bottom: 30px;
-}
-.hero-headline {
-    font-size: clamp(2.6rem, 7.5vw, 5.4rem);
-    margin-bottom: 22px;
-    letter-spacing: -0.02em;
-}
-.hero-subtext {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 44px;
-}
-.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.hero-motto {
-    margin-top: 54px;
-    font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase;
-    color: rgba(232, 207, 122, 0.55);
-}
-
-/* ============ STORY ============ */
-.story {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-    text-align: center;
-}
-.story::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 45% at 18% 55%, rgba(46, 84, 179, 0.12) 0%, transparent 60%);
-    pointer-events: none;
-}
-.story .container { position: relative; z-index: 1; }
-.story-lines { max-width: 660px; margin: 0 auto; }
-.story-lines p {
-    font-size: clamp(1.12rem, 2.2vw, 1.4rem);
-    color: var(--ivory-dim);
-    margin-bottom: 26px; line-height: 1.55;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.story-lines p:hover { color: var(--ivory); transform: translateX(8px); }
-.story-lines p strong { color: var(--gold-soft); font-weight: 600; }
-.story-close {
-    margin-top: 20px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 600;
-    color: var(--ivory);
-}
-
-/* ============ OFFERINGS GRID ============ */
-.offerings {
-    padding: 130px 24px;
-    background: var(--navy);
-    text-align: center;
-}
-.offerings::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
-    pointer-events: none;
-}
-.offerings .container { position: relative; z-index: 1; }
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 26px;
-}
-.offer-card {
-    text-align: left;
-    padding: 36px 30px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: linear-gradient(160deg, rgba(232, 207, 122, 0.045) 0%, rgba(14, 29, 66, 0.6) 55%);
-    position: relative; overflow: hidden;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, border-color 0.4s ease;
-}
-.offer-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
-    opacity: 0; transition: opacity 0.4s ease;
-}
-.offer-card:hover {
-    transform: translateY(-6px) scale(1.015);
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(212, 175, 55, 0.08);
-}
-.offer-card:hover::before { opacity: 1; }
-.offer-icon {
-    width: 52px; height: 52px; margin-bottom: 22px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 14px;
-    background: rgba(212, 175, 55, 0.09);
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    transition: transform 0.45s var(--ease-soft), background 0.4s ease;
-}
-.offer-card:hover .offer-icon { transform: translateY(-3px) rotate(-4deg); background: rgba(212, 175, 55, 0.16); }
-.offer-icon svg { width: 26px; height: 26px; stroke: var(--gold-soft); }
-.offer-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
-.offer-card p { font-size: 0.95rem; color: var(--ivory-dim); }
-
-/* ============ STATS BAND ============ */
-.stats {
-    padding: 100px 24px;
-    background:
-        linear-gradient(180deg, rgba(212, 175, 55, 0.05), transparent 40%),
-        var(--navy-deep);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px; text-align: center;
-}
-.stat-number {
-    display: block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    background: linear-gradient(120deg, var(--gold), var(--gold-pale));
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    line-height: 1.1; margin-bottom: 8px;
-}
-.stat-label {
-    font-size: 0.92rem; color: var(--ivory-dim);
-    letter-spacing: 0.04em;
-}
-
-/* ============ SIGNATURE: A DAY AT ============ */
-.day {
-    padding: 130px 24px;
-    background: var(--navy);
-    overflow: hidden;
-}
-.day::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 45% 55% at 85% 30%, rgba(46, 84, 179, 0.14) 0%, transparent 60%);
-    pointer-events: none;
-}
-.day .container { position: relative; z-index: 1; }
-/* ============ AUTOMATION TEASER ============ */
-.automation {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-}
-.automation::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 50% at 50% 100%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-    pointer-events: none;
-}
-.automation .container { position: relative; z-index: 1; }
-.enquiry-shell {
-    max-width: 560px; margin: 0 auto;
-    padding: 44px 38px;
-    border-radius: 24px;
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    background: linear-gradient(165deg, rgba(232, 207, 122, 0.06), rgba(10, 22, 51, 0.85) 60%);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-    position: relative; overflow: hidden;
-}
-.enquiry-shell::before {
-    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
-}
-.enquiry-title {
-    font-size: 1.35rem; margin-bottom: 6px; text-align: center;
-}
-.enquiry-note {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-align: center; margin-bottom: 30px;
-}
-.field { margin-bottom: 20px; text-align: left; }
-.field label {
-    display: block; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 8px;
-}
-.field input, .field select {
-    width: 100%; min-height: 50px;
-    padding: 13px 16px;
-    font-family: 'Inter', sans-serif; font-size: 1rem;
-    color: var(--ivory);
-    background: rgba(6, 13, 33, 0.75);
-    border: 1px solid rgba(246, 242, 232, 0.14);
-    border-radius: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    -webkit-appearance: none; appearance: none;
-}
-.field select {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
-    background-repeat: no-repeat; background-position: right 16px center;
-    padding-right: 42px;
-}
-.field select option { background: var(--navy-deep); color: var(--ivory); }
-.field input::placeholder { color: rgba(185, 180, 166, 0.55); }
-.field input:focus, .field select:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
-}
-.enquiry-form .btn { width: 100%; margin-top: 6px; }
-.enquiry-privacy {
-    margin-top: 16px; text-align: center;
-    font-size: 0.75rem; color: rgba(185, 180, 166, 0.6);
-}
-
-/* Success state */
-.enquiry-success {
-    display: none;
-    text-align: center;
-    padding: 26px 6px 10px;
-}
-.enquiry-success.show { display: block; animation: successIn 0.6s var(--ease-soft); }
-@keyframes successIn {
-    from { opacity: 0; transform: translateY(16px) scale(0.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-.success-ring {
-    width: 78px; height: 78px; margin: 0 auto 22px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1.5px solid var(--gold);
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
-}
-.success-ring svg { width: 34px; height: 34px; }
-.success-check {
-    stroke: var(--gold-soft); stroke-width: 3; fill: none;
-    stroke-linecap: round; stroke-linejoin: round;
-    stroke-dasharray: 48; stroke-dashoffset: 48;
-    animation: checkDraw 0.7s ease-out 0.25s forwards;
-}
-@keyframes checkDraw { to { stroke-dashoffset: 0; } }
-.enquiry-success h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.enquiry-success p { font-size: 0.94rem; color: var(--ivory-dim); max-width: 380px; margin: 0 auto 8px; }
-.enquiry-success .success-hint { color: var(--gold-soft); font-size: 0.85rem; margin-top: 14px; }
-
-/* WhatsApp pitch strip */
-.wa-strip {
-    max-width: 720px; margin: 60px auto 0;
-    display: flex; align-items: center; gap: 20px;
-    padding: 26px 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(37, 211, 102, 0.28);
-    background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(10, 22, 51, 0.6));
-}
-.wa-strip-icon {
-    flex-shrink: 0;
-    width: 52px; height: 52px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
-}
-.wa-strip-icon svg { width: 28px; height: 28px; fill: #fff; }
-.wa-strip h3 { font-size: 1.08rem; margin-bottom: 4px; }
-.wa-strip p { font-size: 0.9rem; color: var(--ivory-dim); }
-
-/* ============ VISIT / CONTACT ============ */
-.visit {
-    padding: 130px 24px;
-    background: var(--navy);
-}
-.visit::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 50% at 12% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 55%);
-    pointer-events: none;
-}
-.visit .container { position: relative; z-index: 1; }
-.visit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
-    max-width: 900px; margin: 0 auto 44px;
-}
-.visit-card {
-    padding: 30px 26px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: rgba(14, 29, 66, 0.5);
-    text-align: center;
-    transition: transform 0.45s var(--ease-soft), border-color 0.4s ease;
-}
-.visit-card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.38); }
-.visit-card h3 {
-    font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 12px;
-}
-.visit-card p { font-size: 0.98rem; color: var(--ivory); }
-.visit-card p span { display: block; color: var(--ivory-dim); font-size: 0.88rem; margin-top: 4px; }
-.visit-card a { color: var(--gold-soft); text-decoration: none; }
-.visit-card a:hover { text-decoration: underline; }
-.visit-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-
-/* ============ FAQ ============ */
-.faq {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-}
-.faq-list { max-width: 760px; margin: 0 auto; }
-.faq-item {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
-}
-.faq-question {
-    width: 100%;
-    display: flex; justify-content: space-between; align-items: center; gap: 18px;
-    padding: 24px 4px;
-    background: transparent; border: none; cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: var(--ivory); text-align: left;
-    transition: color 0.3s ease;
-    min-height: 60px;
-}
-.faq-question:hover { color: var(--gold-soft); }
-.faq-question::after {
-    content: '+';
-    flex-shrink: 0;
-    font-family: 'Inter', sans-serif; font-weight: 300;
-    font-size: 1.7rem; line-height: 1;
-    color: var(--gold);
-    transition: transform 0.4s var(--ease-soft);
-}
-.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
-.faq-answer {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.45s var(--ease-soft);
-}
-.faq-answer p {
-    padding: 0 4px 24px;
-    font-size: 0.96rem; color: var(--ivory-dim);
-    max-width: 640px;
-}
-
-/* ============ FINAL CTA ============ */
-.final-cta {
-    padding: 150px 24px;
-    text-align: center;
-    background:
-        radial-gradient(ellipse 65% 60% at 50% 110%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
-        var(--navy);
-}
-.final-cta .section-headline { margin-bottom: 16px; }
-.cta-subtext {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--ivory-dim);
-    margin-bottom: 44px;
-}
-
-/* ============ FOOTER ============ */
-.footer {
-    padding: 60px 24px 110px;
-    background: var(--navy-deep);
-    border-top: 1px solid var(--line);
-    text-align: center;
-}
-.footer-crest { width: 44px; height: auto; margin: 0 auto 18px; display: block; opacity: 0.85; }
-.footer-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.05rem; margin-bottom: 4px;
-}
-.footer-tag {
-    font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 26px;
-}
-.footer-links {
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px;
-    margin-bottom: 30px;
-}
-.footer-links a {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 6px 0;
-    transition: color 0.3s ease;
-}
-.footer-links a:hover { color: var(--gold-soft); }
-.footer-demo-notice {
-    font-size: 0.78rem; color: rgba(185, 180, 166, 0.6);
-    max-width: 560px; margin: 0 auto 10px; line-height: 1.7;
-}
-.footer-demo-notice a { color: rgba(232, 207, 122, 0.7); text-decoration: none; }
-.footer-copy { font-size: 0.75rem; color: rgba(185, 180, 166, 0.45); }
-
-/* ============ FLOATING WHATSAPP ============ */
-.wa-float {
-    position: fixed; right: 20px; bottom: 20px; z-index: 1100;
-    width: 58px; height: 58px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4);
-    text-decoration: none;
-    transition: transform 0.4s var(--ease-soft), box-shadow 0.4s ease;
-    animation: waPulse 2.6s ease-in-out infinite;
-}
-.wa-float:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
-.wa-float svg { width: 30px; height: 30px; fill: #fff; }
-@keyframes waPulse {
-    0%, 100% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
-    55% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
-}
-
-/* ============ CONCEPT DEMO BADGE ============ */
-.demo-badge {
-    position: fixed; left: 16px; bottom: 16px; z-index: 1100;
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 10px 9px 16px;
-    border-radius: 980px;
-    background: rgba(6, 13, 33, 0.72);
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold-soft);
-}
-.demo-badge-close {
-    width: 26px; height: 26px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.12); border: none; cursor: pointer;
-    color: var(--gold-soft); font-size: 0.95rem; line-height: 1;
-    transition: background 0.3s ease;
-}
-.demo-badge-close:hover { background: rgba(212, 175, 55, 0.28); }
-.demo-badge.hidden { display: none; }
-
-/* ============ BACK TO TOP ============ */
-.back-to-top {
-    position: fixed; right: 22px; bottom: 92px; z-index: 1090;
-    width: 46px; height: 46px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(14, 29, 66, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: var(--gold-soft); cursor: pointer;
-    opacity: 0; pointer-events: none; transform: translateY(10px);
-    transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease;
-}
-.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.back-to-top:hover { background: rgba(212, 175, 55, 0.18); }
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 860px) {
-    .nav-links {
-        position: fixed; top: 68px; left: 0; right: 0;
-        flex-direction: column; align-items: stretch; gap: 0;
-        background: rgba(6, 13, 33, 0.97);
-        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--line);
-        padding: 12px 24px 24px;
-        transform: translateY(-12px); opacity: 0; pointer-events: none;
-        transition: transform 0.35s var(--ease-soft), opacity 0.3s ease;
-    }
-    .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-    .nav-links a { padding: 15px 4px; font-size: 1.02rem; border-bottom: 1px solid rgba(246, 242, 232, 0.06); }
-    .nav-links a:last-child { border-bottom: none; }
-    .nav-cta { text-align: center; margin-top: 14px; padding: 14px 22px !important; }
-    .nav-hamburger { display: flex; }
-    .wa-strip { flex-direction: column; text-align: center; }
-    .enquiry-shell { padding: 36px 24px; }
-}
-@media (max-width: 480px) {
-    .hero { padding: 110px 20px 70px; }
-    .hero-ctas .btn { width: 100%; }
-    .visit-actions .btn { width: 100%; }
-    .orb { filter: blur(70px); }
-    .container { padding: 0 20px; }
-}
-
-/* ============ REDUCED MOTION ============ */
+/* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.001ms !important;
     }
-    .hero::before { animation: none !important; transform: none; inset: 0; }
-    .photo-frame img { transition: none; }
-    .crest-draw, .crest-draw-slow { stroke-dashoffset: 0; }
-    .crest-fade { opacity: 1; }
-    .orb { display: none; }
-    .success-check { stroke-dashoffset: 0; }
+    .hero-slide.active img { animation: none !important; transform: none !important; }
+    .marquee-track { animation: none !important; }
+    .pre-mono-stroke { stroke-dashoffset: 0; }
+    .pre-mono-fill { opacity: 1; }
+    .enq-check { stroke-dashoffset: 0; }
+    .js .reveal { opacity: 1; transform: none; }
 }
 </style>
+
 <noscript>
 <style>
-    /* JS disabled: everything stays reachable */
-    .faq-answer { max-height: none; }
-    .faq-question::after { display: none; }
-    @media (max-width: 860px) {
-        .nav-links { position: static; transform: none; opacity: 1; pointer-events: auto; }
-        .nav-hamburger { display: none; }
-        .nav-container { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
-        .nav { position: absolute; }
-        html { scroll-padding-top: 0; }
-    }
-    .back-to-top, .demo-badge-close { display: none; }
+    .preloader { display: none; }
+    .faq-a { max-height: none; }
+    .faq-icon { display: none; }
+    .hero h1 .rotator { height: auto; }
+    .hero h1 .rotator span { position: static; opacity: 1; transform: none; white-space: normal; }
+    .hero h1 .rotator span:not(.on) { display: none; }
+    .dots, .demo-badge button { display: none; }
+    .marquee-track { animation: none; }
 </style>
 </noscript>
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- NAVIGATION -->
-    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="#top" class="nav-logo" aria-label="Maharishi Vidya Mandir, Gonda — home">
-                <svg class="nav-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                    <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                    <text x="38" y="50" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#e8cf7a">MVM</text>
-                </svg>
-                <span class="nav-logo-name">Maharishi Vidya Mandir<small>Gonda &middot; CBSE &middot; Since 1992</small></span>
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" role="status" aria-label="Loading">
+    <svg class="pre-crest" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <circle class="pre-ring-outer" cx="60" cy="60" r="46" fill="none" stroke="#a58758" stroke-width="1" stroke-dasharray="1.5 5.2"/>
+        <circle class="pre-ring-inner" cx="60" cy="60" r="38" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="1.5 5.2" stroke-dashoffset="3"/>
+        <text class="pre-mono-stroke" x="60" y="69" text-anchor="middle"
+              font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="600"
+              fill="none" stroke="#f5f1e6" stroke-width="0.7" letter-spacing="1.5">MVM</text>
+        <text class="pre-mono-fill" x="60" y="69" text-anchor="middle"
+              font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="600"
+              fill="#f5f1e6" letter-spacing="1.5">MVM</text>
+    </svg>
+    <p class="pre-label">Loading</p>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="header-inner">
+        <nav class="nav-side left" aria-label="Primary navigation left">
+            <a class="util" href="tel:+915262231698">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
+                05262-231698
             </a>
-            <div class="nav-links" id="nav-menu">
-                <a href="#story">About</a>
-                <a href="#offerings">Academics</a>
-                <a href="#day">Campus Life</a>
-                <a href="#visit">Visit</a>
-                <a href="#faq">FAQ</a>
-                <a href="#admission" class="nav-cta">Admission Enquiry</a>
-            </div>
-            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </nav>
+            <a href="#welcome">About</a>
+            <a href="#pillars">School Life</a>
+        </nav>
 
-    <!-- AMBIENT ORBS -->
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
-
-    <main id="main-content">
-
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="container">
-
-            <!-- Signature crest monogram -->
-            <svg class="hero-crest" viewBox="0 0 152 168" role="img" aria-label="Maharishi Vidya Mandir, Gonda crest" focusable="false">
-                <defs>
-                    <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#e8cf7a"/>
-                        <stop offset="55%" stop-color="#d4af37"/>
-                        <stop offset="100%" stop-color="#b8912b"/>
-                    </linearGradient>
-                </defs>
-                <!-- Shield -->
-                <path class="crest-draw-slow" d="M76 6 L142 26 V88 C142 124 112 150 76 162 C40 150 10 124 10 88 V26 Z"
-                      fill="rgba(212,175,55,0.04)" stroke="url(#crestGold)" stroke-width="3"/>
-                <path class="crest-draw" d="M76 18 L130 34 V88 C130 117 106 139 76 150 C46 139 22 117 22 88 V34 Z"
-                      fill="none" stroke="rgba(212,175,55,0.45)" stroke-width="1.5"/>
-                <!-- Rising sun -->
-                <g class="crest-fade">
-                    <circle cx="76" cy="62" r="13" fill="none" stroke="#e8cf7a" stroke-width="2"/>
-                    <g stroke="#e8cf7a" stroke-width="2" stroke-linecap="round">
-                        <line x1="76" y1="40" x2="76" y2="46"/>
-                        <line x1="58" y1="48" x2="62" y2="52"/>
-                        <line x1="94" y1="48" x2="90" y2="52"/>
-                        <line x1="52" y1="62" x2="58" y2="62"/>
-                        <line x1="94" y1="62" x2="100" y2="62"/>
-                    </g>
-                </g>
-                <!-- Open book -->
-                <g class="crest-fade">
-                    <path d="M40 92 C52 86 66 86 76 92 C86 86 100 86 112 92 V118 C100 112 86 112 76 118 C66 112 52 112 40 118 Z"
-                          fill="rgba(246,242,232,0.06)" stroke="#e8cf7a" stroke-width="2" stroke-linejoin="round"/>
-                    <line x1="76" y1="92" x2="76" y2="118" stroke="#e8cf7a" stroke-width="2"/>
-                    <path d="M48 97 C56 94 66 94 70 96 M48 103 C56 100 66 100 70 102 M82 96 C86 94 96 94 104 97 M82 102 C86 100 96 100 104 103"
-                          stroke="rgba(232,207,122,0.55)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                </g>
-                <!-- Still water — the settled mind -->
-                <path class="crest-fade" d="M42 132 C50 127 58 137 66 132 C74 127 82 137 90 132 C98 127 106 137 110 133"
-                      fill="none" stroke="#d4af37" stroke-width="2.4" stroke-linecap="round"/>
+        <a class="brand" href="#top" aria-label="Maharishi Vidya Mandir, Gonda — top of page">
+            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                <circle cx="60" cy="60" r="52" fill="none" stroke="#a58758" stroke-width="1.4"/>
+                <circle cx="60" cy="60" r="44" fill="none" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="1.5 5.2"/>
+                <text x="60" y="70" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#f5f1e6" letter-spacing="1">MVM</text>
             </svg>
+            <span class="brand-name">Maharishi Vidya Mandir</span>
+            <span class="brand-sub">Gonda &middot; Since 1992</span>
+        </a>
 
-            <p class="hero-badge">CBSE &middot; KG to Class XII &middot; Bahraich Road, Gonda</p>
-            <h1 class="hero-headline">A settled mind <span class="gradient-text">learns faster.</span></h1>
-            <p class="hero-subtext">Maharishi Vidya Mandir has taught Gonda&rsquo;s children since 1992 &mdash; 312 students, 37 teachers, and a quiet 2.5-acre campus where meditation and yoga sit alongside the CBSE syllabus.</p>
-            <div class="hero-ctas">
-                <a href="#admission" class="btn btn-primary">Start an Admission Enquiry</a>
-                <a href="#day" class="btn btn-secondary">Explore the Campus</a>
-            </div>
-            <p class="hero-motto">Knowledge &middot; Consciousness &middot; Character</p>
+        <nav class="nav-side right" aria-label="Primary navigation right">
+            <a href="#campus">Campus</a>
+            <a href="#admissions">Admissions</a>
+            <a class="util" href="#visit">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg>
+                Visit Us
+            </a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <div class="drawer" id="drawer">
+        <a href="#welcome">About the School</a>
+        <a href="#pillars">School Life</a>
+        <a href="#campus">Campus</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#faq">Questions</a>
+        <a href="#visit">Visit Us</a>
+        <a class="btn btn-gold btn-block" href="#admissions">Enquire Now</a>
+    </div>
+</header>
+
+<main id="main">
+
+<!-- 1 — HERO SLIDESHOW -->
+<section class="hero" id="top">
+    <div class="hero-stage" aria-hidden="true">
+        <div class="hero-slide active" data-slide="0">
+            <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="story" id="story">
-        <div class="container">
-            <span class="section-eyebrow">Consciousness-Based Education</span>
-            <h2 class="section-headline">We start with the <span class="gradient-text">student</span>, not the syllabus.</h2>
-            <div class="story-lines">
-                <p>Thirty-four years in Gonda. Two generations of families who <strong>chose us twice.</strong></p>
-                <p>312 children. 37 teachers. That is roughly <strong>eight students to a teacher</strong> &mdash; no child disappears into a back bench here.</p>
-                <p>A dedicated meditation hall and yoga hall on campus, because a <strong>calm mind absorbs more</strong> in an hour than a restless one does in three.</p>
-                <p>The full CBSE course, taught unhurried &mdash; concepts first, marks after.</p>
-            </div>
-            <p class="story-close">Part of the Maharishi Vidya Mandir family of schools. <span class="gradient-text">Wholly Gonda&rsquo;s own.</span></p>
-
-            <div class="trust-strip" style="margin-top:56px;">
-                <span class="trust-chip">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 4.5-3.2 7.5-8 9-4.8-1.5-8-4.5-8-9V7z" stroke-linejoin="round"/></svg>
-                    CBSE Affiliation 2131093
-                </span>
-                <span class="trust-chip">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
-                    Established 1992
-                </span>
-                <span class="trust-chip">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z" stroke-linejoin="round"/><path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z" stroke-linejoin="round"/></svg>
-                    KG to Class XII
-                </span>
-                <span class="trust-chip">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V9l6-5 6 5v11" stroke-linejoin="round"/></svg>
-                    Maharishi Shiksha Sansthan
-                </span>
-            </div>
+        <div class="hero-slide" data-slide="1">
+            <img src="https://images.pexels.com/photos/6813041/pexels-photo-6813041.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
-    </section>
-
-    <!-- OFFERINGS -->
-    <section class="offerings" id="offerings">
-        <div class="container">
-            <span class="section-eyebrow">Academics &amp; Facilities</span>
-            <h2 class="section-headline">One campus, <span class="gradient-text">every school year.</span></h2>
-            <p class="section-sub">From kindergarten to the Class XII boards &mdash; the same 2.5 acres, the same standard, no change of school in between.</p>
-            <div class="offer-grid">
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/>
-                            <path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3>CBSE Curriculum, KG to XII</h3>
-                    <p>The complete CBSE course under senior secondary affiliation number 2131093, managed by Maharishi Shiksha Sansthan &mdash; the same board syllabus every parent expects, in sections small enough to teach properly.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/>
-                            <path d="M7.5 14h9"/>
-                        </svg>
-                    </div>
-                    <h3>Science &amp; Computer Labs</h3>
-                    <p>Equipped laboratories and computer labs on campus, so science is something a child performs with their own hands, not something read aloud.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 21a9 9 0 1 0-9-9"/>
-                            <path d="M3 12h9l4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Sports &amp; Open Grounds</h3>
-                    <p>Room to run on a 2.5-acre, pollution-free campus. Games are timetabled, not squeezed in when the syllabus allows.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3v18M5 7c2-2 5-2 7 0 2-2 5-2 7 0"/>
-                            <path d="M5 7v10c2-2 5-2 7 0 2-2 5-2 7 0V7"/>
-                        </svg>
-                    </div>
-                    <h3>Library &amp; Reading Room</h3>
-                    <p>A separate library and reading room &mdash; a quiet space kept for reading, not a cupboard of books at the back of a classroom.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
-                        </svg>
-                    </div>
-                    <h3>Music &amp; Art Rooms</h3>
-                    <p>Dedicated music and art rooms on campus. A child who can hold a tune or a brush carries a confidence that marks alone never give.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
-                            <circle cx="10" cy="7" r="4"/>
-                            <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
-                        </svg>
-                    </div>
-                    <h3>Meditation &amp; Yoga Halls</h3>
-                    <p>Purpose-built Transcendental Meditation and yoga halls &mdash; the part of a Maharishi Vidya Mandir education no other school in Gonda offers.</p>
-                </article>
-            </div>
+        <div class="hero-slide" data-slide="2">
+            <img src="https://images.pexels.com/photos/37789735/pexels-photo-37789735.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
-    </section>
+        <div class="hero-scrim"></div>
+    </div>
 
-    <!-- STATS BAND -->
-    <section class="stats" aria-label="School at a glance">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <span class="stat-number"><span data-count="1992">1992</span></span>
-                    <span class="stat-label">Teaching in Gonda since</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number"><span data-count="312">312</span></span>
-                    <span class="stat-label">Students on roll</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number"><span data-count="37">37</span></span>
-                    <span class="stat-label">Teachers &mdash; roughly eight students each</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">2.5 Acres</span>
-                    <span class="stat-label">Pollution-free campus, Bahraich Road</span>
+    <div class="hero-inner">
+        <div class="wrap">
+            <div class="hero-copy">
+                <span class="eyebrow">CBSE &middot; KG to Class XII &middot; Gonda</span>
+                <h1>
+                    A Settled Mind
+                    <span class="rotator" id="rotator">
+                        <span class="on">Learns Faster.</span>
+                        <span>Asks Better Questions.</span>
+                        <span>Keeps Its Composure.</span>
+                    </span>
+                </h1>
+                <p class="hero-body">A CBSE senior secondary school on Bahraich Road since 1992 &mdash; 312 students, 37 teachers, and a 2.5-acre campus where meditation and yoga sit beside the syllabus.</p>
+                <div class="hero-ctas">
+                    <a class="btn btn-gold" href="#admissions">Enquire Now</a>
+                    <a class="btn btn-ghost" href="#campus">Explore Campus</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- CAMPUS LIFE -->
-    <section class="day" id="day">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Campus Life</span>
-            <h2 class="section-headline">What the day actually <span class="gradient-text">looks like.</span></h2>
-            <p class="section-sub">Ten minutes on the grounds tells you more than any prospectus. Until you can come, here is the shape of it.</p>
+    <div class="hero-foot">
+        <p class="slide-count"><b id="slide-index">01</b>&nbsp;/&nbsp;03</p>
+        <div class="dots" id="dots" role="tablist" aria-label="Hero images">
+            <button type="button" aria-label="Show image 1" aria-current="true"></button>
+            <button type="button" aria-label="Show image 2"></button>
+            <button type="button" aria-label="Show image 3"></button>
+        </div>
+        <p class="hero-scroll-hint">Scroll</p>
+    </div>
+</section>
 
-            <div class="feature-row">
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/3231358/pexels-photo-3231358.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Students in uniform listening attentively in class"
-                         loading="lazy" decoding="async"
-                         onerror="this.style.display='none'">
-                </div>
-                <div class="feature-copy">
-                    <span class="section-eyebrow">The Classroom</span>
-                    <h3>Small enough to be noticed</h3>
-                    <p>With 312 students and 37 teachers, our classrooms run at roughly eight children to a teacher. A raised hand gets answered. A puzzled face gets seen.</p>
-                    <p>Thirty-seven teachers across kindergarten to Class XII means a subject teacher who follows a child&rsquo;s work over years, not over a single term.</p>
+<!-- 2 — MARQUEE RIBBON -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        <span class="marquee-item">Admission enquiries welcome &mdash; KG to Class XII</span>
+        <span class="marquee-item">CBSE affiliation 2131093</span>
+        <span class="marquee-item">In Gonda since 1992</span>
+        <span class="marquee-item">312 students &middot; 37 teachers</span>
+        <span class="marquee-item">Meditation &amp; yoga halls on campus</span>
+        <span class="marquee-item">2.5-acre campus, Bahraich Road</span>
+        <span class="marquee-item">Admission enquiries welcome &mdash; KG to Class XII</span>
+        <span class="marquee-item">CBSE affiliation 2131093</span>
+        <span class="marquee-item">In Gonda since 1992</span>
+        <span class="marquee-item">312 students &middot; 37 teachers</span>
+        <span class="marquee-item">Meditation &amp; yoga halls on campus</span>
+        <span class="marquee-item">2.5-acre campus, Bahraich Road</span>
+    </div>
+</div>
+
+<!-- 3 — WELCOME -->
+<section class="welcome" id="welcome">
+    <div class="wrap">
+        <div class="welcome-grid">
+            <div class="welcome-copy reveal">
+                <span class="eyebrow">A Message from the School</span>
+                <h2 class="sec-title">Excellence, With Stillness</h2>
+                <p class="dropcap">Maharishi Vidya Mandir has taught the children of Gonda since 1992. Three decades on, the school still runs from the same 2.5 acres at Janki Nagar on Bahraich Road &mdash; a campus deliberately set back from the traffic, with room to run and rooms kept quiet.</p>
+                <p>Three hundred and twelve students are taught here by thirty-seven teachers. That is roughly eight children to a teacher: small enough that a raised hand is answered and a puzzled face is noticed, and small enough that a subject teacher follows a child&rsquo;s work over years rather than over a single term.</p>
+                <p>The academic course is the full CBSE syllabus under senior secondary affiliation 2131093. What sits alongside it is Consciousness-Based Education, the approach every Maharishi Vidya Mandir school follows: dedicated Transcendental Meditation and yoga halls on campus, and a daily practice of settling the attention before the lesson begins. The reasoning is plain. A calm mind absorbs more in an hour than a restless one does in three.</p>
+                <div class="signature">
+                    <strong>Mr. Vinay Kumar Mishra</strong>
+                    <span>Principal &middot; Maharishi Vidya Mandir, Gonda</span>
                 </div>
             </div>
-
-            <div class="feature-row reverse">
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Two school children performing a science experiment with a microscope"
-                         loading="lazy" decoding="async"
-                         onerror="this.style.display='none'">
-                </div>
-                <div class="feature-copy">
-                    <span class="section-eyebrow">Labs</span>
-                    <h3>Science you can put your hands on</h3>
-                    <p>Physics, chemistry and biology practicals in equipped laboratories, plus computer labs from the junior classes upward.</p>
-                    <p>A senior secondary CBSE course is won in the practical room as much as in the theory paper. We treat it that way.</p>
-                </div>
-            </div>
-
-            <div class="feature-row">
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Students studying together in a school library"
-                         loading="lazy" decoding="async"
-                         onerror="this.style.display='none'">
-                </div>
-                <div class="feature-copy">
-                    <span class="section-eyebrow">Library &amp; Stillness</span>
-                    <h3>Two rooms most schools skip</h3>
-                    <p>A proper library and reading room &mdash; and, alongside it, the meditation and yoga halls that define a Maharishi Vidya Mandir education.</p>
-                    <p>Children who learn to settle their attention before a lesson carry that ability into an examination hall years later. That is the whole idea.</p>
-                </div>
-            </div>
-
-            <div class="gallery-strip" style="margin-top:16px;">
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/31864392/pexels-photo-31864392.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Young children in uniform doing a classroom learning activity"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                </div>
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/10638209/pexels-photo-10638209.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Children in uniform reading books in the school library"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                </div>
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/6208728/pexels-photo-6208728.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="Students conducting an experiment together in the science lab"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                </div>
-                <div class="photo-frame">
-                    <img src="https://images.pexels.com/photos/8927012/pexels-photo-8927012.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                         alt="School children playing football on the field"
+            <div class="frame reveal">
+                <div class="frame-media">
+                    <img src="https://images.pexels.com/photos/38305335/pexels-photo-38305335.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                         alt="A long arched school corridor, quiet and shaded"
                          loading="lazy" decoding="async" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- AUTOMATION TEASER: ADMISSION ENQUIRY -->
-    <section class="automation" id="admission">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Admissions</span>
-            <h2 class="section-headline">Begin with <span class="gradient-text">one enquiry.</span></h2>
-            <p class="section-sub">Tell us about your child and the school office will get back to you &mdash; on WhatsApp, in your language. Admission enquiries for the coming session are welcome.</p>
+<div class="band-divider"><div class="divider" aria-hidden="true"><span></span><i></i><span></span></div></div>
 
-            <div class="enquiry-shell">
-                <form class="enquiry-form" id="enquiry-form" novalidate>
-                    <h3 class="enquiry-title">Admission Enquiry</h3>
-                    <p class="enquiry-note">Takes thirty seconds. No documents needed yet.</p>
-                    <div class="field">
-                        <label for="student-name">Student&rsquo;s name</label>
-                        <input type="text" id="student-name" name="student-name" placeholder="Full name of the child" autocomplete="name" required>
-                    </div>
-                    <div class="field">
-                        <label for="student-class">Class applying for</label>
-                        <select id="student-class" name="student-class" required>
-                            <option value="" selected disabled>Select a class</option>
-                            <option>Kindergarten</option>
-                            <option>Class I &ndash; V</option>
-                            <option>Class VI &ndash; VIII</option>
-                            <option>Class IX &ndash; X</option>
-                            <option>Class XI &ndash; XII</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="parent-phone">Parent&rsquo;s phone (WhatsApp)</label>
-                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Enquiry</button>
-                    <p class="enquiry-privacy">Your number is used only to respond to this enquiry.</p>
-                </form>
+<!-- 4 — PILLARS -->
+<section class="pillars" id="pillars">
+    <div class="wrap">
+        <div class="pillar-head centered reveal">
+            <span class="eyebrow">Life at Maharishi Vidya Mandir</span>
+            <h2 class="sec-title">Five Things a School Day Must Hold</h2>
+            <p class="sec-lede">The timetable is built around the CBSE course, but a day here is not only lessons. These five run through every year, from kindergarten to the Class XII boards.</p>
+        </div>
+        <div class="pillar-grid">
+            <article class="pillar reveal">
+                <div class="pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><path d="M4 26V9a2 2 0 0 1 2-2h10v20H6a2 2 0 0 0-2 2z"/><path d="M30 26V9a2 2 0 0 0-2-2H18v20h10a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3>Academics</h3>
+                <p>The complete CBSE syllabus, KG to Class XII, under affiliation 2131093 &mdash; taught unhurried, concepts first.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><path d="M17 29c6-2.4 10-6.4 10-12V9l-10-4-10 4v8c0 5.6 4 9.6 10 12z"/><path d="M13 17l3 3 6-6"/></svg>
+                </div>
+                <h3>Pastoral Care</h3>
+                <p>Roughly eight students to a teacher. Teachers here know every child by name, and notice when something changes.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><circle cx="17" cy="12" r="6"/><path d="M6 30c1.4-6 5.6-9 11-9s9.6 3 11 9"/><path d="M17 6V3"/></svg>
+                </div>
+                <h3>Stillness</h3>
+                <p>Purpose-built Transcendental Meditation and yoga halls &mdash; the part of a Maharishi Vidya Mandir education that is ours alone in Gonda.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="12"/><path d="M5 17h24M17 5c3.4 3.4 3.4 20.6 0 24M17 5c-3.4 3.4-3.4 20.6 0 24"/></svg>
+                </div>
+                <h3>Sport &amp; Activity</h3>
+                <p>Open grounds on a 2.5-acre, pollution-free campus, with music and art rooms for the hours that are not spent on a field.</p>
+            </article>
+            <article class="pillar reveal">
+                <div class="pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><path d="M17 5l3.6 7.4 8.4 1.2-6 5.9 1.4 8.3L17 24l-7.4 3.8L11 19.5l-6-5.9 8.4-1.2z"/></svg>
+                </div>
+                <h3>Character</h3>
+                <p>Two generations of Gonda families have passed through these gates. What they took away was not only a mark sheet.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-                <div class="enquiry-success" id="enquiry-success" role="status" aria-live="polite">
-                    <div class="success-ring" aria-hidden="true">
-                        <svg viewBox="0 0 34 34"><path class="success-check" d="M7 18 L14 25 L27 10"/></svg>
-                    </div>
-                    <h3>Request received.</h3>
-                    <p>This is how the school office would hear from a parent &mdash; on WhatsApp, the moment they decide, day or night.</p>
-                    <p class="success-hint">Concept demo &mdash; no data was sent anywhere.</p>
+<!-- 5 — STATS BAND -->
+<section class="stats" aria-label="The school at a glance">
+    <div class="wrap">
+        <div class="stats-head reveal">
+            <span class="eyebrow">By the Numbers</span>
+            <h2 class="sec-title">Published by the School Itself</h2>
+        </div>
+        <div class="stat-grid">
+            <div class="stat reveal">
+                <span class="stat-num" data-count="1992" data-plain="true">1992</span>
+                <span class="stat-cap">Teaching in Gonda since</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-count="312">312</span>
+                <span class="stat-cap">Students on roll</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-count="37">37</span>
+                <span class="stat-cap">Teaching staff</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-count="2.5" data-decimals="1">2.5</span>
+                <span class="stat-cap">Acre campus, Bahraich Road</span>
+            </div>
+        </div>
+        <p class="stat-note reveal">312 students to 37 teachers &mdash; roughly eight children to a teacher. CBSE senior secondary affiliation 2131093, managed by Maharishi Shiksha Sansthan.</p>
+    </div>
+</section>
+
+<!-- 6 — CAMPUS MOSAIC -->
+<section class="mosaic-sec" id="campus">
+    <div class="wrap">
+        <div class="mosaic-head centered reveal">
+            <span class="eyebrow">The Campus</span>
+            <h2 class="sec-title">Ten Minutes on the Grounds</h2>
+            <p class="sec-lede">A prospectus can only say so much. Until you can walk the campus yourself, this is the shape of an ordinary day at Janki Nagar.</p>
+        </div>
+        <div class="mosaic">
+            <figure class="tile t-a reveal">
+                <img src="https://images.pexels.com/photos/28389291/pexels-photo-28389291.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="School students in uniform standing at a morning assembly"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">Morning assembly</figcaption>
+            </figure>
+            <figure class="tile t-b reveal">
+                <img src="https://images.pexels.com/photos/3231358/pexels-photo-3231358.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="Students in uniform listening attentively in a classroom"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">The classroom</figcaption>
+            </figure>
+            <figure class="tile t-c reveal">
+                <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="Students studying together at the school library"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">Library &amp; reading room</figcaption>
+            </figure>
+            <figure class="tile t-d reveal">
+                <img src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="Two children carrying out a science experiment with a microscope"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">Science laboratory</figcaption>
+            </figure>
+            <figure class="tile t-e reveal">
+                <img src="https://images.pexels.com/photos/10643698/pexels-photo-10643698.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                     alt="Two girls in school uniform playing basketball on an outdoor court"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="tile-cap">Grounds &amp; games</figcaption>
+            </figure>
+        </div>
+        <p class="repcap">Representative imagery</p>
+    </div>
+</section>
+
+<!-- 7 — ADMISSIONS (the one light section) -->
+<section class="admissions" id="admissions">
+    <div class="wrap">
+        <div class="adm-head centered reveal">
+            <span class="eyebrow">Admissions</span>
+            <h2 class="sec-title">Four Steps, and the First One Is Free</h2>
+            <p class="sec-lede">Registration and admission forms are available online and at the school office. If you would rather begin with a question than a form, send an enquiry and the office will reply on WhatsApp.</p>
+        </div>
+
+        <ol class="steps">
+            <li class="step reveal">
+                <div class="step-num" aria-hidden="true">I</div>
+                <h3>Enquire</h3>
+                <p>Send the form below, or message the school office directly on WhatsApp.</p>
+            </li>
+            <li class="step reveal">
+                <div class="step-num" aria-hidden="true">II</div>
+                <h3>Visit the Campus</h3>
+                <p>Walk the 2.5 acres, see the halls and labs, and meet the class teacher.</p>
+            </li>
+            <li class="step reveal">
+                <div class="step-num" aria-hidden="true">III</div>
+                <h3>Collect the Form</h3>
+                <p>Registration and admission forms from the office counter or online.</p>
+            </li>
+            <li class="step reveal">
+                <div class="step-num" aria-hidden="true">IV</div>
+                <h3>Documents &amp; Seat</h3>
+                <p>Document verification and fee submission at the office, subject to seats in the section.</p>
+            </li>
+        </ol>
+
+        <div class="enquiry reveal">
+            <form id="enquiry-form" novalidate>
+                <div class="enquiry-top">
+                    <h3>Admission Enquiry</h3>
+                    <p>Thirty seconds. No documents needed yet.</p>
+                </div>
+                <div class="field">
+                    <label for="f-name">Student&rsquo;s name</label>
+                    <input type="text" id="f-name" name="name" placeholder="Full name of the child" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="f-class">Class applying for</label>
+                    <select id="f-class" name="class" required>
+                        <option value="" selected disabled>Select a class</option>
+                        <option>Kindergarten</option>
+                        <option>Class I &ndash; V</option>
+                        <option>Class VI &ndash; VIII</option>
+                        <option>Class IX &ndash; X</option>
+                        <option>Class XI &ndash; XII</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="f-phone">Parent&rsquo;s phone (WhatsApp)</label>
+                    <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block">Send Enquiry</button>
+                <p class="enquiry-fine">Concept demo &mdash; nothing is submitted anywhere. In the live version this lands on the school office WhatsApp at <a href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">93895 41281</a>.</p>
+            </form>
+
+            <div class="enq-success" id="enq-success" role="status" aria-live="polite">
+                <div class="enq-ring" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path class="enq-check" d="M7 17 L13 23 L25 9"/></svg>
+                </div>
+                <h3>Enquiry received.</h3>
+                <p>This is how the school office would hear from a parent &mdash; instantly, on WhatsApp, at nine in the evening or on a Sunday, the moment the decision is made.</p>
+                <p class="demo-line">Concept demo &mdash; no data was sent anywhere.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8 — AFFILIATION STRIP -->
+<section class="affil" aria-label="Affiliation and standing">
+    <div class="wrap">
+        <div class="affil-head reveal">
+            <span class="eyebrow">Affiliation &amp; Standing</span>
+            <h2 class="affil-title">On the Record</h2>
+        </div>
+        <div class="affil-row">
+            <div class="badge reveal"><b>CBSE</b><span>Senior Secondary<br>Affiliation 2131093</span></div>
+            <div class="badge reveal"><b>1992</b><span>Established<br>in Gonda</span></div>
+            <div class="badge reveal"><b>KG &ndash; XII</b><span>Kindergarten to<br>Class Twelve</span></div>
+            <div class="badge reveal"><b>M.S.S.</b><span>Managed by Maharishi<br>Shiksha Sansthan</span></div>
+        </div>
+        <p class="affil-note reveal">This campus is the Gonda branch of the Maharishi Vidya Mandir group of schools. Achievements of the wider network belong to the network; what is listed above belongs to Janki Nagar.</p>
+    </div>
+</section>
+
+<div class="band-divider"><div class="divider" aria-hidden="true"><span></span><i></i><span></span></div></div>
+
+<!-- 9 — FAQ -->
+<section class="faq" id="faq">
+    <div class="wrap">
+        <div class="faq-head centered reveal">
+            <span class="eyebrow">Questions Parents Ask</span>
+            <h2 class="sec-title">Answers, Straight</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1">
+                    Which classes can my child join?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
+                    <p>Kindergarten through Class XII, subject to seats in each section. We are a CBSE senior secondary school, affiliation number 2131093. For a mid-session transfer, bring the previous school&rsquo;s report card and speak to the office.</p>
                 </div>
             </div>
-
-            <!-- WhatsApp automation pitch strip -->
-            <div class="wa-strip">
-                <div class="wa-strip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+            <div class="faq-item">
+                <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">
+                    How does the admission process work?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a2" role="region" aria-labelledby="q2">
+                    <p>Registration and admission forms are available online and at the school office. Send an enquiry or walk in, collect the form, then complete document verification and fee submission at the counter. The office will tell you exactly what is required for your child&rsquo;s class.</p>
                 </div>
-                <div>
-                    <h3>Fee reminders &amp; school notices &mdash; on WhatsApp.</h3>
-                    <p>Fee due dates, exam schedules, PTM and holiday notices sent to all 312 families at once, instead of a diary slip and a round of phone calls. No confusion, no chasing.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3">
+                    What is Consciousness-Based Education?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a3" role="region" aria-labelledby="q3">
+                    <p>It is the approach every Maharishi Vidya Mandir school follows: the standard CBSE syllabus, taught alongside a daily practice of Transcendental Meditation and yoga. We have dedicated halls on campus for both. The aim is simple &mdash; a child whose attention is settled learns more in the same hour.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">
+                    How large are the classes?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
+                    <p>The school has 312 students and 37 teaching staff &mdash; a ratio of roughly eight children to a teacher. We are deliberately a mid-sized school rather than a crowded one, which is why teachers here know every child by name.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">
+                    What facilities are on the campus?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
+                    <p>Science and computer laboratories, a library and reading room, music and art rooms, Transcendental Meditation and yoga halls, and sports grounds &mdash; all on a pollution-free 2.5-acre campus at Janki Nagar.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">
+                    Where exactly is the school, and when can I visit?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
+                    <p>The campus is at Janki Nagar on Bahraich Road, Gonda 271003, set back from the traffic. Call the school office on 05262-231698 during working hours to confirm a convenient time, or send a WhatsApp message to 93895 41281 and we will reply with directions.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Visit Us</span>
-            <h2 class="section-headline">Come see the campus <span class="gradient-text">yourself.</span></h2>
-            <p class="section-sub">We are on Bahraich Road at Janki Nagar. Call the school office during working hours and come see the grounds for yourself.</p>
-            <div class="visit-grid">
-                <div class="visit-card">
-                    <h3>Address</h3>
-                    <p>Maharishi Vidya Mandir<span>Janki Nagar, Bahraich Road,<br>Gonda, Uttar Pradesh 271003</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>School Office</h3>
-                    <p><a href="tel:+915262231698">05262 &ndash; 231698</a><span>Landline &mdash; admissions &amp; office</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Mobile &amp; WhatsApp</h3>
-                    <p><a href="tel:+919389541281">+91 93895 41281</a><span>Message any time &mdash; we reply in working hours</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Email</h3>
-                    <p><a href="mailto:mvmgonda@mssmail.org">mvmgonda@mssmail.org</a><span>For documents and written enquiries</span></p>
-                </div>
+<!-- 10 — VISIT US -->
+<section class="visit" id="visit">
+    <div class="wrap">
+        <div class="visit-head centered reveal">
+            <span class="eyebrow">Visit Us</span>
+            <h2 class="sec-title">Janki Nagar, Bahraich Road</h2>
+            <p class="sec-lede">Ten minutes on the grounds will tell you more than any page. Call the school office during working hours and come see it.</p>
+        </div>
+        <div class="visit-grid">
+            <div class="visit-card reveal">
+                <h3>Address</h3>
+                <p>Maharishi Vidya Mandir<span>Janki Nagar, Bahraich Road,<br>Gonda, Uttar Pradesh 271003</span></p>
             </div>
-            <div class="visit-actions">
-                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Maharishi%20Vidya%20Mandir%2C%20Gonda%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
-                <a class="btn btn-secondary" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+            <div class="visit-card reveal">
+                <h3>School Office</h3>
+                <p><a href="tel:+915262231698">05262-231698</a><span>Landline &mdash; office &amp; admissions, during working hours</span></p>
+            </div>
+            <div class="visit-card reveal">
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">93895 41281</a><span>Message any time &mdash; replies during working hours</span></p>
+            </div>
+            <div class="visit-card reveal">
+                <h3>Email</h3>
+                <p><a href="mailto:mvmgonda@mssmail.org">mvmgonda@mssmail.org</a><span>For documents and written enquiries</span></p>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Questions Parents Ask</span>
-            <h2 class="section-headline">Answers, <span class="gradient-text">straight.</span></h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Which classes can my child join?</button>
-                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-                        <p>Kindergarten through Class XII, subject to seats in each section. We are a CBSE senior secondary school, affiliation number 2131093. For a mid-session transfer, bring the previous school&rsquo;s report card and speak to the office.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How does the admission process work?</button>
-                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>Registration and admission forms are available online and at the school office. Send an enquiry or walk in, collect the form, then complete document verification and fee submission at the counter. The office will tell you exactly what is required for your child&rsquo;s class.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">What is Consciousness-Based Education?</button>
-                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-                        <p>It is the approach every Maharishi Vidya Mandir school follows: the standard CBSE syllabus, taught alongside a daily practice of Transcendental Meditation and yoga. We have dedicated halls on campus for both. The aim is simple &mdash; a child whose attention is settled learns more in the same hour.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">How large are the classes?</button>
-                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-                        <p>The school has 312 students and 37 teaching staff &mdash; a ratio of roughly eight children to a teacher. We are deliberately a mid-sized school rather than a crowded one, which is why teachers here know every child by name.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Where exactly is the school, and when can I visit?</button>
-                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>The campus is at Janki Nagar on Bahraich Road, Gonda 271003 &mdash; 2.5 acres, set away from the traffic. Call the office on 05262-231698 during working hours to confirm a convenient time, or send a WhatsApp message to 93895 41281 and we will reply with directions.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="visit-actions reveal">
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Maharishi+Vidya+Mandir+Janki+Nagar+Bahraich+Road+Gonda+271003" target="_blank" rel="noopener noreferrer">Plan a Visit</a>
+            <a class="btn btn-ghost" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">Message the Office</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <h2 class="section-headline">In Gonda since 1992. <span class="gradient-text">Come and see why.</span></h2>
-            <p class="cta-subtext">The school office is one phone call &mdash; or one WhatsApp message &mdash; away.</p>
-            <a href="#admission" class="btn btn-primary btn-large">Start an Admission Enquiry</a>
-        </div>
-    </section>
+</main>
 
-    </main>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <svg class="footer-crest" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#a58758" stroke-width="1.4"/>
+            <text x="60" y="70" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#f5f1e6" letter-spacing="1">MVM</text>
+        </svg>
+        <p class="footer-name">Maharishi Vidya Mandir, Gonda</p>
+        <p class="footer-addr">Janki Nagar &middot; Bahraich Road &middot; Gonda 271003</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#welcome">About</a>
+            <a href="#pillars">School Life</a>
+            <a href="#campus">Campus</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#faq">Questions</a>
+            <a href="#visit">Visit</a>
+        </nav>
+        <p class="footer-legal">Affiliated to CBSE &middot; Affiliation No. 2131093 &middot; Managed by Maharishi Shiksha Sansthan.</p>
+        <p class="footer-legal">This page is a concept demo designed and built by Inexorables Group &mdash; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a>. It is not the official website of Maharishi Vidya Mandir, Gonda, and does not replace it. All figures shown are published by the school itself.</p>
+        <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+    </div>
+</footer>
 
-    <!-- BACK TO TOP -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
-    </button>
+<!-- FLOATS -->
+<a class="wa-float" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer" aria-label="Message the school office on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+</a>
 
-    <!-- FLOATING WHATSAPP -->
-    <a class="wa-float" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer" aria-label="Chat with the school office on WhatsApp">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+<div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
+    <span>Concept Demo</span>
+    <button type="button" id="demo-close" aria-label="Dismiss concept demo badge">&times;</button>
+</div>
+
+<div class="mobile-bar" role="group" aria-label="Contact the school office">
+    <a href="tel:+915262231698">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
+        Call
     </a>
+    <a href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+        WhatsApp
+    </a>
+    <a class="mb-enq" href="#admissions">Enquire</a>
+</div>
 
-    <!-- STICKY MOBILE CALL / WHATSAPP BAR -->
-    <div class="mobile-bar" role="group" aria-label="Contact the school">
-        <a class="mb-call" href="tel:+915262231698">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>
-            Call Office
-        </a>
-        <a class="mb-wa" href="https://wa.me/919389541281" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
-            WhatsApp
-        </a>
-    </div>
-
-    <!-- CONCEPT DEMO BADGE -->
-    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
-        <span>Concept Demo</span>
-        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <svg class="footer-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                <text x="38" y="50" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#e8cf7a">MVM</text>
-            </svg>
-            <p class="footer-name">Maharishi Vidya Mandir, Gonda</p>
-            <p class="footer-tag">Janki Nagar &middot; Bahraich Road &middot; Gonda 271003</p>
-            <div class="footer-links">
-                <a href="#story">About</a>
-                <a href="#offerings">Academics</a>
-                <a href="#day">Campus Life</a>
-                <a href="#admission">Admissions</a>
-                <a href="#visit">Visit</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <p class="footer-demo-notice">Affiliated to CBSE &middot; Affiliation No. 2131093 &middot; Managed by Maharishi Shiksha Sansthan</p>
-            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; not the official website of Maharishi Vidya Mandir, Gonda.</p>
-            <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
-        </div>
-    </footer>
-
-    <!-- Animation libraries (defer; site is fully readable without them) -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+<!-- Animation libraries (deferred; the page is fully readable without them) -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
 
 <script>
 (function () {
     'use strict';
 
-    var prefersReducedMotion = window.matchMedia &&
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var root = document.documentElement;
+    root.classList.remove('no-js');
+    root.classList.add('js');
 
-    /* ---------- Nav: scrolled state ---------- */
-    var nav = document.getElementById('nav');
-    function onScrollNav() {
-        if (!nav) return;
-        if (window.scrollY > 40) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    }
-    window.addEventListener('scroll', onScrollNav, { passive: true });
-    onScrollNav();
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------- Nav: hamburger ---------- */
-    var toggle = document.getElementById('nav-toggle');
-    var menu = document.getElementById('nav-menu');
-    function closeMenu() {
-        if (!toggle || !menu) return;
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    /* ---------- 1. Preloader with 2.2s failsafe ---------- */
+    var preloader = document.getElementById('preloader');
+    var preloaderDone = false;
+    function dismissPreloader() {
+        if (preloaderDone || !preloader) { return; }
+        preloaderDone = true;
+        preloader.classList.add('done');
+        window.setTimeout(function () {
+            if (preloader && preloader.parentNode) { preloader.parentNode.removeChild(preloader); }
+        }, 700);
     }
-    if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-            var open = menu.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMenu);
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeMenu();
-        });
-    }
+    window.addEventListener('load', function () { window.setTimeout(dismissPreloader, 320); });
+    window.setTimeout(dismissPreloader, 2200);
 
-    /* ---------- FAQ accordion ---------- */
-    document.querySelectorAll('.faq-question').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var answer = document.getElementById(btn.getAttribute('aria-controls'));
-            var expanded = btn.getAttribute('aria-expanded') === 'true';
-            // close others
-            document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
-                if (other !== btn) {
-                    other.setAttribute('aria-expanded', 'false');
-                    var a = document.getElementById(other.getAttribute('aria-controls'));
-                    if (a) a.style.maxHeight = '0px';
-                }
+    /* ---------- 2. Header state ---------- */
+    var header = document.getElementById('header');
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+
+    function onScroll() {
+        if (!header) { return; }
+        if (window.pageYOffset > 80) { header.classList.add('solid'); }
+        else if (!drawer || !drawer.classList.contains('open')) { header.classList.remove('solid'); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (burger && drawer) {
+        burger.addEventListener('click', function () {
+            var open = drawer.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            if (open) { header.classList.add('solid'); } else { onScroll(); }
+        });
+        Array.prototype.forEach.call(drawer.querySelectorAll('a'), function (link) {
+            link.addEventListener('click', function () {
+                drawer.classList.remove('open');
+                burger.setAttribute('aria-expanded', 'false');
+                burger.setAttribute('aria-label', 'Open menu');
+                onScroll();
             });
-            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            if (answer) {
-                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+        });
+    }
+
+    /* ---------- 3. Hero slideshow + rotating sub-line ---------- */
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+    var lines = Array.prototype.slice.call(document.querySelectorAll('#rotator span'));
+    var dots = Array.prototype.slice.call(document.querySelectorAll('#dots button'));
+    var slideIndexEl = document.getElementById('slide-index');
+    var current = 0;
+    var slideTimer = null;
+
+    function paint(i) {
+        current = (i + slides.length) % slides.length;
+        slides.forEach(function (s, n) { s.classList.toggle('active', n === current); });
+        lines.forEach(function (l, n) { l.classList.toggle('on', n === current); });
+        dots.forEach(function (d, n) {
+            if (n === current) { d.setAttribute('aria-current', 'true'); }
+            else { d.removeAttribute('aria-current'); }
+        });
+        if (slideIndexEl) { slideIndexEl.textContent = '0' + (current + 1); }
+    }
+
+    function startSlides() {
+        if (slideTimer) { window.clearInterval(slideTimer); }
+        if (slides.length < 2) { return; }
+        slideTimer = window.setInterval(function () { paint(current + 1); }, 6000);
+    }
+
+    if (slides.length) {
+        dots.forEach(function (d, n) {
+            d.addEventListener('click', function () { paint(n); startSlides(); });
+        });
+        if (!reduceMotion) { startSlides(); }
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { window.clearInterval(slideTimer); }
+            else if (!reduceMotion) { startSlides(); }
+        });
+    }
+
+    /* ---------- 4. Scroll reveal (IntersectionObserver, staggered) ---------- */
+    var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealTargets.forEach(function (el) { el.classList.add('in'); });
+    } else {
+        var io = new IntersectionObserver(function (entries) {
+            var batch = [];
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) { batch.push(entry.target); io.unobserve(entry.target); }
+            });
+            batch.forEach(function (el, n) {
+                window.setTimeout(function () { el.classList.add('in'); }, n * 90);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealTargets.forEach(function (el) { io.observe(el); });
+    }
+
+    /* ---------- 5. Counters ---------- */
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+    var countersRun = false;
+
+    function runCounters() {
+        if (countersRun) { return; }
+        countersRun = true;
+        counters.forEach(function (el) {
+            var target = parseFloat(el.getAttribute('data-count'));
+            var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+            var plain = el.getAttribute('data-plain') === 'true';
+            if (reduceMotion) { return; }
+            var CU = window.countUp && window.countUp.CountUp;
+            if (CU) {
+                try {
+                    var counter = new CU(el, target, {
+                        duration: 2,
+                        decimalPlaces: decimals,
+                        separator: plain ? '' : ',',
+                        startVal: plain ? Math.max(target - 40, 0) : 0
+                    });
+                    if (!counter.error) { counter.start(); return; }
+                } catch (e) { /* fall through to the static value */ }
             }
+        });
+    }
+
+    var statsSection = document.querySelector('.stats');
+    if (statsSection && 'IntersectionObserver' in window) {
+        var statsIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) { runCounters(); statsIO.disconnect(); }
+            });
+        }, { threshold: 0.3 });
+        window.setTimeout(function () { statsIO.observe(statsSection); }, 400);
+    }
+
+    /* ---------- 6. FAQ accordion ---------- */
+    Array.prototype.forEach.call(document.querySelectorAll('.faq-q'), function (btn) {
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!panel) { return; }
+        btn.addEventListener('click', function () {
+            var open = btn.getAttribute('aria-expanded') === 'true';
+            Array.prototype.forEach.call(document.querySelectorAll('.faq-q'), function (other) {
+                if (other === btn) { return; }
+                var otherPanel = document.getElementById(other.getAttribute('aria-controls'));
+                other.setAttribute('aria-expanded', 'false');
+                if (otherPanel) { otherPanel.style.maxHeight = null; }
+            });
+            btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+            panel.style.maxHeight = open ? null : (panel.scrollHeight + 'px');
         });
     });
 
-    /* ---------- Back to top ---------- */
-    var backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 700) backToTop.classList.add('visible');
-            else backToTop.classList.remove('visible');
-        }, { passive: true });
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-        });
-    }
-
-    /* ---------- Concept demo badge ---------- */
-    var badge = document.getElementById('demo-badge');
-    var badgeClose = document.getElementById('demo-badge-close');
-    if (badge && badgeClose) {
-        badgeClose.addEventListener('click', function () {
-            badge.classList.add('hidden');
-        });
-    }
-
-    /* ---------- Admission enquiry mock (front-end only) ---------- */
+    /* ---------- 7. Enquiry mock ---------- */
     var form = document.getElementById('enquiry-form');
-    var success = document.getElementById('enquiry-success');
+    var success = document.getElementById('enq-success');
     if (form && success) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            var name = document.getElementById('student-name');
-            var cls = document.getElementById('student-class');
-            var phone = document.getElementById('parent-phone');
-            var valid = true;
-            [name, cls, phone].forEach(function (el) {
-                if (!el) return;
-                if (!el.value || !el.value.trim()) {
-                    el.style.borderColor = '#e05c5c';
-                    valid = false;
-                } else {
-                    el.style.borderColor = '';
-                }
+            var name = form.querySelector('#f-name');
+            var cls = form.querySelector('#f-class');
+            var phone = form.querySelector('#f-phone');
+            var missing = null;
+            [name, cls, phone].forEach(function (fieldEl) {
+                if (!missing && fieldEl && !String(fieldEl.value).trim()) { missing = fieldEl; }
             });
-            if (phone && phone.value && phone.value.replace(/\D/g, '').length < 10) {
-                phone.style.borderColor = '#e05c5c';
-                valid = false;
+            if (missing) {
+                missing.focus();
+                missing.style.borderColor = '#d4af37';
+                return;
             }
-            if (!valid) return;
             form.style.display = 'none';
             success.classList.add('show');
+            success.focus && success.focus();
         });
     }
 
-    /* ---------- Enhanced motion (GSAP — guarded; page reads fine without it) ---------- */
-    function initMotion() {
-        if (prefersReducedMotion) return;
-        if (typeof window.gsap === 'undefined') return;
-        var gsap = window.gsap;
-        if (typeof window.ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(window.ScrollTrigger);
-        }
+    /* ---------- 8. Concept demo badge ---------- */
+    var badge = document.getElementById('demo-badge');
+    var badgeClose = document.getElementById('demo-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () { badge.classList.add('hidden'); });
+    }
 
-        // Hero entrance
-        gsap.from('.hero-badge, .hero-headline, .hero-subtext, .hero-ctas, .hero-motto', {
-            opacity: 0, y: 26, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.15
-        });
-
-        if (typeof window.ScrollTrigger === 'undefined') return;
-
-        // Section reveals: fade + rise
-        [
-            '.story .section-eyebrow', '.story .section-headline', '.story-lines p', '.story-close',
-            '.offerings .section-headline', '.offerings .section-sub',
-            '.visit-card', '.faq-item', '.final-cta .section-headline', '.cta-subtext',
-            '.enquiry-shell', '.wa-strip', '.trust-chip', '.feature-row', '.gallery-strip .photo-frame'
-        ].forEach(function (sel) {
-            gsap.utils.toArray(sel).forEach(function (el) {
-                gsap.from(el, {
-                    opacity: 0, y: 34, duration: 0.85, ease: 'power3.out',
-                    scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    /* ---------- 9. Optional GSAP polish (never required) ---------- */
+    window.addEventListener('load', function () {
+        if (reduceMotion) { return; }
+        if (!window.gsap || !window.ScrollTrigger) { return; }
+        try {
+            window.gsap.registerPlugin(window.ScrollTrigger);
+            window.gsap.utils.toArray('.band-divider .divider').forEach(function (el) {
+                window.gsap.from(el, {
+                    scrollTrigger: { trigger: el, start: 'top 88%' },
+                    scaleX: 0.4, opacity: 0, duration: 0.9, ease: 'power2.out'
                 });
             });
-        });
-
-        // Offer cards: staggered rise
-        var cards = gsap.utils.toArray('.offer-card');
-        if (cards.length) {
-            gsap.from(cards, {
-                opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-                scrollTrigger: { trigger: '.offer-grid', start: 'top 85%', once: true }
-            });
-        }
-
-        // Stats band reveal
-        gsap.from('.stat', {
-            opacity: 0, y: 30, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-            scrollTrigger: { trigger: '.stats-grid', start: 'top 85%', once: true }
-        });
-    }
-
-    /* ---------- CountUp counters (guarded) ---------- */
-    function initCounters() {
-        var els = document.querySelectorAll('[data-count]');
-        if (!els.length) return;
-        var CountUpCtor = (window.countUp && window.countUp.CountUp) || window.CountUp;
-        if (!CountUpCtor || prefersReducedMotion) return; // static numbers remain visible
-        if ('IntersectionObserver' in window) {
-            var seen = new WeakSet();
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting && !seen.has(entry.target)) {
-                        seen.add(entry.target);
-                        var target = parseFloat(entry.target.getAttribute('data-count'));
-                        try {
-                            var c = new CountUpCtor(entry.target, target, { duration: 2, useGrouping: false });
-                            if (!c.error) c.start();
-                        } catch (err) { /* keep static number */ }
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.6 });
-            els.forEach(function (el) { io.observe(el); });
-        }
-    }
-
-    /* Deferred libs load after this inline script — wait for window load. */
-    if (document.readyState === 'complete') {
-        initMotion();
-        initCounters();
-    } else {
-        window.addEventListener('load', function () {
-            initMotion();
-            initCounters();
-        });
-    }
+        } catch (e) { /* decorative only */ }
+    });
 })();
 </script>
 </body>

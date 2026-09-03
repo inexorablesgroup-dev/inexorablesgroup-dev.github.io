@@ -1,941 +1,803 @@
-<!-- CUSTOMIZED FROM TEMPLATE:education — Souvann's Millennium Public School, Gonda -->
+<!-- CONCEPT DEMO — Souvann's Millennium Public School, Gonda. Direction C (Royal Slideshow). Inexorables Group. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Souvann's Millennium Public School — CBSE School, Gonda</title>
-    <meta name="description" content="Souvann's Millennium Public School, Janki Nagar, Gonda. CBSE affiliated, Playgroup to Class X. Smart classrooms, labs, transport and an infirmary on campus. Concept demo.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Souvann&rsquo;s Millennium Public School — CBSE Co-educational School, Gonda</title>
+<meta name="description" content="Souvann's Millennium Public School, Janki Nagar, Gonda — CBSE affiliated, Playgroup to Class X. Smart classrooms, laboratories, transport, infirmary and a CCTV-covered campus. Concept demo.">
+<meta name="theme-color" content="#0a1633">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   SOUVANN'S MILLENNIUM PUBLIC SCHOOL — Royal Navy & Gold (education vertical)
-   One-file concept demo. Inexorables Group.
-   ============================================================ */
+/* ==========================================================================
+   SOUVANN'S MILLENNIUM PUBLIC SCHOOL — Direction C: Royal Slideshow
+   Dark-first navy / bronze / gold. One paper band. Single-file concept demo.
+   ========================================================================== */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
     --navy: #0a1633;
-    --navy-deep: #060d21;
-    --navy-raise: #0e1d42;
+    --navy-2: #101f4a;
+    --navy-3: #24346d;
     --gold: #d4af37;
-    --gold-soft: #e8cf7a;
-    --gold-pale: #f5e6b8;
-    --ivory: #f6f2e8;
-    --ivory-dim: #b9b4a6;
-    --line: rgba(212, 175, 55, 0.16);
-    --glass: rgba(10, 22, 51, 0.72);
-    --wa-green: #25D366;
-    --radius: 20px;
-    --ease-soft: cubic-bezier(0.23, 1, 0.32, 1);
+    --bronze: #a58758;
+    --ivory: #f5f1e6;
+    --mist: #b9c0d4;
+    --paper: #fbf9f4;
+    --ink: #16213f;
+    --wa: #25d366;
+    --hairline: rgba(165, 135, 88, 0.28);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: var(--navy);
-    color: var(--ivory);
-    line-height: 1.65;
+    color: var(--mist);
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 0.97rem;
+    line-height: 1.72;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    line-height: 1.12;
+h1, h2, h3, .serif {
+    font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
     color: var(--ivory);
-    letter-spacing: -0.015em;
+    line-height: 1.1;
+    letter-spacing: 0.005em;
 }
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+::selection { background: rgba(212, 175, 55, 0.3); color: var(--ivory); }
 
-::selection { background: rgba(212, 175, 55, 0.35); color: var(--ivory); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.wrap-narrow { max-width: 900px; margin: 0 auto; padding: 0 28px; }
 
-/* Skip link */
 .skip-link {
-    position: absolute; left: -9999px; top: 0; z-index: 2000;
-    background: var(--gold); color: var(--navy-deep);
-    padding: 12px 20px; border-radius: 0 0 12px 0; font-weight: 600; text-decoration: none;
+    position: absolute; left: -9999px; top: 0; z-index: 3000;
+    background: var(--gold); color: var(--navy);
+    padding: 12px 22px; font-weight: 600; text-decoration: none;
+    letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.78rem;
 }
 .skip-link:focus { left: 0; }
 
-/* Section headline system */
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft);
-    margin-bottom: 18px;
-}
-.section-eyebrow::after {
-    content: ''; display: block; width: 44px; height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    margin: 10px auto 0;
-}
-.section-headline {
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    margin-bottom: 22px;
-    text-align: center;
-}
-.section-sub {
-    font-size: clamp(1rem, 1.8vw, 1.15rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 56px; text-align: center;
-}
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-.gradient-text {
-    background: linear-gradient(120deg, var(--gold) 10%, var(--gold-pale) 40%, var(--gold) 70%, #b8912b 95%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    background-size: 220% auto;
-    animation: goldShift 5s ease-in-out infinite;
+/* ---------- Shared typographic system ---------- */
+.eyebrow {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.35em;
+    color: var(--bronze);
+    margin-bottom: 20px;
 }
-@keyframes goldShift {
-    0%, 100% { background-position: 0% center; }
-    50% { background-position: 100% center; }
+.sec-title {
+    font-size: clamp(1.9rem, 4.2vw, 3.1rem);
+    color: var(--ivory);
+    margin-bottom: 20px;
 }
+.sec-lede {
+    max-width: 620px;
+    color: var(--mist);
+    font-size: 0.98rem;
+}
+.center { text-align: center; }
+.center .sec-lede { margin-left: auto; margin-right: auto; }
 
-/* Buttons */
+/* The recurring royal motif — divider between dark sections */
+.rule-diamond {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 0; margin: 0 auto;
+}
+.rule-diamond span { display: block; width: 60px; height: 1px; background: var(--bronze); opacity: 0.55; }
+.rule-diamond i {
+    width: 5px; height: 5px; background: var(--bronze);
+    transform: rotate(45deg); display: block;
+}
+.divider { padding: 62px 0; }
+
+/* ---------- Buttons ---------- */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    min-height: 52px; padding: 14px 34px;
-    border-radius: 980px; border: none;
-    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+    min-height: 52px; padding: 15px 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.14em;
     text-decoration: none; cursor: pointer;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, background 0.3s ease;
+    border: 1px solid transparent; border-radius: 2px;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease), transform 0.35s var(--ease);
 }
-.btn-primary {
-    background: linear-gradient(135deg, #c9a02c, var(--gold) 45%, var(--gold-soft));
-    color: #1a1503;
-    box-shadow: 0 0 34px rgba(212, 175, 55, 0.22);
-}
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 12px 44px rgba(212, 175, 55, 0.38);
-}
-.btn-secondary {
-    background: transparent; color: var(--ivory);
-    border: 1.5px solid rgba(246, 242, 232, 0.28);
-}
-.btn-secondary:hover {
-    border-color: var(--gold);
-    background: rgba(212, 175, 55, 0.08);
-    transform: translateY(-2px);
-}
-.btn-large { min-height: 58px; padding: 17px 46px; font-size: 1.1rem; }
+.btn-gold { background: var(--gold); color: #16120a; border-color: var(--gold); }
+.btn-gold:hover { background: #e2c257; border-color: #e2c257; transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--ivory); border-color: rgba(245, 241, 230, 0.42); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.btn-ink { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-ink:hover { background: #0a1633; transform: translateY(-2px); }
 
-/* ============ NAVIGATION ============ */
-.nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(10, 22, 51, 0.55);
-    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+/* ==========================================================================
+   PRELOADER — dashed crest around the SMPS monogram
+   ========================================================================== */
+#preloader {
+    position: fixed; inset: 0; z-index: 4000;
+    background: var(--navy);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 26px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.nav.scrolled {
-    background: rgba(6, 13, 33, 0.92);
-    box-shadow: 0 1px 34px rgba(212, 175, 55, 0.10);
+#preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+.pre-crest { width: 128px; height: 128px; }
+.pre-ring-outer, .pre-ring-inner { transform-origin: 60px 60px; }
+.pre-ring-outer { animation: spinCw 2.6s linear infinite; }
+.pre-ring-inner { animation: spinCcw 2.6s linear infinite; }
+@keyframes spinCw { to { transform: rotate(360deg); } }
+@keyframes spinCcw { to { transform: rotate(-360deg); } }
+.pre-mono {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 25px; letter-spacing: 1px;
+    fill: none; stroke: var(--ivory); stroke-width: 0.7;
+    stroke-dasharray: 260; stroke-dashoffset: 260;
+    animation: monoDraw 1.5s ease-out forwards, monoFill 0.7s ease-out 1.1s forwards;
 }
-.nav-container {
-    max-width: 1120px; margin: 0 auto; padding: 0 24px;
-    display: flex; justify-content: space-between; align-items: center;
-    height: 68px;
+@keyframes monoDraw { to { stroke-dashoffset: 0; } }
+@keyframes monoFill { to { fill: var(--ivory); } }
+.pre-label {
+    font-size: 0.66rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.35em;
+    color: var(--bronze);
 }
-.nav-logo {
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; color: var(--ivory);
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.hdr {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1200;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s ease, border-color 0.4s ease;
 }
-.nav-crest { width: 38px; height: 42px; flex-shrink: 0; }
-.nav-logo-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.02rem; letter-spacing: 0.01em; line-height: 1.15;
+.hdr.solid { background: var(--navy); border-bottom-color: var(--hairline); }
+.hdr-inner {
+    max-width: 1300px; margin: 0 auto; padding: 0 22px;
+    height: 86px;
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px;
 }
-.nav-logo-name small {
-    display: block; font-family: 'Inter', sans-serif; font-weight: 500;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--gold-soft);
+.util {
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; color: #fff;
+    font-size: 0.62rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    opacity: 0.82; transition: opacity 0.3s ease;
 }
-.nav-links { display: flex; align-items: center; gap: 30px; }
-.nav-links a {
-    font-size: 0.9rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 10px 2px;
+.util:hover { opacity: 1; }
+.util svg { width: 15px; height: 15px; stroke: var(--bronze); fill: none; stroke-width: 1.6; }
+.util-wa svg { fill: var(--bronze); stroke: none; }
+
+.hdr-mid {
+    display: flex; align-items: center; justify-content: center; gap: 34px;
+}
+.nav-side { display: flex; align-items: center; gap: 26px; }
+.nav-side a {
+    font-size: 0.7rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: rgba(245, 241, 230, 0.78); text-decoration: none;
+    padding: 8px 0; position: relative;
     transition: color 0.3s ease;
 }
-.nav-links a:hover { color: var(--gold-soft); }
-.nav-cta {
-    background: linear-gradient(135deg, #c9a02c, var(--gold));
-    color: #1a1503 !important;
-    padding: 10px 22px !important; border-radius: 980px; font-weight: 600;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.nav-side a::after {
+    content: ''; position: absolute; left: 0; right: 100%; bottom: 2px;
+    height: 1px; background: var(--bronze);
+    transition: right 0.35s var(--ease);
 }
-.nav-cta:hover { box-shadow: 0 0 32px rgba(212, 175, 55, 0.4); transform: translateY(-1px); }
-.nav-hamburger {
-    display: none; flex-direction: column; justify-content: center; gap: 5px;
-    width: 48px; height: 48px; padding: 12px 11px;
-    background: transparent; border: none; cursor: pointer;
-}
-.hamburger-line {
-    display: block; width: 100%; height: 2px;
-    background: var(--ivory); border-radius: 2px;
-    transition: transform 0.35s var(--ease-soft), opacity 0.25s ease;
-}
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-side a:hover { color: var(--gold); }
+.nav-side a:hover::after { right: 0; }
 
-/* ============ AMBIENT ORBS ============ */
-.orb {
-    position: fixed; border-radius: 50%;
-    filter: blur(90px); pointer-events: none; z-index: 0;
-    opacity: 0.55;
+.brand { display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; flex-shrink: 0; }
+.brand svg { width: 34px; height: 34px; }
+.brand-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 1.02rem; color: var(--ivory);
+    letter-spacing: 0.06em; white-space: nowrap; line-height: 1;
 }
-.orb-1 {
-    width: 520px; height: 520px; top: -12%; right: -14%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, rgba(212, 175, 55, 0.05) 55%, transparent 75%);
-    animation: orbDrift1 26s ease-in-out infinite;
-}
-.orb-2 {
-    width: 460px; height: 460px; bottom: -18%; left: -12%;
-    background: radial-gradient(circle, rgba(46, 84, 179, 0.28) 0%, rgba(46, 84, 179, 0.08) 55%, transparent 75%);
-    animation: orbDrift2 32s ease-in-out infinite;
-}
-.orb-3 {
-    width: 340px; height: 340px; top: 42%; left: 58%;
-    background: radial-gradient(circle, rgba(232, 207, 122, 0.10) 0%, transparent 70%);
-    animation: orbDrift1 38s ease-in-out infinite reverse;
-}
-@keyframes orbDrift1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-60px, 50px) scale(1.12); }
-}
-@keyframes orbDrift2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(70px, -40px) scale(1.08); }
+.brand-sub {
+    font-size: 0.5rem; font-weight: 600; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--bronze); line-height: 1;
 }
 
-section { position: relative; z-index: 1; }
+.burger {
+    display: none; width: 46px; height: 46px;
+    background: none; border: none; cursor: pointer;
+    flex-direction: column; justify-content: center; align-items: flex-end; gap: 6px;
+    padding: 10px;
+}
+.burger span { display: block; height: 1px; background: var(--ivory); width: 24px; transition: transform 0.35s var(--ease), opacity 0.25s ease, width 0.35s ease; }
+.burger span:nth-child(2) { width: 17px; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); width: 24px; }
 
-/* ============ HERO ============ */
-.hero {
-    min-height: 100vh; min-height: 100svh;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 130px 24px 90px;
-    position: relative; overflow: hidden;
-    background:
-        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
-        var(--navy);
+.drawer {
+    position: fixed; top: 86px; left: 0; right: 0; z-index: 1190;
+    background: var(--navy); border-bottom: 1px solid var(--hairline);
+    padding: 10px 28px 26px;
+    display: none; flex-direction: column;
+    transform: translateY(-14px); opacity: 0; pointer-events: none;
+    transition: transform 0.35s var(--ease), opacity 0.3s ease;
 }
-/* Full-bleed campus photograph, under a navy/gold tint stack.
-   Gradient fallback (above) stays visible if the photo never loads. */
-.hero::before {
-    content: '';
-    position: absolute; inset: -3%;
-    z-index: 0; pointer-events: none;
-    background-image:
-        radial-gradient(ellipse 75% 60% at 50% 8%, rgba(6, 13, 33, 0.42) 0%, rgba(6, 13, 33, 0.72) 55%, rgba(6, 13, 33, 0.9) 100%),
-        linear-gradient(180deg, rgba(6, 13, 33, 0.86) 0%, rgba(10, 22, 51, 0.62) 38%, rgba(6, 13, 33, 0.88) 100%),
-        url('https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    background-size: cover, cover, cover;
-    background-position: center, center, center 40%;
-    background-repeat: no-repeat;
-    filter: saturate(1.05) contrast(1.02);
-    transform: scale(1.02);
-    animation: kenBurns 24s ease-in-out infinite alternate;
-}
-@keyframes kenBurns {
-    from { transform: scale(1.02) translate3d(0, 0, 0); }
-    to   { transform: scale(1.1) translate3d(0, -1.2%, 0); }
-}
-.hero::after {
-    content: '';
-    position: absolute; left: 0; right: 0; bottom: 0; height: 140px;
-    background: linear-gradient(to bottom, transparent, var(--navy-deep));
-    pointer-events: none;
-}
-.hero .container { position: relative; z-index: 2; }
-
-/* Crest — signature element */
-.hero-crest {
-    width: clamp(112px, 16vw, 152px); height: auto;
-    margin: 0 auto 30px; display: block;
-    filter: drop-shadow(0 0 26px rgba(212, 175, 55, 0.28));
-    animation: crestFloat 7s ease-in-out infinite;
-}
-@keyframes crestFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-9px); }
-}
-.crest-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: crestDraw 2.4s ease-out 0.3s forwards; }
-.crest-draw-slow { stroke-dasharray: 900; stroke-dashoffset: 900; animation: crestDraw 3s ease-out 0.6s forwards; }
-@keyframes crestDraw { to { stroke-dashoffset: 0; } }
-.crest-fade { opacity: 0; animation: crestFade 1.4s ease-out 1.6s forwards; }
-@keyframes crestFade { to { opacity: 1; } }
-
-.hero-badge {
-    display: inline-block;
-    font-size: 0.76rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold-pale);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    background: rgba(212, 175, 55, 0.07);
-    padding: 9px 22px; border-radius: 980px;
-    margin-bottom: 30px;
-}
-.hero-headline {
-    font-size: clamp(2.6rem, 7.5vw, 5.4rem);
-    margin-bottom: 22px;
-    letter-spacing: -0.02em;
-}
-.hero-subtext {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 44px;
-}
-.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.hero-motto {
-    margin-top: 54px;
-    font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase;
-    color: rgba(232, 207, 122, 0.55);
-}
-
-/* ============ STORY ============ */
-.story {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-    text-align: center;
-}
-.story::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 45% at 18% 55%, rgba(46, 84, 179, 0.12) 0%, transparent 60%);
-    pointer-events: none;
-}
-.story .container { position: relative; z-index: 1; }
-.story-lines { max-width: 660px; margin: 0 auto; }
-.story-lines p {
-    font-size: clamp(1.12rem, 2.2vw, 1.4rem);
-    color: var(--ivory-dim);
-    margin-bottom: 26px; line-height: 1.55;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.story-lines p:hover { color: var(--ivory); transform: translateX(8px); }
-.story-lines p strong { color: var(--gold-soft); font-weight: 600; }
-/* Story: portrait photo beside the belief lines */
-.story-split {
-    display: grid;
-    grid-template-columns: 0.85fr 1fr;
-    gap: 56px; align-items: center;
-    text-align: left;
-    max-width: 1000px; margin: 0 auto;
-}
-.story-split .story-lines { margin: 0; max-width: 560px; }
-.story-frame {
-    position: relative;
-    aspect-ratio: 3 / 4;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    background: linear-gradient(155deg, rgba(212, 175, 55, 0.12), rgba(14, 29, 66, 0.9) 60%);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
-}
-.story-frame img, .band-frame img, .gallery-card img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: saturate(1.05) contrast(1.02);
-    transition: transform 0.6s var(--ease-soft);
-}
-.story-frame::after, .band-frame::after {
-    content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(6, 13, 33, 0.05) 0%, rgba(6, 13, 33, 0.45) 100%);
-}
-.story-caption {
-    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-    padding: 16px 18px;
-    font-size: 0.76rem; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--gold-pale);
-}
-.story-close {
-    margin-top: 20px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 600;
+.drawer.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+.drawer a {
+    padding: 15px 2px; text-decoration: none;
+    font-size: 0.74rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.2em;
     color: var(--ivory);
+    border-bottom: 1px solid rgba(165, 135, 88, 0.18);
 }
+.drawer a:last-child { border-bottom: none; color: var(--gold); }
 
-/* ============ OFFERINGS GRID ============ */
-.offerings {
-    padding: 130px 24px;
-    background: var(--navy);
-    text-align: center;
-}
-.offerings::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
-    pointer-events: none;
-}
-.offerings .container { position: relative; z-index: 1; }
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 26px;
-}
-.offer-card {
-    text-align: left;
-    padding: 36px 30px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: linear-gradient(160deg, rgba(232, 207, 122, 0.045) 0%, rgba(14, 29, 66, 0.6) 55%);
+/* ==========================================================================
+   HERO — 3-photo crossfade slideshow
+   ========================================================================== */
+.hero {
     position: relative; overflow: hidden;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, border-color 0.4s ease;
+    min-height: 100vh; min-height: 100svh;
+    display: flex; align-items: flex-end;
+    background: linear-gradient(160deg, var(--navy-2), var(--navy) 60%);
+    padding: 150px 0 88px;
 }
-.offer-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
-    opacity: 0; transition: opacity 0.4s ease;
+.slides { position: absolute; inset: 0; z-index: 0; }
+.slide {
+    position: absolute; inset: 0;
+    opacity: 0; transition: opacity 1.6s ease-in-out;
+    background: var(--navy-2);
 }
-.offer-card:hover {
-    transform: translateY(-6px) scale(1.015);
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(212, 175, 55, 0.08);
+.slide.on { opacity: 1; }
+.slide img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: contrast(1.07) saturate(0.92) brightness(0.9);
 }
-.offer-card:hover::before { opacity: 1; }
-.offer-icon {
-    width: 52px; height: 52px; margin-bottom: 22px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 14px;
-    background: rgba(212, 175, 55, 0.09);
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    transition: transform 0.45s var(--ease-soft), background 0.4s ease;
-}
-.offer-card:hover .offer-icon { transform: translateY(-3px) rotate(-4deg); background: rgba(212, 175, 55, 0.16); }
-.offer-icon svg { width: 26px; height: 26px; stroke: var(--gold-soft); }
-.offer-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
-.offer-card p { font-size: 0.95rem; color: var(--ivory-dim); }
-
-/* ============ STATS BAND ============ */
-.stats {
-    padding: 100px 24px;
+.slide:nth-child(odd) img { animation: kbZoom 15s ease-out forwards; }
+.slide:nth-child(even) img { animation: kbPan 15s ease-out forwards; }
+@keyframes kbZoom { from { transform: scale(1.02); } to { transform: scale(1.13); } }
+@keyframes kbPan { from { transform: scale(1.1) translateX(-2%); } to { transform: scale(1.1) translateX(2.5%); } }
+.hero-scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background:
-        linear-gradient(180deg, rgba(212, 175, 55, 0.05), transparent 40%),
-        var(--navy-deep);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+        linear-gradient(180deg, rgba(10, 22, 51, 0.25) 0%, rgba(10, 22, 51, 0.92) 100%),
+        linear-gradient(90deg, rgba(10, 22, 51, 0.72) 0%, rgba(10, 22, 51, 0.1) 62%),
+        rgba(10, 22, 51, 0.12);
 }
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px; text-align: center;
+.hero-inner { position: relative; z-index: 2; width: 100%; }
+.hero-copy { max-width: 640px; }
+.hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    line-height: 1.08; color: var(--ivory);
+    margin-bottom: 18px;
 }
-.stat-number {
+.h1-rot {
+    display: block; position: relative;
+    min-height: 1.12em; overflow: hidden;
+    color: var(--gold);
+}
+.h1-rot span {
     display: block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    background: linear-gradient(120deg, var(--gold), var(--gold-pale));
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    line-height: 1.1; margin-bottom: 8px;
+    position: absolute; inset: 0;
+    opacity: 0; transform: translateY(70%);
+    transition: opacity 0.55s ease, transform 0.65s var(--ease);
 }
-.stat-label {
-    font-size: 0.92rem; color: var(--ivory-dim);
-    letter-spacing: 0.04em;
+.h1-rot span.on { opacity: 1; transform: translateY(0); }
+.hero p.hero-lede {
+    color: var(--mist); font-size: 1rem;
+    max-width: 520px; margin-bottom: 34px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-foot {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 54px;
+}
+.hero-foot .bar { width: 58px; height: 1px; background: var(--bronze); }
+.hero-count {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
+    color: var(--bronze);
+}
+.hero-count b { color: var(--ivory); font-weight: 600; }
+.dots {
+    position: absolute; z-index: 3; bottom: 34px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 12px;
+}
+.dots button {
+    width: 8px; height: 8px; padding: 0; border-radius: 50%;
+    background: transparent; border: 1px solid rgba(245, 241, 230, 0.5);
+    cursor: pointer; transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.dots button[aria-current="true"] { background: var(--gold); border-color: var(--gold); transform: scale(1.2); }
+
+/* ==========================================================================
+   MARQUEE RIBBON
+   ========================================================================== */
+.ribbon {
+    background: var(--navy-2);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    height: 44px; overflow: hidden;
+    display: flex; align-items: center;
+    position: relative; z-index: 4;
+}
+.ribbon-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.ribbon:hover .ribbon-track { animation-play-state: paused; }
+.ribbon-seq { display: flex; align-items: center; flex-shrink: 0; }
+.ribbon-seq b {
+    font-weight: 600; font-size: 0.66rem;
+    text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--gold); white-space: nowrap;
+}
+.ribbon-seq i { color: var(--bronze); font-style: normal; padding: 0 22px; font-size: 0.5rem; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ==========================================================================
+   3 — WELCOME
+   ========================================================================== */
+.welcome { padding: 108px 0 4px; background: var(--navy); }
+.welcome-grid {
+    display: grid; grid-template-columns: 1.08fr 0.92fr;
+    gap: 72px; align-items: center;
+}
+.pull-rule {
+    border-left: 1px solid var(--bronze);
+    padding-left: 30px;
+}
+.dropcap::first-letter {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 3.9rem; line-height: 0.82;
+    color: var(--gold); float: left;
+    padding: 6px 12px 0 0;
+}
+.welcome p { margin-bottom: 18px; color: var(--mist); }
+.welcome p.motto {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.4rem; color: var(--ivory); line-height: 1.35;
+    margin-top: 26px;
+}
+.sig {
+    margin-top: 30px; padding-top: 22px;
+    border-top: 1px solid rgba(165, 135, 88, 0.25);
+    display: flex; flex-wrap: wrap; gap: 30px;
+}
+.sig div strong {
+    display: block;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.12rem; font-weight: 600; color: var(--ivory);
+}
+.sig div span {
+    font-size: 0.63rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--bronze);
 }
 
-/* ============ SIGNATURE: A DAY AT ============ */
-.day {
-    padding: 130px 24px;
-    background: var(--navy);
-    overflow: hidden;
-}
-.day::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 45% 55% at 85% 30%, rgba(46, 84, 179, 0.14) 0%, transparent 60%);
+/* Offset bronze frame */
+.frame { position: relative; }
+.frame::before {
+    content: ''; position: absolute;
+    inset: -16px -16px 16px 16px;
+    border: 1px solid var(--bronze); opacity: 0.55;
     pointer-events: none;
 }
-.day .container { position: relative; z-index: 1; }
-.day-track {
-    position: relative;
-    max-width: 720px; margin: 0 auto;
-    padding-left: 40px;
-}
-.day-line {
-    position: absolute; left: 11px; top: 8px; bottom: 8px;
-    width: 2px;
-    background: rgba(212, 175, 55, 0.14);
-    border-radius: 2px;
-}
-.day-line-progress {
-    position: absolute; left: 0; top: 0;
-    width: 100%; height: 0%;
-    background: linear-gradient(180deg, var(--gold), var(--gold-soft));
-    border-radius: 2px;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
-}
-.day-item { position: relative; padding: 0 0 46px 12px; }
-.day-item:last-child { padding-bottom: 0; }
-.day-dot {
-    position: absolute; left: -35px; top: 7px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--navy);
-    border: 2px solid var(--gold);
-    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.12);
-}
-.day-time {
-    display: inline-block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-    font-size: 0.82rem; letter-spacing: 0.14em;
-    color: var(--gold-soft);
-    margin-bottom: 6px;
-}
-.day-item h3 { font-size: 1.18rem; margin-bottom: 6px; }
-.day-item p { font-size: 0.95rem; color: var(--ivory-dim); max-width: 520px; }
-
-/* ============ AUTOMATION TEASER ============ */
-.automation {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-}
-.automation::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 50% at 50% 100%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-    pointer-events: none;
-}
-.automation .container { position: relative; z-index: 1; }
-.enquiry-shell {
-    max-width: 560px; margin: 0 auto;
-    padding: 44px 38px;
-    border-radius: 24px;
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    background: linear-gradient(165deg, rgba(232, 207, 122, 0.06), rgba(10, 22, 51, 0.85) 60%);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+.frame figure {
     position: relative; overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(150deg, var(--navy-3), var(--navy-2) 65%);
 }
-.enquiry-shell::before {
-    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+.frame img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.06) saturate(0.94); }
+.frame figure::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: rgba(10, 22, 51, 0.12);
 }
-.enquiry-title {
-    font-size: 1.35rem; margin-bottom: 6px; text-align: center;
+
+/* ==========================================================================
+   4 — PILLARS
+   ========================================================================== */
+.pillars { padding: 100px 0 8px; background: var(--navy); }
+.pillar-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 18px; margin-top: 52px;
 }
-.enquiry-note {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-align: center; margin-bottom: 30px;
+.pillar {
+    background: var(--navy-2);
+    border: 1px solid rgba(165, 135, 88, 0.16);
+    border-radius: 3px;
+    padding: 34px 24px 32px;
+    transition: transform 0.45s var(--ease), border-color 0.4s ease, background 0.4s ease;
 }
-.field { margin-bottom: 20px; text-align: left; }
+.pillar:hover { transform: translateY(-6px); border-color: var(--bronze); }
+.pillar svg { width: 30px; height: 30px; stroke: var(--bronze); fill: none; stroke-width: 1.3; margin-bottom: 20px; transition: stroke 0.4s ease; }
+.pillar:hover svg { stroke: var(--gold); }
+.pillar h3 { font-size: 1.32rem; margin-bottom: 10px; }
+.pillar p { font-size: 0.86rem; color: var(--mist); line-height: 1.65; }
+
+/* ==========================================================================
+   5 — STATS BAND
+   ========================================================================== */
+.stats {
+    position: relative; overflow: hidden;
+    background: var(--navy-2);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 74px 0;
+}
+.stats::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 90% at 50% 50%, rgba(165, 135, 88, 0.06), transparent 70%);
+}
+.stats .wrap { position: relative; z-index: 1; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { text-align: center; padding: 6px 18px; border-left: 1px solid rgba(212, 175, 55, 0.2); }
+.stat:first-child { border-left: none; }
+.stat b {
+    display: block;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: clamp(2rem, 4.4vw, 3.1rem);
+    color: var(--gold); line-height: 1.05; margin-bottom: 10px;
+    font-variant-numeric: lining-nums;
+}
+.stat span {
+    display: block; font-size: 0.62rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.24em; color: var(--ivory);
+}
+.stat em { display: block; font-style: normal; font-size: 0.72rem; color: var(--mist); letter-spacing: 0.04em; margin-top: 7px; text-transform: none; }
+
+/* ==========================================================================
+   6 — MOSAIC
+   ========================================================================== */
+.mosaic-sec { padding: 100px 0 8px; background: var(--navy); }
+.mosaic {
+    display: grid; grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 172px; gap: 12px; margin-top: 48px;
+}
+.tile {
+    position: relative; overflow: hidden;
+    background: linear-gradient(145deg, var(--navy-3), var(--navy-2) 70%);
+    border: 1px solid rgba(165, 135, 88, 0.16);
+}
+.tile img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: contrast(1.07) saturate(0.9);
+    transition: transform 0.7s var(--ease);
+}
+.tile::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: rgba(10, 22, 51, 0.34);
+    transition: background 0.5s ease;
+}
+.tile:hover img { transform: scale(1.05); }
+.tile:hover::after { background: rgba(10, 22, 51, 0.12); }
+.tile figcaption {
+    position: absolute; left: 0; bottom: 0; z-index: 2;
+    padding: 24px 16px 13px; width: 100%;
+    background: linear-gradient(to top, rgba(10, 22, 51, 0.9), transparent);
+    font-size: 0.6rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.24em; color: var(--ivory);
+}
+.t1 { grid-column: span 5; grid-row: span 2; }
+.t2 { grid-column: span 4; }
+.t3 { grid-column: span 3; }
+.t4 { grid-column: span 4; }
+.t5 { grid-column: span 3; }
+.repcap {
+    margin-top: 14px; text-align: right;
+    font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(185, 192, 212, 0.55);
+}
+
+/* ==========================================================================
+   7 — THE LIGHT SECTION: ADMISSIONS
+   ========================================================================== */
+.admissions { background: var(--paper); color: var(--ink); padding: 96px 0 100px; }
+.admissions .eyebrow { color: #8a6f45; }
+.admissions .sec-title { color: var(--ink); }
+.admissions .sec-lede { color: #4d5568; }
+.steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 26px; margin: 60px 0 74px; position: relative;
+}
+.steps::before {
+    content: ''; position: absolute; top: 27px; left: 12%; right: 12%;
+    border-top: 1px dotted var(--bronze); z-index: 0;
+}
+.step { position: relative; z-index: 1; text-align: center; }
+.step .num {
+    width: 56px; height: 56px; margin: 0 auto 20px;
+    border: 1px solid var(--bronze); border-radius: 50%;
+    background: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 1.5rem; color: #8a6f45;
+}
+.step h3 { color: var(--ink); font-size: 1.28rem; margin-bottom: 8px; }
+.step p { font-size: 0.85rem; color: #4d5568; line-height: 1.65; }
+
+.enq-shell {
+    max-width: 720px; margin: 0 auto;
+    background: #fff;
+    border: 1px solid rgba(22, 33, 63, 0.12);
+    border-top: 2px solid var(--bronze);
+    padding: 46px 42px 40px;
+}
+.enq-shell h3 { color: var(--ink); font-size: 1.75rem; margin-bottom: 6px; text-align: center; }
+.enq-note { text-align: center; font-size: 0.83rem; color: #5b6377; margin-bottom: 32px; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { margin-bottom: 18px; }
 .field label {
-    display: block; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 8px;
+    display: block; font-size: 0.62rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.2em;
+    color: #8a6f45; margin-bottom: 8px;
 }
 .field input, .field select {
-    width: 100%; min-height: 50px;
-    padding: 13px 16px;
-    font-family: 'Inter', sans-serif; font-size: 1rem;
-    color: var(--ivory);
-    background: rgba(6, 13, 33, 0.75);
-    border: 1px solid rgba(246, 242, 232, 0.14);
-    border-radius: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; min-height: 52px; padding: 14px 16px;
+    font-family: 'Montserrat', sans-serif; font-size: 0.95rem;
+    color: var(--ivory); background: var(--ink);
+    border: 1px solid var(--ink); border-radius: 2px;
     -webkit-appearance: none; appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .field select {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
     background-repeat: no-repeat; background-position: right 16px center;
     padding-right: 42px;
 }
-.field select option { background: var(--navy-deep); color: var(--ivory); }
-.field input::placeholder { color: rgba(185, 180, 166, 0.55); }
-.field input:focus, .field select:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
-}
-.enquiry-form .btn { width: 100%; margin-top: 6px; }
-.enquiry-privacy {
-    margin-top: 16px; text-align: center;
-    font-size: 0.75rem; color: rgba(185, 180, 166, 0.6);
-}
+.field select option { background: var(--ink); color: var(--ivory); }
+.field input::placeholder { color: rgba(185, 192, 212, 0.55); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22); }
+#enq-form .btn { width: 100%; margin-top: 8px; }
+.enq-priv { margin-top: 15px; text-align: center; font-size: 0.7rem; color: #6b7285; }
 
-/* Success state */
-.enquiry-success {
-    display: none;
-    text-align: center;
-    padding: 26px 6px 10px;
-}
-.enquiry-success.show { display: block; animation: successIn 0.6s var(--ease-soft); }
-@keyframes successIn {
-    from { opacity: 0; transform: translateY(16px) scale(0.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-.success-ring {
-    width: 78px; height: 78px; margin: 0 auto 22px;
-    border-radius: 50%;
+.enq-ok { display: none; text-align: center; padding: 18px 4px 8px; }
+.enq-ok.show { display: block; animation: okIn 0.6s var(--ease); }
+@keyframes okIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.ok-ring {
+    width: 74px; height: 74px; margin: 0 auto 22px;
+    border: 1px solid var(--bronze); border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1.5px solid var(--gold);
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
 }
-.success-ring svg { width: 34px; height: 34px; }
-.success-check {
-    stroke: var(--gold-soft); stroke-width: 3; fill: none;
+.ok-ring svg { width: 32px; height: 32px; }
+.ok-check {
+    stroke: #8a6f45; stroke-width: 2.4; fill: none;
     stroke-linecap: round; stroke-linejoin: round;
     stroke-dasharray: 48; stroke-dashoffset: 48;
-    animation: checkDraw 0.7s ease-out 0.25s forwards;
+    animation: okDraw 0.7s ease-out 0.2s forwards;
 }
-@keyframes checkDraw { to { stroke-dashoffset: 0; } }
-.enquiry-success h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.enquiry-success p { font-size: 0.94rem; color: var(--ivory-dim); max-width: 380px; margin: 0 auto 8px; }
-.enquiry-success .success-hint { color: var(--gold-soft); font-size: 0.85rem; margin-top: 14px; }
+@keyframes okDraw { to { stroke-dashoffset: 0; } }
+.enq-ok h3 { margin-bottom: 10px; }
+.enq-ok p { font-size: 0.88rem; color: #4d5568; max-width: 400px; margin: 0 auto 8px; }
+.enq-ok .hint { color: #8a6f45; font-size: 0.76rem; letter-spacing: 0.06em; margin-top: 14px; }
 
-/* WhatsApp pitch strip */
-.wa-strip {
-    max-width: 720px; margin: 60px auto 0;
-    display: flex; align-items: center; gap: 20px;
-    padding: 26px 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(37, 211, 102, 0.28);
-    background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(10, 22, 51, 0.6));
-}
-.wa-strip-icon {
-    flex-shrink: 0;
-    width: 52px; height: 52px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
-}
-.wa-strip-icon svg { width: 28px; height: 28px; fill: #fff; }
-.wa-strip h3 { font-size: 1.08rem; margin-bottom: 4px; }
-.wa-strip p { font-size: 0.9rem; color: var(--ivory-dim); }
-
-/* ============ VISIT / CONTACT ============ */
-.visit {
-    padding: 130px 24px;
-    background: var(--navy);
-}
-.visit::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 50% at 12% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 55%);
-    pointer-events: none;
-}
-.visit .container { position: relative; z-index: 1; }
-.visit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
-    max-width: 900px; margin: 0 auto 44px;
-}
-.visit-card {
-    padding: 30px 26px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: rgba(14, 29, 66, 0.5);
-    text-align: center;
-    transition: transform 0.45s var(--ease-soft), border-color 0.4s ease;
-}
-.visit-card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.38); }
-.visit-card h3 {
-    font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 12px;
-}
-.visit-card p { font-size: 0.98rem; color: var(--ivory); }
-.visit-card p span { display: block; color: var(--ivory-dim); font-size: 0.88rem; margin-top: 4px; }
-.visit-card a { color: var(--gold-soft); text-decoration: none; }
-.visit-card a:hover { text-decoration: underline; }
-.visit-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-
-/* ============ FAQ ============ */
-.faq {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-}
-.faq-list { max-width: 760px; margin: 0 auto; }
-.faq-item {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
-}
-.faq-question {
-    width: 100%;
-    display: flex; justify-content: space-between; align-items: center; gap: 18px;
-    padding: 24px 4px;
-    background: transparent; border: none; cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: var(--ivory); text-align: left;
-    transition: color 0.3s ease;
-    min-height: 60px;
-}
-.faq-question:hover { color: var(--gold-soft); }
-.faq-question::after {
-    content: '+';
-    flex-shrink: 0;
-    font-family: 'Inter', sans-serif; font-weight: 300;
-    font-size: 1.7rem; line-height: 1;
-    color: var(--gold);
-    transition: transform 0.4s var(--ease-soft);
-}
-.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
-.faq-answer {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.45s var(--ease-soft);
-}
-.faq-answer p {
-    padding: 0 4px 24px;
-    font-size: 0.96rem; color: var(--ivory-dim);
-    max-width: 640px;
-}
-
-/* ============ FINAL CTA ============ */
-.final-cta {
-    padding: 150px 24px;
-    text-align: center;
-    background:
-        radial-gradient(ellipse 65% 60% at 50% 110%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
-        var(--navy);
-}
-.final-cta .section-headline { margin-bottom: 16px; }
-.cta-subtext {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--ivory-dim);
-    margin-bottom: 44px;
-}
-
-/* ============ FOOTER ============ */
-.footer {
-    padding: 60px 24px 110px;
-    background: var(--navy-deep);
-    border-top: 1px solid var(--line);
-    text-align: center;
-}
-.footer-crest { width: 44px; height: auto; margin: 0 auto 18px; display: block; opacity: 0.85; }
-.footer-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.05rem; margin-bottom: 4px;
-}
-.footer-tag {
-    font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 26px;
-}
-.footer-links {
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px;
-    margin-bottom: 30px;
-}
-.footer-links a {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 6px 0;
-    transition: color 0.3s ease;
-}
-.footer-links a:hover { color: var(--gold-soft); }
-.footer-demo-notice {
-    font-size: 0.78rem; color: rgba(185, 180, 166, 0.6);
-    max-width: 560px; margin: 0 auto 10px; line-height: 1.7;
-}
-.footer-demo-notice a { color: rgba(232, 207, 122, 0.7); text-decoration: none; }
-.footer-copy { font-size: 0.75rem; color: rgba(185, 180, 166, 0.45); }
-
-/* ============ FLOATING WHATSAPP ============ */
-.wa-float {
-    position: fixed; right: 20px; bottom: 20px; z-index: 1100;
-    width: 58px; height: 58px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4);
-    text-decoration: none;
-    transition: transform 0.4s var(--ease-soft), box-shadow 0.4s ease;
-    animation: waPulse 2.6s ease-in-out infinite;
-}
-.wa-float:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
-.wa-float svg { width: 30px; height: 30px; fill: #fff; }
-@keyframes waPulse {
-    0%, 100% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
-    55% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
-}
-
-/* ============ CONCEPT DEMO BADGE ============ */
-.demo-badge {
-    position: fixed; left: 16px; bottom: 16px; z-index: 1100;
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 10px 9px 16px;
-    border-radius: 980px;
-    background: rgba(6, 13, 33, 0.72);
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold-soft);
-}
-.demo-badge-close {
-    width: 26px; height: 26px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.12); border: none; cursor: pointer;
-    color: var(--gold-soft); font-size: 0.95rem; line-height: 1;
-    transition: background 0.3s ease;
-}
-.demo-badge-close:hover { background: rgba(212, 175, 55, 0.28); }
-.demo-badge.hidden { display: none; }
-
-/* ============ BACK TO TOP ============ */
-.back-to-top {
-    position: fixed; right: 22px; bottom: 92px; z-index: 1090;
-    width: 46px; height: 46px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(14, 29, 66, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: var(--gold-soft); cursor: pointer;
-    opacity: 0; pointer-events: none; transform: translateY(10px);
-    transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease;
-}
-.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.back-to-top:hover { background: rgba(212, 175, 55, 0.18); }
-
-/* ============ ACCREDITATION STRIP ============ */
-.creds {
-    padding: 34px 24px;
-    background: var(--navy-deep);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-.creds-row {
-    display: flex; flex-wrap: wrap;
-    justify-content: center; align-items: stretch;
-    gap: 0;
-}
+/* ==========================================================================
+   8 — AFFILIATION STRIP
+   ========================================================================== */
+.creds { background: var(--navy); padding: 62px 0; border-bottom: 1px solid var(--hairline); }
+.cred-row { display: flex; flex-wrap: wrap; justify-content: center; }
 .cred {
-    padding: 6px 32px;
-    text-align: center;
-    border-left: 1px solid rgba(212, 175, 55, 0.14);
-    opacity: 0.72;
-    transition: opacity 0.35s ease;
+    padding: 8px 34px; text-align: center;
+    border-left: 1px solid rgba(165, 135, 88, 0.22);
 }
 .cred:first-child { border-left: none; }
-.cred:hover { opacity: 1; }
-.cred-mark {
+.cred b {
     display: block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.02rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-soft);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 1.28rem; color: var(--ivory); line-height: 1.2;
 }
-.cred-note {
-    display: block;
-    font-size: 0.74rem; letter-spacing: 0.06em;
-    color: rgba(185, 180, 166, 0.72);
-    margin-top: 3px;
+.cred span {
+    display: block; margin-top: 5px;
+    font-size: 0.6rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--bronze);
 }
 
-/* ============ WIDE PHOTO BAND ============ */
-.band-frame {
-    position: relative;
-    max-width: 1000px; margin: 0 auto 64px;
-    aspect-ratio: 21 / 9;
-    border-radius: 8px; overflow: hidden;
-    border: 1px solid var(--line);
-    background: linear-gradient(140deg, rgba(212, 175, 55, 0.1), rgba(14, 29, 66, 0.9) 60%);
-    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45);
+/* ==========================================================================
+   9 — FAQ
+   ========================================================================== */
+.faq { padding: 100px 0 8px; background: var(--navy); }
+.faq-list { max-width: 820px; margin: 46px auto 0; }
+.faq-item { border-bottom: 1px solid rgba(165, 135, 88, 0.2); }
+.faq-item:first-child { border-top: 1px solid rgba(165, 135, 88, 0.2); }
+.faq-q {
+    width: 100%; min-height: 68px;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    padding: 22px 2px;
+    background: none; border: none; cursor: pointer; text-align: left;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.42rem);
+    color: var(--ivory);
+    transition: color 0.3s ease;
+}
+.faq-q:hover { color: var(--gold); }
+.faq-q i {
+    flex-shrink: 0; width: 18px; height: 18px; position: relative;
+    transition: transform 0.4s var(--ease);
+}
+.faq-q i::before, .faq-q i::after {
+    content: ''; position: absolute; background: var(--bronze);
+    left: 50%; top: 50%;
+}
+.faq-q i::before { width: 16px; height: 1px; transform: translate(-50%, -50%); }
+.faq-q i::after { width: 1px; height: 16px; transform: translate(-50%, -50%); }
+.faq-q[aria-expanded="true"] i { transform: rotate(135deg); }
+.faq-q[aria-expanded="true"] i::before, .faq-q[aria-expanded="true"] i::after { background: var(--gold); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease); }
+.faq-a p { padding: 0 2px 26px; font-size: 0.91rem; color: var(--mist); max-width: 700px; }
+
+/* ==========================================================================
+   10 — VISIT + FOOTER
+   ========================================================================== */
+.visit {
+    padding: 100px 0 96px;
+    background: linear-gradient(165deg, var(--navy-3) 0%, var(--navy-2) 48%, var(--navy) 100%);
+}
+.visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 48px 0 42px; }
+.vcard {
+    border: 1px solid rgba(165, 135, 88, 0.26);
+    background: rgba(10, 22, 51, 0.42);
+    padding: 30px 26px;
+    transition: border-color 0.4s ease, transform 0.4s var(--ease);
+}
+.vcard:hover { border-color: var(--bronze); transform: translateY(-4px); }
+.vcard h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.62rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.26em;
+    color: var(--bronze); margin-bottom: 14px;
+}
+.vcard p { color: var(--ivory); font-size: 0.92rem; }
+.vcard p span { display: block; color: var(--mist); font-size: 0.84rem; margin-top: 6px; }
+.vcard a { color: var(--gold); text-decoration: none; }
+.vcard a:hover { text-decoration: underline; }
+.visit-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.footer { background: var(--navy); border-top: 1px solid var(--hairline); padding: 58px 0 104px; text-align: center; }
+.footer-crest { width: 42px; height: 42px; margin: 0 auto 16px; }
+.footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 1.32rem; color: var(--ivory); }
+.footer-tag { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.28em; color: var(--bronze); margin-top: 8px; margin-bottom: 28px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-bottom: 30px; }
+.footer-links a { font-size: 0.64rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--mist); text-decoration: none; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--gold); }
+.demo-notice { font-size: 0.74rem; color: rgba(185, 192, 212, 0.7); max-width: 660px; margin: 0 auto 12px; line-height: 1.8; }
+.demo-notice a { color: var(--bronze); text-decoration: none; }
+.footer-copy { font-size: 0.68rem; color: rgba(185, 192, 212, 0.45); letter-spacing: 0.08em; }
+
+/* ==========================================================================
+   FLOATS
+   ========================================================================== */
+.wa-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 1300;
+    width: 54px; height: 54px; border-radius: 50%;
+    background: var(--wa);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.36);
+    text-decoration: none;
+    transition: transform 0.35s var(--ease);
+}
+.wa-float:hover { transform: translateY(-3px) scale(1.05); }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+.badge {
+    position: fixed; left: 18px; bottom: 18px; z-index: 1300;
+    display: flex; align-items: center; gap: 9px;
+    padding: 8px 9px 8px 15px;
+    background: rgba(16, 31, 74, 0.9);
+    border: 1px solid var(--hairline);
+    font-size: 0.6rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--bronze);
+}
+.badge button {
+    width: 22px; height: 22px; border: none; cursor: pointer;
+    background: rgba(165, 135, 88, 0.18); color: var(--ivory);
+    font-size: 0.85rem; line-height: 1;
+}
+.badge.hidden { display: none; }
+
+.mbar { display: none; }
+
+/* ==========================================================================
+   REVEAL
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
 }
 
-/* ============ CAMPUS LIFE GALLERY ============ */
-.gallery {
-    padding: 120px 24px;
-    background: var(--navy-deep);
-    text-align: center;
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1080px) {
+    .nav-side a { font-size: 0.64rem; letter-spacing: 0.14em; }
+    .hdr-mid { gap: 22px; }
+    .nav-side { gap: 18px; }
+    .welcome-grid { gap: 48px; }
 }
-.gallery::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 45% at 78% 20%, rgba(46, 84, 179, 0.12) 0%, transparent 60%);
-    pointer-events: none;
-}
-.gallery .container { position: relative; z-index: 1; }
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
-}
-.gallery-card {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid var(--line);
-    background: linear-gradient(150deg, rgba(212, 175, 55, 0.1), rgba(14, 29, 66, 0.9) 60%);
-}
-.gallery-card:hover img { transform: scale(1.06); }
-.gallery-cap {
-    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-    padding: 26px 14px 12px;
-    background: linear-gradient(to top, rgba(6, 13, 33, 0.88), transparent);
-    font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--gold-pale);
-}
-
-/* ============ STICKY MOBILE CALL / WHATSAPP BAR ============ */
-.mobile-bar { display: none; }
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 860px) {
-    .nav-links {
-        position: fixed; top: 68px; left: 0; right: 0;
-        flex-direction: column; align-items: stretch; gap: 0;
-        background: rgba(6, 13, 33, 0.97);
-        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--line);
-        padding: 12px 24px 24px;
-        transform: translateY(-12px); opacity: 0; pointer-events: none;
-        transition: transform 0.35s var(--ease-soft), opacity 0.3s ease;
-    }
-    .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-    .nav-links a { padding: 15px 4px; font-size: 1.02rem; border-bottom: 1px solid rgba(246, 242, 232, 0.06); }
-    .nav-links a:last-child { border-bottom: none; }
-    .nav-cta { text-align: center; margin-top: 14px; padding: 14px 22px !important; }
-    .nav-hamburger { display: flex; }
-    .wa-strip { flex-direction: column; text-align: center; }
-    .enquiry-shell { padding: 36px 24px; }
-    .story-split { grid-template-columns: 1fr; gap: 34px; text-align: center; }
-    .story-split .story-lines { max-width: 640px; margin: 0 auto; text-align: left; }
-    .story-frame { aspect-ratio: 4 / 3; max-width: 520px; margin: 0 auto; width: 100%; }
-    .band-frame { aspect-ratio: 16 / 9; margin-bottom: 46px; }
-    .cred { padding: 6px 18px; }
+@media (max-width: 940px) {
+    .hdr-inner { grid-template-columns: 1fr auto; height: 76px; }
+    .hdr-mid { justify-content: flex-start; }
+    .nav-side { display: none; }
+    .util-left { display: none; }
+    .util-right { display: none; }
+    .brand { align-items: flex-start; }
+    .burger { display: flex; }
+    .drawer { display: flex; top: 76px; }
+    html { scroll-padding-top: 82px; }
+    .welcome-grid { grid-template-columns: 1fr; gap: 58px; }
+    .frame { max-width: 460px; margin: 0 auto; }
+    .frame figure { aspect-ratio: 4 / 3; }
+    .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 0; }
+    .stat:nth-child(3) { border-left: none; }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 40px 22px; }
+    .steps::before { display: none; }
+    .visit-grid { grid-template-columns: 1fr; }
+    .mosaic { grid-auto-rows: 148px; }
 }
 @media (max-width: 700px) {
-    /* Sticky call / WhatsApp bar — the two actions a parent actually needs */
-    .mobile-bar {
+    .wrap, .wrap-narrow { padding: 0 20px; }
+    .hero { padding: 130px 0 108px; align-items: flex-end; }
+    .hero-foot { margin-top: 36px; }
+    .dots { bottom: 26px; }
+    .mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 132px; gap: 8px; }
+    .t1 { grid-column: span 2; grid-row: span 2; }
+    .t2, .t3, .t4, .t5 { grid-column: span 1; }
+    .repcap { text-align: center; }
+    .enq-shell { padding: 34px 22px 30px; }
+    .f-row { grid-template-columns: 1fr; gap: 0; }
+    .cred { padding: 12px 20px; border-left: none; }
+    .divider { padding: 46px 0; }
+    .welcome, .pillars, .mosaic-sec, .faq { padding-top: 76px; }
+    .admissions { padding: 74px 0 78px; }
+    .visit { padding: 76px 0 74px; }
+
+    /* Sticky mobile action bar */
+    .mbar {
         display: flex;
-        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1150;
-        border-top: 1px solid rgba(212, 175, 55, 0.22);
-        background: rgba(6, 13, 33, 0.96);
-        backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1400;
+        background: var(--navy);
+        border-top: 1px solid var(--hairline);
         padding-bottom: env(safe-area-inset-bottom);
     }
-    .mobile-bar a {
-        flex: 1;
-        display: flex; align-items: center; justify-content: center; gap: 9px;
-        min-height: 58px;
-        font-size: 0.95rem; font-weight: 600; letter-spacing: 0.04em;
+    .mbar a {
+        flex: 1; min-height: 58px;
+        display: flex; align-items: center; justify-content: center; gap: 8px;
         text-decoration: none;
+        font-size: 0.62rem; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.16em;
+        color: var(--gold);
+        border-left: 1px solid rgba(165, 135, 88, 0.22);
     }
-    .mobile-bar .mb-call { color: var(--gold-soft); }
-    .mobile-bar .mb-wa { color: #eafff2; background: rgba(37, 211, 102, 0.16); border-left: 1px solid rgba(212, 175, 55, 0.18); }
-    .mobile-bar svg { width: 19px; height: 19px; flex-shrink: 0; }
-    .wa-float { bottom: 84px; width: 52px; height: 52px; }
-    .wa-float svg { width: 27px; height: 27px; }
-    .back-to-top { bottom: 148px; }
-    .demo-badge { bottom: 80px; }
-    .footer { padding-bottom: 130px; }
-    .gallery { padding: 90px 24px; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .mbar a:first-child { border-left: none; }
+    .mbar a.solid { background: var(--gold); color: #16120a; }
+    .mbar svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .wa-float { bottom: 78px; width: 48px; height: 48px; }
+    .wa-float svg { width: 25px; height: 25px; }
+    .badge { bottom: 76px; left: 12px; padding: 7px 8px 7px 12px; font-size: 0.55rem; }
+    .footer { padding-bottom: 128px; }
 }
-@media (max-width: 480px) {
-    .hero { padding: 110px 20px 70px; }
+@media (max-width: 460px) {
     .hero-ctas .btn { width: 100%; }
     .visit-actions .btn { width: 100%; }
-    .day-track { padding-left: 34px; }
-    .orb { filter: blur(70px); }
-    .container { padding: 0 20px; }
+    .pillar-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .pull-rule { padding-left: 20px; }
 }
 
-/* ============ REDUCED MOTION ============ */
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -943,376 +805,396 @@ section { position: relative; z-index: 1; }
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    .crest-draw, .crest-draw-slow { stroke-dashoffset: 0; }
-    .crest-fade { opacity: 1; }
-    .orb { display: none; }
-    .success-check { stroke-dashoffset: 0; }
-    .hero::before { animation: none !important; transform: scale(1.02); }
-    .story-frame img, .band-frame img, .gallery-card img { transition: none; }
+    .pre-mono { stroke-dashoffset: 0; fill: var(--ivory); }
+    .ribbon-track { animation: none; transform: none; }
+    .slide img { animation: none !important; transform: none !important; }
+    .h1-rot span { transform: none; }
+    .ok-check { stroke-dashoffset: 0; }
 }
 </style>
+
 <noscript>
 <style>
-    /* JS disabled: everything stays reachable */
-    .faq-answer { max-height: none; }
-    .faq-question::after { display: none; }
-    @media (max-width: 860px) {
-        .nav-links { position: static; transform: none; opacity: 1; pointer-events: auto; }
-        .nav-hamburger { display: none; }
-        .nav-container { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
-        .nav { position: absolute; }
-        html { scroll-padding-top: 0; }
+    /* JS unavailable: nothing is hidden, nothing traps the page */
+    #preloader { display: none !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .slide { opacity: 0; }
+    .slide:first-child { opacity: 1; }
+    .h1-rot span { position: static; opacity: 1; transform: none; }
+    .h1-rot span:nth-child(n+2) { display: none; }
+    .dots, .badge button { display: none; }
+    .faq-a { max-height: none; }
+    .faq-q i { display: none; }
+    @media (max-width: 940px) {
+        .hdr { position: absolute; }
+        .burger { display: none; }
+        .drawer { display: flex; position: static; transform: none; opacity: 1; pointer-events: auto; }
     }
-    .back-to-top, .demo-badge-close { display: none; }
 </style>
 </noscript>
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- NAVIGATION -->
-    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="#top" class="nav-logo" aria-label="Souvann&rsquo;s Millennium Public School — home">
-                <svg class="nav-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                    <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                    <text x="38" y="50" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="19" font-weight="700" fill="#e8cf7a">SMPS</text>
+<!-- ============================= PRELOADER ============================= -->
+<div id="preloader" role="status" aria-label="Loading">
+    <svg class="pre-crest" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <circle class="pre-ring-outer" cx="60" cy="60" r="46" fill="none" stroke="#a58758" stroke-width="1.2" stroke-dasharray="1.5 5.2"/>
+        <circle class="pre-ring-inner" cx="60" cy="60" r="38" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="1.5 5.2" stroke-dashoffset="3"/>
+        <text class="pre-mono" x="60" y="71" text-anchor="middle">SMPS</text>
+    </svg>
+    <p class="pre-label">Loading</p>
+</div>
+
+<!-- ============================= HEADER ============================= -->
+<header class="hdr" id="hdr">
+    <div class="hdr-inner">
+        <a class="util util-left" href="tel:+919115009555">
+            <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span>Call</span>
+        </a>
+
+        <div class="hdr-mid">
+            <nav class="nav-side" aria-label="Primary left">
+                <a href="#welcome">The School</a>
+                <a href="#life">Life Here</a>
+                <a href="#campus">Campus</a>
+            </nav>
+
+            <a class="brand" href="#top" aria-label="Souvann&rsquo;s Millennium Public School — home">
+                <svg viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+                    <circle cx="30" cy="30" r="27" fill="none" stroke="#a58758" stroke-width="1" stroke-dasharray="1.5 5.2"/>
+                    <circle cx="30" cy="30" r="21" fill="none" stroke="#d4af37" stroke-width="0.9"/>
+                    <text x="30" y="36" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="15" font-weight="600" fill="#f5f1e6">SM</text>
                 </svg>
-                <span class="nav-logo-name">Souvann&rsquo;s Millennium<small>CBSE &middot; Janki Nagar, Gonda</small></span>
+                <span class="brand-name">Souvann&rsquo;s Millennium</span>
+                <span class="brand-sub">Public School &middot; Gonda</span>
             </a>
-            <div class="nav-links" id="nav-menu">
-                <a href="#story">About</a>
-                <a href="#offerings">Learning</a>
-                <a href="#day">A Day Here</a>
-                <a href="#campus">Campus Life</a>
-                <a href="#visit">Visit</a>
-                <a href="#admission" class="nav-cta">Admission Enquiry</a>
-            </div>
-            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <nav class="nav-side" aria-label="Primary right">
+                <a href="#admissions">Admissions</a>
+                <a href="#faq">Questions</a>
+                <a href="#visit">Visit Us</a>
+            </nav>
         </div>
-    </nav>
 
-    <!-- AMBIENT ORBS -->
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
+        <a class="util util-right" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+            <span>WhatsApp</span>
+        </a>
 
-    <main id="main-content">
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="container">
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+    <a href="#welcome">The School</a>
+    <a href="#life">Life Here</a>
+    <a href="#campus">Campus</a>
+    <a href="#faq">Questions</a>
+    <a href="#visit">Visit Us</a>
+    <a href="#admissions">Enquire Now</a>
+</nav>
 
-            <!-- Signature crest monogram -->
-            <svg class="hero-crest" viewBox="0 0 152 168" role="img" aria-label="Souvann&rsquo;s Millennium Public School crest" focusable="false">
-                <defs>
-                    <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#e8cf7a"/>
-                        <stop offset="55%" stop-color="#d4af37"/>
-                        <stop offset="100%" stop-color="#b8912b"/>
-                    </linearGradient>
-                </defs>
-                <!-- Shield -->
-                <path class="crest-draw-slow" d="M76 6 L142 26 V88 C142 124 112 150 76 162 C40 150 10 124 10 88 V26 Z"
-                      fill="rgba(212,175,55,0.04)" stroke="url(#crestGold)" stroke-width="3"/>
-                <path class="crest-draw" d="M76 18 L130 34 V88 C130 117 106 139 76 150 C46 139 22 117 22 88 V34 Z"
-                      fill="none" stroke="rgba(212,175,55,0.45)" stroke-width="1.5"/>
-                <!-- Rising sun -->
-                <g class="crest-fade">
-                    <circle cx="76" cy="62" r="13" fill="none" stroke="#e8cf7a" stroke-width="2"/>
-                    <g stroke="#e8cf7a" stroke-width="2" stroke-linecap="round">
-                        <line x1="76" y1="40" x2="76" y2="46"/>
-                        <line x1="58" y1="48" x2="62" y2="52"/>
-                        <line x1="94" y1="48" x2="90" y2="52"/>
-                        <line x1="52" y1="62" x2="58" y2="62"/>
-                        <line x1="94" y1="62" x2="100" y2="62"/>
-                    </g>
-                </g>
-                <!-- Open book -->
-                <g class="crest-fade">
-                    <path d="M40 92 C52 86 66 86 76 92 C86 86 100 86 112 92 V118 C100 112 86 112 76 118 C66 112 52 112 40 118 Z"
-                          fill="rgba(246,242,232,0.06)" stroke="#e8cf7a" stroke-width="2" stroke-linejoin="round"/>
-                    <line x1="76" y1="92" x2="76" y2="118" stroke="#e8cf7a" stroke-width="2"/>
-                    <path d="M48 97 C56 94 66 94 70 96 M48 103 C56 100 66 100 70 102 M82 96 C86 94 96 94 104 97 M82 102 C86 100 96 100 104 103"
-                          stroke="rgba(232,207,122,0.55)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                </g>
-                <!-- Flowing river line -->
-                <path class="crest-fade" d="M42 132 C50 127 58 137 66 132 C74 127 82 137 90 132 C98 127 106 137 110 133"
-                      fill="none" stroke="#d4af37" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
+<main id="main">
 
-            <p class="hero-badge">CBSE Affiliated &middot; Playgroup to Class X &middot; Janki Nagar, Gonda</p>
-            <h1 class="hero-headline">Every child has a spark. <span class="gradient-text">We find it.</span></h1>
-            <p class="hero-subtext">Souvann&rsquo;s Millennium Public School is a CBSE school in Janki Nagar, Gonda &mdash; smart classrooms, working laboratories, a campus watched end to end, and teaching that is shaped around the child in front of it.</p>
-            <div class="hero-ctas">
-                <a href="#admission" class="btn btn-primary">Start an Admission Enquiry</a>
-                <a href="#day" class="btn btn-secondary">See a Day at School</a>
-            </div>
-            <p class="hero-motto">Curiosity &middot; Character &middot; Confidence</p>
+<!-- ============================= 1. HERO ============================= -->
+<section class="hero" id="top">
+    <div class="slides" aria-hidden="true">
+        <div class="slide on">
+            <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
-    </section>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/6813041/pexels-photo-6813041.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </div>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/37789735/pexels-photo-37789735.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                 alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </div>
+    </div>
+    <div class="hero-scrim"></div>
 
-    <!-- STORY -->
-    <section class="story" id="story">
-        <div class="container">
-            <span class="section-eyebrow">Our Belief</span>
-            <h2 class="section-headline">A school built on <span class="gradient-text">one promise.</span></h2>
-            <div class="story-split">
-            <figure class="story-frame">
+    <div class="hero-inner">
+        <div class="wrap">
+            <div class="hero-copy">
+                <span class="eyebrow">CBSE Affiliated &middot; Janki Nagar, Gonda</span>
+                <h1>
+                    An education built
+                    <span class="h1-rot" id="h1rot">
+                        <span class="on">around each child.</span>
+                        <span>for the long road.</span>
+                        <span>on character.</span>
+                    </span>
+                </h1>
+                <p class="hero-lede">Souvann&rsquo;s Millennium Public School teaches the CBSE course of study from Playgroup to Class X on a single campus in Janki Nagar &mdash; with smart classrooms, working laboratories, transport and an infirmary on the premises.</p>
+                <div class="hero-ctas">
+                    <a class="btn btn-gold" href="#admissions">Enquire Now</a>
+                    <a class="btn btn-ghost" href="#campus">Explore Campus</a>
+                </div>
+            </div>
+            <div class="hero-foot">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="hero-count"><b id="slide-num">01</b> / 03</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dots" id="dots" role="tablist" aria-label="Hero images">
+        <button type="button" role="tab" aria-current="true" aria-label="Image 1"></button>
+        <button type="button" role="tab" aria-current="false" aria-label="Image 2"></button>
+        <button type="button" role="tab" aria-current="false" aria-label="Image 3"></button>
+    </div>
+</section>
+
+<!-- ============================= 2. MARQUEE RIBBON ============================= -->
+<div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+        <div class="ribbon-seq">
+            <b>Admission Enquiries Open</b><i>&#9670;</i>
+            <b>CBSE Affiliation No. 2132777</b><i>&#9670;</i>
+            <b>School Code 70486</b><i>&#9670;</i>
+            <b>Playgroup to Class X</b><i>&#9670;</i>
+            <b>Smart Classrooms &amp; Laboratories</b><i>&#9670;</i>
+            <b>CCTV-Covered Campus</b><i>&#9670;</i>
+            <b>School Transport</b><i>&#9670;</i>
+            <b>On-Campus Infirmary</b><i>&#9670;</i>
+        </div>
+        <div class="ribbon-seq">
+            <b>Admission Enquiries Open</b><i>&#9670;</i>
+            <b>CBSE Affiliation No. 2132777</b><i>&#9670;</i>
+            <b>School Code 70486</b><i>&#9670;</i>
+            <b>Playgroup to Class X</b><i>&#9670;</i>
+            <b>Smart Classrooms &amp; Laboratories</b><i>&#9670;</i>
+            <b>CCTV-Covered Campus</b><i>&#9670;</i>
+            <b>School Transport</b><i>&#9670;</i>
+            <b>On-Campus Infirmary</b><i>&#9670;</i>
+        </div>
+    </div>
+</div>
+<p class="visually-hidden" style="position:absolute;left:-9999px">Admission enquiries open. CBSE affiliation number 2132777, school code 70486. Playgroup to Class X.</p>
+
+<!-- ============================= 3. WELCOME ============================= -->
+<section class="welcome" id="welcome">
+    <div class="wrap">
+        <div class="welcome-grid">
+            <div class="reveal">
+                <span class="eyebrow">A Message From the School</span>
+                <h2 class="sec-title">Excellence, with character.</h2>
+                <div class="pull-rule">
+                    <p class="dropcap">A child is not a vessel to be filled at one fixed speed. Souvann&rsquo;s Millennium Public School was founded on the opposite belief &mdash; that a child is curious and absorbent, and that the school&rsquo;s task is to give that curiosity something worth absorbing.</p>
+                    <p>So the teaching is deliberately differentiated. There is extra scaffolding for the child who is struggling with a concept, additional English for the child still finding the language, and harder problems for the child who finishes early. Three children in one classroom are not asked to be the same child.</p>
+                    <p>Academics carry the day here, taught in smart classrooms and tested in working laboratories. But the school holds equally to the moral and ethical footing that makes the marks mean something &mdash; the aim it sets itself is not merely a good student, but a good citizen.</p>
+                    <p class="motto">&ldquo;Nurturing the inherent potential and talent of each child.&rdquo;</p>
+                </div>
+                <div class="sig">
+                    <div>
+                        <strong>Ms. Reena Tiwari</strong>
+                        <span>Principal &amp; Secretary, SMC</span>
+                    </div>
+                    <div>
+                        <strong>Mr. Suraj Singh</strong>
+                        <span>Manager</span>
+                    </div>
+                    <div>
+                        <strong>Mr. Narendra Singh</strong>
+                        <span>Chairperson</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frame reveal">
+                <figure>
+                    <img src="https://images.pexels.com/photos/38305335/pexels-photo-38305335.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A long arched school corridor in soft morning light"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><div class="rule-diamond"><span></span><i></i><span></span></div></div>
+
+<!-- ============================= 4. PILLARS ============================= -->
+<section class="pillars" id="life">
+    <div class="wrap center">
+        <span class="eyebrow">Life at Souvann&rsquo;s Millennium</span>
+        <h2 class="sec-title">Five things a school owes a child.</h2>
+        <p class="sec-lede">Not a list of features &mdash; a set of obligations the campus is organised around, from the first bell to the last bus.</p>
+
+        <div class="pillar-grid">
+            <article class="pillar reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 6.5c3-1.6 6-1.6 9 0v13c-3-1.6-6-1.6-9 0z"/>
+                    <path d="M21 6.5c-3-1.6-6-1.6-9 0v13c3-1.6 6-1.6 9 0z"/>
+                </svg>
+                <h3>Academics</h3>
+                <p>The full CBSE course of study from Playgroup to Class X, taught in smart classrooms with concepts settled before marks are chased.</p>
+            </article>
+
+            <article class="pillar reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s-7-4.4-7-9.4A3.9 3.9 0 0 1 12 9a3.9 3.9 0 0 1 7 2.6C19 16.6 12 21 12 21z"/>
+                </svg>
+                <h3>Pastoral Care</h3>
+                <p>An infirmary on the premises, CCTV from the gate to the grounds, and transport that hands every child back to the route they arrived on.</p>
+            </article>
+
+            <article class="pillar reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8.5"/>
+                    <path d="M12 3.5v17M3.5 12h17"/>
+                    <path d="M6 6l12 12M18 6L6 18"/>
+                </svg>
+                <h3>Activities</h3>
+                <p>Laboratory work, music, art and the ordinary business of standing up in front of a class &mdash; the hours that build a voice, not just a report card.</p>
+            </article>
+
+            <article class="pillar reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 4h10v4a5 5 0 0 1-10 0z"/>
+                    <path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/>
+                    <path d="M12 13v4M9 20h6"/>
+                </svg>
+                <h3>Sports</h3>
+                <p>Large courtyards and play areas, used daily. A tired, happy child studies better &mdash; the timetable is built with both in mind.</p>
+            </article>
+
+            <article class="pillar reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/>
+                    <path d="M9.2 12.2l2 2 3.6-3.9"/>
+                </svg>
+                <h3>Values</h3>
+                <p>The moral and ethical grounding the school states as its own aim: a good citizen first, and a good student because of it.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<div class="divider"><div class="rule-diamond"><span></span><i></i><span></span></div></div>
+
+<!-- ============================= 5. STATS BAND ============================= -->
+<section class="stats" aria-label="The school on record">
+    <div class="wrap">
+        <p class="eyebrow center" style="margin-bottom:34px">By the Numbers</p>
+        <div class="stat-grid">
+            <div class="stat reveal">
+                <b>CBSE</b>
+                <span>Affiliated Board</span>
+                <em>Curriculum, assessment and records</em>
+            </div>
+            <div class="stat reveal">
+                <b data-count="2132777">2132777</b>
+                <span>Affiliation Number</span>
+                <em>On the school&rsquo;s own record</em>
+            </div>
+            <div class="stat reveal">
+                <b data-count="70486">70486</b>
+                <span>School Code</span>
+                <em>Listed with the board</em>
+            </div>
+            <div class="stat reveal">
+                <b>Playgroup&ndash;X</b>
+                <span>Classes on Campus</span>
+                <em>One unbroken journey</em>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================= 6. CAMPUS MOSAIC ============================= -->
+<section class="mosaic-sec" id="campus">
+    <div class="wrap center">
+        <span class="eyebrow">On the Campus</span>
+        <h2 class="sec-title">Where the hours actually go.</h2>
+        <p class="sec-lede">Classroom, library, laboratory, ground and assembly &mdash; the parts of a school day a child still remembers twenty years later.</p>
+
+        <div class="mosaic">
+            <figure class="tile t1 reveal">
                 <img src="https://images.pexels.com/photos/3231358/pexels-photo-3231358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                     alt="School students in uniform listening attentively in a classroom"
+                     alt="Students in school uniform listening attentively in a classroom"
                      loading="lazy" decoding="async" onerror="this.style.display='none'">
-                <figcaption class="story-caption">Attention, one child at a time</figcaption>
+                <figcaption>Classrooms</figcaption>
             </figure>
-            <div class="story-lines">
-                <p>A child is not a vessel to be filled at one fixed speed. A child is <strong>curious and absorbent</strong> &mdash; waiting to be given something worth absorbing.</p>
-                <p>So we teach differently for different children. Extra scaffolding for the one who is struggling. More English for the one still finding the language. <strong>Harder problems</strong> for the one who finishes early.</p>
-                <p>Academics, yes. But also the moral and ethical footing that makes the marks mean something.</p>
-                <p>The aim the school sets itself: not just a good student, but a <strong>good citizen</strong>.</p>
-            </div>
-            </div>
-            <p class="story-close">Nurturing the inherent potential and talent of <span class="gradient-text">each child.</span></p>
-        </div>
-    </section>
-
-    <!-- ACCREDITATION / TRUST STRIP -->
-    <section class="creds" aria-label="Affiliation and credentials">
-        <div class="container">
-            <div class="creds-row">
-                <div class="cred">
-                    <span class="cred-mark">CBSE</span>
-                    <span class="cred-note">Affiliation no. 2132777</span>
-                </div>
-                <div class="cred">
-                    <span class="cred-mark">School Code</span>
-                    <span class="cred-note">70486</span>
-                </div>
-                <div class="cred">
-                    <span class="cred-mark">Co-educational</span>
-                    <span class="cred-note">Playgroup to Class X</span>
-                </div>
-                <div class="cred">
-                    <span class="cred-mark">SMC Constituted</span>
-                    <span class="cred-note">Teacher &amp; parent representatives</span>
-                </div>
-                <div class="cred">
-                    <span class="cred-mark">CCTV Campus</span>
-                    <span class="cred-note">Gate to grounds</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OFFERINGS -->
-    <section class="offerings" id="offerings">
-        <div class="container">
-            <span class="section-eyebrow">On Our Campus</span>
-            <h2 class="section-headline">Everything a childhood <span class="gradient-text">deserves.</span></h2>
-            <p class="section-sub">From playgroup to the board year &mdash; one campus, one standard, one unbroken journey.</p>
-            <div class="offer-grid">
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/>
-                            <path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3>CBSE Curriculum, Playgroup Onward</h3>
-                    <p>A full CBSE course of study &mdash; affiliation no. 2132777, school code 70486 &mdash; taught patiently. Concepts first, marks after, in that order.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/>
-                            <path d="M7.5 14h9"/>
-                        </svg>
-                    </div>
-                    <h3>Smart Classrooms &amp; Laboratories</h3>
-                    <p>Fully equipped smart classrooms and working labs. Children learn science by performing it, not by hearing it read aloud.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 21a9 9 0 1 0-9-9"/>
-                            <path d="M3 12h9l4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Large Courtyards &amp; Play Areas</h3>
-                    <p>Room to run, every single day. A tired, happy child studies better &mdash; the timetable is built around both.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3v18M5 7c2-2 5-2 7 0 2-2 5-2 7 0"/>
-                            <path d="M5 7v10c2-2 5-2 7 0 2-2 5-2 7 0V7"/>
-                        </svg>
-                    </div>
-                    <h3>CCTV Across the Campus</h3>
-                    <p>Complete surveillance, gate to grounds. You leave your child here in the morning &mdash; you should not have to wonder about the hours in between.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
-                        </svg>
-                    </div>
-                    <h3>Transport &amp; On-Campus Infirmary</h3>
-                    <p>School transport across Gonda, and a nurse&rsquo;s room on the premises. A scraped knee or a fever is handled here, then you are called.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
-                            <circle cx="10" cy="7" r="4"/>
-                            <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
-                        </svg>
-                    </div>
-                    <h3>Teaching Shaped to the Child</h3>
-                    <p>Separate support for children with learning difficulties, for those still building English, and for those who need to be pushed harder.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATS BAND -->
-    <section class="stats" aria-label="School at a glance">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <span class="stat-number">Playgroup &rarr; X</span>
-                    <span class="stat-label">One campus. One unbroken journey.</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">CBSE</span>
-                    <span class="stat-label">Affiliation no. 2132777 &middot; School code 70486</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">Janki Nagar</span>
-                    <span class="stat-label">Beside Suraj Continental &amp; Resort, Gonda</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">Every Child</span>
-                    <span class="stat-label">Taught the way that child learns</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SIGNATURE: A DAY AT SMPS -->
-    <section class="day" id="day">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">The Signature Rhythm</span>
-            <h2 class="section-headline">A day at <span class="gradient-text">SMPS.</span></h2>
-            <p class="section-sub">Structure is a kindness. Here is the shape of your child&rsquo;s day &mdash; exact timings are confirmed at the office.</p>
-
-            <figure class="band-frame">
-                <img src="https://images.pexels.com/photos/18012456/pexels-photo-18012456.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                     alt="School children in uniform seated at their desks during class"
+            <figure class="tile t2 reveal">
+                <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Students in uniform studying together at a school library table"
                      loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption>Library</figcaption>
             </figure>
+            <figure class="tile t3 reveal">
+                <img src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Two children performing a science experiment with a microscope"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption>Laboratories</figcaption>
+            </figure>
+            <figure class="tile t4 reveal">
+                <img src="https://images.pexels.com/photos/28389291/pexels-photo-28389291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="School students in uniform lined up for an outdoor morning assembly"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption>Assembly</figcaption>
+            </figure>
+            <figure class="tile t5 reveal">
+                <img src="https://images.pexels.com/photos/10643698/pexels-photo-10643698.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Two girls in school uniform playing basketball on an outdoor court"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption>Grounds</figcaption>
+            </figure>
+        </div>
+        <p class="repcap">Representative imagery</p>
+    </div>
+</section>
 
-            <div class="day-track">
-                <div class="day-line" aria-hidden="true"><div class="day-line-progress" id="day-progress"></div></div>
+<div class="divider"><div class="rule-diamond"><span></span><i></i><span></span></div></div>
 
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">ARRIVAL</span>
-                    <h3>Assembly in the courtyard</h3>
-                    <p>Buses in, gates checked, prayer in the open. The day starts together before it starts in class.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">MORNING</span>
-                    <h3>Core hours, in the smart classrooms</h3>
-                    <p>Mathematics, science and languages take the freshest hours. No child is moved on until the concept has landed.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">LATE MORNING</span>
-                    <h3>Laboratory block</h3>
-                    <p>Hands on beakers and keyboards. Experiments get performed, written up, and argued about.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">MIDDAY</span>
-                    <h3>Tiffin in the courtyard</h3>
-                    <p>Boxes open, friendships form. The hour that teaches children how to share a table, supervised throughout.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">AFTERNOON</span>
-                    <h3>Play, activity &amp; extra help</h3>
-                    <p>The grounds fill up. Meanwhile, the children who need a second explanation get it &mdash; quietly, without fuss.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">DISPERSAL</span>
-                    <h3>Buses out, gate watched</h3>
-                    <p>Transport leaves on schedule, CCTV covering the gate. Every child is handed over to the route they came in on.</p>
-                </div>
+<!-- ============================= 7. ADMISSIONS (the light band) ============================= -->
+<section class="admissions" id="admissions">
+    <div class="wrap center">
+        <span class="eyebrow">Admissions</span>
+        <h2 class="sec-title">Four steps, and a person at the end of each.</h2>
+        <p class="sec-lede">Admission at Souvann&rsquo;s Millennium is a conversation, not a portal. Here is the shape it takes.</p>
+
+        <div class="steps">
+            <div class="step reveal">
+                <div class="num">I</div>
+                <h3>Enquire</h3>
+                <p>Send the form below or a message on WhatsApp with your child&rsquo;s name and the class you are considering.</p>
+            </div>
+            <div class="step reveal">
+                <div class="num">II</div>
+                <h3>Speak to the Office</h3>
+                <p>The office confirms seat availability in that section and tells you the fee structure and the documents to carry.</p>
+            </div>
+            <div class="step reveal">
+                <div class="num">III</div>
+                <h3>Visit &amp; Interact</h3>
+                <p>Walk the campus, meet the class teacher, and complete the interaction or assessment the class requires.</p>
+            </div>
+            <div class="step reveal">
+                <div class="num">IV</div>
+                <h3>Confirm the Seat</h3>
+                <p>Submit the previous report card and transfer certificate where applicable, and the admission is recorded.</p>
             </div>
         </div>
-    </section>
 
-    <!-- CAMPUS LIFE GALLERY -->
-    <section class="gallery" id="campus">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Campus Life</span>
-            <h2 class="section-headline">Where the hours <span class="gradient-text">actually go.</span></h2>
-            <p class="section-sub">Library, laboratory, ground and activity room &mdash; the parts of school a child remembers long after the syllabus.</p>
-            <div class="gallery-grid">
-                <figure class="gallery-card">
-                    <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Students in uniform studying together in a school library"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                    <figcaption class="gallery-cap">Library</figcaption>
-                </figure>
-                <figure class="gallery-card">
-                    <img src="https://images.pexels.com/photos/8471839/pexels-photo-8471839.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Two children performing a science experiment with a microscope in the laboratory"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                    <figcaption class="gallery-cap">Laboratory</figcaption>
-                </figure>
-                <figure class="gallery-card">
-                    <img src="https://images.pexels.com/photos/10643698/pexels-photo-10643698.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Two girls in school uniform playing basketball on an outdoor court"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                    <figcaption class="gallery-cap">Grounds</figcaption>
-                </figure>
-                <figure class="gallery-card">
-                    <img src="https://images.pexels.com/photos/31864392/pexels-photo-31864392.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-                         alt="Young children in uniform doing a learning activity in a primary classroom"
-                         loading="lazy" decoding="async" onerror="this.style.display='none'">
-                    <figcaption class="gallery-cap">Early Years</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUTOMATION TEASER: ADMISSION ENQUIRY -->
-    <section class="automation" id="admission">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Admissions</span>
-            <h2 class="section-headline">Begin with <span class="gradient-text">one enquiry.</span></h2>
-            <p class="section-sub">Tell us about your child. The enquiry reaches the admissions desk straight away &mdash; so a reply can come back on WhatsApp, in your language.</p>
-
-            <div class="enquiry-shell">
-                <form class="enquiry-form" id="enquiry-form" novalidate>
-                    <h3 class="enquiry-title">Admission Enquiry</h3>
-                    <p class="enquiry-note">Takes thirty seconds. No documents needed yet.</p>
+        <div class="enq-shell reveal">
+            <form id="enq-form" novalidate>
+                <h3>Admission Enquiry</h3>
+                <p class="enq-note">Thirty seconds. No documents needed at this stage.</p>
+                <div class="f-row">
                     <div class="field">
-                        <label for="student-name">Student&rsquo;s name</label>
-                        <input type="text" id="student-name" name="student-name" placeholder="Full name of the child" autocomplete="name" required>
+                        <label for="f-child">Student&rsquo;s name</label>
+                        <input type="text" id="f-child" name="child" placeholder="Full name of the child" autocomplete="name" required>
                     </div>
                     <div class="field">
-                        <label for="student-class">Class applying for</label>
-                        <select id="student-class" name="student-class" required>
+                        <label for="f-class">Class applying for</label>
+                        <select id="f-class" name="grade" required>
                             <option value="" selected disabled>Select a class</option>
                             <option>Playgroup / Nursery / KG</option>
                             <option>Class I &ndash; V</option>
@@ -1320,396 +1202,388 @@ section { position: relative; z-index: 1; }
                             <option>Class IX &ndash; X</option>
                         </select>
                     </div>
-                    <div class="field">
-                        <label for="parent-phone">Parent&rsquo;s phone (WhatsApp)</label>
-                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Enquiry</button>
-                    <p class="enquiry-privacy">Your number is used only to respond to this enquiry.</p>
-                </form>
+                </div>
+                <div class="field">
+                    <label for="f-phone">Parent&rsquo;s phone (WhatsApp)</label>
+                    <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+                </div>
+                <button type="submit" class="btn btn-ink">Send Enquiry</button>
+                <p class="enq-priv">Your number would be used only to answer this enquiry.</p>
+            </form>
 
-                <div class="enquiry-success" id="enquiry-success" role="status" aria-live="polite">
-                    <div class="success-ring" aria-hidden="true">
-                        <svg viewBox="0 0 34 34"><path class="success-check" d="M7 18 L14 25 L27 10"/></svg>
-                    </div>
-                    <h3>Request received.</h3>
-                    <p>This is how your admissions desk would hear from a parent &mdash; automatically, the moment they decide.</p>
-                    <p class="success-hint">Concept demo &mdash; no data was sent anywhere.</p>
+            <div class="enq-ok" id="enq-ok" role="status" aria-live="polite">
+                <div class="ok-ring" aria-hidden="true">
+                    <svg viewBox="0 0 34 34"><path class="ok-check" d="M7 18 L14 25 L27 10"/></svg>
+                </div>
+                <h3>Enquiry received.</h3>
+                <p>On a live site this reaches the admissions desk the moment a parent decides &mdash; and an automatic WhatsApp reply goes back with the fee structure and document list, at any hour.</p>
+                <p class="hint">Concept demo &mdash; nothing was sent anywhere.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================= 8. AFFILIATION STRIP ============================= -->
+<section class="creds" aria-label="Affiliation and standing">
+    <div class="wrap">
+        <p class="eyebrow center" style="margin-bottom:26px">On Record</p>
+        <div class="cred-row">
+            <div class="cred"><b>CBSE</b><span>Affiliated</span></div>
+            <div class="cred"><b>2132777</b><span>Affiliation No.</span></div>
+            <div class="cred"><b>70486</b><span>School Code</span></div>
+            <div class="cred"><b>Co-educational</b><span>Playgroup to Class X</span></div>
+            <div class="cred"><b>SMC Constituted</b><span>Teacher &amp; parent members</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================= 9. FAQ ============================= -->
+<section class="faq" id="faq">
+    <div class="wrap center">
+        <span class="eyebrow">Questions Parents Ask</span>
+        <h2 class="sec-title">Answers, straight.</h2>
+
+        <div class="faq-list" style="text-align:left">
+            <div class="faq-item">
+                <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1">Which classes can my child join?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
+                    <p>Admission runs from Playgroup and Nursery up through Class X, subject to seats in each section. Mid-session transfers are considered case by case &mdash; carry the previous school&rsquo;s report card and transfer certificate when you visit.</p>
                 </div>
             </div>
-
-            <!-- WhatsApp automation pitch strip -->
-            <div class="wa-strip">
-                <div class="wa-strip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+            <div class="faq-item">
+                <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">How does the admission process work?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a2" role="region" aria-labelledby="q2">
+                    <p>It begins with an enquiry or a walk-in at the office. From there the office explains what the class your child is applying for requires &mdash; the interaction or assessment, the documents to bring, and the fee structure. Ask for all three in the same visit.</p>
                 </div>
-                <div>
-                    <h3>Fee reminders &amp; parent updates &mdash; on WhatsApp.</h3>
-                    <p>Due-date reminders, holiday notices, result announcements and bus alerts, delivered to every parent automatically. No calls. No confusion.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3">Is transport available from my area?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a3" role="region" aria-labelledby="q3">
+                    <p>The school runs its own transport across Gonda town and nearby localities. Share your address at the office and the nearest pickup point and timing will be confirmed for you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">How will I know how my child is doing?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
+                    <p>Parent-teacher meetings, a diary that is actually checked, and a class teacher you can reach. If something needs your attention, you should hear it from the school first &mdash; not from your child.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">Is the school CBSE affiliated?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
+                    <p>Yes. Souvann&rsquo;s Millennium Public School holds CBSE affiliation number 2132777, school code 70486. The curriculum, assessment pattern and records all follow the board&rsquo;s requirements.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">What is on the campus itself?<i aria-hidden="true"></i></button>
+                <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
+                    <p>Smart classrooms and laboratories, large courtyards and play areas, an infirmary on the premises, school transport, and CCTV coverage across the site. The campus sits in Janki Nagar, beside Suraj Continental &amp; Resort.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Visit Us</span>
-            <h2 class="section-headline">Come see the campus <span class="gradient-text">yourself.</span></h2>
-            <p class="section-sub">Ten minutes on the grounds will tell you more than any website. Walk in &mdash; the gate is open on working days.</p>
-            <div class="visit-grid">
-                <div class="visit-card">
-                    <h3>Address</h3>
-                    <p>Souvann&rsquo;s Millennium Public School<span>Beside Suraj Continental &amp; Resort,<br>Janki Nagar, Gonda, Uttar Pradesh</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+919115009555">+91 91150 09555</a><span><a href="tel:+919115006555">+91 91150 06555</a> &middot; Admissions &amp; office</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Email</h3>
-                    <p><a href="mailto:smpsgonda@gmail.com">smpsgonda@gmail.com</a><span>Enquiries &amp; documents</span></p>
-                </div>
-            </div>
-            <div class="visit-actions">
-                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Souvann%27s%20Millennium%20Public%20School%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
-                <a class="btn btn-secondary" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-            </div>
-        </div>
-    </section>
+<div class="divider"><div class="rule-diamond"><span></span><i></i><span></span></div></div>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Questions Parents Ask</span>
-            <h2 class="section-headline">Answers, <span class="gradient-text">straight.</span></h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Which classes can my child join?</button>
-                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-                        <p>We admit from Playgroup and Nursery up through Class X, subject to seats in each section. Mid-session transfers are considered case by case &mdash; bring the previous school&rsquo;s report card and transfer certificate when you visit.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How does the admission process work?</button>
-                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>It starts with an enquiry or a walk-in at the office. From there the office will tell you what the class your child is applying for needs &mdash; the interaction or assessment, the documents to bring, and the fee structure. Ask for all of it in one visit.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Is transport available from my area?</button>
-                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-                        <p>School transport covers the main routes across Gonda town and nearby localities. Share your address at the office and we will confirm the nearest pickup point and timing.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">How will I know how my child is doing?</button>
-                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-                        <p>Parent-teacher meetings, a diary that actually gets checked, and a class teacher you can reach. If something needs your attention, you should hear it from the school first &mdash; not from your child.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Is the school CBSE affiliated?</button>
-                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>Yes. Souvann&rsquo;s Millennium Public School holds CBSE affiliation number 2132777, school code 70486. The curriculum, assessment pattern and records all follow the board&rsquo;s requirements.</p>
-                    </div>
-                </div>
+<!-- ============================= 10. VISIT ============================= -->
+<section class="visit" id="visit">
+    <div class="wrap">
+        <span class="eyebrow">Visit Us</span>
+        <h2 class="sec-title">Ten minutes on the grounds will tell you more than any page.</h2>
+        <p class="sec-lede">The office is beside Suraj Continental &amp; Resort in Janki Nagar. Walk in on a working day, or send a message first.</p>
+
+        <div class="visit-grid">
+            <div class="vcard reveal">
+                <h3>Address</h3>
+                <p>Souvann&rsquo;s Millennium Public School<span>Beside Suraj Continental &amp; Resort,<br>Janki Nagar, Gonda, Uttar Pradesh</span></p>
+            </div>
+            <div class="vcard reveal">
+                <h3>Telephone</h3>
+                <p><a href="tel:+919115009555">+91 91150 09555</a><span><a href="tel:+919115006555">+91 91150 06555</a> &mdash; office &amp; admissions</span></p>
+            </div>
+            <div class="vcard reveal">
+                <h3>Email</h3>
+                <p><a href="mailto:smpsgonda@gmail.com">smpsgonda@gmail.com</a><span>Enquiries and documents</span></p>
             </div>
         </div>
-    </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <h2 class="section-headline">One childhood. <span class="gradient-text">Choose carefully.</span></h2>
-            <p class="cta-subtext">Every section has a limit. Send an enquiry, or walk in and see the campus for yourself.</p>
-            <a href="#admission" class="btn btn-primary btn-large">Start an Admission Enquiry</a>
+        <div class="visit-actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Souvann%27s%20Millennium%20Public%20School%20Janki%20Nagar%20Gonda" target="_blank" rel="noopener noreferrer">Plan a Visit</a>
+            <a class="btn btn-ghost" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    </main>
+</main>
 
-    <!-- BACK TO TOP -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
-    </button>
+<!-- ============================= FOOTER ============================= -->
+<footer class="footer">
+    <div class="wrap">
+        <svg class="footer-crest" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+            <circle cx="30" cy="30" r="27" fill="none" stroke="#a58758" stroke-width="1" stroke-dasharray="1.5 5.2"/>
+            <circle cx="30" cy="30" r="21" fill="none" stroke="#d4af37" stroke-width="0.9"/>
+            <text x="30" y="36" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="15" font-weight="600" fill="#f5f1e6">SM</text>
+        </svg>
+        <p class="footer-name">Souvann&rsquo;s Millennium Public School</p>
+        <p class="footer-tag">Janki Nagar &middot; Gonda &middot; Uttar Pradesh</p>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="#welcome">The School</a>
+            <a href="#life">Life Here</a>
+            <a href="#campus">Campus</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#faq">Questions</a>
+            <a href="#visit">Visit Us</a>
+        </nav>
+        <p class="demo-notice">
+            Concept demonstration designed and built by <strong>Inexorables Group</strong> &mdash;
+            <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a>.
+            This is not the official website of Souvann&rsquo;s Millennium Public School. Photographs are representative stock imagery, and the enquiry form is a mock-up that sends nothing.
+        </p>
+        <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+    </div>
+</footer>
 
-    <!-- FLOATING WHATSAPP -->
-    <a class="wa-float" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer" aria-label="Chat with Souvann&rsquo;s Millennium Public School on WhatsApp">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+<!-- ============================= FLOATS ============================= -->
+<a class="wa-float" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer"
+   aria-label="Message Souvann&rsquo;s Millennium Public School on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+</a>
+
+<div class="badge" id="badge" role="note" aria-label="This page is a concept demo">
+    <span>Concept Demo</span>
+    <button type="button" id="badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+</div>
+
+<!-- Sticky mobile action bar -->
+<div class="mbar" role="group" aria-label="Quick contact">
+    <a href="tel:+919115009555">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call
     </a>
+    <a href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+        WhatsApp
+    </a>
+    <a class="solid" href="#admissions">Enquire</a>
+</div>
 
-    <!-- STICKY MOBILE CALL / WHATSAPP BAR -->
-    <div class="mobile-bar" role="group" aria-label="Quick contact">
-        <a class="mb-call" href="tel:+919115009555">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            Call School
-        </a>
-        <a class="mb-wa" href="https://wa.me/919115009555" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
-            WhatsApp
-        </a>
-    </div>
-
-    <!-- CONCEPT DEMO BADGE -->
-    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
-        <span>Concept Demo</span>
-        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <svg class="footer-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                <text x="38" y="50" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="19" font-weight="700" fill="#e8cf7a">SMPS</text>
-            </svg>
-            <p class="footer-name">Souvann&rsquo;s Millennium Public School</p>
-            <p class="footer-tag">Curiosity &middot; Character &middot; Confidence</p>
-            <div class="footer-links">
-                <a href="#story">About</a>
-                <a href="#offerings">Learning</a>
-                <a href="#day">A Day Here</a>
-                <a href="#campus">Campus Life</a>
-                <a href="#admission">Admissions</a>
-                <a href="#visit">Visit</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; not the official website of Souvann&rsquo;s Millennium Public School.</p>
-            <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
-        </div>
-    </footer>
-
-    <!-- Animation libraries (defer; site is fully readable without them) -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+<!-- Optional animation libraries — the page is complete without them -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
 
 <script>
 (function () {
     'use strict';
 
-    var prefersReducedMotion = window.matchMedia &&
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------- Nav: scrolled state ---------- */
-    var nav = document.getElementById('nav');
-    function onScrollNav() {
-        if (!nav) return;
-        if (window.scrollY > 40) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
+    /* ---------------- Preloader: fade on load, 2.2s failsafe ---------------- */
+    var pre = document.getElementById('preloader');
+    var preDone = false;
+    function dismissPreloader() {
+        if (preDone || !pre) return;
+        preDone = true;
+        pre.classList.add('done');
+        window.setTimeout(function () { if (pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 700);
     }
-    window.addEventListener('scroll', onScrollNav, { passive: true });
-    onScrollNav();
+    window.addEventListener('load', function () { window.setTimeout(dismissPreloader, reduced ? 0 : 380); });
+    window.setTimeout(dismissPreloader, 2200);
 
-    /* ---------- Nav: hamburger ---------- */
-    var toggle = document.getElementById('nav-toggle');
-    var menu = document.getElementById('nav-menu');
-    function closeMenu() {
-        if (!toggle || !menu) return;
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    /* ---------------- Header solid state ---------------- */
+    var hdr = document.getElementById('hdr');
+    function onScroll() {
+        if (!hdr) return;
+        if (window.scrollY > 80) hdr.classList.add('solid');
+        else hdr.classList.remove('solid');
     }
-    if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-            var open = menu.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------------- Mobile drawer ---------------- */
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+    function closeDrawer() {
+        if (!burger || !drawer) return;
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Open menu');
+    }
+    if (burger && drawer) {
+        burger.addEventListener('click', function () {
+            var open = drawer.classList.toggle('open');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         });
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMenu);
+        Array.prototype.forEach.call(drawer.querySelectorAll('a'), function (a) {
+            a.addEventListener('click', closeDrawer);
         });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeMenu();
-        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
     }
 
-    /* ---------- FAQ accordion ---------- */
-    document.querySelectorAll('.faq-question').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var answer = document.getElementById(btn.getAttribute('aria-controls'));
-            var expanded = btn.getAttribute('aria-expanded') === 'true';
-            // close others
-            document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
-                if (other !== btn) {
-                    other.setAttribute('aria-expanded', 'false');
-                    var a = document.getElementById(other.getAttribute('aria-controls'));
-                    if (a) a.style.maxHeight = '0px';
-                }
-            });
-            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            if (answer) {
-                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+    /* ---------------- Hero slideshow ---------------- */
+    var slides = document.querySelectorAll('.slide');
+    var lines = document.querySelectorAll('#h1rot span');
+    var dots = document.querySelectorAll('#dots button');
+    var numEl = document.getElementById('slide-num');
+    var idx = 0, timer = null;
+
+    function show(next) {
+        if (!slides.length) return;
+        idx = (next + slides.length) % slides.length;
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.toggle('on', i === idx);
+            if (i === idx && !reduced) {
+                var img = slides[i].querySelector('img');
+                if (img) { img.style.animation = 'none'; void img.offsetWidth; img.style.animation = ''; }
             }
+        }
+        for (var j = 0; j < lines.length; j++) lines[j].classList.toggle('on', j === idx % lines.length);
+        for (var k = 0; k < dots.length; k++) dots[k].setAttribute('aria-current', k === idx ? 'true' : 'false');
+        if (numEl) numEl.textContent = '0' + (idx + 1);
+    }
+    function start() {
+        if (reduced || slides.length < 2) return;
+        stop();
+        timer = window.setInterval(function () { show(idx + 1); }, 6000);
+    }
+    function stop() { if (timer) { window.clearInterval(timer); timer = null; } }
+
+    Array.prototype.forEach.call(dots, function (btn, i) {
+        btn.addEventListener('click', function () { show(i); start(); });
+    });
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop(); else start();
+    });
+    show(0);
+    start();
+
+    /* ---------------- Reveal on scroll ---------------- */
+    var revealEls = document.querySelectorAll('.reveal');
+    function revealAll() {
+        Array.prototype.forEach.call(revealEls, function (el) { el.classList.add('in'); });
+    }
+    if (reduced || !('IntersectionObserver' in window)) {
+        revealAll();
+    } else {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                var siblings = el.parentNode ? el.parentNode.querySelectorAll(':scope > .reveal') : [el];
+                var pos = Array.prototype.indexOf.call(siblings, el);
+                window.setTimeout(function () { el.classList.add('in'); }, Math.max(0, pos) * 90);
+                io.unobserve(el);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        Array.prototype.forEach.call(revealEls, function (el) { io.observe(el); });
+        /* Failsafe: never leave content invisible */
+        window.setTimeout(revealAll, 4000);
+    }
+
+    /* ---------------- Counters ---------------- */
+    var counters = document.querySelectorAll('[data-count]');
+    function runCounters() {
+        Array.prototype.forEach.call(counters, function (el) {
+            if (el.dataset.done) return;
+            el.dataset.done = '1';
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            if (isNaN(target)) return;
+            if (reduced) { el.textContent = String(target); return; }
+            if (window.countUp && window.countUp.CountUp) {
+                var c = new window.countUp.CountUp(el, target, { duration: 2.2, separator: '' });
+                if (!c.error) { c.start(); return; }
+            }
+            var startTime = null, dur = 1800;
+            function step(ts) {
+                if (!startTime) startTime = ts;
+                var p = Math.min((ts - startTime) / dur, 1);
+                el.textContent = String(Math.floor(target * (1 - Math.pow(1 - p, 3))));
+                if (p < 1) window.requestAnimationFrame(step);
+                else el.textContent = String(target);
+            }
+            window.requestAnimationFrame(step);
+        });
+    }
+    if (counters.length) {
+        if ('IntersectionObserver' in window) {
+            var cio = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { runCounters(); cio.disconnect(); }
+                });
+            }, { threshold: 0.3 });
+            cio.observe(counters[0].closest('.stats') || counters[0]);
+        } else {
+            runCounters();
+        }
+    }
+
+    /* ---------------- FAQ accordion ---------------- */
+    Array.prototype.forEach.call(document.querySelectorAll('.faq-q'), function (btn) {
+        btn.addEventListener('click', function () {
+            var panel = document.getElementById(btn.getAttribute('aria-controls'));
+            var open = btn.getAttribute('aria-expanded') === 'true';
+            Array.prototype.forEach.call(document.querySelectorAll('.faq-q[aria-expanded="true"]'), function (other) {
+                if (other === btn) return;
+                other.setAttribute('aria-expanded', 'false');
+                var p = document.getElementById(other.getAttribute('aria-controls'));
+                if (p) p.style.maxHeight = '0px';
+            });
+            btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+            if (panel) panel.style.maxHeight = open ? '0px' : panel.scrollHeight + 'px';
         });
     });
 
-    /* ---------- Back to top ---------- */
-    var backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 700) backToTop.classList.add('visible');
-            else backToTop.classList.remove('visible');
-        }, { passive: true });
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-        });
-    }
-
-    /* ---------- Concept demo badge ---------- */
-    var badge = document.getElementById('demo-badge');
-    var badgeClose = document.getElementById('demo-badge-close');
-    if (badge && badgeClose) {
-        badgeClose.addEventListener('click', function () {
-            badge.classList.add('hidden');
-        });
-    }
-
-    /* ---------- Admission enquiry mock (front-end only) ---------- */
-    var form = document.getElementById('enquiry-form');
-    var success = document.getElementById('enquiry-success');
-    if (form && success) {
+    /* ---------------- Enquiry mock ---------------- */
+    var form = document.getElementById('enq-form');
+    var ok = document.getElementById('enq-ok');
+    if (form && ok) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            var name = document.getElementById('student-name');
-            var cls = document.getElementById('student-class');
-            var phone = document.getElementById('parent-phone');
-            var valid = true;
-            [name, cls, phone].forEach(function (el) {
-                if (!el) return;
-                if (!el.value || !el.value.trim()) {
-                    el.style.borderColor = '#e05c5c';
-                    valid = false;
-                } else {
-                    el.style.borderColor = '';
-                }
-            });
-            if (phone && phone.value && phone.value.replace(/\D/g, '').length < 10) {
-                phone.style.borderColor = '#e05c5c';
-                valid = false;
+            var child = document.getElementById('f-child');
+            var grade = document.getElementById('f-class');
+            var phone = document.getElementById('f-phone');
+            var invalid = null;
+            if (!child.value.trim()) invalid = child;
+            else if (!grade.value) invalid = grade;
+            else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+            if (invalid) {
+                invalid.focus();
+                invalid.style.borderColor = '#b3452f';
+                window.setTimeout(function () { invalid.style.borderColor = ''; }, 1600);
+                return;
             }
-            if (!valid) return;
             form.style.display = 'none';
-            success.classList.add('show');
+            ok.classList.add('show');
+            ok.setAttribute('tabindex', '-1');
+            ok.focus({ preventScroll: true });
         });
     }
 
-    /* ---------- Enhanced motion (GSAP — guarded; page reads fine without it) ---------- */
-    function initMotion() {
-        if (prefersReducedMotion) return;
-        if (typeof window.gsap === 'undefined') return;
-        var gsap = window.gsap;
-        if (typeof window.ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(window.ScrollTrigger);
-        }
+    /* ---------------- Concept demo badge ---------------- */
+    var badge = document.getElementById('badge');
+    var badgeClose = document.getElementById('badge-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () { badge.classList.add('hidden'); });
+    }
 
-        // Hero entrance
-        gsap.from('.hero-badge, .hero-headline, .hero-subtext, .hero-ctas, .hero-motto', {
-            opacity: 0, y: 26, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.15
-        });
-
-        if (typeof window.ScrollTrigger === 'undefined') return;
-
-        // Section reveals: fade + rise
-        [
-            '.story .section-eyebrow', '.story .section-headline', '.story-lines p', '.story-close',
-            '.offerings .section-headline', '.offerings .section-sub',
-            '.visit-card', '.faq-item', '.final-cta .section-headline', '.cta-subtext',
-            '.enquiry-shell', '.wa-strip',
-            '.story-frame', '.band-frame',
-            '.gallery .section-headline', '.gallery .section-sub'
-        ].forEach(function (sel) {
-            gsap.utils.toArray(sel).forEach(function (el) {
-                gsap.from(el, {
-                    opacity: 0, y: 34, duration: 0.85, ease: 'power3.out',
-                    scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    /* ---------------- Optional GSAP polish (never required) ---------------- */
+    window.addEventListener('load', function () {
+        if (reduced || !window.gsap || !window.ScrollTrigger) return;
+        try {
+            window.gsap.registerPlugin(window.ScrollTrigger);
+            window.gsap.utils.toArray('.rule-diamond').forEach(function (r) {
+                window.gsap.from(r.querySelectorAll('span'), {
+                    scaleX: 0, transformOrigin: 'center', duration: 0.9, ease: 'power2.out',
+                    scrollTrigger: { trigger: r, start: 'top 92%' }
                 });
             });
-        });
+        } catch (err) { /* decorative only */ }
+    });
 
-        // Offer cards: staggered rise
-        var cards = gsap.utils.toArray('.offer-card');
-        if (cards.length) {
-            gsap.from(cards, {
-                opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-                scrollTrigger: { trigger: '.offer-grid', start: 'top 85%', once: true }
-            });
-        }
-
-        // Day timeline: items + scrubbed gold progress line
-        gsap.utils.toArray('.day-item').forEach(function (item) {
-            gsap.from(item, {
-                opacity: 0, x: -28, duration: 0.7, ease: 'power2.out',
-                scrollTrigger: { trigger: item, start: 'top 86%', once: true }
-            });
-        });
-        var progress = document.getElementById('day-progress');
-        if (progress) {
-            gsap.to(progress, {
-                height: '100%', ease: 'none',
-                scrollTrigger: {
-                    trigger: '.day-track', start: 'top 70%', end: 'bottom 55%', scrub: 0.6
-                }
-            });
-        }
-
-        // Gallery cards: staggered rise
-        var shots = gsap.utils.toArray('.gallery-card');
-        if (shots.length) {
-            gsap.from(shots, {
-                opacity: 0, y: 34, duration: 0.75, stagger: 0.1, ease: 'power3.out',
-                scrollTrigger: { trigger: '.gallery-grid', start: 'top 88%', once: true }
-            });
-        }
-
-        // Accreditation strip
-        gsap.from('.cred', {
-            opacity: 0, y: 16, duration: 0.6, stagger: 0.08, ease: 'power2.out',
-            scrollTrigger: { trigger: '.creds-row', start: 'top 92%', once: true }
-        });
-
-        // Stats band reveal
-        gsap.from('.stat', {
-            opacity: 0, y: 30, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-            scrollTrigger: { trigger: '.stats-grid', start: 'top 85%', once: true }
-        });
-    }
-
-    /* ---------- CountUp counters (guarded) ---------- */
-    function initCounters() {
-        var els = document.querySelectorAll('[data-count]');
-        if (!els.length) return;
-        var CountUpCtor = (window.countUp && window.countUp.CountUp) || window.CountUp;
-        if (!CountUpCtor || prefersReducedMotion) return; // static numbers remain visible
-        if ('IntersectionObserver' in window) {
-            var seen = new WeakSet();
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting && !seen.has(entry.target)) {
-                        seen.add(entry.target);
-                        var target = parseFloat(entry.target.getAttribute('data-count'));
-                        try {
-                            var c = new CountUpCtor(entry.target, target, { duration: 2, useGrouping: false });
-                            if (!c.error) c.start();
-                        } catch (err) { /* keep static number */ }
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.6 });
-            els.forEach(function (el) { io.observe(el); });
-        }
-    }
-
-    /* Deferred libs load after this inline script — wait for window load. */
-    if (document.readyState === 'complete') {
-        initMotion();
-        initCounters();
-    } else {
-        window.addEventListener('load', function () {
-            initMotion();
-            initCounters();
-        });
-    }
 })();
 </script>
+
 </body>
 </html>

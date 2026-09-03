@@ -1,1579 +1,1506 @@
-<!-- CUSTOMIZED:education — Mahendra's Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch
-Local landing-page concept for the Gonda branch. Complements, does not replace,
-the brand's corporate site (mahendras.org). Concept demo by Inexorables Group.
-Facts used: verified branch address, branch mobile, branch email, exam families coached.
-No selection counts, success rates, fees or testimonials are stated — none are verified.
+<!-- CONCEPT DEMO — Mahendra's Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch
+     Direction E "Future Campus" — charcoal base, violet→cyan gradient used as a scalpel.
+     A local landing + automation layer for the Gonda branch. Complements, never replaces,
+     the brand's corporate site. Built by Inexorables Group.
+     Facts used: verified branch address, branch mobile, branch email, exam families coached,
+     and the two brand-published figures (30+ years, 150+ branches) — attributed to the brand.
+     No fees, batch timings, start year, selection counts or testimonials are stated: none verified.
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Mahendra's Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch — Banking, SSC &amp; Railway Exam Coaching, Gonda</title>
-    <meta name="description" content="Mahendra's Institute, Gonda Branch at L.B.S. Chauraha. Classroom coaching for Banking, SSC, Railway, UP Police, teaching and state government exams. Concept demo.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mahendra's Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch — Banking, SSC &amp; Railway Exam Coaching, Gonda</title>
+<meta name="description" content="Concept demo. Mahendra's Institute, Gonda Branch at L.B.S. Chauraha — classroom coaching for Banking, SSC, Railway, UP Police, teaching and state government exams.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   MAHENDRA'S INSTITUTE, GONDA BRANCH — Royal Navy & Gold (education vertical)
-   One-file concept demo. Inexorables Group.
-   ============================================================ */
+/* ==========================================================================
+   MAHENDRA'S INSTITUTE — GONDA BRANCH
+   Direction E · Future Campus. One file, one style block, one script block.
+   ========================================================================== */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --navy: #0a1633;
-    --navy-deep: #060d21;
-    --navy-raise: #0e1d42;
-    --gold: #d4af37;
-    --gold-soft: #e8cf7a;
-    --gold-pale: #f5e6b8;
-    --ivory: #f6f2e8;
-    --ivory-dim: #b9b4a6;
-    --line: rgba(212, 175, 55, 0.16);
-    --glass: rgba(10, 22, 51, 0.72);
-    --wa-green: #25D366;
-    --radius: 20px;
-    --ease-soft: cubic-bezier(0.23, 1, 0.32, 1);
+  --bg: #0e0e12;
+  --bg-raised: #16161d;
+  --bg-inset: #0a0a0e;
+  --line: rgba(255,255,255,.08);
+  --line-strong: rgba(255,255,255,.16);
+  --ink: #f4f4f6;
+  --ink-dim: #a3a3b0;
+  --ink-faint: #6b6b78;
+  --violet: #7c3aed;
+  --cyan: #22d3ee;
+  --grad: linear-gradient(100deg, #7c3aed, #22d3ee);
+  --glow: 0 0 40px rgba(124,58,237,.35);
+  --wa: #25d366;
+  --ease: cubic-bezier(.22,1,.36,1);
 }
 
-html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 82px; background: var(--bg); }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--navy);
-    color: var(--ivory);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--ink-dim);
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    line-height: 1.12;
-    color: var(--ivory);
-    letter-spacing: -0.015em;
+h1, h2, h3 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.06;
+  letter-spacing: -.02em;
 }
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; }
+::selection { background: rgba(124,58,237,.4); color: #fff; }
 
-::selection { background: rgba(212, 175, 55, 0.35); color: var(--ivory); }
-
-/* Skip link */
-.skip-link {
-    position: absolute; left: -9999px; top: 0; z-index: 2000;
-    background: var(--gold); color: var(--navy-deep);
-    padding: 12px 20px; border-radius: 0 0 12px 0; font-weight: 600; text-decoration: none;
-}
-.skip-link:focus { left: 0; }
-
-/* Section headline system */
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft);
-    margin-bottom: 18px;
-}
-.section-eyebrow::after {
-    content: ''; display: block; width: 44px; height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    margin: 10px auto 0;
-}
-.section-headline {
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    margin-bottom: 22px;
-    text-align: center;
-}
-.section-sub {
-    font-size: clamp(1rem, 1.8vw, 1.15rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 56px; text-align: center;
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-.gradient-text {
-    background: linear-gradient(120deg, var(--gold) 10%, var(--gold-pale) 40%, var(--gold) 70%, #b8912b 95%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    background-size: 220% auto;
-    animation: goldShift 5s ease-in-out infinite;
-}
-@keyframes goldShift {
-    0%, 100% { background-position: 0% center; }
-    50% { background-position: 100% center; }
-}
+.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 2; }
 
-/* Buttons */
-.btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    min-height: 52px; padding: 14px 34px;
-    border-radius: 980px; border: none;
-    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
-    text-decoration: none; cursor: pointer;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, background 0.3s ease;
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 3000;
+  background: var(--violet); color: #fff; padding: 12px 20px;
+  font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0;
 }
-.btn-primary {
-    background: linear-gradient(135deg, #c9a02c, var(--gold) 45%, var(--gold-soft));
-    color: #1a1503;
-    box-shadow: 0 0 34px rgba(212, 175, 55, 0.22);
-}
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 12px 44px rgba(212, 175, 55, 0.38);
-}
-.btn-secondary {
-    background: transparent; color: var(--ivory);
-    border: 1.5px solid rgba(246, 242, 232, 0.28);
-}
-.btn-secondary:hover {
-    border-color: var(--gold);
-    background: rgba(212, 175, 55, 0.08);
-    transform: translateY(-2px);
-}
-.btn-large { min-height: 58px; padding: 17px 46px; font-size: 1.1rem; }
+.skip:focus { left: 0; }
 
-/* ============ NAVIGATION ============ */
-.nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(10, 22, 51, 0.55);
-    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+/* ---------- Identity: 12-column hairline grid, fixed behind everything ---------- */
+.gridlines {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  display: flex; justify-content: center;
 }
-.nav.scrolled {
-    background: rgba(6, 13, 33, 0.92);
-    box-shadow: 0 1px 34px rgba(212, 175, 55, 0.10);
+.gridlines i {
+  display: block; width: 100%; max-width: 1180px; height: 100%;
+  margin: 0 28px;
+  background-image: repeating-linear-gradient(
+    90deg, var(--line) 0 1px, transparent 1px calc(100% / 12)
+  );
+  opacity: .85;
 }
-.nav-container {
-    max-width: 1120px; margin: 0 auto; padding: 0 24px;
-    display: flex; justify-content: space-between; align-items: center;
-    height: 68px;
-}
-.nav-logo {
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; color: var(--ivory);
-}
-.nav-crest { width: 38px; height: 42px; flex-shrink: 0; }
-.nav-logo-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.02rem; letter-spacing: 0.01em; line-height: 1.15;
-}
-.nav-logo-name small {
-    display: block; font-family: 'Inter', sans-serif; font-weight: 500;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--gold-soft);
-}
-.nav-links { display: flex; align-items: center; gap: 30px; }
-.nav-links a {
-    font-size: 0.9rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 10px 2px;
-    transition: color 0.3s ease;
-}
-.nav-links a:hover { color: var(--gold-soft); }
-.nav-cta {
-    background: linear-gradient(135deg, #c9a02c, var(--gold));
-    color: #1a1503 !important;
-    padding: 10px 22px !important; border-radius: 980px; font-weight: 600;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-.nav-cta:hover { box-shadow: 0 0 32px rgba(212, 175, 55, 0.4); transform: translateY(-1px); }
-.nav-hamburger {
-    display: none; flex-direction: column; justify-content: center; gap: 5px;
-    width: 48px; height: 48px; padding: 12px 11px;
-    background: transparent; border: none; cursor: pointer;
-}
-.hamburger-line {
-    display: block; width: 100%; height: 2px;
-    background: var(--ivory); border-radius: 2px;
-    transition: transform 0.35s var(--ease-soft), opacity 0.25s ease;
-}
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
-.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ============ AMBIENT ORBS ============ */
-.orb {
-    position: fixed; border-radius: 50%;
-    filter: blur(90px); pointer-events: none; z-index: 0;
-    opacity: 0.55;
-}
-.orb-1 {
-    width: 520px; height: 520px; top: -12%; right: -14%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, rgba(212, 175, 55, 0.05) 55%, transparent 75%);
-    animation: orbDrift1 26s ease-in-out infinite;
-}
-.orb-2 {
-    width: 460px; height: 460px; bottom: -18%; left: -12%;
-    background: radial-gradient(circle, rgba(46, 84, 179, 0.28) 0%, rgba(46, 84, 179, 0.08) 55%, transparent 75%);
-    animation: orbDrift2 32s ease-in-out infinite;
-}
-.orb-3 {
-    width: 340px; height: 340px; top: 42%; left: 58%;
-    background: radial-gradient(circle, rgba(232, 207, 122, 0.10) 0%, transparent 70%);
-    animation: orbDrift1 38s ease-in-out infinite reverse;
-}
-@keyframes orbDrift1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-60px, 50px) scale(1.12); }
-}
-@keyframes orbDrift2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(70px, -40px) scale(1.08); }
-}
-
-section { position: relative; z-index: 1; }
-
-/* ============ HERO ============ */
-.hero {
-    min-height: 100vh; min-height: 100svh;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 130px 24px 90px;
-    position: relative; overflow: hidden;
-    background:
-        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
-        var(--navy);
-}
-/* Full-bleed photo layer, tinted under the brand gradient so text contrast holds */
-.hero-photo {
-    position: absolute; inset: 0; z-index: 0;
-    overflow: hidden;
-    background:
-        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
-        var(--navy);
-}
-.hero-photo::after {
-    content: ''; position: absolute; inset: 0; z-index: 1;
-    background:
-        linear-gradient(180deg, rgba(6,13,33,0.80) 0%, rgba(10,22,51,0.70) 45%, rgba(6,13,33,0.94) 100%),
-        radial-gradient(ellipse 75% 65% at 50% 42%, rgba(10,22,51,0.30) 0%, rgba(6,13,33,0.80) 100%);
-}
-.hero-photo img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: saturate(1.04) contrast(1.02);
-    transform: scale(1.02);
-    animation: heroKenBurns 26s ease-in-out infinite alternate;
-}
-@keyframes heroKenBurns {
-    from { transform: scale(1.02); }
-    to   { transform: scale(1.11); }
-}
-@media (prefers-reduced-motion: reduce) {
-    .hero-photo img { animation: none; transform: none; }
-}
-.hero::after {
-    content: '';
-    position: absolute; left: 0; right: 0; bottom: 0; height: 140px;
-    background: linear-gradient(to bottom, transparent, var(--navy-deep));
-    pointer-events: none;
-}
-.hero .container { position: relative; z-index: 2; }
-
-/* Crest — signature element */
-.hero-crest {
-    width: clamp(112px, 16vw, 152px); height: auto;
-    margin: 0 auto 30px; display: block;
-    filter: drop-shadow(0 0 26px rgba(212, 175, 55, 0.28));
-    animation: crestFloat 7s ease-in-out infinite;
-}
-@keyframes crestFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-9px); }
-}
-.crest-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: crestDraw 2.4s ease-out 0.3s forwards; }
-.crest-draw-slow { stroke-dasharray: 900; stroke-dashoffset: 900; animation: crestDraw 3s ease-out 0.6s forwards; }
-@keyframes crestDraw { to { stroke-dashoffset: 0; } }
-.crest-fade { opacity: 0; animation: crestFade 1.4s ease-out 1.6s forwards; }
-@keyframes crestFade { to { opacity: 1; } }
-
-.hero-badge {
-    display: inline-block;
-    font-size: 0.76rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold-pale);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    background: rgba(212, 175, 55, 0.07);
-    padding: 9px 22px; border-radius: 980px;
-    margin-bottom: 30px;
-}
-.hero-headline {
-    font-size: clamp(2.6rem, 7.5vw, 5.4rem);
-    margin-bottom: 22px;
-    letter-spacing: -0.02em;
-}
-.hero-subtext {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--ivory-dim);
-    max-width: 640px; margin: 0 auto 44px;
-}
-.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.hero-motto {
-    margin-top: 54px;
-    font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase;
-    color: rgba(232, 207, 122, 0.55);
-}
-
-/* ============ SECTION PHOTO FRAMES ============ */
-.photo-frame {
-    position: relative;
-    margin: 0 auto;
-    max-width: 1040px;
-    aspect-ratio: 21 / 9;
-    overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    /* gradient fallback holds the frame if the photo never loads */
-    background:
-        linear-gradient(140deg, rgba(212,175,55,0.10) 0%, transparent 55%),
-        linear-gradient(180deg, var(--navy-raise) 0%, var(--navy-deep) 100%);
-}
-.photo-frame img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: saturate(1.04) contrast(1.02);
-    transition: transform 0.6s ease;
-}
-.photo-frame:hover img { transform: scale(1.04); }
-.photo-frame::after {
-    content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(6,13,33,0.32) 0%, rgba(6,13,33,0.06) 40%, rgba(6,13,33,0.66) 100%);
-}
-.photo-caption {
-    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-    padding: 18px 22px;
-    font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--gold-pale);
-    text-align: left;
-}
-.photo-frame--tall { aspect-ratio: 16 / 9; max-width: 860px; }
-@media (max-width: 640px) {
-    .photo-frame, .photo-frame--tall { aspect-ratio: 4 / 3; }
-}
-
-/* ============ TRUST STRIP ============ */
-.trust-strip {
-    border-top: 1px solid rgba(212, 175, 55, 0.16);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.16);
-    background: var(--navy-deep);
-    padding: 26px 24px;
-}
-.trust-strip-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 14px 34px;
-}
-.trust-strip span {
-    font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(232, 207, 122, 0.72);
-    white-space: nowrap;
-}
-
-/* ============ STICKY MOBILE CALL / WHATSAPP BAR ============ */
-.mobile-bar { display: none; }
 @media (max-width: 720px) {
-    .mobile-bar {
-        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-        border-top: 1px solid rgba(212, 175, 55, 0.28);
-        background: rgba(6, 13, 33, 0.96);
-        backdrop-filter: blur(10px);
-    }
-    .mobile-bar a {
-        flex: 1; text-align: center; padding: 15px 8px;
-        font-size: 0.86rem; font-weight: 600; letter-spacing: 0.06em;
-        text-decoration: none; color: var(--ivory);
-    }
-    .mobile-bar a + a { border-left: 1px solid rgba(212, 175, 55, 0.22); color: #9be48b; }
-    body { padding-bottom: 54px; }
-    .wa-float { bottom: 74px; }
+  .gridlines i { background-image: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px calc(100% / 4)); }
 }
 
-/* ============ STORY ============ */
-.story {
-    padding: 130px 24px;
-    background: var(--navy-deep);
-    text-align: center;
+/* ---------- Type utilities ---------- */
+.eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 20px;
 }
-.story::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 45% at 18% 55%, rgba(46, 84, 179, 0.12) 0%, transparent 60%);
-    pointer-events: none;
+.eyebrow::before {
+  content: ''; width: 24px; height: 2px; flex: none;
+  background: var(--grad); border-radius: 2px;
 }
-.story .container { position: relative; z-index: 1; }
-.story-lines { max-width: 660px; margin: 0 auto; }
-.story-lines p {
-    font-size: clamp(1.12rem, 2.2vw, 1.4rem);
-    color: var(--ivory-dim);
-    margin-bottom: 26px; line-height: 1.55;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.story-lines p:hover { color: var(--ivory); transform: translateX(8px); }
-.story-lines p strong { color: var(--gold-soft); font-weight: 600; }
-.story-close {
-    margin-top: 20px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 600;
-    color: var(--ivory);
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.g {
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
 }
 
-/* ============ OFFERINGS GRID ============ */
-.offerings {
-    padding: 130px 24px;
-    background: var(--navy);
-    text-align: center;
-}
-.offerings::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
-    pointer-events: none;
-}
-.offerings .container { position: relative; z-index: 1; }
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 26px;
-}
-.offer-card {
-    text-align: left;
-    padding: 36px 30px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: linear-gradient(160deg, rgba(232, 207, 122, 0.045) 0%, rgba(14, 29, 66, 0.6) 55%);
-    position: relative; overflow: hidden;
-    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, border-color 0.4s ease;
-}
-.offer-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
-    opacity: 0; transition: opacity 0.4s ease;
-}
-.offer-card:hover {
-    transform: translateY(-6px) scale(1.015);
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(212, 175, 55, 0.08);
-}
-.offer-card:hover::before { opacity: 1; }
-.offer-icon {
-    width: 52px; height: 52px; margin-bottom: 22px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 14px;
-    background: rgba(212, 175, 55, 0.09);
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    transition: transform 0.45s var(--ease-soft), background 0.4s ease;
-}
-.offer-card:hover .offer-icon { transform: translateY(-3px) rotate(-4deg); background: rgba(212, 175, 55, 0.16); }
-.offer-icon svg { width: 26px; height: 26px; stroke: var(--gold-soft); }
-.offer-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
-.offer-card p { font-size: 0.95rem; color: var(--ivory-dim); }
+.h2 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); margin-bottom: 18px; }
+.lede { font-size: clamp(1rem, 1.6vw, 1.1rem); color: var(--ink-dim); max-width: 62ch; }
 
-/* ============ STATS BAND ============ */
-.stats {
-    padding: 100px 24px;
-    background:
-        linear-gradient(180deg, rgba(212, 175, 55, 0.05), transparent 40%),
-        var(--navy-deep);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+section { position: relative; z-index: 1; padding: clamp(72px, 9vw, 118px) 0; }
+.inset { background: var(--bg-inset); }
+
+/* ---------- Kinetic mask reveal (the signature) ---------- */
+.kin { display: block; }
+.kin .ln { display: block; overflow: hidden; }
+.kin .ln > span { display: block; }
+html.js .kin .ln > span {
+  transform: translateY(110%);
+  transition: transform .6s var(--ease);
+  transition-delay: var(--d, 0ms);
 }
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px; text-align: center;
+html.js .kin.in .ln > span { transform: translateY(0); }
+
+/* ---------- Section divider with sweeping gradient segment ---------- */
+.divider { position: relative; height: 1px; background: var(--line); overflow: hidden; }
+.divider span {
+  position: absolute; top: 0; left: 0; height: 1px; width: 22%;
+  background: var(--grad);
+  transform: translateX(-110%);
 }
-.stat-number {
-    display: block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    background: linear-gradient(120deg, var(--gold), var(--gold-pale));
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
-    line-height: 1.1; margin-bottom: 8px;
-}
-.stat-label {
-    font-size: 0.92rem; color: var(--ivory-dim);
-    letter-spacing: 0.04em;
+html.js .divider.in span { animation: sweep 1.5s var(--ease) forwards; }
+@keyframes sweep {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(430%); }
 }
 
-/* ============ SIGNATURE: A DAY AT ============ */
-.day {
-    padding: 130px 24px;
-    background: var(--navy);
-    overflow: hidden;
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 13px 28px;
+  font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; border: none; border-radius: 8px;
+  transition: box-shadow .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
 }
-.day::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 45% 55% at 85% 30%, rgba(46, 84, 179, 0.14) 0%, transparent 60%);
-    pointer-events: none;
+.btn-p { background: var(--grad); color: #08080b; box-shadow: 0 0 26px rgba(124,58,237,.28); }
+.btn-p:hover { box-shadow: var(--glow); transform: translateY(-2px); }
+.btn-s {
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--line-strong);
 }
-.day .container { position: relative; z-index: 1; }
-.day-track {
-    position: relative;
-    max-width: 720px; margin: 0 auto;
-    padding-left: 40px;
-}
-.day-line {
-    position: absolute; left: 11px; top: 8px; bottom: 8px;
-    width: 2px;
-    background: rgba(212, 175, 55, 0.14);
-    border-radius: 2px;
-}
-.day-line-progress {
-    position: absolute; left: 0; top: 0;
-    width: 100%; height: 0%;
-    background: linear-gradient(180deg, var(--gold), var(--gold-soft));
-    border-radius: 2px;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
-}
-.day-item { position: relative; padding: 0 0 46px 12px; }
-.day-item:last-child { padding-bottom: 0; }
-.day-dot {
-    position: absolute; left: -35px; top: 7px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--navy);
-    border: 2px solid var(--gold);
-    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.12);
-}
-.day-time {
-    display: inline-block;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-    font-size: 0.82rem; letter-spacing: 0.14em;
-    color: var(--gold-soft);
-    margin-bottom: 6px;
-}
-.day-item h3 { font-size: 1.18rem; margin-bottom: 6px; }
-.day-item p { font-size: 0.95rem; color: var(--ivory-dim); max-width: 520px; }
+.btn-s:hover { border-color: transparent; background-image: linear-gradient(var(--bg), var(--bg)), var(--grad); background-origin: border-box; background-clip: padding-box, border-box; border: 1px solid transparent; }
 
-/* ============ AUTOMATION TEASER ============ */
-.automation {
-    padding: 130px 24px;
-    background: var(--navy-deep);
+/* ---------- Navigation ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  background: rgba(14,14,18,.78);
+  border-bottom: 1px solid transparent;
+  transition: background .3s ease, border-color .3s ease;
 }
-.automation::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 55% 50% at 50% 100%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-    pointer-events: none;
+.nav.on { background: rgba(10,10,14,.96); border-bottom-color: var(--line); }
+.nav-in {
+  max-width: 1180px; margin: 0 auto; padding: 0 28px; height: 72px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
-.automation .container { position: relative; z-index: 1; }
-.enquiry-shell {
-    max-width: 560px; margin: 0 auto;
-    padding: 44px 38px;
-    border-radius: 24px;
-    border: 1px solid rgba(212, 175, 55, 0.22);
-    background: linear-gradient(165deg, rgba(232, 207, 122, 0.06), rgba(10, 22, 51, 0.85) 60%);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-    position: relative; overflow: hidden;
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { width: 40px; height: 30px; flex: none; }
+.brand b {
+  font-family: 'Space Grotesk', sans-serif; font-size: .98rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -.01em; line-height: 1.2; display: block;
 }
-.enquiry-shell::before {
-    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+.brand small {
+  display: block; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-faint); font-weight: 500;
 }
-.enquiry-title {
-    font-size: 1.35rem; margin-bottom: 6px; text-align: center;
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: .84rem; color: var(--ink-dim); text-decoration: none;
+  transition: color .2s ease;
 }
-.enquiry-note {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-align: center; margin-bottom: 30px;
+.nav-links a:hover { color: var(--ink); }
+.nav-links .btn { padding: 11px 20px; min-height: 42px; font-size: .72rem; }
+.burger {
+  display: none; width: 46px; height: 46px; background: none; border: 1px solid var(--line);
+  border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center;
+  justify-content: center; gap: 5px;
 }
-.field { margin-bottom: 20px; text-align: left; }
-.field label {
-    display: block; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 8px;
+.burger i { display: block; width: 18px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease), opacity .2s; }
+.burger[aria-expanded="true"] i:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] i:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ---------- Preloader ---------- */
+.pre { display: none; }
+html.js .pre {
+  display: flex; position: fixed; inset: 0; z-index: 4000;
+  flex-direction: column; align-items: center; justify-content: center; gap: 26px;
+  background: var(--bg-inset);
+  transition: opacity .5s ease, visibility .5s ease;
 }
-.field input, .field select {
-    width: 100%; min-height: 50px;
-    padding: 13px 16px;
-    font-family: 'Inter', sans-serif; font-size: 1rem;
-    color: var(--ivory);
-    background: rgba(6, 13, 33, 0.75);
-    border: 1px solid rgba(246, 242, 232, 0.14);
-    border-radius: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    -webkit-appearance: none; appearance: none;
+html.js .pre.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+.pre svg { width: 132px; height: 84px; }
+.pre .frame { stroke-dasharray: 200; stroke-dashoffset: 200; animation: draw 1.1s var(--ease) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.pre .mg { opacity: 0; animation: fadeIn .6s ease .55s forwards; }
+@keyframes fadeIn { to { opacity: 1; } }
+.pre-bar { width: 168px; height: 2px; background: rgba(255,255,255,.1); overflow: hidden; border-radius: 2px; }
+.pre-bar i { display: block; height: 100%; width: 0; background: var(--grad); animation: fill 2s ease forwards; }
+@keyframes fill { to { width: 100%; } }
+.pre-cap { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-faint); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 148px 0 0; }
+.hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px); align-items: center;
 }
-.field select {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
-    background-repeat: no-repeat; background-position: right 16px center;
-    padding-right: 42px;
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: 1.02; margin-bottom: 26px;
 }
-.field select option { background: var(--navy-deep); color: var(--ivory); }
-.field input::placeholder { color: rgba(185, 180, 166, 0.55); }
-.field input:focus, .field select:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
-}
-.enquiry-form .btn { width: 100%; margin-top: 6px; }
-.enquiry-privacy {
-    margin-top: 16px; text-align: center;
-    font-size: 0.75rem; color: rgba(185, 180, 166, 0.6);
+.hero .lede { margin-bottom: 34px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-note {
+  margin-top: 22px; font-size: .74rem; letter-spacing: .1em;
+  color: var(--ink-faint);
 }
 
-/* Success state */
-.enquiry-success {
-    display: none;
-    text-align: center;
-    padding: 26px 6px 10px;
+.hero-card { position: relative; }
+.shot {
+  position: relative; overflow: hidden; border-radius: 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(150deg, #1c1533 0%, #0d1720 60%, var(--bg-inset) 100%);
 }
-.enquiry-success.show { display: block; animation: successIn 0.6s var(--ease-soft); }
-@keyframes successIn {
-    from { opacity: 0; transform: translateY(16px) scale(0.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+.shot img {
+  width: 100%; height: 100%; display: block; object-fit: cover;
+  filter: saturate(.7) contrast(1.05);
+  transition: filter .3s ease, transform .3s ease;
 }
-.success-ring {
-    width: 78px; height: 78px; margin: 0 auto 22px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1.5px solid var(--gold);
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+.shot::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(160deg, rgba(124,58,237,.30), rgba(34,211,238,.10));
+  mix-blend-mode: multiply;
+  transition: opacity .3s ease;
 }
-.success-ring svg { width: 34px; height: 34px; }
-.success-check {
-    stroke: var(--gold-soft); stroke-width: 3; fill: none;
-    stroke-linecap: round; stroke-linejoin: round;
-    stroke-dasharray: 48; stroke-dashoffset: 48;
-    animation: checkDraw 0.7s ease-out 0.25s forwards;
+.hero-card .shot { aspect-ratio: 3 / 4; }
+.hero-card::before {
+  content: ''; position: absolute; inset: -1px; border-radius: 13px; z-index: -1;
+  background: var(--grad); opacity: .55;
 }
-@keyframes checkDraw { to { stroke-dashoffset: 0; } }
-.enquiry-success h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.enquiry-success p { font-size: 0.94rem; color: var(--ivory-dim); max-width: 380px; margin: 0 auto 8px; }
-.enquiry-success .success-hint { color: var(--gold-soft); font-size: 0.85rem; margin-top: 14px; }
+.chip {
+  position: absolute; left: -18px; bottom: 26px; z-index: 3;
+  background: var(--bg-raised); border: 1px solid var(--line-strong);
+  border-radius: 10px; padding: 12px 16px; max-width: 74%;
+  box-shadow: 0 18px 40px rgba(0,0,0,.5);
+}
+.chip b { display: block; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; margin-bottom: 4px; }
+.chip span { display: block; font-family: 'Space Grotesk', sans-serif; font-size: .95rem; font-weight: 700; color: var(--ink); line-height: 1.3; }
 
-/* WhatsApp pitch strip */
-.wa-strip {
-    max-width: 720px; margin: 60px auto 0;
-    display: flex; align-items: center; gap: 20px;
-    padding: 26px 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(37, 211, 102, 0.28);
-    background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(10, 22, 51, 0.6));
+/* ---------- Ticker ---------- */
+.ticker {
+  margin-top: clamp(56px, 7vw, 92px);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--bg-inset);
+  overflow: hidden; position: relative; z-index: 2;
 }
-.wa-strip-icon {
-    flex-shrink: 0;
-    width: 52px; height: 52px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+.ticker-track { display: flex; width: max-content; animation: roll 42s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker ul { display: flex; list-style: none; }
+.ticker li {
+  font-family: 'JetBrains Mono', monospace; font-size: .72rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); padding: 14px 0; white-space: nowrap;
 }
-.wa-strip-icon svg { width: 28px; height: 28px; fill: #fff; }
-.wa-strip h3 { font-size: 1.08rem; margin-bottom: 4px; }
-.wa-strip p { font-size: 0.9rem; color: var(--ivory-dim); }
+.ticker li::after { content: '▸'; color: var(--cyan); margin: 0 22px; opacity: .7; }
+@keyframes roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ============ VISIT / CONTACT ============ */
-.visit {
-    padding: 130px 24px;
-    background: var(--navy);
+/* ---------- Trust strip ---------- */
+.trust-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.trust-row div {
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 11px 16px; background: var(--bg-raised);
+  font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-dim); font-family: 'JetBrains Mono', monospace;
 }
-.visit::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 50% at 12% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 55%);
-    pointer-events: none;
-}
-.visit .container { position: relative; z-index: 1; }
-.visit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
-    max-width: 900px; margin: 0 auto 44px;
-}
-.visit-card {
-    padding: 30px 26px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: rgba(14, 29, 66, 0.5);
-    text-align: center;
-    transition: transform 0.45s var(--ease-soft), border-color 0.4s ease;
-}
-.visit-card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.38); }
-.visit-card h3 {
-    font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 12px;
-}
-.visit-card p { font-size: 0.98rem; color: var(--ivory); }
-.visit-card p span { display: block; color: var(--ivory-dim); font-size: 0.88rem; margin-top: 4px; }
-.visit-card a { color: var(--gold-soft); text-decoration: none; }
-.visit-card a:hover { text-decoration: underline; }
-.visit-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.trust-note { margin-top: 20px; font-size: .74rem; color: var(--ink-faint); }
 
-/* ============ FAQ ============ */
-.faq {
-    padding: 130px 24px;
-    background: var(--navy-deep);
+/* ---------- Programs ---------- */
+.sec-head { max-width: 720px; margin-bottom: clamp(38px, 5vw, 58px); }
+.prog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.prog {
+  background: var(--bg-raised); padding: 30px 26px 26px;
+  position: relative; text-decoration: none; display: block;
+  transition: background .2s ease;
 }
-.faq-list { max-width: 760px; margin: 0 auto; }
-.faq-item {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+.prog::before {
+  content: ''; position: absolute; inset: 0; border-radius: 0;
+  border: 1px solid transparent; pointer-events: none;
+  transition: opacity .2s ease; opacity: 0;
+  background-image: linear-gradient(var(--bg-raised), var(--bg-raised)), var(--grad);
+  background-origin: border-box; background-clip: padding-box, border-box;
+  z-index: 0;
 }
-.faq-question {
-    width: 100%;
-    display: flex; justify-content: space-between; align-items: center; gap: 18px;
-    padding: 24px 4px;
-    background: transparent; border: none; cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: var(--ivory); text-align: left;
-    transition: color 0.3s ease;
-    min-height: 60px;
+.prog:hover { background: #191922; }
+.prog:hover::before { opacity: 1; }
+.prog > * { position: relative; z-index: 1; }
+.prog .ix { font-family: 'JetBrains Mono', monospace; font-size: .74rem; color: var(--ink-faint); letter-spacing: .06em; }
+.prog h3 { font-size: 1.14rem; margin: 14px 0 10px; }
+.prog p { font-size: .9rem; color: var(--ink-dim); line-height: 1.6; }
+.prog .arw {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
+  color: var(--cyan);
 }
-.faq-question:hover { color: var(--gold-soft); }
-.faq-question::after {
-    content: '+';
-    flex-shrink: 0;
-    font-family: 'Inter', sans-serif; font-weight: 300;
-    font-size: 1.7rem; line-height: 1;
-    color: var(--gold);
-    transition: transform 0.4s var(--ease-soft);
+.prog .arw svg { width: 14px; height: 14px; transition: transform .2s ease; }
+.prog:hover .arw svg { transform: translateX(4px); }
+
+/* ---------- Method ---------- */
+.method-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+.rows { display: grid; gap: 2px; }
+.row { display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: none; }
+.ico {
+  flex: none; width: 44px; height: 44px; border-radius: 10px;
+  display: grid; place-items: center;
+  background: var(--bg-raised);
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--bg-raised), var(--bg-raised)), var(--grad);
+  background-origin: border-box; background-clip: padding-box, border-box;
 }
-.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
-.faq-answer {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.45s var(--ease-soft);
+.ico svg { width: 20px; height: 20px; fill: none; stroke: var(--cyan); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.row h3 { font-size: 1.02rem; margin-bottom: 5px; }
+.row p { font-size: .9rem; color: var(--ink-dim); }
+.method-shot .shot { aspect-ratio: 4 / 5; }
+.cap { margin-top: 12px; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; }
+
+/* ---------- Stats ---------- */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 34px 26px; }
+.stat .num {
+  display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.3rem); line-height: 1.05;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
 }
-.faq-answer p {
-    padding: 0 4px 24px;
-    font-size: 0.96rem; color: var(--ivory-dim);
-    max-width: 640px;
+.stat .lab {
+  display: block; margin-top: 10px; font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+  line-height: 1.6;
+}
+.qual { display: flex; align-items: flex-start; gap: 10px; }
+.qual svg { width: 18px; height: 18px; flex: none; margin-top: 4px; stroke: var(--cyan); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.qual b { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; color: var(--ink); font-weight: 700; }
+.qual span { display: block; font-size: .84rem; color: var(--ink-dim); }
+.src-note { margin-top: 34px; font-size: .72rem; color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+
+/* ---------- Mosaic ---------- */
+.mosaic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.mosaic .shot { height: 100%; }
+.m1 { grid-column: span 2; grid-row: span 2; }
+.m1 .shot { aspect-ratio: 1 / 1; }
+.m2, .m3, .m4 { grid-column: span 2; }
+.m2 .shot, .m3 .shot, .m4 .shot { aspect-ratio: 16 / 9; }
+@media (min-width: 900px) {
+  .m2, .m3 { grid-column: span 1; }
+  .m2 .shot, .m3 .shot { aspect-ratio: 1 / 1; }
+  .m4 { grid-column: span 2; }
+  .m4 .shot { aspect-ratio: 2 / 1; }
+}
+.mosaic .shot:hover img { filter: none; transform: scale(1.02); }
+.mosaic .shot:hover::after { opacity: 0; }
+.repcap { margin-top: 16px; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; }
+
+/* ---------- Pull quote ---------- */
+.quote { max-width: 860px; position: relative; padding-left: clamp(0px, 4vw, 56px); }
+.quote .mark {
+  font-family: 'Space Grotesk', sans-serif; font-size: 5rem; line-height: .8;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent; display: block; margin-bottom: 6px;
+}
+.quote blockquote {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 500;
+  font-size: clamp(1.35rem, 3.2vw, 2.15rem); line-height: 1.28;
+  color: var(--ink); letter-spacing: -.015em;
+}
+.quote cite {
+  display: block; margin-top: 24px; font-style: normal;
+  font-family: 'JetBrains Mono', monospace; font-size: .72rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
 }
 
-/* ============ FINAL CTA ============ */
-.final-cta {
-    padding: 150px 24px;
-    text-align: center;
-    background:
-        radial-gradient(ellipse 65% 60% at 50% 110%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
-        var(--navy);
+/* ---------- Admissions journey ---------- */
+.steps { position: relative; margin-bottom: clamp(44px, 6vw, 70px); }
+.steps-line { position: absolute; left: 0; right: 0; top: 11px; height: 1px; background: var(--line); }
+.steps-line i { display: block; height: 100%; width: 0; background: var(--grad); }
+html:not(.js) .steps-line i { width: 100%; }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; position: relative; }
+.step { padding-top: 34px; position: relative; }
+.step::before {
+  content: ''; position: absolute; top: 6px; left: 0; width: 11px; height: 11px;
+  border-radius: 50%; background: var(--bg); border: 1px solid var(--line-strong);
 }
-.final-cta .section-headline { margin-bottom: 16px; }
-.cta-subtext {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--ivory-dim);
-    margin-bottom: 44px;
-}
+.step.lit::before { background: var(--cyan); border-color: var(--cyan); box-shadow: 0 0 14px rgba(34,211,238,.5); }
+.step .n { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--ink-faint); }
+.step h3 { font-size: 1rem; margin: 10px 0 7px; }
+.step p { font-size: .86rem; color: var(--ink-dim); }
 
-/* ============ FOOTER ============ */
-.footer {
-    padding: 60px 24px 110px;
-    background: var(--navy-deep);
-    border-top: 1px solid var(--line);
-    text-align: center;
+/* ---------- Enquiry form ---------- */
+.enq {
+  max-width: 560px; background: var(--bg-raised);
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: clamp(26px, 4vw, 38px);
 }
-.footer-crest { width: 44px; height: auto; margin: 0 auto 18px; display: block; opacity: 0.85; }
-.footer-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 1.05rem; margin-bottom: 4px;
+.enq h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.enq .sub { font-size: .86rem; color: var(--ink-dim); margin-bottom: 26px; }
+.fld { margin-bottom: 18px; }
+.fld label {
+  display: block; font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 8px;
 }
-.footer-tag {
-    font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 26px;
+.fld input, .fld select {
+  width: 100%; min-height: 50px; padding: 13px 15px;
+  font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--ink);
+  background: var(--bg-inset); border: 1px solid var(--line); border-radius: 8px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  -webkit-appearance: none; appearance: none;
 }
-.footer-links {
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px;
-    margin-bottom: 30px;
+.fld select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%2322d3ee' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 15px center; padding-right: 42px;
 }
-.footer-links a {
-    font-size: 0.88rem; color: var(--ivory-dim);
-    text-decoration: none; padding: 6px 0;
-    transition: color 0.3s ease;
+.fld select option { background: var(--bg-inset); color: var(--ink); }
+.fld input::placeholder { color: #5a5a66; }
+.fld input:focus, .fld select:focus {
+  outline: none; border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(124,58,237,.22);
 }
-.footer-links a:hover { color: var(--gold-soft); }
-.footer-demo-notice {
-    font-size: 0.78rem; color: rgba(185, 180, 166, 0.6);
-    max-width: 560px; margin: 0 auto 10px; line-height: 1.7;
-}
-.footer-demo-notice a { color: rgba(232, 207, 122, 0.7); text-decoration: none; }
-.footer-copy { font-size: 0.75rem; color: rgba(185, 180, 166, 0.45); }
+.fld.err input, .fld.err select { border-color: #f0616d; }
+.enq form .btn { width: 100%; margin-top: 6px; }
+.enq .fine { margin-top: 14px; font-size: .72rem; color: var(--ink-faint); }
 
-/* ============ FLOATING WHATSAPP ============ */
+.ok { display: none; text-align: center; padding: 14px 0 4px; }
+.ok.show { display: block; }
+html.js .ok.show { animation: okIn .5s var(--ease); }
+@keyframes okIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.ok .ring {
+  width: 68px; height: 68px; margin: 0 auto 20px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--cyan); background: rgba(34,211,238,.08);
+  box-shadow: 0 0 34px rgba(34,211,238,.22);
+}
+.ok .ring svg { width: 30px; height: 30px; }
+.ok .ring path {
+  stroke: var(--cyan); stroke-width: 2.6; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 46; stroke-dashoffset: 46;
+}
+html.js .ok.show .ring path { animation: draw .6s ease .18s forwards; }
+.ok h3 { font-size: 1.18rem; margin-bottom: 10px; }
+.ok p { font-size: .9rem; color: var(--ink-dim); max-width: 380px; margin: 0 auto; }
+.ok .tag { margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
+
+.wa-note {
+  margin-top: 40px; display: flex; gap: 16px; align-items: flex-start;
+  border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px;
+  background: var(--bg-raised); max-width: 640px;
+}
+.wa-note .b { flex: none; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: rgba(37,211,102,.12); }
+.wa-note .b svg { width: 22px; height: 22px; fill: var(--wa); }
+.wa-note h3 { font-size: 1rem; margin-bottom: 5px; }
+.wa-note p { font-size: .86rem; color: var(--ink-dim); }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 820px; }
+.qa { border-bottom: 1px solid var(--line); }
+.qa:first-child { border-top: 1px solid var(--line); }
+.qa button {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 22px 2px; min-height: 62px;
+  background: none; border: none; cursor: pointer; text-align: left;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 500;
+  font-size: clamp(.98rem, 2vw, 1.1rem); color: var(--ink);
+  transition: color .2s ease;
+}
+.qa button:hover { color: var(--cyan); }
+.qa button i {
+  flex: none; position: relative; width: 14px; height: 14px;
+  transition: transform .3s var(--ease);
+}
+.qa button i::before, .qa button i::after {
+  content: ''; position: absolute; background: var(--cyan); border-radius: 2px;
+}
+.qa button i::before { left: 0; right: 0; top: 6px; height: 2px; }
+.qa button i::after { top: 0; bottom: 0; left: 6px; width: 2px; }
+.qa button[aria-expanded="true"] i { transform: rotate(45deg); }
+.qa .a { overflow: hidden; }
+html.js .qa .a { max-height: 0; transition: max-height .35s var(--ease); }
+.qa .a p { padding: 0 2px 24px; font-size: .92rem; color: var(--ink-dim); max-width: 66ch; }
+
+/* ---------- Visit ---------- */
+.visit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 32px; }
+.vcard { background: var(--bg-raised); padding: 26px 24px; }
+.vcard h3 { font-family: 'JetBrains Mono', monospace; font-size: .68rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+.vcard p { font-size: .95rem; color: var(--ink); line-height: 1.6; }
+.vcard span { display: block; font-size: .84rem; color: var(--ink-dim); margin-top: 6px; }
+.vcard a { color: var(--cyan); text-decoration: none; word-break: break-word; }
+.vcard a:hover { text-decoration: underline; }
+.visit-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* ---------- Footer ---------- */
+.foot { background: var(--bg-inset); border-top: 1px solid var(--line); padding: 56px 0 110px; position: relative; z-index: 1; }
+.foot-top { display: flex; flex-wrap: wrap; gap: 26px 40px; justify-content: space-between; align-items: flex-start; margin-bottom: 34px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 10px 26px; }
+.foot-links a { font-size: .84rem; color: var(--ink-dim); text-decoration: none; }
+.foot-links a:hover { color: var(--cyan); }
+.demo-notice {
+  border-top: 1px solid var(--line); padding-top: 24px;
+  font-size: .76rem; color: var(--ink-faint); line-height: 1.75; max-width: 78ch;
+}
+.demo-notice a { color: var(--cyan); text-decoration: none; }
+.copy { margin-top: 12px; font-size: .72rem; color: #55555f; }
+
+/* ---------- Floating / fixed UI ---------- */
 .wa-float {
-    position: fixed; right: 20px; bottom: 20px; z-index: 1100;
-    width: 58px; height: 58px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--wa-green);
-    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4);
-    text-decoration: none;
-    transition: transform 0.4s var(--ease-soft), box-shadow 0.4s ease;
-    animation: waPulse 2.6s ease-in-out infinite;
+  position: fixed; right: 18px; bottom: 18px; z-index: 950;
+  width: 54px; height: 54px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--wa);
+  box-shadow: 0 10px 26px rgba(37,211,102,.35);
+  transition: transform .2s ease;
 }
-.wa-float:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
-.wa-float svg { width: 30px; height: 30px; fill: #fff; }
-@keyframes waPulse {
-    0%, 100% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
-    55% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+.wa-float:hover { transform: translateY(-3px); }
+.wa-float svg { width: 28px; height: 28px; fill: #06210f; }
+
+.badge {
+  position: fixed; left: 16px; bottom: 16px; z-index: 940;
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 8px 8px 14px; border-radius: 999px;
+  background: rgba(10,10,14,.9); border: 1px solid var(--line-strong);
+  font-family: 'JetBrains Mono', monospace; font-size: .66rem;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-dim);
+}
+.badge b { font-weight: 500; }
+.badge button {
+  width: 22px; height: 22px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(255,255,255,.08); color: var(--ink-dim); font-size: .8rem; line-height: 1;
+}
+.badge.hide { display: none; }
+
+.bar { display: none; }
+@media (max-width: 780px) {
+  .bar {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 960;
+    background: rgba(10,10,14,.97); border-top: 1px solid var(--line-strong);
+  }
+  .bar a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    padding: 10px 4px 12px; text-decoration: none;
+    font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-dim);
+    border-left: 1px solid var(--line);
+  }
+  .bar a:first-child { border-left: none; }
+  .bar a svg { width: 19px; height: 19px; }
+  .bar .gs { stroke: url(#barGrad); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .bar .gf { fill: url(#barGrad); }
+  .bar .go { background: var(--grad); color: #08080b; font-weight: 500; }
+  .bar .go svg { stroke: #08080b; fill: none; stroke-width: 1.8; }
+  body { padding-bottom: 62px; }
+  .wa-float { bottom: 74px; }
+  .badge { bottom: 74px; }
 }
 
-/* ============ CONCEPT DEMO BADGE ============ */
-.demo-badge {
-    position: fixed; left: 16px; bottom: 16px; z-index: 1100;
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 10px 9px 16px;
-    border-radius: 980px;
-    background: rgba(6, 13, 33, 0.72);
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold-soft);
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-card { max-width: 420px; }
+  .method-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 22px; }
+  .steps-line { display: none; }
+  .step { border-left: 1px solid var(--line); padding-left: 18px; padding-top: 4px; }
+  .step::before { top: 4px; left: -6px; }
 }
-.demo-badge-close {
-    width: 26px; height: 26px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(212, 175, 55, 0.12); border: none; cursor: pointer;
-    color: var(--gold-soft); font-size: 0.95rem; line-height: 1;
-    transition: background 0.3s ease;
-}
-.demo-badge-close:hover { background: rgba(212, 175, 55, 0.28); }
-.demo-badge.hidden { display: none; }
-
-/* ============ BACK TO TOP ============ */
-.back-to-top {
-    position: fixed; right: 22px; bottom: 92px; z-index: 1090;
-    width: 46px; height: 46px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(14, 29, 66, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: var(--gold-soft); cursor: pointer;
-    opacity: 0; pointer-events: none; transform: translateY(10px);
-    transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease;
-}
-.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.back-to-top:hover { background: rgba(212, 175, 55, 0.18); }
-
-/* ============ RESPONSIVE ============ */
 @media (max-width: 860px) {
-    .nav-links {
-        position: fixed; top: 68px; left: 0; right: 0;
-        flex-direction: column; align-items: stretch; gap: 0;
-        background: rgba(6, 13, 33, 0.97);
-        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--line);
-        padding: 12px 24px 24px;
-        transform: translateY(-12px); opacity: 0; pointer-events: none;
-        transition: transform 0.35s var(--ease-soft), opacity 0.3s ease;
-    }
-    .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-    .nav-links a { padding: 15px 4px; font-size: 1.02rem; border-bottom: 1px solid rgba(246, 242, 232, 0.06); }
-    .nav-links a:last-child { border-bottom: none; }
-    .nav-cta { text-align: center; margin-top: 14px; padding: 14px 22px !important; }
-    .nav-hamburger { display: flex; }
-    .wa-strip { flex-direction: column; text-align: center; }
-    .enquiry-shell { padding: 36px 24px; }
+  .nav-links {
+    position: fixed; top: 72px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: rgba(10,10,14,.98); border-bottom: 1px solid var(--line);
+    padding: 8px 28px 22px;
+    opacity: 0; transform: translateY(-10px); pointer-events: none;
+    transition: opacity .25s ease, transform .3s var(--ease);
+  }
+  .nav-links.open { opacity: 1; transform: none; pointer-events: auto; }
+  .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .nav-links .btn { margin-top: 14px; border-bottom: none; }
+  .burger { display: flex; }
 }
-@media (max-width: 480px) {
-    .hero { padding: 110px 20px 70px; }
-    .hero-ctas .btn { width: 100%; }
-    .visit-actions .btn { width: 100%; }
-    .day-track { padding-left: 34px; }
-    .orb { filter: blur(70px); }
-    .container { padding: 0 20px; }
+@media (max-width: 620px) {
+  .wrap { padding: 0 20px; }
+  .gridlines i { margin: 0 20px; }
+  .hero { padding-top: 122px; }
+  .hero-ctas .btn { width: 100%; }
+  .visit-ctas .btn { width: 100%; }
+  .chip { left: 12px; right: 12px; max-width: none; bottom: 14px; }
+  .mosaic { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .m1, .m2, .m3, .m4 { grid-column: span 2; grid-row: auto; }
+  .m1 .shot, .m2 .shot, .m3 .shot, .m4 .shot { aspect-ratio: 3 / 2; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .quote { padding-left: 0; }
+  .wa-note { flex-direction: column; }
 }
 
-/* ============ REDUCED MOTION ============ */
+/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    .crest-draw, .crest-draw-slow { stroke-dashoffset: 0; }
-    .crest-fade { opacity: 1; }
-    .orb { display: none; }
-    .success-check { stroke-dashoffset: 0; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  html.js .kin .ln > span { transform: none !important; }
+  .ticker-track { animation: none; }
+  .divider span { transform: none; width: 22%; }
+  .pre .frame { stroke-dashoffset: 0; }
+  .pre .mg { opacity: 1; }
+  .pre-bar i { width: 100%; }
+  .ok .ring path { stroke-dashoffset: 0; }
+  .steps-line i { width: 100%; }
 }
 </style>
+
 <noscript>
 <style>
-    /* JS disabled: everything stays reachable */
-    .faq-answer { max-height: none; }
-    .faq-question::after { display: none; }
-    @media (max-width: 860px) {
-        .nav-links { position: static; transform: none; opacity: 1; pointer-events: auto; }
-        .nav-hamburger { display: none; }
-        .nav-container { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
-        .nav { position: absolute; }
-        html { scroll-padding-top: 0; }
-    }
-    .back-to-top, .demo-badge-close { display: none; }
+  .pre { display: none !important; }
+  .qa .a { max-height: none; }
+  .qa button i { display: none; }
+  .steps-line i { width: 100%; }
+  @media (max-width: 860px) {
+    .nav { position: static; }
+    .nav-in { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+    .nav-links { position: static; opacity: 1; transform: none; pointer-events: auto; flex-direction: row; flex-wrap: wrap; background: none; border: none; padding: 0; gap: 16px; }
+    .nav-links a { border-bottom: none; padding: 4px 0; font-size: .84rem; }
+    .burger { display: none; }
+    .hero { padding-top: 40px; }
+    html { scroll-padding-top: 0; }
+  }
+  .badge button { display: none; }
 </style>
 </noscript>
+<script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- NAVIGATION -->
-    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="#top" class="nav-logo" aria-label="Mahendra&rsquo;s Institute, Gonda Branch — home">
-                <svg class="nav-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                    <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                    <text x="38" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="700" fill="#e8cf7a">M</text>
-                </svg>
-                <span class="nav-logo-name">Mahendra&rsquo;s Institute<small>Gonda Branch &middot; L.B.S. Chauraha</small></span>
-            </a>
-            <div class="nav-links" id="nav-menu">
-                <a href="#story">Why Here</a>
-                <a href="#offerings">Courses</a>
-                <a href="#day">How It Runs</a>
-                <a href="#visit">Visit</a>
-                <a href="#faq">FAQ</a>
-                <a href="#admission" class="nav-cta">Enquire / Book Demo</a>
-            </div>
-            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </nav>
+<!-- ============ PRELOADER ============ -->
+<div class="pre" id="pre" role="status" aria-label="Loading">
+  <svg viewBox="0 0 132 84" aria-hidden="true">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#7c3aed"/>
+        <stop offset="100%" stop-color="#22d3ee"/>
+      </linearGradient>
+    </defs>
+    <path class="frame" d="M34 10 H14 V74 H34" fill="none" stroke="url(#pg)" stroke-width="2.5" stroke-linecap="square"/>
+    <path class="frame" d="M98 10 H118 V74 H98" fill="none" stroke="url(#pg)" stroke-width="2.5" stroke-linecap="square"/>
+    <text class="mg" x="66" y="55" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="700" fill="url(#pg)">MI</text>
+  </svg>
+  <div class="pre-bar" aria-hidden="true"><i></i></div>
+  <p class="pre-cap mono">loading campus&hellip;</p>
+</div>
 
-    <!-- AMBIENT ORBS -->
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
+<!-- ============ GRID IDENTITY ============ -->
+<div class="gridlines" aria-hidden="true"><i></i></div>
 
-    <main id="main-content">
-
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="hero-photo" aria-hidden="true">
-            <img src="https://images.pexels.com/photos/18870255/pexels-photo-18870255.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" onerror="this.style.display='none'">
-        </div>
-        <div class="container">
-
-            <!-- Signature crest monogram -->
-            <svg class="hero-crest" viewBox="0 0 152 168" role="img" aria-label="Mahendra&rsquo;s Institute, Gonda Branch crest" focusable="false">
-                <defs>
-                    <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#e8cf7a"/>
-                        <stop offset="55%" stop-color="#d4af37"/>
-                        <stop offset="100%" stop-color="#b8912b"/>
-                    </linearGradient>
-                </defs>
-                <!-- Shield -->
-                <path class="crest-draw-slow" d="M76 6 L142 26 V88 C142 124 112 150 76 162 C40 150 10 124 10 88 V26 Z"
-                      fill="rgba(212,175,55,0.04)" stroke="url(#crestGold)" stroke-width="3"/>
-                <path class="crest-draw" d="M76 18 L130 34 V88 C130 117 106 139 76 150 C46 139 22 117 22 88 V34 Z"
-                      fill="none" stroke="rgba(212,175,55,0.45)" stroke-width="1.5"/>
-                <!-- Rising sun -->
-                <g class="crest-fade">
-                    <circle cx="76" cy="62" r="13" fill="none" stroke="#e8cf7a" stroke-width="2"/>
-                    <g stroke="#e8cf7a" stroke-width="2" stroke-linecap="round">
-                        <line x1="76" y1="40" x2="76" y2="46"/>
-                        <line x1="58" y1="48" x2="62" y2="52"/>
-                        <line x1="94" y1="48" x2="90" y2="52"/>
-                        <line x1="52" y1="62" x2="58" y2="62"/>
-                        <line x1="94" y1="62" x2="100" y2="62"/>
-                    </g>
-                </g>
-                <!-- Open book -->
-                <g class="crest-fade">
-                    <path d="M40 92 C52 86 66 86 76 92 C86 86 100 86 112 92 V118 C100 112 86 112 76 118 C66 112 52 112 40 118 Z"
-                          fill="rgba(246,242,232,0.06)" stroke="#e8cf7a" stroke-width="2" stroke-linejoin="round"/>
-                    <line x1="76" y1="92" x2="76" y2="118" stroke="#e8cf7a" stroke-width="2"/>
-                    <path d="M48 97 C56 94 66 94 70 96 M48 103 C56 100 66 100 70 102 M82 96 C86 94 96 94 104 97 M82 102 C86 100 96 100 104 103"
-                          stroke="rgba(232,207,122,0.55)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                </g>
-                <!-- Underline flourish -->
-                <path class="crest-fade" d="M42 132 C50 127 58 137 66 132 C74 127 82 137 90 132 C98 127 106 137 110 133"
-                      fill="none" stroke="#d4af37" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-
-            <p class="hero-badge">Banking &middot; SSC &middot; Railway &middot; UP Police &mdash; Gonda Branch</p>
-            <h1 class="hero-headline">The government job starts <span class="gradient-text">here.</span></h1>
-            <p class="hero-subtext">Mahendra&rsquo;s Institute, Gonda Branch &mdash; classroom coaching at L.B.S. Chauraha for Banking, SSC, Railway, Police, teaching and state exams, backed by a national institute&rsquo;s syllabus, test series and study material.</p>
-            <div class="hero-ctas">
-                <a href="#admission" class="btn btn-primary">Book a Free Demo Class</a>
-                <a href="#offerings" class="btn btn-secondary">See the Courses</a>
-            </div>
-            <p class="hero-motto">Concept &middot; Practice &middot; Selection</p>
-        </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="trust-strip" aria-label="At a glance">
-        <div class="trust-strip-inner">
-            <span>Mahendra Educational Pvt. Ltd.</span>
-            <span>National Institute &middot; Local Classroom</span>
-            <span>L.B.S. Chauraha, Gonda</span>
-            <span>Offline Batches &amp; Online Test Series</span>
-        </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="story" id="story">
-        <div class="container">
-            <span class="section-eyebrow">Why Study Here</span>
-            <h2 class="section-headline">A national institute, <span class="gradient-text">on your street.</span></h2>
-            <div class="story-lines">
-                <p>Students from Gonda should not have to move to Lucknow or Delhi to prepare <strong>seriously.</strong></p>
-                <p>The same syllabus plan, study material and test platform the institute runs nationally &mdash; taught in a classroom you can walk to.</p>
-                <p>Preparation that is <strong>structured</strong>, not scattered: concept class, practice, test, correction. Every week.</p>
-                <p>Doubts cleared face to face &mdash; the part no online course has ever replaced.</p>
-            </div>
-            <p class="story-close">Brand strength of a national institute. Attention of a <span class="gradient-text">local</span> classroom.</p>
-
-            <div class="photo-frame photo-frame--tall" style="margin-top:56px;">
-                <img src="https://images.pexels.com/photos/35550999/pexels-photo-35550999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="A busy library reading hall with students working at long tables" loading="lazy" onerror="this.style.display='none'">
-                <p class="photo-caption">Study hours &middot; representative image</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- OFFERINGS -->
-    <section class="offerings" id="offerings">
-        <div class="container">
-            <span class="section-eyebrow">Courses at the Gonda Branch</span>
-            <h2 class="section-headline">Every major government <span class="gradient-text">exam.</span></h2>
-            <p class="section-sub">Which batches are running, and what they cost, is confirmed at the counter &mdash; ask on WhatsApp and the branch will tell you.</p>
-            <div class="offer-grid">
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/>
-                            <path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Banking &mdash; IBPS, SBI, RBI</h3>
-                    <p>PO and Clerk preparation across Reasoning, Quantitative Aptitude, English, General Awareness and Computer &mdash; prelims to mains to interview.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/>
-                            <path d="M7.5 14h9"/>
-                        </svg>
-                    </div>
-                    <h3>SSC &mdash; CGL, CHSL &amp; More</h3>
-                    <p>Staff Selection Commission preparation with the paper pattern taken apart section by section, and enough solved practice to make speed automatic.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 21a9 9 0 1 0-9-9"/>
-                            <path d="M3 12h9l4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Railways &mdash; RRB NTPC &amp; Group D</h3>
-                    <p>Railway recruitment batches built around the CBT pattern, with the general-science and current-affairs load handled steadily instead of all at the end.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3v18M5 7c2-2 5-2 7 0 2-2 5-2 7 0"/>
-                            <path d="M5 7v10c2-2 5-2 7 0 2-2 5-2 7 0V7"/>
-                        </svg>
-                    </div>
-                    <h3>UP Police &amp; State Exams</h3>
-                    <p>State-level recruitment preparation for students staying in Uttar Pradesh &mdash; syllabus, Hindi-medium support and the physical-stage guidance that goes with it.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
-                        </svg>
-                    </div>
-                    <h3>Teaching &amp; Entrance Exams</h3>
-                    <p>Teaching-eligibility and undergraduate entrance preparation for students who want the classroom itself, or a seat at a central university.</p>
-                </article>
-                <article class="offer-card">
-                    <div class="offer-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
-                            <circle cx="10" cy="7" r="4"/>
-                            <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
-                        </svg>
-                    </div>
-                    <h3>Test Series &amp; Study Material</h3>
-                    <p>The institute&rsquo;s online test platform and printed material come with the classroom batch &mdash; so practice at home matches what is taught here.</p>
-                </article>
-            </div>
-
-            <div class="photo-frame" style="margin-top:64px;">
-                <p class="photo-caption">Classroom batches at L.B.S. Chauraha</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATS BAND -->
-    <section class="stats" aria-label="The institute at a glance">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <span class="stat-number"><span data-count="30">30</span>+</span>
-                    <span class="stat-label">Years the institute has run nationally</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number"><span data-count="150">150</span>+</span>
-                    <span class="stat-label">Branches across India</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">Gonda</span>
-                    <span class="stat-label">Your branch &mdash; L.B.S. Chauraha</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">Class + Test</span>
-                    <span class="stat-label">Offline teaching, online practice</span>
-                </div>
-            </div>
-            <p style="text-align:center;margin-top:34px;font-size:0.78rem;letter-spacing:0.1em;color:rgba(185,180,166,0.7);">Years and branch count as published by Mahendra Educational Pvt. Ltd.</p>
-        </div>
-    </section>
-
-    <!-- SIGNATURE: HOW PREPARATION RUNS -->
-    <section class="day" id="day">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">The Signature Rhythm</span>
-            <h2 class="section-headline">How preparation actually <span class="gradient-text">runs.</span></h2>
-            <p class="section-sub">Not motivation. A repeating weekly cycle &mdash; concept class, practice, test, correction, and then again.</p>
-
-            <div class="day-track">
-                <div class="day-line" aria-hidden="true"><div class="day-line-progress" id="day-progress"></div></div>
-
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 01</span>
-                    <h3>Counselling &amp; the right batch</h3>
-                    <p>Which exam, how much time you have, where you stand today. The batch is chosen after that conversation, not before it.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 02</span>
-                    <h3>Concept class, section by section</h3>
-                    <p>Reasoning, Quant, English and General Awareness taught from the ground up &mdash; shortcuts only after the long method is understood.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 03</span>
-                    <h3>Daily practice, in the room</h3>
-                    <p>Question sets attempted under supervision. Mistakes are found here, in front of a teacher, instead of on exam day.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 04</span>
-                    <h3>Doubt clearing, face to face</h3>
-                    <p>The one thing an app cannot do. Bring the question you got stuck on and leave with it settled.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 05</span>
-                    <h3>Mock tests on the real pattern</h3>
-                    <p>Timed online tests matching the exam interface, then a score analysis that shows exactly which section is costing you the cutoff.</p>
-                </div>
-                <div class="day-item">
-                    <span class="day-dot" aria-hidden="true"></span>
-                    <span class="day-time">Step 06</span>
-                    <h3>Notification alerts &amp; mains push</h3>
-                    <p>New vacancy notifications reach you the day they are out, and the branch switches gears for mains and interview when your result comes.</p>
-                </div>
-            </div>
-
-            <div class="photo-frame photo-frame--tall" style="margin-top:64px;">
-                <p class="photo-caption">Study material &amp; online test series</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUTOMATION TEASER: ADMISSION ENQUIRY -->
-    <section class="automation" id="admission">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Admission &amp; Free Demo</span>
-            <h2 class="section-headline">Sit in one class <span class="gradient-text">first.</span></h2>
-            <p class="section-sub">Book a free demo class at the Gonda branch. Batch timings and fees are shared on WhatsApp the same day &mdash; in Hindi or English, whichever you prefer.</p>
-
-            <div class="enquiry-shell">
-                <form class="enquiry-form" id="enquiry-form" novalidate>
-                    <h3 class="enquiry-title">Book a Free Demo Class</h3>
-                    <p class="enquiry-note">Takes thirty seconds. No documents needed yet.</p>
-                    <div class="field">
-                        <label for="student-name">Your name</label>
-                        <input type="text" id="student-name" name="student-name" placeholder="e.g. Rahul Verma" autocomplete="name" required>
-                    </div>
-                    <div class="field">
-                        <label for="student-exam">Exam you are preparing for</label>
-                        <select id="student-exam" name="student-exam" required>
-                            <option value="" selected disabled>Select an exam</option>
-                            <option>Banking &mdash; IBPS / SBI / RBI</option>
-                            <option>SSC &mdash; CGL / CHSL</option>
-                            <option>Railways &mdash; RRB NTPC / Group D</option>
-                            <option>UP Police / State exams</option>
-                            <option>Teaching / entrance exams</option>
-                            <option>Not decided yet</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="student-phone">Your phone (WhatsApp)</label>
-                        <input type="tel" id="student-phone" name="student-phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Request Demo Class</button>
-                    <p class="enquiry-privacy">Your number is used only to respond to this enquiry.</p>
-                </form>
-
-                <div class="enquiry-success" id="enquiry-success" role="status" aria-live="polite">
-                    <div class="success-ring" aria-hidden="true">
-                        <svg viewBox="0 0 34 34"><path class="success-check" d="M7 18 L14 25 L27 10"/></svg>
-                    </div>
-                    <h3>Request received.</h3>
-                    <p>This is how the branch counter would hear from a student &mdash; automatically, the moment they decide, even at 9 PM on a Sunday.</p>
-                    <p class="success-hint">Concept demo &mdash; no data was sent anywhere.</p>
-                </div>
-            </div>
-
-            <!-- WhatsApp automation pitch strip -->
-            <div class="wa-strip">
-                <div class="wa-strip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
-                </div>
-                <div>
-                    <h3>Batch alerts &amp; exam notifications &mdash; on WhatsApp.</h3>
-                    <p>New batch start dates, IBPS and SSC notification alerts and fee due dates, sent automatically to the students preparing for that exam. No calls. Nothing missed.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Visit the Branch</span>
-            <h2 class="section-headline">Find us at <span class="gradient-text">L.B.S. Chauraha.</span></h2>
-            <p class="section-sub">Above the Narain Suzuki showroom, Malviya Nagar. Walk in and ask at the counter, or message ahead on WhatsApp and come at a time that suits you.</p>
-            <div class="visit-grid">
-                <div class="visit-card">
-                    <h3>Address</h3>
-                    <p>Mahendra&rsquo;s Institute, Gonda Branch<span>461/529, Malviya Nagar, above Narain Suzuki showroom,<br>L.B.S. Chauraha, Gonda,<br>Uttar Pradesh 271001</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Phone &amp; WhatsApp</h3>
-                    <p><a href="tel:+919208250778">+91 92082 50778</a><span>Branch counter &mdash; admission &amp; batch enquiries</span></p>
-                </div>
-                <div class="visit-card">
-                    <h3>Email</h3>
-                    <p><a href="mailto:tp.tgndb@mahendras.co.in">tp.tgndb@mahendras.co.in</a><span>Gonda branch office</span></p>
-                </div>
-            </div>
-            <div class="visit-actions">
-                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Mahendra%27s%20Institute%20%28Mahendra%20Educational%20Pvt.%20Ltd.%29%2C%20Gonda%20Branch%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
-                <a class="btn btn-secondary" href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Questions Students Ask</span>
-            <h2 class="section-headline">Answers, <span class="gradient-text">straight.</span></h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Which exams does the Gonda branch coach for?</button>
-                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-                        <p>Banking (IBPS, SBI, RBI), SSC, Railways, UP Police and state recruitment, plus teaching and entrance exams. Which batches are running at any moment follows the exam calendar &mdash; message the branch on WhatsApp for the current list.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Can I attend a class before joining?</button>
-                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>Yes &mdash; ask for a demo class. Sit through a live session, see how the subject is taught and how the doubt-clearing works, then decide. Request it through the form above or on WhatsApp and the counter will confirm a slot.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">What are the fees and batch timings?</button>
-                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-                        <p>Fees and timings depend on the course and the batch cycle, so they are confirmed at the counter rather than quoted here. Call or WhatsApp +91 92082 50778 and you will get the exact figure for the batch you want.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Are classes taught in Hindi or English?</button>
-                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-                        <p>Government exam papers come in both languages, and teaching here is pitched so that a Hindi-medium student is never left behind &mdash; while the English section is prepared properly, because it decides the cutoff for a lot of candidates.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Is this the same as the national institute?</button>
-                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>Yes. This is the Gonda branch of Mahendra Educational Pvt. Ltd. &mdash; the same institute, the same course structure and the same test platform, run from a classroom at L.B.S. Chauraha instead of a screen in another city.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <h2 class="section-headline">One attempt at a time. <span class="gradient-text">Start now.</span></h2>
-            <p class="cta-subtext">Every exam cycle you wait is a year. Book a demo class at the Gonda branch this week.</p>
-            <a href="#admission" class="btn btn-primary btn-large">Book a Free Demo Class</a>
-        </div>
-    </section>
-
-    </main>
-
-    <!-- BACK TO TOP -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
-    </button>
-
-    <!-- FLOATING WHATSAPP -->
-    <a class="wa-float" href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Mahendra&rsquo;s Institute, Gonda Branch — home">
+      <svg viewBox="0 0 132 84" aria-hidden="true">
+        <defs>
+          <linearGradient id="ng" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <path d="M34 10 H14 V74 H34" fill="none" stroke="url(#ng)" stroke-width="4" stroke-linecap="square"/>
+        <path d="M98 10 H118 V74 H98" fill="none" stroke="url(#ng)" stroke-width="4" stroke-linecap="square"/>
+        <text x="66" y="57" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="700" fill="#f4f4f6">MI</text>
+      </svg>
+      <span>
+        <b>Mahendra&rsquo;s Institute</b>
+        <small>Gonda Branch</small>
+      </span>
     </a>
-
-    <!-- STICKY MOBILE CALL / WHATSAPP BAR -->
-    <div class="mobile-bar" role="group" aria-label="Quick contact">
-        <a href="tel:+919208250778">Call the Branch</a>
-        <a href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <div class="nav-links" id="menu">
+      <a href="#programs">Programs</a>
+      <a href="#method">Method</a>
+      <a href="#campus">Inside</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-p" href="#admissions">Enquire Now</a>
     </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</nav>
 
-    <!-- CONCEPT DEMO BADGE -->
-    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
-        <span>Concept Demo</span>
-        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
-    </div>
+<main id="main">
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <svg class="footer-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
-                <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-                <text x="38" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="700" fill="#e8cf7a">M</text>
-            </svg>
-            <p class="footer-name">Mahendra&rsquo;s Institute &mdash; Gonda Branch</p>
-            <p class="footer-tag">Mahendra Educational Pvt. Ltd. &middot; L.B.S. Chauraha, Gonda 271001</p>
-            <div class="footer-links">
-                <a href="#story">Why Here</a>
-                <a href="#offerings">Courses</a>
-                <a href="#day">How It Runs</a>
-                <a href="#admission">Free Demo</a>
-                <a href="#visit">Visit</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; a local landing-page concept for the Gonda branch, not the official website of Mahendra&rsquo;s Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch or of Mahendra Educational Pvt. Ltd.</p>
-            <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Banking &middot; SSC &middot; Railway &middot; UP Police</p>
+        <h1 class="kin" data-kin>
+          <span class="ln"><span>Prepare in Gonda.</span></span>
+          <span class="ln"><span><em class="g" style="font-style:normal">Clear it</em> anywhere.</span></span>
+        </h1>
+        <p class="lede">Classroom coaching at L.B.S. Chauraha for Banking, SSC, Railway, UP Police, teaching and state government exams &mdash; taught to the syllabus plan, study material and test platform of Mahendra Educational Pvt. Ltd.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-p" href="#admissions">Enquire Now</a>
+          <a class="btn btn-s" href="#programs">Explore Programs</a>
         </div>
-    </footer>
+        <p class="hero-note mono">Above Narain Suzuki showroom &middot; Malviya Nagar &middot; Gonda 271001</p>
+      </div>
 
-    <!-- Animation libraries (defer; site is fully readable without them) -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+      <div class="hero-card">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/18870255/pexels-photo-18870255.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+               alt="A teacher explaining mathematics at the board in a bright classroom"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="chip">
+          <b class="mono">Brand scale</b>
+          <span>150+ branches across India<br>HQ Lucknow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <ul>
+        <li>Mahendra Educational Pvt. Ltd.</li>
+        <li>Banking &mdash; IBPS PO &amp; Clerk</li>
+        <li>SSC CGL &amp; CHSL</li>
+        <li>RRB NTPC &amp; Group D</li>
+        <li>UP Police &amp; State Exams</li>
+        <li>Online Test Series</li>
+        <li>Doubt clearing, face to face</li>
+        <li>L.B.S. Chauraha, Gonda</li>
+      </ul>
+      <ul>
+        <li>Mahendra Educational Pvt. Ltd.</li>
+        <li>Banking &mdash; IBPS PO &amp; Clerk</li>
+        <li>SSC CGL &amp; CHSL</li>
+        <li>RRB NTPC &amp; Group D</li>
+        <li>UP Police &amp; State Exams</li>
+        <li>Online Test Series</li>
+        <li>Doubt clearing, face to face</li>
+        <li>L.B.S. Chauraha, Gonda</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 2. TRUST STRIP ============ -->
+<section aria-label="Affiliation" style="padding-top:clamp(48px,6vw,72px);padding-bottom:clamp(48px,6vw,72px);">
+  <div class="wrap">
+    <p class="eyebrow">Who runs this branch</p>
+    <div class="trust-row">
+      <div>Mahendra Educational Pvt. Ltd.</div>
+      <div>Company branch centre</div>
+      <div>30+ years nationally</div>
+      <div>150+ branches in India</div>
+      <div>Gonda &middot; UP 271001</div>
+    </div>
+    <p class="trust-note">The 30+ years and 150+ branches figures are as published by Mahendra Educational Pvt. Ltd. for the institute nationally.</p>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 3. PROGRAMS ============ -->
+<section id="programs" class="inset">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Programs at this branch</p>
+      <h2 class="h2 kin" data-kin>
+        <span class="ln"><span>Pick the exam.</span></span>
+        <span class="ln"><span class="g">Start the plan.</span></span>
+      </h2>
+      <p class="lede">Which batches are running right now follows the exam calendar. Message the branch and you will get the current list the same day.</p>
+    </div>
+
+    <div class="prog-grid">
+      <a class="prog" href="#admissions">
+        <span class="ix">01/</span>
+        <h3>Banking &mdash; IBPS, SBI, RBI</h3>
+        <p>PO and Clerk preparation across Reasoning, Quantitative Aptitude, English, General Awareness and Computer &mdash; prelims through mains to interview.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="prog" href="#admissions">
+        <span class="ix">02/</span>
+        <h3>SSC &mdash; CGL, CHSL</h3>
+        <p>Staff Selection Commission preparation with the paper pattern taken apart section by section, and enough solved practice to make speed automatic.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="prog" href="#admissions">
+        <span class="ix">03/</span>
+        <h3>Railways &mdash; RRB NTPC, Group D</h3>
+        <p>Railway recruitment batches built around the CBT pattern, with the general-science and current-affairs load handled steadily instead of all at the end.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="prog" href="#admissions">
+        <span class="ix">04/</span>
+        <h3>UP Police &amp; state exams</h3>
+        <p>State-level recruitment preparation for students staying in Uttar Pradesh &mdash; syllabus, Hindi-medium support and the guidance that goes with the physical stage.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="prog" href="#admissions">
+        <span class="ix">05/</span>
+        <h3>Teaching &amp; entrance exams</h3>
+        <p>Teaching-eligibility and undergraduate entrance preparation for students who want the classroom itself, or a seat at a central university.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="prog" href="#admissions">
+        <span class="ix">06/</span>
+        <h3>Test series &amp; study material</h3>
+        <p>The institute&rsquo;s online test platform and printed material come with the classroom batch &mdash; so practice at home matches exactly what is taught here.</p>
+        <span class="arw">Enquire <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 4. METHOD ============ -->
+<section id="method">
+  <div class="wrap">
+    <div class="method-grid">
+      <div>
+        <p class="eyebrow">How the teaching runs</p>
+        <h2 class="h2 kin" data-kin>
+          <span class="ln"><span>Learn it. Drill it.</span></span>
+          <span class="ln"><span class="g">Test it.</span></span>
+        </h2>
+        <p class="lede" style="margin-bottom:28px;">Not motivation. A repeating weekly cycle &mdash; concept class, supervised practice, timed test, correction, and then again.</p>
+
+        <div class="rows">
+          <div class="row">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+            </span>
+            <div>
+              <h3>Counselling before the batch</h3>
+              <p>Which exam, how much time you have, where you stand today. The batch is chosen after that conversation, not before it.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/><path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <div>
+              <h3>Concept class, section by section</h3>
+              <p>Reasoning, Quant, English and General Awareness taught from the ground up &mdash; shortcuts only after the long method is understood.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 1 9-9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div>
+              <h3>Practice under a clock, in the room</h3>
+              <p>Question sets attempted under supervision. Mistakes get found here, in front of a teacher, instead of on exam day.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <div>
+              <h3>Doubts cleared face to face</h3>
+              <p>The one thing an app has never replaced. Bring the question you got stuck on and leave with it settled.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
+            </span>
+            <div>
+              <h3>Notification alerts and the mains push</h3>
+              <p>New vacancy notifications reach you the day they are out, and the branch switches gear for mains and interview when your result comes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="method-shot">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/10638115/pexels-photo-10638115.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+               alt="Students working at desktop computers in a bright computer lab"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <p class="cap">Online test series &middot; practice on the exam interface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 5. STATS BAND ============ -->
+<section class="inset" aria-label="At a glance">
+  <div class="wrap">
+    <p class="eyebrow">What we can stand behind</p>
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="num"><span data-count="30">30</span>+</span>
+        <span class="lab">Years the institute has run<br>nationally (brand figure)</span>
+      </div>
+      <div class="stat">
+        <span class="num"><span data-count="150">150</span>+</span>
+        <span class="lab">Branches across India<br>(brand figure)</span>
+      </div>
+      <div class="stat">
+        <div class="qual">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <b>Classroom first</b>
+            <span>Offline teaching at L.B.S. Chauraha, with the online test platform on top.</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="qual">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <b>Doubt clearing daily</b>
+            <span>Ask in the room, on the day the doubt appears &mdash; not in a comment thread.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="src-note">Selection counts, batch sizes and fees are deliberately not published here. Ask at the counter &mdash; the branch quotes the current cycle.</p>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 6. INSIDE THE BRANCH (mosaic) ============ -->
+<section id="campus">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Inside the branch</p>
+      <h2 class="h2 kin" data-kin>
+        <span class="ln"><span>Study hours,</span></span>
+        <span class="ln"><span class="g">every single day.</span></span>
+      </h2>
+      <p class="lede">Classes, reading time, practice sets and the test lab. The preparation happens in the building, not on a feed.</p>
+    </div>
+
+    <div class="mosaic">
+      <div class="m1">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/35550999/pexels-photo-35550999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+               alt="A busy library reading hall with students working at long tables"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="m2">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/33745692/pexels-photo-33745692.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+               alt="Students studying together at a library table"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="m3">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/30096344/pexels-photo-30096344.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+               alt="A sunlit academic corridor on a modern campus"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="m4">
+        <div class="shot">
+          <img src="https://images.pexels.com/photos/33070317/pexels-photo-33070317.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+               alt="A modern academic building with a brick pathway"
+               loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+    <p class="repcap">Representative imagery</p>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 7. TEACHING PHILOSOPHY ============ -->
+<section class="inset">
+  <div class="wrap">
+    <p class="eyebrow">The teaching approach</p>
+    <div class="quote">
+      <span class="mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>A shortcut is only worth teaching after the long method is understood. Everything else &mdash; the speed, the accuracy, the cutoff &mdash; is built on that one rule.</blockquote>
+      <cite>&mdash; How the Gonda branch teaches</cite>
+    </div>
+    <p class="lede" style="margin-top:34px;">Teaching here is pitched so a Hindi-medium student is never left behind, while the English section is prepared properly, because it decides the cutoff for a lot of candidates. Faculty names and profiles are shared at the counter &mdash; sit through a class and judge the teaching yourself.</p>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 8. ADMISSIONS JOURNEY + ENQUIRY ============ -->
+<section id="admissions">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Admissions</p>
+      <h2 class="h2 kin" data-kin>
+        <span class="ln"><span>Walk in. Sit a class.</span></span>
+        <span class="ln"><span class="g">Then decide.</span></span>
+      </h2>
+      <p class="lede">Four steps, no paperwork until the last one.</p>
+    </div>
+
+    <div class="steps" id="steps">
+      <div class="steps-line" aria-hidden="true"><i id="steps-fill"></i></div>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="n mono">01/</span>
+          <h3>Send an enquiry</h3>
+          <p>Message the branch with the exam you are preparing for. Evening or Sunday is fine &mdash; it gets answered.</p>
+        </div>
+        <div class="step">
+          <span class="n mono">02/</span>
+          <h3>Counselling call</h3>
+          <p>A short conversation about your attempt history, your subjects and how much time you have before the notification.</p>
+        </div>
+        <div class="step">
+          <span class="n mono">03/</span>
+          <h3>Sit a class</h3>
+          <p>Attend a session at L.B.S. Chauraha. See the teaching and the doubt-clearing before you pay for anything.</p>
+        </div>
+        <div class="step">
+          <span class="n mono">04/</span>
+          <h3>Join the batch</h3>
+          <p>Enrol at the counter, collect the study material and get the test-series login for your exam.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="enq">
+      <form id="enq-form" novalidate>
+        <h3>Enquire about a batch</h3>
+        <p class="sub">Thirty seconds. No documents needed yet.</p>
+        <div class="fld" id="f-name">
+          <label for="s-name">Your name</label>
+          <input type="text" id="s-name" name="name" placeholder="Full name" autocomplete="name" required>
+        </div>
+        <div class="fld" id="f-exam">
+          <label for="s-exam">Exam you are preparing for</label>
+          <select id="s-exam" name="exam" required>
+            <option value="" selected disabled>Select an exam</option>
+            <option>Banking &mdash; IBPS / SBI / RBI</option>
+            <option>SSC &mdash; CGL / CHSL</option>
+            <option>Railways &mdash; RRB NTPC / Group D</option>
+            <option>UP Police / state exams</option>
+            <option>Teaching / entrance exams</option>
+            <option>Not decided yet</option>
+          </select>
+        </div>
+        <div class="fld" id="f-phone">
+          <label for="s-phone">Your WhatsApp number</label>
+          <input type="tel" id="s-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+        </div>
+        <button type="submit" class="btn btn-p">Let&rsquo;s talk &rarr;</button>
+        <p class="fine">Your number would be used only to answer this enquiry.</p>
+      </form>
+
+      <div class="ok" id="enq-ok" role="status" aria-live="polite">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M7 17l6 6 12-13"/></svg>
+        </div>
+        <h3>Enquiry received.</h3>
+        <p>This is how the counter would hear from a student &mdash; the moment they decide, even at 9 PM on a Sunday, with the reply already on its way.</p>
+        <p class="tag mono">Concept demo &middot; nothing was sent anywhere</p>
+      </div>
+    </div>
+
+    <div class="wa-note">
+      <span class="b" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+      </span>
+      <div>
+        <h3>Batch alerts and exam notifications, on WhatsApp</h3>
+        <p>New batch start dates, IBPS and SSC notification alerts and fee reminders &mdash; sent automatically to the students preparing for that exam. No calls to make. Nothing missed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 9. FAQ ============ -->
+<section class="inset">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Questions students ask</p>
+      <h2 class="h2 kin" data-kin>
+        <span class="ln"><span>Answers,</span></span>
+        <span class="ln"><span class="g">straight.</span></span>
+      </h2>
+    </div>
+
+    <div class="faq">
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a1" id="q1">Which exams does the Gonda branch coach for?<i aria-hidden="true"></i></button>
+        <div class="a" id="a1" role="region" aria-labelledby="q1">
+          <p>Banking (IBPS, SBI, RBI), SSC, Railways, UP Police and state recruitment, plus teaching and entrance exams. Which batches are running at any moment follows the exam calendar &mdash; message the branch on WhatsApp for the current list.</p>
+        </div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a2" id="q2">Can I attend a class before joining?<i aria-hidden="true"></i></button>
+        <div class="a" id="a2" role="region" aria-labelledby="q2">
+          <p>Ask the counter for a class to sit in on. Watch how a subject is taught and how the doubt-clearing works, then decide. Send the enquiry above or message on WhatsApp and the branch will confirm a slot.</p>
+        </div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a3" id="q3">What are the fees and batch timings?<i aria-hidden="true"></i></button>
+        <div class="a" id="a3" role="region" aria-labelledby="q3">
+          <p>Fees and timings depend on the course and the batch cycle, so they are confirmed at the counter rather than quoted here. Call or WhatsApp +91 92082 50778 and you will get the exact figure for the batch you want.</p>
+        </div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a4" id="q4">Are classes taught in Hindi or English?<i aria-hidden="true"></i></button>
+        <div class="a" id="a4" role="region" aria-labelledby="q4">
+          <p>Government exam papers come in both languages, and teaching here is pitched so that a Hindi-medium student is never left behind &mdash; while the English section is prepared properly, because it decides the cutoff for a lot of candidates.</p>
+        </div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a5" id="q5">Is this the same as the national institute?<i aria-hidden="true"></i></button>
+        <div class="a" id="a5" role="region" aria-labelledby="q5">
+          <p>Yes. This is the Gonda branch of Mahendra Educational Pvt. Ltd. &mdash; the same institute, the same course structure and the same test platform, run from a classroom at L.B.S. Chauraha instead of a screen in another city.</p>
+        </div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false" aria-controls="a6" id="q6">Where exactly is the branch?<i aria-hidden="true"></i></button>
+        <div class="a" id="a6" role="region" aria-labelledby="q6">
+          <p>461/529, Malviya Nagar, above the Narain Suzuki showroom, at L.B.S. Chauraha on Hanuman Garhi Road, Gonda 271001. It is the same crossing everyone in town knows &mdash; look up, the branch is on the floor above the showroom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" data-div><span></span></div>
+
+<!-- ============ 10. VISIT ============ -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Visit the branch</p>
+      <h2 class="h2 kin" data-kin>
+        <span class="ln"><span>Find us at</span></span>
+        <span class="ln"><span class="g">L.B.S. Chauraha.</span></span>
+      </h2>
+      <p class="lede">Walk in and ask at the counter, or message ahead on WhatsApp and come at a time that suits you.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="vcard">
+        <h3>Address</h3>
+        <p>Mahendra&rsquo;s Institute &mdash; Gonda Branch
+          <span>461/529, Malviya Nagar, above Narain Suzuki showroom, L.B.S. Chauraha (Hanuman Garhi Road), Gonda, Uttar Pradesh 271001</span>
+        </p>
+      </div>
+      <div class="vcard">
+        <h3>Phone &amp; WhatsApp</h3>
+        <p>+91 92082 50778
+          <span>Branch counter &mdash; admission and batch enquiries. <a href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a></span>
+        </p>
+      </div>
+      <div class="vcard">
+        <h3>Email</h3>
+        <p><a href="mailto:tp.tgndb@mahendras.co.in">tp.tgndb@mahendras.co.in</a>
+          <span>Gonda branch office</span>
+        </p>
+      </div>
+      <div class="vcard">
+        <h3>Counselling hours</h3>
+        <p>Ask at the counter
+          <span>Timings follow the batch cycle, so they are confirmed on WhatsApp rather than published here.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="visit-ctas">
+      <a class="btn btn-p" href="https://www.google.com/maps/search/?api=1&amp;query=Mahendra%27s%20Institute%20L.B.S.%20Chauraha%20Gonda%20271001" target="_blank" rel="noopener noreferrer">Get directions</a>
+      <a class="btn btn-s" href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--ink);font-size:1.05rem;">Mahendra&rsquo;s Institute &mdash; Gonda Branch</p>
+        <p class="mono" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-top:6px;">Mahendra Educational Pvt. Ltd. &middot; Gonda 271001</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#programs">Programs</a>
+        <a href="#method">Method</a>
+        <a href="#campus">Inside</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+    <p class="demo-notice">
+      Concept demo built by <strong style="color:var(--ink-dim);">Inexorables Group</strong> &middot;
+      <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a><br>
+      This is a design demonstration &mdash; a local landing-page and enquiry-automation concept for Mahendra&rsquo;s Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch. It is not the official website of Mahendra&rsquo;s Institute (Mahendra Educational Pvt. Ltd.), Gonda Branch or of Mahendra Educational Pvt. Ltd., is not affiliated with or endorsed by them, and the enquiry form sends nothing anywhere. Photography is representative.
+    </p>
+    <p class="copy">&copy; 2026 &middot; Concept demonstration only.</p>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer" aria-label="Chat with the Gonda branch on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+</a>
+
+<!-- ============ CONCEPT DEMO BADGE ============ -->
+<div class="badge" id="badge" role="note" aria-label="This is a concept demo website">
+  <b>Concept Demo</b>
+  <button id="badge-x" aria-label="Dismiss concept demo badge">&times;</button>
+</div>
+
+<!-- ============ MOBILE STICKY BAR ============ -->
+<div class="bar" role="group" aria-label="Quick actions">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#7c3aed"/>
+        <stop offset="100%" stop-color="#22d3ee"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <a href="https://wa.me/919208250778" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path class="gf" d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+    WhatsApp
+  </a>
+  <a class="go" href="#admissions">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/></svg>
+    Enquire
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Mahendra%27s%20Institute%20L.B.S.%20Chauraha%20Gonda%20271001" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path class="gs" d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle class="gs" cx="12" cy="10" r="2.6"/></svg>
+    Directions
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
 
 <script>
 (function () {
-    'use strict';
+  'use strict';
 
-    var prefersReducedMotion = window.matchMedia &&
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------- Nav: scrolled state ---------- */
-    var nav = document.getElementById('nav');
-    function onScrollNav() {
-        if (!nav) return;
-        if (window.scrollY > 40) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    }
-    window.addEventListener('scroll', onScrollNav, { passive: true });
-    onScrollNav();
+  /* ---------- Preloader: window load + hard 2.2s failsafe ---------- */
+  var pre = document.getElementById('pre');
+  function dismissPre() {
+    if (pre) pre.classList.add('gone');
+  }
+  window.addEventListener('load', function () { setTimeout(dismissPre, 320); });
+  setTimeout(dismissPre, 2200);
 
-    /* ---------- Nav: hamburger ---------- */
-    var toggle = document.getElementById('nav-toggle');
-    var menu = document.getElementById('nav-menu');
-    function closeMenu() {
-        if (!toggle || !menu) return;
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-    }
-    if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-            var open = menu.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMenu);
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeMenu();
-        });
-    }
+  /* ---------- Nav ---------- */
+  var nav = document.getElementById('nav');
+  function navScroll() {
+    if (!nav) return;
+    if (window.scrollY > 30) nav.classList.add('on'); else nav.classList.remove('on');
+  }
+  window.addEventListener('scroll', navScroll, { passive: true });
+  navScroll();
 
-    /* ---------- FAQ accordion ---------- */
-    document.querySelectorAll('.faq-question').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var answer = document.getElementById(btn.getAttribute('aria-controls'));
-            var expanded = btn.getAttribute('aria-expanded') === 'true';
-            // close others
-            document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
-                if (other !== btn) {
-                    other.setAttribute('aria-expanded', 'false');
-                    var a = document.getElementById(other.getAttribute('aria-controls'));
-                    if (a) a.style.maxHeight = '0px';
-                }
-            });
-            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            if (answer) {
-                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
-            }
-        });
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  function closeMenu() {
+    if (!burger || !menu) return;
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+  if (burger && menu) {
+    burger.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    Array.prototype.forEach.call(menu.querySelectorAll('a'), function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
 
-    /* ---------- Back to top ---------- */
-    var backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 700) backToTop.classList.add('visible');
-            else backToTop.classList.remove('visible');
-        }, { passive: true });
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-        });
-    }
+  /* ---------- Signature: kinetic mask reveal + divider sweep ---------- */
+  var kins = document.querySelectorAll('[data-kin]');
+  Array.prototype.forEach.call(kins, function (block) {
+    var lines = block.querySelectorAll('.ln > span');
+    Array.prototype.forEach.call(lines, function (s, i) {
+      s.style.setProperty('--d', (i * 60) + 'ms');
+    });
+  });
 
-    /* ---------- Concept demo badge ---------- */
-    var badge = document.getElementById('demo-badge');
-    var badgeClose = document.getElementById('demo-badge-close');
-    if (badge && badgeClose) {
-        badgeClose.addEventListener('click', function () {
-            badge.classList.add('hidden');
-        });
-    }
+  function revealAll() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-kin], [data-div]'), function (el) {
+      el.classList.add('in');
+    });
+  }
 
-    /* ---------- Admission enquiry mock (front-end only) ---------- */
-    var form = document.getElementById('enquiry-form');
-    var success = document.getElementById('enquiry-success');
-    if (form && success) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var name = document.getElementById('student-name');
-            var cls = document.getElementById('student-exam');
-            var phone = document.getElementById('student-phone');
-            var valid = true;
-            [name, cls, phone].forEach(function (el) {
-                if (!el) return;
-                if (!el.value || !el.value.trim()) {
-                    el.style.borderColor = '#e05c5c';
-                    valid = false;
-                } else {
-                    el.style.borderColor = '';
-                }
-            });
-            if (phone && phone.value && phone.value.replace(/\D/g, '').length < 10) {
-                phone.style.borderColor = '#e05c5c';
-                valid = false;
-            }
-            if (!valid) return;
-            form.style.display = 'none';
-            success.classList.add('show');
-        });
-    }
-
-    /* ---------- Enhanced motion (GSAP — guarded; page reads fine without it) ---------- */
-    function initMotion() {
-        if (prefersReducedMotion) return;
-        if (typeof window.gsap === 'undefined') return;
-        var gsap = window.gsap;
-        if (typeof window.ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(window.ScrollTrigger);
+  if (!('IntersectionObserver' in window) || reduce) {
+    revealAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
         }
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -8% 0px' });
 
-        // Hero entrance
-        gsap.from('.hero-badge, .hero-headline, .hero-subtext, .hero-ctas, .hero-motto', {
-            opacity: 0, y: 26, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.15
-        });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-kin]'), function (el) { io.observe(el); });
 
-        if (typeof window.ScrollTrigger === 'undefined') return;
-
-        // Section reveals: fade + rise
-        [
-            '.story .section-eyebrow', '.story .section-headline', '.story-lines p', '.story-close',
-            '.offerings .section-headline', '.offerings .section-sub',
-            '.visit-card', '.faq-item', '.final-cta .section-headline', '.cta-subtext',
-            '.enquiry-shell', '.wa-strip'
-        ].forEach(function (sel) {
-            gsap.utils.toArray(sel).forEach(function (el) {
-                gsap.from(el, {
-                    opacity: 0, y: 34, duration: 0.85, ease: 'power3.out',
-                    scrollTrigger: { trigger: el, start: 'top 88%', once: true }
-                });
-            });
-        });
-
-        // Offer cards: staggered rise
-        var cards = gsap.utils.toArray('.offer-card');
-        if (cards.length) {
-            gsap.from(cards, {
-                opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-                scrollTrigger: { trigger: '.offer-grid', start: 'top 85%', once: true }
-            });
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io2.unobserve(en.target);
         }
+      });
+    }, { threshold: 0.9 });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-div]'), function (el) { io2.observe(el); });
+  }
 
-        // Day timeline: items + scrubbed gold progress line
-        gsap.utils.toArray('.day-item').forEach(function (item) {
-            gsap.from(item, {
-                opacity: 0, x: -28, duration: 0.7, ease: 'power2.out',
-                scrollTrigger: { trigger: item, start: 'top 86%', once: true }
-            });
-        });
-        var progress = document.getElementById('day-progress');
-        if (progress) {
-            gsap.to(progress, {
-                height: '100%', ease: 'none',
-                scrollTrigger: {
-                    trigger: '.day-track', start: 'top 70%', end: 'bottom 55%', scrub: 0.6
-                }
-            });
+  /* ---------- Admissions: gradient hairline fills with scroll ---------- */
+  var steps = document.getElementById('steps');
+  var fill = document.getElementById('steps-fill');
+  var stepEls = steps ? steps.querySelectorAll('.step') : [];
+  function paintSteps() {
+    if (!steps || !fill) return;
+    if (reduce) {
+      fill.style.width = '100%';
+      Array.prototype.forEach.call(stepEls, function (s) { s.classList.add('lit'); });
+      return;
+    }
+    var r = steps.getBoundingClientRect();
+    var vh = window.innerHeight || 1;
+    var p = (vh * 0.78 - r.top) / Math.max(r.height, 1);
+    p = Math.max(0, Math.min(1, p));
+    fill.style.width = (p * 100) + '%';
+    Array.prototype.forEach.call(stepEls, function (s, i) {
+      var mark = (i + 0.35) / stepEls.length;
+      if (p >= mark) s.classList.add('lit'); else s.classList.remove('lit');
+    });
+  }
+  window.addEventListener('scroll', paintSteps, { passive: true });
+  window.addEventListener('resize', paintSteps);
+  paintSteps();
+
+  /* ---------- FAQ accordion ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.qa button'), function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      Array.prototype.forEach.call(document.querySelectorAll('.qa button[aria-expanded="true"]'), function (other) {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          var p = document.getElementById(other.getAttribute('aria-controls'));
+          if (p) p.style.maxHeight = '0px';
         }
+      });
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (panel) panel.style.maxHeight = open ? '0px' : panel.scrollHeight + 'px';
+    });
+  });
 
-        // Stats band reveal
-        gsap.from('.stat', {
-            opacity: 0, y: 30, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-            scrollTrigger: { trigger: '.stats-grid', start: 'top 85%', once: true }
-        });
-    }
+  /* ---------- Demo badge ---------- */
+  var badge = document.getElementById('badge');
+  var badgeX = document.getElementById('badge-x');
+  if (badge && badgeX) {
+    badgeX.addEventListener('click', function () { badge.classList.add('hide'); });
+  }
 
-    /* ---------- CountUp counters (guarded) ---------- */
-    function initCounters() {
-        var els = document.querySelectorAll('[data-count]');
-        if (!els.length) return;
-        var CountUpCtor = (window.countUp && window.countUp.CountUp) || window.CountUp;
-        if (!CountUpCtor || prefersReducedMotion) return; // static numbers remain visible
-        if ('IntersectionObserver' in window) {
-            var seen = new WeakSet();
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting && !seen.has(entry.target)) {
-                        seen.add(entry.target);
-                        var target = parseFloat(entry.target.getAttribute('data-count'));
-                        try {
-                            var c = new CountUpCtor(entry.target, target, { duration: 2, useGrouping: false });
-                            if (!c.error) c.start();
-                        } catch (err) { /* keep static number */ }
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.6 });
-            els.forEach(function (el) { io.observe(el); });
-        }
-    }
+  /* ---------- Enquiry mock ---------- */
+  var form = document.getElementById('enq-form');
+  var ok = document.getElementById('enq-ok');
+  if (form && ok) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var checks = [
+        { f: 'f-name',  el: document.getElementById('s-name'),  test: function (v) { return v.trim().length > 1; } },
+        { f: 'f-exam',  el: document.getElementById('s-exam'),  test: function (v) { return !!v; } },
+        { f: 'f-phone', el: document.getElementById('s-phone'), test: function (v) { return v.replace(/\D/g, '').length >= 10; } }
+      ];
+      var valid = true, firstBad = null;
+      checks.forEach(function (c) {
+        var wrap = document.getElementById(c.f);
+        var good = c.el && c.test(c.el.value || '');
+        if (wrap) wrap.classList.toggle('err', !good);
+        if (!good) { valid = false; if (!firstBad) firstBad = c.el; }
+      });
+      if (!valid) { if (firstBad) firstBad.focus(); return; }
+      form.style.display = 'none';
+      ok.classList.add('show');
+    });
+  }
 
-    /* Deferred libs load after this inline script — wait for window load. */
-    if (document.readyState === 'complete') {
-        initMotion();
-        initCounters();
-    } else {
-        window.addEventListener('load', function () {
-            initMotion();
-            initCounters();
-        });
+  /* ---------- Counters (countUp, guarded) ---------- */
+  function counters() {
+    var els = document.querySelectorAll('[data-count]');
+    if (!els.length) return;
+    var CU = window.countUp && window.countUp.CountUp;
+    function run(el) {
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      if (isNaN(target)) return;
+      if (reduce || !CU) { el.textContent = String(target); return; }
+      var c = new CU(el, target, { duration: 1.8, useEasing: true });
+      if (!c.error) c.start(); else el.textContent = String(target);
     }
+    if (!('IntersectionObserver' in window)) {
+      Array.prototype.forEach.call(els, run);
+      return;
+    }
+    var io3 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { run(en.target); io3.unobserve(en.target); }
+      });
+    }, { threshold: 0.5 });
+    Array.prototype.forEach.call(els, function (el) { io3.observe(el); });
+  }
+
+  /* ---------- Optional GSAP polish (page is complete without it) ---------- */
+  function gsapPolish() {
+    if (reduce || typeof window.gsap === 'undefined') return;
+    var g = window.gsap;
+    if (typeof window.ScrollTrigger === 'undefined') return;
+    g.registerPlugin(window.ScrollTrigger);
+
+    g.utils.toArray('.prog').forEach(function (card, i) {
+      g.from(card, {
+        y: 18, opacity: 0, duration: .5, ease: 'power2.out', delay: (i % 3) * 0.06,
+        scrollTrigger: { trigger: card, start: 'top 88%', once: true }
+      });
+    });
+    g.utils.toArray('.row').forEach(function (row) {
+      g.from(row, {
+        y: 14, opacity: 0, duration: .45, ease: 'power2.out',
+        scrollTrigger: { trigger: row, start: 'top 92%', once: true }
+      });
+    });
+    g.utils.toArray('.mosaic > div').forEach(function (m, i) {
+      g.from(m, {
+        y: 20, opacity: 0, duration: .55, ease: 'power2.out', delay: i * 0.05,
+        scrollTrigger: { trigger: '.mosaic', start: 'top 85%', once: true }
+      });
+    });
+  }
+
+  window.addEventListener('load', function () {
+    counters();
+    gsapPolish();
+    paintSteps();
+  });
 })();
 </script>
+
 </body>
 </html>
