@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>The Chef Kitchen — Chinese, Momos &amp; Rolls, Gonda</title>
+    <meta name="description" content="The Chef Kitchen, Gonda. Chilli paneer, momos, rolls and dosa — dine in, takeaway or order on WhatsApp. Open 11am to 11pm, every day. Design demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================
+   THE CHEF KITCHEN — Gonda, dining vertical
+   Palette: espresso #160e08 · saffron #f4a825 · cream #f6ead8
+   ========================================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --espresso: #160e08;
+    --espresso-deep: #100903;
+    --espresso-warm: #1e1309;
+    --espresso-card: #211508;
+    --saffron: #f4a825;
+    --saffron-deep: #d98e12;
+    --saffron-soft: #ffd27a;
+    --ember: #e8641f;
+    --cream: #f6ead8;
+    --cream-dim: #cbb694;
+    --muted: #a08a6c;
+    --hairline: rgba(244, 168, 37, 0.18);
+    --glass: rgba(22, 14, 8, 0.72);
+    --whatsapp: #25D366;
+    --radius: 20px;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    background: var(--espresso);
+    color: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; color: var(--cream); letter-spacing: 0.005em; }
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+.section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+
+.section-kicker {
+    display: block;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 18px;
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    max-width: 620px;
+    margin: 0 auto 56px;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, var(--saffron), var(--saffron-soft), var(--ember), var(--saffron));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 250% auto;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--saffron); color: var(--espresso-deep);
+    padding: 12px 24px; border-radius: 0 0 12px 0;
+    font-weight: 600; text-decoration: none; z-index: 2000;
+}
+.skip-link:focus { left: 0; }
+
+/* Buttons */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 17px 36px; min-height: 44px;
+    border-radius: 4px; border: none;
+    font-family: var(--font-body); font-size: 0.84rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease, background 0.3s ease, letter-spacing 0.4s ease;
+}
+.btn:hover { letter-spacing: 0.17em; }
+.btn-primary {
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-deep));
+    color: #221100;
+    box-shadow: 0 0 32px rgba(244, 168, 37, 0.22);
+}
+.btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 44px rgba(244, 168, 37, 0.38); }
+.btn-secondary { background: transparent; color: var(--cream); border: 1.5px solid rgba(246, 234, 216, 0.25); }
+.btn-secondary:hover { border-color: var(--saffron); background: rgba(244, 168, 37, 0.07); transform: translateY(-2px); }
+.btn-large { padding: 21px 50px; font-size: 0.95rem; }
+
+/* ================= NAV ================= */
+.nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--glass);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(244, 168, 37, 0.08);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.nav.scrolled { background: rgba(16, 9, 3, 0.93); box-shadow: 0 1px 30px rgba(244, 168, 37, 0.10); }
+.nav-container {
+    max-width: 1120px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 68px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-mark { width: 40px; height: 40px; flex: none; }
+.nav-logo-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 600; color: var(--cream);
+    letter-spacing: 0.02em; white-space: nowrap;
+}
+.nav-logo-name em { font-style: normal; color: var(--saffron); }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a {
+    font-size: 0.875rem; color: var(--cream-dim);
+    text-decoration: none; transition: color 0.3s;
+    padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center;
+}
+.nav-links a:hover { color: var(--cream); }
+.nav-cta {
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-deep));
+    color: #221100 !important; font-weight: 600;
+    font-size: 0.76rem !important; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 10px 22px !important; border-radius: 4px;
+    box-shadow: 0 0 20px rgba(244, 168, 37, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.nav-cta:hover { box-shadow: 0 0 30px rgba(244, 168, 37, 0.4); transform: translateY(-1px); }
+.nav-hamburger {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; padding: 10px;
+    background: none; border: none; cursor: pointer;
+}
+.hamburger-line {
+    display: block; width: 100%; height: 2px;
+    background: var(--cream); border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ================= AMBIENT ORBS ================= */
+.orb {
+    position: fixed; border-radius: 50%; pointer-events: none;
+    filter: blur(90px); z-index: 0; opacity: 0.55;
+    animation: orbBreathe 14s ease-in-out infinite;
+}
+.orb-1 {
+    width: 480px; height: 480px; top: -12%; right: -10%;
+    background: radial-gradient(circle, rgba(244, 168, 37, 0.16) 0%, transparent 70%);
+}
+.orb-2 {
+    width: 420px; height: 420px; bottom: -8%; left: -12%;
+    background: radial-gradient(circle, rgba(232, 100, 31, 0.13) 0%, transparent 70%);
+    animation-delay: -5s;
+}
+.orb-3 {
+    width: 300px; height: 300px; top: 45%; left: 55%;
+    background: radial-gradient(circle, rgba(255, 210, 122, 0.08) 0%, transparent 70%);
+    animation-delay: -9s;
+}
+@keyframes orbBreathe {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, 24px) scale(1.08); }
+}
+
+main { position: relative; z-index: 1; }
+section { position: relative; }
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 140px 24px 110px;
+    background: var(--espresso);
+    overflow: hidden;
+}
+/* Full-bleed photo layer: brand-dark tint + warm glow ON TOP of the photo,
+   with a gradient as the last layer so the hero stays premium if the photo fails. */
+.hero-media {
+    position: absolute; inset: -2.5%;
+    z-index: 0;
+    background-image:
+        linear-gradient(180deg, rgba(16, 9, 3, 0.90) 0%, rgba(22, 14, 8, 0.60) 34%, rgba(16, 9, 3, 0.72) 66%, rgba(16, 9, 3, 0.95) 100%),
+        radial-gradient(ellipse 70% 55% at 50% 48%, rgba(244, 168, 37, 0.14) 0%, transparent 65%),
+        url('https://images.pexels.com/photos/827528/pexels-photo-827528.jpeg?auto=compress&cs=tinysrgb&w=1600'),
+        linear-gradient(165deg, #24180c 0%, #160e08 55%, #100903 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: sepia(12%) saturate(105%);
+    animation: kenBurns 22s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+@keyframes kenBurns {
+    from { transform: scale(1); }
+    to   { transform: scale(1.06); }
+}
+.hero::before {
+    content: '';
+    position: absolute; top: -32%; left: 50%; transform: translateX(-50%);
+    width: 860px; height: 860px;
+    background: radial-gradient(circle, rgba(244, 168, 37, 0.13) 0%, rgba(232, 100, 31, 0.06) 42%, transparent 70%);
+    pointer-events: none;
+}
+.hero .container { position: relative; z-index: 1; }
+.hero-badge {
+    display: inline-block;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--saffron-soft);
+    border: 1px solid rgba(244, 168, 37, 0.32);
+    background: rgba(244, 168, 37, 0.07);
+    padding: 9px 22px; border-radius: 980px;
+    margin-bottom: 30px;
+}
+.hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 22px; letter-spacing: -0.015em; }
+.hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Steam over the cloche — signature hero art */
+.hero-cloche { margin: 0 auto 34px; width: clamp(120px, 18vw, 168px); }
+.hero-cloche svg { width: 100%; height: auto; display: block; }
+.steam path {
+    stroke: rgba(246, 234, 216, 0.5);
+    stroke-width: 3; fill: none; stroke-linecap: round;
+    animation: steamRise 4.2s ease-in-out infinite;
+}
+.steam path:nth-child(2) { animation-delay: -1.4s; }
+.steam path:nth-child(3) { animation-delay: -2.8s; }
+@keyframes steamRise {
+    0%   { opacity: 0; transform: translateY(8px); }
+    35%  { opacity: 0.85; }
+    100% { opacity: 0; transform: translateY(-16px); }
+}
+.hero-scrollhint {
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%);
+    color: var(--muted); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+    animation: hintFloat 2.6s ease-in-out infinite;
+}
+@keyframes hintFloat {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
+    50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+
+/* Slim facts strip under the hero */
+.hero-strip {
+    background: var(--espresso-deep);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 20px 24px;
+}
+.hero-strip-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 12px 34px;
+    font-size: 0.8rem; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--cream-dim); text-align: center;
+}
+.hero-strip-inner span { display: inline-flex; align-items: center; gap: 9px; }
+.hero-strip-inner b { color: var(--saffron); font-weight: 600; }
+.hero-strip-inner a { color: var(--cream-dim); text-decoration: none; }
+.hero-strip-inner a:hover { color: var(--saffron-soft); }
+
+/* Quiet listings / credibility strip */
+.trust-strip { padding: 46px 24px; background: var(--espresso-warm); }
+.trust-inner {
+    max-width: 1000px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 14px 46px;
+    color: var(--muted);
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    text-align: center;
+}
+.trust-inner b { color: var(--cream-dim); font-weight: 500; }
+
+/* ================= PHOTO FRAMES ================= */
+.photo-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid rgba(244, 168, 37, 0.16);
+    background: linear-gradient(150deg, #2a1c0d 0%, #1a1008 55%, #100903 100%);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
+}
+.photo-frame::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(22, 14, 8, 0.10) 0%, rgba(16, 9, 3, 0.42) 100%);
+    pointer-events: none;
+}
+.photo-frame img {
+    display: block; width: 100%; height: 100%;
+    object-fit: cover;
+    filter: sepia(12%) saturate(104%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.photo-frame:hover img { transform: scale(1.04); }
+.photo-portrait { aspect-ratio: 4 / 5; max-width: 420px; width: 100%; }
+
+/* ================= MID-PAGE PHOTO CTA BAND ================= */
+.band {
+    position: relative;
+    padding: 150px 24px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, #24180c 0%, #160e08 60%, #100903 100%);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+}
+.band-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.band-media img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: sepia(14%) saturate(104%);
+}
+.band-scrim {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg, rgba(16, 9, 3, 0.86) 0%, rgba(22, 14, 8, 0.70) 50%, rgba(16, 9, 3, 0.92) 100%);
+    pointer-events: none;
+}
+.band .container { position: relative; z-index: 2; max-width: 780px; }
+.band-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+    font-style: italic; font-weight: 400;
+    line-height: 1.32;
+    color: var(--cream);
+    margin: 0 auto 34px;
+    max-width: 660px;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* ================= STORY ================= */
+.story { padding: 140px 24px; background: var(--espresso-warm); }
+.story::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 45% at 18% 40%, rgba(244, 168, 37, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+.story .container { position: relative; z-index: 1; }
+.story-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+.story-copy .section-headline { text-align: left; }
+.story-copy .section-kicker { text-align: left; }
+.story-copy p { color: var(--cream-dim); font-size: clamp(1rem, 1.7vw, 1.15rem); margin-bottom: 20px; max-width: 520px; }
+.story-copy p strong { color: var(--cream); font-weight: 600; }
+.story-art { display: flex; justify-content: center; }
+.story-art svg { width: 100%; max-width: 380px; height: auto; }
+
+/* ================= OFFERINGS ================= */
+.offerings { padding: 140px 24px; background: var(--espresso); }
+.offerings::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(244, 168, 37, 0.07) 0%, transparent 60%);
+    pointer-events: none;
+}
+.offerings .container { position: relative; z-index: 1; }
+.offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+.offer-card {
+    background: rgba(246, 234, 216, 0.025);
+    border: 1px solid rgba(246, 234, 216, 0.06);
+    border-radius: var(--radius);
+    padding: 40px 30px 36px;
+    text-align: left;
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.45s ease, border-color 0.45s ease, background 0.45s ease;
+}
+.offer-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(244, 168, 37, 0.35);
+    background: rgba(244, 168, 37, 0.05);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(244, 168, 37, 0.10);
+}
+.offer-icon { width: 52px; height: 52px; margin-bottom: 22px; }
+.offer-icon svg { width: 100%; height: 100%; display: block; }
+.offer-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.offer-card p { color: var(--muted); font-size: 0.95rem; }
+
+/* ================= STATS BAND ================= */
+.stats {
+    padding: 110px 24px;
+    background: linear-gradient(180deg, var(--espresso) 0%, var(--espresso-warm) 100%);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+.stats-grid .stat { padding: 6px 24px; border-left: 1px solid var(--hairline); }
+.stats-grid .stat:first-child { border-left: none; }
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    font-weight: 600;
+    color: var(--saffron);
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+.stat-label { display: block; color: var(--cream-dim); font-size: 0.92rem; letter-spacing: 0.04em; }
+
+/* ================= TASTING MENU (signature) ================= */
+.menu { padding: 150px 24px; background: var(--espresso-deep); }
+.menu::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+        radial-gradient(circle at 85% 12%, rgba(244, 168, 37, 0.06) 0%, transparent 42%),
+        radial-gradient(circle at 10% 85%, rgba(232, 100, 31, 0.05) 0%, transparent 42%);
+    pointer-events: none;
+}
+.menu .container { position: relative; z-index: 1; max-width: 780px; }
+.menu-card {
+    background: rgba(246, 234, 216, 0.02);
+    border: 1px solid rgba(244, 168, 37, 0.14);
+    border-radius: 26px;
+    padding: clamp(36px, 6vw, 72px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+.menu-course { margin-bottom: 54px; }
+.menu-course:last-child { margin-bottom: 0; }
+.menu-course-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem; font-weight: 500;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--saffron);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.gold-rule {
+    height: 1px; border: none;
+    background: linear-gradient(90deg, transparent, var(--saffron) 30%, var(--saffron-soft) 50%, var(--saffron) 70%, transparent);
+    opacity: 0.55;
+    margin: 0 auto 30px;
+    max-width: 320px;
+    transform-origin: center;
+}
+.menu-item { display: flex; align-items: baseline; gap: 14px; width: 100%; margin-bottom: 22px; }
+.menu-item:last-child { margin-bottom: 0; }
+.menu-item-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-weight: 500;
+    color: var(--cream);
+    white-space: nowrap;
+}
+.menu-item-dots { flex: 1; border-bottom: 1px dotted rgba(244, 168, 37, 0.35); transform: translateY(-4px); min-width: 24px; }
+.menu-item-price { font-size: 0.98rem; font-weight: 500; color: var(--saffron-soft); white-space: nowrap; }
+.menu-item-desc { width: 100%; color: var(--muted); font-size: 0.88rem; margin-top: -16px; margin-bottom: 22px; padding-right: 60px; }
+.menu-item-wrap { display: flex; flex-wrap: wrap; }
+.menu-note { text-align: center; color: var(--muted); font-size: 0.85rem; font-style: italic; margin-top: 44px; }
+.menu-cta-row { text-align: center; margin-top: 56px; }
+
+/* ================= AUTOMATION TEASER ================= */
+.automation {
+    padding: 150px 24px;
+    background: linear-gradient(180deg, var(--espresso-deep) 0%, var(--espresso-warm) 60%, var(--espresso) 100%);
+}
+.automation::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 40% at 80% 30%, rgba(37, 211, 102, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+.automation .container { position: relative; z-index: 1; }
+.auto-shell {
+    max-width: 640px; margin: 0 auto;
+    background: rgba(246, 234, 216, 0.03);
+    border: 1px solid rgba(244, 168, 37, 0.16);
+    border-radius: 26px;
+    padding: clamp(28px, 5vw, 48px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+.auto-tabs {
+    display: flex; gap: 8px;
+    background: rgba(16, 9, 3, 0.6);
+    border: 1px solid rgba(246, 234, 216, 0.08);
+    border-radius: 980px;
+    padding: 6px;
+    margin-bottom: 34px;
+}
+.auto-tab {
+    flex: 1;
+    padding: 12px 10px; min-height: 44px;
+    border: none; border-radius: 980px;
+    background: transparent;
+    color: var(--cream-dim);
+    font-family: var(--font-body); font-size: 0.92rem; font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.auto-tab[aria-selected="true"] { background: linear-gradient(135deg, var(--saffron), var(--saffron-deep)); color: #221100; }
+.auto-panel[hidden] { display: none; }
+.field { margin-bottom: 20px; text-align: left; }
+.field label {
+    display: block;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-bottom: 8px;
+}
+.field input, .field select {
+    width: 100%;
+    padding: 14px 16px; min-height: 48px;
+    background: rgba(16, 9, 3, 0.65);
+    border: 1px solid rgba(246, 234, 216, 0.14);
+    border-radius: 12px;
+    color: var(--cream);
+    font-family: var(--font-body); font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color-scheme: dark;
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(244, 168, 37, 0.18); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.auto-submit { width: 100%; margin-top: 8px; }
+.auto-success { text-align: center; padding: 30px 10px 10px; }
+.auto-success[hidden] { display: none; }
+.auto-success-icon {
+    width: 68px; height: 68px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(244, 168, 37, 0.12);
+    border: 1.5px solid var(--saffron);
+    color: var(--saffron);
+    font-size: 1.8rem;
+    animation: successPop 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes successPop {
+    0% { transform: scale(0.4); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.auto-success h3 { font-size: 1.5rem; margin-bottom: 12px; }
+.auto-success p { color: var(--muted); font-size: 0.95rem; max-width: 400px; margin: 0 auto 24px; }
+.auto-reset { background: none; border: none; color: var(--saffron); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; min-height: 44px; }
+
+/* WhatsApp order builder */
+.wa-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.wa-chip {
+    padding: 10px 18px; min-height: 44px;
+    border-radius: 980px;
+    border: 1px solid rgba(246, 234, 216, 0.16);
+    background: rgba(16, 9, 3, 0.5);
+    color: var(--cream-dim);
+    font-family: var(--font-body); font-size: 0.88rem; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.wa-chip[aria-pressed="true"] { background: rgba(37, 211, 102, 0.14); border-color: var(--whatsapp); color: #b8f5cf; }
+.wa-chip:hover { border-color: rgba(244, 168, 37, 0.4); }
+.wa-preview {
+    background: rgba(16, 9, 3, 0.65);
+    border: 1px dashed rgba(37, 211, 102, 0.35);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    text-align: left;
+    color: var(--cream-dim);
+    font-size: 0.92rem;
+    min-height: 76px;
+    white-space: pre-line;
+}
+.wa-preview .wa-preview-label {
+    display: block;
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #7dd8a2;
+    margin-bottom: 8px;
+}
+.btn-whatsapp { background: var(--whatsapp); color: #06220f; width: 100%; }
+.btn-whatsapp:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35); }
+.auto-pitch { text-align: center; color: var(--muted); font-size: 0.88rem; margin-top: 28px; font-style: italic; }
+
+/* ================= VISIT ================= */
+.visit { padding: 150px 24px; background: var(--espresso); }
+.visit-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    max-width: 900px; margin: 0 auto 48px;
+}
+.visit-card {
+    background: rgba(246, 234, 216, 0.025);
+    border: 1px solid rgba(246, 234, 216, 0.07);
+    border-radius: var(--radius);
+    padding: 34px 28px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease;
+}
+.visit-card:hover { transform: translateY(-4px); border-color: rgba(244, 168, 37, 0.3); }
+.visit-card .visit-icon { width: 40px; height: 40px; margin: 0 auto 16px; color: var(--saffron); }
+.visit-card .visit-icon svg { width: 100%; height: 100%; }
+.visit-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.visit-card p { color: var(--muted); font-size: 0.95rem; }
+.visit-card a { color: var(--saffron-soft); text-decoration: none; }
+.visit-card a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.visit-cta-row { text-align: center; }
+
+/* ================= FAQ ================= */
+.faq { padding: 150px 24px; background: var(--espresso-warm); }
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(244, 168, 37, 0.14); }
+.faq-question {
+    width: 100%;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    background: none; border: none;
+    padding: 26px 4px; min-height: 44px;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 500;
+    color: var(--cream);
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.faq-question:hover { color: var(--saffron-soft); }
+.faq-question::after {
+    content: '+';
+    font-family: var(--font-body);
+    font-size: 1.5rem; font-weight: 300;
+    color: var(--saffron);
+    flex: none;
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+/* Answers stay open by default so the page reads fully without JS;
+   the script collapses them on init to enable the accordion. */
+.faq-answer { overflow: hidden; transition: max-height 0.45s cubic-bezier(0.23, 1, 0.32, 1); }
+.faq-answer p { color: var(--muted); padding: 0 4px 26px; font-size: 0.98rem; max-width: 640px; }
+
+/* ================= FINAL CTA ================= */
+.final-cta { padding: 160px 24px; background: var(--espresso-deep); text-align: center; overflow: hidden; }
+.final-cta::before {
+    content: '';
+    position: absolute; bottom: -40%; left: 50%; transform: translateX(-50%);
+    width: 760px; height: 760px;
+    background: radial-gradient(circle, rgba(244, 168, 37, 0.13) 0%, transparent 65%);
+    pointer-events: none;
+}
+.final-cta .container { position: relative; z-index: 1; }
+.cta-subtext { color: var(--muted); font-size: 1.1rem; margin-bottom: 44px; }
+
+/* ================= FOOTER ================= */
+.footer {
+    padding: 70px 24px 44px;
+    background: var(--espresso-deep);
+    border-top: 1px solid rgba(244, 168, 37, 0.1);
+    text-align: center;
+}
+.footer-name { font-family: var(--font-display); font-size: 1.4rem; color: var(--cream); margin-bottom: 20px; }
+.footer-name em { font-style: normal; color: var(--saffron); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 26px; margin-bottom: 30px; }
+.footer-links a {
+    color: var(--cream-dim); text-decoration: none;
+    font-size: 0.88rem;
+    padding: 8px 2px; min-height: 44px; display: inline-flex; align-items: center;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover { color: var(--saffron-soft); }
+.footer-demo-notice { color: var(--muted); font-size: 0.8rem; max-width: 560px; margin: 0 auto 12px; line-height: 1.7; }
+.footer-demo-notice a { color: var(--saffron-soft); text-decoration: none; }
+.footer-copy { color: rgba(160, 138, 108, 0.6); font-size: 0.78rem; }
+
+/* ================= FLOATING WHATSAPP ================= */
+.wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 1100;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: waPulse 2.6s ease-in-out infinite;
+}
+.wa-float:hover { transform: translateY(-4px) scale(1.06); }
+.wa-float svg { width: 30px; height: 30px; }
+@keyframes waPulse {
+    0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+    50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 14px rgba(37, 211, 102, 0); }
+}
+
+/* ================= CONCEPT DEMO BADGE ================= */
+.demo-badge {
+    position: fixed; bottom: 24px; left: 24px; z-index: 1100;
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(22, 14, 8, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 168, 37, 0.28);
+    border-radius: 980px;
+    padding: 8px 8px 8px 18px;
+    color: var(--saffron-soft);
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.demo-badge-close {
+    width: 30px; height: 30px;
+    border: none; border-radius: 50%;
+    background: rgba(244, 168, 37, 0.14);
+    color: var(--saffron-soft);
+    font-size: 1rem; line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s ease;
+}
+.demo-badge-close:hover { background: rgba(244, 168, 37, 0.3); }
+.demo-badge.hidden { display: none; }
+
+/* ================= BACK TO TOP ================= */
+.back-to-top {
+    position: fixed; bottom: 96px; right: 30px; z-index: 1090;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 168, 37, 0.35);
+    background: rgba(22, 14, 8, 0.85);
+    backdrop-filter: blur(10px);
+    color: var(--saffron);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden; transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: rgba(244, 168, 37, 0.15); }
+
+/* ================= STICKY MOBILE ACTION BAR ================= */
+.mobile-bar { display: none; }
+@media (max-width: 768px) {
+    .mobile-bar {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1200;
+        background: rgba(16, 9, 3, 0.96);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid rgba(244, 168, 37, 0.3);
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+    .mobile-bar a {
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+        padding: 11px 6px; min-height: 58px;
+        color: var(--cream-dim); text-decoration: none;
+        font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+        border-left: 1px solid rgba(244, 168, 37, 0.14);
+    }
+    .mobile-bar a:first-child { border-left: none; }
+    .mobile-bar a svg { width: 19px; height: 19px; }
+    .mobile-bar .mb-call { color: var(--saffron); }
+    .mobile-bar .mb-wa { color: #7dd8a2; }
+    body { padding-bottom: 62px; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .story-grid { grid-template-columns: 1fr; gap: 44px; }
+    .story-art { order: -1; }
+    .story-art svg { max-width: 280px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 0; }
+    .stats-grid .stat:nth-child(3) { border-left: none; }
+    .band { padding: 110px 24px; }
+    .story, .offerings, .menu, .automation, .visit, .faq, .final-cta { padding-left: 24px; padding-right: 24px; }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed; top: 68px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: rgba(16, 9, 3, 0.98);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(244, 168, 37, 0.15);
+        padding: 12px 24px 24px;
+        transform: translateY(-12px); opacity: 0; visibility: hidden;
+        transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s ease, visibility 0.35s;
+    }
+    .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
+    .nav-links a { padding: 14px 4px; font-size: 1rem; }
+    .nav-cta { margin-top: 10px; text-align: center; justify-content: center; display: inline-flex; }
+    .nav-hamburger { display: flex; }
+    .field-row { grid-template-columns: 1fr; }
+    .menu-item-desc { padding-right: 0; }
+    .story, .offerings, .menu, .automation, .visit, .faq { padding-top: 72px; padding-bottom: 72px; }
+    .final-cta { padding-top: 84px; padding-bottom: 84px; }
+    .band { padding: 88px 24px; }
+    .stats { padding: 72px 24px; }
+    /* keep floating elements clear of the sticky action bar */
+    .wa-float { bottom: 78px; right: 16px; width: 54px; height: 54px; }
+    .back-to-top { bottom: 144px; right: 20px; }
+    .demo-badge { bottom: 78px; left: 16px; }
+}
+@media (max-width: 480px) {
+    .hero { padding: 120px 20px 90px; }
+    .container { padding: 0 20px; }
+    .btn { width: 100%; max-width: 340px; }
+    .hero-ctas .btn { width: auto; flex: 1 1 150px; max-width: none; padding: 16px 14px; font-size: 0.76rem; }
+    .demo-badge { font-size: 0.7rem; }
+    .hero-strip-inner { font-size: 0.72rem; gap: 10px 22px; }
+    .trust-inner { font-size: 0.7rem; gap: 12px 26px; }
+    .menu-item { flex-wrap: wrap; gap: 8px; }
+    .menu-item-name { white-space: normal; }
+}
+
+/* ================= REDUCED MOTION ================= */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .orb, .steam path, .wa-float, .hero-scrollhint { animation: none !important; }
+    .hero-media { animation: none !important; transform: none !important; }
+    .photo-frame:hover img { transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="The Chef Kitchen — home">
+                <svg class="nav-logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" stroke="#f4a825" stroke-width="1.6"/>
+                    <path d="M12 30c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#f4a825" stroke-width="1.8" stroke-linecap="round"/>
+                    <line x1="10" y1="33" x2="38" y2="33" stroke="#f4a825" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M20 14c0-2 1.4-3 1.4-4.6M24 13c0-2 1.4-3 1.4-4.6M28 14c0-2 1.4-3 1.4-4.6" stroke="#f6ead8" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+                </svg>
+                <span class="nav-logo-name">The Chef <em>Kitchen</em></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#story">Our Kitchen</a>
+                <a href="#menu">Menu</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="#book" class="nav-cta">Order Now</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-cloche" aria-hidden="true">
+                <svg viewBox="0 0 160 120" fill="none">
+                    <g class="steam">
+                        <path d="M62 46c-3-6 3-9 0-15 3-6-3-9 0-15"/>
+                        <path d="M80 44c-3-6 3-9 0-15 3-6-3-9 0-15"/>
+                        <path d="M98 46c-3-6 3-9 0-15 3-6-3-9 0-15"/>
+                    </g>
+                    <path d="M28 96c0-28.7 23.3-52 52-52s52 23.3 52 52" stroke="#f4a825" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="80" cy="40" r="4" fill="#f4a825"/>
+                    <line x1="16" y1="103" x2="144" y2="103" stroke="#f4a825" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="34" y1="112" x2="126" y2="112" stroke="#d98e12" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+            </div>
+            <p class="hero-badge">Chinese &middot; Momos &middot; Rolls &middot; Dosa &middot; Gonda</p>
+            <h1 class="hero-headline">The Chef Kitchen. <span class="gradient-text">Gonda's Favourite.</span></h1>
+            <p class="hero-subtext">Chilli paneer off a screaming-hot wok. Momos steamed to order. Cheese rolls, crisp dosa, and everything packed hot enough to burn your fingers. Eleven in the morning to eleven at night, every day.</p>
+            <div class="hero-ctas">
+                <a href="#book" class="btn btn-primary">Order on WhatsApp</a>
+                <a href="#menu" class="btn btn-secondary">See the Menu</a>
+            </div>
+        </div>
+        <span class="hero-scrollhint" aria-hidden="true">Scroll</span>
+    </section>
+
+    <!-- HERO FACTS STRIP -->
+    <div class="hero-strip">
+        <div class="hero-strip-inner">
+            <span><b>Open Daily</b> 11:00 am &ndash; 11:00 pm</span>
+            <span><b>Call</b> <a href="tel:+918874658121">+91 88746 58121</a></span>
+            <span><b>Gonda</b> Dine in &middot; Takeaway &middot; Delivery</span>
+        </div>
+    </div>
+
+    <!-- LISTINGS / CREDIBILITY STRIP -->
+    <section class="trust-strip" aria-label="Ratings and listings">
+        <div class="trust-inner">
+            <span><b>4.4&#9733;</b> on Zomato</span>
+            <span><b>4.5&#9733;</b> on Google</span>
+            <span><b>#7</b> of 209 restaurants in Gonda</span>
+            <span><b>1,600+</b> customer reviews</span>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy">
+                    <span class="section-kicker">Our Kitchen</span>
+                    <h2 class="section-headline">Cooked to Order. <span class="gradient-text">Never Before.</span></h2>
+                    <p><strong>Nothing sits waiting under a lamp.</strong> The wok fires when your order lands. The momo basket goes on when you ask for it.</p>
+                    <p>That is why the chilli paneer arrives still crackling and the rolls still steam when the foil comes off. Same food at the counter, same food in the delivery bag — we do not cook two standards.</p>
+                    <p>Thousands of orders later, that is the only rule the kitchen runs on.</p>
+                </div>
+                <div class="story-art">
+                    <div class="photo-frame photo-portrait">
+                        <img src="https://images.pexels.com/photos/36430088/pexels-photo-36430088.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                             alt="A cook finishing a dish in the kitchen"
+                             loading="lazy" decoding="async"
+                             onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERINGS -->
+    <section class="offerings" id="offerings">
+        <div class="container">
+            <span class="section-kicker">What We Serve</span>
+            <h2 class="section-headline">Four Reasons to <span class="gradient-text">Order Tonight.</span></h2>
+            <p class="section-sub">One kitchen, four counters — the wok, the steamer, the roll tawa and the dosa griddle.</p>
+            <div class="offer-grid">
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 52 52" fill="none">
+                            <circle cx="26" cy="26" r="17" stroke="#f4a825" stroke-width="2"/>
+                            <circle cx="26" cy="26" r="10" stroke="#ffd27a" stroke-width="1.4" opacity="0.7"/>
+                            <path d="M8 10v12M12 10v12M10 22v12" stroke="#f4a825" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M43 10c-2.5 2-3.5 5-3.5 8.5V34" stroke="#f4a825" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>The Chinese Wok</h3>
+                    <p>Chilli paneer, noodles and fried rice thrown on high flame — the dishes our regulars order again and again, plated the minute they leave the wok.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 52 52" fill="none">
+                            <rect x="10" y="20" width="32" height="22" rx="4" stroke="#f4a825" stroke-width="2"/>
+                            <path d="M10 28h32" stroke="#ffd27a" stroke-width="1.4" opacity="0.7"/>
+                            <path d="M26 20v-6M20 14h12" stroke="#f4a825" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="19" cy="35" r="2.4" fill="#f4a825"/>
+                            <circle cx="26" cy="35" r="2.4" fill="#ffd27a"/>
+                            <circle cx="33" cy="35" r="2.4" fill="#f4a825"/>
+                        </svg>
+                    </div>
+                    <h3>Momos &amp; Dumplings</h3>
+                    <p>Steamed soft or fried crisp, veg or paneer, with the red chutney people come back for. Made in small batches so the basket is never stale.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 52 52" fill="none">
+                            <path d="M8 38h36l-4 6H12l-4-6z" stroke="#f4a825" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 38c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="#f4a825" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="26" cy="20" r="2.4" fill="#ffd27a"/>
+                            <path d="M18 12l2 4M34 12l-2 4" stroke="#ffd27a" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <h3>Rolls &amp; South Indian</h3>
+                    <p>Cheese rolls off the tawa and masala dosa off the griddle — the quick, filling order for a hungry evening or a lunch that cannot wait.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 52 52" fill="none">
+                            <rect x="12" y="14" width="28" height="26" rx="4" stroke="#f4a825" stroke-width="2"/>
+                            <path d="M12 22h28" stroke="#f4a825" stroke-width="2"/>
+                            <path d="M22 14v-4h8v4" stroke="#f4a825" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M20 30h12M20 35h8" stroke="#ffd27a" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3>Delivery &amp; Bulk Orders</h3>
+                    <p>Birthdays, office lunches, a full house on a Sunday — send the list on WhatsApp, we confirm the time and it goes out hot and sealed.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <section class="stats" aria-label="Highlights">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number">4.4 &#9733;</span>
+                    <span class="stat-label">Rated on Zomato</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number"><span data-count="1600">1600</span>+</span>
+                    <span class="stat-label">Customer Reviews Online</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">11 &ndash; 11</span>
+                    <span class="stat-label">Open 11am to 11pm</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number"><span data-count="7">7</span> Days</span>
+                    <span class="stat-label">Open All Week</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: TASTING MENU -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <span class="section-kicker">The Menu</span>
+            <h2 class="section-headline">What Gonda <span class="gradient-text">Keeps Ordering.</span></h2>
+            <p class="section-sub">The short list. The full menu is at the counter — and on WhatsApp, whenever you ask.</p>
+
+            <div class="menu-card">
+                <div class="menu-course">
+                    <h3 class="menu-course-title">From the Wok</h3>
+                    <hr class="gold-rule" data-rule>
+                    <div class="menu-item-wrap">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Chilli Paneer</span>
+                        </div>
+                        <p class="menu-item-desc">The dish that built the reputation. High flame, thick sauce, paneer still soft.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Veg Noodles</span>
+                        </div>
+                        <p class="menu-item-desc">Tossed hot, wok-smoked, never sitting.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Fried Rice</span>
+                        </div>
+                        <p class="menu-item-desc">Loose grains, sharp seasoning, served straight off the burner.</p>
+                    </div>
+                </div>
+
+                <div class="menu-course">
+                    <h3 class="menu-course-title">Momos &amp; Dumplings</h3>
+                    <hr class="gold-rule" data-rule>
+                    <div class="menu-item-wrap">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Steamed Momos</span>
+                        </div>
+                        <p class="menu-item-desc">Thin skin, hot filling, red chutney on the side.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Fried Momos</span>
+                        </div>
+                        <p class="menu-item-desc">Crisp outside, everything else unchanged.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Paneer Momos</span>
+                        </div>
+                        <p class="menu-item-desc">For the table that argues about the filling.</p>
+                    </div>
+                </div>
+
+                <div class="menu-course">
+                    <h3 class="menu-course-title">Rolls &amp; Tawa</h3>
+                    <hr class="gold-rule" data-rule>
+                    <div class="menu-item-wrap">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Cheese Roll</span>
+                        </div>
+                        <p class="menu-item-desc">Rolled to order on the tawa, wrapped hot in foil.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Paneer Roll</span>
+                        </div>
+                        <p class="menu-item-desc">A full meal in one hand.</p>
+                    </div>
+                </div>
+
+                <div class="menu-course">
+                    <h3 class="menu-course-title">South Indian</h3>
+                    <hr class="gold-rule" data-rule>
+                    <div class="menu-item-wrap">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Masala Dosa</span>
+                        </div>
+                        <p class="menu-item-desc">Crisp at the edge, potato masala inside, chutney and sambar with it.</p>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Plain Dosa</span>
+                        </div>
+                        <p class="menu-item-desc">The simple order, done properly.</p>
+                    </div>
+                </div>
+
+                <p class="menu-note">A short list of what people order most &middot; The full menu is at the counter &middot; Prices confirmed on WhatsApp</p>
+            </div>
+
+            <div class="menu-cta-row">
+                <a href="#book" class="btn btn-primary">Order on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MID-PAGE PHOTO BAND -->
+    <section class="band" aria-label="Dine in with us">
+        <div class="band-media" aria-hidden="true">
+            <img src="https://images.pexels.com/photos/14192366/pexels-photo-14192366.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                 alt="" loading="lazy" decoding="async"
+                 onerror="this.style.display='none'">
+        </div>
+        <div class="band-scrim" aria-hidden="true"></div>
+        <div class="container">
+            <span class="section-kicker">A Table in Gonda</span>
+            <p class="band-quote">Nothing leaves this kitchen that we would not put in front of our own family.</p>
+            <a href="#book" class="btn btn-primary">Book a Table</a>
+        </div>
+    </section>
+
+    <!-- AUTOMATION TEASER -->
+    <section class="automation" id="book">
+        <div class="container">
+            <span class="section-kicker">Order Without the Phone Queue</span>
+            <h2 class="section-headline">Your Food, <span class="gradient-text">Two Taps Away.</span></h2>
+            <p class="section-sub">Reserve a table for the evening, or build your order and send it straight to the kitchen's WhatsApp.</p>
+
+            <div class="auto-shell">
+                <div class="auto-tabs" role="tablist" aria-label="Booking options">
+                    <button class="auto-tab" id="tab-book" role="tab" aria-selected="true" aria-controls="panel-book">Book a Table</button>
+                    <button class="auto-tab" id="tab-order" role="tab" aria-selected="false" aria-controls="panel-order">Order on WhatsApp</button>
+                </div>
+
+                <!-- Panel: table booking -->
+                <div class="auto-panel" id="panel-book" role="tabpanel" aria-labelledby="tab-book">
+                    <form id="booking-form" novalidate>
+                        <div class="field">
+                            <label for="bk-name">Your Name</label>
+                            <input type="text" id="bk-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="bk-guests">Guests</label>
+                                <select id="bk-guests" name="guests" required>
+                                    <option value="2">2 guests</option>
+                                    <option value="4" selected>4 guests</option>
+                                    <option value="6">6 guests</option>
+                                    <option value="10">10+ (party)</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="bk-time">Time</label>
+                                <select id="bk-time" name="time" required>
+                                    <option value="Lunch — 12:30 pm">Lunch &middot; 12:30 pm</option>
+                                    <option value="Evening — 6:00 pm">Evening &middot; 6:00 pm</option>
+                                    <option value="Dinner — 8:00 pm" selected>Dinner &middot; 8:00 pm</option>
+                                    <option value="Late — 9:30 pm">Late &middot; 9:30 pm</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="bk-date">Date</label>
+                                <input type="date" id="bk-date" name="date" required>
+                            </div>
+                            <div class="field">
+                                <label for="bk-phone">Phone</label>
+                                <input type="tel" id="bk-phone" name="phone" placeholder="10-digit mobile" autocomplete="tel" inputmode="numeric" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary auto-submit">Request This Table</button>
+                    </form>
+                    <div class="auto-success" id="booking-success" hidden>
+                        <div class="auto-success-icon" aria-hidden="true">&#10003;</div>
+                        <h3>Request Received.</h3>
+                        <p>This is how your customers would reach you automatically — the booking lands on your WhatsApp before they put the phone down.</p>
+                        <button type="button" class="auto-reset" id="booking-reset">Make another request</button>
+                    </div>
+                </div>
+
+                <!-- Panel: WhatsApp order builder -->
+                <div class="auto-panel" id="panel-order" role="tabpanel" aria-labelledby="tab-order" hidden>
+                    <div class="wa-chips" role="group" aria-label="Choose items to order">
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Chilli Paneer">Chilli Paneer</button>
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Steamed Momos (1 plate)">Steamed Momos</button>
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Fried Momos (1 plate)">Fried Momos</button>
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Veg Noodles">Veg Noodles</button>
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Cheese Roll">Cheese Roll</button>
+                        <button type="button" class="wa-chip" aria-pressed="false" data-item="Masala Dosa">Masala Dosa</button>
+                    </div>
+                    <div class="wa-preview" id="wa-preview" aria-live="polite">
+                        <span class="wa-preview-label">Message preview</span><span id="wa-preview-text">Tap items above to build your order.</span>
+                    </div>
+                    <a class="btn btn-whatsapp" id="wa-order-btn" href="https://wa.me/918874658121" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" width="22" height="22"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3z" fill="#06220f"/><path d="M12.4 9.6c-.3-.6-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.8 5.9 5.2 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4l-2.4-1.1c-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6l-1.3-2.9z" fill="#25D366"/></svg>
+                        Send Order on WhatsApp
+                    </a>
+                    <p class="auto-pitch">Front-end demo — on the live site this opens WhatsApp with the order pre-typed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="section-kicker">Find Us</span>
+            <h2 class="section-headline">The Wok Is <span class="gradient-text">Already Hot.</span></h2>
+            <p class="section-sub">In Gonda city. Dine in, pick up, or send the order ahead and collect it packed.</p>
+            <div class="visit-grid">
+                <div class="visit-card">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4c-6.6 0-12 5.2-12 11.7C8 24.6 20 36 20 36s12-11.4 12-20.3C32 9.2 26.6 4 20 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="16" r="4.5" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Address</h3>
+                    <p>The Chef Kitchen<br>4XP7+8XJ, Gonda,<br>Uttar Pradesh</p>
+                </div>
+                <div class="visit-card">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><path d="M20 11v9l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Hours</h3>
+                    <p>Open every day<br>11:00 am &ndash; 11:00 pm<br>Dine in &middot; Takeaway &middot; Delivery</p>
+                </div>
+                <div class="visit-card">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none"><path d="M12 6h4l2.5 7-3 2.5c1.5 3.5 5 7 8.5 8.5l2.5-3 7 2.5v4c0 2-1.6 3.6-3.6 3.5C17.6 30.5 9.5 22.4 9 10.6 8.9 8.6 10 6 12 6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Call or WhatsApp</h3>
+                    <p><a href="tel:+918874658121">+91 88746 58121</a><br>Orders, table bookings,<br>bulk &amp; party orders</p>
+                </div>
+            </div>
+            <div class="visit-cta-row">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Chef%20Kitchen%20Gonda" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="section-kicker">Good to Know</span>
+            <h2 class="section-headline">Questions? <span class="gradient-text">Answered.</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do you deliver across Gonda city?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Yes. Delivery, takeaway and dine-in all run from the same kitchen through the day. Send your address on WhatsApp and we will confirm the time before we start cooking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How long does an order take?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Everything is cooked after you order, so give the kitchen a few minutes — momos steam to order and the wok dishes go out the moment they are done. On a busy evening, ordering ahead on WhatsApp saves you the wait.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Can I order for a party or a large group?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Send the list and the time on WhatsApp. Birthdays, office lunches and family gatherings are packed and ready at the hour you name.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What are your timings?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Open every day, 11:00 am to 11:00 pm. No weekly off.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Is there a fixed menu I can see before ordering?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>The favourites are listed on this page. For the full menu and current prices, message us on WhatsApp and we will send it across straight away.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2 class="section-headline">Hungry? <span class="gradient-text">Sorted.</span></h2>
+            <p class="cta-subtext">One message to the kitchen. The wok does the rest.</p>
+            <a href="#book" class="btn btn-primary btn-large">Order on WhatsApp</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="wa-float" href="https://wa.me/918874658121" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3z" fill="#ffffff"/>
+            <path d="M12.4 9.6c-.3-.6-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.8 5.9 5.2 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4l-2.4-1.1c-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6l-1.3-2.9z" fill="#25D366"/>
+        </svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick actions">
+        <a class="mb-call" href="tel:+918874658121">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M12 6h4l2.5 7-3 2.5c1.5 3.5 5 7 8.5 8.5l2.5-3 7 2.5v4c0 2-1.6 3.6-3.6 3.5C17.6 30.5 9.5 22.4 9 10.6 8.9 8.6 10 6 12 6z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a class="mb-wa" href="https://wa.me/918874658121" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            WhatsApp
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Chef%20Kitchen%20Gonda" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4c-6.6 0-12 5.2-12 11.7C8 24.6 20 36 20 36s12-11.4 12-20.3C32 9.2 26.6 4 20 4z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="20" cy="16" r="4.5" stroke="currentColor" stroke-width="2.4"/></svg>
+            Directions
+        </a>
+    </nav>
+
+    <!-- CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge">
+        <span>Concept Demo</span>
+        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">The Chef <em>Kitchen</em></p>
+            <div class="footer-links">
+                <a href="#story">Our Kitchen</a>
+                <a href="#menu">Menu</a>
+                <a href="#book">Order Now</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of The Chef Kitchen.</p>
+            <p class="footer-copy">&copy; 2026 &middot; A concept presentation. All names and details are illustrative.</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+<script>
+(function () {
+    'use strict';
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- NAV: scrolled state ---------- */
+    var nav = document.getElementById('site-nav');
+    var backToTop = document.getElementById('back-to-top');
+
+    function onScroll() {
+        var y = window.scrollY || document.documentElement.scrollTop;
+        if (nav) nav.classList.toggle('scrolled', y > 24);
+        if (backToTop) backToTop.classList.toggle('visible', y > 700);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- NAV: hamburger ---------- */
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    function closeMenu() {
+        if (!navMenu || !navToggle) return;
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            var open = navMenu.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        navMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+
+    /* ---------- Back to top ---------- */
+    if (backToTop) {
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        });
+    }
+
+    /* ---------- Concept Demo badge ---------- */
+    var demoBadge = document.getElementById('demo-badge');
+    var demoBadgeClose = document.getElementById('demo-badge-close');
+    if (demoBadge && demoBadgeClose) {
+        demoBadgeClose.addEventListener('click', function () {
+            demoBadge.classList.add('hidden');
+        });
+    }
+
+    /* ---------- FAQ accordion ---------- */
+    /* Collapse answers via JS so no-JS visitors still read everything */
+    document.querySelectorAll('.faq-answer').forEach(function (answer) {
+        answer.style.maxHeight = '0px';
+    });
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var answer = document.getElementById(btn.getAttribute('aria-controls'));
+            if (!answer) return;
+            var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            // close others
+            document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                if (other === btn) return;
+                other.setAttribute('aria-expanded', 'false');
+                var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+            });
+
+            btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+            answer.style.maxHeight = isOpen ? '0px' : answer.scrollHeight + 'px';
+        });
+    });
+
+    /* ---------- Automation mock: tabs ---------- */
+    var tabs = [
+        { tab: document.getElementById('tab-book'), panel: document.getElementById('panel-book') },
+        { tab: document.getElementById('tab-order'), panel: document.getElementById('panel-order') }
+    ];
+    tabs.forEach(function (entry) {
+        if (!entry.tab || !entry.panel) return;
+        entry.tab.addEventListener('click', function () {
+            tabs.forEach(function (other) {
+                if (!other.tab || !other.panel) return;
+                var active = other === entry;
+                other.tab.setAttribute('aria-selected', active ? 'true' : 'false');
+                other.panel.hidden = !active;
+            });
+        });
+    });
+
+    /* ---------- Automation mock: booking form ---------- */
+    var bookingForm = document.getElementById('booking-form');
+    var bookingSuccess = document.getElementById('booking-success');
+    var bookingReset = document.getElementById('booking-reset');
+    var dateInput = document.getElementById('bk-date');
+
+    if (dateInput) {
+        var today = new Date();
+        var iso = today.toISOString().slice(0, 10);
+        dateInput.min = iso;
+        dateInput.value = iso;
+    }
+
+    if (bookingForm && bookingSuccess) {
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!bookingForm.checkValidity()) {
+                bookingForm.reportValidity();
+                return;
+            }
+            bookingForm.hidden = true;
+            bookingSuccess.hidden = false;
+        });
+        if (bookingReset) {
+            bookingReset.addEventListener('click', function () {
+                bookingSuccess.hidden = true;
+                bookingForm.hidden = false;
+                bookingForm.reset();
+                if (dateInput) dateInput.value = dateInput.min;
+            });
+        }
+    }
+
+    /* ---------- Automation mock: WhatsApp order builder ---------- */
+    var waChips = document.querySelectorAll('.wa-chip');
+    var waPreviewText = document.getElementById('wa-preview-text');
+    var waOrderBtn = document.getElementById('wa-order-btn');
+    var WA_NUMBER = '918874658121';
+
+    function refreshWaOrder() {
+        var items = [];
+        waChips.forEach(function (chip) {
+            if (chip.getAttribute('aria-pressed') === 'true') {
+                items.push(chip.getAttribute('data-item'));
+            }
+        });
+        if (!waPreviewText || !waOrderBtn) return;
+        if (items.length === 0) {
+            waPreviewText.textContent = 'Tap items above to build your order.';
+            waOrderBtn.href = 'https://wa.me/' + WA_NUMBER;
+            return;
+        }
+        var message = 'Hello The Chef Kitchen! I would like to order:\n- ' + items.join('\n- ');
+        waPreviewText.textContent = message;
+        waOrderBtn.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(message);
+    }
+
+    waChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+            var pressed = chip.getAttribute('aria-pressed') === 'true';
+            chip.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+            refreshWaOrder();
+        });
+    });
+    refreshWaOrder();
+
+    /* ---------- Enhancement layer: GSAP + CountUp (guarded) ---------- */
+    function initMotion() {
+        var hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+        var hasCountUp = typeof window.countUp !== 'undefined' && window.countUp.CountUp;
+
+        /* CountUp counters — run once when the stats band scrolls in */
+        if (hasCountUp && !prefersReducedMotion && 'IntersectionObserver' in window) {
+            var counters = document.querySelectorAll('[data-count]');
+            if (counters.length) {
+                var counterObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        var el = entry.target;
+                        var target = parseFloat(el.getAttribute('data-count'));
+                        if (!isNaN(target)) {
+                            var cu = new window.countUp.CountUp(el, target, { duration: 2 });
+                            if (!cu.error) cu.start();
+                        }
+                        observer.unobserve(el);
+                    });
+                }, { threshold: 0.4 });
+                counters.forEach(function (el) { counterObserver.observe(el); });
+            }
+        }
+
+        if (!hasGsap || prefersReducedMotion) return;
+
+        window.gsap.registerPlugin(window.ScrollTrigger);
+
+        /* Hero entrance */
+        var heroTl = window.gsap.timeline({ defaults: { ease: 'power3.out' } });
+        heroTl.from('.hero-cloche', { y: 26, opacity: 0, duration: 0.9 })
+              .from('.hero-badge', { y: 20, opacity: 0, duration: 0.7 }, '-=0.5')
+              .from('.hero-headline', { y: 34, opacity: 0, duration: 0.9 }, '-=0.45')
+              .from('.hero-subtext', { y: 24, opacity: 0, duration: 0.7 }, '-=0.55')
+              .from('.hero-ctas', { y: 20, opacity: 0, duration: 0.7 }, '-=0.45');
+
+        /* Section reveals: fade + rise */
+        var revealTargets = [
+            '.story-copy', '.story-art',
+            '.offer-card',
+            '.stat',
+            '.menu-card', '.menu-cta-row',
+            '.trust-inner',
+            '.band .container',
+            '.auto-shell',
+            '.visit-card', '.visit-cta-row',
+            '.faq-list',
+            '.final-cta .container'
+        ];
+        revealTargets.forEach(function (selector) {
+            window.gsap.utils.toArray(selector).forEach(function (el, i) {
+                window.gsap.from(el, {
+                    y: 44,
+                    opacity: 0,
+                    duration: 0.85,
+                    ease: 'power3.out',
+                    delay: (i % 4) * 0.08,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+        });
+
+        /* Signature motion: gold rules draw in from the centre */
+        window.gsap.utils.toArray('[data-rule]').forEach(function (rule) {
+            window.gsap.from(rule, {
+                scaleX: 0,
+                opacity: 0,
+                duration: 1.1,
+                ease: 'power2.inOut',
+                scrollTrigger: {
+                    trigger: rule,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        /* Section kickers: soft letter-space settle */
+        window.gsap.utils.toArray('.section-kicker').forEach(function (kicker) {
+            window.gsap.from(kicker, {
+                opacity: 0,
+                letterSpacing: '0.5em',
+                duration: 0.9,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: kicker,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    }
+
+    /* Deferred CDN scripts execute before DOMContentLoaded fires, so this
+       ordering is safe; if they never load, initMotion's guards no-op. */
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMotion);
+    } else {
+        initMotion();
+    }
+})();
+</script>
+</body>
+</html>

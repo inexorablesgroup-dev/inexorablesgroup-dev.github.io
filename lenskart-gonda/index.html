@@ -1,0 +1,1595 @@
+<!-- TEMPLATE:fashion-retail
+CUSTOMISED BUILD — Lenskart - Civil Lines Road Gonda (rank #67)
+All copy, contact details, stats and FAQ rewritten from verified facts only.
+Verified: address, PIN 271001, hours 11:00-22:00 daily, phone +91 8048794463,
+4.8 rating / 143 reviews (source: Lenskart store listing for this outlet).
+No WhatsApp number is verified for this store, so every CTA uses tel: and the
+floating action is a Call button, not a WhatsApp float. Swap in the franchise
+partner's mobile when obtained.
+No photos: the fashion-retail photo bank is saree/ethnic-wear/footwear imagery
+and none of it fits an optical store, so the hero and sections use a designed
+CSS visual system instead of a forced mismatch.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Lenskart - Civil Lines Road Gonda — Eyewear Store &amp; Eye Testing, Gonda</title>
+    <meta name="description" content="Lenskart - Civil Lines Road Gonda. Eyeglasses, sunglasses and contact lenses with in-store eye testing on Civil Lines Road, opposite Bhagat Singh Inter College. Open 11 am to 10 pm, every day. Concept demo website.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================================================================
+           LENSKART - CIVIL LINES ROAD GONDA — Optical Retail Build
+           Deep ink navy · lens gold · optic blue. Drifting wave-band motion.
+           ================================================================ */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:        #0e1728;   /* deep ink navy */
+            --bg-deep:   #08101d;
+            --bg-lift:   #16213a;
+            --gold:      #e6b667;   /* lens gold */
+            --gold-soft: #f2d6a4;
+            --gold-deep: #c39443;
+            --sky:       #6fb6d6;   /* optic blue */
+            --cream:     #f2f6fb;
+            --muted:     #9fb0c6;
+            --line:      rgba(230, 182, 103, 0.14);
+            --glass:     rgba(14, 23, 40, 0.72);
+            --shadow-gold: 0 10px 40px rgba(230, 182, 103, 0.22);
+            --ease-lux:  cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--cream);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            line-height: 1.12;
+            color: var(--cream);
+            letter-spacing: 0.005em;
+        }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        section { position: relative; }
+
+        .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+
+        .section-kicker {
+            display: block;
+            text-align: center;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--muted);
+            max-width: 620px;
+            margin: 0 auto 56px;
+            font-size: clamp(1rem, 1.8vw, 1.125rem);
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, #e6b667, #f7e6c4, #6fb6d6, #e6b667);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-size: 250% auto;
+            animation: gradientShift 6s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50%      { background-position: 100% center; }
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute; top: -60px; left: 16px; z-index: 2000;
+            background: var(--gold); color: var(--bg-deep);
+            padding: 12px 20px; border-radius: 8px;
+            font-weight: 600; text-decoration: none;
+            transition: top 0.3s ease;
+        }
+        .skip-link:focus { top: 16px; }
+
+        /* ================================
+           BUTTONS
+           ================================ */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 14px 34px;
+            border-radius: 980px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; font-weight: 500;
+            text-decoration: none; cursor: pointer;
+            border: none;
+            transition: transform 0.4s var(--ease-lux), box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e6b667, #6fb6d6);
+            color: #0e1728;
+            font-weight: 600;
+            box-shadow: 0 0 30px rgba(230, 182, 103, 0.22);
+        }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: var(--shadow-gold); }
+
+        .btn-secondary { background: transparent; color: var(--cream); border: 1.5px solid rgba(242, 246, 251, 0.28); }
+        .btn-secondary:hover { border-color: var(--gold); background: rgba(230, 182, 103, 0.07); transform: translateY(-2px); }
+
+        .btn-large { padding: 18px 48px; font-size: 1.1rem; }
+
+        /* ================================
+           NAVIGATION — glass, darkens on scroll
+           ================================ */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(14, 23, 40, 0.55);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .nav.scrolled { background: rgba(8, 16, 29, 0.92); box-shadow: 0 1px 30px rgba(230, 182, 103, 0.08); }
+
+        /* Slim utility strip above the main nav */
+        .utility-strip {
+            background: rgba(8, 16, 29, 0.72);
+            border-bottom: 1px solid var(--line);
+            font-size: 0.74rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        .utility-inner {
+            max-width: 1120px; margin: 0 auto; padding: 7px 24px;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        }
+        .utility-inner a { color: var(--gold-soft); text-decoration: none; }
+        .utility-inner a:hover { text-decoration: underline; }
+        @media (max-width: 700px) {
+            .utility-inner { justify-content: center; padding: 6px 16px; }
+            .utility-inner .u-hide { display: none; }
+        }
+
+        .nav-container { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 66px; }
+
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-mark { width: 38px; height: 38px; flex: none; }
+        .nav-logo-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.22rem; font-weight: 700;
+            color: var(--cream); letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .nav-logo-name em { font-style: italic; color: var(--gold); }
+
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { font-size: 0.875rem; color: var(--muted); text-decoration: none; transition: color 0.3s; padding: 10px 0; }
+        .nav-links a:hover { color: var(--cream); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #e6b667, #6fb6d6);
+            color: #0e1728 !important;
+            padding: 10px 22px !important;
+            border-radius: 980px; font-weight: 600;
+            box-shadow: 0 0 20px rgba(230, 182, 103, 0.18);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 30px rgba(230, 182, 103, 0.4); transform: translateY(-1px); }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column; justify-content: center; gap: 5px;
+            width: 48px; height: 48px;
+            background: none; border: none; cursor: pointer;
+            padding: 10px;
+        }
+        .hamburger-line {
+            display: block; width: 24px; height: 2px;
+            background: var(--cream); border-radius: 2px;
+            transition: transform 0.35s var(--ease-lux), opacity 0.25s ease;
+        }
+        .nav-hamburger.active .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger.active .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger.active .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ================================
+           AMBIENT ORBS
+           ================================ */
+        .orb {
+            position: fixed; border-radius: 50%;
+            filter: blur(90px); pointer-events: none;
+            z-index: 0; opacity: 0.55;
+            animation: orbBreathe 14s ease-in-out infinite;
+        }
+        .orb-1 { width: 480px; height: 480px; top: -12%; left: -10%; background: radial-gradient(circle, rgba(230, 182, 103, 0.20) 0%, transparent 70%); }
+        .orb-2 {
+            width: 560px; height: 560px; top: 42%; right: -16%;
+            background: radial-gradient(circle, rgba(111, 182, 214, 0.16) 0%, transparent 70%);
+            animation-delay: -5s;
+        }
+        .orb-3 {
+            width: 420px; height: 420px; bottom: -10%; left: 22%;
+            background: radial-gradient(circle, rgba(242, 214, 164, 0.10) 0%, transparent 70%);
+            animation-delay: -9s;
+        }
+        @keyframes orbBreathe {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50%      { transform: translateY(-36px) scale(1.07); }
+        }
+
+        main { position: relative; z-index: 1; }
+
+        /* ================================
+           HERO
+           ================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            padding: 130px 24px 80px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle 300px at 33% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
+                radial-gradient(circle 300px at 67% 62%, rgba(111, 182, 214, 0.10) 0 58%, transparent 60%),
+                radial-gradient(ellipse 90% 55% at 50% -10%, rgba(230, 182, 103, 0.15) 0%, transparent 62%),
+                linear-gradient(170deg, #12203a 0%, #0e1728 55%, #08101d 100%);
+        }
+        .hero::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(115deg, rgba(242, 246, 251, 0.028) 0 1px, transparent 1px 34px);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; z-index: 1; }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.76rem; font-weight: 600;
+            letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold-soft);
+            border: 1px solid rgba(230, 182, 103, 0.32);
+            background: rgba(230, 182, 103, 0.07);
+            padding: 9px 22px; border-radius: 980px;
+            margin-bottom: 34px;
+        }
+
+        .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 26px; }
+        .hero-headline .line { display: block; }
+
+        .hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 46px; }
+
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .hero-scroll-hint {
+            margin-top: 64px;
+            display: inline-flex; flex-direction: column; align-items: center; gap: 8px;
+            color: var(--muted); font-size: 0.75rem;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            text-decoration: none;
+        }
+        .hero-scroll-hint svg { animation: hintFloat 2.4s ease-in-out infinite; }
+        @keyframes hintFloat {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50%      { transform: translateY(6px); opacity: 1; }
+        }
+
+        /* ================================
+           SIGNATURE — flowing wave-band divider
+           ================================ */
+        .wave-band {
+            position: relative;
+            height: 110px;
+            overflow: hidden;
+            pointer-events: none;
+            margin: -1px 0;
+        }
+        .wave-band svg { position: absolute; left: 0; top: 0; width: 200%; height: 100%; display: block; }
+        .wave-band .drift-a { animation: waveDrift 30s linear infinite; }
+        .wave-band .drift-b { animation: waveDrift 44s linear infinite reverse; }
+        @keyframes waveDrift {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        .wave-band.tone-deep { background: transparent; }
+
+        /* ================================
+           STORY
+           ================================ */
+        .story { padding: 120px 24px 130px; background: var(--bg-deep); }
+        .story::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 40%, rgba(111, 182, 214, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+
+        .story-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
+        .story-copy h2 { font-size: clamp(1.9rem, 4vw, 3rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--muted); margin-bottom: 18px; font-size: 1.05rem; }
+        .story-copy p strong { color: var(--cream); font-weight: 500; }
+
+        .story-art {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            background:
+                linear-gradient(160deg, #16213a 0%, #0e1728 45%, #08101d 100%);
+            border: 1px solid var(--line);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        }
+        .story-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .story-art::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(242, 246, 251, 0.06) 48%, transparent 62%);
+            background-size: 300% 100%;
+            animation: sheen 7s ease-in-out infinite;
+        }
+        @keyframes sheen {
+            0%   { background-position: 120% 0; }
+            60%, 100% { background-position: -80% 0; }
+        }
+
+        /* ================================
+           COLLECTIONS GRID
+           ================================ */
+        .collections { padding: 120px 24px 130px; background: var(--bg); }
+        .collections::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 85% 15%, rgba(230, 182, 103, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .collections .container { position: relative; z-index: 1; }
+
+        .collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
+
+        .collection-card {
+            position: relative;
+            padding: 40px 30px 36px;
+            border-radius: 20px;
+            background: rgba(242, 246, 251, 0.025);
+            border: 1px solid var(--line);
+            text-align: left;
+            transition: transform 0.45s var(--ease-lux), box-shadow 0.45s ease, border-color 0.45s ease, background 0.45s ease;
+            overflow: hidden;
+        }
+        .collection-card::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(230, 182, 103, 0.09) 0%, transparent 65%);
+            opacity: 0; transition: opacity 0.45s ease;
+        }
+        .collection-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(230, 182, 103, 0.38);
+            background: rgba(242, 246, 251, 0.045);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(230, 182, 103, 0.09);
+        }
+        .collection-card:hover::before { opacity: 1; }
+
+        .collection-icon { width: 54px; height: 54px; margin-bottom: 22px; color: var(--gold); }
+        .collection-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+        .collection-card p { color: var(--muted); font-size: 0.95rem; }
+
+        /* ================================
+           STATS BAND
+           ================================ */
+        .stats { padding: 100px 24px; background: var(--bg-deep); }
+        .stats::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 65% 60% at 50% 100%, rgba(111, 182, 214, 0.07) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .stats-grid {
+            position: relative; z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+        .stat { padding: 36px 16px; border-radius: 18px; border: 1px solid transparent; transition: border-color 0.4s ease, background 0.4s ease; }
+        .stat:hover { border-color: var(--line); background: rgba(242, 246, 251, 0.02); }
+        .stat-value {
+            display: block;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 700;
+            color: var(--gold-soft);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+        .stat-label { display: block; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+        /* ================================
+           SIGNATURE SECTION — THE EYE-TEST JOURNEY
+           ================================ */
+        .edit { padding: 120px 24px 130px; background: var(--bg); }
+        .edit::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 45% 40% at 12% 80%, rgba(230, 182, 103, 0.07) 0%, transparent 60%),
+                radial-gradient(ellipse 45% 40% at 88% 20%, rgba(111, 182, 214, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .edit .container { position: relative; z-index: 1; }
+
+        .edit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
+
+        .swatch-card {
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--bg-lift);
+            transition: transform 0.45s var(--ease-lux), box-shadow 0.45s ease, border-color 0.45s ease;
+        }
+        .swatch-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(230, 182, 103, 0.4);
+            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.45), 0 0 44px rgba(230, 182, 103, 0.1);
+        }
+
+        .swatch-scene { position: relative; height: 210px; overflow: hidden; }
+        .swatch-scene::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.14) 50%, transparent 66%);
+            background-size: 280% 100%;
+            background-position: 120% 0;
+            transition: background-position 1.1s var(--ease-lux);
+        }
+        .swatch-card:hover .swatch-scene::after { background-position: -80% 0; }
+
+        /* Lens scenes — two soft "lenses" floating over a tinted field */
+        .scene-clear {
+            background:
+                radial-gradient(circle 54px at 32% 50%, rgba(242, 246, 251, 0.30) 0 60%, transparent 62%),
+                radial-gradient(circle 54px at 68% 50%, rgba(242, 246, 251, 0.30) 0 60%, transparent 62%),
+                linear-gradient(150deg, #1b2b4a 0%, #24406b 48%, #121e34 100%);
+        }
+        .scene-blue {
+            background:
+                radial-gradient(circle 54px at 32% 50%, rgba(111, 182, 214, 0.42) 0 60%, transparent 62%),
+                radial-gradient(circle 54px at 68% 50%, rgba(111, 182, 214, 0.42) 0 60%, transparent 62%),
+                linear-gradient(150deg, #17304a 0%, #1f5573 50%, #0f2135 100%);
+        }
+        .scene-shade {
+            background:
+                radial-gradient(circle 54px at 32% 50%, rgba(20, 26, 38, 0.62) 0 60%, transparent 62%),
+                radial-gradient(circle 54px at 68% 50%, rgba(20, 26, 38, 0.62) 0 60%, transparent 62%),
+                linear-gradient(150deg, #6b5426 0%, #c39443 50%, #4d3a15 100%);
+        }
+
+        .swatch-body { padding: 28px 26px 30px; }
+        .swatch-body h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .swatch-body p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+        .swatch-tag {
+            display: inline-block;
+            font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(230, 182, 103, 0.3);
+            padding: 6px 14px; border-radius: 980px;
+        }
+
+        /* ================================
+           AUTOMATION TEASER
+           ================================ */
+        .automation { padding: 120px 24px 130px; background: var(--bg-deep); }
+        .automation::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(230, 182, 103, 0.08) 0%, transparent 62%);
+            pointer-events: none;
+        }
+        .automation .container { position: relative; z-index: 1; }
+
+        .automation-shell {
+            max-width: 560px;
+            margin: 0 auto;
+            background: rgba(242, 246, 251, 0.03);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: clamp(30px, 5vw, 52px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        }
+
+        .automation-form { display: grid; gap: 18px; }
+
+        .field label {
+            display: block;
+            font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--gold-soft);
+            margin-bottom: 8px;
+        }
+        .field input, .field select {
+            width: 100%;
+            min-height: 52px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            border: 1.5px solid var(--line);
+            background: rgba(8, 16, 29, 0.6);
+            color: var(--cream);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+        .field select {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23e6b667' stroke-width='2' stroke-linecap='round'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            padding-right: 44px;
+        }
+        .field input::placeholder { color: rgba(159, 176, 198, 0.55); }
+        .field input:focus, .field select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(230, 182, 103, 0.12); }
+
+        .automation-form .btn { width: 100%; margin-top: 6px; }
+
+        .form-note { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 14px; }
+
+        .automation-success { display: none; text-align: center; padding: 20px 6px 8px; }
+        .automation-success.visible { display: block; animation: successPop 0.6s var(--ease-lux); }
+        @keyframes successPop {
+            from { opacity: 0; transform: translateY(16px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .success-ring {
+            width: 76px; height: 76px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(230, 182, 103, 0.1);
+            border: 1.5px solid rgba(230, 182, 103, 0.45);
+            box-shadow: 0 0 40px rgba(230, 182, 103, 0.18);
+        }
+        .success-ring svg { width: 34px; height: 34px; color: var(--gold-soft); }
+        .automation-success h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .automation-success p { color: var(--muted); font-size: 0.98rem; max-width: 400px; margin: 0 auto; }
+        .automation-success p strong { color: var(--gold-soft); font-weight: 500; }
+
+        .pitch-strip {
+            margin: 60px auto 0;
+            max-width: 760px;
+            display: flex; align-items: center; justify-content: center;
+            gap: 14px; flex-wrap: wrap;
+            padding: 20px 28px;
+            border-radius: 980px;
+            border: 1px solid rgba(37, 211, 102, 0.28);
+            background: rgba(37, 211, 102, 0.05);
+            font-size: 0.92rem;
+            color: var(--cream);
+            text-align: center;
+        }
+        .pitch-strip .wa-dot {
+            width: 28px; height: 28px; flex: none;
+            border-radius: 50%;
+            background: #25D366;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .pitch-strip .wa-dot svg { width: 16px; height: 16px; fill: #ffffff; }
+
+        /* ================================
+           TRUST STRIP — value band
+           ================================ */
+        .trust {
+            padding: 44px 24px;
+            background:
+                linear-gradient(90deg, rgba(230, 182, 103, 0.10), rgba(111, 182, 214, 0.10)),
+                var(--bg-lift);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            text-align: center;
+        }
+        .trust-item svg { width: 30px; height: 30px; color: var(--gold); margin-bottom: 12px; }
+        .trust-item span {
+            display: block;
+            font-size: 0.76rem; font-weight: 600;
+            letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--cream);
+        }
+        @media (max-width: 700px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; } }
+
+        /* ================================
+           VISIT / CONTACT
+           ================================ */
+        .visit { padding: 120px 24px 130px; background: var(--bg); }
+        .visit::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 50% 45% at 80% 90%, rgba(111, 182, 214, 0.08) 0%, transparent 62%);
+            pointer-events: none;
+        }
+        .visit .container { position: relative; z-index: 1; }
+
+        .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
+        .visit-card {
+            padding: 38px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+            background: rgba(242, 246, 251, 0.025);
+            text-align: center;
+            transition: transform 0.4s var(--ease-lux), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-4px); border-color: rgba(230, 182, 103, 0.35); }
+        .visit-card svg { width: 40px; height: 40px; color: var(--gold); margin-bottom: 18px; }
+        .visit-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .visit-card p { color: var(--muted); font-size: 0.95rem; }
+        .visit-card a { color: var(--gold-soft); text-decoration: none; }
+        .visit-card a:hover { text-decoration: underline; }
+
+        .visit-directions { text-align: center; margin-top: 44px; }
+
+        /* ================================
+           FAQ
+           ================================ */
+        .faq { padding: 120px 24px 130px; background: var(--bg-deep); }
+        .faq-list { max-width: 720px; margin: 56px auto 0; }
+
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            display: flex; justify-content: space-between; align-items: center; gap: 20px;
+            padding: 24px 8px;
+            min-height: 56px;
+            background: none; border: none;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.15rem; font-weight: 600;
+            color: var(--cream);
+            text-align: left;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--gold-soft); }
+        .faq-question::after {
+            content: '+';
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem; font-weight: 300;
+            color: var(--gold);
+            flex: none;
+            transition: transform 0.35s var(--ease-lux);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+
+        /* Collapsed only when JS is running — answers stay readable with JS disabled */
+        body.js .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-lux); }
+        .faq-answer p { padding: 0 8px 26px; color: var(--muted); font-size: 0.98rem; }
+
+        /* ================================
+           FINAL CTA
+           ================================ */
+        .final-cta {
+            padding: 140px 24px;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 110%, rgba(230, 182, 103, 0.13) 0%, transparent 65%),
+                var(--bg);
+            text-align: center;
+        }
+        .final-cta .section-headline { margin-bottom: 16px; }
+        .final-cta .cta-subtext { color: var(--muted); font-size: 1.1rem; margin-bottom: 44px; }
+
+        /* ================================
+           FOOTER
+           ================================ */
+        .footer { padding: 70px 24px 100px; background: var(--bg-deep); border-top: 1px solid var(--line); text-align: center; }
+        .footer-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-name em { font-style: italic; color: var(--gold); }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; margin-bottom: 30px; }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 8px 0; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--cream); }
+        .footer-copy { color: var(--muted); font-size: 0.85rem; margin-bottom: 18px; }
+        .footer-demo-notice {
+            color: rgba(159, 176, 198, 0.75);
+            font-size: 0.8rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .footer-demo-notice a { color: var(--gold-soft); text-decoration: none; }
+
+        /* ================================
+           FLOATING ELEMENTS
+           ================================ */
+        .call-fab {
+            position: fixed;
+            right: 20px; bottom: 20px;
+            z-index: 1100;
+            width: 58px; height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e6b667, #c39443);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 30px rgba(230, 182, 103, 0.42);
+            animation: callPulse 2.6s ease-in-out infinite;
+            transition: transform 0.3s var(--ease-lux);
+        }
+        .call-fab:hover { transform: scale(1.08); }
+        .call-fab svg { width: 28px; height: 28px; fill: none; stroke: #0e1728; stroke-width: 2; }
+        @keyframes callPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(230, 182, 103, 0.42), 0 0 0 0 rgba(230, 182, 103, 0.35); }
+            50%      { box-shadow: 0 8px 30px rgba(230, 182, 103, 0.42), 0 0 0 14px rgba(230, 182, 103, 0); }
+        }
+
+        /* Sticky mobile action bar — Call + Directions */
+        .mobile-bar { display: none; }
+        @media (max-width: 700px) {
+            .mobile-bar {
+                position: fixed; left: 0; right: 0; bottom: 0;
+                z-index: 1120;
+                display: grid; grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--line);
+                border-top: 1px solid var(--line);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+            }
+            .mobile-bar a {
+                display: flex; align-items: center; justify-content: center; gap: 9px;
+                min-height: 58px;
+                background: rgba(8, 16, 29, 0.95);
+                color: var(--cream);
+                text-decoration: none;
+                font-size: 0.92rem; font-weight: 600;
+                letter-spacing: 0.06em;
+            }
+            .mobile-bar a.primary { background: linear-gradient(135deg, #e6b667, #c39443); color: #0e1728; }
+            .mobile-bar svg { width: 18px; height: 18px; }
+            .call-fab { bottom: 76px; }
+            .back-to-top { bottom: 146px; }
+            .demo-badge { bottom: 72px; }
+        }
+
+        .demo-badge {
+            position: fixed;
+            left: 16px; bottom: 16px;
+            z-index: 1100;
+            display: flex; align-items: center; gap: 10px;
+            padding: 9px 10px 9px 16px;
+            border-radius: 980px;
+            background: rgba(8, 16, 29, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.75rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .demo-badge button {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            border: none; cursor: pointer;
+            background: rgba(242, 246, 251, 0.1);
+            color: var(--cream);
+            font-size: 0.95rem; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .demo-badge button:hover { background: rgba(242, 246, 251, 0.22); }
+        .demo-badge.hidden { display: none; }
+
+        .back-to-top {
+            position: fixed;
+            right: 22px; bottom: 92px;
+            z-index: 1090;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: rgba(8, 16, 29, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--gold-soft);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.3s;
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: var(--gold); }
+
+        /* ================================
+           RESPONSIVE
+           ================================ */
+        @media (max-width: 900px) {
+            .collections-grid, .edit-grid, .visit-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-grid { grid-template-columns: 1fr; }
+            .story-art { max-width: 440px; margin: 0 auto; aspect-ratio: 4 / 3; }
+        }
+
+        @media (max-width: 760px) {
+            .nav-hamburger { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 100%; left: 0; right: 0;
+                flex-direction: column; align-items: stretch;
+                gap: 0;
+                background: rgba(8, 16, 29, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line);
+                padding: 12px 24px 24px;
+                transform: translateY(-12px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: transform 0.35s var(--ease-lux), opacity 0.3s ease, visibility 0s linear 0.35s;
+            }
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transition: transform 0.35s var(--ease-lux), opacity 0.3s ease;
+            }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(230, 182, 103, 0.08); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { margin-top: 14px; text-align: center; padding: 14px 22px !important; }
+        }
+
+        @media (max-width: 560px) {
+            .collections-grid, .edit-grid, .visit-grid { grid-template-columns: 1fr; }
+            .hero { padding: 110px 20px 70px; }
+            .hero-ctas .btn { width: 100%; }
+            .wave-band { height: 70px; }
+            .orb { filter: blur(70px); opacity: 0.4; }
+            .container { padding: 0 20px; }
+            .stats-grid { gap: 8px; }
+            .stat { padding: 26px 10px; }
+            .pitch-strip { border-radius: 24px; padding: 18px 20px; }
+            .back-to-top { right: 18px; bottom: 90px; }
+            .footer { padding-bottom: 130px; }
+        }
+
+        /* ================================
+           REDUCED MOTION
+           ================================ */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; }
+            .wave-band .drift-a, .wave-band .drift-b { animation: none !important; }
+            .orb { animation: none !important; }
+            .call-fab { animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="utility-strip">
+            <div class="utility-inner">
+                <span class="u-hide">Civil Lines Road, Gonda &middot; Opp. Bhagat Singh Inter College</span>
+                <span>Open Daily 11 am &ndash; 10 pm &middot; <a href="tel:+918048794463">+91 80487 94463</a></span>
+            </div>
+        </div>
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="Lenskart - Civil Lines Road Gonda — home">
+                <svg class="nav-logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#f2d6a4"/>
+                            <stop offset="1" stop-color="#6fb6d6"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="13" cy="21" r="7.5" fill="none" stroke="url(#logoGrad)" stroke-width="1.7"/>
+                    <circle cx="28" cy="21" r="7.5" fill="none" stroke="url(#logoGrad)" stroke-width="1.7"/>
+                    <path d="M20.5 20.5 Q20.5 18.4 23 18.6 M5.5 21 Q3.5 18 4.5 15.5 M35.5 21 Q37.5 18 36.5 15.5"
+                          fill="none" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="nav-logo-name">Lenskart <em>Gonda</em></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#collections">What We Stock</a>
+                <a href="#eyewear">Eye Test</a>
+                <a href="#visit">Visit Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="tel:+918048794463" class="nav-cta">Call the Store</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="container">
+            <p class="hero-badge">Eyeglasses &middot; Sunglasses &middot; Contact Lenses &middot; Gonda</p>
+            <h1 class="hero-headline">
+                <span class="line">See Gonda</span>
+                <span class="line gradient-text">The Way It Deserves.</span>
+            </h1>
+            <p class="hero-subtext">Lenskart on Civil Lines Road — India's largest eyewear chain, now a short walk from your street. Eye testing, branded frames and contact lenses, open every day from 11 am to 10 pm.</p>
+            <div class="hero-ctas">
+                <a href="#eyewear" class="btn btn-primary">Book an Eye Test</a>
+                <a href="#visit" class="btn btn-secondary">Visit the Store</a>
+            </div>
+            <a href="#story" class="hero-scroll-hint" aria-label="Scroll to the store story">
+                <span>The Store</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- WAVE BAND DIVIDER (signature) -->
+    <div class="wave-band" aria-hidden="true">
+        <svg viewBox="0 0 2880 110" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveGradA" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#e6b667" stop-opacity="0.16"/>
+                    <stop offset="0.5" stop-color="#6fb6d6" stop-opacity="0.30"/>
+                    <stop offset="1" stop-color="#e6b667" stop-opacity="0.16"/>
+                </linearGradient>
+                <linearGradient id="waveGradB" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#f2d6a4" stop-opacity="0.08"/>
+                    <stop offset="0.5" stop-color="#e6b667" stop-opacity="0.18"/>
+                    <stop offset="1" stop-color="#f2d6a4" stop-opacity="0.08"/>
+                </linearGradient>
+            </defs>
+            <g class="drift-a">
+                <path fill="url(#waveGradA)" d="M0 62 C 180 22, 360 22, 540 58 S 900 96, 1080 60 S 1260 22, 1440 62 C 1620 22, 1800 22, 1980 58 S 2340 96, 2520 60 S 2700 22, 2880 62 L 2880 110 L 0 110 Z"/>
+            </g>
+            <g class="drift-b">
+                <path fill="url(#waveGradB)" d="M0 78 C 240 44, 480 44, 720 76 S 1200 104, 1440 78 C 1680 44, 1920 44, 2160 76 S 2640 104, 2880 78 L 2880 110 L 0 110 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="section-kicker" style="text-align:left">The Store</span>
+                    <h2>Gonda's Own <span class="gradient-text">Lenskart Store.</span></h2>
+                    <p>For years, a proper eye test and a branded frame meant a trip to Lucknow. <strong>Not any more.</strong> Lenskart - Civil Lines Road Gonda brings the country's largest eyewear chain to the middle of the city — opposite Shaheed-e-Azam Bhagat Singh Inter College, on the road you already pass every day.</p>
+                    <p>Same catalogue, same lens quality, same warranty as any Lenskart in the country. The difference is that you can walk in, try thirty frames on your own face, and walk out wearing the right one.</p>
+                    <p><strong>Open eleven hours a day, seven days a week.</strong> Come after work. We will still be here.</p>
+                </div>
+                <div class="story-art reveal" aria-hidden="true">
+                    <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+                        <defs>
+                            <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#e6b667" stop-opacity="0.5"/>
+                                <stop offset="1" stop-color="#6fb6d6" stop-opacity="0.14"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Stacked spectacle frames -->
+                        <g stroke="url(#frameGrad)" fill="none" stroke-linecap="round">
+                            <g opacity="0.95" stroke-width="7">
+                                <rect x="66" y="132" width="118" height="80" rx="26"/>
+                                <rect x="216" y="132" width="118" height="80" rx="26"/>
+                                <path d="M184 166 q16 -14 32 0 M66 152 q-34 -18 -46 -44 M334 152 q34 -18 46 -44"/>
+                            </g>
+                            <g opacity="0.55" stroke-width="6">
+                                <circle cx="126" cy="300" r="46"/>
+                                <circle cx="274" cy="300" r="46"/>
+                                <path d="M172 296 q28 -12 56 0 M80 300 q-40 -14 -54 -42 M320 300 q40 -14 54 -42"/>
+                            </g>
+                            <g opacity="0.35" stroke-width="8">
+                                <path d="M62 404 h124 a20 20 0 0 1 -124 0 M214 404 h124 a20 20 0 0 1 -124 0"/>
+                                <path d="M186 404 q14 -10 28 0"/>
+                            </g>
+                        </g>
+                        <circle cx="126" cy="172" r="3" fill="#f2d6a4" opacity="0.9"/>
+                        <circle cx="274" cy="300" r="2.4" fill="#f2d6a4" opacity="0.7"/>
+                        <circle cx="200" cy="452" r="2.6" fill="#f2d6a4" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE BAND DIVIDER -->
+    <div class="wave-band" aria-hidden="true">
+        <svg viewBox="0 0 2880 110" preserveAspectRatio="none">
+            <g class="drift-b">
+                <path fill="url(#waveGradA)" d="M0 58 C 200 92, 400 92, 600 60 S 1000 20, 1200 56 S 1400 92, 1440 58 C 1640 92, 1840 92, 2040 60 S 2440 20, 2640 56 S 2840 92, 2880 58 L 2880 0 L 0 0 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- COLLECTIONS -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <span class="section-kicker">What We Stock</span>
+            <h2 class="section-headline">Everything for <span class="gradient-text">Your Eyes.</span></h2>
+            <p class="section-sub">The full Lenskart range, on shelves you can actually reach — plus the eye test that makes any of it work.</p>
+            <div class="collections-grid">
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <circle cx="16" cy="30" r="9" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="38" cy="30" r="9" stroke="currentColor" stroke-width="2"/>
+                        <path d="M25 29 q2 -3 4 0 M7 28 Q4 21 8 16 M47 28 Q50 21 46 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Prescription Eyeglasses</h3>
+                    <p>Hundreds of frames — metal, acetate, rimless, kids' sizes — fitted with the lens power your test says you need.</p>
+                </article>
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <rect x="8" y="11" width="38" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 44 h14 M27 37 v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M18 24 h4 M25 20 v8 M32 24 h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+                    </svg>
+                    <h3>Computer &amp; Blue-Cut Lenses</h3>
+                    <p>For the ten-hour screen days. Blue-light filtering and anti-glare coatings that make evenings easier on the eyes.</p>
+                </article>
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <path d="M8 24 h12 a6 6 0 0 1 -12 0 Z M34 24 h12 a6 6 0 0 1 -12 0 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M20 24 q7 -4 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M27 6 v5 M12 11 l3 3 M42 11 l-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                    <h3>Sunglasses</h3>
+                    <p>UV-protected shades in the shapes people actually ask for — with powered sunglasses available on the same frames.</p>
+                </article>
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <path d="M27 10 c 11 0 17 8 17 17 0 10 -7 17 -17 17 -10 0 -17 -7 -17 -17 0 -9 6 -17 17 -17 Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M18 24 q3 -8 11 -9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+                    </svg>
+                    <h3>Contact Lenses</h3>
+                    <p>Daily, monthly and coloured lenses, with solution and cases — and a proper fitting before your first pair.</p>
+                </article>
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <circle cx="27" cy="27" r="17" stroke="currentColor" stroke-width="2"/>
+                        <path d="M11 21 h32 M13 33 h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+                        <path d="M27 10 v34" stroke="currentColor" stroke-width="1.4" opacity="0.45"/>
+                    </svg>
+                    <h3>Progressive &amp; Bifocal Lenses</h3>
+                    <p>One pair for reading, screen and distance — measured carefully so the transition feels natural from day one.</p>
+                </article>
+                <article class="collection-card reveal">
+                    <svg class="collection-icon" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                        <path d="M6 27 c 7 -10 14 -15 21 -15 s 14 5 21 15 c -7 10 -14 15 -21 15 s -14 -5 -21 -15 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <circle cx="27" cy="27" r="6" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h3>Eye Testing &amp; Fitting</h3>
+                    <p>In-store eye testing, frame adjustment, nose-pad and screw fixes. Bring the glasses in — most fixes take minutes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE BAND DIVIDER -->
+    <div class="wave-band" aria-hidden="true">
+        <svg viewBox="0 0 2880 110" preserveAspectRatio="none">
+            <g class="drift-a">
+                <path fill="url(#waveGradB)" d="M0 62 C 180 22, 360 22, 540 58 S 900 96, 1080 60 S 1260 22, 1440 62 C 1620 22, 1800 22, 1980 58 S 2340 96, 2520 60 S 2700 22, 2880 62 L 2880 110 L 0 110 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- STATS BAND [STATS] -->
+    <section class="stats" aria-label="Lenskart - Civil Lines Road Gonda at a glance">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value">4.8&#9733;</span>
+                    <span class="stat-label">Store Rating</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value" data-count="143" data-suffix="">143</span>
+                    <span class="stat-label">Customer Reviews</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">11 &ndash; 10</span>
+                    <span class="stat-label">Open Every Day</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Gonda's Only</span>
+                    <span class="stat-label">National Eyewear Chain</span>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:26px; font-size:0.82rem; color:var(--muted);">Rating and review count as published on the Lenskart store listing for this outlet.</p>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="Why shop here">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7l10-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 15l3 3 6-6.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Genuine Lenskart Warranty</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M2 15c4-6 8-9 13-9s9 3 13 9c-4 6-8 9-13 9s-9-3-13-9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="15" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
+                    <span>In-Store Eye Testing</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="1.8"/><path d="M15 8v7l5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <span>Open 11 am &ndash; 10 pm</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M15 3C9.5 3 5 7.3 5 12.6 5 20 15 27 15 27s10-7 10-14.4C25 7.3 20.5 3 15 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="12.5" r="3.4" stroke="currentColor" stroke-width="1.8"/></svg>
+                    <span>On Civil Lines Road</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE SECTION: THE EYE-TEST JOURNEY -->
+    <section class="edit" id="eyewear">
+        <div class="container">
+            <span class="section-kicker">Start Here</span>
+            <h2 class="section-headline">The Eye Test, <span class="gradient-text">Then the Frame.</span></h2>
+            <p class="section-sub">Most people in Gonda are wearing a power that is two years out of date. Twenty minutes in the store fixes that — and everything after it gets easier.</p>
+            <div class="edit-grid">
+                <article class="swatch-card reveal">
+                    <div class="swatch-scene scene-clear" aria-hidden="true"></div>
+                    <div class="swatch-body">
+                        <h3>Get Your Eyes Tested</h3>
+                        <p>A proper in-store test on Lenskart equipment. Walk in any day between 11 am and 10 pm, or call ahead and we will keep a slot free.</p>
+                        <span class="swatch-tag">Step One</span>
+                    </div>
+                </article>
+                <article class="swatch-card reveal">
+                    <div class="swatch-scene scene-blue" aria-hidden="true"></div>
+                    <div class="swatch-body">
+                        <h3>Try Frames on Your Face</h3>
+                        <p>A screen cannot tell you how a frame sits on your nose. Try as many as you like — nobody here is counting.</p>
+                        <span class="swatch-tag">Step Two</span>
+                    </div>
+                </article>
+                <article class="swatch-card reveal">
+                    <div class="swatch-scene scene-shade" aria-hidden="true"></div>
+                    <div class="swatch-body">
+                        <h3>Collect &amp; Come Back</h3>
+                        <p>Lenses fitted, frame adjusted to your face, and a store in your own city for every tightening and repair after that.</p>
+                        <span class="swatch-tag">Step Three</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE BAND DIVIDER -->
+    <div class="wave-band" aria-hidden="true">
+        <svg viewBox="0 0 2880 110" preserveAspectRatio="none">
+            <g class="drift-a">
+                <path fill="url(#waveGradB)" d="M0 58 C 200 92, 400 92, 600 60 S 1000 20, 1200 56 S 1400 92, 1440 58 C 1640 92, 1840 92, 2040 60 S 2440 20, 2640 56 S 2840 92, 2880 58 L 2880 0 L 0 0 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- AUTOMATION TEASER: NEW COLLECTION ALERTS -->
+    <section class="automation" id="alerts">
+        <div class="container">
+            <span class="section-kicker">Book in Thirty Seconds</span>
+            <h2 class="section-headline">Reserve Your <span class="gradient-text">Eye Test Slot.</span></h2>
+            <p class="section-sub">Leave your number and the time that suits you. The store confirms on WhatsApp — and reminds you again next year, when your power is due for a check.</p>
+
+            <div class="automation-shell">
+                <form class="automation-form" id="alert-form" novalidate>
+                    <div class="field">
+                        <label for="alert-name">Your Name</label>
+                        <input type="text" id="alert-name" name="name" placeholder="e.g. Ankit Srivastava" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="alert-phone">WhatsApp Number</label>
+                        <input type="tel" id="alert-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+                    </div>
+                    <div class="field">
+                        <label for="alert-interest">I'm Coming In For</label>
+                        <select id="alert-interest" name="interest">
+                            <option value="eyetest" selected>An Eye Test</option>
+                            <option value="glasses">New Eyeglasses</option>
+                            <option value="lenses">Contact Lenses</option>
+                            <option value="sunglasses">Sunglasses</option>
+                            <option value="repair">Repair or Adjustment</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Request My Slot</button>
+                    <p class="form-note">Free. No spam. One message to stop any time.</p>
+                </form>
+
+                <div class="automation-success" id="alert-success" role="status" aria-live="polite">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg viewBox="0 0 34 34" fill="none"><path d="M7 18l7 7 13-15" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Request Received.</h3>
+                    <p>This is how your customers would book — <strong>automatically</strong>. Slot confirmations, "your glasses are ready" messages and yearly eye-test reminders all leave from your own number, without a single staff phone call.</p>
+                </div>
+            </div>
+
+            <div class="pitch-strip reveal">
+                <span class="wa-dot" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .7-.2 1.4z"/></svg>
+                </span>
+                <span>Automation demo &mdash; eye-test bookings, spectacle-ready alerts, contact-lens refill reminders and annual check-up nudges can all run on the store's own WhatsApp number.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE BAND DIVIDER -->
+    <div class="wave-band" aria-hidden="true">
+        <svg viewBox="0 0 2880 110" preserveAspectRatio="none">
+            <g class="drift-b">
+                <path fill="url(#waveGradA)" d="M0 62 C 180 22, 360 22, 540 58 S 900 96, 1080 60 S 1260 22, 1440 62 C 1620 22, 1800 22, 1980 58 S 2340 96, 2520 60 S 2700 22, 2880 62 L 2880 110 L 0 110 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- VISIT / CONTACT [ADDRESS/HOURS/MAP] -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="section-kicker">Find Us</span>
+            <h2 class="section-headline">Visit <span class="gradient-text">the Store.</span></h2>
+            <p class="section-sub">Civil Lines Road, directly opposite Shaheed-e-Azam Bhagat Singh Inter College. Eleven hours a day, every day of the week.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M20 4c-6 0-11 4.8-11 11 0 8 11 21 11 21s11-13 11-21c0-6.2-5-11-11-11z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="20" cy="15" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h3>The Store</h3>
+                    <p>H. No. 244, Civil Lines Road<br>Opposite Shaheed-e-Azam Bhagat Singh Inter College<br>Gonda, Uttar Pradesh 271001</p>
+                </div>
+                <div class="visit-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 11v9l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Hours</h3>
+                    <p>Open every day<br>11:00 am &ndash; 10:00 pm</p>
+                </div>
+                <div class="visit-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M12 6h4l3 7-3 2c1.5 3 4 5.5 7 7l2-3 7 3v4c0 2-1.6 3.6-3.6 3.4C17.6 28.6 11.4 22.4 10.6 11.6 10.4 9.6 12 8 14 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Call the Store</h3>
+                    <p><a href="tel:+918048794463">+91 80487 94463</a><br>Ask for an eye-test slot</p>
+                </div>
+            </div>
+            <div class="visit-directions">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Lenskart%20-%20Civil%20Lines%20Road%20Gonda%20Gonda" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ [FAQ] -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="section-kicker">Good Questions</span>
+            <h2 class="section-headline">Asked <span class="gradient-text">Often.</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do I need an appointment for an eye test?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>No. Walk in any day between 11 am and 10 pm and the team will test your eyes in store. If you would rather not wait, call ahead on +91 80487 94463 or leave your number above and we will keep a slot open.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How long does it take to get my glasses?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>It depends on the lens. Standard powers are usually quick; progressive, high-power and specially coated lenses take longer because they are made to order. The team will tell you the honest timeline at the counter before you pay.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Are the frames and lenses the same as Lenskart online?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Yes — this is a Lenskart store, running the same catalogue, the same lens options and the same warranty as any other Lenskart in the country. The difference is that here you can try the frame on your face first.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Do you fit contact lenses for first-time users?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Yes. Contact lenses need a proper fitting and a short lesson in handling them — the team does both in store, and stocks daily, monthly and coloured lenses along with solution and cases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">My glasses are loose or a screw has come out. Can you help?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Bring them in. Frame adjustments, nose-pad replacements and screw tightening are quick counter jobs — that is the real advantage of having the store in your own city instead of ordering everything online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2 class="section-headline">Twenty Minutes. <span class="gradient-text">Clearer Everything.</span></h2>
+            <p class="cta-subtext">Walk in for an eye test today &mdash; Civil Lines Road, Gonda. Open until 10 pm.</p>
+            <a href="tel:+918048794463" class="btn btn-primary btn-large">Call +91 80487 94463</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="tel:+918048794463" class="call-fab" aria-label="Call Lenskart - Civil Lines Road Gonda">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l2 4.5-2 1.4c1 2 2.6 3.6 4.6 4.6l1.4-2 4.5 2v3c0 1.3-1.1 2.4-2.4 2.3C11.4 18.2 5.8 12.6 5.2 5.4 5.1 4.1 6.2 3 7.5 3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <div class="mobile-bar" aria-label="Quick actions">
+        <a class="primary" href="tel:+918048794463">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.5 3h3l2 4.5-2 1.4c1 2 2.6 3.6 4.6 4.6l1.4-2 4.5 2v3c0 1.3-1.1 2.4-2.4 2.3C11.4 18.2 5.8 12.6 5.2 5.4 5.1 4.1 6.2 3 7.5 3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            Call Store
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Lenskart%20-%20Civil%20Lines%20Road%20Gonda%20Gonda" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C7.9 2 4.5 5.2 4.5 9.2 4.5 14.8 12 22 12 22s7.5-7.2 7.5-12.8C19.5 5.2 16.1 2 12 2z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.6"/></svg>
+            Directions
+        </a>
+    </div>
+
+    <!-- DEMO BADGE (dismissible) -->
+    <div class="demo-badge" id="demo-badge">
+        <span>Concept Demo</span>
+        <button id="demo-badge-close" aria-label="Dismiss demo badge">&times;</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Lenskart <em>Gonda</em></p>
+            <div class="footer-links">
+                <a href="#collections">What We Stock</a>
+                <a href="#eyewear">Eye Test</a>
+                <a href="#alerts">Book a Slot</a>
+                <a href="#visit">Visit Us</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-copy">Lenskart - Civil Lines Road Gonda &middot; H. No. 244, Civil Lines Road, Gonda, Uttar Pradesh 271001 &middot; <a href="tel:+918048794463" style="color:inherit;">+91 80487 94463</a></p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; an independent local landing-page concept for Lenskart - Civil Lines Road Gonda. Not the official website of Lenskart - Civil Lines Road Gonda, and not affiliated with or endorsed by Lenskart.</p>
+        </div>
+    </footer>
+
+    <!-- Animation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        document.body.classList.add('js');
+
+        var prefersReduced = window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Nav: scrolled state ---------- */
+        var nav = document.getElementById('nav');
+        function onScrollNav() {
+            if (!nav) return;
+            if (window.scrollY > 24) { nav.classList.add('scrolled'); }
+            else { nav.classList.remove('scrolled'); }
+        }
+        window.addEventListener('scroll', onScrollNav, { passive: true });
+        onScrollNav();
+
+        /* ---------- Nav: hamburger ---------- */
+        var toggle = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', function () {
+                var open = menu.classList.toggle('open');
+                toggle.classList.toggle('active', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            menu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        /* ---------- FAQ accordion ---------- */
+        var questions = document.querySelectorAll('.faq-question');
+        questions.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                questions.forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var a = document.getElementById(other.getAttribute('aria-controls'));
+                        if (a) a.style.maxHeight = '0px';
+                    }
+                });
+                btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                if (answer) {
+                    answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        /* ---------- Automation mock: collection alerts ---------- */
+        var form = document.getElementById('alert-form');
+        var success = document.getElementById('alert-success');
+        if (form && success) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var name = document.getElementById('alert-name');
+                var phone = document.getElementById('alert-phone');
+                var valid = true;
+                if (!name.value.trim()) { name.focus(); valid = false; }
+                else if (!/^[0-9+\s-]{10,14}$/.test(phone.value.trim())) { phone.focus(); valid = false; }
+                if (!valid) {
+                    form.style.animation = 'none';
+                    void form.offsetWidth; /* reflow to restart */
+                    form.style.animation = '';
+                    return;
+                }
+                form.style.display = 'none';
+                success.classList.add('visible');
+            });
+        }
+
+        /* ---------- Back to top ---------- */
+        var backToTop = document.getElementById('back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', function () {
+                backToTop.classList.toggle('visible', window.scrollY > 700);
+            }, { passive: true });
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------- Demo badge dismiss ---------- */
+        var badge = document.getElementById('demo-badge');
+        var badgeClose = document.getElementById('demo-badge-close');
+        if (badge && badgeClose) {
+            badgeClose.addEventListener('click', function () {
+                badge.classList.add('hidden');
+            });
+        }
+
+        /* ---------- CountUp counters (guarded) ---------- */
+        function initCounters() {
+            var counters = document.querySelectorAll('.stat-value[data-count]');
+            if (!counters.length) return;
+            var hasCountUp = typeof window.countUp !== 'undefined' && window.countUp.CountUp;
+            if (!hasCountUp || prefersReduced || !('IntersectionObserver' in window)) {
+                return; /* static text already in markup */
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    io.unobserve(el);
+                    var target = parseInt(el.getAttribute('data-count'), 10);
+                    var suffix = el.getAttribute('data-suffix') || '';
+                    try {
+                        var c = new window.countUp.CountUp(el, target, {
+                            duration: 2.2,
+                            suffix: suffix,
+                            separator: ','
+                        });
+                        if (!c.error) { c.start(); }
+                    } catch (err) { /* leave static value */ }
+                });
+            }, { threshold: 0.4 });
+            counters.forEach(function (el) { io.observe(el); });
+        }
+
+        /* ---------- GSAP scroll reveals (guarded — page fully readable without) ---------- */
+        function initMotion() {
+            if (prefersReduced) return;
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') {
+                return; /* CDN failed — everything stays visible */
+            }
+            var gsap = window.gsap;
+            gsap.registerPlugin(window.ScrollTrigger);
+
+            /* Hero entrance */
+            gsap.from('.hero-badge',    { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 });
+            gsap.from('.hero-headline .line', { y: 40, opacity: 0, duration: 1.1, ease: 'power3.out', stagger: 0.15, delay: 0.25 });
+            gsap.from('.hero-subtext',  { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.6 });
+            gsap.from('.hero-ctas',     { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.75 });
+            gsap.from('.hero-scroll-hint', { opacity: 0, duration: 1, delay: 1.2 });
+
+            /* Scroll reveals */
+            gsap.utils.toArray('.reveal').forEach(function (el, i) {
+                gsap.from(el, {
+                    y: 36,
+                    opacity: 0,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    delay: (i % 3) * 0.08,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            /* Section headlines drift up gently */
+            gsap.utils.toArray('.section-headline').forEach(function (el) {
+                gsap.from(el, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: { trigger: el, start: 'top 90%' }
+                });
+            });
+
+            /* Signature motion: wave bands swell slightly as they enter view */
+            gsap.utils.toArray('.wave-band').forEach(function (el) {
+                gsap.fromTo(el, { scaleY: 0.6, transformOrigin: 'center bottom' },
+                    {
+                        scaleY: 1,
+                        duration: 1.4,
+                        ease: 'power2.out',
+                        scrollTrigger: { trigger: el, start: 'top 95%' }
+                    });
+            });
+        }
+
+        /* Defer library-dependent init until CDN scripts have executed */
+        if (document.readyState === 'complete') {
+            initMotion(); initCounters();
+        } else {
+            window.addEventListener('load', function () {
+                initMotion(); initCounters();
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

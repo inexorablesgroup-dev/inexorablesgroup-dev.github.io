@@ -1,0 +1,1742 @@
+<!-- home-retail template, customized for: Aaryan Enterprises, Gonda (tiles, marble & sanitaryware)
+Phone/WhatsApp: 6393612137 (verified from Google listing). Stats: 4.9 rating, ~190 Google reviews (verified).
+NOT verified, deliberately absent from the page: owner name, email, store hours, brand tie-ups, delivery charges.
+-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Aaryan Enterprises — Tiles, Marble &amp; Sanitaryware Showroom, Gonda</title>
+    <meta name="description" content="Tiles, marble and sanitaryware under one roof in Gonda. A full showroom to walk, compare and choose. Pick up in store or get it delivered to your site. Design demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================
+           AARYAN ENTERPRISES — home-retail template
+           Charcoal #121212 · Copper #d97941 · Light gray text
+           Inter (tight) body · Space Grotesk display
+           ========================================================== */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #121212;
+            --bg-deep: #0c0c0c;
+            --bg-raise: #1a1a1a;
+            --copper: #d97941;
+            --copper-soft: #e8a87c;
+            --copper-pale: #f4c18a;
+            --text: #e8e6e3;
+            --muted: #9a958f;
+            --line: rgba(255, 255, 255, 0.07);
+            --card: rgba(255, 255, 255, 0.025);
+            --glow: rgba(217, 121, 65, 0.28);
+            --radius: 20px;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.011em;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { position: relative; }
+        .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+        .section-sub {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--muted);
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 56px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--copper), var(--copper-pale), var(--copper-soft), var(--copper));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-size: 250% auto;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -48px;
+            left: 16px;
+            z-index: 2000;
+            background: var(--copper);
+            color: #121212;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: top 0.25s ease;
+        }
+        .skip-link:focus { top: 12px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 14px 32px;
+            border-radius: 980px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b;
+            box-shadow: 0 0 30px rgba(217, 121, 65, 0.22);
+        }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 44px var(--glow); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid rgba(255, 255, 255, 0.22); }
+        .btn-secondary:hover { border-color: rgba(232, 168, 124, 0.6); background: rgba(217, 121, 65, 0.08); transform: translateY(-2px); }
+        .btn-large { min-height: 60px; padding: 18px 44px; font-size: 1.1rem; }
+
+        /* ==================== NAV ==================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.68);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .nav.scrolled { background: rgba(12, 12, 12, 0.92); box-shadow: 0 1px 30px rgba(217, 121, 65, 0.1); }
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 66px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--copper), #b0561f);
+            display: grid;
+            place-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #16100b;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.35);
+        }
+
+        .nav-logo-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .nav-logo-name span { color: var(--copper-soft); }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b !important;
+            padding: 10px 22px !important;
+            border-radius: 980px;
+            font-weight: 600;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 30px rgba(217, 121, 65, 0.45); transform: translateY(-1px); }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 46px;
+            height: 46px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.35s var(--ease-out), opacity 0.25s ease;
+        }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ==================== AMBIENT ORBS ==================== */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+            animation: orbDrift 22s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 480px;
+            height: 480px;
+            top: -12%;
+            right: -10%;
+            background: radial-gradient(circle, rgba(217, 121, 65, 0.22), transparent 70%);
+        }
+
+        .orb-2 {
+            width: 420px;
+            height: 420px;
+            bottom: -14%;
+            left: -12%;
+            background: radial-gradient(circle, rgba(232, 168, 124, 0.12), transparent 70%);
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 320px;
+            height: 320px;
+            top: 44%;
+            left: 58%;
+            background: radial-gradient(circle, rgba(192, 95, 43, 0.12), transparent 70%);
+            animation-delay: -15s;
+        }
+
+        @keyframes orbDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-50px, 40px) scale(1.12); }
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 24px 90px;
+            overflow: hidden;
+            background-color: var(--bg);
+            /* dark brand tint layers sit ABOVE the photo so headline contrast never depends on the image */
+            background-image:
+                radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.18), transparent 65%),
+                linear-gradient(180deg, rgba(10, 10, 10, 0.90) 0%, rgba(12, 12, 12, 0.72) 46%, rgba(12, 12, 12, 0.95) 100%),
+                url('https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-repeat: no-repeat;
+            background-size: cover, cover, cover;
+            background-position: center, center, center 45%;
+            animation: heroPan 26s ease-in-out infinite alternate;
+        }
+
+        /* Ken Burns — slow drift on the photo layer only; killed by prefers-reduced-motion */
+        @keyframes heroPan {
+            from { background-position: center, center, center 36%; }
+            to   { background-position: center, center, center 60%; }
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(217, 121, 65, 0.07);
+            padding: 9px 22px;
+            border-radius: 980px;
+            margin-bottom: 30px;
+        }
+        .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 24px; }
+        .hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-scrollhint {
+            margin-top: 72px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .hero-scrollhint::after {
+            content: '';
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(to bottom, var(--copper), transparent);
+            animation: hintPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes hintPulse {
+            0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ==================== STORY ==================== */
+        .story { padding: 130px 24px; background: var(--bg-deep); }
+        .story::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 50%, rgba(217, 121, 65, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+        .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+        .story-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 52ch; }
+        .story-copy p strong { color: var(--text); font-weight: 600; }
+        .story-panel {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.10), transparent 45%),
+                var(--bg-raise);
+            padding: 40px 36px;
+            display: grid;
+            gap: 26px;
+        }
+        .story-point { display: flex; gap: 16px; align-items: flex-start; }
+        .story-point-icon {
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 121, 65, 0.12);
+            border: 1px solid rgba(217, 121, 65, 0.25);
+        }
+        .story-point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+        .story-point p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== CATEGORY MOSAIC (signature) ==================== */
+        .mosaic { padding: 130px 24px; background: var(--bg); }
+        .mosaic::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 85% 10%, rgba(232, 168, 124, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .mosaic .container { position: relative; z-index: 1; }
+        .mosaic-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 18px; }
+        .mosaic-tile {
+            position: relative;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            overflow: hidden;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-decoration: none;
+            background: var(--bg-raise);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .mosaic-tile:hover {
+            border-color: rgba(217, 121, 65, 0.4);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(217, 121, 65, 0.1);
+        }
+        .mosaic-tile.tile-lg { grid-column: span 2; grid-row: span 2; }
+        .mosaic-tile.tile-wide { grid-column: span 2; }
+        .tile-scene { position: absolute; inset: 0; pointer-events: none; }
+        .tile-scene svg {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 84px;
+            height: 84px;
+            opacity: 0.85;
+            transition: transform 0.5s var(--ease-out), opacity 0.4s ease;
+        }
+        .tile-lg .tile-scene svg { width: 132px; height: 132px; top: 26px; right: 26px; }
+        .mosaic-tile:hover .tile-scene svg { transform: translateY(-6px) scale(1.06); opacity: 1; }
+        .tile-1 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(18, 18, 18, 0) 60%); }
+        .tile-2 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.13), rgba(18, 18, 18, 0) 60%); }
+        .tile-3 .tile-scene { background: linear-gradient(150deg, rgba(192, 95, 43, 0.16), rgba(18, 18, 18, 0) 60%); }
+        .tile-4 .tile-scene { background: linear-gradient(150deg, rgba(244, 193, 138, 0.12), rgba(18, 18, 18, 0) 60%); }
+        .tile-5 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.14), rgba(18, 18, 18, 0) 60%); }
+        .tile-6 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.15), rgba(18, 18, 18, 0) 60%); }
+        .tile-label { position: relative; z-index: 1; transform: translateZ(30px); }
+        .tile-label h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .tile-lg .tile-label h3 { font-size: 1.55rem; }
+        .tile-label p { font-size: 0.88rem; color: var(--muted); }
+        .tile-label .tile-cta {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+        }
+
+        /* ==================== PROMISE GRID ==================== */
+        .promise { padding: 130px 24px; background: var(--bg-deep); }
+        .promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .promise .container { position: relative; z-index: 1; }
+        .promise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .promise-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 26px;
+            text-align: left;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-3px) scale(1.03);
+            border-color: rgba(217, 121, 65, 0.35);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 34px rgba(217, 121, 65, 0.09);
+        }
+        .promise-card svg { width: 40px; height: 40px; margin-bottom: 18px; }
+        .promise-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+        .promise-card p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== STATS BAND ==================== */
+        .stats {
+            padding: 100px 24px;
+            background:
+                linear-gradient(180deg, rgba(217, 121, 65, 0.05), transparent 70%),
+                var(--bg);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stat-value {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--copper-soft), var(--copper-pale));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .stat-label { display: block; margin-top: 6px; font-size: 0.9rem; color: var(--muted); }
+
+        /* ==================== AUTOMATION MOCK ==================== */
+        .automation { padding: 130px 24px; background: var(--bg-deep); }
+        .automation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 80% 80%, rgba(37, 211, 102, 0.05), transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 10% 20%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .automation .container { position: relative; z-index: 1; }
+        .automation-shell {
+            max-width: 620px;
+            margin: 0 auto;
+            border-radius: 26px;
+            border: 1px solid rgba(217, 121, 65, 0.22);
+            background:
+                linear-gradient(160deg, rgba(217, 121, 65, 0.08), transparent 50%),
+                var(--bg-raise);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .automation-shell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--copper-soft), transparent);
+        }
+
+        .automation-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6fdb96;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            background: rgba(37, 211, 102, 0.07);
+            padding: 7px 16px;
+            border-radius: 980px;
+            margin-bottom: 22px;
+        }
+
+        .automation-tag .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: dotBlink 1.8s ease-in-out infinite;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .automation-shell h3 { font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: 8px; }
+        .automation-shell > p { color: var(--muted); font-size: 0.96rem; margin-bottom: 30px; }
+        .emi-form { display: grid; gap: 16px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-height: 50px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a958f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .field input::placeholder { color: rgba(154, 149, 143, 0.6); }
+        .field input:focus,
+        .field select:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(217, 121, 65, 0.18); }
+        .emi-submit {
+            margin-top: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #25D366, #128C4A);
+            color: #06170c;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.18);
+        }
+        .emi-submit:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3); }
+        .emi-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; }
+
+        /* success state */
+        .emi-success { display: none; text-align: center; padding: 24px 6px 8px; }
+        .emi-success.visible { display: block; animation: successIn 0.6s var(--ease-out); }
+
+        @keyframes successIn {
+            from { opacity: 0; transform: translateY(16px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .success-check {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            color: #25D366;
+            font-size: 2rem;
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+        }
+        .emi-success h4 { font-size: 1.3rem; margin-bottom: 10px; }
+        .emi-success p { color: var(--muted); font-size: 0.95rem; max-width: 40ch; margin: 0 auto 22px; }
+        .emi-success .pitch { color: var(--copper-soft); font-weight: 500; }
+        .automation-strip {
+            max-width: 620px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .automation-strip strong { color: var(--text); }
+
+        /* ==================== VISIT ==================== */
+        .visit { padding: 130px 24px; background: var(--bg); }
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .visit-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 30px;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-3px); border-color: rgba(217, 121, 65, 0.3); }
+        .visit-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+            margin-bottom: 12px;
+            color: var(--copper-soft);
+        }
+        .visit-card p, .visit-card a { color: var(--muted); font-size: 0.98rem; text-decoration: none; }
+        .visit-card a:hover { color: var(--text); }
+        .visit-card .visit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            min-height: 44px;
+            color: var(--copper);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .visit-card .visit-link:hover { color: var(--copper-pale); }
+
+        /* ==================== FAQ ==================== */
+        .faq { padding: 130px 24px; background: var(--bg-deep); }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            min-height: 60px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 24px 44px 24px 4px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--copper-soft); }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--copper);
+            transition: transform 0.35s var(--ease-out);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+        .faq-answer p { padding: 0 4px 26px; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
+
+        /* no-JS fallback: answers open */
+        html.no-js .faq-answer { max-height: none; }
+
+        /* ==================== FINAL CTA ==================== */
+        .final-cta {
+            padding: 150px 24px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse 60% 55% at 50% 100%, rgba(217, 121, 65, 0.13), transparent 70%),
+                var(--bg);
+        }
+        .final-cta .section-headline { margin-bottom: 16px; }
+        .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* ==================== FOOTER ==================== */
+        .footer { padding: 64px 24px 40px; background: var(--bg-deep); border-top: 1px solid var(--line); }
+        .footer-content { text-align: center; }
+        .footer-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 18px; }
+        .footer-name span { color: var(--copper-soft); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 26px;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-demo-notice {
+            font-size: 0.82rem;
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0 auto 12px;
+            line-height: 1.7;
+        }
+        .footer-demo-notice a { color: var(--copper-soft); text-decoration: none; }
+        .footer-copy { font-size: 0.8rem; color: rgba(154, 149, 143, 0.6); }
+
+        /* ==================== FLOATING UI ==================== */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 1100;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.35s var(--ease-out);
+            animation: waPulse 2.6s ease-in-out infinite;
+        }
+        .wa-float:hover { transform: translateY(-3px) scale(1.06); }
+        .wa-float svg { width: 30px; height: 30px; }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+            60% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+        }
+
+        .demo-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 22px;
+            z-index: 1100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 10px 9px 16px;
+            border-radius: 980px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(26, 26, 26, 0.72);
+            border: 1px solid rgba(217, 121, 65, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .demo-badge .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); }
+        .demo-badge button {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 50%;
+            transition: color 0.3s;
+        }
+        .demo-badge button:hover { color: var(--text); }
+        .demo-badge.hidden { display: none; }
+        .back-to-top {
+            position: fixed;
+            bottom: 94px;
+            right: 28px;
+            z-index: 1050;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--copper-soft);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: var(--copper); color: var(--copper-pale); }
+
+        /* ==================== EYEBROW LABELS ==================== */
+        .eyebrow {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .eyebrow.left { text-align: left; }
+
+        /* ==================== TRUST STRIP (under hero) ==================== */
+        .trust {
+            padding: 34px 24px;
+            background: var(--bg-deep);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px 32px;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+        .trust-item strong { display: block; color: var(--text); font-weight: 600; font-size: 0.95rem; }
+        .trust-item svg { flex: 0 0 auto; width: 26px; height: 26px; }
+
+        /* ==================== PHOTO FRAMES ==================== */
+        .photo-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            /* brand-gradient fallback stays visible if the photo never loads */
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.22), rgba(26, 26, 26, 0) 60%),
+                var(--bg-raise);
+        }
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.06) saturate(1.05);
+            transition: transform 0.7s var(--ease-out);
+        }
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(12, 12, 12, 0) 45%, rgba(12, 12, 12, 0.55) 100%);
+        }
+        .story-media { aspect-ratio: 4 / 5; margin-bottom: 22px; }
+        .story-media img { position: absolute; inset: 0; }
+        .story-right { display: block; }
+
+        /* photo layer inside mosaic category tiles */
+        .tile-photo {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            border-radius: inherit;
+        }
+        .tile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.55;
+            filter: sepia(0.06) saturate(1.05);
+            transition: transform 0.7s var(--ease-out), opacity 0.5s ease;
+        }
+        .tile-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(12, 12, 12, 0.45) 0%, rgba(12, 12, 12, 0.72) 55%, rgba(12, 12, 12, 0.92) 100%);
+        }
+        .mosaic-tile:hover .tile-photo img { transform: scale(1.06); opacity: 0.7; }
+        .mosaic-tile .tile-scene { z-index: 1; }
+        .mosaic-tile .tile-label { z-index: 2; }
+
+        /* ==================== GALLERY STRIP ==================== */
+        .gallery { padding: 110px 24px; background: var(--bg); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .gallery-grid .photo-frame { aspect-ratio: 3 / 2; }
+        .gallery-grid .photo-frame img { position: absolute; inset: 0; }
+        .gallery-grid .photo-frame:hover img { transform: scale(1.05); }
+        .gallery-caption {
+            position: absolute;
+            left: 18px;
+            bottom: 14px;
+            z-index: 1;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text);
+            text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        /* ==================== STICKY MOBILE ACTION BAR ==================== */
+        .mobile-bar { display: none; }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 960px) {
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .mosaic-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+            .promise-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-grid { grid-template-columns: 1fr; gap: 44px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            .nav-links {
+                position: fixed;
+                top: 66px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(12, 12, 12, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line);
+                padding: 12px 24px 24px;
+                transform: translateY(-12px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: transform 0.35s var(--ease-out), opacity 0.3s ease, visibility 0.3s;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { margin-top: 14px; text-align: center; }
+            .nav-hamburger { display: flex; }
+
+            /* no-JS: keep menu reachable (shown statically below the bar) */
+            html.no-js .nav-links {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+            html.no-js .nav-container { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+            html.no-js .nav-hamburger { display: none; }
+        }
+
+        @media (max-width: 560px) {
+            .mosaic-grid { grid-template-columns: 1fr; grid-auto-rows: 168px; }
+            .mosaic-tile.tile-lg,
+            .mosaic-tile.tile-wide { grid-column: span 1; grid-row: span 1; }
+            .tile-lg .tile-scene svg { width: 90px; height: 90px; }
+            .promise-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .visit-grid { grid-template-columns: 1fr; }
+            .story-panel { padding: 30px 24px; }
+            .automation-shell { padding: 34px 24px; }
+            .hero-ctas .btn { width: 100%; }
+            .orb { filter: blur(60px); opacity: 0.4; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .hero { min-height: 78vh; }
+        }
+
+        /* Sticky bottom action bar — small screens only */
+        @media (max-width: 760px) {
+            body { padding-bottom: 64px; }
+            .mobile-bar {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                background: rgba(12, 12, 12, 0.96);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-top: 1px solid rgba(217, 121, 65, 0.28);
+            }
+            .mobile-bar a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                min-height: 62px;
+                padding: 8px 4px;
+                font-size: 0.74rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: var(--text);
+                text-decoration: none;
+            }
+            .mobile-bar a + a { border-left: 1px solid var(--line); }
+            .mobile-bar svg { width: 19px; height: 19px; }
+            .mobile-bar .wa { color: #6fdb96; }
+            /* lift the floating UI clear of the bar */
+            .wa-float { bottom: 80px; right: 16px; width: 52px; height: 52px; }
+            .back-to-top { bottom: 142px; right: 20px; }
+            .demo-badge { bottom: 80px; left: 16px; }
+        }
+
+        /* ==================== REDUCED MOTION ==================== */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .orb { animation: none; }
+            .wa-float { animation: none; }
+            .hero { animation: none; background-position: center, center, center 45%; }
+            .photo-frame img, .tile-photo img { transition: none; }
+            .gradient-text { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Aaryan Enterprises — home">
+                <span class="nav-logo-mark" aria-hidden="true">A</span>
+                <span class="nav-logo-name">Aaryan <span>Enterprises</span></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#categories">Range</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#emi-check">Ask a Rate</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/916393612137" class="nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-badge reveal">Aaryan Enterprises &middot; S.P. Awas Road, Gonda</p>
+            <h1 class="hero-headline reveal">Tiles, Marble, <span class="gradient-text">Sanitaryware.</span></h1>
+            <p class="hero-subtext reveal">One showroom in Gonda where the whole house gets decided — floors, walls, marble and bathroom fittings. Walk the floor, compare in daylight, carry it away or have it sent to your site.</p>
+            <div class="hero-ctas reveal">
+                <a href="#emi-check" class="btn btn-primary">Ask for Designs &amp; Rates</a>
+                <a href="#categories" class="btn btn-secondary">See the Range</a>
+            </div>
+            <div class="hero-scrollhint reveal" aria-hidden="true">Scroll</div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="What you get">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>4.9&#9733; on Google</strong>Across ~190 reviews</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#d97941" stroke-width="1.6"/><path d="M3 10h18M9 10v10M15 10v10" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                    <span><strong>Full showroom floor</strong>Seen at size, in daylight</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                    <span><strong>Pick up or delivered</strong>To your site in Gonda</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#d97941" stroke-width="1.6"/><path d="M3 10h18" stroke="#d97941" stroke-width="1.6"/><path d="M7 15h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span><strong>Rate per sq. ft.</strong>Stated plainly, up front</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="about">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="eyebrow left">Since the first course of bricks</span>
+                    <h2>The whole house, <span class="gradient-text">one showroom.</span></h2>
+                    <p>Most people arrive looking for floor tiles. They leave having also settled the <strong>bathroom wall, the kitchen counter and the marble for the stairs</strong> — because it is all standing here, side by side, in one visit.</p>
+                    <p>Gonda has trusted us with houses that took two years to build. Homeowners, contractors and masons come back to the same counter because the variety is real, the rate is stated plainly, and nobody is rushed into a design they will look at for the next thirty years.</p>
+                    <p><strong>See it before you buy it. Ask the rate before you commit.</strong></p>
+                </div>
+                <div class="story-right reveal">
+                <div class="photo-frame story-media">
+                    <img src="https://images.pexels.com/photos/7515855/pexels-photo-7515855.png?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Kitchen finished with wall tiles and a tiled backsplash" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+                <div class="story-panel">
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>A full showroom, not a sample book</h3>
+                            <p>Designs on display at size, so you judge the real tile — not a 2-inch chip.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#e8a87c" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                        </span>
+                        <div>
+                            <h3>Pick up or delivered to site</h3>
+                            <p>Load it at the shop the same day, or have it sent where the work is.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8a87c" stroke-width="1.6"/><path d="M3 10h18" stroke="#e8a87c" stroke-width="1.6"/><path d="M7 15h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Rates stated plainly</h3>
+                            <p>Per square foot, told straight — before you decide anything.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CATEGORY MOSAIC -->
+    <section class="mosaic" id="categories">
+        <div class="container">
+            <span class="eyebrow reveal">The range</span>
+            <h2 class="section-headline reveal">Everything Under <span class="gradient-text">One Roof.</span></h2>
+            <p class="section-sub reveal">Floors, walls, marble and fittings — laid out to compare in one walk. Or ask on WhatsApp and we will send photos of what is in stock today.</p>
+            <div class="mosaic-grid">
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20floor%20tiles" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg reveal" data-tilt>
+                    <span class="tile-photo" aria-hidden="true">
+                        <img src="https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    </span>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="10" y="18" width="76" height="46" rx="4" stroke="#d97941" stroke-width="2.5"/><rect x="16" y="24" width="64" height="34" rx="2" fill="rgba(217,121,65,0.15)"/><path d="M38 70h20M48 64v6" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M24 34l10 8-10 8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Floor Tiles</h3>
+                        <p>Vitrified, glazed and matte finishes in the sizes Gonda builds with — seen at full size, in daylight, before you commit the whole floor.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20wall%20tiles" target="_blank" rel="noopener" class="mosaic-tile tile-2 reveal" data-tilt>
+                    <span class="tile-photo" aria-hidden="true">
+                        <img src="https://images.pexels.com/photos/11262210/pexels-photo-11262210.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    </span>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="28" y="10" width="40" height="74" rx="5" stroke="#e8a87c" stroke-width="2.5"/><path d="M28 38h40" stroke="#e8a87c" stroke-width="2.5"/><path d="M36 20v8M36 48v14" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Wall Tiles</h3>
+                        <p>Kitchen, bathroom, elevation.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20marble%20and%20granite" target="_blank" rel="noopener" class="mosaic-tile tile-3 reveal" data-tilt>
+                    <span class="tile-photo" aria-hidden="true">
+                        <img src="https://images.pexels.com/photos/34993898/pexels-photo-34993898.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    </span>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="12" y="22" width="72" height="30" rx="6" stroke="#d97941" stroke-width="2.5"/><path d="M20 44h56" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M30 60c0 6-6 6-6 10M48 60c0 6-6 6-6 10M66 60c0 6-6 6-6 10" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Marble &amp; Stone</h3>
+                        <p>Floors, stairs, counters.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20sanitaryware" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><path d="M14 48v-8a6 6 0 016-6h56a6 6 0 016 6v8" stroke="#f4c18a" stroke-width="2.5"/><rect x="10" y="48" width="76" height="18" rx="5" stroke="#f4c18a" stroke-width="2.5"/><path d="M16 66v8M80 66v8" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Sanitaryware</h3>
+                        <p>Wash basins, closets, cisterns and the full bathroom set — chosen together so nothing clashes on fitting day.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20bathroom%20fittings" target="_blank" rel="noopener" class="mosaic-tile tile-5 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="16" y="30" width="64" height="44" rx="5" stroke="#d97941" stroke-width="2.5"/><rect x="24" y="40" width="30" height="24" rx="2" stroke="#d97941" stroke-width="2.5"/><circle cx="66" cy="44" r="3" fill="#e8a87c"/><circle cx="66" cy="56" r="3" fill="#e8a87c"/><path d="M32 22c0-4 4-4 4-8M48 22c0-4 4-4 4-8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Bathroom Fittings</h3>
+                        <p>Taps, showers, accessories.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/916393612137?text=I%20want%20to%20ask%20about%20material%20for%20my%20site" target="_blank" rel="noopener" class="mosaic-tile tile-6 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="20" y="12" width="56" height="72" rx="6" stroke="#e8a87c" stroke-width="2.5"/><circle cx="48" cy="54" r="18" stroke="#e8a87c" stroke-width="2.5"/><circle cx="48" cy="54" r="9" stroke="#d97941" stroke-width="2.5"/><circle cx="30" cy="21" r="3" fill="#d97941"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>For Contractors</h3>
+                        <p>Bulk lots, site delivery.</p>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMISE GRID -->
+    <section class="promise" id="why-us">
+        <div class="container">
+            <span class="eyebrow reveal">Why us</span>
+            <h2 class="section-headline reveal">Why Gonda <span class="gradient-text">Shops Here.</span></h2>
+            <p class="section-sub reveal">Building a house is a long job. The material shop should be the easy part of it.</p>
+            <div class="promise-grid">
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4l13 7v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9l13-7z" stroke="#d97941" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Variety you can actually walk</h3>
+                    <p>Tiles, marble and sanitaryware in one showroom — compare instead of imagining.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="10" width="32" height="22" rx="3" stroke="#d97941" stroke-width="2"/><path d="M4 17h32" stroke="#d97941" stroke-width="2"/><path d="M10 25h8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round"/></svg>
+                    <h3>A straight rate</h3>
+                    <p>Ask the per-square-foot price and you get it — no circling around the number.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="12" width="20" height="16" rx="2" stroke="#d97941" stroke-width="2"/><path d="M24 17h6l6 5v6h-12V17z" stroke="#d97941" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/><circle cx="30" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/></svg>
+                    <h3>Pick up or delivered</h3>
+                    <p>Take it from the counter today, or tell us where the site is.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6a14 14 0 1014 14" stroke="#d97941" stroke-width="2" stroke-linecap="round"/><path d="M20 12v8l6 4" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 6l6 2-2 6" stroke="#d97941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Short a box? Call us</h3>
+                    <p>Ran out mid-work or need a matching lot? One call and we check the stock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <span class="eyebrow reveal">Finished work</span>
+            <h2 class="section-headline reveal">Rooms That Started <span class="gradient-text">Here.</span></h2>
+            <p class="section-sub reveal">Floors, walls and stone chosen at the counter — this is what they look like once the house is done.</p>
+            <div class="gallery-grid">
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/20418771/pexels-photo-20418771.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Large living area with a polished stone floor" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="gallery-caption">Living room floors</span>
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Open living space with a light tiled floor and wood finishes" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="gallery-caption">Light finishes</span>
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/34574606/pexels-photo-34574606.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bedroom with a matte floor and painted walls" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="gallery-caption">Bedroom flooring</span>
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/7511701/pexels-photo-7511701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bright room with a plain tiled floor and plants" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="gallery-caption">Everyday rooms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value">4.9&#9733;</span>
+                    <span class="stat-label">Google rating</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value" data-count="190">190</span>
+                    <span class="stat-label">Google reviews and counting</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">One Roof</span>
+                    <span class="stat-label">Tiles, marble &amp; sanitaryware</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Delivered</span>
+                    <span class="stat-label">Or picked up in store</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: EMI / PRICE CHECK -->
+    <section class="automation" id="emi-check">
+        <div class="container">
+            <span class="eyebrow reveal">Before you make the trip</span>
+            <h2 class="section-headline reveal">Designs &amp; Rates, <span class="gradient-text">On Your Phone.</span></h2>
+            <p class="section-sub reveal">Tell us what part of the house you are working on. Get photos of what is in stock and today's rate on WhatsApp — before you make the trip.</p>
+
+            <div class="automation-shell reveal">
+                <span class="automation-tag"><span class="dot" aria-hidden="true"></span> WhatsApp Auto-Reply</span>
+                <h3>Ask for designs &amp; rates in seconds</h3>
+                <p>Fill this in and our WhatsApp assistant replies with current designs, sizes and the rate per square foot.</p>
+
+                <form class="emi-form" id="emi-form" novalidate>
+                    <div class="field">
+                        <label for="emi-product">What are you looking for?</label>
+                        <select id="emi-product" name="product" required>
+                            <option value="" selected disabled>Choose a category</option>
+                            <option>Floor Tiles</option>
+                            <option>Wall Tiles</option>
+                            <option>Marble &amp; Stone</option>
+                            <option>Sanitaryware</option>
+                            <option>Bathroom Fittings</option>
+                            <option>Bulk order for a site</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="emi-name">Your name</label>
+                            <input type="text" id="emi-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="emi-phone">WhatsApp number</label>
+                            <input type="tel" id="emi-phone" name="phone" placeholder="10-digit mobile" inputmode="numeric" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn emi-submit">Get Designs &amp; Rates on WhatsApp</button>
+                    <p class="emi-note">Demo form — nothing is sent anywhere.</p>
+                </form>
+
+                <div class="emi-success" id="emi-success" role="status" aria-live="polite">
+                    <div class="success-check" aria-hidden="true">&#10003;</div>
+                    <h4>Request received.</h4>
+                    <p>This is how your customers would reach you automatically — tile photos, sizes and rates delivered straight to their WhatsApp.</p>
+                    <p class="pitch">Imagine this working for your showroom, 24 hours a day.</p>
+                    <button type="button" class="btn btn-secondary" id="emi-reset">Try It Again</button>
+                </div>
+            </div>
+
+            <p class="automation-strip reveal"><strong>For the shop owner:</strong> this same assistant can send the catalogue, confirm stock, broadcast new lots to your contractors and ask happy customers for a Google review — automatically.</p>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="eyebrow reveal">S.P. Awas Road, Gonda</span>
+            <h2 class="section-headline reveal">Come See It <span class="gradient-text">In Person.</span></h2>
+            <p class="section-sub reveal">Stand on the tile. Hold the marble to the light. Put the basin next to the wall design. Some decisions deserve a showroom.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#d97941" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Address
+                    </h3>
+                    <p>Aaryan Enterprises<br>S.P. Awas Road, Jay Mahal Colony<br>near Diwani Kachhari, Police Line<br>Gonda, Uttar Pradesh 271001</p>
+                    <a class="visit-link" href="https://www.google.com/maps/search/?api=1&amp;query=Aaryan%20Enterprises%20Gonda" target="_blank" rel="noopener">Get Directions &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                        Call or WhatsApp
+                    </h3>
+                    <p><a href="tel:+916393612137">+91 63936 12137</a></p>
+                    <p>Quickest reply on WhatsApp — photos of designs in stock, sizes and rates.</p>
+                    <a class="visit-link" href="https://wa.me/916393612137" target="_blank" rel="noopener">Message on WhatsApp &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#d97941" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#d97941" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        Planning a Visit
+                    </h3>
+                    <p>Bring your room measurements — we will work out how much material the floor actually needs.</p>
+                    <p>Call ahead on a busy day and we will keep the designs you asked about ready to see.</p>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.8"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/><circle cx="17.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Pick-up &amp; Delivery
+                    </h3>
+                    <p>Take the material from the store the same day, or have it delivered to your site.</p>
+                    <p>Message us the address and the order and we will confirm the schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-headline reveal">Questions? <span class="gradient-text">Answers.</span></h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">How do I know how many tiles my floor needs?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Bring the room measurements — length and width of each room — and we will work out the area, add the wastage that cutting always costs, and tell you the number of boxes. Not sure how to measure? Send the dimensions on WhatsApp and we will do the maths for you.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Can you deliver to my construction site?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. You can pick material up from the store the same day, or give us the site address and we will arrange delivery. Message the address and the order on WhatsApp and we will confirm the schedule and any transport charge before anything moves.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Can I see the designs before I come to the shop?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Send a WhatsApp message saying which part of the house you are working on — floor, bathroom wall, kitchen, stairs — and we will send photos of what is on display right now. Then come and see the shortlist at full size, which is the only way to judge a tile honestly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What if I run short in the middle of the work?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Call us with your bill details and we will check whether the same design and lot is still in stock. Tile shades vary between production lots, so the earlier you tell us, the better the match — this is also why we suggest buying a little extra up front.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Do you handle bulk orders for contractors?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Yes — full-house and multi-floor requirements are a normal part of our day. Send the quantity and specification on WhatsApp and we will confirm availability and the rate for the lot, so you are not making a trip just to ask.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2 class="section-headline reveal">Your Floor. <span class="gradient-text">Decided.</span></h2>
+            <p class="reveal">One message. Today's designs. A straight rate.</p>
+            <a href="https://wa.me/916393612137" target="_blank" rel="noopener" class="btn btn-primary btn-large reveal">Chat With Us on WhatsApp</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Aaryan <span>Enterprises</span></p>
+                <div class="footer-links">
+                    <a href="#categories">Range</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#emi-check">Ask a Rate</a>
+                    <a href="#visit">Visit</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of Aaryan Enterprises.</p>
+                <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/916393612137" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.7-.4z" fill="#ffffff"/></svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick actions">
+        <a href="tel:+916393612137">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a class="wa" href="https://wa.me/916393612137" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2z" fill="#6fdb96"/></svg>
+            WhatsApp
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Aaryan%20Enterprises%20Gonda" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#d97941" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#d97941" stroke-width="1.8"/></svg>
+            Directions
+        </a>
+    </nav>
+
+    <!-- DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo">
+        <span class="demo-dot" aria-hidden="true"></span>
+        Concept Demo
+        <button type="button" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* JS is running — drop no-JS fallbacks */
+        document.documentElement.classList.remove('no-js');
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Nav: scroll darken ---------- */
+        var nav = document.getElementById('site-nav');
+        var backToTop = document.getElementById('back-to-top');
+
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 24);
+            if (backToTop) backToTop.classList.toggle('visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* ---------- Nav: hamburger ---------- */
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                var open = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            navMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        /* ---------- Back to top ---------- */
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------- Demo badge dismiss ---------- */
+        var demoBadge = document.getElementById('demo-badge');
+        var demoBadgeClose = document.getElementById('demo-badge-close');
+        if (demoBadge && demoBadgeClose) {
+            demoBadgeClose.addEventListener('click', function () {
+                demoBadge.classList.add('hidden');
+            });
+        }
+
+        /* ---------- FAQ accordion ---------- */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                // close others
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                        if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                    }
+                });
+
+                btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                if (answer) {
+                    answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        /* ---------- Automation mock: EMI / price check ---------- */
+        var emiForm = document.getElementById('emi-form');
+        var emiSuccess = document.getElementById('emi-success');
+        var emiReset = document.getElementById('emi-reset');
+
+        if (emiForm && emiSuccess) {
+            emiForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var product = document.getElementById('emi-product');
+                var name = document.getElementById('emi-name');
+                var phone = document.getElementById('emi-phone');
+
+                var valid = true;
+                [product, name, phone].forEach(function (field) {
+                    if (!field) return;
+                    if (!field.value || (field === phone && !/^\d{10}$/.test(field.value.replace(/\D/g, '').slice(-10)))) {
+                        field.style.borderColor = 'rgba(230, 90, 70, 0.7)';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                if (!valid) return;
+
+                emiForm.style.display = 'none';
+                emiSuccess.classList.add('visible');
+            });
+
+            if (emiReset) {
+                emiReset.addEventListener('click', function () {
+                    emiSuccess.classList.remove('visible');
+                    emiForm.reset();
+                    emiForm.style.display = 'grid';
+                });
+            }
+        }
+
+        /* ---------- Signature: mosaic hover tilt ---------- */
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (!reduceMotion && finePointer) {
+            document.querySelectorAll('[data-tilt]').forEach(function (tile) {
+                var rect = null;
+
+                tile.addEventListener('mouseenter', function () {
+                    rect = tile.getBoundingClientRect();
+                });
+
+                tile.addEventListener('mousemove', function (e) {
+                    if (!rect) rect = tile.getBoundingClientRect();
+                    var px = (e.clientX - rect.left) / rect.width - 0.5;
+                    var py = (e.clientY - rect.top) / rect.height - 0.5;
+                    tile.style.transform =
+                        'perspective(800px) rotateY(' + (px * 7).toFixed(2) + 'deg)' +
+                        ' rotateX(' + (-py * 7).toFixed(2) + 'deg)' +
+                        ' translateY(-4px)';
+                });
+
+                tile.addEventListener('mouseleave', function () {
+                    rect = null;
+                    tile.style.transform = '';
+                });
+            });
+        }
+
+        /* ---------- GSAP scroll reveals (guarded — page stays visible without it) ---------- */
+        document.addEventListener('DOMContentLoaded', function () {
+            if (reduceMotion) return;
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 34,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            /* ---------- CountUp counters (guarded) ----------
+               Stats are qualitative by default (no invented numbers).
+               Customization agents: give a .stat-value real data via
+               data-count="1234" and it will animate automatically. */
+            if (typeof window.countUp !== 'undefined') {
+                document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
+                    var target = parseFloat(el.getAttribute('data-count'));
+                    if (isNaN(target)) return;
+                    var counter = new countUp.CountUp(el, target, { duration: 2.2, separator: ',' });
+                    ScrollTrigger.create({
+                        trigger: el,
+                        start: 'top 90%',
+                        once: true,
+                        onEnter: function () {
+                            if (!counter.error) counter.start();
+                        }
+                    });
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

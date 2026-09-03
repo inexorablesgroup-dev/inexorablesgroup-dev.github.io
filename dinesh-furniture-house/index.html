@@ -1,0 +1,1723 @@
+<!-- Customized for Dinesh Furniture House, Gonda (home-retail layout) -->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Dinesh Furniture House — Wooden Furniture Makers &amp; Showroom, Gonda</title>
+    <meta name="description" content="Wooden furniture made and sold in Gonda — beds, almirahs, bedroom sets, sofas and office furniture. Made to order. Delivered to your door. Design demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================
+           DINESH FURNITURE HOUSE — home-retail template
+           Charcoal #121212 · Copper #d97941 · Light gray text
+           Inter (tight) body · Space Grotesk display
+           ========================================================== */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #121212;
+            --bg-deep: #0c0c0c;
+            --bg-raise: #1a1a1a;
+            --copper: #d97941;
+            --copper-soft: #e8a87c;
+            --copper-pale: #f4c18a;
+            --text: #e8e6e3;
+            --muted: #9a958f;
+            --line: rgba(255, 255, 255, 0.07);
+            --card: rgba(255, 255, 255, 0.025);
+            --glow: rgba(217, 121, 65, 0.28);
+            --radius: 20px;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.011em;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { position: relative; }
+        .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+        .section-sub {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--muted);
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 56px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--copper), var(--copper-pale), var(--copper-soft), var(--copper));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-size: 250% auto;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -48px;
+            left: 16px;
+            z-index: 2000;
+            background: var(--copper);
+            color: #121212;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: top 0.25s ease;
+        }
+        .skip-link:focus { top: 12px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 14px 32px;
+            border-radius: 980px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b;
+            box-shadow: 0 0 30px rgba(217, 121, 65, 0.22);
+        }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 44px var(--glow); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid rgba(255, 255, 255, 0.22); }
+        .btn-secondary:hover { border-color: rgba(232, 168, 124, 0.6); background: rgba(217, 121, 65, 0.08); transform: translateY(-2px); }
+        .btn-large { min-height: 60px; padding: 18px 44px; font-size: 1.1rem; }
+
+        /* ==================== NAV ==================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.68);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .nav.scrolled { background: rgba(12, 12, 12, 0.92); box-shadow: 0 1px 30px rgba(217, 121, 65, 0.1); }
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 66px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--copper), #b0561f);
+            display: grid;
+            place-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #16100b;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.35);
+        }
+
+        .nav-logo-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .nav-logo-name span { color: var(--copper-soft); }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b !important;
+            padding: 10px 22px !important;
+            border-radius: 980px;
+            font-weight: 600;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 30px rgba(217, 121, 65, 0.45); transform: translateY(-1px); }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 46px;
+            height: 46px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.35s var(--ease-out), opacity 0.25s ease;
+        }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ==================== AMBIENT ORBS ==================== */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+            animation: orbDrift 22s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 480px;
+            height: 480px;
+            top: -12%;
+            right: -10%;
+            background: radial-gradient(circle, rgba(217, 121, 65, 0.22), transparent 70%);
+        }
+
+        .orb-2 {
+            width: 420px;
+            height: 420px;
+            bottom: -14%;
+            left: -12%;
+            background: radial-gradient(circle, rgba(232, 168, 124, 0.12), transparent 70%);
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 320px;
+            height: 320px;
+            top: 44%;
+            left: 58%;
+            background: radial-gradient(circle, rgba(192, 95, 43, 0.12), transparent 70%);
+            animation-delay: -15s;
+        }
+
+        @keyframes orbDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-50px, 40px) scale(1.12); }
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 24px 90px;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.13), transparent 65%),
+                var(--bg);
+        }
+
+        /* Photo layer sits UNDER the brand gradient scrim; if the photo fails
+           to load the gradient + charcoal base still reads as designed. */
+        .hero-photo {
+            position: absolute;
+            inset: -3%;
+            z-index: 0;
+            background-image: url("https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg?auto=compress&cs=tinysrgb&w=1600");
+            background-size: cover;
+            background-position: 50% 55%;
+            filter: sepia(0.10) saturate(1.05) brightness(0.92);
+            transform: scale(1.02);
+            animation: kenBurns 24s ease-in-out infinite alternate;
+        }
+
+        @keyframes kenBurns {
+            from { transform: scale(1.02) translate3d(0, 0, 0); }
+            to   { transform: scale(1.09) translate3d(-1.2%, -1.4%, 0); }
+        }
+
+        .hero-scrim {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 70% 50% at 50% 8%, rgba(217, 121, 65, 0.20), transparent 62%),
+                linear-gradient(180deg, rgba(12, 12, 12, 0.86) 0%, rgba(12, 12, 12, 0.60) 42%, rgba(12, 12, 12, 0.90) 100%);
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-headline, .hero-subtext { text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55); }
+
+        /* Trust strip directly under the hero */
+        .trust-strip {
+            background: var(--bg-deep);
+            border-bottom: 1px solid var(--line);
+            padding: 22px 24px;
+        }
+        .trust-strip-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px 40px;
+        }
+        .trust-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.86rem;
+            color: var(--muted);
+            letter-spacing: 0.01em;
+        }
+        .trust-item svg { width: 18px; height: 18px; flex: 0 0 auto; }
+        .trust-item strong { color: var(--text); font-weight: 600; }
+
+        /* Eyebrow labels above section headings */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 16px;
+        }
+        .eyebrow.left { text-align: left; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(217, 121, 65, 0.07);
+            padding: 9px 22px;
+            border-radius: 980px;
+            margin-bottom: 30px;
+        }
+        .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 24px; }
+        .hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-scrollhint {
+            margin-top: 72px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .hero-scrollhint::after {
+            content: '';
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(to bottom, var(--copper), transparent);
+            animation: hintPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes hintPulse {
+            0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ==================== STORY ==================== */
+        .story { padding: 130px 24px; background: var(--bg-deep); }
+        .story::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 50%, rgba(217, 121, 65, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+        .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+        .story-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 52ch; }
+        .story-copy p strong { color: var(--text); font-weight: 600; }
+        .story-panel {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.10), transparent 45%),
+                var(--bg-raise);
+            padding: 40px 36px;
+            display: grid;
+            gap: 26px;
+        }
+        .story-point { display: flex; gap: 16px; align-items: flex-start; }
+        .story-point-icon {
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 121, 65, 0.12);
+            border: 1px solid rgba(217, 121, 65, 0.25);
+        }
+        .story-point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+        .story-point p { font-size: 0.92rem; color: var(--muted); }
+
+        /* Photo frame — gradient background remains if the image never loads */
+        .photo-frame {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(26, 26, 26, 0.9) 60%),
+                var(--bg-raise);
+        }
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.08) saturate(1.05);
+            transition: transform 0.7s var(--ease-out);
+        }
+        .story-photo { aspect-ratio: 3 / 2; }
+        .story-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(12, 12, 12, 0.55));
+            pointer-events: none;
+        }
+
+        /* ==================== GALLERY STRIP ==================== */
+        .gallery { padding: 110px 24px; background: var(--bg); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .gallery-item { aspect-ratio: 3 / 2; }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            padding: 34px 18px 16px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text);
+            background: linear-gradient(180deg, transparent, rgba(12, 12, 12, 0.82));
+        }
+        .gallery-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 28px; }
+
+        /* ==================== CATEGORY MOSAIC (signature) ==================== */
+        .mosaic { padding: 130px 24px; background: var(--bg); }
+        .mosaic::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 85% 10%, rgba(232, 168, 124, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .mosaic .container { position: relative; z-index: 1; }
+        .mosaic-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 18px; }
+        .mosaic-tile {
+            position: relative;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            overflow: hidden;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-decoration: none;
+            background: var(--bg-raise);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .mosaic-tile:hover {
+            border-color: rgba(217, 121, 65, 0.4);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(217, 121, 65, 0.1);
+        }
+        .mosaic-tile.tile-lg { grid-column: span 2; grid-row: span 2; }
+        .mosaic-tile.tile-wide { grid-column: span 2; }
+        .tile-scene { position: absolute; inset: 0; pointer-events: none; }
+        .tile-scene svg {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 84px;
+            height: 84px;
+            opacity: 0.85;
+            transition: transform 0.5s var(--ease-out), opacity 0.4s ease;
+        }
+        .tile-lg .tile-scene svg { width: 132px; height: 132px; top: 26px; right: 26px; }
+        .mosaic-tile:hover .tile-scene svg { transform: translateY(-6px) scale(1.06); opacity: 1; }
+        .tile-1 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(18, 18, 18, 0) 60%); }
+        .tile-2 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.13), rgba(18, 18, 18, 0) 60%); }
+        .tile-3 .tile-scene { background: linear-gradient(150deg, rgba(192, 95, 43, 0.16), rgba(18, 18, 18, 0) 60%); }
+        .tile-4 .tile-scene { background: linear-gradient(150deg, rgba(244, 193, 138, 0.12), rgba(18, 18, 18, 0) 60%); }
+        .tile-5 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.14), rgba(18, 18, 18, 0) 60%); }
+        .tile-6 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.15), rgba(18, 18, 18, 0) 60%); }
+        .tile-label { position: relative; z-index: 1; transform: translateZ(30px); }
+        .tile-label h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .tile-lg .tile-label h3 { font-size: 1.55rem; }
+        .tile-label p { font-size: 0.88rem; color: var(--muted); }
+        .tile-label .tile-cta {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+        }
+
+        /* ==================== PROMISE GRID ==================== */
+        .promise { padding: 130px 24px; background: var(--bg-deep); }
+        .promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .promise .container { position: relative; z-index: 1; }
+        .promise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .promise-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 26px;
+            text-align: left;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-3px) scale(1.03);
+            border-color: rgba(217, 121, 65, 0.35);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 34px rgba(217, 121, 65, 0.09);
+        }
+        .promise-card svg { width: 40px; height: 40px; margin-bottom: 18px; }
+        .promise-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+        .promise-card p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== STATS BAND ==================== */
+        .stats {
+            padding: 100px 24px;
+            background:
+                linear-gradient(180deg, rgba(217, 121, 65, 0.05), transparent 70%),
+                var(--bg);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stats-grid .stat { position: relative; padding: 0 12px; }
+        .stats-grid .stat + .stat::before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 12%;
+            bottom: 12%;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, rgba(217, 121, 65, 0.28), transparent);
+        }
+        .stat-value {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--copper-soft), var(--copper-pale));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .stat-label { display: block; margin-top: 6px; font-size: 0.9rem; color: var(--muted); }
+
+        /* ==================== AUTOMATION MOCK ==================== */
+        .automation { padding: 130px 24px; background: var(--bg-deep); }
+        .automation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 80% 80%, rgba(37, 211, 102, 0.05), transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 10% 20%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .automation .container { position: relative; z-index: 1; }
+        .automation-shell {
+            max-width: 620px;
+            margin: 0 auto;
+            border-radius: 26px;
+            border: 1px solid rgba(217, 121, 65, 0.22);
+            background:
+                linear-gradient(160deg, rgba(217, 121, 65, 0.08), transparent 50%),
+                var(--bg-raise);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .automation-shell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--copper-soft), transparent);
+        }
+
+        .automation-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6fdb96;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            background: rgba(37, 211, 102, 0.07);
+            padding: 7px 16px;
+            border-radius: 980px;
+            margin-bottom: 22px;
+        }
+
+        .automation-tag .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: dotBlink 1.8s ease-in-out infinite;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .automation-shell h3 { font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: 8px; }
+        .automation-shell > p { color: var(--muted); font-size: 0.96rem; margin-bottom: 30px; }
+        .emi-form { display: grid; gap: 16px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-height: 50px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a958f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .field input::placeholder { color: rgba(154, 149, 143, 0.6); }
+        .field input:focus,
+        .field select:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(217, 121, 65, 0.18); }
+        .emi-submit {
+            margin-top: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #25D366, #128C4A);
+            color: #06170c;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.18);
+        }
+        .emi-submit:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3); }
+        .emi-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; }
+
+        /* success state */
+        .emi-success { display: none; text-align: center; padding: 24px 6px 8px; }
+        .emi-success.visible { display: block; animation: successIn 0.6s var(--ease-out); }
+
+        @keyframes successIn {
+            from { opacity: 0; transform: translateY(16px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .success-check {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            color: #25D366;
+            font-size: 2rem;
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+        }
+        .emi-success h4 { font-size: 1.3rem; margin-bottom: 10px; }
+        .emi-success p { color: var(--muted); font-size: 0.95rem; max-width: 40ch; margin: 0 auto 22px; }
+        .emi-success .pitch { color: var(--copper-soft); font-weight: 500; }
+        .automation-strip {
+            max-width: 620px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .automation-strip strong { color: var(--text); }
+
+        /* ==================== VISIT ==================== */
+        .visit { padding: 130px 24px; background: var(--bg); }
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .visit-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 30px;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-3px); border-color: rgba(217, 121, 65, 0.3); }
+        .visit-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+            margin-bottom: 12px;
+            color: var(--copper-soft);
+        }
+        .visit-card p, .visit-card a { color: var(--muted); font-size: 0.98rem; text-decoration: none; }
+        .visit-card a:hover { color: var(--text); }
+        .visit-card .visit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            min-height: 44px;
+            color: var(--copper);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .visit-card .visit-link:hover { color: var(--copper-pale); }
+
+        /* ==================== FAQ ==================== */
+        .faq { padding: 130px 24px; background: var(--bg-deep); }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            min-height: 60px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 24px 44px 24px 4px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--copper-soft); }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--copper);
+            transition: transform 0.35s var(--ease-out);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+        .faq-answer p { padding: 0 4px 26px; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
+
+        /* no-JS fallback: answers open */
+        html.no-js .faq-answer { max-height: none; }
+
+        /* ==================== FINAL CTA ==================== */
+        .final-cta {
+            padding: 150px 24px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse 60% 55% at 50% 100%, rgba(217, 121, 65, 0.13), transparent 70%),
+                var(--bg);
+        }
+        .final-cta .section-headline { margin-bottom: 16px; }
+        .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* ==================== FOOTER ==================== */
+        .footer { padding: 64px 24px 40px; background: var(--bg-deep); border-top: 1px solid var(--line); }
+        .footer-content { text-align: center; }
+        .footer-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 18px; }
+        .footer-name span { color: var(--copper-soft); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 26px;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-demo-notice {
+            font-size: 0.82rem;
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0 auto 12px;
+            line-height: 1.7;
+        }
+        .footer-demo-notice a { color: var(--copper-soft); text-decoration: none; }
+        .footer-copy { font-size: 0.8rem; color: rgba(154, 149, 143, 0.6); }
+
+        /* ==================== FLOATING UI ==================== */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 1100;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.35s var(--ease-out);
+            animation: waPulse 2.6s ease-in-out infinite;
+        }
+        .wa-float:hover { transform: translateY(-3px) scale(1.06); }
+        .wa-float svg { width: 30px; height: 30px; }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+            60% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+        }
+
+        .demo-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 22px;
+            z-index: 1100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 10px 9px 16px;
+            border-radius: 980px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(26, 26, 26, 0.72);
+            border: 1px solid rgba(217, 121, 65, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .demo-badge .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); }
+        .demo-badge button {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 50%;
+            transition: color 0.3s;
+        }
+        .demo-badge button:hover { color: var(--text); }
+        .demo-badge.hidden { display: none; }
+        .back-to-top {
+            position: fixed;
+            bottom: 94px;
+            right: 28px;
+            z-index: 1050;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--copper-soft);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: var(--copper); color: var(--copper-pale); }
+
+        /* ==================== STICKY MOBILE ACTION BAR ==================== */
+        .mobile-bar { display: none; }
+
+        @media (max-width: 760px) {
+            .mobile-bar {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                background: rgba(12, 12, 12, 0.95);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-top: 1px solid rgba(217, 121, 65, 0.28);
+            }
+            .mobile-bar a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                min-height: 62px;
+                padding: 8px 4px calc(8px + env(safe-area-inset-bottom, 0px));
+                text-decoration: none;
+                color: var(--text);
+                font-size: 0.76rem;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+            }
+            .mobile-bar a + a { border-left: 1px solid var(--line); }
+            .mobile-bar svg { width: 19px; height: 19px; }
+            .mobile-bar .mb-wa { color: #6fdb96; }
+            body { padding-bottom: 62px; }
+            .wa-float { bottom: 84px; }
+            .demo-badge { bottom: 84px; }
+            .back-to-top { bottom: 152px; }
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 960px) {
+            .mosaic-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+            .promise-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-grid { grid-template-columns: 1fr; gap: 44px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+            .stats-grid .stat + .stat::before { display: none; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            .nav-links {
+                position: fixed;
+                top: 66px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(12, 12, 12, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line);
+                padding: 12px 24px 24px;
+                transform: translateY(-12px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: transform 0.35s var(--ease-out), opacity 0.3s ease, visibility 0.3s;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { margin-top: 14px; text-align: center; }
+            .nav-hamburger { display: flex; }
+
+            /* no-JS: keep menu reachable (shown statically below the bar) */
+            html.no-js .nav-links {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+            html.no-js .nav-container { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+            html.no-js .nav-hamburger { display: none; }
+        }
+
+        @media (max-width: 560px) {
+            .mosaic-grid { grid-template-columns: 1fr; grid-auto-rows: 168px; }
+            .mosaic-tile.tile-lg,
+            .mosaic-tile.tile-wide { grid-column: span 1; grid-row: span 1; }
+            .tile-lg .tile-scene svg { width: 90px; height: 90px; }
+            .promise-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .visit-grid { grid-template-columns: 1fr; }
+            .story-panel { padding: 30px 24px; }
+            .automation-shell { padding: 34px 24px; }
+            .hero-ctas .btn { width: 100%; }
+            .orb { filter: blur(60px); opacity: 0.4; }
+        }
+
+        /* ==================== REDUCED MOTION ==================== */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .orb { animation: none; }
+            .wa-float { animation: none; }
+            .hero-photo { animation: none; transform: scale(1.02); }
+            .gradient-text { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Dinesh Furniture House — home">
+                <span class="nav-logo-mark" aria-hidden="true">D</span>
+                <span class="nav-logo-name">Dinesh <span>Furniture House</span></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#categories">What We Make</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#emi-check">Get a Quote</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/917007141598" class="nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge reveal">Dinesh Furniture House &middot; Gonda, Uttar Pradesh</p>
+            <h1 class="hero-headline reveal">Made in Gonda. <span class="gradient-text">Made to Last.</span></h1>
+            <p class="hero-subtext reveal">Wooden furniture built in our own workshop and sold in our own showroom. Beds, almirahs, sofas, dining and office sets — standard sizes on the floor, custom sizes on request.</p>
+            <div class="hero-ctas reveal">
+                <a href="#emi-check" class="btn btn-primary">Get a Quote</a>
+                <a href="#categories" class="btn btn-secondary">See What We Make</a>
+            </div>
+            <div class="hero-scrollhint reveal" aria-hidden="true">Scroll</div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l9-9" stroke="#d97941" stroke-width="1.8" stroke-linecap="round"/><path d="M13 11l3-3 4 4-3 3-4-4z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <span><strong>Made in our own workshop</strong></span>
+            </span>
+            <span class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8L12 3z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                <span><strong>4.5&#9733;</strong> from 82 Google reviews</span>
+            </span>
+            <span class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.7"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.7" stroke="#d97941" stroke-width="1.7"/><circle cx="17.5" cy="17" r="1.7" stroke="#d97941" stroke-width="1.7"/></svg>
+                <span><strong>Delivered</strong> across Gonda</span>
+            </span>
+            <span class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#d97941" stroke-width="1.7"/><path d="M7 15h5" stroke="#d97941" stroke-width="1.7" stroke-linecap="round"/><path d="M3 10h18" stroke="#d97941" stroke-width="1.7"/></svg>
+                <span><strong>Made to order</strong> in your size</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- STORY -->
+    <section class="story" id="about">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="eyebrow left">Maker &amp; Showroom</span>
+                    <h2>We do not just sell it. <span class="gradient-text">We make it.</span></h2>
+                    <p>Most furniture shops order a truck and unload it. We keep a <strong>workshop behind the showroom</strong> — which means the wood is chosen here, the joints are cut here, and the finish is ours to answer for. That is the Dinesh Furniture House way.</p>
+                    <p>It also means your wardrobe can be built to your wall, not to a catalogue. Bring the measurements of the room, tell us the wood and the finish, and we will make the piece that fits.</p>
+                    <p><strong>Honest wood. Honest joinery. Nothing hidden behind polish.</strong></p>
+                </div>
+                <div class="story-panel reveal">
+                    <div class="photo-frame story-photo">
+                        <img src="https://images.pexels.com/photos/34574606/pexels-photo-34574606.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="A wooden bed with an upholstered headboard in a softly lit bedroom" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.style.display='none'">
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Our own workshop</h3>
+                            <p>Made on our premises — so the quality of the wood and the joinery is ours to stand behind.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#e8a87c" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                        </span>
+                        <div>
+                            <h3>Delivered to your door</h3>
+                            <p>We carry it home for you and set it in place — no hiring a tempo yourself.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8a87c" stroke-width="1.6"/><path d="M3 10h18" stroke="#e8a87c" stroke-width="1.6"/><path d="M7 15h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Built to your size</h3>
+                            <p>Give us the measurements of the room. We will make it fit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CATEGORY MOSAIC -->
+    <section class="mosaic" id="categories">
+        <div class="container">
+            <span class="eyebrow reveal">The Range</span>
+            <h2 class="section-headline reveal">What Comes Out Of <span class="gradient-text">Our Workshop.</span></h2>
+            <p class="section-sub reveal">Ready pieces on the showroom floor, and custom work built to your measurements. Message us on WhatsApp and we will send photographs of what is ready right now.</p>
+            <div class="mosaic-grid">
+                <a href="https://wa.me/917007141598?text=I%20want%20to%20ask%20about%20beds%20and%20bedroom%20sets" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><path d="M10 68V34a4 4 0 014-4h10a4 4 0 014 4v14" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><rect x="10" y="48" width="76" height="20" rx="4" stroke="#d97941" stroke-width="2.5"/><rect x="30" y="38" width="24" height="12" rx="3" fill="rgba(217,121,65,0.18)" stroke="#e8a87c" stroke-width="2.5"/><path d="M14 68v10M82 68v10" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Beds &amp; Bedroom Sets</h3>
+                        <p>Double beds, single beds, side tables and matching dressers — in wood, with storage if you want it.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/917007141598?text=I%20want%20to%20ask%20about%20almirahs%20and%20wardrobes" target="_blank" rel="noopener" class="mosaic-tile tile-2 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="24" y="10" width="48" height="74" rx="4" stroke="#e8a87c" stroke-width="2.5"/><path d="M48 10v74" stroke="#e8a87c" stroke-width="2.5"/><path d="M42 44v10M54 44v10" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Almirahs &amp; Wardrobes</h3>
+                        <p>Two-door, three-door, with mirror.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/917007141598?text=I%20want%20to%20ask%20about%20sofas%20and%20seating" target="_blank" rel="noopener" class="mosaic-tile tile-3 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><path d="M16 50V38a6 6 0 016-6h52a6 6 0 016 6v12" stroke="#d97941" stroke-width="2.5"/><rect x="10" y="50" width="76" height="18" rx="5" stroke="#d97941" stroke-width="2.5"/><path d="M28 50V38M68 50V38" stroke="#e8a87c" stroke-width="2.5"/><path d="M18 68v8M78 68v8" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Sofas &amp; Seating</h3>
+                        <p>Sofa sets, diwans, chairs.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/917007141598?text=I%20want%20furniture%20made%20to%20order%20-%20here%20are%20my%20measurements" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="12" y="36" width="72" height="24" rx="4" stroke="#f4c18a" stroke-width="2.5"/><path d="M26 36v8M40 36v12M54 36v8M68 36v12" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round"/><path d="M20 70l14-14M34 56l6 2-2-6" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Made to Order</h3>
+                        <p>A wardrobe for that wall. A bed for that room. Send the measurements and the wood you want — we will build it.</p>
+                        <span class="tile-cta">Send measurements on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/917007141598?text=I%20want%20to%20ask%20about%20dining%20sets%20and%20tables" target="_blank" rel="noopener" class="mosaic-tile tile-5 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="12" y="40" width="72" height="8" rx="3" stroke="#d97941" stroke-width="2.5"/><path d="M22 48v24M74 48v24" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M34 40V24h10v16M52 40V24h10v16" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Dining &amp; Tables</h3>
+                        <p>Four-seater to six-seater sets.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/917007141598?text=I%20want%20to%20ask%20about%20office%20furniture" target="_blank" rel="noopener" class="mosaic-tile tile-6 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="10" y="36" width="76" height="8" rx="3" stroke="#e8a87c" stroke-width="2.5"/><rect x="18" y="44" width="30" height="28" rx="3" stroke="#e8a87c" stroke-width="2.5"/><path d="M18 56h30" stroke="#e8a87c" stroke-width="2.5"/><path d="M78 44v28" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/><path d="M60 36V26h14v10" stroke="#d97941" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Office Furniture</h3>
+                        <p>Desks, counters, storage units.</p>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMISE GRID -->
+    <section class="promise" id="why-us">
+        <div class="container">
+            <span class="eyebrow reveal">Our Promise</span>
+            <h2 class="section-headline reveal">Why Gonda <span class="gradient-text">Buys From Us.</span></h2>
+            <p class="section-sub reveal">The maker and the shopkeeper are the same people. That is the whole difference, and you can hear it in the answers you get.</p>
+            <div class="promise-grid">
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4l13 7v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9l13-7z" stroke="#d97941" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Made, not just sold</h3>
+                    <p>Our own workshop. You can ask about the wood and get a straight answer.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="10" width="32" height="22" rx="3" stroke="#d97941" stroke-width="2"/><path d="M4 17h32" stroke="#d97941" stroke-width="2"/><path d="M10 25h8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round"/></svg>
+                    <h3>Built to your size</h3>
+                    <p>Send the measurements of your room. The piece is made to fit it, not to a catalogue.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="12" width="20" height="16" rx="2" stroke="#d97941" stroke-width="2"/><path d="M24 17h6l6 5v6h-12V17z" stroke="#d97941" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/><circle cx="30" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/></svg>
+                    <h3>Delivered and placed</h3>
+                    <p>We bring it to your home and set it where you want it. No arranging a tempo yourself.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6a14 14 0 1014 14" stroke="#d97941" stroke-width="2" stroke-linecap="round"/><path d="M20 12v8l6 4" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 6l6 2-2 6" stroke="#d97941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>The shop stays reachable</h3>
+                    <p>A joint loose, a hinge to adjust — call us. We made it, so we can fix it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <span class="eyebrow reveal">Rooms We Furnish</span>
+            <h2 class="section-headline reveal">Wood, <span class="gradient-text">In Its Place.</span></h2>
+            <p class="section-sub reveal">The kind of rooms our beds, almirahs, sofas and dining sets are made for. Message us and we will send photographs of the actual pieces standing in the showroom today.</p>
+            <div class="gallery-grid">
+                <figure class="photo-frame gallery-item reveal">
+                    <img src="https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Living room furnished with a plush sofa set and wooden centre table" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.style.display='none'">
+                    <figcaption class="gallery-caption">Sofa sets &amp; seating</figcaption>
+                </figure>
+                <figure class="photo-frame gallery-item reveal">
+                    <img src="https://images.pexels.com/photos/8089268/pexels-photo-8089268.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Cosy bedroom furnished with a wooden bed and bedside tables" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.style.display='none'">
+                    <figcaption class="gallery-caption">Beds &amp; bedroom sets</figcaption>
+                </figure>
+                <figure class="photo-frame gallery-item reveal">
+                    <img src="https://images.pexels.com/photos/4469171/pexels-photo-4469171.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Open living and dining space with brown sofas and a wooden coffee table" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.style.display='none'">
+                    <figcaption class="gallery-caption">Dining &amp; tables</figcaption>
+                </figure>
+                <figure class="photo-frame gallery-item reveal">
+                    <img src="https://images.pexels.com/photos/20418771/pexels-photo-20418771.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Spacious living area furnished with generous seating and warm lighting" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.style.display='none'">
+                    <figcaption class="gallery-caption">Made to order</figcaption>
+                </figure>
+            </div>
+            <p class="gallery-note reveal">Illustrative interiors &mdash; ask on WhatsApp for photographs of our own finished pieces.</p>
+        </div>
+    </section>
+
+    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value">4.5&#9733;</span>
+                    <span class="stat-label">Rating on Google</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value" data-count="82">82</span>
+                    <span class="stat-label">Google reviews from Gonda customers</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Made Here</span>
+                    <span class="stat-label">Our own workshop, not a warehouse</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Delivered</span>
+                    <span class="stat-label">Carried home and put in place</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: QUOTE REQUEST -->
+    <section class="automation" id="emi-check">
+        <div class="container">
+            <span class="eyebrow reveal">Before You Visit</span>
+            <h2 class="section-headline reveal">Your Quote, <span class="gradient-text">On WhatsApp.</span></h2>
+            <p class="section-sub reveal">Tell us what you need and the size you need it in. Get photographs and a rate on WhatsApp — before you make the trip to the shop.</p>
+
+            <div class="automation-shell reveal">
+                <span class="automation-tag"><span class="dot" aria-hidden="true"></span> WhatsApp Auto-Reply</span>
+                <h3>Ask for a rate in seconds</h3>
+                <p>Fill this in and our WhatsApp assistant replies with photographs of what is ready and a rate for what is not.</p>
+
+                <form class="emi-form" id="emi-form" novalidate>
+                    <div class="field">
+                        <label for="emi-product">What are you looking for?</label>
+                        <select id="emi-product" name="product" required>
+                            <option value="" selected disabled>Choose a category</option>
+                            <option>Bed / Bedroom set</option>
+                            <option>Almirah / Wardrobe</option>
+                            <option>Sofa / Seating</option>
+                            <option>Dining set / Table</option>
+                            <option>Office furniture</option>
+                            <option>Made to order (custom size)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="emi-name">Your name</label>
+                            <input type="text" id="emi-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="emi-phone">WhatsApp number</label>
+                            <input type="tel" id="emi-phone" name="phone" placeholder="10-digit mobile" inputmode="numeric" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn emi-submit">Get Photos &amp; Rate on WhatsApp</button>
+                    <p class="emi-note">Demo form — nothing is sent anywhere.</p>
+                </form>
+
+                <div class="emi-success" id="emi-success" role="status" aria-live="polite">
+                    <div class="success-check" aria-hidden="true">&#10003;</div>
+                    <h4>Request received.</h4>
+                    <p>This is how your customers would reach you automatically — photographs, rates and delivery timing delivered straight to their WhatsApp.</p>
+                    <p class="pitch">Imagine this answering enquiries for your shop at ten at night.</p>
+                    <button type="button" class="btn btn-secondary" id="emi-reset">Try It Again</button>
+                </div>
+            </div>
+
+            <p class="automation-strip reveal"><strong>For the shop owner:</strong> this same assistant can collect custom measurements, tell customers when their order is ready, and send festival offers to every past buyer — automatically.</p>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="eyebrow reveal">Find Us</span>
+            <h2 class="section-headline reveal">Come See The <span class="gradient-text">Wood Itself.</span></h2>
+            <p class="section-sub reveal">Run your hand along the grain. Open the almirah doors. Sit on the sofa before you buy it. Furniture is one thing a photograph cannot settle.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#d97941" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Address
+                    </h3>
+                    <p>Dinesh Furniture House<br>LBS Road area<br>Gonda, Uttar Pradesh 271001</p>
+                    <a class="visit-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dinesh%20Furniture%20House%20Gonda" target="_blank" rel="noopener">Get Directions &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                        Call or WhatsApp
+                    </h3>
+                    <p><a href="tel:+917007141598">+91 70071 41598</a></p>
+                    <p>Quickest reply on WhatsApp — photographs of what is ready, rates, and custom measurements.</p>
+                    <a class="visit-link" href="https://wa.me/917007141598" target="_blank" rel="noopener">Message on WhatsApp &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l9-9" stroke="#d97941" stroke-width="1.8" stroke-linecap="round"/><path d="M13 11l3-3 4 4-3 3-4-4z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 8l2-4 3 3-4 2" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                        Showroom &amp; Workshop
+                    </h3>
+                    <p>See the finished pieces on the floor, and talk to the people who actually make them.</p>
+                    <p>Ring ahead on WhatsApp and we will keep the piece you liked aside.</p>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.8"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/><circle cx="17.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Delivery
+                    </h3>
+                    <p>We deliver across Gonda — the piece is carried in and set where you want it.</p>
+                    <p>Ask us about your area and we will tell you the charge and the timing before you order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="eyebrow reveal">Good To Know</span>
+            <h2 class="section-headline reveal">Questions? <span class="gradient-text">Answers.</span></h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do you make furniture to order, or only sell what is on the floor?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Both. There are finished pieces ready in the showroom, and we also build to order in our own workshop — a wardrobe sized to your wall, a bed in the wood and finish you choose. Send the measurements on WhatsApp and we will tell you what is possible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Do you deliver to my area?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>We deliver across Gonda and bring the piece inside rather than leaving it at the gate. Tell us your locality when you enquire and we will confirm the charge and the day before you commit to anything.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">How long does a custom piece take?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>It depends on the piece, the wood and how busy the workshop is — a side table is not a six-door almirah. We give you a date when we take the order, and we tell you honestly if the wedding season means it will take longer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What if a joint loosens or the polish gets marked later?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Call the shop. We made the piece, so we are the ones who can put it right — there is no helpline to chase and no manufacturer to blame. That is the advantage of buying from the people who built it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Can I see photographs before coming to the shop?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Yes — message us on WhatsApp saying what you are looking for and we will send photographs of what is standing in the showroom right now, with the rate. It saves you a trip if we do not have what you had in mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2 class="section-headline reveal">Furnish It <span class="gradient-text">Properly.</span></h2>
+            <p class="reveal">One message. Photographs, a rate, and a straight answer.</p>
+            <a href="https://wa.me/917007141598" target="_blank" rel="noopener" class="btn btn-primary btn-large reveal">Chat With Us on WhatsApp</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Dinesh <span>Furniture House</span></p>
+                <div class="footer-links">
+                    <a href="#categories">What We Make</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#emi-check">Get a Quote</a>
+                    <a href="#visit">Visit</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of Dinesh Furniture House.</p>
+                <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/917007141598" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.7-.4z" fill="#ffffff"/></svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick contact">
+        <a href="tel:+917007141598">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#e8a87c" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a href="https://wa.me/917007141598" target="_blank" rel="noopener" class="mb-wa">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2z" fill="currentColor"/></svg>
+            WhatsApp
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Dinesh%20Furniture%20House%20Gonda" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#e8a87c" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#e8a87c" stroke-width="1.8"/></svg>
+            Directions
+        </a>
+    </nav>
+
+    <!-- DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo">
+        <span class="demo-dot" aria-hidden="true"></span>
+        Concept Demo
+        <button type="button" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* JS is running — drop no-JS fallbacks */
+        document.documentElement.classList.remove('no-js');
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Nav: scroll darken ---------- */
+        var nav = document.getElementById('site-nav');
+        var backToTop = document.getElementById('back-to-top');
+
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 24);
+            if (backToTop) backToTop.classList.toggle('visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* ---------- Nav: hamburger ---------- */
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                var open = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            navMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        /* ---------- Back to top ---------- */
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------- Demo badge dismiss ---------- */
+        var demoBadge = document.getElementById('demo-badge');
+        var demoBadgeClose = document.getElementById('demo-badge-close');
+        if (demoBadge && demoBadgeClose) {
+            demoBadgeClose.addEventListener('click', function () {
+                demoBadge.classList.add('hidden');
+            });
+        }
+
+        /* ---------- FAQ accordion ---------- */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                // close others
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                        if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                    }
+                });
+
+                btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                if (answer) {
+                    answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        /* ---------- Automation mock: quote request ---------- */
+        var emiForm = document.getElementById('emi-form');
+        var emiSuccess = document.getElementById('emi-success');
+        var emiReset = document.getElementById('emi-reset');
+
+        if (emiForm && emiSuccess) {
+            emiForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var product = document.getElementById('emi-product');
+                var name = document.getElementById('emi-name');
+                var phone = document.getElementById('emi-phone');
+
+                var valid = true;
+                [product, name, phone].forEach(function (field) {
+                    if (!field) return;
+                    if (!field.value || (field === phone && !/^\d{10}$/.test(field.value.replace(/\D/g, '').slice(-10)))) {
+                        field.style.borderColor = 'rgba(230, 90, 70, 0.7)';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                if (!valid) return;
+
+                emiForm.style.display = 'none';
+                emiSuccess.classList.add('visible');
+            });
+
+            if (emiReset) {
+                emiReset.addEventListener('click', function () {
+                    emiSuccess.classList.remove('visible');
+                    emiForm.reset();
+                    emiForm.style.display = 'grid';
+                });
+            }
+        }
+
+        /* ---------- Signature: mosaic hover tilt ---------- */
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (!reduceMotion && finePointer) {
+            document.querySelectorAll('[data-tilt]').forEach(function (tile) {
+                var rect = null;
+
+                tile.addEventListener('mouseenter', function () {
+                    rect = tile.getBoundingClientRect();
+                });
+
+                tile.addEventListener('mousemove', function (e) {
+                    if (!rect) rect = tile.getBoundingClientRect();
+                    var px = (e.clientX - rect.left) / rect.width - 0.5;
+                    var py = (e.clientY - rect.top) / rect.height - 0.5;
+                    tile.style.transform =
+                        'perspective(800px) rotateY(' + (px * 7).toFixed(2) + 'deg)' +
+                        ' rotateX(' + (-py * 7).toFixed(2) + 'deg)' +
+                        ' translateY(-4px)';
+                });
+
+                tile.addEventListener('mouseleave', function () {
+                    rect = null;
+                    tile.style.transform = '';
+                });
+            });
+        }
+
+        /* ---------- GSAP scroll reveals (guarded — page stays visible without it) ---------- */
+        document.addEventListener('DOMContentLoaded', function () {
+            if (reduceMotion) return;
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 34,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            /* ---------- CountUp counters (guarded) ----------
+               Stats are qualitative by default (no invented numbers).
+               Customization agents: give a .stat-value real data via
+               data-count="1234" and it will animate automatically. */
+            if (typeof window.countUp !== 'undefined') {
+                document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
+                    var target = parseFloat(el.getAttribute('data-count'));
+                    if (isNaN(target)) return;
+                    var counter = new countUp.CountUp(el, target, { duration: 2.2, separator: ',' });
+                    ScrollTrigger.create({
+                        trigger: el,
+                        start: 'top 90%',
+                        once: true,
+                        onEnter: function () {
+                            if (!counter.error) counter.start();
+                        }
+                    });
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

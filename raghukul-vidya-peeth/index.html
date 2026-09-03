@@ -1,0 +1,1711 @@
+<!-- CONCEPT DEMO — Sri Raghukul Vidya Peeth, Civil Lines, Gonda (education vertical)
+Built by Inexorables Group. Not the official website of the school.
+Facts used: CBSE, Nursery–XII, English medium, co-ed day-cum-boarding, established 2001,
+managed by Adarsh Shiksha Samiti, Civil Lines Gonda 271001, landline +91 5262 231250.
+No mobile number is public, so all chat CTAs are tel: call links.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Sri Raghukul Vidya Peeth — CBSE Day &amp; Boarding School, Gonda</title>
+    <meta name="description" content="Sri Raghukul Vidya Peeth, Civil Lines, Gonda. CBSE, English medium, Nursery to Class XII. A day-cum-boarding campus run by Adarsh Shiksha Samiti since 2001. Concept demo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SRI RAGHUKUL VIDYA PEETH — Royal Navy & Gold (education vertical)
+   One-file concept demo. Inexorables Group.
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --navy: #0a1633;
+    --navy-deep: #060d21;
+    --navy-raise: #0e1d42;
+    --gold: #d4af37;
+    --gold-soft: #e8cf7a;
+    --gold-pale: #f5e6b8;
+    --ivory: #f6f2e8;
+    --ivory-dim: #b9b4a6;
+    --line: rgba(212, 175, 55, 0.16);
+    --glass: rgba(10, 22, 51, 0.72);
+    --wa-green: #25D366;
+    --radius: 20px;
+    --ease-soft: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 112px; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--navy);
+    color: var(--ivory);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--ivory);
+    letter-spacing: -0.015em;
+}
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+::selection { background: rgba(212, 175, 55, 0.35); color: var(--ivory); }
+
+/* Skip link */
+.skip-link {
+    position: absolute; left: -9999px; top: 0; z-index: 2000;
+    background: var(--gold); color: var(--navy-deep);
+    padding: 12px 20px; border-radius: 0 0 12px 0; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+/* Section headline system */
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 18px;
+}
+.section-eyebrow::after {
+    content: ''; display: block; width: 44px; height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 10px auto 0;
+}
+.section-headline {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin-bottom: 22px;
+    text-align: center;
+}
+.section-sub {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--ivory-dim);
+    max-width: 640px; margin: 0 auto 56px; text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, var(--gold) 10%, var(--gold-pale) 40%, var(--gold) 70%, #b8912b 95%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    background-size: 220% auto;
+    animation: goldShift 5s ease-in-out infinite;
+}
+@keyframes goldShift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 52px; padding: 14px 34px;
+    border-radius: 980px; border: none;
+    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+    text-decoration: none; cursor: pointer;
+    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, background 0.3s ease;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #c9a02c, var(--gold) 45%, var(--gold-soft));
+    color: #1a1503;
+    box-shadow: 0 0 34px rgba(212, 175, 55, 0.22);
+}
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 44px rgba(212, 175, 55, 0.38);
+}
+.btn-secondary {
+    background: transparent; color: var(--ivory);
+    border: 1.5px solid rgba(246, 242, 232, 0.28);
+}
+.btn-secondary:hover {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.08);
+    transform: translateY(-2px);
+}
+.btn-large { min-height: 58px; padding: 17px 46px; font-size: 1.1rem; }
+
+/* ============ NAVIGATION ============ */
+/* Slim utility / announcement bar above the main nav */
+.nav-announce {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.10);
+    background: rgba(6, 13, 33, 0.45);
+}
+.nav-announce-inner {
+    max-width: 1120px; margin: 0 auto;
+    padding: 8px 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 14px;
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(232, 207, 122, 0.9);
+}
+.nav-announce-inner .announce-dot {
+    display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); margin-right: 9px; vertical-align: middle;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.16);
+}
+.nav-announce a { color: var(--ivory-dim); text-decoration: none; transition: color 0.3s ease; }
+.nav-announce a:hover { color: var(--gold-soft); }
+
+.nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10, 22, 51, 0.55);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.nav.scrolled {
+    background: rgba(6, 13, 33, 0.92);
+    box-shadow: 0 1px 34px rgba(212, 175, 55, 0.10);
+}
+.nav-container {
+    max-width: 1120px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 68px;
+}
+.nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: var(--ivory);
+}
+.nav-crest { width: 38px; height: 42px; flex-shrink: 0; }
+.nav-logo-name {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.02rem; letter-spacing: 0.01em; line-height: 1.15;
+}
+.nav-logo-name small {
+    display: block; font-family: 'Inter', sans-serif; font-weight: 500;
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-soft);
+}
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a {
+    font-size: 0.9rem; color: var(--ivory-dim);
+    text-decoration: none; padding: 10px 2px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover { color: var(--gold-soft); }
+.nav-cta {
+    background: linear-gradient(135deg, #c9a02c, var(--gold));
+    color: #1a1503 !important;
+    padding: 10px 22px !important; border-radius: 980px; font-weight: 600;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.nav-cta:hover { box-shadow: 0 0 32px rgba(212, 175, 55, 0.4); transform: translateY(-1px); }
+.nav-hamburger {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 48px; height: 48px; padding: 12px 11px;
+    background: transparent; border: none; cursor: pointer;
+}
+.hamburger-line {
+    display: block; width: 100%; height: 2px;
+    background: var(--ivory); border-radius: 2px;
+    transition: transform 0.35s var(--ease-soft), opacity 0.25s ease;
+}
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============ AMBIENT ORBS ============ */
+.orb {
+    position: fixed; border-radius: 50%;
+    filter: blur(90px); pointer-events: none; z-index: 0;
+    opacity: 0.55;
+}
+.orb-1 {
+    width: 520px; height: 520px; top: -12%; right: -14%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, rgba(212, 175, 55, 0.05) 55%, transparent 75%);
+    animation: orbDrift1 26s ease-in-out infinite;
+}
+.orb-2 {
+    width: 460px; height: 460px; bottom: -18%; left: -12%;
+    background: radial-gradient(circle, rgba(46, 84, 179, 0.28) 0%, rgba(46, 84, 179, 0.08) 55%, transparent 75%);
+    animation: orbDrift2 32s ease-in-out infinite;
+}
+.orb-3 {
+    width: 340px; height: 340px; top: 42%; left: 58%;
+    background: radial-gradient(circle, rgba(232, 207, 122, 0.10) 0%, transparent 70%);
+    animation: orbDrift1 38s ease-in-out infinite reverse;
+}
+@keyframes orbDrift1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-60px, 50px) scale(1.12); }
+}
+@keyframes orbDrift2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(70px, -40px) scale(1.08); }
+}
+
+section { position: relative; z-index: 1; }
+
+/* ============ HERO ============ */
+.hero {
+    min-height: 100vh; min-height: 100svh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 156px 24px 96px;
+    position: relative; overflow: hidden;
+    background:
+        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
+        var(--navy);
+}
+/* Full-bleed campus photo under the brand gradient. Gradient wash stays static;
+   only the photograph layer drifts (Ken Burns). Gradient alone is the fallback. */
+.hero-media {
+    position: absolute; inset: 0; z-index: 0;
+    overflow: hidden; pointer-events: none;
+    background:
+        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(212, 175, 55, 0.13) 0%, transparent 65%),
+        var(--navy);
+}
+.hero-media::before {
+    content: ''; position: absolute; inset: -5%;
+    background-image: url("https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover; background-position: center 45%;
+    background-repeat: no-repeat;
+    filter: saturate(1.06) contrast(1.03);
+    animation: kenBurns 26s ease-in-out infinite alternate;
+}
+.hero-media::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+        radial-gradient(ellipse 72% 55% at 50% 0%, rgba(212, 175, 55, 0.16) 0%, transparent 62%),
+        linear-gradient(180deg,
+            rgba(6, 13, 33, 0.90) 0%,
+            rgba(10, 22, 51, 0.72) 34%,
+            rgba(6, 13, 33, 0.80) 70%,
+            rgba(6, 13, 33, 0.94) 100%);
+}
+@keyframes kenBurns {
+    from { transform: scale(1) translate3d(0, 0, 0); }
+    to   { transform: scale(1.09) translate3d(0, -1.2%, 0); }
+}
+.hero::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0; height: 140px;
+    background: linear-gradient(to bottom, transparent, var(--navy-deep));
+    pointer-events: none;
+}
+.hero .container { position: relative; z-index: 2; }
+
+/* Crest — signature element */
+.hero-crest {
+    width: clamp(112px, 16vw, 152px); height: auto;
+    margin: 0 auto 30px; display: block;
+    filter: drop-shadow(0 0 26px rgba(212, 175, 55, 0.28));
+    animation: crestFloat 7s ease-in-out infinite;
+}
+@keyframes crestFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+.crest-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: crestDraw 2.4s ease-out 0.3s forwards; }
+.crest-draw-slow { stroke-dasharray: 900; stroke-dashoffset: 900; animation: crestDraw 3s ease-out 0.6s forwards; }
+@keyframes crestDraw { to { stroke-dashoffset: 0; } }
+.crest-fade { opacity: 0; animation: crestFade 1.4s ease-out 1.6s forwards; }
+@keyframes crestFade { to { opacity: 1; } }
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.76rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-pale);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: rgba(212, 175, 55, 0.07);
+    padding: 9px 22px; border-radius: 980px;
+    margin-bottom: 30px;
+}
+.hero-headline {
+    font-size: clamp(2.6rem, 7.5vw, 5.4rem);
+    margin-bottom: 22px;
+    letter-spacing: -0.02em;
+}
+.hero-subtext {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--ivory-dim);
+    max-width: 640px; margin: 0 auto 44px;
+}
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero-motto {
+    margin-top: 54px;
+    font-size: 0.78rem; letter-spacing: 0.34em; text-transform: uppercase;
+    color: rgba(232, 207, 122, 0.55);
+}
+
+/* ============ PHOTO BANDS (art-directed, gradient fallback beneath) ============ */
+.media-band {
+    position: relative; overflow: hidden;
+    max-width: 1000px; margin: 66px auto 0;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--navy-raise) 0%, var(--navy-deep) 70%);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.42);
+}
+.media-band--pano { aspect-ratio: 21 / 9; }
+.media-band img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: saturate(1.05) contrast(1.02);
+    transition: transform 1.1s var(--ease-soft);
+}
+.media-band:hover img { transform: scale(1.04); }
+.media-band::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(6, 13, 33, 0.10) 0%, rgba(6, 13, 33, 0.18) 45%, rgba(6, 13, 33, 0.72) 100%);
+}
+.media-caption {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+    padding: 20px 26px; text-align: left;
+    font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-soft);
+}
+
+/* ============ TRUST / AFFILIATION STRIP ============ */
+.trust {
+    padding: 48px 24px 56px;
+    background: var(--navy-deep);
+    border-bottom: 1px solid var(--line);
+}
+.trust-title {
+    text-align: center;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(185, 180, 166, 0.55);
+    margin-bottom: 28px;
+}
+.trust-row { display: flex; flex-wrap: wrap; justify-content: center; }
+.trust-item {
+    flex: 1 1 210px; min-width: 190px;
+    padding: 8px 24px; text-align: center;
+    border-left: 1px solid rgba(212, 175, 55, 0.14);
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+}
+.trust-item:first-child { border-left: none; }
+.trust-item:hover { opacity: 1; }
+.trust-item strong {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-size: 1rem; color: var(--ivory); margin-bottom: 4px;
+}
+.trust-item span {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-soft);
+}
+
+/* ============ CAMPUS GALLERY ============ */
+.gallery {
+    padding: 118px 24px;
+    background: var(--navy-deep);
+}
+.gallery::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 45% at 70% 10%, rgba(46, 84, 179, 0.10) 0%, transparent 60%);
+    pointer-events: none;
+}
+.gallery .container { position: relative; z-index: 1; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+    gap: 18px;
+}
+.gallery-card {
+    position: relative; overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(150deg, var(--navy-raise) 0%, var(--navy-deep) 75%);
+    transition: border-color 0.4s ease, box-shadow 0.45s ease;
+}
+.gallery-card:hover { border-color: rgba(212, 175, 55, 0.38); box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42); }
+.gallery-card img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: saturate(1.05) contrast(1.02);
+    transition: transform 0.6s var(--ease-soft);
+}
+.gallery-card:hover img { transform: scale(1.06); }
+.gallery-card figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+    padding: 30px 16px 14px;
+    font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ivory);
+    background: linear-gradient(180deg, transparent, rgba(6, 13, 33, 0.88));
+}
+
+/* ============ STORY ============ */
+.story {
+    padding: 130px 24px;
+    background: var(--navy-deep);
+    text-align: center;
+}
+.story::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 45% at 18% 55%, rgba(46, 84, 179, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+.story .container { position: relative; z-index: 1; }
+.story-lines { max-width: 660px; margin: 0 auto; }
+.story-lines p {
+    font-size: clamp(1.12rem, 2.2vw, 1.4rem);
+    color: var(--ivory-dim);
+    margin-bottom: 26px; line-height: 1.55;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.story-lines p:hover { color: var(--ivory); transform: translateX(8px); }
+.story-lines p strong { color: var(--gold-soft); font-weight: 600; }
+.story-close {
+    margin-top: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 600;
+    color: var(--ivory);
+}
+
+/* ============ OFFERINGS GRID ============ */
+.offerings {
+    padding: 130px 24px;
+    background: var(--navy);
+    text-align: center;
+}
+.offerings::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
+    pointer-events: none;
+}
+.offerings .container { position: relative; z-index: 1; }
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+}
+.offer-card {
+    text-align: left;
+    padding: 36px 30px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: linear-gradient(160deg, rgba(232, 207, 122, 0.045) 0%, rgba(14, 29, 66, 0.6) 55%);
+    position: relative; overflow: hidden;
+    transition: transform 0.45s var(--ease-soft), box-shadow 0.45s ease, border-color 0.4s ease;
+}
+.offer-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+    opacity: 0; transition: opacity 0.4s ease;
+}
+.offer-card:hover {
+    transform: translateY(-6px) scale(1.015);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(212, 175, 55, 0.08);
+}
+.offer-card:hover::before { opacity: 1; }
+.offer-icon {
+    width: 52px; height: 52px; margin-bottom: 22px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 14px;
+    background: rgba(212, 175, 55, 0.09);
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    transition: transform 0.45s var(--ease-soft), background 0.4s ease;
+}
+.offer-card:hover .offer-icon { transform: translateY(-3px) rotate(-4deg); background: rgba(212, 175, 55, 0.16); }
+.offer-icon svg { width: 26px; height: 26px; stroke: var(--gold-soft); }
+.offer-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
+.offer-card p { font-size: 0.95rem; color: var(--ivory-dim); }
+
+/* ============ STATS BAND ============ */
+.stats {
+    padding: 100px 24px;
+    background:
+        linear-gradient(180deg, rgba(212, 175, 55, 0.05), transparent 40%),
+        var(--navy-deep);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px; text-align: center;
+}
+.stat-number {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    background: linear-gradient(120deg, var(--gold), var(--gold-pale));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    line-height: 1.1; margin-bottom: 8px;
+}
+.stat-label {
+    font-size: 0.92rem; color: var(--ivory-dim);
+    letter-spacing: 0.04em;
+}
+
+/* ============ SIGNATURE: A DAY AT ============ */
+.day {
+    padding: 130px 24px;
+    background: var(--navy);
+    overflow: hidden;
+}
+.day::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 45% 55% at 85% 30%, rgba(46, 84, 179, 0.14) 0%, transparent 60%);
+    pointer-events: none;
+}
+.day .container { position: relative; z-index: 1; }
+.day-track {
+    position: relative;
+    max-width: 720px; margin: 0 auto;
+    padding-left: 40px;
+}
+.day-line {
+    position: absolute; left: 11px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: rgba(212, 175, 55, 0.14);
+    border-radius: 2px;
+}
+.day-line-progress {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 0%;
+    background: linear-gradient(180deg, var(--gold), var(--gold-soft));
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+.day-item { position: relative; padding: 0 0 46px 12px; }
+.day-item:last-child { padding-bottom: 0; }
+.day-dot {
+    position: absolute; left: -35px; top: 7px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.12);
+}
+.day-time {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-size: 0.82rem; letter-spacing: 0.14em;
+    color: var(--gold-soft);
+    margin-bottom: 6px;
+}
+.day-item h3 { font-size: 1.18rem; margin-bottom: 6px; }
+.day-item p { font-size: 0.95rem; color: var(--ivory-dim); max-width: 520px; }
+
+/* ============ AUTOMATION TEASER ============ */
+.automation {
+    padding: 130px 24px;
+    background: var(--navy-deep);
+}
+.automation::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 50% at 50% 100%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+.automation .container { position: relative; z-index: 1; }
+.enquiry-shell {
+    max-width: 560px; margin: 0 auto;
+    padding: 44px 38px;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    background: linear-gradient(165deg, rgba(232, 207, 122, 0.06), rgba(10, 22, 51, 0.85) 60%);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    position: relative; overflow: hidden;
+}
+.enquiry-shell::before {
+    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+}
+.enquiry-title {
+    font-size: 1.35rem; margin-bottom: 6px; text-align: center;
+}
+.enquiry-note {
+    font-size: 0.88rem; color: var(--ivory-dim);
+    text-align: center; margin-bottom: 30px;
+}
+.field { margin-bottom: 20px; text-align: left; }
+.field label {
+    display: block; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold-soft); margin-bottom: 8px;
+}
+.field input, .field select {
+    width: 100%; min-height: 50px;
+    padding: 13px 16px;
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    color: var(--ivory);
+    background: rgba(6, 13, 33, 0.75);
+    border: 1px solid rgba(246, 242, 232, 0.14);
+    border-radius: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none; appearance: none;
+}
+.field select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat; background-position: right 16px center;
+    padding-right: 42px;
+}
+.field select option { background: var(--navy-deep); color: var(--ivory); }
+.field input::placeholder { color: rgba(185, 180, 166, 0.55); }
+.field input:focus, .field select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+.enquiry-form .btn { width: 100%; margin-top: 6px; }
+.enquiry-privacy {
+    margin-top: 16px; text-align: center;
+    font-size: 0.75rem; color: rgba(185, 180, 166, 0.6);
+}
+
+/* Success state */
+.enquiry-success {
+    display: none;
+    text-align: center;
+    padding: 26px 6px 10px;
+}
+.enquiry-success.show { display: block; animation: successIn 0.6s var(--ease-soft); }
+@keyframes successIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.success-ring {
+    width: 78px; height: 78px; margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+.success-ring svg { width: 34px; height: 34px; }
+.success-check {
+    stroke: var(--gold-soft); stroke-width: 3; fill: none;
+    stroke-linecap: round; stroke-linejoin: round;
+    stroke-dasharray: 48; stroke-dashoffset: 48;
+    animation: checkDraw 0.7s ease-out 0.25s forwards;
+}
+@keyframes checkDraw { to { stroke-dashoffset: 0; } }
+.enquiry-success h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.enquiry-success p { font-size: 0.94rem; color: var(--ivory-dim); max-width: 380px; margin: 0 auto 8px; }
+.enquiry-success .success-hint { color: var(--gold-soft); font-size: 0.85rem; margin-top: 14px; }
+
+/* WhatsApp pitch strip */
+.wa-strip {
+    max-width: 720px; margin: 60px auto 0;
+    display: flex; align-items: center; gap: 20px;
+    padding: 26px 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(37, 211, 102, 0.28);
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(10, 22, 51, 0.6));
+}
+.wa-strip-icon {
+    flex-shrink: 0;
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--wa-green);
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+}
+.wa-strip-icon svg { width: 28px; height: 28px; fill: #fff; }
+.wa-strip h3 { font-size: 1.08rem; margin-bottom: 4px; }
+.wa-strip p { font-size: 0.9rem; color: var(--ivory-dim); }
+
+/* ============ VISIT / CONTACT ============ */
+.visit {
+    padding: 130px 24px;
+    background: var(--navy);
+}
+.visit::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 50% at 12% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 55%);
+    pointer-events: none;
+}
+.visit .container { position: relative; z-index: 1; }
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    max-width: 900px; margin: 0 auto 44px;
+}
+.visit-card {
+    padding: 30px 26px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: rgba(14, 29, 66, 0.5);
+    text-align: center;
+    transition: transform 0.45s var(--ease-soft), border-color 0.4s ease;
+}
+.visit-card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.38); }
+.visit-card h3 {
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-soft); margin-bottom: 12px;
+}
+.visit-card p { font-size: 0.98rem; color: var(--ivory); }
+.visit-card p span { display: block; color: var(--ivory-dim); font-size: 0.88rem; margin-top: 4px; }
+.visit-card a { color: var(--gold-soft); text-decoration: none; }
+.visit-card a:hover { text-decoration: underline; }
+.visit-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+/* ============ FAQ ============ */
+.faq {
+    padding: 130px 24px;
+    background: var(--navy-deep);
+}
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+.faq-question {
+    width: 100%;
+    display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    padding: 24px 4px;
+    background: transparent; border: none; cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--ivory); text-align: left;
+    transition: color 0.3s ease;
+    min-height: 60px;
+}
+.faq-question:hover { color: var(--gold-soft); }
+.faq-question::after {
+    content: '+';
+    flex-shrink: 0;
+    font-family: 'Inter', sans-serif; font-weight: 300;
+    font-size: 1.7rem; line-height: 1;
+    color: var(--gold);
+    transition: transform 0.4s var(--ease-soft);
+}
+.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+.faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.45s var(--ease-soft);
+}
+.faq-answer p {
+    padding: 0 4px 24px;
+    font-size: 0.96rem; color: var(--ivory-dim);
+    max-width: 640px;
+}
+
+/* ============ FINAL CTA ============ */
+.final-cta {
+    padding: 150px 24px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse 65% 60% at 50% 110%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
+        var(--navy);
+}
+.final-cta .section-headline { margin-bottom: 16px; }
+.cta-subtext {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--ivory-dim);
+    margin-bottom: 44px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    padding: 60px 24px 110px;
+    background: var(--navy-deep);
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+.footer-crest { width: 44px; height: auto; margin: 0 auto 18px; display: block; opacity: 0.85; }
+.footer-name {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.05rem; margin-bottom: 4px;
+}
+.footer-tag {
+    font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-soft); margin-bottom: 26px;
+}
+.footer-links {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px;
+    margin-bottom: 30px;
+}
+.footer-links a {
+    font-size: 0.88rem; color: var(--ivory-dim);
+    text-decoration: none; padding: 6px 0;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover { color: var(--gold-soft); }
+.footer-affiliation {
+    font-size: 0.76rem; letter-spacing: 0.06em;
+    color: rgba(232, 207, 122, 0.62);
+    max-width: 620px; margin: 0 auto 18px; line-height: 1.7;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+.footer-demo-notice {
+    font-size: 0.78rem; color: rgba(185, 180, 166, 0.6);
+    max-width: 560px; margin: 0 auto 10px; line-height: 1.7;
+}
+.footer-demo-notice a { color: rgba(232, 207, 122, 0.7); text-decoration: none; }
+.footer-copy { font-size: 0.75rem; color: rgba(185, 180, 166, 0.45); }
+
+/* ============ FLOATING WHATSAPP ============ */
+.wa-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 1100;
+    width: 58px; height: 58px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--wa-green);
+    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    transition: transform 0.4s var(--ease-soft), box-shadow 0.4s ease;
+    animation: waPulse 2.6s ease-in-out infinite;
+}
+.wa-float:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
+.wa-float svg { width: 30px; height: 30px; fill: #fff; }
+@keyframes waPulse {
+    0%, 100% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+    55% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+}
+
+/* ============ CONCEPT DEMO BADGE ============ */
+.demo-badge {
+    position: fixed; left: 16px; bottom: 16px; z-index: 1100;
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 10px 9px 16px;
+    border-radius: 980px;
+    background: rgba(6, 13, 33, 0.72);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold-soft);
+}
+.demo-badge-close {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(212, 175, 55, 0.12); border: none; cursor: pointer;
+    color: var(--gold-soft); font-size: 0.95rem; line-height: 1;
+    transition: background 0.3s ease;
+}
+.demo-badge-close:hover { background: rgba(212, 175, 55, 0.28); }
+.demo-badge.hidden { display: none; }
+
+/* ============ BACK TO TOP ============ */
+.back-to-top {
+    position: fixed; right: 22px; bottom: 92px; z-index: 1090;
+    width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(14, 29, 66, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: var(--gold-soft); cursor: pointer;
+    opacity: 0; pointer-events: none; transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: rgba(212, 175, 55, 0.18); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 860px) {
+    .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: rgba(6, 13, 33, 0.97);
+        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 24px 24px;
+        transform: translateY(-12px); opacity: 0; pointer-events: none;
+        transition: transform 0.35s var(--ease-soft), opacity 0.3s ease;
+    }
+    .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .nav-links a { padding: 15px 4px; font-size: 1.02rem; border-bottom: 1px solid rgba(246, 242, 232, 0.06); }
+    .nav-links a:last-child { border-bottom: none; }
+    .nav-cta { text-align: center; margin-top: 14px; padding: 14px 22px !important; }
+    .nav-hamburger { display: flex; }
+    .wa-strip { flex-direction: column; text-align: center; }
+    .enquiry-shell { padding: 36px 24px; }
+    .trust-item { border-left: none; flex-basis: 45%; min-width: 150px; padding: 12px 10px; }
+    .media-band { margin-top: 48px; }
+    .media-band--pano { aspect-ratio: 16 / 9; }
+    .gallery { padding: 86px 24px; }
+}
+@media (max-width: 640px) {
+    .nav-announce-inner { justify-content: center; letter-spacing: 0.12em; }
+    .nav-announce .announce-phone { display: none; }
+}
+@media (max-width: 480px) {
+    .hero { padding: 138px 20px 76px; }
+    .hero-ctas .btn { width: 100%; }
+    .visit-actions .btn { width: 100%; }
+    .day-track { padding-left: 34px; }
+    .orb { filter: blur(70px); }
+    .container { padding: 0 20px; }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .crest-draw, .crest-draw-slow { stroke-dashoffset: 0; }
+    .hero-media::before { animation: none !important; transform: none !important; inset: 0; }
+    .media-band:hover img, .gallery-card:hover img { transform: none; }
+    .crest-fade { opacity: 1; }
+    .orb { display: none; }
+    .success-check { stroke-dashoffset: 0; }
+}
+</style>
+<noscript>
+<style>
+    /* JS disabled: everything stays reachable */
+    .faq-answer { max-height: none; }
+    .faq-question::after { display: none; }
+    @media (max-width: 860px) {
+        .nav-links { position: static; transform: none; opacity: 1; pointer-events: auto; }
+        .nav-hamburger { display: none; }
+        .nav-container { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+        .nav { position: absolute; }
+        html { scroll-padding-top: 0; }
+    }
+    .back-to-top, .demo-badge-close { display: none; }
+</style>
+</noscript>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-announce">
+            <div class="nav-announce-inner">
+                <span><span class="announce-dot" aria-hidden="true"></span>Admission enquiries open &mdash; Nursery to Class XII</span>
+                <span class="announce-phone">School office &middot; <a href="tel:+915262231250">+91 5262 231250</a></span>
+            </div>
+        </div>
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="Sri Raghukul Vidya Peeth — home">
+                <svg class="nav-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
+                    <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+                    <text x="38" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#e8cf7a">SRV</text>
+                </svg>
+                <span class="nav-logo-name">Sri Raghukul Vidya Peeth<small>Civil Lines, Gonda &middot; CBSE &middot; Since 2001</small></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#story">About</a>
+                <a href="#offerings">Learning</a>
+                <a href="#campus">Campus</a>
+                <a href="#day">A Day Here</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="#admission" class="nav-cta">Admission Enquiry</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <!-- Campus photograph beneath the navy/gold wash (CSS layer; gradient alone if the photo fails) -->
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container">
+
+            <!-- Signature crest monogram -->
+            <svg class="hero-crest" viewBox="0 0 152 168" role="img" aria-label="Sri Raghukul Vidya Peeth crest" focusable="false">
+                <defs>
+                    <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#e8cf7a"/>
+                        <stop offset="55%" stop-color="#d4af37"/>
+                        <stop offset="100%" stop-color="#b8912b"/>
+                    </linearGradient>
+                </defs>
+                <!-- Shield -->
+                <path class="crest-draw-slow" d="M76 6 L142 26 V88 C142 124 112 150 76 162 C40 150 10 124 10 88 V26 Z"
+                      fill="rgba(212,175,55,0.04)" stroke="url(#crestGold)" stroke-width="3"/>
+                <path class="crest-draw" d="M76 18 L130 34 V88 C130 117 106 139 76 150 C46 139 22 117 22 88 V34 Z"
+                      fill="none" stroke="rgba(212,175,55,0.45)" stroke-width="1.5"/>
+                <!-- Rising sun -->
+                <g class="crest-fade">
+                    <circle cx="76" cy="62" r="13" fill="none" stroke="#e8cf7a" stroke-width="2"/>
+                    <g stroke="#e8cf7a" stroke-width="2" stroke-linecap="round">
+                        <line x1="76" y1="40" x2="76" y2="46"/>
+                        <line x1="58" y1="48" x2="62" y2="52"/>
+                        <line x1="94" y1="48" x2="90" y2="52"/>
+                        <line x1="52" y1="62" x2="58" y2="62"/>
+                        <line x1="94" y1="62" x2="100" y2="62"/>
+                    </g>
+                </g>
+                <!-- Open book -->
+                <g class="crest-fade">
+                    <path d="M40 92 C52 86 66 86 76 92 C86 86 100 86 112 92 V118 C100 112 86 112 76 118 C66 112 52 112 40 118 Z"
+                          fill="rgba(246,242,232,0.06)" stroke="#e8cf7a" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="76" y1="92" x2="76" y2="118" stroke="#e8cf7a" stroke-width="2"/>
+                    <path d="M48 97 C56 94 66 94 70 96 M48 103 C56 100 66 100 70 102 M82 96 C86 94 96 94 104 97 M82 102 C86 100 96 100 104 103"
+                          stroke="rgba(232,207,122,0.55)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+                </g>
+                <!-- River wave -->
+                <path class="crest-fade" d="M42 132 C50 127 58 137 66 132 C74 127 82 137 90 132 C98 127 106 137 110 133"
+                      fill="none" stroke="#d4af37" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+
+            <p class="hero-badge">CBSE &middot; Nursery to Class XII &middot; Day &amp; Boarding &middot; Civil Lines, Gonda</p>
+            <h1 class="hero-headline">A Gonda campus built to <span class="gradient-text">keep them.</span></h1>
+            <p class="hero-subtext">English medium, CBSE, Nursery through Class XII &mdash; with hostel, laboratories and grounds on one Civil Lines campus. Since 2001, families across Gonda have finished the whole journey here without changing schools once.</p>
+            <div class="hero-ctas">
+                <a href="#admission" class="btn btn-primary">Start an Admission Enquiry</a>
+                <a href="#day" class="btn btn-secondary">See a Day on Campus</a>
+            </div>
+            <p class="hero-motto">Adarsh Shiksha Samiti &middot; Gonda</p>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+        <div class="container">
+            <span class="section-eyebrow">Since 2001</span>
+            <h2 class="section-headline">Built by a trust, <span class="gradient-text">for a town.</span></h2>
+            <div class="story-lines">
+                <p>Adarsh Shiksha Samiti opened this campus in Civil Lines in <strong>2001</strong> &mdash; and never stopped building.</p>
+                <p>A CBSE school from Nursery to Class XII, and a <strong>women&rsquo;s degree college</strong> from the same trust.</p>
+                <p>Day scholars from across Gonda. Boarders from the districts around it.</p>
+                <p>Laboratories, library, hostel, cafeteria and grounds &mdash; <strong>one campus,</strong> not a rented floor.</p>
+            </div>
+            <p class="story-close">One address in Gonda that can take a child from <span class="gradient-text">first alphabet to graduation.</span></p>
+
+            <figure class="media-band media-band--pano">
+                <img src="https://images.pexels.com/photos/32034184/pexels-photo-32034184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="A school building with classical architecture, representative of an established campus"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="media-caption">A campus, not a rented floor &middot; Civil Lines, Gonda</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- OFFERINGS -->
+    <section class="offerings" id="offerings">
+        <div class="container">
+            <span class="section-eyebrow">On Campus</span>
+            <h2 class="section-headline">Everything a childhood <span class="gradient-text">deserves.</span></h2>
+            <p class="section-sub">From the first alphabet to the CBSE board examination &mdash; one campus, one standard, one unbroken journey.</p>
+            <div class="offer-grid">
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19V6a2 2 0 0 1 2-2h5v15H6a2 2 0 0 0-2 2z"/>
+                            <path d="M20 19V6a2 2 0 0 0-2-2h-5v15h5a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>CBSE, Nursery to Class XII</h3>
+                    <p>An English-medium CBSE curriculum taught patiently and thoroughly. Concepts first, marks after &mdash; in that order, always.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/>
+                            <path d="M7.5 14h9"/>
+                        </svg>
+                    </div>
+                    <h3>Science &amp; Computer Laboratories</h3>
+                    <p>Children learn science by doing it. Campus laboratories where the experiment is performed, not just read aloud.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21a9 9 0 1 0-9-9"/>
+                            <path d="M3 12h9l4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Hostel &amp; Boarding</h3>
+                    <p>A day-cum-boarding campus, so families outside Gonda town need not choose between home and a good school.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v18M5 7c2-2 5-2 7 0 2-2 5-2 7 0"/>
+                            <path d="M5 7v10c2-2 5-2 7 0 2-2 5-2 7 0V7"/>
+                        </svg>
+                    </div>
+                    <h3>Library &amp; Cafeteria</h3>
+                    <p>Full shelves and a protected reading hour; a campus cafeteria so no child spends the day on an empty stomach.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
+                        </svg>
+                    </div>
+                    <h3>Sport, Music &amp; Stage</h3>
+                    <p>Grounds, a sports programme, music and dance rooms, and an auditorium. Confidence is a subject here.</p>
+                </article>
+                <article class="offer-card">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
+                            <circle cx="10" cy="7" r="4"/>
+                            <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
+                        </svg>
+                    </div>
+                    <h3>Transport &amp; Safety</h3>
+                    <p>School transport across Gonda town, CCTV on campus and a medical room. Parents should worry about homework, nothing else.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPUS LIFE GALLERY -->
+    <section class="gallery" id="campus">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Campus Life</span>
+            <h2 class="section-headline">Where the day <span class="gradient-text">actually happens.</span></h2>
+            <p class="section-sub">Classrooms, laboratories, the library and the grounds &mdash; the four places a child at this campus spends the year moving between.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-card">
+                    <img src="https://images.pexels.com/photos/10638209/pexels-photo-10638209.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Children in school uniforms reading books in a bright school library"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>The library hour</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="https://images.pexels.com/photos/6208728/pexels-photo-6208728.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Students conducting an experiment together in a school science laboratory"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Science, performed</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="https://images.pexels.com/photos/8927012/pexels-photo-8927012.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Schoolchildren in uniform playing football on a grass field"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>The afternoon ground</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="https://images.pexels.com/photos/13019686/pexels-photo-13019686.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Two graduates in caps and gowns smiling outdoors"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Class XII, and out</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <section class="stats" aria-label="School at a glance">
+        <div class="container">
+            <p class="trust-title">The school at a glance</p>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number"><span data-count="2001">2001</span></span>
+                    <span class="stat-label">Established in Civil Lines, Gonda</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Nursery &rarr; XII</span>
+                    <span class="stat-label">One campus. One journey.</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">CBSE</span>
+                    <span class="stat-label">Affiliated, English medium</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Day &amp; Boarding</span>
+                    <span class="stat-label">Hostel on the school campus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST / AFFILIATION STRIP -->
+    <section class="trust" aria-label="Affiliation and management">
+        <div class="container">
+            <p class="trust-title">Affiliation &amp; management</p>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <strong>CBSE</strong>
+                    <span>Affiliation no. 2130530</span>
+                </div>
+                <div class="trust-item">
+                    <strong>English Medium</strong>
+                    <span>Co-educational</span>
+                </div>
+                <div class="trust-item">
+                    <strong>Adarsh Shiksha Samiti</strong>
+                    <span>Managing trust, Gonda</span>
+                </div>
+                <div class="trust-item">
+                    <strong>Day &amp; Boarding</strong>
+                    <span>Hostel on campus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: A DAY ON CAMPUS -->
+    <section class="day" id="day">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">The Signature Rhythm</span>
+            <h2 class="section-headline">A day on <span class="gradient-text">campus.</span></h2>
+            <p class="section-sub">Structure is a kindness. This is the rhythm a child settles into here &mdash; call the office for the current timings.</p>
+
+            <div class="day-track">
+                <div class="day-line" aria-hidden="true"><div class="day-line-progress" id="day-progress"></div></div>
+
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">FIRST BELL</span>
+                    <h3>Assembly under the open sky</h3>
+                    <p>Prayer, the day&rsquo;s news read by students, and two minutes of silence before classes begin.</p>
+                </div>
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">MORNING</span>
+                    <h3>Core hours &mdash; when minds are freshest</h3>
+                    <p>Mathematics, science and languages take the morning. No child is moved on until the concept lands.</p>
+                </div>
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">MID-MORNING</span>
+                    <h3>Laboratory &amp; library block</h3>
+                    <p>Hands on beakers, keyboards and books. The quietest and the loudest hours of the day, side by side.</p>
+                </div>
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">MIDDAY</span>
+                    <h3>Lunch, cafeteria and open ground</h3>
+                    <p>Tiffins open, friendships form. Teachers eat with their classes &mdash; the best conversations happen here.</p>
+                </div>
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">AFTERNOON</span>
+                    <h3>Sport, music &amp; activity hour</h3>
+                    <p>The grounds, the music and dance rooms, the auditorium stage. Every child picks a lane and owns it for the year.</p>
+                </div>
+                <div class="day-item">
+                    <span class="day-dot" aria-hidden="true"></span>
+                    <span class="day-time">DISPERSAL</span>
+                    <h3>Buses out, boarders in</h3>
+                    <p>School transport rolls out on time; hostel students walk back to prep and evening study on the same campus.</p>
+                </div>
+            </div>
+
+            <figure class="media-band">
+                <img src="https://images.pexels.com/photos/1895114/pexels-photo-1895114.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Schoolchildren taking part actively in a classroom lesson"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <figcaption class="media-caption">Core hours &middot; concepts first, marks after</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- AUTOMATION TEASER: ADMISSION ENQUIRY -->
+    <section class="automation" id="admission">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Admissions</span>
+            <h2 class="section-headline">Begin with <span class="gradient-text">one enquiry.</span></h2>
+            <p class="section-sub">Tell us about your child and the class you are considering. The admissions desk at Civil Lines takes it from there &mdash; day scholar or boarder.</p>
+
+            <div class="enquiry-shell">
+                <form class="enquiry-form" id="enquiry-form" novalidate>
+                    <h3 class="enquiry-title">Admission Enquiry</h3>
+                    <p class="enquiry-note">Takes thirty seconds. No documents needed yet.</p>
+                    <div class="field">
+                        <label for="student-name">Student&rsquo;s name</label>
+                        <input type="text" id="student-name" name="student-name" placeholder="e.g. Aarav Srivastava" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="student-class">Class applying for</label>
+                        <select id="student-class" name="student-class" required>
+                            <option value="" selected disabled>Select a class</option>
+                            <option>Nursery / KG</option>
+                            <option>Class I &ndash; V</option>
+                            <option>Class VI &ndash; VIII</option>
+                            <option>Class IX &ndash; X</option>
+                            <option>Class XI &ndash; XII</option>
+                            <option>Hostel / boarding enquiry</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="parent-phone">Parent&rsquo;s phone (WhatsApp)</label>
+                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Enquiry</button>
+                    <p class="enquiry-privacy">Your number is used only to respond to this enquiry.</p>
+                </form>
+
+                <div class="enquiry-success" id="enquiry-success" role="status" aria-live="polite">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg viewBox="0 0 34 34"><path class="success-check" d="M7 18 L14 25 L27 10"/></svg>
+                    </div>
+                    <h3>Request received.</h3>
+                    <p>This is how your admissions desk would hear from a parent &mdash; automatically, the moment they decide.</p>
+                    <p class="success-hint">Concept demo &mdash; no data was sent anywhere.</p>
+                </div>
+            </div>
+
+            <!-- WhatsApp automation pitch strip -->
+            <div class="wa-strip">
+                <div class="wa-strip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4.5 27l5.7-1.5c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 16.9c-.3.8-1.5 1.5-2.4 1.6-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-5-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.7 1.1 2.9.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.7z"/></svg>
+                </div>
+                <div>
+                    <h3>Fee reminders &amp; parent updates &mdash; on WhatsApp.</h3>
+                    <p>Due-date reminders, holiday notices, result announcements, hostel and transport alerts &mdash; delivered to every parent automatically instead of the office calling them one by one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Visit Us</span>
+            <h2 class="section-headline">Come see the campus <span class="gradient-text">yourself.</span></h2>
+            <p class="section-sub">Ten minutes on the grounds will tell you more than any website. Walk in &mdash; the gate is open on working days.</p>
+            <div class="visit-grid">
+                <div class="visit-card">
+                    <h3>Address</h3>
+                    <p>Sri Raghukul Vidya Peeth<span>Civil Lines, Gonda,<br>Uttar Pradesh 271001</span></p>
+                </div>
+                <div class="visit-card">
+                    <h3>School Office</h3>
+                    <p><a href="tel:+915262231250">+91 5262 231250</a><span>Admissions, hostel &amp; transport</span></p>
+                </div>
+                <div class="visit-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:srvpgonda@gmail.com">srvpgonda@gmail.com</a><span>Enquiries &amp; documents</span></p>
+                </div>
+            </div>
+            <div class="visit-actions">
+                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Sri%20Raghukul%20Vidya%20Peeth%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                <a class="btn btn-secondary" href="tel:+915262231250">Call the School Office</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Questions Parents Ask</span>
+            <h2 class="section-headline">Answers, <span class="gradient-text">straight.</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Which classes can my child join?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Admissions run from Nursery through Class XII on the CBSE curriculum, subject to seats in each section. Mid-session transfers are considered case by case &mdash; bring the previous school&rsquo;s report card and transfer certificate when you visit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">How does the admission process work?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Send an enquiry or visit the school office in Civil Lines, have a short interaction with the child (senior classes may take a written assessment), then complete document verification and fee submission. The office will tell you exactly which documents to carry before you make the trip.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you take boarders, and is transport available?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>This is a day-cum-boarding school &mdash; hostel accommodation is on the same Civil Lines campus, so children from outside Gonda town can study here. For day scholars, school transport covers the main routes across the town; share your address at the office and the nearest pickup point and timing will be confirmed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">How will I know how my child is doing?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Regular parent-teacher meetings, a diary that actually gets checked, and &mdash; as this demo shows &mdash; WhatsApp updates for results, notices and fee reminders. If something needs your attention, you should hear it from the school first.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Who runs the school?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Sri Raghukul Vidya Peeth is managed by Adarsh Shiksha Samiti, the Gonda trust that established the campus in 2001 and also runs Sri Raghukul Mahila Vidyapeeth, a women&rsquo;s degree college. For current school timings, fee structure and session dates, call the office on +91 5262 231250.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <span class="section-eyebrow" style="display:table;margin-left:auto;margin-right:auto;">Admissions</span>
+            <h2 class="section-headline">One childhood. <span class="gradient-text">Choose carefully.</span></h2>
+            <p class="cta-subtext">Sections fill as the session approaches. Start the conversation with the Civil Lines office today.</p>
+            <a href="#admission" class="btn btn-primary btn-large">Start an Admission Enquiry</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FLOATING CALL BUTTON (school publishes a landline only) -->
+    <a class="wa-float" href="tel:+915262231250" aria-label="Call Sri Raghukul Vidya Peeth school office">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11.4 5.2c-.5-1-1.7-1.4-2.7-.9L6.3 5.5C5.1 6.1 4.4 7.4 4.7 8.7c.9 4.1 3 7.9 6 10.9 3 3 6.8 5.1 10.9 6 1.3.3 2.6-.4 3.2-1.6l1.2-2.4c.5-1 .1-2.2-.9-2.7l-4-2c-.9-.4-1.9-.2-2.5.6l-1.1 1.4c-.3.4-.8.5-1.2.3-1.4-.7-2.6-1.6-3.7-2.7-1.1-1.1-2-2.3-2.7-3.7-.2-.4-.1-.9.3-1.2l1.4-1.1c.8-.6 1-1.6.6-2.5l-2-4z"/></svg>
+    </a>
+
+    <!-- CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
+        <span>Concept Demo</span>
+        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <svg class="footer-crest" viewBox="0 0 76 84" aria-hidden="true" focusable="false">
+                <path d="M38 3 L71 13 V44 C71 62 56 75 38 81 C20 75 5 62 5 44 V13 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+                <text x="38" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#e8cf7a">SRV</text>
+            </svg>
+            <p class="footer-name">Sri Raghukul Vidya Peeth</p>
+            <p class="footer-tag">Civil Lines, Gonda &middot; CBSE &middot; Since 2001</p>
+            <div class="footer-links">
+                <a href="#story">About</a>
+                <a href="#offerings">Learning</a>
+                <a href="#campus">Campus</a>
+                <a href="#day">A Day Here</a>
+                <a href="#admission">Admissions</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-affiliation">Affiliated to the Central Board of Secondary Education &middot; Affiliation No. 2130530 &middot; Managed by Adarsh Shiksha Samiti, Gonda</p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; not the official website of Sri Raghukul Vidya Peeth, Civil Lines, Gonda.</p>
+            <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (defer; site is fully readable without them) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+<script>
+(function () {
+    'use strict';
+
+    var prefersReducedMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- Nav: scrolled state ---------- */
+    var nav = document.getElementById('nav');
+    function onScrollNav() {
+        if (!nav) return;
+        if (window.scrollY > 40) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+    }
+    window.addEventListener('scroll', onScrollNav, { passive: true });
+    onScrollNav();
+
+    /* ---------- Nav: hamburger ---------- */
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    function closeMenu() {
+        if (!toggle || !menu) return;
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var answer = document.getElementById(btn.getAttribute('aria-controls'));
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            // close others
+            document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                if (other !== btn) {
+                    other.setAttribute('aria-expanded', 'false');
+                    var a = document.getElementById(other.getAttribute('aria-controls'));
+                    if (a) a.style.maxHeight = '0px';
+                }
+            });
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            if (answer) {
+                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    /* ---------- Back to top ---------- */
+    var backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 700) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        }, { passive: true });
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        });
+    }
+
+    /* ---------- Concept demo badge ---------- */
+    var badge = document.getElementById('demo-badge');
+    var badgeClose = document.getElementById('demo-badge-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () {
+            badge.classList.add('hidden');
+        });
+    }
+
+    /* ---------- Admission enquiry mock (front-end only) ---------- */
+    var form = document.getElementById('enquiry-form');
+    var success = document.getElementById('enquiry-success');
+    if (form && success) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('student-name');
+            var cls = document.getElementById('student-class');
+            var phone = document.getElementById('parent-phone');
+            var valid = true;
+            [name, cls, phone].forEach(function (el) {
+                if (!el) return;
+                if (!el.value || !el.value.trim()) {
+                    el.style.borderColor = '#e05c5c';
+                    valid = false;
+                } else {
+                    el.style.borderColor = '';
+                }
+            });
+            if (phone && phone.value && phone.value.replace(/\D/g, '').length < 10) {
+                phone.style.borderColor = '#e05c5c';
+                valid = false;
+            }
+            if (!valid) return;
+            form.style.display = 'none';
+            success.classList.add('show');
+        });
+    }
+
+    /* ---------- Enhanced motion (GSAP — guarded; page reads fine without it) ---------- */
+    function initMotion() {
+        if (prefersReducedMotion) return;
+        if (typeof window.gsap === 'undefined') return;
+        var gsap = window.gsap;
+        if (typeof window.ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(window.ScrollTrigger);
+        }
+
+        // Hero entrance
+        gsap.from('.hero-badge, .hero-headline, .hero-subtext, .hero-ctas, .hero-motto', {
+            opacity: 0, y: 26, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.15
+        });
+
+        if (typeof window.ScrollTrigger === 'undefined') return;
+
+        // Section reveals: fade + rise
+        [
+            '.story .section-eyebrow', '.story .section-headline', '.story-lines p', '.story-close',
+            '.offerings .section-headline', '.offerings .section-sub',
+            '.visit-card', '.faq-item', '.final-cta .section-headline', '.cta-subtext',
+            '.enquiry-shell', '.wa-strip', '.media-band', '.trust-item',
+            '.gallery .section-headline', '.gallery .section-sub'
+        ].forEach(function (sel) {
+            gsap.utils.toArray(sel).forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0, y: 34, duration: 0.85, ease: 'power3.out',
+                    scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+                });
+            });
+        });
+
+        // Offer cards: staggered rise
+        var cards = gsap.utils.toArray('.offer-card');
+        if (cards.length) {
+            gsap.from(cards, {
+                opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+                scrollTrigger: { trigger: '.offer-grid', start: 'top 85%', once: true }
+            });
+        }
+
+        // Day timeline: items + scrubbed gold progress line
+        gsap.utils.toArray('.day-item').forEach(function (item) {
+            gsap.from(item, {
+                opacity: 0, x: -28, duration: 0.7, ease: 'power2.out',
+                scrollTrigger: { trigger: item, start: 'top 86%', once: true }
+            });
+        });
+        var progress = document.getElementById('day-progress');
+        if (progress) {
+            gsap.to(progress, {
+                height: '100%', ease: 'none',
+                scrollTrigger: {
+                    trigger: '.day-track', start: 'top 70%', end: 'bottom 55%', scrub: 0.6
+                }
+            });
+        }
+
+        // Gallery cards: staggered rise
+        var galleryCards = gsap.utils.toArray('.gallery-card');
+        if (galleryCards.length) {
+            gsap.from(galleryCards, {
+                opacity: 0, y: 36, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+                scrollTrigger: { trigger: '.gallery-grid', start: 'top 85%', once: true }
+            });
+        }
+
+        // Stats band reveal
+        gsap.from('.stat', {
+            opacity: 0, y: 30, duration: 0.7, stagger: 0.12, ease: 'power3.out',
+            scrollTrigger: { trigger: '.stats-grid', start: 'top 85%', once: true }
+        });
+    }
+
+    /* ---------- CountUp counters (guarded) ---------- */
+    function initCounters() {
+        var els = document.querySelectorAll('[data-count]');
+        if (!els.length) return;
+        var CountUpCtor = (window.countUp && window.countUp.CountUp) || window.CountUp;
+        if (!CountUpCtor || prefersReducedMotion) return; // static numbers remain visible
+        if ('IntersectionObserver' in window) {
+            var seen = new WeakSet();
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && !seen.has(entry.target)) {
+                        seen.add(entry.target);
+                        var target = parseFloat(entry.target.getAttribute('data-count'));
+                        try {
+                            var c = new CountUpCtor(entry.target, target, { duration: 2, useGrouping: false });
+                            if (!c.error) c.start();
+                        } catch (err) { /* keep static number */ }
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.6 });
+            els.forEach(function (el) { io.observe(el); });
+        }
+    }
+
+    /* Deferred libs load after this inline script — wait for window load. */
+    if (document.readyState === 'complete') {
+        initMotion();
+        initCounters();
+    } else {
+        window.addEventListener('load', function () {
+            initMotion();
+            initCounters();
+        });
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1747 @@
+<!-- Concept demo site for Shree Shyam Sanitary And Paints, Gonda (home-retail template, customized) -->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Shree Shyam Sanitary And Paints — Paints, Sanitaryware &amp; Building Materials, Gonda</title>
+    <meta name="description" content="Original Asian Paints and Kamdhenu paints, sanitaryware, bath fittings and TMT bars on Circular Road, Gonda. One counter for the whole house. Design demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================
+           SHREE SHYAM SANITARY AND PAINTS — home-retail template
+           Charcoal #121212 · Copper #d97941 · Light gray text
+           Inter (tight) body · Space Grotesk display
+           ========================================================== */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #121212;
+            --bg-deep: #0c0c0c;
+            --bg-raise: #1a1a1a;
+            --copper: #d97941;
+            --copper-soft: #e8a87c;
+            --copper-pale: #f4c18a;
+            --text: #e8e6e3;
+            --muted: #9a958f;
+            --line: rgba(255, 255, 255, 0.07);
+            --card: rgba(255, 255, 255, 0.025);
+            --glow: rgba(217, 121, 65, 0.28);
+            --radius: 20px;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.011em;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { position: relative; }
+        .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+        .section-sub {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--muted);
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 56px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--copper), var(--copper-pale), var(--copper-soft), var(--copper));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-size: 250% auto;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -48px;
+            left: 16px;
+            z-index: 2000;
+            background: var(--copper);
+            color: #121212;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: top 0.25s ease;
+        }
+        .skip-link:focus { top: 12px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 14px 32px;
+            border-radius: 980px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b;
+            box-shadow: 0 0 30px rgba(217, 121, 65, 0.22);
+        }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 44px var(--glow); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid rgba(255, 255, 255, 0.22); }
+        .btn-secondary:hover { border-color: rgba(232, 168, 124, 0.6); background: rgba(217, 121, 65, 0.08); transform: translateY(-2px); }
+        .btn-large { min-height: 60px; padding: 18px 44px; font-size: 1.1rem; }
+
+        /* ==================== NAV ==================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.68);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .nav.scrolled { background: rgba(12, 12, 12, 0.92); box-shadow: 0 1px 30px rgba(217, 121, 65, 0.1); }
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 66px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--copper), #b0561f);
+            display: grid;
+            place-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #16100b;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.35);
+        }
+
+        .nav-logo-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .nav-logo-name span { color: var(--copper-soft); }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b !important;
+            padding: 10px 22px !important;
+            border-radius: 980px;
+            font-weight: 600;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 30px rgba(217, 121, 65, 0.45); transform: translateY(-1px); }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 46px;
+            height: 46px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.35s var(--ease-out), opacity 0.25s ease;
+        }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ==================== AMBIENT ORBS ==================== */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+            animation: orbDrift 22s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 480px;
+            height: 480px;
+            top: -12%;
+            right: -10%;
+            background: radial-gradient(circle, rgba(217, 121, 65, 0.22), transparent 70%);
+        }
+
+        .orb-2 {
+            width: 420px;
+            height: 420px;
+            bottom: -14%;
+            left: -12%;
+            background: radial-gradient(circle, rgba(232, 168, 124, 0.12), transparent 70%);
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 320px;
+            height: 320px;
+            top: 44%;
+            left: 58%;
+            background: radial-gradient(circle, rgba(192, 95, 43, 0.12), transparent 70%);
+            animation-delay: -15s;
+        }
+
+        @keyframes orbDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-50px, 40px) scale(1.12); }
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 24px 90px;
+            overflow: hidden;
+            background: var(--bg-deep);
+        }
+        /* Full-bleed photo hero: brand tint layered ON TOP of the photo,
+           so headline contrast survives even if the photo fails to load. */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: -4%;
+            z-index: 0;
+            background-image:
+                linear-gradient(180deg, rgba(12, 12, 12, 0.90) 0%, rgba(12, 12, 12, 0.70) 42%, rgba(12, 12, 12, 0.88) 100%),
+                radial-gradient(ellipse 75% 55% at 50% 0%, rgba(217, 121, 65, 0.30), transparent 62%),
+                url('https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover, cover, cover;
+            background-position: center, center, center 45%;
+            background-repeat: no-repeat;
+            background-color: var(--bg-deep);
+            filter: saturate(1.05) sepia(0.06);
+            animation: kenBurns 24s ease-in-out infinite alternate;
+        }
+
+        @keyframes kenBurns {
+            from { transform: scale(1); }
+            to { transform: scale(1.06); }
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-headline { text-shadow: 0 2px 30px rgba(0, 0, 0, 0.55); }
+        .hero-subtext { text-shadow: 0 1px 18px rgba(0, 0, 0, 0.6); }
+
+        /* ==================== TRUST STRIP (under hero) ==================== */
+        .trust {
+            background: var(--bg-deep);
+            border-bottom: 1px solid var(--line);
+            padding: 34px 24px;
+        }
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            text-align: left;
+        }
+        .trust-item + .trust-item { border-left: 1px solid var(--line); }
+        .trust-item svg { flex: 0 0 auto; width: 24px; height: 24px; }
+        .trust-item span { font-size: 0.9rem; color: var(--muted); line-height: 1.45; max-width: 20ch; }
+        .trust-item strong { display: block; color: var(--text); font-weight: 600; font-size: 0.95rem; }
+
+        /* ==================== EYEBROW LABELS ==================== */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 14px;
+        }
+        .eyebrow-left { text-align: left; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(217, 121, 65, 0.07);
+            padding: 9px 22px;
+            border-radius: 980px;
+            margin-bottom: 30px;
+        }
+        .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 24px; }
+        .hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-scrollhint {
+            margin-top: 72px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .hero-scrollhint::after {
+            content: '';
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(to bottom, var(--copper), transparent);
+            animation: hintPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes hintPulse {
+            0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ==================== STORY ==================== */
+        .story { padding: 130px 24px; background: var(--bg-deep); }
+        .story::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 50%, rgba(217, 121, 65, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+        .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+        .story-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 52ch; }
+        .story-copy p strong { color: var(--text); font-weight: 600; }
+        .story-panel {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.10), transparent 45%),
+                var(--bg-raise);
+            padding: 40px 36px;
+            display: grid;
+            gap: 26px;
+        }
+        .story-point { display: flex; gap: 16px; align-items: flex-start; }
+        .story-point-icon {
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 121, 65, 0.12);
+            border: 1px solid rgba(217, 121, 65, 0.25);
+        }
+        .story-point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+        .story-point p { font-size: 0.92rem; color: var(--muted); }
+
+        /* Story photo — gradient stays as the fallback if the image never loads */
+        .story-media {
+            margin-top: 30px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: linear-gradient(150deg, rgba(217, 121, 65, 0.18), var(--bg-raise) 60%);
+            aspect-ratio: 16 / 9;
+            min-height: 200px;
+        }
+        .story-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 42%;
+            filter: saturate(1.05) sepia(0.06);
+            transition: transform 0.9s var(--ease-out);
+        }
+        .story-media:hover img { transform: scale(1.04); }
+
+        /* ==================== FINISH GALLERY ==================== */
+        .gallery { padding: 120px 24px; background: var(--bg-deep); }
+        .gallery::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 20% 0%, rgba(217, 121, 65, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .gallery .container { position: relative; z-index: 1; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .gallery-frame {
+            position: relative;
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            aspect-ratio: 4 / 5;
+            background: linear-gradient(160deg, rgba(217, 121, 65, 0.16), var(--bg-raise) 65%);
+            transition: transform 0.5s var(--ease-out), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .gallery-frame:hover {
+            transform: translateY(-6px);
+            border-color: rgba(217, 121, 65, 0.4);
+            box-shadow: 0 18px 46px rgba(0, 0, 0, 0.45);
+        }
+        .gallery-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(1.05) sepia(0.06);
+            transition: transform 0.9s var(--ease-out);
+        }
+        .gallery-frame:hover img { transform: scale(1.05); }
+        .gallery-frame figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 48px 18px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(to top, rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0.45) 45%, transparent);
+        }
+        .gallery-frame figcaption small {
+            display: block;
+            font-weight: 400;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 2px;
+        }
+        .gallery-note { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 28px; }
+
+        /* ==================== CATEGORY MOSAIC (signature) ==================== */
+        .mosaic { padding: 130px 24px; background: var(--bg); }
+        .mosaic::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 85% 10%, rgba(232, 168, 124, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .mosaic .container { position: relative; z-index: 1; }
+        .mosaic-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 18px; }
+        .mosaic-tile {
+            position: relative;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            overflow: hidden;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-decoration: none;
+            background: var(--bg-raise);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .mosaic-tile:hover {
+            border-color: rgba(217, 121, 65, 0.4);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(217, 121, 65, 0.1);
+        }
+        .mosaic-tile.tile-lg { grid-column: span 2; grid-row: span 2; }
+        .mosaic-tile.tile-wide { grid-column: span 2; }
+        .tile-scene { position: absolute; inset: 0; pointer-events: none; }
+        .tile-scene svg {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 84px;
+            height: 84px;
+            opacity: 0.85;
+            transition: transform 0.5s var(--ease-out), opacity 0.4s ease;
+        }
+        .tile-lg .tile-scene svg { width: 132px; height: 132px; top: 26px; right: 26px; }
+        .mosaic-tile:hover .tile-scene svg { transform: translateY(-6px) scale(1.06); opacity: 1; }
+        .tile-1 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(18, 18, 18, 0) 60%); }
+        .tile-2 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.13), rgba(18, 18, 18, 0) 60%); }
+        .tile-3 .tile-scene { background: linear-gradient(150deg, rgba(192, 95, 43, 0.16), rgba(18, 18, 18, 0) 60%); }
+        .tile-4 .tile-scene { background: linear-gradient(150deg, rgba(244, 193, 138, 0.12), rgba(18, 18, 18, 0) 60%); }
+        .tile-5 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.14), rgba(18, 18, 18, 0) 60%); }
+        .tile-6 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.15), rgba(18, 18, 18, 0) 60%); }
+        .tile-label { position: relative; z-index: 1; transform: translateZ(30px); }
+        .tile-label h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .tile-lg .tile-label h3 { font-size: 1.55rem; }
+        .tile-label p { font-size: 0.88rem; color: var(--muted); }
+        .tile-label .tile-cta {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+        }
+
+        /* ==================== PROMISE GRID ==================== */
+        .promise { padding: 130px 24px; background: var(--bg-deep); }
+        .promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .promise .container { position: relative; z-index: 1; }
+        .promise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .promise-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 26px;
+            text-align: left;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-3px) scale(1.03);
+            border-color: rgba(217, 121, 65, 0.35);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 34px rgba(217, 121, 65, 0.09);
+        }
+        .promise-card svg { width: 40px; height: 40px; margin-bottom: 18px; }
+        .promise-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+        .promise-card p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== STATS BAND ==================== */
+        .stats {
+            padding: 96px 24px;
+            background:
+                linear-gradient(180deg, rgba(217, 121, 65, 0.08), transparent 70%),
+                var(--bg-deep);
+            border-top: 1px solid rgba(217, 121, 65, 0.18);
+            border-bottom: 1px solid rgba(217, 121, 65, 0.18);
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+        .stats-grid .stat { padding: 8px 20px; }
+        .stats-grid .stat + .stat { border-left: 1px solid var(--line); }
+        .stat-value {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--copper-soft), var(--copper-pale));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .stat-label {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* ==================== AUTOMATION MOCK ==================== */
+        .automation { padding: 130px 24px; background: var(--bg-deep); }
+        .automation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 80% 80%, rgba(37, 211, 102, 0.05), transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 10% 20%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .automation .container { position: relative; z-index: 1; }
+        .automation-shell {
+            max-width: 620px;
+            margin: 0 auto;
+            border-radius: 26px;
+            border: 1px solid rgba(217, 121, 65, 0.22);
+            background:
+                linear-gradient(160deg, rgba(217, 121, 65, 0.08), transparent 50%),
+                var(--bg-raise);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .automation-shell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--copper-soft), transparent);
+        }
+
+        .automation-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6fdb96;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            background: rgba(37, 211, 102, 0.07);
+            padding: 7px 16px;
+            border-radius: 980px;
+            margin-bottom: 22px;
+        }
+
+        .automation-tag .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: dotBlink 1.8s ease-in-out infinite;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .automation-shell h3 { font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: 8px; }
+        .automation-shell > p { color: var(--muted); font-size: 0.96rem; margin-bottom: 30px; }
+        .emi-form { display: grid; gap: 16px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-height: 50px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a958f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .field input::placeholder { color: rgba(154, 149, 143, 0.6); }
+        .field input:focus,
+        .field select:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(217, 121, 65, 0.18); }
+        .emi-submit {
+            margin-top: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #25D366, #128C4A);
+            color: #06170c;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.18);
+        }
+        .emi-submit:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3); }
+        .emi-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; }
+
+        /* success state */
+        .emi-success { display: none; text-align: center; padding: 24px 6px 8px; }
+        .emi-success.visible { display: block; animation: successIn 0.6s var(--ease-out); }
+
+        @keyframes successIn {
+            from { opacity: 0; transform: translateY(16px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .success-check {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            color: #25D366;
+            font-size: 2rem;
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+        }
+        .emi-success h4 { font-size: 1.3rem; margin-bottom: 10px; }
+        .emi-success p { color: var(--muted); font-size: 0.95rem; max-width: 40ch; margin: 0 auto 22px; }
+        .emi-success .pitch { color: var(--copper-soft); font-weight: 500; }
+        .automation-strip {
+            max-width: 620px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .automation-strip strong { color: var(--text); }
+
+        /* ==================== VISIT ==================== */
+        .visit { padding: 130px 24px; background: var(--bg); }
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .visit-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 30px;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-3px); border-color: rgba(217, 121, 65, 0.3); }
+        .visit-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+            margin-bottom: 12px;
+            color: var(--copper-soft);
+        }
+        .visit-card p, .visit-card a { color: var(--muted); font-size: 0.98rem; text-decoration: none; }
+        .visit-card a:hover { color: var(--text); }
+        .visit-card .visit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            min-height: 44px;
+            color: var(--copper);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .visit-card .visit-link:hover { color: var(--copper-pale); }
+
+        /* ==================== FAQ ==================== */
+        .faq { padding: 130px 24px; background: var(--bg-deep); }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            min-height: 60px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 24px 44px 24px 4px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--copper-soft); }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--copper);
+            transition: transform 0.35s var(--ease-out);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+        .faq-answer p { padding: 0 4px 26px; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
+
+        /* no-JS fallback: answers open */
+        html.no-js .faq-answer { max-height: none; }
+
+        /* ==================== FINAL CTA ==================== */
+        .final-cta {
+            padding: 150px 24px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse 60% 55% at 50% 100%, rgba(217, 121, 65, 0.13), transparent 70%),
+                var(--bg);
+        }
+        .final-cta .section-headline { margin-bottom: 16px; }
+        .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* ==================== FOOTER ==================== */
+        .footer { padding: 64px 24px 40px; background: var(--bg-deep); border-top: 1px solid var(--line); }
+        .footer-content { text-align: center; }
+        .footer-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 18px; }
+        .footer-name span { color: var(--copper-soft); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 26px;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-demo-notice {
+            font-size: 0.82rem;
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0 auto 12px;
+            line-height: 1.7;
+        }
+        .footer-demo-notice a { color: var(--copper-soft); text-decoration: none; }
+        .footer-copy { font-size: 0.8rem; color: rgba(154, 149, 143, 0.6); }
+
+        /* ==================== FLOATING UI ==================== */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 1100;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.35s var(--ease-out);
+            animation: waPulse 2.6s ease-in-out infinite;
+        }
+        .wa-float:hover { transform: translateY(-3px) scale(1.06); }
+        .wa-float svg { width: 30px; height: 30px; }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+            60% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+        }
+
+        .demo-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 22px;
+            z-index: 1100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 10px 9px 16px;
+            border-radius: 980px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(26, 26, 26, 0.72);
+            border: 1px solid rgba(217, 121, 65, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .demo-badge .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); }
+        .demo-badge button {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 50%;
+            transition: color 0.3s;
+        }
+        .demo-badge button:hover { color: var(--text); }
+        .demo-badge.hidden { display: none; }
+        .back-to-top {
+            position: fixed;
+            bottom: 94px;
+            right: 28px;
+            z-index: 1050;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--copper-soft);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: var(--copper); color: var(--copper-pale); }
+
+        /* Sticky mobile action bar: Call | WhatsApp | Directions */
+        .mobile-bar { display: none; }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 960px) {
+            .mosaic-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+            .promise-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-grid { grid-template-columns: 1fr; gap: 44px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 34px; }
+            .stats-grid .stat:nth-child(3) { border-left: none; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); row-gap: 22px; }
+            .trust-item:nth-child(3) { border-left: none; }
+        }
+
+        @media (max-width: 760px) {
+            /* Sticky mobile conversion bar */
+            .mobile-bar {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1200;
+                background: rgba(12, 12, 12, 0.96);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-top: 1px solid rgba(217, 121, 65, 0.28);
+                box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
+            }
+            .mobile-bar a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                min-height: 62px;
+                color: var(--text);
+                text-decoration: none;
+                font-size: 0.74rem;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+            .mobile-bar a + a { border-left: 1px solid rgba(255, 255, 255, 0.07); }
+            .mobile-bar svg { width: 19px; height: 19px; }
+            .mobile-bar .bar-wa { color: #6fdb96; }
+            body { padding-bottom: 62px; }
+            .wa-float { bottom: 78px; width: 52px; height: 52px; }
+            .wa-float svg { width: 27px; height: 27px; }
+            .demo-badge { bottom: 82px; left: 16px; }
+            .back-to-top { bottom: 142px; }
+
+            .nav-links {
+                position: fixed;
+                top: 66px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(12, 12, 12, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line);
+                padding: 12px 24px 24px;
+                transform: translateY(-12px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: transform 0.35s var(--ease-out), opacity 0.3s ease, visibility 0.3s;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { margin-top: 14px; text-align: center; }
+            .nav-hamburger { display: flex; }
+
+            /* no-JS: keep menu reachable (shown statically below the bar) */
+            html.no-js .nav-links {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+            html.no-js .nav-container { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+            html.no-js .nav-hamburger { display: none; }
+        }
+
+        @media (max-width: 560px) {
+            .mosaic-grid { grid-template-columns: 1fr; grid-auto-rows: 168px; }
+            .mosaic-tile.tile-lg,
+            .mosaic-tile.tile-wide { grid-column: span 1; grid-row: span 1; }
+            .tile-lg .tile-scene svg { width: 90px; height: 90px; }
+            .promise-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .visit-grid { grid-template-columns: 1fr; }
+            .story-panel { padding: 30px 24px; }
+            .automation-shell { padding: 34px 24px; }
+            .hero-ctas .btn { width: 100%; }
+            .orb { filter: blur(60px); opacity: 0.4; }
+            .trust-grid { grid-template-columns: 1fr; row-gap: 18px; }
+            .trust-item { justify-content: flex-start; }
+            .trust-item + .trust-item { border-left: none; border-top: 1px solid var(--line); padding-top: 18px; }
+            .trust-item span { max-width: none; }
+            .story-media { aspect-ratio: 4 / 3; }
+            .gallery { padding: 84px 24px; }
+        }
+
+        /* ==================== REDUCED MOTION ==================== */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .orb { animation: none; }
+            .wa-float { animation: none; }
+            .hero::before { animation: none; transform: none; }
+            .gradient-text { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Shree Shyam Sanitary And Paints — home">
+                <span class="nav-logo-mark" aria-hidden="true">S</span>
+                <span class="nav-logo-name">Shree Shyam <span>Sanitary &amp; Paints</span></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#categories">What We Stock</a>
+                <a href="#finish">The Finish</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#emi-check">Ask a Rate</a>
+                <a href="#visit">Visit</a>
+                <a href="https://wa.me/919628489111" class="nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-badge reveal">Shree Shyam Sanitary And Paints &middot; Circular Road, Gonda</p>
+            <h1 class="hero-headline reveal">Foundation To <span class="gradient-text">Final Coat.</span></h1>
+            <p class="hero-subtext reveal">Original Asian Paints and Kamdhenu. Sanitaryware and bath fittings. Sariya for the slab. One counter on Circular Road for the whole house — and we deliver it home.</p>
+            <div class="hero-ctas reveal">
+                <a href="#emi-check" class="btn btn-primary">Ask Today's Rate</a>
+                <a href="#categories" class="btn btn-secondary">See What We Stock</a>
+            </div>
+            <div class="hero-scrollhint reveal" aria-hidden="true">Scroll</div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="Why customers buy here">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item reveal">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>Original stock</strong>Asian Paints, Kamdhenu, Jal</span>
+                </div>
+                <div class="trust-item reveal">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.6"/></svg>
+                    <span><strong>Home delivery</strong>To your house or your site</span>
+                </div>
+                <div class="trust-item reveal">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#d97941" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span><strong>One bill, one counter</strong>Paint, sanitary, fittings, sariya</span>
+                </div>
+                <div class="trust-item reveal">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a9 9 0 11-3.2-6.9" stroke="#d97941" stroke-width="1.6" stroke-linecap="round"/><path d="M8 12.5l2.5 2.5L20 6" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>Rates on WhatsApp</strong>Ask before you make the trip</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="about">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="eyebrow eyebrow-left">The Shop On Circular Road</span>
+                    <h2>One counter for the <span class="gradient-text">whole house.</span></h2>
+                    <p>Walk in for a bucket of paint. Walk out knowing where your <strong>basin, bath fittings and sariya</strong> are coming from too. Most shops in Gonda sell one of those. We keep all of them behind the same counter, near Indian Bank on Circular Road.</p>
+                    <p>Homeowners and contractors both buy here for the same reason: what is on the shelf is original. Asian Paints is Asian Paints. Kamdhenu is Kamdhenu. Jal fittings are Jal fittings. Nothing gets swapped for a lookalike because the margin is better.</p>
+                    <p><strong>Original stock. Straight rates. Delivered to your site.</strong></p>
+                    <figure class="story-media">
+                        <img src="https://images.pexels.com/photos/34574606/pexels-photo-34574606.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="A finished bedroom with freshly painted walls and natural light" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    </figure>
+                </div>
+                <div class="story-panel reveal">
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Original branded stock</h3>
+                            <p>Asian Paints, Kamdhenu, Jal fittings — sold as the brand intended, with a proper bill.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#e8a87c" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                        </span>
+                        <div>
+                            <h3>Delivered to your door</h3>
+                            <p>Paint, fittings or bars — sent to the house or the site, so nobody loses a working day.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8a87c" stroke-width="1.6"/><path d="M3 10h18" stroke="#e8a87c" stroke-width="1.6"/><path d="M7 15h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Rates you can ask before you come</h3>
+                            <p>Message the counter, get today's rate — no trip just to find out a price.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CATEGORY MOSAIC -->
+    <section class="mosaic" id="categories">
+        <div class="container">
+            <span class="eyebrow reveal">Paints &middot; Sanitary &middot; Fittings &middot; Steel</span>
+            <h2 class="section-headline reveal">What We <span class="gradient-text">Stock.</span></h2>
+            <p class="section-sub reveal">Paints, sanitary, fittings, steel and the small hardware that finishes the job. Come see it, or message us and we will send photos and rates of what is on the shelf today.</p>
+            <div class="mosaic-grid">
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20paints" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="10" y="18" width="76" height="46" rx="4" stroke="#d97941" stroke-width="2.5"/><rect x="16" y="24" width="64" height="34" rx="2" fill="rgba(217,121,65,0.15)"/><path d="M38 70h20M48 64v6" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M24 34l10 8-10 8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Paints &amp; Shades</h3>
+                        <p>Original Asian Paints and Kamdhenu — interior, exterior, enamel and primer. Bring a shade in mind, leave with the right bucket.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20sanitaryware" target="_blank" rel="noopener" class="mosaic-tile tile-2 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="28" y="10" width="40" height="74" rx="5" stroke="#e8a87c" stroke-width="2.5"/><path d="M28 38h40" stroke="#e8a87c" stroke-width="2.5"/><path d="M36 20v8M36 48v14" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Sanitaryware</h3>
+                        <p>Commodes, basins, cisterns.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20bath%20fittings" target="_blank" rel="noopener" class="mosaic-tile tile-3 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="12" y="22" width="72" height="30" rx="6" stroke="#d97941" stroke-width="2.5"/><path d="M20 44h56" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M30 60c0 6-6 6-6 10M48 60c0 6-6 6-6 10M66 60c0 6-6 6-6 10" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Bath Fittings</h3>
+                        <p>Jal taps, showers, mixers.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20TMT%20bars" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><path d="M14 48v-8a6 6 0 016-6h56a6 6 0 016 6v8" stroke="#f4c18a" stroke-width="2.5"/><rect x="10" y="48" width="76" height="18" rx="5" stroke="#f4c18a" stroke-width="2.5"/><path d="M16 66v8M80 66v8" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>TMT Bars &amp; Sariya</h3>
+                        <p>Steel for the slab and the columns — ask the day's rate before you book your load.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20pipes%20and%20plumbing" target="_blank" rel="noopener" class="mosaic-tile tile-5 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="16" y="30" width="64" height="44" rx="5" stroke="#d97941" stroke-width="2.5"/><rect x="24" y="40" width="30" height="24" rx="2" stroke="#d97941" stroke-width="2.5"/><circle cx="66" cy="44" r="3" fill="#e8a87c"/><circle cx="66" cy="56" r="3" fill="#e8a87c"/><path d="M32 22c0-4 4-4 4-8M48 22c0-4 4-4 4-8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Pipes &amp; Plumbing</h3>
+                        <p>Pipes, elbows, valves, tanks.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919628489111?text=I%20want%20to%20ask%20about%20painting%20accessories" target="_blank" rel="noopener" class="mosaic-tile tile-6 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="20" y="12" width="56" height="72" rx="6" stroke="#e8a87c" stroke-width="2.5"/><circle cx="48" cy="54" r="18" stroke="#e8a87c" stroke-width="2.5"/><circle cx="48" cy="54" r="9" stroke="#d97941" stroke-width="2.5"/><circle cx="30" cy="21" r="3" fill="#d97941"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Painting Accessories</h3>
+                        <p>Putty, primer, brushes, rollers.</p>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINISH GALLERY -->
+    <section class="gallery" id="finish">
+        <div class="container">
+            <span class="eyebrow reveal">Plan The Finish</span>
+            <h2 class="section-headline reveal">Pick The Look, <span class="gradient-text">Then The Material.</span></h2>
+            <p class="section-sub reveal">Shade, fittings and finish decided before the painter arrives. Bring a picture like these to the counter and we will tell you what it takes.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-frame reveal">
+                    <img src="https://images.pexels.com/photos/7515855/pexels-photo-7515855.png?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Modular kitchen with contemporary cabinets and a tiled backsplash" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Kitchen<small>Wall finish &amp; sink fittings</small></figcaption>
+                </figure>
+                <figure class="gallery-frame reveal">
+                    <img src="https://images.pexels.com/photos/14613397/pexels-photo-14613397.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Modern bedroom with minimalist decor and calm muted wall colours" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Bedroom<small>Muted interior shades</small></figcaption>
+                </figure>
+                <figure class="gallery-frame reveal">
+                    <img src="https://images.pexels.com/photos/7511701/pexels-photo-7511701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bright living room with a grey sofa and indoor plants against painted walls" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Living Room<small>Interior emulsion &amp; putty</small></figcaption>
+                </figure>
+                <figure class="gallery-frame reveal">
+                    <img src="https://images.pexels.com/photos/34993898/pexels-photo-34993898.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Kitchen with marble counters, wooden cabinets and warm lighting" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Warm Finish<small>Enamel, primer &amp; hardware</small></figcaption>
+                </figure>
+            </div>
+            <p class="gallery-note reveal">Reference images for planning shades and fittings — not photographs of the shop.</p>
+        </div>
+    </section>
+
+    <!-- PROMISE GRID -->
+    <section class="promise" id="why-us">
+        <div class="container">
+            <span class="eyebrow reveal">Homeowners &amp; Contractors</span>
+            <h2 class="section-headline reveal">Why Gonda <span class="gradient-text">Buys Here.</span></h2>
+            <p class="section-sub reveal">Homeowners finishing one room. Contractors buying for a whole site. Both get the same rate and the same original stock.</p>
+            <div class="promise-grid">
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4l13 7v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9l13-7z" stroke="#d97941" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Original. Always.</h3>
+                    <p>Branded paint from sealed cartons, with a proper bill. No duplicate tins, ever.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="10" width="32" height="22" rx="3" stroke="#d97941" stroke-width="2"/><path d="M4 17h32" stroke="#d97941" stroke-width="2"/><path d="M10 25h8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round"/></svg>
+                    <h3>One list, one counter</h3>
+                    <p>Paint, sanitary, fittings and sariya on a single bill — not four shops in one afternoon.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="12" width="20" height="16" rx="2" stroke="#d97941" stroke-width="2"/><path d="M24 17h6l6 5v6h-12V17z" stroke="#d97941" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/><circle cx="30" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/></svg>
+                    <h3>Delivered home</h3>
+                    <p>Heavy material sent to your house or site — the part our customers mention most.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6a14 14 0 1014 14" stroke="#d97941" stroke-width="2" stroke-linecap="round"/><path d="M20 12v8l6 4" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 6l6 2-2 6" stroke="#d97941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Advice worth the trip</h3>
+                    <p>How much paint for the room, which fitting suits the line — ask before you buy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value">4.9&#9733;</span>
+                    <span class="stat-label">Google rating</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value" data-count="87">87</span>
+                    <span class="stat-label">Google reviews from Gonda customers</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Original</span>
+                    <span class="stat-label">Branded stock, proper bill</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Delivered</span>
+                    <span class="stat-label">To your home or your site</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: RATE / STOCK ENQUIRY -->
+    <section class="automation" id="emi-check">
+        <div class="container">
+            <span class="eyebrow reveal">Before You Make The Trip</span>
+            <h2 class="section-headline reveal">Today's Rate, <span class="gradient-text">On Your Phone.</span></h2>
+            <p class="section-sub reveal">Tell us what you need. Get the rate and whether it is in stock on WhatsApp — before you make the trip to Circular Road.</p>
+
+            <div class="automation-shell reveal">
+                <span class="automation-tag"><span class="dot" aria-hidden="true"></span> WhatsApp Auto-Reply</span>
+                <h3>Ask a rate in seconds</h3>
+                <p>Fill this in and our WhatsApp assistant replies with today's rate, pack sizes and what is on the shelf.</p>
+
+                <form class="emi-form" id="emi-form" novalidate>
+                    <div class="field">
+                        <label for="emi-product">What do you need a rate for?</label>
+                        <select id="emi-product" name="product" required>
+                            <option value="" selected disabled>Choose a category</option>
+                            <option>Paints</option>
+                            <option>Sanitaryware</option>
+                            <option>Bath Fittings</option>
+                            <option>TMT Bars / Sariya</option>
+                            <option>Pipes &amp; Plumbing</option>
+                            <option>Painting Accessories</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="emi-name">Your name</label>
+                            <input type="text" id="emi-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="emi-phone">WhatsApp number</label>
+                            <input type="tel" id="emi-phone" name="phone" placeholder="10-digit mobile" inputmode="numeric" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn emi-submit">Get the Rate on WhatsApp</button>
+                    <p class="emi-note">Demo form — nothing is sent anywhere.</p>
+                </form>
+
+                <div class="emi-success" id="emi-success" role="status" aria-live="polite">
+                    <div class="success-check" aria-hidden="true">&#10003;</div>
+                    <h4>Request received.</h4>
+                    <p>This is how your customers would reach you automatically — rate, stock and pack sizes delivered straight to their WhatsApp.</p>
+                    <p class="pitch">Imagine this answering rate enquiries while you are billing.</p>
+                    <button type="button" class="btn btn-secondary" id="emi-reset">Try It Again</button>
+                </div>
+            </div>
+
+            <p class="automation-strip reveal"><strong>For the shop owner:</strong> this same assistant can send the shade card, confirm stock, take contractor material lists and update customers when their delivery leaves the shop — automatically.</p>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="eyebrow reveal">Circular Road, Gonda</span>
+            <h2 class="section-headline reveal">Come See It <span class="gradient-text">In Person.</span></h2>
+            <p class="section-sub reveal">Hold the fitting. Check the shade in daylight. See the bar before you book the load. Circular Road, right next to Indian Bank.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#d97941" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Address
+                    </h3>
+                    <p>Shree Shyam Sanitary And Paints<br>Circular Road, near Indian Bank<br>Avas Vikas Colony, Bharatpuri<br>Gonda, Uttar Pradesh 271003</p>
+                    <a class="visit-link" href="https://www.google.com/maps/search/?api=1&amp;query=Shree%20Shyam%20Sanitary%20And%20Paints%20Gonda" target="_blank" rel="noopener">Get Directions &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                        Call or WhatsApp
+                    </h3>
+                    <p><a href="tel:+919628489111">+91 96284 89111</a></p>
+                    <p>Quickest reply on WhatsApp — photos of stock, today's rates, delivery details.</p>
+                    <a class="visit-link" href="https://wa.me/919628489111" target="_blank" rel="noopener">Message on WhatsApp &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#d97941" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#d97941" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        Brands On The Shelf
+                    </h3>
+                    <p>Asian Paints &middot; Kamdhenu &middot; Jal bath fittings</p>
+                    <p>Looking for a particular brand or model? Message us and we will tell you straight away.</p>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.8"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/><circle cx="17.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Home Delivery
+                    </h3>
+                    <p>Material delivered to your house or your site in Gonda.</p>
+                    <p>Send your list on WhatsApp and we will confirm what is ready to go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="eyebrow reveal">Asked At The Counter</span>
+            <h2 class="section-headline reveal">Questions? <span class="gradient-text">Answers.</span></h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Are your paints original?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Yes. We stock original Asian Paints and Kamdhenu, sold from sealed packs with a proper bill. If a tin ever looks tampered with, bring it back — that is not how we do business, and our customers say so in their reviews.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Do you deliver to my house or site?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes — home delivery is what our customers mention most in their reviews. Paint, sanitaryware, fittings or steel: send the list on WhatsApp, and we will confirm the rate and when it can reach you.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you sell sariya and paints at the same counter?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>We do. TMT bars for the structure, sanitaryware and fittings for the bathrooms, paint for the finish — one shop, one bill, one person to call. That is the reason most of our contractor customers stay with us.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Can you tell me how much paint I need?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Tell us the room size and whether it is a fresh wall or a repaint, and we will work out the putty, primer and paint quantity with you at the counter — so you are not left with three extra tins or one short.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Do you give rates for a full site order?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Send the material list on WhatsApp and we will come back with the rate for the lot. Contractors and masons buying regularly should speak to us at the counter about their standing requirement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <span class="eyebrow reveal">One Message Away</span>
+            <h2 class="section-headline reveal">Your Material. <span class="gradient-text">Sorted.</span></h2>
+            <p class="reveal">One message. Today's rate. Original stock.</p>
+            <div class="hero-ctas reveal">
+                <a href="https://wa.me/919628489111" target="_blank" rel="noopener" class="btn btn-primary btn-large">Chat With Us on WhatsApp</a>
+                <a href="tel:+919628489111" class="btn btn-secondary btn-large">Call +91 96284 89111</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Shree Shyam <span>Sanitary &amp; Paints</span></p>
+                <div class="footer-links">
+                    <a href="#categories">What We Stock</a>
+                    <a href="#finish">The Finish</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#emi-check">Ask a Rate</a>
+                    <a href="#visit">Visit</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of Shree Shyam Sanitary And Paints.</p>
+                <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/919628489111" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.7-.4z" fill="#ffffff"/></svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick contact">
+        <a href="tel:+919628489111">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#e8a87c" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a class="bar-wa" href="https://wa.me/919628489111" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2z" fill="#6fdb96"/></svg>
+            WhatsApp
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Shree%20Shyam%20Sanitary%20And%20Paints%20Gonda" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#e8a87c" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#e8a87c" stroke-width="1.8"/></svg>
+            Directions
+        </a>
+    </nav>
+
+    <!-- DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo">
+        <span class="demo-dot" aria-hidden="true"></span>
+        Concept Demo
+        <button type="button" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* JS is running — drop no-JS fallbacks */
+        document.documentElement.classList.remove('no-js');
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Nav: scroll darken ---------- */
+        var nav = document.getElementById('site-nav');
+        var backToTop = document.getElementById('back-to-top');
+
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 24);
+            if (backToTop) backToTop.classList.toggle('visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* ---------- Nav: hamburger ---------- */
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                var open = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            navMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        /* ---------- Back to top ---------- */
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------- Demo badge dismiss ---------- */
+        var demoBadge = document.getElementById('demo-badge');
+        var demoBadgeClose = document.getElementById('demo-badge-close');
+        if (demoBadge && demoBadgeClose) {
+            demoBadgeClose.addEventListener('click', function () {
+                demoBadge.classList.add('hidden');
+            });
+        }
+
+        /* ---------- FAQ accordion ---------- */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                // close others
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                        if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                    }
+                });
+
+                btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                if (answer) {
+                    answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        /* ---------- Automation mock: rate / stock enquiry ---------- */
+        var emiForm = document.getElementById('emi-form');
+        var emiSuccess = document.getElementById('emi-success');
+        var emiReset = document.getElementById('emi-reset');
+
+        if (emiForm && emiSuccess) {
+            emiForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var product = document.getElementById('emi-product');
+                var name = document.getElementById('emi-name');
+                var phone = document.getElementById('emi-phone');
+
+                var valid = true;
+                [product, name, phone].forEach(function (field) {
+                    if (!field) return;
+                    if (!field.value || (field === phone && !/^\d{10}$/.test(field.value.replace(/\D/g, '').slice(-10)))) {
+                        field.style.borderColor = 'rgba(230, 90, 70, 0.7)';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                if (!valid) return;
+
+                emiForm.style.display = 'none';
+                emiSuccess.classList.add('visible');
+            });
+
+            if (emiReset) {
+                emiReset.addEventListener('click', function () {
+                    emiSuccess.classList.remove('visible');
+                    emiForm.reset();
+                    emiForm.style.display = 'grid';
+                });
+            }
+        }
+
+        /* ---------- Signature: mosaic hover tilt ---------- */
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (!reduceMotion && finePointer) {
+            document.querySelectorAll('[data-tilt]').forEach(function (tile) {
+                var rect = null;
+
+                tile.addEventListener('mouseenter', function () {
+                    rect = tile.getBoundingClientRect();
+                });
+
+                tile.addEventListener('mousemove', function (e) {
+                    if (!rect) rect = tile.getBoundingClientRect();
+                    var px = (e.clientX - rect.left) / rect.width - 0.5;
+                    var py = (e.clientY - rect.top) / rect.height - 0.5;
+                    tile.style.transform =
+                        'perspective(800px) rotateY(' + (px * 7).toFixed(2) + 'deg)' +
+                        ' rotateX(' + (-py * 7).toFixed(2) + 'deg)' +
+                        ' translateY(-4px)';
+                });
+
+                tile.addEventListener('mouseleave', function () {
+                    rect = null;
+                    tile.style.transform = '';
+                });
+            });
+        }
+
+        /* ---------- GSAP scroll reveals (guarded — page stays visible without it) ---------- */
+        document.addEventListener('DOMContentLoaded', function () {
+            if (reduceMotion) return;
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 34,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            /* ---------- CountUp counters (guarded) ----------
+               Stats are qualitative by default (no invented numbers).
+               Customization agents: give a .stat-value real data via
+               data-count="1234" and it will animate automatically. */
+            if (typeof window.countUp !== 'undefined') {
+                document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
+                    var target = parseFloat(el.getAttribute('data-count'));
+                    if (isNaN(target)) return;
+                    var counter = new countUp.CountUp(el, target, { duration: 2.2, separator: ',' });
+                    ScrollTrigger.create({
+                        trigger: el,
+                        start: 'top 90%',
+                        once: true,
+                        onEnter: function () {
+                            if (!counter.error) counter.start();
+                        }
+                    });
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

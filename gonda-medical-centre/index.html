@@ -1,0 +1,1694 @@
+<!-- CUSTOMIZED:healthcare — Gonda Medical Centre (Maternity, Surgical, Laparoscopy & IVF Hospital)
+302, Patel Nagar, Civil Line, Gonda, Uttar Pradesh 271001
+Proprietor: Dr. Punyoday Misra · Gynaecologist: Dr. Anita Mishra (unconfirmed)
+Mobile 9415120900 / Landline 05262-221999 — both verified against the UPNHA Gonda member list.
+Stats band is qualitative: no verified numbers exist for years, beds, deliveries or success rates.
+OPD hours unknown — the contact card asks the visitor to call rather than stating invented timings.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Gonda Medical Centre (Maternity, Surgical, Laparoscopy &amp; IVF Hospital) — Maternity, Surgery, Laparoscopy &amp; IVF Hospital, Gonda</title>
+    <meta name="description" content="Gonda Medical Centre, 302 Patel Nagar, Civil Line, Gonda. Maternity, general and laparoscopic surgery, gynaecology and IVF — care that Gonda no longer has to travel for. Concept demo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   GONDA MEDICAL CENTRE — Deep Teal / Soft Gold / Emerald
+   Healthcare vertical · single-file concept demo
+   ========================================================================== */
+
+/* ---------- RESET & TOKENS ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg-deep: #062a2a;
+    --bg-mid: #083232;
+    --bg-rich: #0a3d3d;
+    --ink: #f4f1e8;
+    --ink-soft: #a8bdb5;
+    --gold: #d8b56a;
+    --gold-soft: #e9d3a3;
+    --emerald: #2dd4a0;
+    --emerald-deep: #0e9f76;
+    --line: rgba(244, 241, 232, 0.08);
+    --glass: rgba(6, 42, 42, 0.72);
+    --card: rgba(244, 241, 232, 0.03);
+    --card-line: rgba(244, 241, 232, 0.06);
+    --radius: 20px;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--ink); background: var(--bg-deep); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-weight: 600; line-height: 1.12; color: var(--ink); letter-spacing: -0.01em; }
+
+.section-headline { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 20px; text-align: center; }
+
+.section-kicker { display: block; text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--emerald); margin-bottom: 18px; }
+
+.section-sub { text-align: center; color: var(--ink-soft); max-width: 620px; margin: 0 auto 56px; font-size: clamp(1rem, 1.8vw, 1.125rem); }
+
+.gradient-text {
+    background: linear-gradient(120deg, var(--gold) 0%, var(--gold-soft) 30%, var(--emerald) 70%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 220% auto;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+0%, 100% { background-position: 0% center; }
+50% { background-position: 100% center; }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+.skip-link { position: absolute; top: -48px; left: 16px; z-index: 2000; background: var(--gold); color: #062a2a; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: top 0.3s ease; }
+
+.skip-link:focus { top: 12px; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 14px 32px;
+    border-radius: 980px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary { background: linear-gradient(135deg, var(--gold), #c39a4b); color: #062421; box-shadow: 0 0 30px rgba(216, 181, 106, 0.22); }
+
+.btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 40px rgba(216, 181, 106, 0.35); }
+
+.btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid rgba(244, 241, 232, 0.24); }
+
+.btn-secondary:hover { border-color: var(--emerald); background: rgba(45, 212, 160, 0.06); transform: translateY(-2px); }
+
+.btn-large { padding: 18px 44px; font-size: 1.1rem; }
+
+/* ---------- NAVIGATION ---------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(6, 42, 42, 0.62);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav.scrolled { background: rgba(5, 32, 32, 0.92); box-shadow: 0 1px 30px rgba(45, 212, 160, 0.08); }
+
+.nav-container { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 68px; }
+
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+.nav-logo-mark { width: 38px; height: 38px; flex-shrink: 0; }
+
+.nav-logo-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); letter-spacing: 0.01em; line-height: 1.1; }
+
+.nav-logo-name small { display: block; font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+
+.nav-links { display: flex; align-items: center; gap: 30px; }
+
+.nav-links a { font-size: 0.9rem; color: var(--ink-soft); text-decoration: none; padding: 8px 2px; transition: color 0.3s; }
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+    background: linear-gradient(135deg, var(--gold), #c39a4b);
+    color: #062421 !important;
+    padding: 10px 22px !important;
+    border-radius: 980px;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(216, 181, 106, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover { box-shadow: 0 0 30px rgba(216, 181, 106, 0.4); transform: translateY(-1px); }
+
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 48px; height: 48px; padding: 12px; background: transparent; border: none; cursor: pointer; }
+
+.hamburger-line { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform 0.35s var(--ease-out), opacity 0.25s ease; }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- AMBIENT ORBS ---------- */
+.orb { position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; opacity: 0.55; animation: orbDrift 22s ease-in-out infinite alternate; }
+
+.orb-1 { width: 480px; height: 480px; top: -10%; left: -12%; background: radial-gradient(circle, rgba(45, 212, 160, 0.16) 0%, transparent 70%); }
+
+.orb-2 { width: 420px; height: 420px; top: 44%; right: -14%; background: radial-gradient(circle, rgba(216, 181, 106, 0.13) 0%, transparent 70%); animation-delay: -8s; }
+
+.orb-3 { width: 380px; height: 380px; bottom: -12%; left: 22%; background: radial-gradient(circle, rgba(14, 159, 118, 0.14) 0%, transparent 70%); animation-delay: -15s; }
+
+@keyframes orbDrift {
+0% { transform: translate(0, 0) scale(1); }
+50% { transform: translate(40px, -30px) scale(1.08); }
+100% { transform: translate(-30px, 35px) scale(0.96); }
+}
+
+main { position: relative; z-index: 1; }
+
+/* ---------- HERO ---------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 130px 24px 90px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 100%);
+}
+
+/* Full-bleed photo layer: dark brand tint stacked ON TOP of the photograph
+   as a CSS multi-background, so headline contrast never depends on the image. */
+.hero-media {
+    position: absolute;
+    inset: -3%;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(180deg, rgba(4, 26, 26, 0.86) 0%, rgba(6, 42, 42, 0.72) 42%, rgba(6, 42, 42, 0.94) 100%),
+        radial-gradient(ellipse 70% 55% at 50% 45%, rgba(45, 212, 160, 0.16) 0%, transparent 70%),
+        url("https://images.pexels.com/photos/7108324/pexels-photo-7108324.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover, cover, cover;
+    background-position: center, center, center 40%;
+    background-repeat: no-repeat;
+    filter: saturate(0.85);
+    animation: kenBurns 26s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+0% { transform: scale(1); }
+100% { transform: scale(1.07); }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -28%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(45, 212, 160, 0.1) 0%, rgba(216, 181, 106, 0.05) 42%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Bottom feather so the hero photo dissolves into the story section */
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 180px;
+    background: linear-gradient(180deg, transparent, var(--bg-mid));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero .container { position: relative; z-index: 2; }
+
+/* Emergency / 24x7 pill under the hero CTAs */
+.hero-emergency {
+    margin-top: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 980px;
+    background: rgba(216, 181, 106, 0.1);
+    border: 1px solid rgba(216, 181, 106, 0.32);
+    font-size: 0.86rem;
+    color: var(--gold-soft);
+}
+
+.hero-emergency a { color: var(--ink); text-decoration: none; font-weight: 600; }
+
+.hero-emergency a:hover { color: var(--gold-soft); }
+
+.hero-emergency .pip { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 10px var(--emerald); flex-shrink: 0; }
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    border: 1px solid rgba(216, 181, 106, 0.32);
+    padding: 9px 22px;
+    border-radius: 980px;
+    margin-bottom: 30px;
+    background: rgba(216, 181, 106, 0.06);
+}
+
+.hero-headline { font-size: clamp(2.6rem, 7.5vw, 5.4rem); margin-bottom: 10px; letter-spacing: -0.02em; }
+
+/* Signature: animated ECG pulse line under the headline */
+.ecg-wrap { max-width: 560px; margin: 0 auto 26px; position: relative; }
+
+.ecg-line { width: 100%; height: auto; display: block; overflow: visible; }
+
+.ecg-path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ecgDraw 3.8s linear infinite; filter: drop-shadow(0 0 6px rgba(45, 212, 160, 0.55)); }
+
+@keyframes ecgDraw {
+0% { stroke-dashoffset: 1; opacity: 0; }
+6% { opacity: 1; }
+62% { stroke-dashoffset: 0; opacity: 1; }
+82% { stroke-dashoffset: 0; opacity: 0.15; }
+100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--ink-soft); max-width: 640px; margin: 0 auto 44px; }
+
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- STORY ---------- */
+.story { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.story::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 45% at 18% 40%, rgba(45, 212, 160, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.story .container { position: relative; z-index: 1; max-width: 780px; }
+
+.story-lines p { font-size: clamp(1.1rem, 2.2vw, 1.45rem); color: var(--ink-soft); margin-bottom: 26px; line-height: 1.55; text-align: center; transition: color 0.3s ease, transform 0.3s ease; }
+
+.story-lines p strong { color: var(--ink); font-weight: 600; }
+
+.story-lines p:hover { color: var(--ink); transform: translateX(6px); }
+
+/* ---------- DEPARTMENTS GRID ---------- */
+.departments { padding: 130px 24px; background: var(--bg-deep); position: relative; }
+
+.departments::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(216, 181, 106, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.departments .container { position: relative; z-index: 1; }
+
+.dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+.dept-card {
+    background: var(--card);
+    border: 1px solid var(--card-line);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.45s var(--ease-out), box-shadow 0.45s ease, border-color 0.4s ease, background 0.4s ease;
+}
+
+.dept-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(45, 212, 160, 0.07) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
+
+.dept-card:hover { transform: translateY(-4px) scale(1.02); border-color: rgba(45, 212, 160, 0.28); background: rgba(244, 241, 232, 0.05); box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35), 0 0 30px rgba(45, 212, 160, 0.07); }
+
+.dept-card:hover::after { opacity: 1; }
+
+.dept-icon { width: 52px; height: 52px; margin-bottom: 20px; display: block; }
+
+.dept-card h3 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 600; }
+
+.dept-card p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ---------- STATS BAND ---------- */
+.stats { padding: 110px 24px; background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-rich) 100%); position: relative; }
+
+.stats::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 40%, rgba(216, 181, 106, 0.06) 0%, transparent 65%); pointer-events: none; }
+
+.stats-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; text-align: center; }
+
+.stat { padding: 36px 16px; border-radius: var(--radius); border: 1px solid var(--card-line); background: var(--card); transition: transform 0.4s var(--ease-out), border-color 0.4s ease; }
+
+.stat:hover { transform: translateY(-3px); border-color: rgba(216, 181, 106, 0.3); }
+
+.stat-value { display: block; font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 700; color: var(--gold); line-height: 1.1; margin-bottom: 8px; }
+
+.stat-label { display: block; font-size: 0.85rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+
+/* ---------- SIGNATURE: CARE PATHWAY ---------- */
+.pathway { padding: 130px 24px; background: var(--bg-rich); position: relative; }
+
+.pathway::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 50% at 20% 80%, rgba(45, 212, 160, 0.07) 0%, transparent 60%); pointer-events: none; }
+
+.pathway .container { position: relative; z-index: 1; }
+
+.pathway-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+
+.pathway-steps::before { content: ''; position: absolute; top: 34px; left: 8%; right: 8%; height: 1px; background: linear-gradient(90deg, transparent, rgba(216, 181, 106, 0.35), rgba(45, 212, 160, 0.35), transparent); }
+
+.path-step { text-align: center; padding: 0 12px; position: relative; }
+
+.path-dot {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-deep);
+    border: 1px solid rgba(216, 181, 106, 0.35);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gold);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.path-step:hover .path-dot { transform: translateY(-4px) scale(1.06); border-color: var(--emerald); box-shadow: 0 0 30px rgba(45, 212, 160, 0.25); }
+
+.path-step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+
+.path-step p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ---------- PROMISE ---------- */
+.promise { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.promise::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 45% at 85% 20%, rgba(216, 181, 106, 0.05) 0%, transparent 60%); pointer-events: none; }
+
+.promise .container { position: relative; z-index: 1; }
+
+.promise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 860px; margin: 0 auto; }
+
+.promise-card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 34px 30px; transition: transform 0.45s var(--ease-out), border-color 0.4s ease, background 0.4s ease; }
+
+.promise-card:hover { transform: translateY(-3px) scale(1.02); border-color: rgba(216, 181, 106, 0.28); background: rgba(244, 241, 232, 0.05); }
+
+.promise-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--gold-soft); }
+
+.promise-card p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ---------- AUTOMATION: BOOK APPOINTMENT MOCK ---------- */
+.booking { padding: 130px 24px; background: var(--bg-deep); position: relative; }
+
+.booking::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(45, 212, 160, 0.08) 0%, transparent 42%),
+        radial-gradient(circle at 15% 85%, rgba(216, 181, 106, 0.06) 0%, transparent 42%);
+    pointer-events: none;
+}
+
+.booking .container { position: relative; z-index: 1; }
+
+.booking-shell {
+    max-width: 560px;
+    margin: 0 auto;
+    background: rgba(8, 50, 50, 0.55);
+    border: 1px solid rgba(45, 212, 160, 0.16);
+    border-radius: 26px;
+    padding: clamp(28px, 5vw, 48px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-shell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), var(--emerald), transparent); }
+
+.form-row { margin-bottom: 20px; text-align: left; }
+
+.form-row label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 8px; }
+
+.form-row input,
+.form-row select {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    background: rgba(6, 42, 42, 0.7);
+    border: 1px solid rgba(244, 241, 232, 0.14);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-row select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d8b56a' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.form-row input::placeholder { color: rgba(168, 189, 181, 0.55); }
+
+.form-row input:focus,
+.form-row select:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(45, 212, 160, 0.14); }
+
+.form-row input[type="date"] { color-scheme: dark; }
+
+.booking-submit { width: 100%; margin-top: 6px; }
+
+.booking-note { margin-top: 16px; font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+
+/* success state */
+.booking-success { display: none; text-align: center; padding: 12px 0; }
+
+.booking-success.visible { display: block; animation: successIn 0.6s var(--ease-out) both; }
+
+@keyframes successIn {
+from { opacity: 0; transform: translateY(16px) scale(0.97); }
+to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.success-ring {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(45, 212, 160, 0.16) 0%, transparent 70%);
+    border: 1.5px solid var(--emerald);
+    box-shadow: 0 0 40px rgba(45, 212, 160, 0.25);
+}
+
+.success-check { stroke-dasharray: 60; stroke-dashoffset: 60; animation: checkDraw 0.7s 0.25s var(--ease-out) forwards; }
+
+@keyframes checkDraw {
+to { stroke-dashoffset: 0; }
+}
+
+.booking-success h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--ink); }
+
+.booking-success p { color: var(--ink-soft); font-size: 0.98rem; max-width: 400px; margin: 0 auto 22px; }
+
+.booking-success .demo-line { display: inline-block; font-size: 0.8rem; color: var(--gold-soft); border: 1px dashed rgba(216, 181, 106, 0.4); border-radius: 10px; padding: 10px 16px; margin-bottom: 24px; }
+
+/* Reports on WhatsApp strip */
+.wa-strip {
+    max-width: 760px;
+    margin: 56px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(120deg, rgba(37, 211, 102, 0.09), rgba(216, 181, 106, 0.06));
+    border: 1px solid rgba(37, 211, 102, 0.22);
+    border-radius: var(--radius);
+    padding: 26px 30px;
+}
+
+.wa-strip-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(37, 211, 102, 0.35); }
+
+.wa-strip h3 { font-size: 1.15rem; margin-bottom: 4px; }
+
+.wa-strip p { font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---------- VISIT / CONTACT ---------- */
+.visit { padding: 130px 24px; background: var(--bg-rich); position: relative; }
+
+.visit::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 45% at 50% 100%, rgba(45, 212, 160, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.visit .container { position: relative; z-index: 1; }
+
+.visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 900px; margin: 0 auto 40px; }
+
+.visit-card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 30px 26px; text-align: center; transition: transform 0.4s var(--ease-out), border-color 0.4s ease; }
+
+.visit-card:hover { transform: translateY(-3px); border-color: rgba(45, 212, 160, 0.28); }
+
+.visit-card .visit-icon { width: 40px; height: 40px; margin: 0 auto 16px; display: block; }
+
+.visit-card h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--gold-soft); }
+
+.visit-card p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
+
+.visit-card a { color: var(--emerald); text-decoration: none; font-weight: 500; }
+
+.visit-card a:hover { text-decoration: underline; }
+
+.visit-actions { text-align: center; }
+
+/* ---------- FAQ ---------- */
+.faq { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.faq .container { max-width: 760px; position: relative; z-index: 1; }
+
+.faq-item { border-bottom: 1px solid var(--line); }
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 24px 4px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: var(--ink);
+    min-height: 56px;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover { color: var(--gold-soft); }
+
+.faq-question::after { content: '+'; flex-shrink: 0; font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 300; color: var(--gold); transition: transform 0.35s var(--ease-out); }
+
+.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+
+/* No-JS: answers stay readable; JS collapses them into an accordion */
+.js .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+
+.faq-answer p { padding: 0 4px 24px; color: var(--ink-soft); font-size: 0.96rem; max-width: 640px; }
+
+/* ---------- FINAL CTA ---------- */
+.final-cta { padding: 150px 24px; background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 100%); text-align: center; position: relative; overflow: hidden; }
+
+.final-cta::before { content: ''; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(216, 181, 106, 0.09) 0%, transparent 65%); pointer-events: none; }
+
+.final-cta .container { position: relative; z-index: 1; }
+
+.cta-subtext { color: var(--ink-soft); font-size: 1.1rem; margin-bottom: 40px; }
+
+/* ---------- FOOTER ---------- */
+.footer { padding: 70px 24px 46px; background: #041d1d; border-top: 1px solid var(--line); text-align: center; }
+
+.footer-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 26px; margin-bottom: 28px; }
+
+.footer-links a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; padding: 6px 2px; transition: color 0.3s; }
+
+.footer-links a:hover { color: var(--gold-soft); }
+
+.footer-copy { font-size: 0.82rem; color: rgba(168, 189, 181, 0.7); margin-bottom: 14px; }
+
+.footer-demo-notice { font-size: 0.78rem; color: rgba(168, 189, 181, 0.55); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+.footer-demo-notice a { color: rgba(216, 181, 106, 0.75); text-decoration: none; }
+
+/* ---------- FLOATING WHATSAPP ---------- */
+.wa-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 1100;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5);
+    animation: waPulse 2.6s ease-out infinite;
+    transition: transform 0.35s var(--ease-out);
+}
+
+.wa-float:hover { transform: translateY(-3px) scale(1.06); }
+
+@keyframes waPulse {
+0% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.45); }
+70% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+100% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ---------- CONCEPT DEMO BADGE ---------- */
+.demo-badge {
+    position: fixed;
+    bottom: 22px;
+    left: 22px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px 9px 16px;
+    border-radius: 980px;
+    background: rgba(6, 42, 42, 0.72);
+    border: 1px solid rgba(216, 181, 106, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+}
+
+.demo-badge.hidden { display: none; }
+
+.demo-badge-close {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(244, 241, 232, 0.1);
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.demo-badge-close:hover { background: rgba(244, 241, 232, 0.22); }
+
+/* ---------- BACK TO TOP ---------- */
+.back-to-top {
+    position: fixed;
+    bottom: 94px;
+    right: 28px;
+    z-index: 1050;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(216, 181, 106, 0.35);
+    background: rgba(6, 42, 42, 0.8);
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.35s var(--ease-out);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+.back-to-top:hover { transform: translateY(-3px); }
+
+/* ---------- PHOTOGRAPHY ---------- */
+/* Every photo frame keeps a brand-gradient background, so a blocked or failed
+   image leaves a deliberate gradient panel rather than a hole. */
+.photo-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background:
+        linear-gradient(140deg, var(--bg-rich) 0%, var(--bg-mid) 55%, rgba(45, 212, 160, 0.12) 100%);
+    border: 1px solid var(--card-line);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.88);
+    transition: transform 0.7s var(--ease-out);
+}
+
+.photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 42, 42, 0.12) 0%, rgba(6, 42, 42, 0.42) 100%);
+    pointer-events: none;
+}
+
+/* Story: two-column with a 4:3 consultation photo */
+.story .container { max-width: 1120px; }
+
+.story-split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+
+.story-split .story-lines p { text-align: left; }
+
+.story-photo { aspect-ratio: 4 / 3; }
+
+.story-photo .photo-caption {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    z-index: 1;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+}
+
+/* Wide 3:2 feature photo used above the pathway section */
+.feature-photo { aspect-ratio: 3 / 2; max-height: 420px; margin: 0 auto 64px; max-width: 940px; }
+
+/* Facility strip */
+.facility-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
+
+.facility-tile { aspect-ratio: 3 / 4; }
+
+.facility-tile:hover img { transform: scale(1.06); }
+
+.facility-tile figcaption {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- TRUST / REGISTRATION STRIP ---------- */
+.trust { padding: 64px 24px; background: #041d1d; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.trust-caption { text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+
+.trust-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(216, 181, 106, 0.22);
+    background: rgba(244, 241, 232, 0.03);
+    filter: grayscale(1);
+    opacity: 0.72;
+    transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, transform 0.4s var(--ease-out);
+}
+
+.trust-badge:hover { filter: grayscale(0); opacity: 1; border-color: rgba(45, 212, 160, 0.35); transform: translateY(-2px); }
+
+.trust-badge svg { flex-shrink: 0; }
+
+.trust-badge b { display: block; font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+
+.trust-badge span { display: block; font-size: 0.76rem; color: var(--ink-soft); }
+
+/* ---------- STICKY MOBILE ACTION BAR ---------- */
+.mobile-bar { display: none; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+.dept-grid { grid-template-columns: repeat(2, 1fr); }
+.stats-grid { grid-template-columns: repeat(2, 1fr); }
+.pathway-steps { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
+.pathway-steps::before { display: none; }
+.visit-grid { grid-template-columns: 1fr; max-width: 480px; }
+.story-split { grid-template-columns: 1fr; gap: 40px; }
+.story-photo { aspect-ratio: 16 / 9; }
+.facility-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+    /* No-JS mobile: hide nav chrome entirely — the page is one scrollable column.
+       With JS, the hamburger appears and drives the collapsible panel. */
+.nav-links { display: none; }
+.js .nav-hamburger { display: flex; }
+    .js .nav-links {
+        display: flex;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(5, 30, 30, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 24px 24px;
+        transform: translateY(-12px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s var(--ease-out), opacity 0.35s ease, visibility 0.35s;
+    }
+.js .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.nav-links a { padding: 16px 4px; font-size: 1.05rem; border-bottom: 1px solid rgba(244, 241, 232, 0.05); }
+.nav-cta { margin-top: 16px; text-align: center; border-bottom: none !important; }
+.promise-grid { grid-template-columns: 1fr; }
+.wa-strip { flex-direction: column; text-align: center; padding: 30px 24px; }
+
+    /* Sticky Call / WhatsApp / Book bar — the small-city conversion pattern.
+       Only appears on phones; the floating WhatsApp button is lifted above it. */
+    .mobile-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1200;
+        background: rgba(4, 26, 26, 0.96);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid rgba(216, 181, 106, 0.22);
+        box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.4);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .mobile-bar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        min-height: 62px;
+        padding: 10px 4px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        color: var(--ink);
+        border-right: 1px solid rgba(244, 241, 232, 0.07);
+    }
+.mobile-bar a:last-child { border-right: none; color: #062421; background: linear-gradient(135deg, var(--gold), #c39a4b); }
+.mobile-bar svg { display: block; }
+body { padding-bottom: 62px; }
+.wa-float { bottom: 82px; }
+.back-to-top { bottom: 150px; }
+.demo-badge { bottom: 82px; }
+}
+
+@media (max-width: 560px) {
+.dept-grid { grid-template-columns: 1fr; }
+.stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.stat { padding: 28px 12px; }
+.pathway-steps { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+.hero { padding-top: 110px; }
+.hero-ctas .btn { width: 100%; max-width: 340px; }
+.demo-badge { bottom: 78px; left: 12px; font-size: 0.7rem; padding: 8px 8px 8px 13px; }
+.wa-float { bottom: 78px; right: 16px; }
+.back-to-top { bottom: 146px; right: 20px; }
+.facility-strip { grid-template-columns: 1fr; gap: 14px; }
+.facility-tile { aspect-ratio: 16 / 10; }
+.trust-badge { width: 100%; }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .orb,
+    .ecg-path,
+    .wa-float,
+    .hero-media,
+.gradient-text { animation: none !important; }
+.hero-media { transform: none !important; }
+.photo-frame img { transition: none !important; }
+.ecg-path { stroke-dashoffset: 0; opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="Gonda Medical Centre (Maternity, Surgical, Laparoscopy &amp; IVF Hospital) — home">
+                <svg class="nav-logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18.5" stroke="#d8b56a" stroke-width="1.4"/>
+                    <path d="M6 22h7l2.6-6.5 3.8 10 3.4-8 2 4.5H34" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-logo-name">Gonda Medical Centre<small>Maternity · Surgery · IVF</small></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#departments">Services</a>
+                <a href="#pathway">Your Visit</a>
+                <a href="#visit">Find Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="#book" class="nav-cta">Book Appointment</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge">Gonda Medical Centre · Patel Nagar, Gonda</p>
+            <h1 class="hero-headline" data-reveal>Motherhood, surgery,<br><span class="gradient-text">and second chances.</span></h1>
+            <div class="ecg-wrap" aria-hidden="true">
+                <svg class="ecg-line" viewBox="0 0 560 72" fill="none" preserveAspectRatio="none">
+                    <path class="ecg-path" pathLength="1"
+                        d="M0 36 H120 l10 0 6-12 8 26 8-40 8 44 7-18 5 0 H300 l8 0 6-10 7 22 8-36 8 38 6-14 5 0 H560"
+                        stroke="url(#ecgGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="ecgGrad" x1="0" y1="0" x2="560" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#d8b56a"/>
+                            <stop offset="0.5" stop-color="#2dd4a0"/>
+                            <stop offset="1" stop-color="#d8b56a"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p class="hero-subtext" data-reveal>Maternity care, general and laparoscopic surgery, gynaecology and IVF — under one roof at Patel Nagar, Civil Line. The treatment Gonda used to travel for.</p>
+            <div class="hero-ctas" data-reveal>
+                <a href="#book" class="btn btn-primary">Book an Appointment</a>
+                <a href="#departments" class="btn btn-secondary">See Our Services</a>
+            </div>
+            <p class="hero-emergency" data-reveal>
+                <span class="pip" aria-hidden="true"></span>
+                Hospital desk &middot; <a href="tel:+919415120900">+91 94151 20900</a> &middot; <a href="tel:+915262221999">05262&ndash;221999</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" aria-labelledby="story-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Story</span>
+            <h2 class="section-headline" id="story-headline" data-reveal>Care that doesn't make you <span class="gradient-text">travel for it.</span></h2>
+            <div class="story-split">
+                <div class="story-lines">
+                    <p data-reveal>For a difficult delivery, a keyhole surgery, or a fertility treatment — the answer in Gonda used to be Lucknow.</p>
+                    <p data-reveal>Hours on the road. Days off work. Money spent before a single test was done.</p>
+                    <p data-reveal><strong>Gonda Medical Centre was built to end that journey.</strong></p>
+                    <p data-reveal>Maternity, surgery, laparoscopy and IVF — practised here at Patel Nagar, by doctors this district already knows, with a chemist counter in the same building.</p>
+                </div>
+                <figure class="photo-frame story-photo" data-reveal>
+                    <img src="https://images.pexels.com/photos/7578797/pexels-photo-7578797.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A doctor in consultation with a patient across a clinic desk"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="photo-caption">Consultation, unhurried</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPARTMENTS -->
+    <section class="departments" id="departments" aria-labelledby="dept-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Services</span>
+            <h2 class="section-headline" id="dept-headline" data-reveal>Specialist care, <span class="gradient-text">on your doorstep.</span></h2>
+            <p class="section-sub" data-reveal>From a first pregnancy to a keyhole procedure to a long-awaited baby — the work happens here, in Gonda.</p>
+            <div class="dept-grid">
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M15 27h6l3-8 5 14 4-10 2 4h6" stroke="#2dd4a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Maternity &amp; Obstetrics</h3>
+                    <p>Antenatal checkups, safe delivery and after-care. From the first scan to the first cry — one team, one file, one place you already trust.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M26 38c-6-4.5-11-8.6-11-13.6 0-3.2 2.5-5.4 5.4-5.4 2.2 0 4.2 1.3 5.6 3.4 1.4-2.1 3.4-3.4 5.6-3.4 2.9 0 5.4 2.2 5.4 5.4 0 5-5 9.1-11 13.6Z" stroke="#d8b56a" stroke-width="1.8" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>IVF &amp; Fertility</h3>
+                    <p>Infertility investigation and IVF treatment — one of the very few places in Gonda offering it. Explained plainly, handled privately, without a trip to the city.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <circle cx="26" cy="21" r="6.5" stroke="#2dd4a0" stroke-width="1.8"/>
+                        <path d="M26 27.5v8M22 32h8" stroke="#d8b56a" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Gynaecology</h3>
+                    <p>Women's health across every stage — irregular cycles, pain, menopause and routine screening, discussed with a lady doctor and complete privacy.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M22 14v9a4 4 0 0 0 8 0v-9M26 27v6a5 5 0 0 0 5 5h2" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="35" cy="38" r="3" stroke="#d8b56a" stroke-width="1.8"/>
+                    </svg>
+                    <h3>Laparoscopic Surgery</h3>
+                    <p>Keyhole procedures instead of long incisions — smaller scars, less pain, and a patient back on their feet in days rather than weeks.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M23 14h6M24.5 14v10l-7 12.5A3 3 0 0 0 20 41h12a3 3 0 0 0 2.5-4.5L27.5 24V14" stroke="#d8b56a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.5 33h9" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <h3>General Surgery</h3>
+                    <p>Planned and urgent operations handled in-house, with the same doctors seeing you before the surgery and after it — not a stranger at each visit.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M26 15v22M15 26h22" stroke="#2dd4a0" stroke-width="2.6" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Chemist Counter</h3>
+                    <p>A medical store in the same building. Your prescription is filled before you leave — no second stop at the bazaar with a patient in the car.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND — [STATS] exemplar values are FICTIONAL; replace with real numbers only, else qualitative -->
+    <section class="stats" aria-label="Hospital highlights">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat" data-reveal>
+                    <span class="stat-value">IVF</span>
+                    <span class="stat-label">Rare in Gonda. Available here.</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value">Keyhole</span>
+                    <span class="stat-label">Laparoscopic surgery in-house</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value">Registered</span>
+                    <span class="stat-label">UPNHA member nursing home</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value">Patel Nagar</span>
+                    <span class="stat-label">Civil Line, minutes away</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CARE PATHWAY -->
+    <section class="pathway" id="pathway" aria-labelledby="pathway-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Your Visit</span>
+            <h2 class="section-headline" id="pathway-headline" data-reveal>From door to diagnosis, <span class="gradient-text">without the wait.</span></h2>
+            <p class="section-sub" data-reveal>A visit to Gonda Medical Centre is designed to respect one thing above all: your time.</p>
+            <figure class="photo-frame feature-photo" data-reveal>
+                <img src="https://images.pexels.com/photos/4269206/pexels-photo-4269206.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Hospital reception staff assisting a patient at the front desk"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+            </figure>
+            <div class="pathway-steps">
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">01</div>
+                    <h3>Arrive &amp; Register</h3>
+                    <p>A two-minute desk registration — or skip the queue by booking on WhatsApp before you leave home.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">02</div>
+                    <h3>Consult</h3>
+                    <p>Unhurried time with your doctor. Questions welcomed, jargon translated, and nothing decided before you understand it.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">03</div>
+                    <h3>Treatment Plan</h3>
+                    <p>Surgery, delivery or a fertility cycle — you leave knowing what happens next, what it involves, and what it will cost.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">04</div>
+                    <h3>Follow-Up on WhatsApp</h3>
+                    <p>Your next visit date, scan or injection reminder reaches your phone — so a long journey home never means a missed appointment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR PROMISE -->
+    <section class="promise" aria-labelledby="promise-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Promise</span>
+            <h2 class="section-headline" id="promise-headline" data-reveal>Why families <span class="gradient-text">choose us.</span></h2>
+            <div class="promise-grid">
+                <div class="promise-card" data-reveal>
+                    <h3>Honest advice, always.</h3>
+                    <p>If a treatment is unlikely to help you, we will say so before you spend a rupee on it. If your case needs a centre we are not, we will tell you that too.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Costs explained first.</h3>
+                    <p>Surgery, delivery and fertility treatment are big decisions for a family. You hear the full picture — and the price — before anything begins.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Privacy, without exception.</h3>
+                    <p>Fertility and women's health are nobody else's business. Separate consultation, discreet records, and no discussion at a crowded counter.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Here for the long run.</h3>
+                    <p>A registered nursing home at the same Patel Nagar address for years — the same doctors through your pregnancy, your surgery, and your follow-ups.</p>
+                </div>
+            </div>
+
+            <!-- Facility strip -->
+            <div class="facility-strip">
+                <figure class="photo-frame facility-tile" data-reveal>
+                    <img src="https://images.pexels.com/photos/33812025/pexels-photo-33812025.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Hospital reception area" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Reception</figcaption>
+                </figure>
+                <figure class="photo-frame facility-tile" data-reveal>
+                    <img src="https://images.pexels.com/photos/11288795/pexels-photo-11288795.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Hospital corridor leading to the wards" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Wards &amp; corridors</figcaption>
+                </figure>
+                <figure class="photo-frame facility-tile" data-reveal>
+                    <img src="https://images.pexels.com/photos/37654664/pexels-photo-37654664.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A modern, brightly lit operating theatre" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Operating theatre</figcaption>
+                </figure>
+                <figure class="photo-frame facility-tile" data-reveal>
+                    <img src="https://images.pexels.com/photos/8851456/pexels-photo-8851456.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Technicians working in a medical laboratory" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption>Diagnostics</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION / TRUST STRIP -->
+    <section class="trust" aria-label="Registrations and listings">
+        <div class="container">
+            <p class="trust-caption">Registered, listed and locally known</p>
+            <div class="trust-row">
+                <div class="trust-badge" data-reveal>
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path d="M16 3l11 4.5v8c0 7-4.7 11.6-11 13.5C9.7 27.1 5 22.5 5 15.5v-8L16 3Z" stroke="#d8b56a" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M11 16l3.5 3.5L21 13" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span><b>UPNHA Member</b><span>UP Nursing Home Association, Gonda</span></span>
+                </div>
+                <div class="trust-badge" data-reveal>
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path d="M4 27h24M6 27V13l10-6 10 6v14" stroke="#d8b56a" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M13 27v-7h6v7" stroke="#2dd4a0" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                    <span><b>District Listed</b><span>Gonda administration public-utility directory</span></span>
+                </div>
+                <div class="trust-badge" data-reveal>
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <circle cx="16" cy="16" r="12" stroke="#d8b56a" stroke-width="1.6"/>
+                        <path d="M16 10v12M10 16h12" stroke="#2dd4a0" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                    <span><b>In-House Chemist</b><span>Prescriptions filled in the same building</span></span>
+                </div>
+                <div class="trust-badge" data-reveal>
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <circle cx="16" cy="16" r="12" stroke="#d8b56a" stroke-width="1.6"/>
+                        <path d="M16 9v7.5l5 3" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span><b>Patel Nagar, Civil Line</b><span>Same address, same doctors</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: BOOK APPOINTMENT -->
+    <section class="booking" id="book" aria-labelledby="booking-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Book Ahead</span>
+            <h2 class="section-headline" id="booking-headline" data-reveal>Skip the queue. <span class="gradient-text">Book your slot.</span></h2>
+            <p class="section-sub" data-reveal>Tell us what you need and when. We'll confirm your appointment on WhatsApp — no travelling in just to ask.</p>
+
+            <div class="booking-shell" data-reveal>
+                <form id="booking-form" novalidate>
+                    <div class="form-row">
+                        <label for="bk-name">Patient name</label>
+                        <input type="text" id="bk-name" name="name" placeholder="Full name" autocomplete="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-dept">What do you need?</label>
+                        <select id="bk-dept" name="department" required>
+                            <option value="" selected disabled>Choose a service</option>
+                            <option>Maternity &amp; Obstetrics</option>
+                            <option>IVF &amp; Fertility</option>
+                            <option>Gynaecology</option>
+                            <option>Laparoscopic Surgery</option>
+                            <option>General Surgery</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-date">Preferred date</label>
+                        <input type="date" id="bk-date" name="date" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-phone">Mobile number</label>
+                        <input type="tel" id="bk-phone" name="phone" inputmode="numeric" placeholder="10-digit mobile" autocomplete="tel" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary booking-submit">Request Appointment</button>
+                    <p class="booking-note">You'll get a confirmation on WhatsApp. No app, no account, no queue.</p>
+                </form>
+
+                <div class="booking-success" id="booking-success" role="status" aria-live="polite">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path class="success-check" d="M9 21l8 8L32 12" stroke="#2dd4a0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Request received.</h3>
+                    <p id="booking-success-detail">Our reception will confirm your slot on WhatsApp shortly.</p>
+                    <span class="demo-line">This is a demo — this is how your patients would reach you automatically.</span>
+                    <div>
+                        <button type="button" class="btn btn-secondary" id="booking-reset">Book another</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports on WhatsApp strip -->
+            <div class="wa-strip" data-reveal>
+                <div class="wa-strip-icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff">
+                        <path d="M12.05 2a9.9 9.9 0 0 0-8.57 14.86L2 22l5.3-1.39A9.9 9.9 0 1 0 12.05 2Zm0 18.05a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.8.82-3-.2-.31a8.13 8.13 0 1 1 6.88 3.82Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Reminders that reach you at home.</h3>
+                    <p>Your next antenatal visit, your scan date, your post-operative check — sent to your phone. Because a patient from an outside block should never miss a follow-up for want of a phone call.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT / CONTACT -->
+    <section class="visit" id="visit" aria-labelledby="visit-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Find Us</span>
+            <h2 class="section-headline" id="visit-headline" data-reveal>Patel Nagar, <span class="gradient-text">Civil Line.</span></h2>
+            <p class="section-sub" data-reveal>Walk-ins welcome. Appointments recommended.</p>
+            <div class="visit-grid">
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M20 36s11-9.3 11-17a11 11 0 1 0-22 0c0 7.7 11 17 11 17Z" stroke="#d8b56a" stroke-width="1.8" stroke-linejoin="round"/>
+                        <circle cx="20" cy="18.5" r="4" stroke="#2dd4a0" stroke-width="1.8"/>
+                    </svg>
+                    <h3>Address</h3>
+                    <p>302, Patel Nagar, Civil Line,<br>Gonda, Uttar Pradesh 271001</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <circle cx="20" cy="20" r="14" stroke="#d8b56a" stroke-width="1.8"/>
+                        <path d="M20 12v8l5.5 3.5" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>OPD Timings</h3>
+                    <p>Please call or message us to confirm<br>today's consultation timings.</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M27.5 24.7c-1.5-.7-2.7-1.2-3.8.2l-.7.9c-.5.6-1.4.5-2.7-.6-1.8-1.4-3.1-2.8-3.9-4.3-.6-1.1-.5-1.8.1-2.3l1-.8c1.2-1.1.7-2.3-.1-3.7-1-1.7-2-2.9-3.7-2-2.1 1.1-3 3.3-2.2 6 1 3.3 3.4 6.8 6.6 9.5 3.2 2.6 6.9 4.2 10 3.7 2.4-.4 3.9-2.3 3.7-4.5-.2-1.5-2.1-1.9-4.3-2.1Z" stroke="#2dd4a0" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Call or WhatsApp</h3>
+                    <p><a href="tel:+919415120900">+91 94151 20900</a><br><a href="tel:+915262221999">05262 &ndash; 221999</a><br><a href="https://wa.me/919415120900" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a></p>
+                </div>
+            </div>
+            <div class="visit-actions" data-reveal>
+                <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Gonda%20Medical%20Centre%20%28Maternity%2C%20Surgical%2C%20Laparoscopy%20%26%20IVF%20Hospital%29%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Questions</span>
+            <h2 class="section-headline" id="faq-headline" data-reveal>Asked often. <span class="gradient-text">Answered honestly.</span></h2>
+            <div class="faq-list">
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do I need an appointment, or can I walk in?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Walk-ins are always welcome. Booking ahead on WhatsApp simply means less waiting — especially if you are travelling in from outside Gonda city and cannot afford a wasted trip.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Do you really do IVF here, in Gonda?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. Infertility investigation and IVF treatment are offered at this hospital — one of the few places in the district where they are. Come in for a first consultation and we will tell you honestly what your options are before you commit to anything.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">What is laparoscopic surgery, and why does it matter?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>It is keyhole surgery — the operation is done through very small openings instead of one long cut. For the patient that usually means less pain, a much smaller scar, and getting back to work in days rather than weeks. Whether it suits your particular case is something the doctor will tell you after examining you.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Will I know the cost before treatment starts?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Yes. Charges are explained and confirmed with you before a delivery, an operation or a fertility cycle begins. For a family these are serious decisions, and nobody should make one without knowing the number.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Is my treatment kept private?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Completely. Fertility treatment and women's health are discussed in consultation, not at a counter, and your records stay between you and your doctor. In a district where everyone knows everyone, we take that seriously.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact" aria-labelledby="cta-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Next Step</span>
+            <h2 class="section-headline" id="cta-headline" data-reveal>Your health, <span class="gradient-text">handled.</span></h2>
+            <p class="cta-subtext" data-reveal>One message. One visit. Doctors in Gonda who remember your name.</p>
+            <div data-reveal>
+                <a href="#book" class="btn btn-primary btn-large">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="wa-float" href="https://wa.me/919415120900" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+            <path d="M12.05 2a9.9 9.9 0 0 0-8.57 14.86L2 22l5.3-1.39A9.9 9.9 0 1 0 12.05 2Zm0 18.05a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.8.82-3-.2-.31a8.13 8.13 0 1 1 6.88 3.82Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+        </svg>
+    </a>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick contact">
+        <a href="tel:+919415120900">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16.5 14.8c-.9-.4-1.6-.7-2.3.1l-.4.5c-.3.4-.8.3-1.6-.4a12 12 0 0 1-2.3-2.6c-.4-.6-.3-1 0-1.3l.6-.5c.7-.6.4-1.4-.1-2.2-.6-1-1.2-1.7-2.2-1.2C6.9 7.8 6.4 9.1 6.9 10.7a14.6 14.6 0 0 0 3.9 5.6c1.9 1.6 4.1 2.5 5.9 2.2 1.4-.2 2.3-1.4 2.2-2.7-.1-.9-1.3-1.1-2.4-1Z" stroke="#2dd4a0" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a href="https://wa.me/919415120900" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12.05 2a9.9 9.9 0 0 0-8.57 14.86L2 22l5.3-1.39A9.9 9.9 0 1 0 12.05 2Zm0 18.05a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.8.82-3-.2-.31a8.13 8.13 0 1 1 6.88 3.82Z"/></svg>
+            WhatsApp
+        </a>
+        <a href="#book">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5" stroke="#062421" stroke-width="1.6"/><path d="M8 3v4M16 3v4M3.5 10h17" stroke="#062421" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Book
+        </a>
+    </nav>
+
+    <!-- CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge">
+        <span>Concept Demo</span>
+        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Gonda Medical Centre <span style="color: var(--gold);">·</span> Maternity, Surgical, Laparoscopy &amp; IVF Hospital</p>
+            <div class="footer-links">
+                <a href="#departments">Services</a>
+                <a href="#pathway">Your Visit</a>
+                <a href="#book">Book</a>
+                <a href="#visit">Find Us</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Gonda Medical Centre, 302 Patel Nagar, Civil Line, Gonda 271001.</p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group · <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> · Design demo — not the official website of Gonda Medical Centre (Maternity, Surgical, Laparoscopy &amp; IVF Hospital).</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+<script>
+(function () {
+    'use strict';
+
+    // Signal JS availability (CSS collapses the FAQ + mobile menu only when present)
+    document.documentElement.classList.add('js');
+
+    var motionOK = true;
+    try {
+        motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) { /* older browsers: keep motion on */ }
+
+    /* ---------- NAV: scrolled state ---------- */
+    var nav = document.getElementById('site-nav');
+    var backToTop = document.getElementById('back-to-top');
+
+    function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 24);
+        if (backToTop) backToTop.classList.toggle('visible', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- NAV: hamburger ---------- */
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+
+    function closeMenu() {
+        if (!toggle || !menu) return;
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        menu.addEventListener('click', function (e) {
+            if (e.target && e.target.tagName === 'A') closeMenu();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+
+    /* ---------- BACK TO TOP ---------- */
+    if (backToTop) {
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: motionOK ? 'smooth' : 'auto' });
+        });
+    }
+
+    /* ---------- CONCEPT DEMO BADGE ---------- */
+    var badge = document.getElementById('demo-badge');
+    var badgeClose = document.getElementById('demo-badge-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () {
+            badge.classList.add('hidden');
+        });
+    }
+
+    /* ---------- FAQ ACCORDION ---------- */
+    var faqButtons = document.querySelectorAll('.faq-question');
+    Array.prototype.forEach.call(faqButtons, function (btn) {
+        btn.addEventListener('click', function () {
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            var answer = document.getElementById(btn.getAttribute('aria-controls'));
+
+            // close others
+            Array.prototype.forEach.call(faqButtons, function (other) {
+                if (other !== btn) {
+                    other.setAttribute('aria-expanded', 'false');
+                    var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                    if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                }
+            });
+
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            if (answer) {
+                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    /* ---------- BOOKING MOCK (front-end only) ---------- */
+    var form = document.getElementById('booking-form');
+    var success = document.getElementById('booking-success');
+    var successDetail = document.getElementById('booking-success-detail');
+    var resetBtn = document.getElementById('booking-reset');
+
+    if (form && success) {
+        // sensible min date = today
+        var dateInput = document.getElementById('bk-date');
+        if (dateInput) {
+            try {
+                dateInput.min = new Date().toISOString().split('T')[0];
+            } catch (e) { /* non-critical */ }
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var name = document.getElementById('bk-name');
+            var dept = document.getElementById('bk-dept');
+            var phone = document.getElementById('bk-phone');
+
+            // minimal native validation pass
+            if (!form.checkValidity()) {
+                if (form.reportValidity) form.reportValidity();
+                return;
+            }
+
+            var who = name && name.value ? name.value.trim().split(' ')[0] : 'there';
+            var which = dept && dept.value ? dept.value : 'Gonda Medical Centre';
+            var digits = phone && phone.value ? phone.value.replace(/\D/g, '') : '';
+            var maskedPhone = digits.length >= 4 ? '·····' + digits.slice(-4) : 'your number';
+
+            if (successDetail) {
+                successDetail.textContent =
+                    'Thank you, ' + who + '. Your request for ' + which +
+                    ' is in — a confirmation will reach WhatsApp on ' + maskedPhone + ' shortly.';
+            }
+
+            form.style.display = 'none';
+            success.classList.add('visible');
+        });
+
+        if (resetBtn) {
+            resetBtn.addEventListener('click', function () {
+                success.classList.remove('visible');
+                form.reset();
+                form.style.display = '';
+                var first = document.getElementById('bk-name');
+                if (first) first.focus();
+            });
+        }
+    }
+
+    /* ---------- GSAP ENHANCEMENTS (guarded — page is complete without them) ---------- */
+    function initGsap() {
+        if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+        if (!motionOK) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance
+        var heroBits = document.querySelectorAll('.hero-badge, .hero-headline, .ecg-wrap, .hero-subtext, .hero-ctas');
+        if (heroBits.length) {
+            gsap.from(heroBits, {
+                opacity: 0,
+                y: 26,
+                duration: 1,
+                stagger: 0.12,
+                ease: 'power3.out',
+                clearProps: 'all'
+            });
+        }
+
+        // Scroll reveals
+        var reveals = gsap.utils.toArray('[data-reveal]');
+        reveals.forEach(function (el) {
+            if (el.closest('.hero')) return; // hero handled above
+            gsap.from(el, {
+                opacity: 0,
+                y: 32,
+                duration: 0.9,
+                ease: 'power3.out',
+                clearProps: 'all',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 88%',
+                    once: true
+                }
+            });
+        });
+
+        // Section background hue drift on the pathway dots
+        gsap.utils.toArray('.path-dot').forEach(function (dot, i) {
+            gsap.from(dot, {
+                scale: 0.6,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'back.out(1.6)',
+                clearProps: 'all',
+                scrollTrigger: {
+                    trigger: dot,
+                    start: 'top 90%',
+                    once: true
+                }
+            });
+        });
+    }
+
+    /* ---------- COUNTUP (guarded; static values already in markup) ---------- */
+    function initCountUp() {
+        if (typeof window.countUp === 'undefined' || !window.countUp.CountUp) return;
+        if (!motionOK) return;
+
+        var nodes = document.querySelectorAll('[data-countup]');
+        if (!nodes.length) return;
+
+        var started = false;
+        function start() {
+            if (started) return;
+            started = true;
+            Array.prototype.forEach.call(nodes, function (node) {
+                var target = parseFloat(node.getAttribute('data-countup'));
+                if (isNaN(target)) return;
+                var counter = new window.countUp.CountUp(node, target, { duration: 2, useEasing: true });
+                if (!counter.error) counter.start();
+            });
+        }
+
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        start();
+                        io.disconnect();
+                    }
+                });
+            }, { threshold: 0.4 });
+            io.observe(nodes[0]);
+        } else {
+            start();
+        }
+    }
+
+    // Scripts are deferred; DOM is ready. CDN scripts may still be pending → also retry on load.
+    function initLibs() {
+        initGsap();
+        initCountUp();
+    }
+    if (window.gsap && window.countUp) {
+        initLibs();
+    } else {
+        window.addEventListener('load', initLibs);
+    }
+})();
+</script>
+</body>
+</html>

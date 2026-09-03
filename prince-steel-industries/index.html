@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Prince Steel Industries &amp; Electronics (with Kurlon Mattress Store) — Steel Almirahs, Office Furniture &amp; Kurlon Mattresses, Gonda</title>
+    <meta name="description" content="Steel almirahs, library and office furniture made in Gonda since 1992 — and the Kurlon Mattress Store for Gonda. Made-to-size orders. Design demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================
+           PRINCE STEEL INDUSTRIES &amp; ELECTRONICS — home-retail template
+           Charcoal #121212 · Copper #d97941 · Light gray text
+           Inter (tight) body · Space Grotesk display
+           ========================================================== */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #121212;
+            --bg-deep: #0c0c0c;
+            --bg-raise: #1a1a1a;
+            --copper: #d97941;
+            --copper-soft: #e8a87c;
+            --copper-pale: #f4c18a;
+            --text: #e8e6e3;
+            --muted: #9a958f;
+            --line: rgba(255, 255, 255, 0.07);
+            --card: rgba(255, 255, 255, 0.025);
+            --glow: rgba(217, 121, 65, 0.28);
+            --radius: 20px;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.011em;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { position: relative; }
+        .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+        .section-sub {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--muted);
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 56px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--copper), var(--copper-pale), var(--copper-soft), var(--copper));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-size: 250% auto;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -48px;
+            left: 16px;
+            z-index: 2000;
+            background: var(--copper);
+            color: #121212;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: top 0.25s ease;
+        }
+        .skip-link:focus { top: 12px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 14px 32px;
+            border-radius: 980px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b;
+            box-shadow: 0 0 30px rgba(217, 121, 65, 0.22);
+        }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 44px var(--glow); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid rgba(255, 255, 255, 0.22); }
+        .btn-secondary:hover { border-color: rgba(232, 168, 124, 0.6); background: rgba(217, 121, 65, 0.08); transform: translateY(-2px); }
+        .btn-large { min-height: 60px; padding: 18px 44px; font-size: 1.1rem; }
+
+        /* ==================== NAV ==================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.68);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .nav.scrolled { background: rgba(12, 12, 12, 0.92); box-shadow: 0 1px 30px rgba(217, 121, 65, 0.1); }
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 66px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--copper), #b0561f);
+            display: grid;
+            place-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #16100b;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.35);
+        }
+
+        .nav-logo-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .nav-logo-name span { color: var(--copper-soft); }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--copper), #c05f2b);
+            color: #16100b !important;
+            padding: 10px 22px !important;
+            border-radius: 980px;
+            font-weight: 600;
+            box-shadow: 0 0 18px rgba(217, 121, 65, 0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 30px rgba(217, 121, 65, 0.45); transform: translateY(-1px); }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 46px;
+            height: 46px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.35s var(--ease-out), opacity 0.25s ease;
+        }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ==================== AMBIENT ORBS ==================== */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+            animation: orbDrift 22s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 480px;
+            height: 480px;
+            top: -12%;
+            right: -10%;
+            background: radial-gradient(circle, rgba(217, 121, 65, 0.22), transparent 70%);
+        }
+
+        .orb-2 {
+            width: 420px;
+            height: 420px;
+            bottom: -14%;
+            left: -12%;
+            background: radial-gradient(circle, rgba(232, 168, 124, 0.12), transparent 70%);
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 320px;
+            height: 320px;
+            top: 44%;
+            left: 58%;
+            background: radial-gradient(circle, rgba(192, 95, 43, 0.12), transparent 70%);
+            animation-delay: -15s;
+        }
+
+        @keyframes orbDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-50px, 40px) scale(1.12); }
+        }
+
+        /* ==================== SHARED: EYEBROW ==================== */
+        .eyebrow {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+            margin-bottom: 14px;
+            text-align: center;
+        }
+        .eyebrow.left { text-align: left; }
+
+        /* ==================== SHARED: PHOTO FRAME ==================== */
+        .photo-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.16), transparent 55%),
+                var(--bg-raise);
+        }
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.06) saturate(1.05) brightness(0.92);
+            transition: transform 0.7s var(--ease-out);
+        }
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(12, 12, 12, 0) 40%, rgba(12, 12, 12, 0.55));
+        }
+        .photo-frame:hover img { transform: scale(1.05); }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 24px 90px;
+            overflow: hidden;
+            background: var(--bg);
+        }
+        .hero-media {
+            position: absolute;
+            inset: -3%;
+            z-index: 0;
+            background-image: url('https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center 58%;
+            background-repeat: no-repeat;
+            background-color: var(--bg-deep);
+            filter: sepia(0.08) saturate(1.05);
+            transform: scale(1);
+            animation: kenBurns 24s ease-in-out infinite alternate;
+        }
+        .hero-scrim {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 70% 45% at 50% -5%, rgba(217, 121, 65, 0.20), transparent 65%),
+                linear-gradient(180deg, rgba(10, 10, 10, 0.86) 0%, rgba(10, 10, 10, 0.62) 45%, rgba(12, 12, 12, 0.93) 100%);
+        }
+
+        @keyframes kenBurns {
+            from { transform: scale(1); }
+            to { transform: scale(1.06); }
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(217, 121, 65, 0.07);
+            padding: 9px 22px;
+            border-radius: 980px;
+            margin-bottom: 30px;
+        }
+        .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 24px; }
+        .hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-scrollhint {
+            margin-top: 72px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .hero-scrollhint::after {
+            content: '';
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(to bottom, var(--copper), transparent);
+            animation: hintPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes hintPulse {
+            0%, 100% { opacity: 0.35; transform: scaleY(0.7); transform-origin: top; }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ==================== TRUST STRIP ==================== */
+        .trust-strip {
+            background: var(--bg-deep);
+            border-bottom: 1px solid var(--line);
+            padding: 28px 24px;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px 32px;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .trust-item strong { color: var(--text); font-weight: 600; }
+        .trust-item svg { flex: 0 0 auto; width: 22px; height: 22px; }
+
+        /* ==================== STORY ==================== */
+        .story { padding: 130px 24px; background: var(--bg-deep); }
+        .story-visual { display: grid; gap: 22px; }
+        .story-visual .photo-frame { aspect-ratio: 3 / 2; }
+        .story::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 50%, rgba(217, 121, 65, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+        .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+        .story-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 52ch; }
+        .story-copy p strong { color: var(--text); font-weight: 600; }
+        .story-panel {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(155deg, rgba(217, 121, 65, 0.10), transparent 45%),
+                var(--bg-raise);
+            padding: 40px 36px;
+            display: grid;
+            gap: 26px;
+        }
+        .story-point { display: flex; gap: 16px; align-items: flex-start; }
+        .story-point-icon {
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 121, 65, 0.12);
+            border: 1px solid rgba(217, 121, 65, 0.25);
+        }
+        .story-point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+        .story-point p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== CATEGORY MOSAIC (signature) ==================== */
+        .mosaic { padding: 130px 24px; background: var(--bg); }
+        .mosaic::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 85% 10%, rgba(232, 168, 124, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .mosaic .container { position: relative; z-index: 1; }
+        .mosaic-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 18px; }
+        .mosaic-tile {
+            position: relative;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            overflow: hidden;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-decoration: none;
+            background: var(--bg-raise);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .mosaic-tile:hover {
+            border-color: rgba(217, 121, 65, 0.4);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(217, 121, 65, 0.1);
+        }
+        .mosaic-tile.tile-lg { grid-column: span 2; grid-row: span 2; }
+        .mosaic-tile.tile-wide { grid-column: span 2; }
+        .tile-scene { position: absolute; inset: 0; pointer-events: none; }
+        .tile-scene svg {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 84px;
+            height: 84px;
+            opacity: 0.85;
+            transition: transform 0.5s var(--ease-out), opacity 0.4s ease;
+        }
+        .tile-lg .tile-scene svg { width: 132px; height: 132px; top: 26px; right: 26px; }
+        .mosaic-tile:hover .tile-scene svg { transform: translateY(-6px) scale(1.06); opacity: 1; }
+        .tile-1 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.18), rgba(18, 18, 18, 0) 60%); }
+        .tile-2 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.13), rgba(18, 18, 18, 0) 60%); }
+        .tile-3 .tile-scene { background: linear-gradient(150deg, rgba(192, 95, 43, 0.16), rgba(18, 18, 18, 0) 60%); }
+        .tile-4 .tile-scene { background: linear-gradient(150deg, rgba(244, 193, 138, 0.12), rgba(18, 18, 18, 0) 60%); }
+        .tile-5 .tile-scene { background: linear-gradient(150deg, rgba(217, 121, 65, 0.14), rgba(18, 18, 18, 0) 60%); }
+        .tile-6 .tile-scene { background: linear-gradient(150deg, rgba(232, 168, 124, 0.15), rgba(18, 18, 18, 0) 60%); }
+        .tile-label { position: relative; z-index: 1; transform: translateZ(30px); }
+        .tile-label h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .tile-lg .tile-label h3 { font-size: 1.55rem; }
+        .tile-label p { font-size: 0.88rem; color: var(--muted); }
+        .tile-label .tile-cta {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--copper-soft);
+        }
+
+        /* ==================== PROMISE GRID ==================== */
+        .promise { padding: 130px 24px; background: var(--bg-deep); }
+        .promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .promise .container { position: relative; z-index: 1; }
+        .promise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .promise-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 26px;
+            text-align: left;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-3px) scale(1.03);
+            border-color: rgba(217, 121, 65, 0.35);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 34px rgba(217, 121, 65, 0.09);
+        }
+        .promise-card svg { width: 40px; height: 40px; margin-bottom: 18px; }
+        .promise-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+        .promise-card p { font-size: 0.92rem; color: var(--muted); }
+
+        /* ==================== KURLON FEATURE BAND ==================== */
+        .kurlon { padding: 130px 24px; background: var(--bg); }
+        .kurlon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 45% at 20% 30%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .kurlon .container { position: relative; z-index: 1; }
+        .kurlon-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; align-items: center; }
+        .kurlon-grid .photo-frame { aspect-ratio: 4 / 5; }
+        .kurlon-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 20px; text-align: left; }
+        .kurlon-copy p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 52ch; }
+        .kurlon-copy p strong { color: var(--text); font-weight: 600; }
+        .kurlon-list { list-style: none; display: grid; gap: 12px; margin: 26px 0 32px; }
+        .kurlon-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 0.98rem;
+            color: var(--muted);
+        }
+        .kurlon-list li::before {
+            content: '';
+            flex: 0 0 auto;
+            width: 7px;
+            height: 7px;
+            margin-top: 9px;
+            border-radius: 50%;
+            background: var(--copper);
+        }
+
+        /* ==================== GALLERY STRIP ==================== */
+        .gallery { padding: 120px 24px; background: var(--bg-deep); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .gallery-grid .photo-frame { aspect-ratio: 3 / 2; }
+        .gallery-note {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: rgba(154, 149, 143, 0.75);
+        }
+
+        /* ==================== STICKY MOBILE ACTION BAR ==================== */
+        .mobile-bar { display: none; }
+
+        /* ==================== STATS BAND ==================== */
+        .stats {
+            padding: 100px 24px;
+            background:
+                linear-gradient(180deg, rgba(217, 121, 65, 0.05), transparent 70%),
+                var(--bg);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stat-value {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--copper-soft), var(--copper-pale));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .stat-label { display: block; margin-top: 6px; font-size: 0.9rem; color: var(--muted); }
+
+        /* ==================== AUTOMATION MOCK ==================== */
+        .automation { padding: 130px 24px; background: var(--bg-deep); }
+        .automation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 80% 80%, rgba(37, 211, 102, 0.05), transparent 60%),
+                        radial-gradient(ellipse 50% 40% at 10% 20%, rgba(217, 121, 65, 0.07), transparent 60%);
+            pointer-events: none;
+        }
+        .automation .container { position: relative; z-index: 1; }
+        .automation-shell {
+            max-width: 620px;
+            margin: 0 auto;
+            border-radius: 26px;
+            border: 1px solid rgba(217, 121, 65, 0.22);
+            background:
+                linear-gradient(160deg, rgba(217, 121, 65, 0.08), transparent 50%),
+                var(--bg-raise);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .automation-shell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--copper-soft), transparent);
+        }
+
+        .automation-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6fdb96;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            background: rgba(37, 211, 102, 0.07);
+            padding: 7px 16px;
+            border-radius: 980px;
+            margin-bottom: 22px;
+        }
+
+        .automation-tag .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: dotBlink 1.8s ease-in-out infinite;
+        }
+
+        @keyframes dotBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .automation-shell h3 { font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: 8px; }
+        .automation-shell > p { color: var(--muted); font-size: 0.96rem; margin-bottom: 30px; }
+        .emi-form { display: grid; gap: 16px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-height: 50px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a958f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .field input::placeholder { color: rgba(154, 149, 143, 0.6); }
+        .field input:focus,
+        .field select:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(217, 121, 65, 0.18); }
+        .emi-submit {
+            margin-top: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #25D366, #128C4A);
+            color: #06170c;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.18);
+        }
+        .emi-submit:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3); }
+        .emi-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; }
+
+        /* success state */
+        .emi-success { display: none; text-align: center; padding: 24px 6px 8px; }
+        .emi-success.visible { display: block; animation: successIn 0.6s var(--ease-out); }
+
+        @keyframes successIn {
+            from { opacity: 0; transform: translateY(16px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .success-check {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            color: #25D366;
+            font-size: 2rem;
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+        }
+        .emi-success h4 { font-size: 1.3rem; margin-bottom: 10px; }
+        .emi-success p { color: var(--muted); font-size: 0.95rem; max-width: 40ch; margin: 0 auto 22px; }
+        .emi-success .pitch { color: var(--copper-soft); font-weight: 500; }
+        .automation-strip {
+            max-width: 620px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .automation-strip strong { color: var(--text); }
+
+        /* ==================== VISIT ==================== */
+        .visit { padding: 130px 24px; background: var(--bg); }
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .visit-card {
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--card);
+            padding: 34px 30px;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-3px); border-color: rgba(217, 121, 65, 0.3); }
+        .visit-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+            margin-bottom: 12px;
+            color: var(--copper-soft);
+        }
+        .visit-card p, .visit-card a { color: var(--muted); font-size: 0.98rem; text-decoration: none; }
+        .visit-card a:hover { color: var(--text); }
+        .visit-card .visit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            min-height: 44px;
+            color: var(--copper);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .visit-card .visit-link:hover { color: var(--copper-pale); }
+
+        /* ==================== FAQ ==================== */
+        .faq { padding: 130px 24px; background: var(--bg-deep); }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            min-height: 60px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 24px 44px 24px 4px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: var(--copper-soft); }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--copper);
+            transition: transform 0.35s var(--ease-out);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+        .faq-answer p { padding: 0 4px 26px; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
+
+        /* no-JS fallback: answers open */
+        html.no-js .faq-answer { max-height: none; }
+
+        /* ==================== FINAL CTA ==================== */
+        .final-cta {
+            padding: 150px 24px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse 60% 55% at 50% 100%, rgba(217, 121, 65, 0.13), transparent 70%),
+                var(--bg);
+        }
+        .final-cta .section-headline { margin-bottom: 16px; }
+        .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* ==================== FOOTER ==================== */
+        .footer { padding: 64px 24px 40px; background: var(--bg-deep); border-top: 1px solid var(--line); }
+        .footer-content { text-align: center; }
+        .footer-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 18px; }
+        .footer-name span { color: var(--copper-soft); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 26px;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 2px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-demo-notice {
+            font-size: 0.82rem;
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0 auto 12px;
+            line-height: 1.7;
+        }
+        .footer-demo-notice a { color: var(--copper-soft); text-decoration: none; }
+        .footer-copy { font-size: 0.8rem; color: rgba(154, 149, 143, 0.6); }
+
+        /* ==================== FLOATING UI ==================== */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 1100;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.35s var(--ease-out);
+            animation: waPulse 2.6s ease-in-out infinite;
+        }
+        .wa-float:hover { transform: translateY(-3px) scale(1.06); }
+        .wa-float svg { width: 30px; height: 30px; }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+            60% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+        }
+
+        .demo-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 22px;
+            z-index: 1100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 10px 9px 16px;
+            border-radius: 980px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(26, 26, 26, 0.72);
+            border: 1px solid rgba(217, 121, 65, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .demo-badge .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); }
+        .demo-badge button {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 50%;
+            transition: color 0.3s;
+        }
+        .demo-badge button:hover { color: var(--text); }
+        .demo-badge.hidden { display: none; }
+        .back-to-top {
+            position: fixed;
+            bottom: 94px;
+            right: 28px;
+            z-index: 1050;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(217, 121, 65, 0.35);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--copper-soft);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: var(--copper); color: var(--copper-pale); }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 960px) {
+            .mosaic-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+            .promise-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-grid { grid-template-columns: 1fr; gap: 44px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .kurlon-grid { grid-template-columns: 1fr; gap: 40px; }
+            .kurlon-grid .photo-frame { aspect-ratio: 3 / 2; }
+        }
+
+        /* ---- Sticky mobile action bar (Call | WhatsApp | Directions) ---- */
+        @media (max-width: 760px) {
+            .mobile-bar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1200;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                background: rgba(12, 12, 12, 0.95);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-top: 1px solid rgba(217, 121, 65, 0.25);
+            }
+            .mobile-bar a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                min-height: 62px;
+                padding: 10px 6px;
+                font-size: 0.76rem;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                color: var(--text);
+                text-decoration: none;
+                border-right: 1px solid rgba(255, 255, 255, 0.06);
+            }
+            .mobile-bar a:last-child { border-right: none; }
+            .mobile-bar a svg { width: 20px; height: 20px; }
+            .mobile-bar .mb-wa { color: #6fdb96; }
+            body { padding-bottom: 62px; }
+            .wa-float { bottom: 76px; }
+            .back-to-top { bottom: 148px; }
+            .demo-badge { bottom: 78px; }
+        }
+
+        @media (max-width: 760px) {
+            .nav-links {
+                position: fixed;
+                top: 66px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(12, 12, 12, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line);
+                padding: 12px 24px 24px;
+                transform: translateY(-12px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: transform 0.35s var(--ease-out), opacity 0.3s ease, visibility 0.3s;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { margin-top: 14px; text-align: center; }
+            .nav-hamburger { display: flex; }
+
+            /* no-JS: keep menu reachable (shown statically below the bar) */
+            html.no-js .nav-links {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+            html.no-js .nav-container { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+            html.no-js .nav-hamburger { display: none; }
+        }
+
+        @media (max-width: 560px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .hero { min-height: 88vh; }
+            .mosaic-grid { grid-template-columns: 1fr; grid-auto-rows: 168px; }
+            .mosaic-tile.tile-lg,
+            .mosaic-tile.tile-wide { grid-column: span 1; grid-row: span 1; }
+            .tile-lg .tile-scene svg { width: 90px; height: 90px; }
+            .promise-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .visit-grid { grid-template-columns: 1fr; }
+            .story-panel { padding: 30px 24px; }
+            .automation-shell { padding: 34px 24px; }
+            .hero-ctas .btn { width: 100%; }
+            .orb { filter: blur(60px); opacity: 0.4; }
+        }
+
+        /* ==================== REDUCED MOTION ==================== */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .orb { animation: none; }
+            .wa-float { animation: none; }
+            .gradient-text { animation: none; }
+            .hero-media { animation: none; transform: none; }
+            .photo-frame:hover img { transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Prince Steel Industries &amp; Electronics (with Kurlon Mattress Store) — home">
+                <span class="nav-logo-mark" aria-hidden="true">P</span>
+                <span class="nav-logo-name">Prince <span>Steel Industries</span></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#categories">What We Make</a>
+                <a href="#kurlon">Kurlon</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#emi-check">Get a Rate</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/919451028036" class="nav-cta" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge reveal">Prince Steel Industries &amp; Electronics &middot; Kacheri Road, Gonda &middot; Since 1992</p>
+            <h1 class="hero-headline reveal">Built To Last. <span class="gradient-text">Built Here.</span></h1>
+            <p class="hero-subtext reveal">Steel almirahs, library and office furniture made in our own Gonda workshop — and the Kurlon Mattress Store for Gonda, under the same roof.</p>
+            <div class="hero-ctas reveal">
+                <a href="#emi-check" class="btn btn-primary">Get a Rate on WhatsApp</a>
+                <a href="#categories" class="btn btn-secondary">See What We Make</a>
+            </div>
+            <div class="hero-scrollhint reveal" aria-hidden="true">Scroll</div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Why buy here">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>Made in our own workshop</strong> — Kacheri Road</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#d97941" stroke-width="1.6"/><path d="M3 10h18" stroke="#d97941" stroke-width="1.6"/><path d="M7 14h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span><strong>Proper GST bill</strong> on every order</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h11v8H4z" stroke="#d97941" stroke-width="1.6"/><path d="M15 10h3l2.5 3v2H15z" stroke="#d97941" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.7" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17" cy="17" r="1.7" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                    <span><strong>Bulk supply</strong> to schools &amp; offices</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="10" width="19" height="7" rx="2.5" stroke="#d97941" stroke-width="1.6"/><path d="M2.5 13.5h19" stroke="#d97941" stroke-width="1.3"/><path d="M5 17v2.5M19 17v2.5" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span><strong>Gonda's Kurlon store</strong> — genuine range</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="about">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="eyebrow left">Since 1992 &middot; Kacheri Road</span>
+                    <h2>A workshop, not just <span class="gradient-text">a showroom.</span></h2>
+                    <p>Most furniture in Gonda arrives on a truck from somewhere else. Ours is <strong>cut, welded and finished here</strong> — which means if the almirah has to fit a particular alcove, or the library rack has to hold a particular shelf height, we simply make it that way.</p>
+                    <p>Since 1992 that has kept schools, offices and libraries across the district coming back to Kacheri Road. And when a customer wants sleep instead of steel, the same counter is Gonda's <strong>Kurlon Mattress Store</strong>.</p>
+                    <p><strong>Proper GST bill. Rates told straight. Work you can inspect before it leaves.</strong></p>
+                </div>
+                <div class="story-visual reveal">
+                <div class="photo-frame">
+                    <img src="https://images.pexels.com/photos/30536511/pexels-photo-30536511.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Retail store floor with household goods and appliances displayed at the entrance" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+                <div class="story-panel">
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Made to your size</h3>
+                            <p>Almirahs, racks and cabinets built to the measurement you bring us.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#e8a87c" stroke-width="1.6"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#e8a87c" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.8" stroke="#e8a87c" stroke-width="1.6"/></svg>
+                        </span>
+                        <div>
+                            <h3>Bulk &amp; institutional supply</h3>
+                            <p>School, office and library orders — quoted, billed with GST, delivered together.</p>
+                        </div>
+                    </div>
+                    <div class="story-point">
+                        <span class="story-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8a87c" stroke-width="1.6"/><path d="M3 10h18" stroke="#e8a87c" stroke-width="1.6"/><path d="M7 15h4" stroke="#e8a87c" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </span>
+                        <div>
+                            <h3>Kurlon, officially</h3>
+                            <p>Gonda's Kurlon Mattress Store — the real brand, at the brand's own rates.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CATEGORY MOSAIC -->
+    <section class="mosaic" id="categories">
+        <div class="container">
+            <span class="eyebrow reveal">What we make &amp; stock</span>
+            <h2 class="section-headline reveal">Steel, Storage <span class="gradient-text">&amp; Sleep.</span></h2>
+            <p class="section-sub reveal">What we build in the workshop, what we stock on the floor, and the Kurlon range next to it. Message us and we will send photos and today's rate.</p>
+            <div class="mosaic-grid">
+                <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20steel%20almirahs" target="_blank" rel="noopener" class="mosaic-tile tile-1 tile-lg reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="22" y="10" width="52" height="76" rx="4" stroke="#d97941" stroke-width="2.5"/><rect x="28" y="16" width="40" height="64" rx="2" fill="rgba(217,121,65,0.15)"/><path d="M48 10v76" stroke="#d97941" stroke-width="2.5"/><path d="M43 44v10M53 44v10" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Steel Almirahs</h3>
+                        <p>Two-door, three-door, locker and mirror models — or built to the exact size you measure.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20office%20storage%20and%20filing%20cabinets" target="_blank" rel="noopener" class="mosaic-tile tile-2 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="28" y="10" width="40" height="74" rx="5" stroke="#e8a87c" stroke-width="2.5"/><path d="M28 38h40" stroke="#e8a87c" stroke-width="2.5"/><path d="M36 20v8M36 48v14" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Office Storage</h3>
+                        <p>Filing cabinets, lockers, racks.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20Kurlon%20mattresses" target="_blank" rel="noopener" class="mosaic-tile tile-3 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="10" y="40" width="76" height="26" rx="8" stroke="#d97941" stroke-width="2.5"/><path d="M10 53h76" stroke="#e8a87c" stroke-width="2"/><path d="M16 66v8M80 66v8" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M22 40V30a4 4 0 014-4h14a4 4 0 014 4v10" stroke="#e8a87c" stroke-width="2.5"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Kurlon Mattresses</h3>
+                        <p>Gonda's official Kurlon store.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20plastic%20and%20home%20furniture" target="_blank" rel="noopener" class="mosaic-tile tile-4 tile-wide reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><path d="M14 48v-8a6 6 0 016-6h56a6 6 0 016 6v8" stroke="#f4c18a" stroke-width="2.5"/><rect x="10" y="48" width="76" height="18" rx="5" stroke="#f4c18a" stroke-width="2.5"/><path d="M16 66v8M80 66v8" stroke="#f4c18a" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Plastic &amp; Home Furniture</h3>
+                        <p>Chairs, tables, stools and everyday home pieces — sit on them before you buy them.</p>
+                        <span class="tile-cta">Ask on WhatsApp &rarr;</span>
+                    </span>
+                </a>
+                <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20library%20and%20bookcase%20cabinets" target="_blank" rel="noopener" class="mosaic-tile tile-5 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="16" y="30" width="64" height="44" rx="5" stroke="#d97941" stroke-width="2.5"/><rect x="24" y="40" width="30" height="24" rx="2" stroke="#d97941" stroke-width="2.5"/><circle cx="66" cy="44" r="3" fill="#e8a87c"/><circle cx="66" cy="56" r="3" fill="#e8a87c"/><path d="M32 22c0-4 4-4 4-8M48 22c0-4 4-4 4-8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Library Cabinets</h3>
+                        <p>Bookcases and reading-room racks.</p>
+                    </span>
+                </a>
+                <a href="https://wa.me/919451028036?text=I%20want%20a%20made-to-size%20order" target="_blank" rel="noopener" class="mosaic-tile tile-6 reveal" data-tilt>
+                    <span class="tile-scene" aria-hidden="true">
+                        <svg viewBox="0 0 96 96" fill="none"><rect x="14" y="34" width="68" height="24" rx="4" stroke="#e8a87c" stroke-width="2.5"/><path d="M26 34v8M38 34v12M50 34v8M62 34v12M74 34v8" stroke="#d97941" stroke-width="2.5" stroke-linecap="round"/><path d="M14 72h68M18 68v8M78 68v8" stroke="#e8a87c" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="tile-label">
+                        <h3>Made To Size</h3>
+                        <p>Bring the measurement. We build it.</p>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KURLON FEATURE BAND -->
+    <section class="kurlon" id="kurlon">
+        <div class="container">
+            <div class="kurlon-grid">
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/34574606/pexels-photo-34574606.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Calm bedroom with a made bed and soft natural light" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+                <div class="kurlon-copy reveal">
+                    <span class="eyebrow left">The Kurlon Mattress Store</span>
+                    <h2>Gonda's Kurlon range, <span class="gradient-text">under our roof.</span></h2>
+                    <p>The same counter that sells you a steel almirah is the town's <strong>official Kurlon Mattress Store</strong> — the genuine brand range, at the brand's own rates, without a trip to Lucknow.</p>
+                    <ul class="kurlon-list">
+                        <li>Single, double, queen and king sizes</li>
+                        <li>Firm, medium and soft — lie on it before you decide</li>
+                        <li>Ask us what is on the floor today before you come</li>
+                    </ul>
+                    <a href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20Kurlon%20mattresses" target="_blank" rel="noopener" class="btn btn-primary">Ask About Kurlon &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMISE GRID -->
+    <section class="promise" id="why-us">
+        <div class="container">
+            <span class="eyebrow reveal">Thirty-four years on one road</span>
+            <h2 class="section-headline reveal">Why Gonda <span class="gradient-text">Buys Here.</span></h2>
+            <p class="section-sub reveal">Thirty-plus years on Kacheri Road, and the highest ratings in town for steel furniture. There is a reason for both.</p>
+            <div class="promise-grid">
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4l13 7v9c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16v-9l13-7z" stroke="#d97941" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Made, not just sold</h3>
+                    <p>Our own fabrication means we answer for the welding, the gauge and the finish.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="10" width="32" height="22" rx="3" stroke="#d97941" stroke-width="2"/><path d="M4 17h32" stroke="#d97941" stroke-width="2"/><path d="M10 25h8" stroke="#e8a87c" stroke-width="2" stroke-linecap="round"/></svg>
+                    <h3>Finance available</h3>
+                    <p>Ask at the counter — instalment options on larger purchases, explained plainly.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="12" width="20" height="16" rx="2" stroke="#d97941" stroke-width="2"/><path d="M24 17h6l6 5v6h-12V17z" stroke="#d97941" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/><circle cx="30" cy="30" r="3" stroke="#e8a87c" stroke-width="2"/></svg>
+                    <h3>Bulk orders welcome</h3>
+                    <p>Schools, offices and libraries — quoted together, billed with GST, delivered together.</p>
+                </div>
+                <div class="promise-card reveal">
+                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6a14 14 0 1014 14" stroke="#d97941" stroke-width="2" stroke-linecap="round"/><path d="M20 12v8l6 4" stroke="#e8a87c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 6l6 2-2 6" stroke="#d97941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3>Since 1992</h3>
+                    <p>The same family, the same road. If something is wrong, you know where to find us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value">Since 1992</span>
+                    <span class="stat-label">Making steel furniture in Gonda since</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">4.9 &#9733;</span>
+                    <span class="stat-label">From 43 Google reviews</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Kurlon</span>
+                    <span class="stat-label">Gonda's official mattress store</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Made Here</span>
+                    <span class="stat-label">Our own workshop, Kacheri Road</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: RATE ENQUIRY -->
+    <section class="automation" id="emi-check">
+        <div class="container">
+            <span class="eyebrow reveal">Ask before you travel</span>
+            <h2 class="section-headline reveal">Today's Rate, <span class="gradient-text">On Your Phone.</span></h2>
+            <p class="section-sub reveal">Tell us the item and the size. Get the rate, photos and availability on WhatsApp — before you make the trip to Kacheri Road.</p>
+
+            <div class="automation-shell reveal">
+                <span class="automation-tag"><span class="dot" aria-hidden="true"></span> WhatsApp Auto-Reply</span>
+                <h3>Ask for a rate in seconds</h3>
+                <p>Fill this in and our WhatsApp assistant replies with the rate, photos and delivery time.</p>
+
+                <form class="emi-form" id="emi-form" novalidate>
+                    <div class="field">
+                        <label for="emi-product">What are you looking for?</label>
+                        <select id="emi-product" name="product" required>
+                            <option value="" selected disabled>Choose an item</option>
+                            <option>Steel Almirah</option>
+                            <option>Office Storage / Filing Cabinet</option>
+                            <option>Library or Bookcase Cabinet</option>
+                            <option>Kurlon Mattress</option>
+                            <option>Plastic / Home Furniture</option>
+                            <option>Made-to-size order (bulk)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="emi-name">Your name</label>
+                            <input type="text" id="emi-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="emi-phone">WhatsApp number</label>
+                            <input type="tel" id="emi-phone" name="phone" placeholder="10-digit mobile" inputmode="numeric" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn emi-submit">Get the Rate on WhatsApp</button>
+                    <p class="emi-note">Demo form — nothing is sent anywhere.</p>
+                </form>
+
+                <div class="emi-success" id="emi-success" role="status" aria-live="polite">
+                    <div class="success-check" aria-hidden="true">&#10003;</div>
+                    <h4>Request received.</h4>
+                    <p>This is how your customers would reach you automatically — rate, photos and delivery time delivered straight to their WhatsApp.</p>
+                    <p class="pitch">Imagine this answering almirah rate questions at 11pm, without anyone at the counter.</p>
+                    <button type="button" class="btn btn-secondary" id="emi-reset">Try It Again</button>
+                </div>
+            </div>
+
+            <p class="automation-strip reveal"><strong>For the owner:</strong> the same assistant can send the size-and-rate list, chase Google reviews after delivery, and remind finance customers of instalment dates — automatically.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery" aria-label="Rooms our furniture goes into">
+        <div class="container">
+            <span class="eyebrow reveal">Homes, offices, reading rooms</span>
+            <h2 class="section-headline reveal">Where It <span class="gradient-text">Ends Up.</span></h2>
+            <p class="section-sub reveal">Storage that has to disappear into a wall, seating that gets used every day, a mattress that has to last a decade. That is the brief we build to.</p>
+            <div class="gallery-grid">
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/7511701/pexels-photo-7511701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Bright living room with a sofa and indoor plants" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/10078142/pexels-photo-10078142.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Simple room with a wall-mounted television and low storage" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/8089268/pexels-photo-8089268.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Cosy bedroom with a made bed and warm lighting" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </div>
+            </div>
+            <p class="gallery-note reveal">Illustrative interiors — photographs of our own work can replace these on the live site.</p>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="eyebrow reveal">Gayatripuram Chauraha, Gonda</span>
+            <h2 class="section-headline reveal">Come See It <span class="gradient-text">In Person.</span></h2>
+            <p class="section-sub reveal">Open the almirah doors. Feel the gauge of the sheet. Lie down on the Kurlon before you decide. Steel and sleep are both bought with your hands.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#d97941" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Address
+                    </h3>
+                    <p>Prince Steel Industries &amp; Electronics<br>(with Kurlon Mattress Store)<br>Gayatripuram Chauraha, Kacheri Road<br>Gonda, Uttar Pradesh</p>
+                    <a class="visit-link" href="https://www.google.com/maps/search/?api=1&amp;query=Prince%20Steel%20Industries%20%26%20Electronics%20%28with%20Kurlon%20Mattress%20Store%29%20Gonda" target="_blank" rel="noopener">Get Directions &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                        Call or WhatsApp
+                    </h3>
+                    <p><a href="tel:+919451028036">+91 94510 28036</a></p>
+                    <p>Quickest reply on WhatsApp — send us the size you need and we will send the rate and photos.</p>
+                    <a class="visit-link" href="https://wa.me/919451028036" target="_blank" rel="noopener">Message on WhatsApp &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="11" width="19" height="7" rx="2.5" stroke="#d97941" stroke-width="1.8"/><path d="M2.5 14.5h19" stroke="#d97941" stroke-width="1.4"/><path d="M5 18v2.5M19 18v2.5" stroke="#d97941" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        Kurlon Mattress Store
+                    </h3>
+                    <p>The Kurlon range for Gonda sits at the same address — sizes, models and current offers.</p>
+                    <a class="visit-link" href="https://wa.me/919451028036?text=I%20want%20to%20ask%20about%20Kurlon%20mattresses" target="_blank" rel="noopener">Ask about Kurlon &rarr;</a>
+                </div>
+                <div class="visit-card reveal">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1.5" stroke="#d97941" stroke-width="1.8"/><path d="M16 10h3l2 3v4h-5v-7z" stroke="#d97941" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/><circle cx="17.5" cy="17" r="1.8" stroke="#d97941" stroke-width="1.8"/></svg>
+                        Bulk &amp; Institutional
+                    </h3>
+                    <p>Schools, offices, libraries and government departments across Gonda district.</p>
+                    <p>Send the list and the sizes — we quote the whole order together, with a GST bill.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-headline reveal">Questions? <span class="gradient-text">Answers.</span></h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Can you make an almirah to my own size?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Yes — that is the advantage of buying from a workshop rather than a showroom. Bring the height, width and depth you need, tell us how many shelves and whether you want a locker or a mirror, and we build it. Send the measurements on WhatsApp and we will tell you the rate first.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Are you the official Kurlon store for Gonda?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. The Kurlon Mattress Store for Gonda runs from this address, so you get the genuine brand range and the brand's own pricing — not a lookalike sold as Kurlon. Ask us for the size and firmness you want and we will tell you what is on the floor today.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you supply schools, offices and libraries in bulk?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>That is a large part of what we do — library bookcase cabinets, filing cabinets, lockers and office storage. Send the item list and quantities and we will quote the whole order together, with a proper GST bill for your records.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Can I buy on instalments?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Finance options are available on larger purchases — ask at the counter and we will tell you exactly what is possible for your order and what the monthly amount works out to. Nothing is added to the rate without telling you first.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Where exactly are you in Gonda?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Gayatripuram Chauraha on Kacheri Road — the steel furniture and the Kurlon mattress range are at the same address. Use the Get Directions link above, or send us a WhatsApp and we will drop a location pin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2 class="section-headline reveal">Send Us <span class="gradient-text">The Size.</span></h2>
+            <p class="reveal">One message. Today's rate. Straight answer.</p>
+            <a href="https://wa.me/919451028036" target="_blank" rel="noopener" class="btn btn-primary btn-large reveal">Chat With Us on WhatsApp</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Prince <span>Steel Industries &amp; Electronics</span></p>
+                <div class="footer-links">
+                    <a href="#categories">What We Make</a>
+                    <a href="#kurlon">Kurlon</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#emi-check">Get a Rate</a>
+                    <a href="#visit">Visit</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of Prince Steel Industries &amp; Electronics (with Kurlon Mattress Store).</p>
+                <p class="footer-copy">&copy; 2026 &middot; Concept demonstration only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE ACTION BAR -->
+    <nav class="mobile-bar" aria-label="Quick contact">
+        <a href="tel:+919451028036">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 2.5 3 4.5 5.5 5.5l2-3 5 2v4a2 2 0 01-2 2C10 21.5 2.5 14 2.5 6a2 2 0 012-2h.5z" stroke="#e8a87c" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Call
+        </a>
+        <a class="mb-wa" href="https://wa.me/919451028036" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2z" fill="#6fdb96"/></svg>
+            WhatsApp
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Prince%20Steel%20Industries%20%26%20Electronics%20%28with%20Kurlon%20Mattress%20Store%29%20Gonda" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" stroke="#e8a87c" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#e8a87c" stroke-width="1.8"/></svg>
+            Directions
+        </a>
+    </nav>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/919451028036" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.1 3 3.5 8.6 3.5 15.5c0 2.2.6 4.3 1.6 6.1L3.4 28l6.6-1.7c1.8 1 3.8 1.5 6 1.5 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-3.9 1 1-3.8-.2-.4c-1-1.6-1.6-3.5-1.6-5.4C5.7 9.8 10.3 5.2 16 5.2s10.3 4.6 10.3 10.3-4.6 10.2-10.3 10.2zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.7-.4z" fill="#ffffff"/></svg>
+    </a>
+
+    <!-- DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo">
+        <span class="demo-dot" aria-hidden="true"></span>
+        Concept Demo
+        <button type="button" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* JS is running — drop no-JS fallbacks */
+        document.documentElement.classList.remove('no-js');
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Nav: scroll darken ---------- */
+        var nav = document.getElementById('site-nav');
+        var backToTop = document.getElementById('back-to-top');
+
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 24);
+            if (backToTop) backToTop.classList.toggle('visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* ---------- Nav: hamburger ---------- */
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                var open = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            navMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        /* ---------- Back to top ---------- */
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------- Demo badge dismiss ---------- */
+        var demoBadge = document.getElementById('demo-badge');
+        var demoBadgeClose = document.getElementById('demo-badge-close');
+        if (demoBadge && demoBadgeClose) {
+            demoBadgeClose.addEventListener('click', function () {
+                demoBadge.classList.add('hidden');
+            });
+        }
+
+        /* ---------- FAQ accordion ---------- */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                // close others
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                        if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                    }
+                });
+
+                btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                if (answer) {
+                    answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        /* ---------- Automation mock: rate enquiry ---------- */
+        var emiForm = document.getElementById('emi-form');
+        var emiSuccess = document.getElementById('emi-success');
+        var emiReset = document.getElementById('emi-reset');
+
+        if (emiForm && emiSuccess) {
+            emiForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var product = document.getElementById('emi-product');
+                var name = document.getElementById('emi-name');
+                var phone = document.getElementById('emi-phone');
+
+                var valid = true;
+                [product, name, phone].forEach(function (field) {
+                    if (!field) return;
+                    if (!field.value || (field === phone && !/^\d{10}$/.test(field.value.replace(/\D/g, '').slice(-10)))) {
+                        field.style.borderColor = 'rgba(230, 90, 70, 0.7)';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                if (!valid) return;
+
+                emiForm.style.display = 'none';
+                emiSuccess.classList.add('visible');
+            });
+
+            if (emiReset) {
+                emiReset.addEventListener('click', function () {
+                    emiSuccess.classList.remove('visible');
+                    emiForm.reset();
+                    emiForm.style.display = 'grid';
+                });
+            }
+        }
+
+        /* ---------- Signature: mosaic hover tilt ---------- */
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (!reduceMotion && finePointer) {
+            document.querySelectorAll('[data-tilt]').forEach(function (tile) {
+                var rect = null;
+
+                tile.addEventListener('mouseenter', function () {
+                    rect = tile.getBoundingClientRect();
+                });
+
+                tile.addEventListener('mousemove', function (e) {
+                    if (!rect) rect = tile.getBoundingClientRect();
+                    var px = (e.clientX - rect.left) / rect.width - 0.5;
+                    var py = (e.clientY - rect.top) / rect.height - 0.5;
+                    tile.style.transform =
+                        'perspective(800px) rotateY(' + (px * 7).toFixed(2) + 'deg)' +
+                        ' rotateX(' + (-py * 7).toFixed(2) + 'deg)' +
+                        ' translateY(-4px)';
+                });
+
+                tile.addEventListener('mouseleave', function () {
+                    rect = null;
+                    tile.style.transform = '';
+                });
+            });
+        }
+
+        /* ---------- GSAP scroll reveals (guarded — page stays visible without it) ---------- */
+        document.addEventListener('DOMContentLoaded', function () {
+            if (reduceMotion) return;
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 34,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            /* ---------- CountUp counters (guarded) ----------
+               Stats are qualitative by default (no invented numbers).
+               Customization agents: give a .stat-value real data via
+               data-count="1234" and it will animate automatically. */
+            if (typeof window.countUp !== 'undefined') {
+                document.querySelectorAll('.stat-value[data-count]').forEach(function (el) {
+                    var target = parseFloat(el.getAttribute('data-count'));
+                    if (isNaN(target)) return;
+                    var counter = new countUp.CountUp(el, target, { duration: 2.2, separator: ',' });
+                    ScrollTrigger.create({
+                        trigger: el,
+                        start: 'top 90%',
+                        once: true,
+                        onEnter: function () {
+                            if (!counter.error) counter.start();
+                        }
+                    });
+                });
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

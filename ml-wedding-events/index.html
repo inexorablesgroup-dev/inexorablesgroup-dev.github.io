@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>M L Wedding Decorator &amp; Events Gonda — Wedding Decorators &amp; Event Management, Gonda</title>
+    <meta name="description" content="M L Wedding Decorator &amp; Events Gonda. Mandap and stage decoration, entrance gates, lighting, fireworks and complete wedding event management in Gonda. Concept demo by Inexorables Group.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================================================================
+           M L WEDDING DECORATOR &amp; EVENTS — services-professional template
+           Dark slate · indigo→violet · platinum · Space Grotesk
+           ================================================================ */
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0d0f17; --bg-deep: #090b12; --bg-raise: #121521; --ink: #e8e9f1;            /* platinum text */
+            --ink-dim: #8b8fa3; --indigo: #6366f1; --violet: #a855f7; --cyan: #06b6d4; --line: rgba(255, 255, 255, 0.07);
+            --glass: rgba(255, 255, 255, 0.03); --radius: 20px;
+            --font-display: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6;
+            -webkit-font-smoothing: antialiased; overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: var(--ink); }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        section { position: relative; }
+
+        .section-headline { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 20px; text-align: center; }
+
+        .section-sub {
+            text-align: center; color: var(--ink-dim); font-size: clamp(1rem, 1.8vw, 1.125rem); max-width: 620px;
+            margin: 0 auto 56px;
+        }
+
+        .eyebrow {
+            display: block; text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em;
+            text-transform: uppercase; color: #a5b4fc; margin-bottom: 16px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--indigo), var(--violet), var(--cyan)); -webkit-background-clip: text;
+            background-clip: text; -webkit-text-fill-color: transparent; color: transparent; background-size: 220% auto;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50%      { background-position: 100% center; }
+        }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-block; padding: 15px 32px; border-radius: 980px; font-family: var(--font-body);
+            font-size: 1rem; font-weight: 500; text-decoration: none; cursor: pointer; border: none; min-height: 44px;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease,
+            background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--indigo), var(--violet)); color: #fff;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.22);
+        }
+
+        .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 40px rgba(99, 102, 241, 0.38); }
+
+        .btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid rgba(255, 255, 255, 0.22); }
+
+        .btn-secondary:hover { border-color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.05); transform: translateY(-2px); }
+
+        .btn-large { padding: 19px 46px; font-size: 1.1rem; }
+
+        /* ---------- Skip link ---------- */
+        .skip-link {
+            position: absolute; top: -48px; left: 16px; z-index: 2000; background: var(--indigo); color: #fff;
+            padding: 10px 18px; border-radius: 8px; text-decoration: none; transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 12px; }
+
+        /* ---------- Navigation (glass) ---------- */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(13, 15, 23, 0.62);
+            backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .nav.scrolled { background: rgba(9, 11, 18, 0.92); box-shadow: 0 1px 30px rgba(99, 102, 241, 0.1); }
+
+        .nav-container {
+            max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between;
+            align-items: center; height: 66px;
+        }
+
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+
+        .nav-logo-mark {
+            width: 34px; height: 34px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--indigo), var(--violet)); display: flex; align-items: center;
+            justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: #fff;
+            box-shadow: 0 0 18px rgba(99, 102, 241, 0.35);
+        }
+
+        .nav-logo-name { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: var(--ink); letter-spacing: -0.01em; }
+        .nav-logo-name small {
+            display: block; font-family: var(--font-body); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--ink-dim);
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+
+        .nav-links a { font-size: 0.9rem; color: var(--ink-dim); text-decoration: none; padding: 10px 2px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--ink); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--indigo), var(--violet)); color: #fff !important;
+            padding: 10px 22px !important; border-radius: 980px; font-weight: 500;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.22); transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .nav-cta:hover { box-shadow: 0 0 32px rgba(99, 102, 241, 0.42); transform: translateY(-1px); }
+
+        .nav-hamburger {
+            display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px;
+            background: none; border: none; cursor: pointer; padding: 10px;
+        }
+        .hamburger-line {
+            display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .nav-hamburger.open .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger.open .hamburger-line:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ---------- Ambient orbs (signature, evolved: drift + parallax) ---------- */
+        .orb {
+            position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; opacity: 0.55;
+            will-change: transform;
+        }
+        .orb-1 {
+            width: 520px; height: 520px; top: -140px; left: -160px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.32), transparent 70%);
+            animation: orbDrift1 26s ease-in-out infinite;
+        }
+        .orb-2 {
+            width: 460px; height: 460px; top: 40vh; right: -180px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.26), transparent 70%);
+            animation: orbDrift2 32s ease-in-out infinite;
+        }
+        .orb-3 {
+            width: 380px; height: 380px; bottom: -120px; left: 30vw;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.18), transparent 70%);
+            animation: orbDrift3 38s ease-in-out infinite;
+        }
+
+        @keyframes orbDrift1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50%      { transform: translate(60px, 50px) scale(1.12); }
+        }
+        @keyframes orbDrift2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50%      { transform: translate(-70px, -40px) scale(1.08); }
+        }
+        @keyframes orbDrift3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50%      { transform: translate(40px, -60px) scale(1.15); }
+        }
+
+        main { position: relative; z-index: 1; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 130px 24px 90px; overflow: hidden;
+        }
+
+        /* Full-bleed photo bed: dark brand tint layered OVER the photograph.
+           Pure CSS, so it needs no JS and degrades to the gradient alone if
+           the image host is unreachable. */
+        .hero-bg {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background-color: var(--bg-deep);
+            background-image:
+                linear-gradient(180deg, rgba(9, 11, 18, 0.88) 0%, rgba(9, 11, 18, 0.58) 40%, rgba(9, 11, 18, 0.92) 100%),
+                linear-gradient(118deg, rgba(99, 102, 241, 0.36), rgba(168, 85, 247, 0.22) 55%, rgba(6, 182, 212, 0.14)),
+                url('https://images.pexels.com/photos/34079355/pexels-photo-34079355.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover, cover, cover;
+            background-position: center, center, center 45%;
+            background-repeat: no-repeat;
+            filter: saturate(0.92) contrast(1.04) brightness(0.98);
+            animation: kenBurns 30s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes kenBurns {
+            from { transform: scale(1); }
+            to   { transform: scale(1.07); }
+        }
+
+        /* Aurora sweep — the evolved gradient treatment */
+        .hero::before {
+            z-index: 1;
+            content: ''; position: absolute; top: -35%; left: 50%; transform: translateX(-50%); width: 1100px;
+            height: 900px; background:
+            radial-gradient(ellipse 45% 38% at 42% 42%, rgba(99, 102, 241, 0.16) 0%, transparent 70%),
+            radial-gradient(ellipse 40% 34% at 60% 52%, rgba(168, 85, 247, 0.12) 0%, transparent 70%),
+            radial-gradient(ellipse 32% 26% at 50% 62%, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+            pointer-events: none; animation: auroraSweep 14s ease-in-out infinite;
+        }
+
+        @keyframes auroraSweep {
+            0%, 100% { transform: translateX(-54%) rotate(-3deg) scale(1); opacity: 0.9; }
+            50%      { transform: translateX(-46%) rotate(3deg) scale(1.06); opacity: 1; }
+        }
+
+        .hero .container { position: relative; z-index: 2; }
+
+        .hero-badge {
+            display: inline-block; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em;
+            text-transform: uppercase; color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.32);
+            background: rgba(99, 102, 241, 0.07); padding: 9px 22px; border-radius: 980px; margin-bottom: 30px;
+        }
+
+        .hero-badge { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+
+        .hero-headline {
+            font-size: clamp(2.6rem, 8vw, 5.5rem); margin-bottom: 24px;
+            text-shadow: 0 2px 40px rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-subtext {
+            font-size: clamp(1rem, 2vw, 1.25rem); color: #c3c6d6; max-width: 640px; margin: 0 auto 44px;
+            text-shadow: 0 1px 20px rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* Quiet credibility chip under the hero CTAs */
+        .hero-trust {
+            margin: 36px auto 0; display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center;
+            gap: 8px 16px; padding: 11px 24px; border-radius: 980px;
+            border: 1px solid rgba(255, 255, 255, 0.14); background: rgba(9, 11, 18, 0.42);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            font-size: 0.82rem; letter-spacing: 0.05em; color: var(--ink-dim);
+        }
+        .hero-trust strong { color: var(--ink); font-weight: 600; }
+        .hero-trust .sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); }
+
+        /* ---------- Shared photo frame (all section imagery) ---------- */
+        .photo-frame {
+            position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line);
+            background: linear-gradient(150deg, rgba(99, 102, 241, 0.20), rgba(168, 85, 247, 0.11) 55%, rgba(6, 182, 212, 0.08));
+        }
+        .photo-frame img {
+            display: block; width: 100%; height: 100%; object-fit: cover;
+            filter: saturate(0.92) contrast(1.04) brightness(0.98);
+            transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .photo-frame:hover img { transform: scale(1.05); }
+        .photo-frame::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: linear-gradient(180deg, transparent 48%, rgba(9, 11, 18, 0.62));
+        }
+        .photo-caption {
+            position: absolute; left: 20px; right: 20px; bottom: 16px; z-index: 2; font-size: 0.74rem;
+            font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(232, 233, 241, 0.92);
+        }
+
+        .hero-scrollhint {
+            position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--ink-dim);
+            font-size: 1.4rem; animation: hintBob 2.4s ease-in-out infinite; z-index: 2;
+        }
+        @keyframes hintBob {
+            0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+            50%      { transform: translate(-50%, 8px); opacity: 1; }
+        }
+
+        /* ---------- Story / About ---------- */
+        .story { padding: 130px 24px; background: var(--bg-deep); }
+        .story::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 15% 40%, rgba(99, 102, 241, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .story .container { position: relative; z-index: 1; }
+
+        .story-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+
+        .story-copy h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); margin-bottom: 24px; text-align: left; }
+        .story-copy p { color: var(--ink-dim); font-size: clamp(1rem, 1.8vw, 1.1rem); margin-bottom: 18px; }
+        .story-copy p strong { color: var(--ink); font-weight: 600; }
+
+        .story-panel {
+            border-radius: var(--radius); border: 1px solid var(--line);
+            background: linear-gradient(160deg, rgba(99, 102, 241, 0.09), rgba(168, 85, 247, 0.05) 55%, rgba(6, 182, 212, 0.05));
+            padding: 40px 34px; position: relative; overflow: hidden;
+        }
+        .story-panel::after {
+            content: ''; position: absolute; top: -60px; right: -60px; width: 180px; height: 180px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.22), transparent 70%); filter: blur(10px);
+        }
+        .story-photo { aspect-ratio: 16 / 10; margin-bottom: 28px; }
+
+        .story-panel h3 { font-size: 1.2rem; margin-bottom: 18px; }
+        .story-panel ul { list-style: none; }
+        .story-panel li {
+            display: flex; gap: 12px; align-items: flex-start; color: var(--ink-dim); font-size: 0.98rem; padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .story-panel li:last-child { border-bottom: none; }
+        .story-panel li svg { flex-shrink: 0; margin-top: 4px; }
+
+        /* ---------- Services grid ---------- */
+        .services { padding: 130px 24px; background: var(--bg); }
+        .services::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .services .container { position: relative; z-index: 1; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+        .service-card {
+            border-radius: var(--radius); border: 1px solid var(--line); background: var(--glass); padding: 36px 28px;
+            text-align: left; transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+            box-shadow 0.45s ease, border-color 0.45s ease, background 0.45s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px) scale(1.02); border-color: rgba(99, 102, 241, 0.35);
+            background: rgba(255, 255, 255, 0.05); box-shadow: 0 18px 48px rgba(99, 102, 241, 0.16);
+        }
+
+        .service-icon {
+            width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 22px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(168, 85, 247, 0.12));
+            border: 1px solid rgba(99, 102, 241, 0.25);
+        }
+
+        .service-card h3 { font-size: 1.18rem; margin-bottom: 10px; }
+        .service-card p { color: var(--ink-dim); font-size: 0.95rem; }
+
+        /* ---------- Stats band ---------- */
+        .stats { padding: 110px 24px; background: var(--bg-deep); }
+        .stats::before {
+            content: ''; position: absolute; inset: 0; background:
+            radial-gradient(circle at 82% 24%, rgba(6, 182, 212, 0.07) 0%, transparent 42%),
+            radial-gradient(circle at 16% 78%, rgba(139, 92, 246, 0.07) 0%, transparent 42%); pointer-events: none;
+        }
+        .stats .container { position: relative; z-index: 1; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+
+        .stat {
+            padding: 34px 16px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--glass);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease;
+        }
+        .stat:hover { transform: translateY(-3px); border-color: rgba(168, 85, 247, 0.3); }
+
+        .stat-value {
+            display: block; font-family: var(--font-display); font-weight: 700;
+            font-size: clamp(1.85rem, 4.4vw, 3rem); line-height: 1.05; letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--indigo), var(--violet)); -webkit-background-clip: text;
+            background-clip: text; -webkit-text-fill-color: transparent; color: transparent; margin-bottom: 14px;
+        }
+        .stat-label {
+            display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--ink-dim); line-height: 1.6;
+        }
+
+        /* Understated credentials row beneath the stats band */
+        .creds {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 28px;
+            margin-top: 48px; padding-top: 34px; border-top: 1px solid var(--line);
+        }
+        .creds span {
+            font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--ink-dim); opacity: 0.62;
+        }
+
+        /* ---------- Gallery strip ---------- */
+        .gallery { padding: 120px 24px; background: var(--bg-deep); }
+        .gallery::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 80% 20%, rgba(168, 85, 247, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .gallery .container { position: relative; z-index: 1; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .gallery-grid .photo-frame { aspect-ratio: 4 / 5; }
+        .gallery-note { text-align: center; color: var(--ink-dim); font-size: 0.88rem; margin-top: 30px; }
+
+        /* ---------- Signature: How an engagement flows ---------- */
+        .approach { padding: 130px 24px; background: var(--bg); overflow: hidden; }
+        .approach::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 60% 40% at 85% 30%, rgba(168, 85, 247, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .approach .container { position: relative; z-index: 1; }
+
+        .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+
+        /* Rotating conic gradient border — the vertical's signature motion */
+        .approach-card { position: relative; border-radius: var(--radius); padding: 1.5px; background: var(--line); overflow: hidden; }
+        .approach-card::before {
+            content: ''; position: absolute; inset: -60%;
+            background: conic-gradient(from 0deg, transparent 0 68%, var(--indigo) 78%, var(--violet) 88%, transparent 98%);
+            animation: borderSpin 7s linear infinite; opacity: 0; transition: opacity 0.5s ease;
+        }
+        .approach-card:hover::before { opacity: 1; }
+
+        @keyframes borderSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .approach-card-inner {
+            position: relative; border-radius: calc(var(--radius) - 1.5px); background: var(--bg-raise);
+            padding: 38px 30px; height: 100%;
+        }
+
+        .approach-step {
+            font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.16em;
+            color: #a5b4fc; display: block; margin-bottom: 16px;
+        }
+        .approach-card-inner h3 { font-size: 1.25rem; margin-bottom: 12px; }
+        .approach-card-inner p { color: var(--ink-dim); font-size: 0.95rem; }
+
+        /* ---------- Automation mock: free consultation booking ---------- */
+        .consult { padding: 130px 24px; background: var(--bg-deep); }
+        .consult::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 55% 45% at 50% 100%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .consult .container { position: relative; z-index: 1; }
+
+        .consult-shell {
+            max-width: 560px; margin: 0 auto; border-radius: 24px; border: 1px solid rgba(99, 102, 241, 0.22);
+            background: linear-gradient(165deg, rgba(99, 102, 241, 0.08), rgba(13, 15, 23, 0.6) 45%); padding: 44px 38px;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            position: relative; overflow: hidden;
+        }
+
+        .consult-form { display: grid; gap: 18px; }
+
+        .field label {
+            display: block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+            color: var(--ink-dim); margin-bottom: 8px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%; min-height: 48px; padding: 12px 16px; border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(9, 11, 18, 0.7); color: var(--ink);
+            font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none; -webkit-appearance: none;
+        }
+
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238b8fa3' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+        }
+
+        .field input::placeholder { color: rgba(139, 143, 163, 0.7); }
+
+        .field input:focus,
+        .field select:focus { outline: none; border-color: rgba(99, 102, 241, 0.65); box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18); }
+
+        .consult-note { font-size: 0.82rem; color: var(--ink-dim); text-align: center; }
+
+        /* success state */
+        .consult-success { display: none; text-align: center; padding: 30px 6px 10px; }
+        .consult-shell.done .consult-form,
+        .consult-shell.done .consult-note { display: none; }
+        .consult-shell.done .consult-success { display: block; animation: successPop 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+
+        @keyframes successPop {
+            0%   { opacity: 0; transform: translateY(16px) scale(0.96); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .success-ring {
+            width: 76px; height: 76px; margin: 0 auto 24px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--indigo), var(--violet)); display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 0 40px rgba(99, 102, 241, 0.45);
+        }
+
+        .consult-success h3 { font-size: 1.45rem; margin-bottom: 12px; }
+        .consult-success p { color: var(--ink-dim); font-size: 0.98rem; margin-bottom: 8px; }
+        .consult-success .success-pitch {
+            margin-top: 18px; padding: 14px 18px; border-radius: 12px; border: 1px dashed rgba(99, 102, 241, 0.4);
+            background: rgba(99, 102, 241, 0.07); color: #a5b4fc; font-size: 0.9rem;
+        }
+
+        /* ---------- Visit / contact ---------- */
+        .visit { padding: 130px 24px; background: var(--bg); }
+        .visit::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 50% 40% at 20% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .visit .container { position: relative; z-index: 1; }
+
+        .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+
+        .visit-card {
+            border-radius: var(--radius); border: 1px solid var(--line); background: var(--glass); padding: 32px 28px;
+            text-align: center; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.4s ease;
+        }
+        .visit-card:hover { transform: translateY(-3px); border-color: rgba(99, 102, 241, 0.3); }
+
+        .visit-card .visit-icon {
+            width: 46px; height: 46px; margin: 0 auto 16px; border-radius: 12px; display: flex; align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(168, 85, 247, 0.12));
+            border: 1px solid rgba(99, 102, 241, 0.25);
+        }
+        .visit-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .visit-card p { color: var(--ink-dim); font-size: 0.92rem; }
+        .visit-card a { color: #a5b4fc; text-decoration: none; }
+        .visit-card a:hover { text-decoration: underline; }
+
+        .visit-actions { text-align: center; }
+
+        /* ---------- FAQ ---------- */
+        .faq { padding: 130px 24px; background: var(--bg-deep); }
+        .faq-list { max-width: 720px; margin: 0 auto; }
+
+        .faq-item { border-bottom: 1px solid var(--line); }
+
+        .faq-question {
+            width: 100%; background: none; border: none; color: var(--ink); font-family: var(--font-display);
+            font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 600; text-align: left; padding: 24px 44px 24px 4px;
+            cursor: pointer; position: relative; min-height: 44px; transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: #a5b4fc; }
+
+        .faq-question::after {
+            content: '+'; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-size: 1.5rem;
+            font-weight: 400; color: var(--indigo); transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .faq-question[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.23, 1, 0.32, 1); }
+        .faq-answer p { color: var(--ink-dim); font-size: 0.98rem; padding: 0 4px 26px; max-width: 640px; }
+
+        /* ---------- Final CTA ---------- */
+        .final-cta { padding: 150px 24px; background: var(--bg); text-align: center; overflow: hidden; }
+        .final-cta::before {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 820px; height: 820px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.13) 0%, rgba(168, 85, 247, 0.07) 40%, transparent 70%);
+            pointer-events: none;
+        }
+        .final-cta::before { z-index: 1; }
+        .final-cta .container { position: relative; z-index: 2; }
+        .cta-subtext { color: #c3c6d6; font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; }
+
+        /* Pre-footer CTA band: tinted photograph behind the closing line */
+        .cta-bg {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background-color: var(--bg);
+            background-image:
+                linear-gradient(180deg, rgba(13, 15, 23, 0.95) 0%, rgba(9, 11, 18, 0.80) 50%, rgba(9, 11, 18, 0.96) 100%),
+                linear-gradient(118deg, rgba(99, 102, 241, 0.30), rgba(168, 85, 247, 0.20) 60%, rgba(6, 182, 212, 0.12)),
+                url('https://images.pexels.com/photos/31798269/pexels-photo-31798269.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover, cover, cover;
+            background-position: center, center, center 35%;
+            background-repeat: no-repeat;
+            filter: saturate(0.92) contrast(1.04) brightness(0.98);
+        }
+
+        .cta-phone {
+            margin-top: 26px; color: var(--ink-dim); font-size: 0.95rem; letter-spacing: 0.02em;
+        }
+        .cta-phone a { color: var(--ink); text-decoration: none; font-weight: 600; }
+        .cta-phone a:hover { text-decoration: underline; }
+
+        /* ---------- Footer ---------- */
+        .footer { padding: 64px 24px 96px; background: var(--bg-deep); border-top: 1px solid var(--line); text-align: center; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; margin-bottom: 28px; }
+        .footer-links a { color: var(--ink-dim); text-decoration: none; font-size: 0.9rem; padding: 8px 2px; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--ink); }
+        .footer-name { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+        .footer-copy { color: var(--ink-dim); font-size: 0.85rem; margin-bottom: 20px; }
+        .footer-demo-notice { color: rgba(139, 143, 163, 0.75); font-size: 0.78rem; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+        .footer-demo-notice a { color: #a5b4fc; text-decoration: none; }
+
+        /* ---------- Floating WhatsApp ---------- */
+        .whatsapp-fab {
+            position: fixed; bottom: 22px; right: 22px; z-index: 1200; width: 58px; height: 58px; border-radius: 50%;
+            background: #25D366; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4); animation: waPulse 2.6s ease-in-out infinite;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .whatsapp-fab:hover { transform: translateY(-3px) scale(1.06); }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.35); }
+            50%      { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4), 0 0 0 14px rgba(37, 211, 102, 0); }
+        }
+
+        /* ---------- Concept Demo badge ---------- */
+        .demo-badge {
+            position: fixed; bottom: 22px; left: 22px; z-index: 1200; display: flex; align-items: center; gap: 10px;
+            padding: 9px 14px 9px 18px; border-radius: 980px; background: rgba(13, 15, 23, 0.72);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(99, 102, 241, 0.35);
+            color: #a5b4fc; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+        }
+        .demo-badge button {
+            background: none; border: none; color: var(--ink-dim); font-size: 1.05rem; line-height: 1; cursor: pointer;
+            padding: 6px; min-width: 28px; min-height: 28px; border-radius: 50%; transition: color 0.3s, background 0.3s;
+        }
+        .demo-badge button:hover { color: var(--ink); background: rgba(255, 255, 255, 0.08); }
+        .demo-badge.hidden { display: none; }
+
+        /* ---------- Back to top ---------- */
+        .back-to-top {
+            position: fixed; bottom: 92px; right: 28px; z-index: 1100; width: 46px; height: 46px; border-radius: 50%;
+            border: 1px solid rgba(99, 102, 241, 0.35); background: rgba(13, 15, 23, 0.8); backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); color: #a5b4fc; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; opacity: 0; pointer-events: none; transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease;
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { border-color: rgba(168, 85, 247, 0.6); }
+
+        /* ---------- Scroll reveal base (progressive enhancement) ----------
+           Content is fully visible by default; JS adds .gs-init only when
+           GSAP has actually loaded, so the site reads perfectly without JS. */
+        .reveal { opacity: 1; }
+
+        /* ---------- Reduced motion ---------- */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.001s !important; animation-iteration-count: 1 !important;
+                transition-duration: 0.001s !important;
+            }
+            html { scroll-behavior: auto; }
+            .orb { display: none; }
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1000px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .approach-grid { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .visit-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+        }
+
+        @media (max-width: 820px) {
+            .story-grid { grid-template-columns: 1fr; gap: 44px; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-grid .photo-frame:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+            .nav-links {
+                position: fixed; top: 66px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0;
+                background: rgba(9, 11, 18, 0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--line); padding: 12px 24px 24px; transform: translateY(-12px); opacity: 0;
+                visibility: hidden;
+                transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s ease, visibility 0.35s;
+            }
+            .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
+            .nav-links a { padding: 15px 4px; font-size: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-cta { text-align: center; margin-top: 14px; border-radius: 14px; }
+            .nav-hamburger { display: flex; }
+        }
+
+        @media (max-width: 560px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+            .stat { padding: 26px 12px; }
+            .consult-shell { padding: 34px 22px; }
+            .hero { padding: 110px 20px 80px; }
+            .hero-ctas .btn { width: 100%; max-width: 320px; }
+            .hero-trust { font-size: 0.74rem; padding: 10px 16px; gap: 6px 12px; }
+            .gallery { padding: 88px 24px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-grid .photo-frame:nth-child(3) { aspect-ratio: 4 / 5; }
+            .story-photo { aspect-ratio: 3 / 2; }
+            .orb-1 { width: 340px; height: 340px; }
+            .orb-2 { width: 300px; height: 300px; }
+            .orb-3 { display: none; }
+            .back-to-top { bottom: 96px; right: 24px; }
+            .demo-badge { bottom: 18px; left: 14px; font-size: 0.7rem; }
+            .whatsapp-fab { bottom: 18px; right: 16px; width: 54px; height: 54px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="M L Wedding Decorator &amp; Events Gonda — home">
+                <span class="nav-logo-mark" aria-hidden="true">ML</span>
+                <span class="nav-logo-name">M L Wedding Decorator &amp; Events Gonda<small>Gonda &middot; Decor &amp; Events since 2000s</small></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#services">What We Do</a>
+                <a href="#work">Our Work</a>
+                <a href="#approach">How We Work</a>
+                <a href="#visit">Visit Us</a>
+                <a href="#consult" class="nav-cta">Check Your Date</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge reveal">Wedding Decor &amp; Events &middot; Gonda</p>
+            <h1 class="hero-headline reveal">The Day They'll <span class="gradient-text">Never Forget.</span></h1>
+            <p class="hero-subtext reveal">Mandap, stage, gates, lights and fireworks — designed and built by Gonda's most trusted decorators. You enjoy the wedding. We handle everything you can see.</p>
+            <div class="hero-ctas reveal">
+                <a href="#consult" class="btn btn-primary">Check Your Date</a>
+                <a href="#services" class="btn btn-secondary">See What We Do</a>
+            </div>
+            <p class="hero-trust reveal">
+                <span><strong>4.9 &#9733;</strong> on Google</span>
+                <span class="sep" aria-hidden="true"></span>
+                <span><strong>182</strong> Reviews</span>
+                <span class="sep" aria-hidden="true"></span>
+                <span><strong>20+</strong> Years in Gonda</span>
+            </p>
+        </div>
+        <div class="hero-scrollhint" aria-hidden="true">&#8595;</div>
+    </section>
+
+    <!-- STORY / ABOUT -->
+    <section class="story" id="about">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy reveal">
+                    <span class="eyebrow" style="text-align:left;">Our Story</span>
+                    <h2>Two Decades of <span class="gradient-text">Gonda's Weddings.</span></h2>
+                    <p>A wedding is one day, and everything has to be right by evening. The mandap, the stage, the lights coming on at the correct moment. <strong>For over twenty years, M L Wedding Decorator &amp; Events Gonda has been the name families here hand that responsibility to.</strong></p>
+                    <p>We are a working decorator, not an agency. Our own team designs the setup, brings the material, builds it on site and stays until the last function is over. Nothing is subcontracted and forgotten.</p>
+                    <p>Most of our bookings come from a guest at a wedding we did last season. That is the only advertising we have ever needed.</p>
+                </div>
+                <div class="story-panel reveal">
+                    <div class="photo-frame story-photo">
+                        <img src="https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                             alt="A wedding stage set with a floral arch and draped backdrop"
+                             loading="lazy" decoding="async" onerror="this.style.display='none'">
+                        <span class="photo-caption">Stage &amp; Floral Backdrop</span>
+                    </div>
+                    <h3>Our Promise</h3>
+                    <ul>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Setup finished before the baraat arrives. Every time.
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Package agreed in writing. No charges added later.
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Our own team on site, start to finish — never handed off.
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5L12.5 7" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            You approve the design before a single piece is built.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <span class="eyebrow reveal">What We Do</span>
+            <h2 class="section-headline reveal">Everything Your Guests Will See.</h2>
+            <p class="section-sub reveal">One team for the mandap, the stage, the lights and the last firework of the night.</p>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="4" y="3" width="18" height="20" rx="3" stroke="#a5b4fc" stroke-width="1.6"/><path d="M9 9h8M9 13h8M9 17h5" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Mandap &amp; Stage</h3>
+                    <p>The centrepiece of the day — designed to your theme, built solid, finished before guests arrive.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v20M6 8l7-5 7 5M6 8v10l7 5 7-5V8" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/><circle cx="13" cy="13" r="2.4" fill="#a855f7"/></svg>
+                    </div>
+                    <h3>Entrance Gates &amp; Pathways</h3>
+                    <p>The first thing anyone sees. Themed gates, walkways and welcome setups that set the tone.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="11" cy="11" r="7" stroke="#a5b4fc" stroke-width="1.6"/><path d="M16.5 16.5L22 22" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#a5b4fc" stroke-width="1.4" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Lighting, Flowers &amp; Drapes</h3>
+                    <p>Floral work, fabric drapes and lighting that make every photograph from the night worth keeping.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="20" height="15" rx="3" stroke="#a5b4fc" stroke-width="1.6"/><path d="M3 11h20" stroke="#a855f7" stroke-width="1.6"/><path d="M8 3v5M18 3v5" stroke="#a5b4fc" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Fireworks &amp; Atishbaazi</h3>
+                    <p>Baraat and reception fireworks, timed to the moment and handled by people who do it safely.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 20V10m6 10V6m6 14v-8m6 8V4" stroke="#a5b4fc" stroke-width="1.8" stroke-linecap="round"/><path d="M3 22h20" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Backstage &amp; Green Rooms</h3>
+                    <p>Seating, backstage, changing rooms and the parts nobody notices — until they are missing.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#a5b4fc" stroke-width="1.6"/><path d="M13 7v6l4 3" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Complete Event Management</h3>
+                    <p>Haldi to vidaai — vendors coordinated, timings held, one person you call for everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND (qualitative — replace with real numbers only) -->
+    <section class="stats" aria-label="Why clients stay">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-value"><span data-countup="20">20</span>+ Years</span>
+                    <span class="stat-label">Decorating Gonda's Weddings.</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">4.9 &#9733;</span>
+                    <span class="stat-label">Rating on Google.</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value"><span data-countup="182">182</span></span>
+                    <span class="stat-label">Google Reviews and Counting.</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-value">Our Own Team</span>
+                    <span class="stat-label">On Site, Every Function.</span>
+                </div>
+            </div>
+            <div class="creds reveal">
+                <span>Listed on Google Maps</span>
+                <span>Owner-Run Since the 2000s</span>
+                <span>Bargaon &middot; Station Road, Gonda</span>
+                <span>Gonda &amp; Surrounding Districts</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: HOW WE WORK -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <span class="eyebrow reveal">How We Work</span>
+            <h2 class="section-headline reveal">Three Steps. <span class="gradient-text">Zero Panic.</span></h2>
+            <p class="section-sub reveal">The same process for a tilak function or a full four-day wedding.</p>
+            <div class="approach-grid">
+                <div class="approach-card reveal">
+                    <div class="approach-card-inner">
+                        <span class="approach-step">01 &mdash; VISIT &amp; DESIGN</span>
+                        <h3>We See the Venue.</h3>
+                        <p>We come to your lawn, hall or home, measure the space and show you what will work there. You pick the theme; we tell you honestly what fits the budget.</p>
+                    </div>
+                </div>
+                <div class="approach-card reveal">
+                    <div class="approach-card-inner">
+                        <span class="approach-step">02 &mdash; CONFIRM</span>
+                        <h3>We Fix It in Writing.</h3>
+                        <p>Your date is blocked, the package is written down, and the advance is settled. One point of contact from that day until the function is over.</p>
+                    </div>
+                </div>
+                <div class="approach-card reveal">
+                    <div class="approach-card-inner">
+                        <span class="approach-step">03 &mdash; BUILD &amp; STAY</span>
+                        <h3>We Finish Early.</h3>
+                        <p>Our team arrives ahead of time, builds the setup, tests every light, and stays through the function. We pack up after — you never lift a thing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery" id="work" aria-label="Our work">
+        <div class="container">
+            <span class="eyebrow reveal">Our Work</span>
+            <h2 class="section-headline reveal">Built for <span class="gradient-text">Gonda's Families.</span></h2>
+            <p class="section-sub reveal">Gates, stages, mandaps and reception setups — the kind of work we are called back for.</p>
+            <div class="gallery-grid">
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/33508474/pexels-photo-33508474.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Ornate entrance archway hung with marigold garlands at an outdoor wedding venue"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="photo-caption">Entrance Gates</span>
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/31307953/pexels-photo-31307953.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Outdoor wedding reception setup decorated in pink florals"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="photo-caption">Reception Decor</span>
+                </div>
+                <div class="photo-frame reveal">
+                    <img src="https://images.pexels.com/photos/38063276/pexels-photo-38063276.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Couple in traditional attire during a pre-wedding ceremony setup"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <span class="photo-caption">Tilak &amp; Haldi Setups</span>
+                </div>
+            </div>
+            <p class="gallery-note reveal">More of our recent work goes up every season on Instagram &mdash; <a href="https://www.instagram.com/mlweddingdecoratergonda" target="_blank" rel="noopener" style="color:#a5b4fc;text-decoration:none;">@mlweddingdecoratergonda</a></p>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: FREE CONSULTATION BOOKING -->
+    <section class="consult" id="consult">
+        <div class="container">
+            <span class="eyebrow reveal">Book Your Date</span>
+            <h2 class="section-headline reveal">Is Your Date <span class="gradient-text">Still Free?</span></h2>
+            <p class="section-sub reveal">Tell us the date and the function. We'll reply on WhatsApp with availability and a quote.</p>
+
+            <div class="consult-shell reveal" id="consult-shell">
+                <form class="consult-form" id="consult-form" novalidate>
+                    <div class="field">
+                        <label for="cf-name">Your Name</label>
+                        <input type="text" id="cf-name" name="name" placeholder="e.g. Rakesh Verma" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="cf-service">Which Function?</label>
+                        <select id="cf-service" name="service" required>
+                            <option value="" selected disabled>Choose the function</option>
+                            <option>Full Wedding — All Functions</option>
+                            <option>Mandap &amp; Stage Decoration</option>
+                            <option>Reception / Sangeet Stage</option>
+                            <option>Entrance Gate &amp; Lighting</option>
+                            <option>Fireworks / Atishbaazi Only</option>
+                            <option>Tilak, Haldi or Engagement</option>
+                            <option>Birthday or Other Event</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="cf-phone">Phone (WhatsApp)</label>
+                        <input type="tel" id="cf-phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required>
+                    </div>
+                    <div class="field">
+                        <label for="cf-time">Event Date</label>
+                        <input type="date" id="cf-time" name="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Check Availability</button>
+                    <p class="consult-note">No advance to enquire. Just tell us the date.</p>
+                </form>
+
+                <div class="consult-success" id="consult-success" role="status" aria-live="polite">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M8 18l6 6L26 11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Enquiry Received.</h3>
+                    <p id="consult-success-detail">We'll check the date and reply on WhatsApp shortly.</p>
+                    <p class="success-pitch">This is a demo — and exactly how a family enquiring at 11pm during your busiest night would still reach you, without a single missed call.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT / CONTACT -->
+    <section class="visit" id="visit">
+        <div class="container">
+            <span class="eyebrow reveal">Visit Us</span>
+            <h2 class="section-headline reveal">Find Us in <span class="gradient-text">Gonda.</span></h2>
+            <p class="section-sub reveal">Come and see the material yourself, or just send a WhatsApp.</p>
+            <div class="visit-grid">
+                <div class="visit-card reveal">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z" stroke="#a5b4fc" stroke-width="1.6"/><circle cx="11" cy="10" r="2.6" fill="#a855f7"/></svg>
+                    </div>
+                    <h3>Where We Are</h3>
+                    <p>House 69/A, near G P Agrawal<br>Gonda Railway Station Marg, Bargaon<br>Gonda, Uttar Pradesh 271002</p>
+                </div>
+                <div class="visit-card reveal">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 3h4l2 5-2.5 2a12 12 0 005.5 5.5L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z" stroke="#a5b4fc" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Phone &amp; WhatsApp</h3>
+                    <p><a href="tel:+918687566661">+91 86875 66661</a><br><a href="tel:+918601726081">+91 86017 26081</a><br><a href="https://wa.me/918687566661" rel="noopener">Message us on WhatsApp</a></p>
+                </div>
+                <div class="visit-card reveal">
+                    <div class="visit-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#a5b4fc" stroke-width="1.6"/><path d="M11 6.5V11l3.5 2.5" stroke="#a855f7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Site Visits</h3>
+                    <p>We come to your venue<br>anywhere in Gonda and nearby<br>Call ahead during wedding season</p>
+                </div>
+            </div>
+            <div class="visit-actions reveal">
+                <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=M%20L%20Wedding%20Decorator%20%26%20Events%20Gonda%20Gonda" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="eyebrow reveal">FAQ</span>
+            <h2 class="section-headline reveal">Questions? Answers.</h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">How early should I book my date?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>As soon as the date is fixed. Popular muhurat dates in season go first, and once a date is blocked we do not take a second function on it. Send us the date on WhatsApp and we will tell you the same day whether it is open.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Can you work to a fixed budget?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. Tell us your budget before the design, not after. We will show you what is genuinely possible within it and where a little more makes a visible difference — and what is agreed is what you pay.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you handle fireworks as well?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Yes — baraat and reception atishbaazi, timed with the rest of the evening. It can be added to a decoration package or booked on its own for a function someone else is decorating.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">I have a photo of a decoration I liked. Can you make it?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Send it on WhatsApp. We will tell you honestly whether it suits your venue and what it will take to build — and if something similar will look better in your space, we will say that too.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Do you travel outside Gonda city?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Yes, we take functions in the surrounding areas as well. Tell us the venue when you enquire and we will confirm whether the date and the distance work together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+        <div class="cta-bg" aria-hidden="true"></div>
+        <div class="container">
+            <span class="eyebrow reveal">Book With Us</span>
+            <h2 class="section-headline reveal">One Day. <span class="gradient-text">Get It Right.</span></h2>
+            <p class="cta-subtext reveal">Tell us your date. We'll take care of everything the guests will remember.</p>
+            <a href="#consult" class="btn btn-primary btn-large reveal">Check Your Date</a>
+            <p class="cta-phone reveal">Or call Ajay ji directly &middot; <a href="tel:+918687566661">+91 86875 66661</a></p>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="whatsapp-fab" href="https://wa.me/918687566661" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path fill="#fff" d="M16.04 5.33c-5.87 0-10.64 4.77-10.64 10.64 0 1.88.49 3.71 1.43 5.32L5.33 26.7l5.55-1.46a10.6 10.6 0 005.15 1.31h.01c5.86 0 10.63-4.77 10.63-10.64 0-2.84-1.1-5.51-3.11-7.52a10.57 10.57 0 00-7.52-3.06zm0 19.42h-.01a8.8 8.8 0 01-4.49-1.23l-.32-.19-3.33.87.89-3.25-.21-.33a8.77 8.77 0 01-1.35-4.7c0-4.87 3.96-8.84 8.84-8.84 2.36 0 4.58.92 6.25 2.59a8.78 8.78 0 012.58 6.26c0 4.88-3.97 8.82-8.85 8.82zm4.85-6.61c-.27-.13-1.57-.78-1.82-.87-.24-.09-.42-.13-.6.14-.18.26-.69.86-.85 1.04-.15.18-.31.2-.58.07-.26-.13-1.12-.41-2.13-1.32-.79-.7-1.32-1.57-1.48-1.83-.15-.27-.02-.41.12-.54.12-.12.26-.31.4-.47.13-.16.17-.27.26-.44.09-.18.05-.34-.02-.47-.07-.13-.6-1.45-.82-1.98-.22-.52-.44-.45-.6-.46l-.51-.01c-.18 0-.47.07-.71.34-.24.26-.93.91-.93 2.22s.96 2.58 1.09 2.76c.13.18 1.88 2.87 4.55 4.02.64.28 1.13.44 1.52.56.64.2 1.22.17 1.68.11.51-.08 1.57-.64 1.79-1.26.22-.62.22-1.15.16-1.26-.07-.11-.25-.18-.51-.31z"/>
+        </svg>
+    </a>
+
+    <!-- CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
+        <span>Concept Demo</span>
+        <button id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">M L Wedding Decorator &amp; Events Gonda</p>
+            <div class="footer-links">
+                <a href="#services">What We Do</a>
+                <a href="#work">Our Work</a>
+                <a href="#approach">How We Work</a>
+                <a href="#visit">Visit Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="#consult">Check Your Date</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 M L Wedding Decorator &amp; Events Gonda. All rights reserved.</p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo — not the official website of M L Wedding Decorator &amp; Events Gonda.</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script defer>
+    (function () {
+        'use strict';
+
+        var prefersReducedMotion = window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------------- Nav: scrolled state ---------------- */
+        var nav = document.getElementById('site-nav');
+        var backToTop = document.getElementById('back-to-top');
+
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 24);
+            if (backToTop) backToTop.classList.toggle('visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        /* ---------------- Hamburger menu ---------------- */
+        var toggle = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-menu');
+
+        function closeMenu() {
+            if (!toggle || !menu) return;
+            toggle.classList.remove('open');
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        if (toggle && menu) {
+            toggle.addEventListener('click', function () {
+                var isOpen = menu.classList.toggle('open');
+                toggle.classList.toggle('open', isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+            });
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        }
+
+        /* ---------------- Smooth anchor scroll (nav offset) ---------------- */
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var id = link.getAttribute('href');
+                if (!id || id === '#') return;
+                var target = document.querySelector(id);
+                if (!target) return;
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + (window.scrollY || 0) - 66;
+                window.scrollTo({
+                    top: Math.max(top, 0),
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                });
+            });
+        });
+
+        /* ---------------- Back to top ---------------- */
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+            });
+        }
+
+        /* ---------------- FAQ accordion ---------------- */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                if (!answer) return;
+                var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+                // close all others
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (other) {
+                    if (other === btn) return;
+                    other.setAttribute('aria-expanded', 'false');
+                    var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                    if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                });
+
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                answer.style.maxHeight = isOpen ? '0px' : answer.scrollHeight + 'px';
+            });
+        });
+
+        /* ---------------- Concept Demo badge dismiss ---------------- */
+        var badge = document.getElementById('demo-badge');
+        var badgeClose = document.getElementById('demo-badge-close');
+        if (badge && badgeClose) {
+            badgeClose.addEventListener('click', function () {
+                badge.classList.add('hidden');
+            });
+        }
+
+        /* ---------------- Consultation mock form ---------------- */
+        var consultForm = document.getElementById('consult-form');
+        var consultShell = document.getElementById('consult-shell');
+        var successDetail = document.getElementById('consult-success-detail');
+
+        if (consultForm && consultShell) {
+            consultForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var name = document.getElementById('cf-name');
+                var service = document.getElementById('cf-service');
+                var phone = document.getElementById('cf-phone');
+                var time = document.getElementById('cf-time');
+
+                // minimal friendly validation
+                var firstInvalid = null;
+                [name, service, phone, time].forEach(function (field) {
+                    if (!field) return;
+                    var ok = field.value && field.value.trim().length > 0;
+                    if (field === phone && ok) {
+                        ok = /^[0-9+\s-]{10,14}$/.test(field.value.trim());
+                    }
+                    field.style.borderColor = ok ? '' : 'rgba(230, 90, 120, 0.75)';
+                    if (!ok && !firstInvalid) firstInvalid = field;
+                });
+                if (firstInvalid) { firstInvalid.focus(); return; }
+
+                if (successDetail && name && time) {
+                    successDetail.textContent = 'Thank you, ' + name.value.trim().split(' ')[0] +
+                        '. We’ll check availability for ' + service.value +
+                        ' on ' + time.value + ' and reply on WhatsApp shortly.';
+                }
+                consultShell.classList.add('done');
+            });
+        }
+
+        /* ---------------- GSAP scroll reveals (guarded enhancement) ----------
+           Everything below runs only if GSAP actually loaded from the CDN.
+           If it didn't, .reveal elements simply stay visible (opacity: 1). */
+        function initMotion() {
+            if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+            if (prefersReducedMotion) return;
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                gsap.fromTo(el,
+                    { opacity: 0, y: 34 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.9,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 88%',
+                            once: true
+                        }
+                    }
+                );
+            });
+
+            // Signature: gentle mouse parallax on the ambient orbs
+            var orbs = document.querySelectorAll('.orb');
+            if (orbs.length && window.matchMedia('(pointer: fine)').matches) {
+                var quickSetters = [];
+                orbs.forEach(function (orb, i) {
+                    quickSetters.push({
+                        x: gsap.quickTo(orb, 'x', { duration: 1.6, ease: 'power2.out' }),
+                        y: gsap.quickTo(orb, 'y', { duration: 1.6, ease: 'power2.out' }),
+                        depth: (i + 1) * 14
+                    });
+                });
+                window.addEventListener('mousemove', function (e) {
+                    var relX = (e.clientX / window.innerWidth) - 0.5;
+                    var relY = (e.clientY / window.innerHeight) - 0.5;
+                    quickSetters.forEach(function (q) {
+                        q.x(relX * q.depth);
+                        q.y(relY * q.depth);
+                    });
+                }, { passive: true });
+            }
+        }
+
+        /* ---------------- CountUp counters (guarded) ---------------- */
+        function initCounters() {
+            if (prefersReducedMotion) return;
+            var CountUpCtor = window.countUp && window.countUp.CountUp;
+            if (!CountUpCtor) return;
+
+            document.querySelectorAll('[data-countup]').forEach(function (el) {
+                var end = parseFloat(el.getAttribute('data-countup'));
+                if (isNaN(end)) return;
+                var started = false;
+
+                function start() {
+                    if (started) return;
+                    started = true;
+                    var counter = new CountUpCtor(el, end, { duration: 2, useEasing: true });
+                    if (!counter.error) counter.start();
+                }
+
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) { start(); io.disconnect(); }
+                        });
+                    }, { threshold: 0.4 });
+                    io.observe(el);
+                } else {
+                    start();
+                }
+            });
+        }
+
+        /* Deferred scripts execute in order, so GSAP/CountUp (if they loaded
+           successfully) are already available here. Guards above cover
+           blocked CDNs, offline demos, and reduced-motion users. */
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () {
+                initMotion();
+                initCounters();
+            });
+        } else {
+            initMotion();
+            initCounters();
+        }
+    })();
+    </script>
+</body>
+</html>

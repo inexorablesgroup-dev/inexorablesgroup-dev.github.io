@@ -1,0 +1,1578 @@
+<!-- CUSTOMIZED for Om Medical System, Gonda (healthcare vertical · B2B pathology equipment distributor)
+No phone number is published for this business anywhere — WhatsApp float and tel:/wa.me links
+have been removed rather than filled with placeholders. Add them once the mobile is collected.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Om Medical System — Pathology & Diagnostic Equipment Distributor, Gonda</title>
+    <meta name="description" content="Om Medical System, Gonda. A house of pathology solutions — analyzers, reagents, rapid test cards and lab chemicals for labs, nursing homes and hospitals across the Gonda region. Concept demo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   OM MEDICAL SYSTEM — Deep Teal / Soft Gold / Emerald
+   Healthcare vertical · single-file concept demo
+   ========================================================================== */
+
+/* ---------- RESET & TOKENS ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg-deep: #062a2a;
+    --bg-mid: #083232;
+    --bg-rich: #0a3d3d;
+    --ink: #f4f1e8;
+    --ink-soft: #a8bdb5;
+    --gold: #d8b56a;
+    --gold-soft: #e9d3a3;
+    --emerald: #2dd4a0;
+    --emerald-deep: #0e9f76;
+    --line: rgba(244, 241, 232, 0.08);
+    --glass: rgba(6, 42, 42, 0.72);
+    --card: rgba(244, 241, 232, 0.03);
+    --card-line: rgba(244, 241, 232, 0.06);
+    --radius: 20px;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--ink); background: var(--bg-deep); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-weight: 600; line-height: 1.12; color: var(--ink); letter-spacing: -0.01em; }
+
+.section-headline { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 20px; text-align: center; }
+
+.section-kicker { display: block; text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--emerald); margin-bottom: 18px; }
+
+.section-sub { text-align: center; color: var(--ink-soft); max-width: 620px; margin: 0 auto 56px; font-size: clamp(1rem, 1.8vw, 1.125rem); }
+
+.gradient-text {
+    background: linear-gradient(120deg, var(--gold) 0%, var(--gold-soft) 30%, var(--emerald) 70%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 220% auto;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+0%, 100% { background-position: 0% center; }
+50% { background-position: 100% center; }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+.skip-link { position: absolute; top: -48px; left: 16px; z-index: 2000; background: var(--gold); color: #062a2a; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: top 0.3s ease; }
+
+.skip-link:focus { top: 12px; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 14px 32px;
+    border-radius: 980px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary { background: linear-gradient(135deg, var(--gold), #c39a4b); color: #062421; box-shadow: 0 0 30px rgba(216, 181, 106, 0.22); }
+
+.btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 40px rgba(216, 181, 106, 0.35); }
+
+.btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid rgba(244, 241, 232, 0.24); }
+
+.btn-secondary:hover { border-color: var(--emerald); background: rgba(45, 212, 160, 0.06); transform: translateY(-2px); }
+
+.btn-large { padding: 18px 44px; font-size: 1.1rem; }
+
+/* ---------- NAVIGATION ---------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(6, 42, 42, 0.62);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav.scrolled { background: rgba(5, 32, 32, 0.92); box-shadow: 0 1px 30px rgba(45, 212, 160, 0.08); }
+
+.nav-container { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 68px; }
+
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+.nav-logo-mark { width: 38px; height: 38px; flex-shrink: 0; }
+
+.nav-logo-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); letter-spacing: 0.01em; line-height: 1.1; }
+
+.nav-logo-name small { display: block; font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+
+.nav-links { display: flex; align-items: center; gap: 30px; }
+
+.nav-links a { font-size: 0.9rem; color: var(--ink-soft); text-decoration: none; padding: 8px 2px; transition: color 0.3s; }
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+    background: linear-gradient(135deg, var(--gold), #c39a4b);
+    color: #062421 !important;
+    padding: 10px 22px !important;
+    border-radius: 980px;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(216, 181, 106, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover { box-shadow: 0 0 30px rgba(216, 181, 106, 0.4); transform: translateY(-1px); }
+
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 48px; height: 48px; padding: 12px; background: transparent; border: none; cursor: pointer; }
+
+.hamburger-line { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform 0.35s var(--ease-out), opacity 0.25s ease; }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- AMBIENT ORBS ---------- */
+.orb { position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; opacity: 0.55; animation: orbDrift 22s ease-in-out infinite alternate; }
+
+.orb-1 { width: 480px; height: 480px; top: -10%; left: -12%; background: radial-gradient(circle, rgba(45, 212, 160, 0.16) 0%, transparent 70%); }
+
+.orb-2 { width: 420px; height: 420px; top: 44%; right: -14%; background: radial-gradient(circle, rgba(216, 181, 106, 0.13) 0%, transparent 70%); animation-delay: -8s; }
+
+.orb-3 { width: 380px; height: 380px; bottom: -12%; left: 22%; background: radial-gradient(circle, rgba(14, 159, 118, 0.14) 0%, transparent 70%); animation-delay: -15s; }
+
+@keyframes orbDrift {
+0% { transform: translate(0, 0) scale(1); }
+50% { transform: translate(40px, -30px) scale(1.08); }
+100% { transform: translate(-30px, 35px) scale(0.96); }
+}
+
+main { position: relative; z-index: 1; }
+
+/* ---------- HERO ---------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 130px 24px 90px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 100%);
+}
+
+/* Full-bleed photo layer — CSS background, so a failed load simply leaves the
+   brand gradient behind it. Slow Ken Burns drift; disabled for reduced motion. */
+.hero-bg {
+    position: absolute;
+    inset: -5%;
+    z-index: 0;
+    background-image: url("https://images.pexels.com/photos/8851456/pexels-photo-8851456.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center 38%;
+    background-repeat: no-repeat;
+    filter: saturate(0.78) contrast(1.04) brightness(0.92);
+    opacity: 0.5;
+    animation: kenBurns 30s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes kenBurns {
+0% { transform: scale(1) translate3d(0, 0, 0); }
+100% { transform: scale(1.09) translate3d(-1.2%, -1.6%, 0); }
+}
+
+/* Scrim: brand tint over the photo so headline contrast stays flawless */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse 70% 55% at 50% 6%, rgba(45, 212, 160, 0.12) 0%, rgba(216, 181, 106, 0.05) 45%, transparent 72%),
+        linear-gradient(180deg, rgba(6, 42, 42, 0.90) 0%, rgba(6, 42, 42, 0.72) 38%, rgba(6, 42, 42, 0.86) 72%, rgba(8, 50, 50, 0.99) 100%);
+    pointer-events: none;
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    border: 1px solid rgba(216, 181, 106, 0.32);
+    padding: 9px 22px;
+    border-radius: 980px;
+    margin-bottom: 30px;
+    background: rgba(216, 181, 106, 0.06);
+}
+
+.hero-headline { font-size: clamp(2.6rem, 7.5vw, 5.4rem); margin-bottom: 10px; letter-spacing: -0.02em; }
+
+/* Signature: animated ECG pulse line under the headline */
+.ecg-wrap { max-width: 560px; margin: 0 auto 26px; position: relative; }
+
+.ecg-line { width: 100%; height: auto; display: block; overflow: visible; }
+
+.ecg-path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ecgDraw 3.8s linear infinite; filter: drop-shadow(0 0 6px rgba(45, 212, 160, 0.55)); }
+
+@keyframes ecgDraw {
+0% { stroke-dashoffset: 1; opacity: 0; }
+6% { opacity: 1; }
+62% { stroke-dashoffset: 0; opacity: 1; }
+82% { stroke-dashoffset: 0; opacity: 0.15; }
+100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.hero-subtext { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--ink-soft); max-width: 640px; margin: 0 auto 44px; }
+
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- STORY ---------- */
+.story { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.story::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 45% at 18% 40%, rgba(45, 212, 160, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.story .container { position: relative; z-index: 1; max-width: 780px; }
+
+.story-lines p { font-size: clamp(1.1rem, 2.2vw, 1.45rem); color: var(--ink-soft); margin-bottom: 26px; line-height: 1.55; text-align: center; transition: color 0.3s ease, transform 0.3s ease; }
+
+.story-lines p strong { color: var(--ink); font-weight: 600; }
+
+.story-lines p:hover { color: var(--ink); transform: translateX(6px); }
+
+/* Story photo — gradient-backed frame; image is an enhancement, not a dependency */
+.story-media {
+    margin: 0 0 52px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 3 / 2;
+    background: linear-gradient(135deg, rgba(45, 212, 160, 0.16), rgba(216, 181, 106, 0.10)), var(--bg-rich);
+    border: 1px solid var(--card-line);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
+}
+
+.story-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.8) contrast(1.03);
+}
+
+.story-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 42, 42, 0.18) 0%, transparent 40%, rgba(6, 42, 42, 0.55) 100%);
+    pointer-events: none;
+}
+
+/* ---------- FACILITY STRIP ---------- */
+.facility { padding: 0 24px 130px; background: var(--bg-deep); position: relative; }
+
+.facility .container { position: relative; z-index: 1; }
+
+.facility-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+.facility-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(140deg, rgba(45, 212, 160, 0.14), rgba(216, 181, 106, 0.09)), var(--bg-rich);
+    border: 1px solid var(--card-line);
+    transition: transform 0.45s var(--ease-out), border-color 0.4s ease, box-shadow 0.45s ease;
+}
+
+.facility-item:hover { transform: translateY(-4px); border-color: rgba(45, 212, 160, 0.3); box-shadow: 0 20px 46px rgba(0, 0, 0, 0.4); }
+
+.facility-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.78) contrast(1.03);
+    transition: transform 0.6s var(--ease-out);
+}
+
+.facility-item:hover img { transform: scale(1.06); }
+
+.facility-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 34px 20px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    background: linear-gradient(180deg, transparent, rgba(4, 29, 29, 0.88));
+}
+
+/* ---------- CREDENTIALS / TRUST STRIP ---------- */
+.credentials { padding: 46px 24px 58px; background: var(--bg-rich); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.credentials .container { max-width: 1000px; }
+
+.cred-caption { text-align: center; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 26px; }
+
+.cred-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 14px; }
+
+.cred-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 980px;
+    border: 1px solid rgba(216, 181, 106, 0.22);
+    background: rgba(244, 241, 232, 0.03);
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    filter: grayscale(1);
+    opacity: 0.82;
+    transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, transform 0.4s var(--ease-out);
+}
+
+.cred-item:hover { filter: grayscale(0); opacity: 1; border-color: rgba(45, 212, 160, 0.4); transform: translateY(-2px); }
+
+.cred-item strong { color: var(--ink); font-weight: 600; }
+
+.cred-item svg { flex-shrink: 0; }
+
+/* ---------- DEPARTMENTS GRID ---------- */
+.departments { padding: 130px 24px; background: var(--bg-deep); position: relative; }
+
+.departments::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(216, 181, 106, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.departments .container { position: relative; z-index: 1; }
+
+.dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+.dept-card {
+    background: var(--card);
+    border: 1px solid var(--card-line);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.45s var(--ease-out), box-shadow 0.45s ease, border-color 0.4s ease, background 0.4s ease;
+}
+
+.dept-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(45, 212, 160, 0.07) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
+
+.dept-card:hover { transform: translateY(-4px) scale(1.02); border-color: rgba(45, 212, 160, 0.28); background: rgba(244, 241, 232, 0.05); box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35), 0 0 30px rgba(45, 212, 160, 0.07); }
+
+.dept-card:hover::after { opacity: 1; }
+
+.dept-icon { width: 52px; height: 52px; margin-bottom: 20px; display: block; }
+
+.dept-card h3 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 600; }
+
+.dept-card p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ---------- STATS BAND ---------- */
+.stats { padding: 110px 24px; background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-rich) 100%); position: relative; }
+
+.stats::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 40%, rgba(216, 181, 106, 0.06) 0%, transparent 65%); pointer-events: none; }
+
+.stats-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; text-align: center; }
+
+.stat { padding: 36px 16px; border-radius: var(--radius); border: 1px solid var(--card-line); background: var(--card); transition: transform 0.4s var(--ease-out), border-color 0.4s ease; }
+
+.stat:hover { transform: translateY(-3px); border-color: rgba(216, 181, 106, 0.3); }
+
+.stat-value { display: block; font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 700; color: var(--gold); line-height: 1.1; margin-bottom: 8px; }
+
+.stat-label { display: block; font-size: 0.85rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+
+/* ---------- SIGNATURE: CARE PATHWAY ---------- */
+.pathway { padding: 130px 24px; background: var(--bg-rich); position: relative; }
+
+.pathway::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 50% at 20% 80%, rgba(45, 212, 160, 0.07) 0%, transparent 60%); pointer-events: none; }
+
+.pathway .container { position: relative; z-index: 1; }
+
+.pathway-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+
+.pathway-steps::before { content: ''; position: absolute; top: 34px; left: 8%; right: 8%; height: 1px; background: linear-gradient(90deg, transparent, rgba(216, 181, 106, 0.35), rgba(45, 212, 160, 0.35), transparent); }
+
+.path-step { text-align: center; padding: 0 12px; position: relative; }
+
+.path-dot {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-deep);
+    border: 1px solid rgba(216, 181, 106, 0.35);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gold);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.path-step:hover .path-dot { transform: translateY(-4px) scale(1.06); border-color: var(--emerald); box-shadow: 0 0 30px rgba(45, 212, 160, 0.25); }
+
+.path-step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+
+.path-step p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ---------- PROMISE ---------- */
+.promise { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.promise::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 45% at 85% 20%, rgba(216, 181, 106, 0.05) 0%, transparent 60%); pointer-events: none; }
+
+.promise .container { position: relative; z-index: 1; }
+
+.promise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 860px; margin: 0 auto; }
+
+.promise-card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 34px 30px; transition: transform 0.45s var(--ease-out), border-color 0.4s ease, background 0.4s ease; }
+
+.promise-card:hover { transform: translateY(-3px) scale(1.02); border-color: rgba(216, 181, 106, 0.28); background: rgba(244, 241, 232, 0.05); }
+
+.promise-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--gold-soft); }
+
+.promise-card p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ---------- AUTOMATION: BOOK APPOINTMENT MOCK ---------- */
+.booking { padding: 130px 24px; background: var(--bg-deep); position: relative; }
+
+.booking::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(45, 212, 160, 0.08) 0%, transparent 42%),
+        radial-gradient(circle at 15% 85%, rgba(216, 181, 106, 0.06) 0%, transparent 42%);
+    pointer-events: none;
+}
+
+.booking .container { position: relative; z-index: 1; }
+
+.booking-shell {
+    max-width: 560px;
+    margin: 0 auto;
+    background: rgba(8, 50, 50, 0.55);
+    border: 1px solid rgba(45, 212, 160, 0.16);
+    border-radius: 26px;
+    padding: clamp(28px, 5vw, 48px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-shell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), var(--emerald), transparent); }
+
+.form-row { margin-bottom: 20px; text-align: left; }
+
+.form-row label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 8px; }
+
+.form-row input,
+.form-row select {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    background: rgba(6, 42, 42, 0.7);
+    border: 1px solid rgba(244, 241, 232, 0.14);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-row select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d8b56a' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.form-row input::placeholder { color: rgba(168, 189, 181, 0.55); }
+
+.form-row input:focus,
+.form-row select:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(45, 212, 160, 0.14); }
+
+.form-row input[type="date"] { color-scheme: dark; }
+
+.booking-submit { width: 100%; margin-top: 6px; }
+
+.booking-note { margin-top: 16px; font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+
+/* success state */
+.booking-success { display: none; text-align: center; padding: 12px 0; }
+
+.booking-success.visible { display: block; animation: successIn 0.6s var(--ease-out) both; }
+
+@keyframes successIn {
+from { opacity: 0; transform: translateY(16px) scale(0.97); }
+to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.success-ring {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(45, 212, 160, 0.16) 0%, transparent 70%);
+    border: 1.5px solid var(--emerald);
+    box-shadow: 0 0 40px rgba(45, 212, 160, 0.25);
+}
+
+.success-check { stroke-dasharray: 60; stroke-dashoffset: 60; animation: checkDraw 0.7s 0.25s var(--ease-out) forwards; }
+
+@keyframes checkDraw {
+to { stroke-dashoffset: 0; }
+}
+
+.booking-success h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--ink); }
+
+.booking-success p { color: var(--ink-soft); font-size: 0.98rem; max-width: 400px; margin: 0 auto 22px; }
+
+.booking-success .demo-line { display: inline-block; font-size: 0.8rem; color: var(--gold-soft); border: 1px dashed rgba(216, 181, 106, 0.4); border-radius: 10px; padding: 10px 16px; margin-bottom: 24px; }
+
+/* Reports on WhatsApp strip */
+.wa-strip {
+    max-width: 760px;
+    margin: 56px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(120deg, rgba(37, 211, 102, 0.09), rgba(216, 181, 106, 0.06));
+    border: 1px solid rgba(37, 211, 102, 0.22);
+    border-radius: var(--radius);
+    padding: 26px 30px;
+}
+
+.wa-strip-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(37, 211, 102, 0.35); }
+
+.wa-strip h3 { font-size: 1.15rem; margin-bottom: 4px; }
+
+.wa-strip p { font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---------- VISIT / CONTACT ---------- */
+.visit { padding: 130px 24px; background: var(--bg-rich); position: relative; }
+
+.visit::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 45% at 50% 100%, rgba(45, 212, 160, 0.06) 0%, transparent 60%); pointer-events: none; }
+
+.visit .container { position: relative; z-index: 1; }
+
+.visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 900px; margin: 0 auto 40px; }
+
+.visit-card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 30px 26px; text-align: center; transition: transform 0.4s var(--ease-out), border-color 0.4s ease; }
+
+.visit-card:hover { transform: translateY(-3px); border-color: rgba(45, 212, 160, 0.28); }
+
+.visit-card .visit-icon { width: 40px; height: 40px; margin: 0 auto 16px; display: block; }
+
+.visit-card h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--gold-soft); }
+
+.visit-card p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
+
+.visit-card a { color: var(--emerald); text-decoration: none; font-weight: 500; }
+
+.visit-card a:hover { text-decoration: underline; }
+
+.visit-actions { text-align: center; }
+
+/* ---------- FAQ ---------- */
+.faq { padding: 130px 24px; background: var(--bg-mid); position: relative; }
+
+.faq .container { max-width: 760px; position: relative; z-index: 1; }
+
+.faq-item { border-bottom: 1px solid var(--line); }
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 24px 4px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: var(--ink);
+    min-height: 56px;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover { color: var(--gold-soft); }
+
+.faq-question::after { content: '+'; flex-shrink: 0; font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 300; color: var(--gold); transition: transform 0.35s var(--ease-out); }
+
+.faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+
+/* No-JS: answers stay readable; JS collapses them into an accordion */
+.js .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+
+.faq-answer p { padding: 0 4px 24px; color: var(--ink-soft); font-size: 0.96rem; max-width: 640px; }
+
+/* ---------- FINAL CTA ---------- */
+.final-cta { padding: 150px 24px; background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 100%); text-align: center; position: relative; overflow: hidden; }
+
+.final-cta::before { content: ''; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(216, 181, 106, 0.09) 0%, transparent 65%); pointer-events: none; }
+
+.final-cta .container { position: relative; z-index: 1; }
+
+.cta-subtext { color: var(--ink-soft); font-size: 1.1rem; margin-bottom: 40px; }
+
+/* ---------- FOOTER ---------- */
+.footer { padding: 70px 24px 46px; background: #041d1d; border-top: 1px solid var(--line); text-align: center; }
+
+.footer-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 26px; margin-bottom: 28px; }
+
+.footer-links a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; padding: 6px 2px; transition: color 0.3s; }
+
+.footer-links a:hover { color: var(--gold-soft); }
+
+.footer-copy { font-size: 0.82rem; color: rgba(168, 189, 181, 0.7); margin-bottom: 14px; }
+
+.footer-demo-notice { font-size: 0.78rem; color: rgba(168, 189, 181, 0.55); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+.footer-demo-notice a { color: rgba(216, 181, 106, 0.75); text-decoration: none; }
+
+/* ---------- FLOATING WHATSAPP ---------- */
+.wa-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 1100;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5);
+    animation: waPulse 2.6s ease-out infinite;
+    transition: transform 0.35s var(--ease-out);
+}
+
+.wa-float:hover { transform: translateY(-3px) scale(1.06); }
+
+@keyframes waPulse {
+0% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.45); }
+70% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+100% { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ---------- CONCEPT DEMO BADGE ---------- */
+.demo-badge {
+    position: fixed;
+    bottom: 22px;
+    left: 22px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px 9px 16px;
+    border-radius: 980px;
+    background: rgba(6, 42, 42, 0.72);
+    border: 1px solid rgba(216, 181, 106, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+}
+
+.demo-badge.hidden { display: none; }
+
+.demo-badge-close {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(244, 241, 232, 0.1);
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.demo-badge-close:hover { background: rgba(244, 241, 232, 0.22); }
+
+/* ---------- BACK TO TOP ---------- */
+.back-to-top {
+    position: fixed;
+    bottom: 94px;
+    right: 28px;
+    z-index: 1050;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(216, 181, 106, 0.35);
+    background: rgba(6, 42, 42, 0.8);
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.35s var(--ease-out);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+.back-to-top:hover { transform: translateY(-3px); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+.dept-grid { grid-template-columns: repeat(2, 1fr); }
+.stats-grid { grid-template-columns: repeat(2, 1fr); }
+.pathway-steps { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
+.pathway-steps::before { display: none; }
+.visit-grid { grid-template-columns: 1fr; max-width: 480px; }
+}
+
+@media (max-width: 760px) {
+    /* No-JS mobile: hide nav chrome entirely — the page is one scrollable column.
+       With JS, the hamburger appears and drives the collapsible panel. */
+.nav-links { display: none; }
+.js .nav-hamburger { display: flex; }
+    .js .nav-links {
+        display: flex;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(5, 30, 30, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--line);
+        padding: 12px 24px 24px;
+        transform: translateY(-12px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s var(--ease-out), opacity 0.35s ease, visibility 0.35s;
+    }
+.js .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.nav-links a { padding: 16px 4px; font-size: 1.05rem; border-bottom: 1px solid rgba(244, 241, 232, 0.05); }
+.nav-cta { margin-top: 16px; text-align: center; border-bottom: none !important; }
+.promise-grid { grid-template-columns: 1fr; }
+.wa-strip { flex-direction: column; text-align: center; padding: 30px 24px; }
+.facility-grid { grid-template-columns: repeat(2, 1fr); }
+.facility-grid .facility-item:last-child { grid-column: 1 / -1; aspect-ratio: 16 / 7; }
+.facility { padding-bottom: 96px; }
+}
+
+@media (max-width: 560px) {
+.dept-grid { grid-template-columns: 1fr; }
+.stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.stat { padding: 28px 12px; }
+.pathway-steps { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+.hero { padding-top: 110px; }
+.facility-grid { grid-template-columns: 1fr; gap: 14px; }
+.facility-grid .facility-item:last-child { aspect-ratio: 4 / 3; }
+.story-media { aspect-ratio: 4 / 3; margin-bottom: 40px; }
+.cred-item { font-size: 0.8rem; padding: 10px 16px; }
+.hero-ctas .btn { width: 100%; max-width: 340px; }
+.demo-badge { bottom: 16px; left: 12px; font-size: 0.7rem; padding: 8px 8px 8px 13px; }
+.wa-float { bottom: 16px; right: 16px; }
+.back-to-top { bottom: 86px; right: 20px; }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .orb,
+    .ecg-path,
+    .wa-float,
+    .hero-bg,
+.gradient-text { animation: none !important; }
+.hero-bg { transform: none !important; }
+.facility-item:hover img { transform: none; }
+.ecg-path { stroke-dashoffset: 0; opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" aria-label="Om Medical System — home">
+                <svg class="nav-logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18.5" stroke="#d8b56a" stroke-width="1.4"/>
+                    <path d="M6 22h7l2.6-6.5 3.8 10 3.4-8 2 4.5H34" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-logo-name">Om Medical System<small>Pathology Solutions</small></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#departments">What We Supply</a>
+                <a href="#pathway">How We Work</a>
+                <a href="#visit">Find Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="#book" class="nav-cta">Request a Quote</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge">Om Medical System · Gonda</p>
+            <h1 class="hero-headline" data-reveal>Your lab runs.<br><span class="gradient-text">We keep it running.</span></h1>
+            <div class="ecg-wrap" aria-hidden="true">
+                <svg class="ecg-line" viewBox="0 0 560 72" fill="none" preserveAspectRatio="none">
+                    <path class="ecg-path" pathLength="1"
+                        d="M0 36 H120 l10 0 6-12 8 26 8-40 8 44 7-18 5 0 H300 l8 0 6-10 7 22 8-36 8 38 6-14 5 0 H560"
+                        stroke="url(#ecgGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="ecgGrad" x1="0" y1="0" x2="560" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#d8b56a"/>
+                            <stop offset="0.5" stop-color="#2dd4a0"/>
+                            <stop offset="1" stop-color="#d8b56a"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p class="hero-subtext" data-reveal>A house of pathology solutions for the Gonda region — analyzers, reagents, rapid test cards and lab chemicals, supplied and serviced from our own premises on Bahraich Road.</p>
+            <div class="hero-ctas" data-reveal>
+                <a href="#book" class="btn btn-primary">Request a Quote</a>
+                <a href="#departments" class="btn btn-secondary">See What We Supply</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" aria-labelledby="story-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Story</span>
+            <h2 class="section-headline" id="story-headline" data-reveal>A supplier who picks up <span class="gradient-text">when the machine stops.</span></h2>
+            <figure class="story-media" data-reveal>
+                <img src="https://images.pexels.com/photos/8531359/pexels-photo-8531359.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                     alt="Laboratory technician working with reagents and test tubes at the bench"
+                     loading="lazy" decoding="async" onerror="this.style.display='none'">
+            </figure>
+            <div class="story-lines">
+                <p data-reveal>A lab is only as good as the day its analyzer stays up.</p>
+                <p data-reveal>When a reagent runs out mid-week, or a calibration drifts on a Sunday, distance is the enemy — and Lucknow is four hours away.</p>
+                <p data-reveal><strong>Om Medical System was built in Gonda, for Gonda.</strong></p>
+                <p data-reveal>Since 2016 we have supplied and stood behind the equipment that district labs, nursing homes and hospitals depend on. The machine, the reagents, and the person who answers — from one address on Bahraich Road.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPARTMENTS -->
+    <section class="departments" id="departments" aria-labelledby="dept-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>What We Supply</span>
+            <h2 class="section-headline" id="dept-headline" data-reveal>One supplier. <span class="gradient-text">The whole lab.</span></h2>
+            <p class="section-sub" data-reveal>From the analyzer on the bench to the reagent pack that keeps it working — sourced, installed and serviced by one team.</p>
+            <div class="dept-grid">
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M15 27h6l3-8 5 14 4-10 2 4h6" stroke="#2dd4a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Biochemistry Analyzers</h3>
+                    <p>Semi-auto and fully automated systems for the liver, kidney, lipid and sugar profiles that make up most of a district lab's daily workload.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M26 38c-6-4.5-11-8.6-11-13.6 0-3.2 2.5-5.4 5.4-5.4 2.2 0 4.2 1.3 5.6 3.4 1.4-2.1 3.4-3.4 5.6-3.4 2.9 0 5.4 2.2 5.4 5.4 0 5-5 9.1-11 13.6Z" stroke="#d8b56a" stroke-width="1.8" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Hematology Analyzers</h3>
+                    <p>Cell counters that turn a CBC queue into a steady throughput — chosen for the sample volumes a Gonda lab actually sees, not a metro's.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <circle cx="26" cy="21" r="6.5" stroke="#2dd4a0" stroke-width="1.8"/>
+                        <path d="M26 27.5v8M22 32h8" stroke="#d8b56a" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Blood Gas &amp; Coagulation</h3>
+                    <p>Blood gas analyzers and coagulometers for critical-care and pre-surgical work, where a delayed result changes the decision.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M22 14v9a4 4 0 0 0 8 0v-9M26 27v6a5 5 0 0 0 5 5h2" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="35" cy="38" r="3" stroke="#d8b56a" stroke-width="1.8"/>
+                    </svg>
+                    <h3>Ultrasound &amp; Imaging</h3>
+                    <p>Ultrasound systems for clinics and nursing homes, supplied with installation support and hands-on orientation for your operator.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M23 14h6M24.5 14v10l-7 12.5A3 3 0 0 0 20 41h12a3 3 0 0 0 2.5-4.5L27.5 24V14" stroke="#d8b56a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.5 33h9" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Reagents &amp; Consumables</h3>
+                    <p>Biochemistry reagents, rapid test cards and lab chemicals held in stock — so a re-order is a short trip, not a week's wait.</p>
+                </article>
+                <article class="dept-card" data-reveal>
+                    <svg class="dept-icon" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <circle cx="26" cy="26" r="24" stroke="rgba(216,181,106,0.35)" stroke-width="1.2"/>
+                        <path d="M26 15v22M15 26h22" stroke="#2dd4a0" stroke-width="2.6" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Installation &amp; Service</h3>
+                    <p>Commissioning, calibration guidance and after-sales support from a team based in Gonda — not a helpline in another state.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITY / WHERE OUR EQUIPMENT GOES -->
+    <section class="facility" aria-labelledby="facility-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Where It Ends Up</span>
+            <h2 class="section-headline" id="facility-headline" data-reveal>The benches <span class="gradient-text">we supply.</span></h2>
+            <p class="section-sub" data-reveal>Labs, imaging rooms, nursing homes and hospitals across Gonda and the districts around it.</p>
+            <div class="facility-grid">
+                <figure class="facility-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/37654664/pexels-photo-37654664.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Brightly lit hospital theatre fitted with modern medical technology"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="facility-caption">Hospitals &amp; nursing homes</figcaption>
+                </figure>
+                <figure class="facility-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/15277947/pexels-photo-15277947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Clinician with a patient beside a diagnostic imaging machine"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="facility-caption">Imaging &amp; ultrasound rooms</figcaption>
+                </figure>
+                <figure class="facility-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/7108324/pexels-photo-7108324.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Modern clinic interior with teal accents"
+                         loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="facility-caption">Diagnostic centres &amp; nursing homes</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAND — verified facts only (est. 2016, 11–25 team); remaining tiles qualitative -->
+    <section class="stats" aria-label="Om Medical System at a glance">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat" data-reveal>
+                    <span class="stat-value">2016</span>
+                    <span class="stat-label">Supplying labs since</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value"><span data-countup="9">9</span></span>
+                    <span class="stat-label">Years in the trade</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value">11&ndash;25</span>
+                    <span class="stat-label">People on the team</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-value">In Stock</span>
+                    <span class="stat-label">Reagents &amp; consumables</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS STRIP — only facts verifiable from public records -->
+    <section class="credentials" aria-label="Registrations and standing">
+        <div class="container">
+            <p class="cred-caption">On record</p>
+            <div class="cred-grid">
+                <div class="cred-item" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2l6.5 2.8v4.4c0 4-2.8 7.6-6.5 8.8-3.7-1.2-6.5-4.8-6.5-8.8V4.8L10 2Z" stroke="#d8b56a" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" stroke="#2dd4a0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>GST registered</strong> in Uttar Pradesh since 2017</span>
+                </div>
+                <div class="cred-item" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.5" stroke="#d8b56a" stroke-width="1.4"/><path d="M10 5.5V10l3 2" stroke="#2dd4a0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span><strong>Established 2016</strong> · nine years in the trade</span>
+                </div>
+                <div class="cred-item" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 17V7.5L10 3l7 4.5V17" stroke="#d8b56a" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 17v-5h4v5" stroke="#2dd4a0" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    <span><strong>Own premises</strong> — Om Tower, Bahraich Road</span>
+                </div>
+                <div class="cred-item" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="14" height="11" rx="2" stroke="#d8b56a" stroke-width="1.4"/><path d="M6.5 9h7M6.5 12h4" stroke="#2dd4a0" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span><strong>Proprietorship</strong> · retailer &amp; wholesale distributor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: CARE PATHWAY -->
+    <section class="pathway" id="pathway" aria-labelledby="pathway-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>How We Work</span>
+            <h2 class="section-headline" id="pathway-headline" data-reveal>From enquiry to installed, <span class="gradient-text">without the guesswork.</span></h2>
+            <p class="section-sub" data-reveal>Buying an analyzer is a serious decision. We make the steps to it plain.</p>
+            <div class="pathway-steps">
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">01</div>
+                    <h3>Tell Us the Workload</h3>
+                    <p>Tests per day, the panels you run, the space you have. The right machine follows from the honest numbers.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">02</div>
+                    <h3>See It Demonstrated</h3>
+                    <p>A written quote with the running cost per test, and a demonstration before a single rupee changes hands.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">03</div>
+                    <h3>Installed &amp; Calibrated</h3>
+                    <p>Delivered, commissioned and calibrated at your bench, with your technician trained on it before we leave.</p>
+                </div>
+                <div class="path-step" data-reveal>
+                    <div class="path-dot" aria-hidden="true">04</div>
+                    <h3>Stocked &amp; Serviced</h3>
+                    <p>Reagents kept flowing and service handled locally. The relationship starts at installation — it doesn't end there.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR PROMISE -->
+    <section class="promise" aria-labelledby="promise-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Promise</span>
+            <h2 class="section-headline" id="promise-headline" data-reveal>Why labs <span class="gradient-text">stay with us.</span></h2>
+            <div class="promise-grid">
+                <div class="promise-card" data-reveal>
+                    <h3>The right machine, not the big one.</h3>
+                    <p>If your daily count doesn't justify the larger analyzer, we will say so. Selling you capacity you never use costs us the next order.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Running cost, quoted upfront.</h3>
+                    <p>The purchase price is the easy number. We put the cost per test and the reagent rates on paper before you decide.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Service that is local.</h3>
+                    <p>Our team and our stock are both in Gonda, at Om Tower. Support means someone who can reach your bench, not a ticket number.</p>
+                </div>
+                <div class="promise-card" data-reveal>
+                    <h3>Stock that anticipates you.</h3>
+                    <p>Reagents, rapid test cards and chemicals held on the shelf, so a mid-week shortage is a phone call — not a shut lab.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: BOOK APPOINTMENT -->
+    <section class="booking" id="book" aria-labelledby="booking-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Request a Quote</span>
+            <h2 class="section-headline" id="booking-headline" data-reveal>Tell us what your lab needs. <span class="gradient-text">We'll price it.</span></h2>
+            <p class="section-sub" data-reveal>Equipment enquiry or a reagent re-order — send it here and our team responds with rates and availability.</p>
+
+            <div class="booking-shell" data-reveal>
+                <form id="booking-form" novalidate>
+                    <div class="form-row">
+                        <label for="bk-name">Lab or hospital name</label>
+                        <input type="text" id="bk-name" name="name" placeholder="Your lab, clinic or hospital" autocomplete="organization" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-dept">What do you need?</label>
+                        <select id="bk-dept" name="department" required>
+                            <option value="" selected disabled>Choose a category</option>
+                            <option>Biochemistry Analyzers</option>
+                            <option>Hematology Analyzers</option>
+                            <option>Blood Gas &amp; Coagulation</option>
+                            <option>Ultrasound &amp; Imaging</option>
+                            <option>Reagents &amp; Consumables</option>
+                            <option>Installation or Service</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-date">Needed by</label>
+                        <input type="date" id="bk-date" name="date" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="bk-phone">Your mobile number</label>
+                        <input type="tel" id="bk-phone" name="phone" inputmode="numeric" placeholder="10-digit mobile" autocomplete="tel" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary booking-submit">Send Enquiry</button>
+                    <p class="booking-note">Our team replies with rates and availability. No account, no marketplace in between.</p>
+                </form>
+
+                <div class="booking-success" id="booking-success" role="status" aria-live="polite">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path class="success-check" d="M9 21l8 8L32 12" stroke="#2dd4a0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Enquiry received.</h3>
+                    <p id="booking-success-detail">Our team will come back to you with rates and availability shortly.</p>
+                    <span class="demo-line">This is a demo — this is how lab owners would reach you directly, without a marketplace in between.</span>
+                    <div>
+                        <button type="button" class="btn btn-secondary" id="booking-reset">Send another</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports on WhatsApp strip -->
+            <div class="wa-strip" data-reveal>
+                <div class="wa-strip-icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff">
+                        <path d="M12.05 2a9.9 9.9 0 0 0-8.57 14.86L2 22l5.3-1.39A9.9 9.9 0 1 0 12.05 2Zm0 18.05a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.8.82-3-.2-.31a8.13 8.13 0 1 1 6.88 3.82Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Reagent re-orders, straight from your phone.</h3>
+                    <p>Send the item and the quantity as a message. Get back a confirmed rate and dispatch time — no calling around while your bench waits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT / CONTACT -->
+    <section class="visit" id="visit" aria-labelledby="visit-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Find Us</span>
+            <h2 class="section-headline" id="visit-headline" data-reveal>Om Tower, <span class="gradient-text">Bahraich Road.</span></h2>
+            <p class="section-sub" data-reveal>Our own premises, our own stock. Come and see the equipment before you commit to it.</p>
+            <div class="visit-grid">
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M20 36s11-9.3 11-17a11 11 0 1 0-22 0c0 7.7 11 17 11 17Z" stroke="#d8b56a" stroke-width="1.8" stroke-linejoin="round"/>
+                        <circle cx="20" cy="18.5" r="4" stroke="#2dd4a0" stroke-width="1.8"/>
+                    </svg>
+                    <h3>Address</h3>
+                    <p>Om Tower, near Power House Office,<br>Bargaon, Gonda&ndash;Bahraich Road,<br>Gonda, Uttar Pradesh 271001</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <circle cx="20" cy="20" r="14" stroke="#d8b56a" stroke-width="1.8"/>
+                        <path d="M20 12v8l5.5 3.5" stroke="#2dd4a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Who We Serve</h3>
+                    <p>Pathology labs, nursing homes, diagnostic centres and hospitals across Gonda and the neighbouring districts.</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <svg class="visit-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M27.5 24.7c-1.5-.7-2.7-1.2-3.8.2l-.7.9c-.5.6-1.4.5-2.7-.6-1.8-1.4-3.1-2.8-3.9-4.3-.6-1.1-.5-1.8.1-2.3l1-.8c1.2-1.1.7-2.3-.1-3.7-1-1.7-2-2.9-3.7-2-2.1 1.1-3 3.3-2.2 6 1 3.3 3.4 6.8 6.6 9.5 3.2 2.6 6.9 4.2 10 3.7 2.4-.4 3.9-2.3 3.7-4.5-.2-1.5-2.1-1.9-4.3-2.1Z" stroke="#2dd4a0" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Enquiries</h3>
+                    <p>Send your requirement through the <a href="#book">enquiry form</a> and our team will respond with rates and availability.</p>
+                </div>
+            </div>
+            <div class="visit-actions" data-reveal>
+                <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Om%20Medical%20System%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Questions</span>
+            <h2 class="section-headline" id="faq-headline" data-reveal>Asked often. <span class="gradient-text">Answered honestly.</span></h2>
+            <div class="faq-list">
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do you sell to individuals, or only to labs?</button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>We supply institutions — pathology labs, diagnostic centres, nursing homes and hospitals. If you are setting up a new lab, come and talk to us early; the equipment decision is easier before the room is built than after.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Can I see the analyzer working before I buy it?</button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. Nobody should commit lakhs to a machine they have only seen in a brochure. Ask for a demonstration and we will arrange it — at our premises or, where practical, at yours.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you keep reagents and consumables in stock?</button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Biochemistry reagents, rapid test cards and lab chemicals are held at our Gonda premises. Tell us what you run each month and we will keep your items on the shelf ahead of your re-order.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What happens after installation?</button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>We commission and calibrate the system at your bench and train your technician on it. After that, service and reagent supply are handled from Gonda — the same people, the same address.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Why buy here instead of from Lucknow?</button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Because the machine is the easy part. When a reagent runs short or a system needs attention, the distance between you and your supplier becomes the whole story — and we are on Bahraich Road, not four hours away.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact" aria-labelledby="cta-headline">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Next Step</span>
+            <h2 class="section-headline" id="cta-headline" data-reveal>Your lab, <span class="gradient-text">supplied.</span></h2>
+            <p class="cta-subtext" data-reveal>One enquiry. One supplier. A team that answers from Gonda.</p>
+            <div data-reveal>
+                <a href="#book" class="btn btn-primary btn-large">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP — removed: no phone number is published for Om Medical System.
+         Restore this block with href="https://wa.me/91XXXXXXXXXX" once the mobile is collected. -->
+
+    <!-- CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge">
+        <span>Concept Demo</span>
+        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Om Medical System <span style="color: var(--gold);">·</span> Gonda</p>
+            <div class="footer-links">
+                <a href="#departments">What We Supply</a>
+                <a href="#pathway">How We Work</a>
+                <a href="#book">Request a Quote</a>
+                <a href="#visit">Find Us</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Om Medical System, Gonda.</p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group · <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> · Design demo — not the official website of Om Medical System.</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (site remains fully readable if these fail) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+<script>
+(function () {
+    'use strict';
+
+    // Signal JS availability (CSS collapses the FAQ + mobile menu only when present)
+    document.documentElement.classList.add('js');
+
+    var motionOK = true;
+    try {
+        motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) { /* older browsers: keep motion on */ }
+
+    /* ---------- NAV: scrolled state ---------- */
+    var nav = document.getElementById('site-nav');
+    var backToTop = document.getElementById('back-to-top');
+
+    function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 24);
+        if (backToTop) backToTop.classList.toggle('visible', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- NAV: hamburger ---------- */
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+
+    function closeMenu() {
+        if (!toggle || !menu) return;
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        menu.addEventListener('click', function (e) {
+            if (e.target && e.target.tagName === 'A') closeMenu();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+
+    /* ---------- BACK TO TOP ---------- */
+    if (backToTop) {
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: motionOK ? 'smooth' : 'auto' });
+        });
+    }
+
+    /* ---------- CONCEPT DEMO BADGE ---------- */
+    var badge = document.getElementById('demo-badge');
+    var badgeClose = document.getElementById('demo-badge-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () {
+            badge.classList.add('hidden');
+        });
+    }
+
+    /* ---------- FAQ ACCORDION ---------- */
+    var faqButtons = document.querySelectorAll('.faq-question');
+    Array.prototype.forEach.call(faqButtons, function (btn) {
+        btn.addEventListener('click', function () {
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            var answer = document.getElementById(btn.getAttribute('aria-controls'));
+
+            // close others
+            Array.prototype.forEach.call(faqButtons, function (other) {
+                if (other !== btn) {
+                    other.setAttribute('aria-expanded', 'false');
+                    var otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+                    if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                }
+            });
+
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            if (answer) {
+                answer.style.maxHeight = expanded ? '0px' : answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    /* ---------- BOOKING MOCK (front-end only) ---------- */
+    var form = document.getElementById('booking-form');
+    var success = document.getElementById('booking-success');
+    var successDetail = document.getElementById('booking-success-detail');
+    var resetBtn = document.getElementById('booking-reset');
+
+    if (form && success) {
+        // sensible min date = today
+        var dateInput = document.getElementById('bk-date');
+        if (dateInput) {
+            try {
+                dateInput.min = new Date().toISOString().split('T')[0];
+            } catch (e) { /* non-critical */ }
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var name = document.getElementById('bk-name');
+            var dept = document.getElementById('bk-dept');
+            var phone = document.getElementById('bk-phone');
+
+            // minimal native validation pass
+            if (!form.checkValidity()) {
+                if (form.reportValidity) form.reportValidity();
+                return;
+            }
+
+            var who = name && name.value ? name.value.trim() : 'your lab';
+            var which = dept && dept.value ? dept.value : 'your requirement';
+            var digits = phone && phone.value ? phone.value.replace(/\D/g, '') : '';
+            var maskedPhone = digits.length >= 4 ? '·····' + digits.slice(-4) : 'your number';
+
+            if (successDetail) {
+                successDetail.textContent =
+                    'Thank you, ' + who + '. Your enquiry for ' + which +
+                    ' is in — our team will reach you on ' + maskedPhone + ' with rates and availability.';
+            }
+
+            form.style.display = 'none';
+            success.classList.add('visible');
+        });
+
+        if (resetBtn) {
+            resetBtn.addEventListener('click', function () {
+                success.classList.remove('visible');
+                form.reset();
+                form.style.display = '';
+                var first = document.getElementById('bk-name');
+                if (first) first.focus();
+            });
+        }
+    }
+
+    /* ---------- GSAP ENHANCEMENTS (guarded — page is complete without them) ---------- */
+    function initGsap() {
+        if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+        if (!motionOK) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance
+        var heroBits = document.querySelectorAll('.hero-badge, .hero-headline, .ecg-wrap, .hero-subtext, .hero-ctas');
+        if (heroBits.length) {
+            gsap.from(heroBits, {
+                opacity: 0,
+                y: 26,
+                duration: 1,
+                stagger: 0.12,
+                ease: 'power3.out',
+                clearProps: 'all'
+            });
+        }
+
+        // Scroll reveals
+        var reveals = gsap.utils.toArray('[data-reveal]');
+        reveals.forEach(function (el) {
+            if (el.closest('.hero')) return; // hero handled above
+            gsap.from(el, {
+                opacity: 0,
+                y: 32,
+                duration: 0.9,
+                ease: 'power3.out',
+                clearProps: 'all',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 88%',
+                    once: true
+                }
+            });
+        });
+
+        // Section background hue drift on the pathway dots
+        gsap.utils.toArray('.path-dot').forEach(function (dot, i) {
+            gsap.from(dot, {
+                scale: 0.6,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'back.out(1.6)',
+                clearProps: 'all',
+                scrollTrigger: {
+                    trigger: dot,
+                    start: 'top 90%',
+                    once: true
+                }
+            });
+        });
+    }
+
+    /* ---------- COUNTUP (guarded; static values already in markup) ---------- */
+    function initCountUp() {
+        if (typeof window.countUp === 'undefined' || !window.countUp.CountUp) return;
+        if (!motionOK) return;
+
+        var nodes = document.querySelectorAll('[data-countup]');
+        if (!nodes.length) return;
+
+        var started = false;
+        function start() {
+            if (started) return;
+            started = true;
+            Array.prototype.forEach.call(nodes, function (node) {
+                var target = parseFloat(node.getAttribute('data-countup'));
+                if (isNaN(target)) return;
+                var counter = new window.countUp.CountUp(node, target, { duration: 2, useEasing: true });
+                if (!counter.error) counter.start();
+            });
+        }
+
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        start();
+                        io.disconnect();
+                    }
+                });
+            }, { threshold: 0.4 });
+            io.observe(nodes[0]);
+        } else {
+            start();
+        }
+    }
+
+    // Scripts are deferred; DOM is ready. CDN scripts may still be pending → also retry on load.
+    function initLibs() {
+        initGsap();
+        initCountUp();
+    }
+    if (window.gsap && window.countUp) {
+        initLibs();
+    } else {
+        window.addEventListener('load', initLibs);
+    }
+})();
+</script>
+</body>
+</html>

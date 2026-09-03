@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Kamal Petrol Pump — Fuel Station on Faizabad Road, Gonda</title>
+    <meta name="description" content="Kamal Petrol Pump, Faizabad Road, Gonda. Petrol, diesel, bulk fuel supply, lubricants and free air. Concept demo by Inexorables Group.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Cpath d='M10 40h26l6-8H16l4-6h26l8 6-10 14H14z' fill='%23e63946'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+    <link rel="preload" as="image" href="https://images.pexels.com/photos/31996222/pexels-photo-31996222.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   KAMAL PETROL PUMP — Automotive vertical template
+   Carbon #0a0c10 · Signal red #e63946 · Steel blue #4a90d9 · Silver text
+   Display: Space Grotesk · Body: Inter
+   ============================================================ */*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg:        #0a0c10;
+    --bg-alt:    #0e1116;
+    --bg-deep:   #07080b;
+    --panel:     rgba(255,255,255,0.025);
+    --line:      rgba(255,255,255,0.07);
+    --text:      #d7dbe0;
+    --muted:     #8a919c;
+    --red:       #e63946;
+    --red-soft:  rgba(230,57,70,0.14);
+    --steel:     #4a90d9;
+    --steel-soft:rgba(74,144,217,0.12);
+    --whatsapp:  #25D366;
+    --radius:    18px;
+    --ease-out:  cubic-bezier(0.23, 1, 0.32, 1);
+    --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.08; color: #f2f4f7; letter-spacing: -0.02em; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section-headline { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 20px; text-align: center; }
+
+.section-kicker {
+    display: block;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 18px;
+}
+.section-sub { max-width: 620px; margin: 0 auto 56px; text-align: center; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.15rem); }
+
+.gradient-text {
+    background: linear-gradient(135deg, #e63946 0%, #ff7a59 45%, #4a90d9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    top: -60px; left: 16px;
+    z-index: 2000;
+    background: var(--red);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: top 0.25s ease;
+}
+    .skip-link:focus { top: 12px; }
+
+/* ============ BUTTONS ============ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 14px 32px;
+    border-radius: 980px;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background 0.3s ease, border-color 0.3s ease;
+}
+.btn-primary { background: linear-gradient(135deg, #e63946, #c1272d); color: #fff; box-shadow: 0 0 30px rgba(230,57,70,0.25); }
+    .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 40px rgba(230,57,70,0.4); }
+    .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid rgba(255,255,255,0.22); }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+    .btn-large { min-height: 58px; padding: 18px 44px; font-size: 1.1rem; }
+
+/* ============ NAV ============ */
+.nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10,12,16,0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+    .nav.scrolled { background: rgba(10,12,16,0.92); box-shadow: 0 1px 30px rgba(230,57,70,0.08); }
+
+.nav-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+}
+    .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-logo-mark { flex: 0 0 auto; display: block; }
+.nav-logo-name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.02em; color: #f2f4f7; white-space: nowrap; }
+    .nav-logo-name span { color: var(--red); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-size: 0.875rem; color: var(--muted); text-decoration: none; padding: 10px 2px; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #f2f4f7; }
+
+.nav-cta {
+    background: linear-gradient(135deg, #e63946, #c1272d);
+    color: #fff !important;
+    padding: 10px 22px !important;
+    border-radius: 980px;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(230,57,70,0.22);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+    .nav-cta:hover { box-shadow: 0 0 32px rgba(230,57,70,0.42); transform: translateY(-1px); }
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1101;
+}
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f2f4f7;
+    border-radius: 2px;
+    transition: transform 0.35s var(--ease-out), opacity 0.25s ease;
+}
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; }
+.nav-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 820px) {
+    .nav-hamburger { display: flex; }
+    .nav-links {
+        position: fixed;
+        inset: 0;
+        z-index: 1100;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(7,8,11,0.97);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .nav-links.open { opacity: 1; visibility: visible; }
+    .nav-links a { font-size: 1.35rem; font-family: var(--font-display); color: var(--text); padding: 14px 24px; }
+    .nav-links .nav-cta { margin-top: 18px; font-size: 1.05rem; }
+    .nav-hamburger[aria-expanded="true"] { position: relative; }
+    body.nav-open { overflow: hidden; }
+}
+
+/* ============ AMBIENT ORBS ============ */
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+    animation: orbDrift 22s ease-in-out infinite alternate;
+}
+.orb-1 { width: 480px; height: 480px; top: -12%; left: -10%; background: radial-gradient(circle, rgba(230,57,70,0.22) 0%, transparent 70%); }
+.orb-2 {
+    width: 540px; height: 540px;
+    top: 42%; right: -14%;
+    background: radial-gradient(circle, rgba(74,144,217,0.18) 0%, transparent 70%);
+    animation-delay: -8s;
+}
+.orb-3 {
+    width: 380px; height: 380px;
+    bottom: -10%; left: 22%;
+    background: radial-gradient(circle, rgba(255,122,89,0.12) 0%, transparent 70%);
+    animation-delay: -15s;
+}
+@keyframes orbDrift {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to { transform: translate3d(60px, -50px, 0) scale(1.12); }
+}
+    main, .nav, footer { position: relative; z-index: 1; }
+
+/* ============ HERO ============ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 130px 24px 90px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+}
+/* Full-bleed photo layer: dark brand tint painted ON TOP of the photograph,
+   photo painted underneath. If the photo never loads, the gradients alone
+   still read as the original premium carbon hero. */
+.hero-media {
+    position: absolute;
+    inset: -2%;
+    z-index: 0;
+    background-image:
+        linear-gradient(180deg, rgba(10,12,16,0.80) 0%, rgba(10,12,16,0.55) 42%, rgba(10,12,16,0.92) 100%),
+        linear-gradient(115deg, rgba(230,57,70,0.22) 0%, rgba(10,12,16,0) 48%, rgba(74,144,217,0.18) 100%),
+        url("https://images.pexels.com/photos/31996222/pexels-photo-31996222.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover, cover, cover;
+    background-position: center, center, center 55%;
+    background-repeat: no-repeat;
+    background-color: var(--bg-deep);
+    animation: heroKen 26s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+@keyframes heroKen {
+    from { transform: scale(1); }
+    to   { transform: scale(1.07); }
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -28%; left: 50%;
+    transform: translateX(-50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(230,57,70,0.12) 0%, rgba(74,144,217,0.06) 45%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+    .hero .container { position: relative; z-index: 2; }
+    .hero-scrollhint { z-index: 2; }
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #f0a5ab;
+    border: 1px solid rgba(230,57,70,0.35);
+    background: rgba(230,57,70,0.07);
+    padding: 9px 22px;
+    border-radius: 980px;
+    margin-bottom: 30px;
+}
+    .hero-headline { font-size: clamp(2.7rem, 8vw, 5.6rem); margin-bottom: 18px; text-shadow: 0 4px 40px rgba(0,0,0,0.55); }
+    .hero-subtext, .hero-badge { text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+    .hero-badge { background: rgba(10,12,16,0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+/* Signature: speedline motif under the headline */.speedlines { display: block; width: min(420px, 70vw); margin: 4px auto 26px; overflow: visible; }
+.speedlines line { stroke-linecap: round; stroke-dasharray: 420; stroke-dashoffset: 0; animation: speedDraw 2.6s var(--ease-out) both; }
+    .speedlines line:nth-child(2) { animation-delay: 0.15s; }
+    .speedlines line:nth-child(3) { animation-delay: 0.3s; }
+@keyframes speedDraw {
+    from { stroke-dashoffset: 420; opacity: 0; }
+    to { stroke-dashoffset: 0; opacity: 1; }
+}
+.hero-subtext { font-size: clamp(1rem, 2vw, 1.22rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.hero-scrollhint {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    animation: hintFloat 2.4s ease-in-out infinite;
+}
+@keyframes hintFloat {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+    50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+
+/* ============ SECTIONS SHARED ============ */section { position: relative; }
+    .section-pad { padding: 130px 0; }
+
+.speed-divider {
+    height: 1px;
+    max-width: 1120px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, rgba(230,57,70,0.5) 30%, rgba(74,144,217,0.5) 70%, transparent);
+}
+
+/* ============ STORY ============ */.story { background: var(--bg-alt); }
+.story::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 45% at 15% 40%, rgba(74,144,217,0.07) 0%, transparent 60%);
+    pointer-events: none;
+}
+    .story .container { position: relative; z-index: 1; }
+    .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .story-copy h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: 24px; }
+    .story-copy p { color: var(--muted); font-size: 1.06rem; margin-bottom: 18px; max-width: 52ch; }
+    .story-copy p strong { color: var(--text); font-weight: 600; }
+
+.story-art {
+    position: relative;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(160deg, rgba(230,57,70,0.08), transparent 45%),
+        linear-gradient(20deg, rgba(74,144,217,0.09), transparent 50%),
+        var(--bg-deep);
+    padding: 34px;
+    overflow: hidden;
+}
+    .story-art svg { display: block; width: 100%; height: auto; }
+
+/* Photo frame inside story art — gradient stays as the fallback ground */
+.story-art.has-photo { padding: 0; aspect-ratio: 4 / 3; }
+.story-art.has-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.88) contrast(1.04);
+    transition: transform 0.9s var(--ease-out);
+}
+    .story-art.has-photo:hover img { transform: scale(1.04); }
+.story-art.has-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(230,57,70,0.10) 0%, transparent 45%, rgba(10,12,16,0.55) 100%);
+    pointer-events: none;
+}
+
+/* ============ TRUST STRIP ============ */
+.trust-strip { background: var(--bg-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; }
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 34px;
+    font-family: var(--font-display);
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+}
+    .trust-row span { display: inline-flex; align-items: center; gap: 10px; }
+    .trust-row span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--red); opacity: 0.7; flex: 0 0 auto; }
+
+/* ============ FULL-BLEED PHOTO BAND ============ */
+.photo-band {
+    position: relative;
+    min-height: 46vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(120deg, rgba(230,57,70,0.16), transparent 55%),
+        var(--bg-deep);
+}
+.photo-band img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: saturate(0.8) contrast(1.05) brightness(0.62);
+}
+.photo-band::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(90deg, rgba(7,8,11,0.92) 0%, rgba(7,8,11,0.65) 45%, rgba(7,8,11,0.35) 100%);
+    pointer-events: none;
+}
+    .photo-band .container { position: relative; z-index: 2; padding-top: 84px; padding-bottom: 84px; }
+    .photo-band .section-kicker { text-align: left; margin-bottom: 14px; }
+.photo-band h2 { font-size: clamp(1.7rem, 4vw, 2.9rem); max-width: 16ch; margin-bottom: 16px; text-shadow: 0 3px 26px rgba(0,0,0,0.6); }
+    .photo-band p { color: var(--text); max-width: 46ch; font-size: 1.02rem; }
+
+/* ============ GALLERY STRIP ============ */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gallery-item {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background:
+        linear-gradient(150deg, rgba(230,57,70,0.12), transparent 55%),
+        linear-gradient(20deg, rgba(74,144,217,0.12), transparent 55%),
+        var(--bg-deep);
+}
+.gallery-item img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) contrast(1.05) brightness(0.9);
+    transition: transform 0.8s var(--ease-out), filter 0.5s ease;
+}
+    .gallery-item:hover img { transform: scale(1.06); filter: saturate(0.95) contrast(1.05) brightness(1); }
+.gallery-cap {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    padding: 40px 20px 16px;
+    background: linear-gradient(180deg, transparent, rgba(7,8,11,0.9));
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+/* ============ STICKY MOBILE ACTION BAR ============ */
+.mobile-bar { display: none; }
+
+/* ============ OFFERINGS — spec-sheet cards ============ */.offerings { background: var(--bg); }
+.offerings::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 45% at 50% 0%, rgba(230,57,70,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+    .offerings .container { position: relative; z-index: 1; }
+    .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+
+.offer-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px 26px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--panel);
+    overflow: hidden;
+    transition: transform 0.45s var(--ease-out), border-color 0.4s ease, box-shadow 0.45s ease, background 0.4s ease;
+}
+.offer-card::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--red), var(--steel));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease-out);
+}
+.offer-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(230,57,70,0.3);
+    background: rgba(255,255,255,0.045);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.45), 0 0 40px rgba(230,57,70,0.08);
+}
+    .offer-card:hover::after { transform: scaleX(1); }
+
+.offer-index {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 22px;
+}
+.offer-icon { width: 46px; height: 46px; color: var(--red); margin-bottom: 20px; transition: transform 0.45s var(--ease-out), color 0.3s ease; }
+    .offer-card:hover .offer-icon { transform: translateX(6px); color: #ff6b76; }
+    .offer-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
+    .offer-card > p { color: var(--muted); font-size: 0.95rem; margin-bottom: 22px; }
+
+.offer-spec {
+    margin-top: auto;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.78rem;
+}
+    .offer-spec .spec-label { color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.offer-spec .spec-value { font-family: var(--font-display); font-weight: 600; color: var(--text); text-align: right; }
+
+/* ============ STATS BAND ============ */.stats { background: var(--bg-deep); overflow: hidden; }
+.stats::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+        radial-gradient(circle at 82% 30%, rgba(74,144,217,0.08) 0%, transparent 45%),
+        radial-gradient(circle at 12% 75%, rgba(230,57,70,0.07) 0%, transparent 45%);
+    pointer-events: none;
+}
+    .stats .container { position: relative; z-index: 1; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; text-align: center; }
+.stat { padding: 34px 14px; border-radius: var(--radius); transition: background 0.35s ease, transform 0.4s var(--ease-out); }
+    .stat:hover { background: rgba(255,255,255,0.03); transform: translateY(-4px); }
+.stat-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #e63946, #ff7a59, #4a90d9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 8px;
+}
+    .stat-label { font-size: 0.86rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ============ SIGNATURE — THE KAMAL STANDARD (spec sheet) ============ */.standard { background: var(--bg-alt); }
+.standard::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 40% at 85% 55%, rgba(230,57,70,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+    .standard .container { position: relative; z-index: 1; }
+
+.spec-sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-deep);
+    overflow: hidden;
+}
+.spec-sheet-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(90deg, rgba(230,57,70,0.09), rgba(74,144,217,0.07));
+}
+.spec-sheet-head span {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+    .spec-sheet-head .spec-rev { color: var(--muted); letter-spacing: 0.12em; }
+
+.spec-row {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 30px;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.3s ease, transform 0.35s var(--ease-out);
+}
+    .spec-row:last-child { border-bottom: none; }
+    .spec-row:hover { background: rgba(255,255,255,0.03); transform: translateX(6px); }
+    .spec-row-num { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--steel); }
+    .spec-row-body h3 { font-size: 1.06rem; margin-bottom: 4px; }
+    .spec-row-body p { color: var(--muted); font-size: 0.9rem; }
+    .spec-row-check { width: 26px; height: 26px; color: var(--red); flex: 0 0 auto; }
+
+/* ============ AUTOMATION MOCK — BOOK A SLOT ============ */.booking { background: var(--bg); }
+.booking::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 50% at 50% 100%, rgba(74,144,217,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+    .booking .container { position: relative; z-index: 1; }
+
+.booking-shell {
+    max-width: 640px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background:
+        linear-gradient(150deg, rgba(230,57,70,0.06), transparent 40%),
+        var(--bg-alt);
+    padding: 44px 40px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+    .booking-form { display: grid; gap: 20px; }
+
+.field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+.field input,
+.field select {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    appearance: none;
+}
+.field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a919c' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 42px;
+    cursor: pointer;
+}
+    .field select option { background: #12151b; color: var(--text); }
+    .field input::placeholder { color: rgba(138,145,156,0.7); }
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: var(--red);
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 0 0 4px rgba(230,57,70,0.15);
+}
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .booking-form .btn { width: 100%; margin-top: 6px; }
+    .booking-fineprint { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+/* Success state */.booking-success { display: none; text-align: center; padding: 22px 6px 8px; }
+    .booking-success.visible { display: block; animation: successIn 0.6s var(--ease-out) both; }
+@keyframes successIn {
+    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.success-ring {
+    width: 84px; height: 84px;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37,211,102,0.1);
+    border: 1.5px solid rgba(37,211,102,0.45);
+    box-shadow: 0 0 40px rgba(37,211,102,0.2);
+}
+    .success-ring svg { width: 38px; height: 38px; color: var(--whatsapp); }
+    .booking-success h3 { font-size: 1.5rem; margin-bottom: 12px; }
+    .booking-success .success-echo { color: var(--text); font-size: 1rem; margin-bottom: 14px; }
+.booking-success .success-note { color: var(--muted); font-size: 0.9rem; max-width: 42ch; margin: 0 auto 26px; }
+    .booking-success .success-note strong { color: #7bd6a0; font-weight: 600; }
+
+.auto-strip {
+    max-width: 640px;
+    margin: 26px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(37,211,102,0.25);
+    background: rgba(37,211,102,0.05);
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+    .auto-strip strong { color: var(--text); font-weight: 600; }
+
+/* ============ VISIT ============ */.visit { background: var(--bg-deep); }
+.visit::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 45% at 20% 20%, rgba(230,57,70,0.06) 0%, transparent 55%);
+    pointer-events: none;
+}
+    .visit .container { position: relative; z-index: 1; }
+    .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-bottom: 44px; }
+.visit-card {
+    padding: 32px 28px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--panel);
+    transition: transform 0.4s var(--ease-out), border-color 0.35s ease;
+}
+    .visit-card:hover { transform: translateY(-5px); border-color: rgba(74,144,217,0.35); }
+.visit-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 16px;
+}
+    .visit-card h3 svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    .visit-card p { color: var(--text); font-size: 1rem; }
+    .visit-card p + p { margin-top: 6px; }
+    .visit-card .visit-muted { color: var(--muted); font-size: 0.9rem; }
+.visit-card a { color: var(--text); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.25); transition: color 0.3s ease, border-color 0.3s ease; }
+    .visit-card a:hover { color: #fff; border-color: var(--red); }
+    .visit-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+/* ============ FAQ ============ */.faq { background: var(--bg-alt); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--panel);
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+    .faq-item.open { border-color: rgba(230,57,70,0.35); }
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 26px;
+    min-height: 52px;
+    background: transparent;
+    border: none;
+    color: #f2f4f7;
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+.faq-chevron { flex: 0 0 auto; width: 18px; height: 18px; color: var(--red); transition: transform 0.35s var(--ease-out); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
+    .faq-answer p { padding: 0 26px 24px; color: var(--muted); font-size: 0.96rem; }
+
+/* No-JS fallback: answers readable when script disabled */.no-js .faq-answer { max-height: none; }
+
+/* ============ FINAL CTA ============ */.final-cta { background: var(--bg); text-align: center; }
+.final-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 60%, rgba(230,57,70,0.1) 0%, transparent 55%);
+    pointer-events: none;
+}
+    .final-cta .container { position: relative; z-index: 1; }
+    .final-cta .section-headline { margin-bottom: 16px; }
+    .cta-subtext { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; }
+
+/* ============ FOOTER ============ */
+.footer { background: var(--bg-deep); border-top: 1px solid var(--line); padding: 56px 0 40px; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; margin: 22px 0 26px; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 8px 4px; transition: color 0.3s ease; }
+    .footer-links a:hover { color: #f2f4f7; }
+    .footer-name { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: #f2f4f7; }
+    .footer-name span { color: var(--red); }
+    .footer-copy { color: var(--muted); font-size: 0.85rem; margin-bottom: 18px; }
+.footer-demo-notice {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: rgba(138,145,156,0.75);
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+    .footer-demo-notice a { color: rgba(138,145,156,0.9); }
+
+/* ============ FLOATING UI ============ */
+.whatsapp-fab {
+    position: fixed;
+    right: 20px; bottom: 20px;
+    z-index: 950;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 26px rgba(37,211,102,0.4);
+    animation: fabPulse 2.6s ease-in-out infinite;
+    transition: transform 0.35s var(--ease-out);
+}
+    .whatsapp-fab:hover { transform: translateY(-3px) scale(1.06); }
+    .whatsapp-fab svg { width: 30px; height: 30px; }
+@keyframes fabPulse {
+    0%, 100% { box-shadow: 0 8px 26px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.35); }
+    50% { box-shadow: 0 8px 26px rgba(37,211,102,0.4), 0 0 0 14px rgba(37,211,102,0); }
+}
+
+.demo-badge {
+    position: fixed;
+    left: 16px; bottom: 18px;
+    z-index: 950;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px 9px 16px;
+    border-radius: 980px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(14,17,22,0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.demo-badge-close {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+    .demo-badge-close:hover { background: rgba(230,57,70,0.35); }
+    .demo-badge.hidden { display: none; }
+
+.back-to-top {
+    position: fixed;
+    right: 24px; bottom: 92px;
+    z-index: 940;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(14,17,22,0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s var(--ease-out), border-color 0.3s ease;
+}
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { border-color: var(--red); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 960px) {
+    .offer-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .story-grid { grid-template-columns: 1fr; gap: 44px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .visit-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+    .section-pad { padding: 96px 0; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
+    .booking-shell { padding: 34px 22px; }
+    .spec-row { grid-template-columns: 40px 1fr auto; gap: 14px; padding: 20px 20px; }
+    .spec-sheet-head { padding: 16px 20px; }
+    .hero-ctas .btn { width: 100%; }
+    .whatsapp-fab { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+    .back-to-top { right: 18px; bottom: 84px; }
+    .demo-badge { left: 12px; bottom: 14px; font-size: 0.7rem; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 14px; }
+    .photo-band { min-height: 0; }
+    .photo-band .container { padding-top: 64px; padding-bottom: 64px; }
+    .trust-row { gap: 12px 22px; font-size: 0.68rem; letter-spacing: 0.14em; }
+}
+
+/* Sticky mobile action bar (playbook: two-button split at the bottom).
+   No verified phone number exists for this business, so the two actions are
+   Directions and the enquiry form — never a fabricated tel:/wa.me link. */
+@media (max-width: 720px) {
+    .mobile-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        z-index: 960;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        background: rgba(10,12,16,0.94);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 -8px 30px rgba(0,0,0,0.45);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .mobile-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 56px;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--text);
+    }
+    .mobile-bar a svg { width: 18px; height: 18px; flex: 0 0 auto; }
+    .mobile-bar a.mb-primary { background: linear-gradient(135deg, #e63946, #c1272d); color: #fff; }
+    body { padding-bottom: 56px; }
+    .demo-badge { bottom: 70px; }
+    .back-to-top { bottom: 128px; }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .orb, .hero-scrollhint { animation: none; }
+    .whatsapp-fab { animation: none; }
+    .speedlines line { animation: none; stroke-dashoffset: 0; }
+    .hero-media { animation: none; transform: none; inset: 0; }
+    .story-art.has-photo img, .gallery-item img { transition: none; }
+}
+</style>
+</head>
+<body class="no-js">
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Kamal Petrol Pump — home">
+                <svg class="nav-logo-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+                    <rect width="64" height="64" rx="14" fill="#0e1116" stroke="rgba(255,255,255,0.1)"/>
+                    <path d="M10 40h26l6-8H16l4-6h26l8 6-10 14H14z" fill="#e63946"/>
+                </svg>
+                <span class="nav-logo-name">Kamal<span>&nbsp;Petrol Pump</span></span>
+            </a>
+            <div class="nav-links" id="nav-menu">
+                <a href="#showroom">At the Pump</a>
+                <a href="#standard">Our Standard</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+                <a href="#book" class="nav-cta">Bulk Fuel</a>
+            </div>
+            <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- AMBIENT ORBS -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container">
+            <p class="hero-badge">Kamal Petrol Pump &middot; Faizabad Road, Gonda</p>
+            <h1 class="hero-headline" data-reveal>Full Tank. <span class="gradient-text">Full Trust.</span></h1>
+            <svg class="speedlines" viewBox="0 0 420 26" fill="none" aria-hidden="true">
+                <line x1="20"  y1="5"  x2="400" y2="5"  stroke="url(#speedGrad)" stroke-width="2.5" opacity="0.9"/>
+                <line x1="70"  y1="13" x2="350" y2="13" stroke="url(#speedGrad)" stroke-width="2" opacity="0.55"/>
+                <line x1="130" y1="21" x2="290" y2="21" stroke="url(#speedGrad)" stroke-width="1.5" opacity="0.3"/>
+                <defs>
+                    <linearGradient id="speedGrad" x1="0" y1="0" x2="420" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#e63946"/>
+                        <stop offset="0.55" stop-color="#ff7a59"/>
+                        <stop offset="1" stop-color="#4a90d9"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <p class="hero-subtext" data-reveal>Petrol, diesel and honest measure on the Faizabad Road. The pump Gonda gives directions by.</p>
+            <div class="hero-ctas" data-reveal>
+                <a href="#book" class="btn btn-primary">Enquire About Bulk Fuel</a>
+                <a href="#showroom" class="btn btn-secondary">What We Offer</a>
+            </div>
+        </div>
+        <span class="hero-scrollhint" aria-hidden="true">Scroll</span>
+    </section>
+
+    <div class="speed-divider" aria-hidden="true"></div>
+
+    <!-- TRUST / CREDENTIALS STRIP -->
+    <section class="trust-strip" aria-label="What this pump stands for">
+        <div class="container">
+            <div class="trust-row">
+                <span>Registered GST Vendor</span>
+                <span>Full Measure, Every Fill</span>
+                <span>Free Air &amp; Tyre Check</span>
+                <span>Fleet &amp; Contract Accounts</span>
+                <span>Rate on the Board</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story section-pad">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-copy" data-reveal>
+                    <span class="section-kicker" style="text-align:left;">The Landmark</span>
+                    <h2>The pump people give <span class="gradient-text">directions by.</span></h2>
+                    <p>Ask anyone on the Faizabad Road where a shop, a school or a clinic is, and the answer often begins the same way — <strong>"Kamal Petrol Pump ke paas."</strong> Schools and registered companies write it into their own addresses. You do not become a landmark with advertising. You become one by being there, every day, and getting it right.</p>
+                    <p>Buses, trucks, tractors, tempos, bikes. Whatever is moving between Gonda and the Faizabad side stops here for the same reason: <strong>the meter starts at zero and the measure is full.</strong></p>
+                    <p><strong>Trusted across Gonda.</strong> Built on drivers who come back, not billboards.</p>
+                </div>
+                <div class="story-art has-photo" data-reveal>
+                    <img src="https://images.pexels.com/photos/33441387/pexels-photo-33441387.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="An illuminated fuel station canopy lit up at night"
+                         loading="lazy" decoding="async"
+                         onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERINGS -->
+    <section id="showroom" class="offerings section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>At the Pump</span>
+            <h2 class="section-headline" data-reveal>More Than a Fill-Up.</h2>
+            <p class="section-sub" data-reveal>Fuel is the reason you stop. It is not the only thing waiting at the counter.</p>
+            <div class="offer-grid">
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">01 / Petrol</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M8 30l4-11c.6-1.8 2.3-3 4.2-3h15.6c1.9 0 3.6 1.2 4.2 3l4 11"/>
+                        <rect x="6" y="29" width="36" height="9" rx="3"/>
+                        <circle cx="14" cy="38" r="3.6"/><circle cx="34" cy="38" r="3.6"/>
+                    </svg>
+                    <h3>Petrol</h3>
+                    <p>For the bikes, scooters and cars that move Gonda. Meter shown at zero, nozzle in your sight, receipt on request every time.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Meter</span>
+                        <span class="spec-value">Zero before every fill</span>
+                    </div>
+                </article>
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">02 / Diesel</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M30 8a10 10 0 0 0-9.6 12.8L8 33.2a4 4 0 0 0 5.7 5.7l12.4-12.4A10 10 0 0 0 38.9 14l-6.4 6.4-4.9-4.9L34 9.1A10 10 0 0 0 30 8z"/>
+                    </svg>
+                    <h3>Diesel</h3>
+                    <p>Trucks, buses, tractors and tempos on the highway run. Bays sized for heavy vehicles, so a loaded truck is not stuck waiting behind a scooter.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Built for</span>
+                        <span class="spec-value">Heavy vehicles too</span>
+                    </div>
+                </article>
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">03 / Bulk</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="24" cy="24" r="7"/>
+                        <path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M38.1 9.9l-4.2 4.2M14.1 33.9l-4.2 4.2"/>
+                    </svg>
+                    <h3>Bulk &amp; Contract Supply</h3>
+                    <p>Fleets, contractors and government work orders. Registered vendor, GST invoice, proper records — the paperwork side handled as carefully as the fuel side.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Billing</span>
+                        <span class="spec-value">GST invoice provided</span>
+                    </div>
+                </article>
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">04 / Lubricants</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M24 4l16 9v22l-16 9-16-9V13z"/>
+                        <path d="M24 4v18m0 0l16-9M24 22L8 13"/>
+                    </svg>
+                    <h3>Engine Oil &amp; Lubricants</h3>
+                    <p>Sealed packs opened in front of you, for bikes, cars and heavy vehicles. Top-up while you fuel — one stop, not two.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Packs</span>
+                        <span class="spec-value">Sealed, opened at the counter</span>
+                    </div>
+                </article>
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">05 / Air</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M10 18h24l-6-6M38 30H14l6 6"/>
+                    </svg>
+                    <h3>Free Air &amp; Tyre Check</h3>
+                    <p>Pull in, get the pressure right, carry on. No charge, no argument, whether you filled a full tank or a hundred rupees.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Air</span>
+                        <span class="spec-value">Free, always</span>
+                    </div>
+                </article>
+                <article class="offer-card" data-reveal>
+                    <span class="offer-index">06 / Counter</span>
+                    <svg class="offer-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M8 26a16 16 0 0 1 32 0"/>
+                        <rect x="6" y="26" width="8" height="12" rx="3"/>
+                        <rect x="34" y="26" width="8" height="12" rx="3"/>
+                        <path d="M38 38a8 8 0 0 1-8 6h-4"/>
+                    </svg>
+                    <h3>Bills, Slips &amp; Credit Accounts</h3>
+                    <p>Printed receipts for every fill, monthly slips for regular fleet and contractor accounts, and someone at the counter who can actually answer.</p>
+                    <div class="offer-spec">
+                        <span class="spec-label">Records</span>
+                        <span class="spec-value">Kept properly</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL-BLEED PHOTO BAND -->
+    <section class="photo-band" aria-label="On the Faizabad Road">
+        <img src="https://images.pexels.com/photos/12704352/pexels-photo-12704352.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+             alt="A vehicle on a tree-lined Indian highway"
+             loading="lazy" decoding="async"
+             onerror="this.style.display='none'">
+        <div class="container">
+            <span class="section-kicker" data-reveal>The Highway Run</span>
+            <h2 data-reveal>Everything moving through Gonda passes this stretch.</h2>
+            <p data-reveal>Buses on the Ayodhya run, loaded trucks, tractors off the field road, the 7am scooter to work. The bays are worked in parallel so a stop here stays a stop.</p>
+        </div>
+    </section>
+
+    <section class="stats section-pad">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat" data-reveal>
+                    <span class="stat-num" data-count="253">253</span>
+                    <span class="stat-label">Customer ratings online</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-num">4.0</span>
+                    <span class="stat-label">Average rating</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-num">Full</span>
+                    <span class="stat-label">Measure. Every fill.</span>
+                </div>
+                <div class="stat" data-reveal>
+                    <span class="stat-num">Landmark</span>
+                    <span class="stat-label">On the Faizabad Road</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: THE KAMAL STANDARD (spec sheet) -->
+    <section id="standard" class="standard section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Our Promise</span>
+            <h2 class="section-headline" data-reveal>The Kamal <span class="gradient-text">Standard.</span></h2>
+            <p class="section-sub" data-reveal>Every vehicle at every bay is served against this sheet. No exceptions, no shortcuts.</p>
+            <div class="spec-sheet" data-reveal>
+                <div class="spec-sheet-head">
+                    <span>Service Specification</span>
+                    <span class="spec-rev">Applies at every bay</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-row-num">S-01</span>
+                    <div class="spec-row-body">
+                        <h3>Meter shown at zero</h3>
+                        <p>Before the nozzle goes in, the display is reset and turned towards you. Ask any time — nobody here minds.</p>
+                    </div>
+                    <svg class="spec-row-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-row-num">S-02</span>
+                    <div class="spec-row-body">
+                        <h3>Rate on the board, not in the head</h3>
+                        <p>Today's petrol and diesel rate is displayed. What you are charged is what is written.</p>
+                    </div>
+                    <svg class="spec-row-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-row-num">S-03</span>
+                    <div class="spec-row-body">
+                        <h3>Receipt for every rupee</h3>
+                        <p>Printed slip on request, always. For fleet and contract accounts, a proper GST invoice.</p>
+                    </div>
+                    <svg class="spec-row-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-row-num">S-04</span>
+                    <div class="spec-row-body">
+                        <h3>Free air, no conditions</h3>
+                        <p>Tyre pressure is a safety matter, not a service to be sold. It stays free here.</p>
+                    </div>
+                    <svg class="spec-row-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-row-num">S-05</span>
+                    <div class="spec-row-body">
+                        <h3>The queue keeps moving</h3>
+                        <p>Multiple bays worked in parallel so a highway stop stays a stop, not a delay.</p>
+                    </div>
+                    <svg class="spec-row-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery section-pad" style="background: var(--bg);" aria-label="At the pump">
+        <div class="container">
+            <span class="section-kicker" data-reveal>A Look Around</span>
+            <h2 class="section-headline" data-reveal>The Stop, and the Road After It.</h2>
+            <p class="section-sub" data-reveal>Fuel, air, oil and a clean forecourt — then you are on your way.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/8478259/pexels-photo-8478259.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="Engine maintenance being carried out under a vehicle bonnet"
+                         loading="lazy" decoding="async"
+                         onerror="this.style.display='none'">
+                    <figcaption class="gallery-cap">Engine oil &amp; lubricants</figcaption>
+                </figure>
+                <figure class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/3007435/pexels-photo-3007435.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A car with headlights on driving at dusk"
+                         loading="lazy" decoding="async"
+                         onerror="this.style.display='none'">
+                    <figcaption class="gallery-cap">Open into the evening</figcaption>
+                </figure>
+                <figure class="gallery-item" data-reveal>
+                    <img src="https://images.pexels.com/photos/20707186/pexels-photo-20707186.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+                         alt="A vehicle parked on a rural Indian road beside open fields"
+                         loading="lazy" decoding="async"
+                         onerror="this.style.display='none'">
+                    <figcaption class="gallery-cap">Full tank for the district run</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION MOCK: BULK FUEL / CREDIT ACCOUNT ENQUIRY -->
+    <section id="book" class="booking section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Fleets &amp; Contractors</span>
+            <h2 class="section-headline" data-reveal>Ask Before <span class="gradient-text">You Drive Over.</span></h2>
+            <p class="section-sub" data-reveal>Bulk diesel, a credit account, or a supply enquiry for a work order — send it from here and get an answer.</p>
+
+            <div class="booking-shell" data-reveal>
+                <form class="booking-form" id="booking-form" novalidate>
+                    <div class="field">
+                        <label for="bk-type">I am enquiring about</label>
+                        <select id="bk-type" name="type" required>
+                            <option value="" selected disabled>Choose one</option>
+                            <option value="Bulk diesel supply">Bulk diesel supply</option>
+                            <option value="Fleet credit account">A fleet credit account</option>
+                            <option value="Contract / work order supply">Contract or work-order supply</option>
+                            <option value="Lubricants in quantity">Lubricants in quantity</option>
+                        </select>
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="bk-vehicle">Requirement</label>
+                            <input type="text" id="bk-vehicle" name="vehicle" placeholder="e.g. 500 litres diesel, 4 trucks" autocomplete="off" required>
+                        </div>
+                        <div class="field">
+                            <label for="bk-day">Needed by</label>
+                            <select id="bk-day" name="day" required>
+                                <option value="" selected disabled>Pick a day</option>
+                                <option>Today</option>
+                                <option>Tomorrow</option>
+                                <option>This weekend</option>
+                                <option>Next week</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="bk-name">Your name</label>
+                            <input type="text" id="bk-name" name="name" placeholder="Full name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="bk-phone">Phone</label>
+                            <input type="tel" id="bk-phone" name="phone" placeholder="10-digit mobile" autocomplete="tel" inputmode="numeric" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send My Enquiry</button>
+                    <p class="booking-fineprint">Demo form — nothing is sent anywhere.</p>
+                </form>
+
+                <div class="booking-success" id="booking-success" role="status" aria-live="polite" tabindex="-1">
+                    <div class="success-ring" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    </div>
+                    <h3>Enquiry received.</h3>
+                    <p class="success-echo" id="success-echo">Your enquiry is in.</p>
+                    <p class="success-note"><strong>This is how a fleet owner would reach you automatically</strong> — straight to the phone at your counter, with name, requirement and date already filled in.</p>
+                    <button type="button" class="btn btn-secondary" id="booking-reset">Send Another Enquiry</button>
+                </div>
+            </div>
+
+            <p class="auto-strip" data-reveal>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#25D366;flex:0 0 auto;" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-1.5-.5c-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.2z"/></svg>
+                <strong>Automated updates on WhatsApp</strong> — today's rate, tanker arrival, and monthly credit-account statements for fleet customers, sent without lifting a finger.
+            </p>
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section id="visit" class="visit section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Find Us</span>
+            <h2 class="section-headline" data-reveal>On the Faizabad Road.</h2>
+            <p class="section-sub" data-reveal>You have probably passed it already. Half of Gonda gives directions by it.</p>
+            <div class="visit-grid">
+                <div class="visit-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Address
+                    </h3>
+                    <p>Faizabad Road,<br>Gonda, Uttar Pradesh</p>
+                    <p class="visit-muted">On the highway stretch out of the city</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+                        At the Counter
+                    </h3>
+                    <p>Ask for the manager at the sales cabin</p>
+                    <p class="visit-muted">Bulk, credit and account matters handled there</p>
+                </div>
+                <div class="visit-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Every Day
+                    </h3>
+                    <p>Open through the week</p>
+                    <p class="visit-muted">Quietest between the morning and evening rush</p>
+                </div>
+            </div>
+            <div class="visit-actions" data-reveal>
+                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Kamal%20Petrol%20Pump%20Gonda" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                <a class="btn btn-secondary" href="#book">Send an Enquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Questions</span>
+            <h2 class="section-headline" data-reveal>Before You Pull In.</h2>
+            <p class="section-sub" data-reveal>The things drivers and fleet owners ask — answered straight.</p>
+            <div class="faq-list">
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+                        How do I know I am getting full measure?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>The meter is reset to zero and turned towards you before the nozzle goes in. If you want to watch it the whole way, watch it — that is your right, and nobody at this pump will act offended about it.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                        Do you supply diesel in bulk to fleets and contractors?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>Yes. We are a registered vendor and issue GST invoices, so contractors and departments working against a formal order can bill properly. Send your requirement through the enquiry form and the counter will confirm what is possible.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                        Is the air really free?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Yes. Pull up, get your pressure checked and corrected, and carry on — whether you bought a full tank or nothing at all. Correct tyre pressure keeps people alive on the highway. It is not something to charge for.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                        Can I get a proper bill for my company or department?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Yes. Printed receipts at the counter for anyone who asks, and GST invoices for registered accounts. Regular fleet customers can run a monthly slip account instead of paying at every fill.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-reveal>
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+                        Where exactly are you?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>On the Faizabad Road out of Gonda city. It is easier than it sounds — schools, clinics and companies around here print "near Kamal Petrol Pump" in their own addresses. Use the directions button and the map will take you straight there.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section-pad">
+        <div class="container">
+            <span class="section-kicker" data-reveal>Pull In</span>
+            <h2 class="section-headline" data-reveal>Fuel You Do Not Have <span class="gradient-text">to Doubt.</span></h2>
+            <p class="cta-subtext" data-reveal>One stop on the Faizabad Road. Pull in.</p>
+            <div data-reveal>
+                <a href="#book" class="btn btn-primary btn-large">Send an Enquiry</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+    <!-- STICKY MOBILE ACTION BAR (no verified phone number for this business,
+         so the split is Directions + Enquiry rather than a faked Call link) -->
+    <nav class="mobile-bar" aria-label="Quick actions">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Kamal%20Petrol%20Pump%20Gonda" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Directions
+        </a>
+        <a href="#book" class="mb-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v12H8l-4 4z"/></svg>
+            Bulk Fuel Enquiry
+        </a>
+    </nav>
+
+    <!-- DISMISSIBLE CONCEPT DEMO BADGE -->
+    <div class="demo-badge" id="demo-badge" role="note" aria-label="This is a concept demo website">
+        <span>Concept Demo</span>
+        <button class="demo-badge-close" id="demo-badge-close" aria-label="Dismiss concept demo badge">&times;</button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4L4 10h4v6h4v-6h4L10 4z" fill="currentColor"/></svg>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Kamal<span>&nbsp;Petrol Pump</span></p>
+            <div class="footer-links">
+                <a href="#showroom">At the Pump</a>
+                <a href="#standard">Our Standard</a>
+                <a href="#book">Bulk Fuel</a>
+                <a href="#visit">Visit</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <p class="footer-copy">&copy; <span id="footer-year">2026</span> Kamal Petrol Pump, Gonda. All rights reserved.</p>
+            <p class="footer-demo-notice">Website concept by Inexorables Group &middot; <a href="mailto:inexorablesgroup@gmail.com">inexorablesgroup@gmail.com</a> &middot; Design demo &mdash; not the official website of Kamal Petrol Pump.</p>
+        </div>
+    </footer>
+
+    <!-- Animation libraries (deferred; site is fully readable without them) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+<script>
+(function () {
+    'use strict';
+
+    document.body.classList.remove('no-js');
+
+    var prefersReduced = false;
+    try {
+        prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) { /* older browsers: leave motion on */ }
+
+    /* ---------- Nav: scrolled state ---------- */
+    var nav = document.getElementById('site-nav');
+    var backToTop = document.getElementById('back-to-top');
+    function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 24);
+        if (backToTop) backToTop.classList.toggle('visible', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (backToTop) {
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+        });
+    }
+
+    /* ---------- Nav: hamburger ---------- */
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    function closeMenu() {
+        if (!toggle || !menu) return;
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+    }
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            document.body.classList.toggle('nav-open', open);
+        });
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+    }
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+        var btn = item.querySelector('.faq-question');
+        var panel = item.querySelector('.faq-answer');
+        if (!btn || !panel) return;
+        btn.addEventListener('click', function () {
+            var isOpen = item.classList.contains('open');
+            // close others
+            document.querySelectorAll('.faq-item.open').forEach(function (other) {
+                if (other === item) return;
+                other.classList.remove('open');
+                var ob = other.querySelector('.faq-question');
+                var op = other.querySelector('.faq-answer');
+                if (ob) ob.setAttribute('aria-expanded', 'false');
+                if (op) op.style.maxHeight = '0px';
+            });
+            item.classList.toggle('open', !isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            panel.style.maxHeight = !isOpen ? panel.scrollHeight + 'px' : '0px';
+        });
+    });
+
+    /* ---------- Booking mock (front-end only) ---------- */
+    var form = document.getElementById('booking-form');
+    var success = document.getElementById('booking-success');
+    var echo = document.getElementById('success-echo');
+    var resetBtn = document.getElementById('booking-reset');
+
+    if (form && success) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // minimal validation
+            var required = form.querySelectorAll('[required]');
+            var ok = true;
+            required.forEach(function (field) {
+                var valid = field.value && field.value.trim().length > 0;
+                field.style.borderColor = valid ? '' : 'rgba(230,57,70,0.8)';
+                if (!valid) ok = false;
+            });
+            if (!ok) return;
+
+            var type = (document.getElementById('bk-type') || {}).value || 'Booking';
+            var vehicle = (document.getElementById('bk-vehicle') || {}).value || '';
+            var day = (document.getElementById('bk-day') || {}).value || '';
+            var name = (document.getElementById('bk-name') || {}).value || '';
+            if (echo) {
+                echo.textContent = type + ' — ' + vehicle + ', needed ' + day.toLowerCase() + '. Noted, ' + name.split(' ')[0] + '.';
+            }
+            form.style.display = 'none';
+            success.classList.add('visible');
+            try { success.focus({ preventScroll: false }); } catch (err) { /* ignore */ }
+        });
+    }
+    if (resetBtn && form && success) {
+        resetBtn.addEventListener('click', function () {
+            success.classList.remove('visible');
+            form.reset();
+            form.style.display = '';
+        });
+    }
+
+    /* ---------- Demo badge dismiss ---------- */
+    var badge = document.getElementById('demo-badge');
+    var badgeClose = document.getElementById('demo-badge-close');
+    if (badge && badgeClose) {
+        badgeClose.addEventListener('click', function () {
+            badge.classList.add('hidden');
+        });
+    }
+
+    /* ---------- Footer year ---------- */
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    /* ---------- GSAP scroll reveals (guarded; page fully readable without) ---------- */
+    window.addEventListener('load', function () {
+        if (prefersReduced) return;
+        if (typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') return;
+
+        try {
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.querySelectorAll('[data-reveal]').forEach(function (el) {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 34,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+
+            // Offer cards: gentle stagger within the grid
+            var offerGrid = document.querySelector('.offer-grid');
+            if (offerGrid) {
+                gsap.from(offerGrid.querySelectorAll('.offer-card'), {
+                    opacity: 0,
+                    y: 40,
+                    duration: 0.8,
+                    stagger: 0.08,
+                    ease: 'power3.out',
+                    overwrite: 'auto',
+                    scrollTrigger: { trigger: offerGrid, start: 'top 85%' }
+                });
+            }
+
+            // Signature motion: spec rows slide in like speedlines
+            gsap.utils.toArray('.spec-row').forEach(function (row, i) {
+                gsap.from(row, {
+                    opacity: 0,
+                    x: -46,
+                    duration: 0.7,
+                    delay: i * 0.05,
+                    ease: 'power3.out',
+                    overwrite: 'auto',
+                    scrollTrigger: { trigger: row, start: 'top 92%' }
+                });
+            });
+        } catch (err) {
+            // Animations are decorative; never break the page over them.
+        }
+
+        /* ---------- CountUp counters (for customization agents) ----------
+           Qualitative exemplar stats have no data-count. When a real business
+           has REAL numbers, set e.g. <span class="stat-num" data-count="1200"
+           data-suffix="+">0</span> and this will animate them. */
+        if (typeof window.countUp !== 'undefined' && window.countUp.CountUp) {
+            document.querySelectorAll('.stat-num[data-count]').forEach(function (el) {
+                var target = parseFloat(el.getAttribute('data-count'));
+                if (isNaN(target)) return;
+                var counter = new window.countUp.CountUp(el, target, {
+                    duration: 2.2,
+                    suffix: el.getAttribute('data-suffix') || '',
+                    enableScrollSpy: true,
+                    scrollSpyOnce: true
+                });
+                if (counter.error) return;
+            });
+        }
+    });
+})();
+</script>
+</body>
+</html>
